@@ -1,0 +1,374 @@
+/* ///
+// FONT FAMILY DEFINITIONS
+//
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "proxima-nova", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: "lucida console", "courier new", courier, tahoma, monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-family-serif: "adobe-garamond-pro", Garamond, Georgia, serif;
+$sans: $font-family-sans-serif !default;          
+$serif: $font-family-serif !default;
+$mono: $font-family-monospace !default;
+$primary-font-family: $sans !default;
+$alternate-font-family: $serif !default;
+
+///
+// GLOBAL HEAD & DISPLAY FONT STYLES
+//
+
+// BASE TEXT STYLING (heads & displays)
+$font-size-base: 1rem !default;   // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+// PRIMARY Headings global options
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: $primary-font-family !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+$headings-letter-spacing-base: 0.025rem !default;
+$headings-text-transform: uppercase !default;
+
+// PRIMARY Display global options
+$display-margin-bottom: $spacer / 2 !default;
+$display-font-family: $primary-font-family !default;
+$display-font-weight: 800 !default;
+$display-line-height: 1.1 !default;
+$display-color: inherit !default;
+$display-letter-spacing-base: -0.4rem !default;
+$display-text-transform: capitalize;
+
+// ALTERNATIVE Headings global options
+$headings-alt-margin-bottom: $spacer / 2 !default;
+$headings-alt-font-family: $alternate-font-family !default;
+$headings-alt-font-weight: 500 !default;
+$headings-alt-line-height: 1.1 !default;
+$headings-alt-color: inherit !default;
+$heading-alt-letter-spacing-base: 0.025rem !default;
+$headings-alt-text-transform: lowercase !default;
+
+// ALTERNATIVE Display global options
+$display-alt-margin-bottom: $spacer / 2 !default;
+$display-alt-font-family: $alternate-font-family !default;
+$display-alt-font-weight: 800 !default;
+$display-alt-line-height: 1.1 !default;
+$display-alt-color: inherit !default;
+$display-alt-letter-spacing-base: -0.4rem !default;
+$display-alt-text-transform: capitalize;
+
+///
+// GLOBAL PARAGRAPH FONT STYLES
+//
+
+// PRIMARY FONT paragraph styles
+$p-font-size: $font-size-base * 1 !default;
+$p-margin-bottom: $spacer / 2 !default;
+$p-font-family: $primary-font-family !default;
+$p-font-weight: 300 !default;
+$p-line-height: 1.3 !default;
+$p-color: inherit !default;
+$p-letter-spacing-base: -0.1rem !default;
+
+// ALTERNATIVE FONT paragraph styles
+$p-alt-font-size: $font-size-base * 1 !default;
+$p-alt-margin-bottom: $spacer / 2 !default;
+$p-alt-font-family: $alternate-font-family !default;
+$p-alt-font-weight: 300 !default;
+$p-alt-line-height: 1.3 !default;
+$p-alt-color: inherit !default;
+$p-alt-letter-spacing-base: -0.1rem !default;
+
+
+///
+// PRIMARY FONT PARAMETERS
+//
+
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base * 1 !default;
+
+$h1-letter-spacing: $headings-letter-spacing-base * 1 !default;
+$h2-letter-spacing: $headings-letter-spacing-base * 1 !default;
+$h3-letter-spacing: $headings-letter-spacing-base * 1 !default;
+$h4-letter-spacing: $headings-letter-spacing-base * 1 !default;
+$h5-letter-spacing: $headings-letter-spacing-base * 1 !default;
+$h6-letter-spacing: $headings-letter-spacing-base * 1 !default;
+
+$display1-font-size: $font-size-base *  6 !default;
+$display2-font-size: $font-size-base *  5.5 !default;
+$display3-font-size: $font-size-base *  4.5 !default;;
+$display4-font-size: $font-size-base *  3.5 !default;
+
+
+$display1-letter-spacing: $display-letter-spacing-base * 1 !default;
+$display2-letter-spacing: $display-letter-spacing-base * .85 !default;
+$display3-letter-spacing: $display-letter-spacing-base * .8 !default;
+$display4-letter-spacing: $display-letter-spacing-base * .7 !default;
+
+
+///
+// ALTERNATE FONT PARAMETERS
+//
+
+$headings-alt-font-weight: 700 !default;
+$headings-alt-letter-spacing-base: 0.025rem !default;
+$display-alt-letter-spacing-base: -0.3rem !default;
+$display-alt-font-weight: 500 !default;
+$display-alt-line-height: 1.2 !default;
+
+$h1-alt-font-size: $font-size-base * 2.5 !default;
+$h2-alt-font-size: $font-size-base * 2 !default;
+$h3-alt-font-size: $font-size-base * 1.75 !default;
+$h4-alt-font-size: $font-size-base * 1.5 !default;
+$h5-alt-font-size: $font-size-base * 1.25 !default;
+$h6-alt-font-size: $font-size-base !default;
+
+
+$h1-alt-letter-spacing: $headings-alt-letter-spacing-base * 1.1 !default;
+$h2-alt-letter-spacing: $headings-alt-letter-spacing-base * 1 !default;
+$h3-alt-letter-spacing: $headings-alt-letter-spacing-base * 1 !default;
+$h4-alt-letter-spacing: $headings-alt-letter-spacing-base * 1 !default;
+$h5-alt-letter-spacing: $headings-alt-letter-spacing-base * 1 !default;
+$h6-alt-letter-spacing: $headings-alt-letter-spacing-base * 1 !default;
+
+
+$display1-alt-font-size: $font-size-base *  6 !default;
+$display2-alt-font-size: $font-size-base *  5.5 !default;
+$display3-alt-font-size: $font-size-base *  4.5 !default;;
+$display4-alt-font-size: $font-size-base *  3.5 !default;
+
+$display1-alt-letter-spacing: $display-alt-letter-spacing-base * .9 !default;
+$display2-alt-letter-spacing: $display-alt-letter-spacing-base * .8 !default;
+$display3-alt-letter-spacing: $display-alt-letter-spacing-base * .7 !default;
+$display4-alt-letter-spacing: $display-alt-letter-spacing-base * .5 !default;
+ 
+
+
+$display-line-height: $headings-line-height !default;
+
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 700 !default;
+
+$lead-alt-font-size: $font-size-base * 1.25 !default;
+$lead-alt-font-weight: 700 !default;
+
+$small-font-size: 80% !default;
+$text-muted: $gray-600 !default;
+$blockquote-small-color: $gray-600 !default;
+$blockquote-font-size: $font-size-base * 1.25 !default;
+$hr-border-color: rgba($black, 0.1) !default;
+$hr-border-width: $border-width !default;
+$mark-padding: 0.2em !default;
+$dt-font-weight: $font-weight-bold !default;
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default;
+$nested-kbd-font-weight: $font-weight-bold !default;
+$list-inline-padding: 0.5rem !default;
+$mark-bg: #fcf8e3 !default;
+$hr-margin-y: $spacer !default;
+
+
+///
+// PRIMARY SELECTOR DEFINITIONS & STYLES
+//
+
+// Primary Headings Styles
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: $headings-margin-bottom;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    text-transform: $headings-text-transform;
+    color: $headings-color;
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+    letter-spacing: $h1-letter-spacing;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+    letter-spacing: $h2-letter-spacing;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+    letter-spacing: $h3-letter-spacing;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+    letter-spacing: $h4-letter-spacing;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+    letter-spacing: $h5-letter-spacing;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+    letter-spacing: $h6-letter-spacing;
+}
+
+
+
+// Primary Display Styles for when you need to go BIG
+
+.display-1, .display-2, .display-3, .display-4{
+    margin-bottom: $display-margin-bottom;
+    font-family: $display-font-family;
+    font-weight: $display-font-weight !important;
+    line-height: $display-line-height;
+    text-transform: $display-text-transform;
+    color: $display-color;
+}
+
+
+.display-1 {
+    font-size: $display1-font-size;
+    letter-spacing: $display1-letter-spacing;
+}
+
+.display-2 {
+    font-size: $display2-font-size;
+    letter-spacing: $display2-letter-spacing;
+}
+
+.display-3 {
+    font-size: $display3-font-size;
+    letter-spacing: $display3-letter-spacing;
+}
+
+.display-4 {
+    font-size: $display4-font-size;
+    letter-spacing: $display4-letter-spacing;
+}
+
+
+// Primary Paragraph Styles
+p, .p{ 
+font-size: $p-font-size;
+margin-bottom: $p-margin-bottom;
+font-family: $primary-font-family;
+font-weight: $p-font-weight;
+line-height: $p-line-height;
+$p-color: inherit !default;
+$p-letter-spacing-base: -0.1rem !default;
+}
+
+
+///
+// ALTERNATE SELECTOR DEFINITIONS & STYLES
+//
+
+// Alternate Headings Styles
+
+
+h1-alt, h2-alt, h3-alt, h4-alt, h5-alt, h6-alt,
+.h1-alt, .h2-alt, .h3-alt, .h4-alt, .h5-alt, .h6-alt {
+    margin-bottom: $headings-alt-margin-bottom;
+    font-family: $headings-alt-font-family;
+    font-weight: $headings-alt-font-weight;
+    line-height: $headings-alt-line-height;
+    text-transform: $headings-alt-text-transform;
+    color: $headings-alt-color;
+    display: block;
+}
+
+
+h1-alt, .h1-alt {
+    font-size: $h1-alt-font-size;
+    letter-spacing: $h1-alt-letter-spacing;
+}
+
+h2-alt, .h2-alt {
+    font-size: $h2-alt-font-size;
+    letter-spacing: $h2-alt-letter-spacing;
+}
+
+h3-alt, .h3-alt {
+    font-size: $h3-alt-font-size;
+    letter-spacing: $h3-alt-letter-spacing;
+}
+
+h4-alt, .h4-alt {
+    font-size: $h4-alt-font-size;
+    letter-spacing: $h4-alt-letter-spacing;
+}
+
+h5-alt, .h5-alt {
+    font-size: $h5-alt-font-size;
+    letter-spacing: $h5-alt-letter-spacing;
+}
+
+h6-alt, .h6-alt {
+    font-size: $h6-alt-font-size;
+    letter-spacing: $h6-alt-letter-spacing;
+}
+
+// Alternate Display Styles
+
+.display-1-alt, .display-2-alt, .display-3-alt, .display-4-alt{
+    margin-bottom: $display-alt-margin-bottom;
+    font-family: $display-alt-font-family;
+    font-weight: $display-alt-font-weight;
+    line-height: $display-alt-line-height;
+    text-transform: $display-alt-text-transform;
+    color: $display-alt-color;
+}
+.display-1-alt {
+    font-size: $display1-alt-font-size;
+    letter-spacing: $display1-alt-letter-spacing;
+}
+
+.display-2-alt {
+    font-size: $display2-alt-font-size;
+    letter-spacing: $display2-alt-letter-spacing;
+}
+
+.display-3-alt {
+    font-size: $display3-alt-font-size;
+    letter-spacing: $display3-alt-letter-spacing;
+}
+
+.display-4-alt {
+    font-size: $display4-alt-font-size;
+    letter-spacing: $display4-alt-letter-spacing;
+}
+
+// Alternate Paragraph Styles
+p-alt, .p-alt{ 
+font-size: $p-font-size;
+margin-bottom: $p-margin-bottom;
+font-family: $alternate-font-family;
+font-weight: $p-font-weight;
+line-height: $p-line-height;
+$p-color: inherit !default;
+$p-letter-spacing-base: -0.1rem !default;
+}
+
+
+// MISC TREATMENTS
+
+//paragraph lead in
+.lead {
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
+}
+
+.lead-alt {
+    font-size: $lead-alt-font-size;
+    font-weight: $lead-alt-font-weight;
+} */

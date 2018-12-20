@@ -1,0 +1,589 @@
+//
+// TODO
+//
+// => remove bootstrap classes from home-splash
+//
+// => fix rvr units
+// => transform sidenav spacing from modularscale to vertical rhythm
+
+
+
+
+
+// ==========================================================================
+// PANELS 
+// ==========================================================================
+
+
+//
+// strategic marketing management panel
+// ==========================================================================
+
+
+#smmbox{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+
+#smmcontainer{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-content: center;
+}
+/*
+#smmcontentblock{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (8);
+    }
+}
+
+#smmlinks{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    }
+}*/
+
+
+
+#smmcontent{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (10);
+    }
+}
+
+#smmcontentrow{
+        display: flex;
+    flex-direction: row;
+}
+
+//
+// i'm available panel
+// ==========================================================================
+
+
+#availablecontainer{
+display: flex;
+align-items: center;
+min-height: 100vh;
+}
+
+
+#availablecontainer .pagetitle, #availableheadline{
+margin-bottom: rvr(2);
+margin-bottom: vr(2);
+    @include make-col-ready;
+    @include make-col (12);
+}
+
+#availablecontent{
+    @include make-col-ready;
+    @include make-col (12);
+}
+
+#availablecontent .card{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    }
+    border: none;
+}
+
+//
+// what i do panel
+// ==========================================================================
+
+
+#dobox{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+
+#docontainer{
+display: flex;
+align-items: center;
+min-height: 100vh;
+}
+
+#docontainer .pagetitle, #doheadline{
+margin-bottom: rvr(2);
+margin-bottom: vr(2);
+    @include make-col-ready;
+    @include make-col (12);
+}
+
+
+#docontent{
+    @include make-col-ready;
+    @include make-col (12);
+}
+
+#docontent .card{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+    }
+    border: none;
+}
+
+
+
+a.btn.btn-do{
+height: $ms-2;
+width: $ms-2;
+border-radius: 100%;
+color: white;
+background: $gray-100;
+border: none;
+padding: 0;
+}
+
+.btn-content{
+height: $ms-2;
+width: $ms-2;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+
+//
+// about me panel
+// ==========================================================================
+
+
+#aboutbox{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+
+#aboutcontainer{
+height: 100vh;
+display: flex;
+align-items: center;
+}
+
+
+#aboutcontent{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (10);
+    }
+}
+
+
+#aboutcontentblock{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (8);
+    }
+}
+
+
+
+#abouticons{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    }
+}
+
+
+
+
+#aboutcontentrow{
+        display: flex;
+    flex-direction: row;
+}
+
+
+
+//
+// how i help panel
+// ==========================================================================
+
+
+#helpbox{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+}
+
+
+#helpcontainer{
+height: 100vh;
+display: flex;
+align-items: center;
+}
+
+#helpcontentblock{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (8);
+    }
+}
+
+#helplinks{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    }
+}
+
+
+
+#helpcontent{
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (10);
+    }
+}
+
+#helpcontentrow{
+        display: flex;
+    flex-direction: row;
+}
+
+
+// ==========================================================================
+// global page styles
+// ==========================================================================
+
+.sidenav{
+z-index: 10000;
+position: absolute;
+    // width: $ms-4;
+    // margin-right: $ms-4;
+right: 5%;
+}
+
+.navcontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+}
+
+.sidenav#left{
+    right: unset;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    margin-right: $ms-_25;
+}
+
+.navcontent, .sidenav#left{
+    height: $ms-7;
+}
+
+// left chevron container
+.chevlf{
+height: $ms-4;
+width: $ms-2;
+margin-left: -$ms-3;
+margin-right: $ms-_5;
+}
+// up chevron btm padding 
+.wp-image-23{
+margin-bottom: $ms-_75;
+}
+
+// down chevron top padding 
+.wp-image-24{
+margin-top: $ms-_75;
+}
+
+
+// up & down chevron svg's
+
+.wp-image-23, .wp-image-24{
+width: $ms-4;
+height: $ms-4;
+}
+
+.chevlf-svg{
+    // width: $ms-_5;
+    height: $ms-4;
+}
+
+
+.pagetitle{
+    font-size: $ms-_25;
+    font-weight: 400;
+    padding: 0;
+}
+
+
+
+// .inline{
+//         @include make-col-ready;
+//     @include media-breakpoint-up(sm) {
+//         @include make-col (12);
+//     }
+//     @include media-breakpoint-up(md) {
+//         @include make-col (2);
+//     }
+// }
+
+.pagetitle hr{
+    border-style: solid;
+    border-width: 1px;
+    margin-top: $vr-_5; 
+    margin-bottom: $vr-0;
+    margin-left: 0;
+    margin-right: 0;
+    width: $width-3;
+}
+
+.pagetitle.span{
+width: 80%;
+}
+
+
+
+
+
+/*.chevup{
+margin-bottom: $vr-2;
+}*/
+
+#testdiv {
+    height: 90vh;
+}
+
+
+
+.bgme {
+    opacity: 1;
+    background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+
+@media (min-width: 576px) {
+    .bgme {
+        background-size: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .bgme {
+        background-size: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .bgme {
+        background-size: 90%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bgme {
+        background-size: 70%;
+    }
+}
+
+
+/*========================================================
+=            Atomic Mouse Theme Customization            =
+========================================================*/
+
+.vh-100 {
+    height: 100vh;
+}
+
+.vh-95{
+    height: 95vh;
+}
+
+.cover-container {
+    height: 95vh;
+}
+
+/*----------  GLOBAL PAGE ATTRIBUTES  ----------*/
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    padding: 0;
+}
+
+//
+// primary content container 
+// ==========================================================================
+
+
+
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+.grid-container {
+  @include make-container();
+  @include media-breakpoint-up(md) {
+    @include make-container-max-widths;
+  }
+}
+
+// .container-fluid {
+//   width: 100%;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto; }
+
+// .row {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-wrap: wrap;
+//       flex-wrap: wrap;
+//   margin-right: -15px;
+//   margin-left: -15px; }
+
+
+/*----------  NAVBAR  ----------*/
+
+.navbar-dark .navbar-toggler {
+    background-color: hsl(0, 0%, 80%) !important;
+}
+
+#bug .st0 {
+    fill: #000;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.custom-logo-link {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+.navbar-dark {
+    background-color: #fff;
+}
+
+.navbar-light {
+    background-color: #fff;
+}
+
+.nav-link {
+    font-family: $font-family-monospace;
+}
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+
+
+
+
+
+
+/*=============================
+=            FONTS            =
+=============================*/
+
+.navbar-brand,
+.navbar,
+.navbar a {
+    color: #646464 !important;
+}
+

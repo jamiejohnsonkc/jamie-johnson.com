@@ -1,0 +1,4 @@
+shift+ctrl+a 		selects first tag and contents
+shift+ctrl+a x2		select first tag, contents and closing tag
+
+ctrl + b + 			toggle sidebar

@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cover-container bgme">
+<section class="cover-container bgme" id="splash">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- 	<div class="row"> -->
 	
 				
-					<div class="container d-flex mx-auto justify-content-center align-items-left vh-95 flex-column" id="intro"><h1 class="v-1">Hi. I'm Jamie</h1>
-						<span class="display-4 v-0">I am a strategist | creator | developer | leader | <strong>marketer</strong></span>
-						<span class="display-2 v-2">I turn marketing into business outcomes.</span>
+					<div class="container" id="splashcontainer"><h1 class="v-1">Hi. I'm Jamie</h1>
+						<span class="splash1">strategist | creator | developer | leader | <strong>marketer</strong></span>
+						<span class="splash2">I generate business outcomes.</span>
 					</div>
 				
 	

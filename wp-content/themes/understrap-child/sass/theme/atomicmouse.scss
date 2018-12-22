@@ -14,6 +14,72 @@
 // PANELS 
 // ==========================================================================
 
+
+//
+// customer-driven engagement
+// ==========================================================================
+
+
+
+#custbox{
+display: inline-flex;
+align-items: center;
+flex-direction: row;
+}
+
+
+#custcontainer{
+height: 100vh;
+display: flex;
+flex-direction: column;;
+}
+
+
+#custcontent > div.pagetitle{
+    margin-bottom: $vr-5;
+    margin-top: $vr-2;
+}
+
+
+
+
+.row#custcontent{
+    //     display: flex;
+    flex-direction: column;
+    // align-content: center;
+    height: 80vh;
+    justify-content: center;
+    // flex-wrap: nowrap;
+}
+
+#custheadline{
+    margin-bottom: $vr-2;
+}
+
+
+.custblock{
+ @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (6);
+    } 
+}
+
+.custshell{
+    margin-bottom: $vr-1;
+}
+
+.custcopy{
+    @include body-4;
+    max-width: 34rem;
+}
+
+
+
+
+
 //
 // strategic marketing management panel
 // ==========================================================================
@@ -210,6 +276,32 @@ margin-bottom: vr(2);
     }
     border: none;
 }
+
+
+//
+// home/splash panel
+// ==========================================================================
+#splash{
+    height: 95vh;
+}
+#splashcontainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: left;
+    height: 95vh;
+    flex-direction: column;
+}
+#splashcontainer > span{
+    @include display-3
+    @include v-0;
+}
+
+#splashcontainer > span.splash2{
+    @include display-2
+    @include v-2;
+}
+
 
 //
 // what i do panel
@@ -546,9 +638,6 @@ margin-bottom: $vr-2;
     height: 95vh;
 }
 
-.cover-container {
-    height: 95vh;
-}
 
 /*----------  GLOBAL PAGE ATTRIBUTES  ----------*/
 html,

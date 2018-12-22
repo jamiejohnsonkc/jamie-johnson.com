@@ -165,17 +165,17 @@ $vr-6:    vr(6);
 $vr-7:    vr(7);
 $vr-8:    vr(8);
 
-.v-0{margin: 0 0; margin: 0 0;}
-.v-1{margin: $rvr-1 0; margin: $vr-1 0;}
-.v-1_5{margin: $rvr-1_5 0; margin: $vr-1_5 0;}
-.v-2{margin: $rvr-2 0; margin: $vr-2 0;}
-.v-2_5{margin: $rvr-2_5 0; margin: $vr-2_5 0;}
-.v-3{margin: $rvr-3 0; margin: $vr-3 0;}
-.v-4{margin: $rvr-4 0; margin: $vr-4 0;}
-.v-5{margin: $rvr-5 0; margin: $vr-5 0;}
-.v-6{margin: $rvr-6 0; margin: $vr-6 0;}
-.v-7{margin: $rvr-7 0; margin: $vr-7 0;}
-.v-8{margin: $rvr-8 0; margin: $vr-8 0;}
+@mixin v-0{margin: 0 0; margin: 0 0;}
+@mixin v-1{margin: $rvr-1 0; margin: $vr-1 0;}
+@mixin v-1_5{margin: $rvr-1_5 0; margin: $vr-1_5 0;}
+@mixin v-2{margin: $rvr-2 0; margin: $vr-2 0;}
+@mixin v-2_5{margin: $rvr-2_5 0; margin: $vr-2_5 0;}
+@mixin v-3{margin: $rvr-3 0; margin: $vr-3 0;}
+@mixin v-4{margin: $rvr-4 0; margin: $vr-4 0;}
+@mixin v-5{margin: $rvr-5 0; margin: $vr-5 0;}
+@mixin v-6{margin: $rvr-6 0; margin: $vr-6 0;}
+@mixin v-7{margin: $rvr-7 0; margin: $vr-7 0;}
+@mixin v-8{margin: $rvr-8 0; margin: $vr-8 0;}
 
 @mixin v0{margin: 0 0; margin: 0 0;}
 @mixin v-_5{margin: $rvr-_5 0; margin: $vr-_5 0;}
@@ -233,19 +233,19 @@ h6, .h6 { font-size: $h6-font-size; }
 
 
 // Type display classes
-.display-1 {
+@mixin display-1 {
   font-size: $display1-size;
   font-weight: $display1-weight;
 }
-.display-2 {
+@mixin display-2 {
   font-size: $display2-size;
   font-weight: $display2-weight;
 }
-.display-3 {
+@mixin display-3 {
   font-size: $display3-size;
   font-weight: $display3-weight;
 }
-.display-4 {
+@mixin display-4 {
   font-size: $display4-size;
   font-weight: $display4-weight;
 }
@@ -260,13 +260,12 @@ p  {line-height: 1.4; font-family: $font-family-serif;}
 
 
 // Body type classes
-@mixin body-1() {
+@mixin body-1{
   font-size: $body-1-font-size;
   font-weight: $body-font-weight;
   font-family: $font-family-serif;
-
 }
-@mixin body-2(){
+@mixin body-2{
   font-size: $body-2-font-size;
   font-weight: $body-font-weight;
   font-family: $font-family-serif;

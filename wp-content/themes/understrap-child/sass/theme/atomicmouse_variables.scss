@@ -177,13 +177,13 @@ $vr-8:    vr(8);
 .v-7{margin: $rvr-7 0; margin: $vr-7 0;}
 .v-8{margin: $rvr-8 0; margin: $vr-8 0;}
 
-@mixin v0(){margin: 0 0; margin: 0 0;}
-@mixin v-_5(){margin: $rvr-_5 0; margin: $vr-_5 0;}
-@mixin v-_75(){margin: $rvr-_75 0; margin: $vr-_75 0;}
-@mixin v-1(){margin: $rvr-1 0; margin: $vr-1 0;}
+@mixin v0{margin: 0 0; margin: 0 0;}
+@mixin v-_5{margin: $rvr-_5 0; margin: $vr-_5 0;}
+@mixin v-_75{margin: $rvr-_75 0; margin: $vr-_75 0;}
+@mixin v-1{margin: $rvr-1 0; margin: $vr-1 0;}
 
 @mixin v1_5(){ margin: $rvr-1_5 0; margin: $vr-1_5 0;}
-@mixin v2(){ margin: $rvr-2 0; margin: $vr-2 0;}
+@mixin v2{ margin: $rvr-2 0; margin: $vr-2 0;}
 @mixin v2-5(){margin: $rvr-2_5 0; margin: $vr-2_5 0;}
 @mixin v3(){ margin: $rvr-3 0; margin: $vr-3 0;}
 @mixin v4(){ margin: $rvr-4 0; margin: $vr-4 0;}
@@ -208,6 +208,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: unset;
   line-height: unset;
   color: $headings-color;
+  margin-bottom: $vr-1;
 }
 
 h1, .h1 { font-size: $h1-font-size; }
@@ -227,6 +228,7 @@ h6, .h6 { font-size: $h6-font-size; }
   font-weight: unset;
   font-size: unset;
 }
+
 
 
 
@@ -278,6 +280,18 @@ p  {line-height: 1.4; font-family: $font-family-serif;}
 }
 @mixin body-4 {
   font-size: $body-4-font-size;
+  font-weight: $body-font-weight;
+  font-family: $font-family-serif;
+}
+
+@mixin body-5 {
+  font-size: $body-5-font-size;
+  font-weight: $body-font-weight;
+  font-family: $font-family-serif;
+}
+
+@mixin body-6 {
+  font-size: $body-6-font-size;
   font-weight: $body-font-weight;
   font-family: $font-family-serif;
 }

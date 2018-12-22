@@ -14,25 +14,134 @@
 // PANELS 
 // ==========================================================================
 
+//
+// strategic marketing management panel
+// ==========================================================================
+
+
+
+#scvbox{
+display: inline-flex;
+align-items: center;
+flex-direction: row;
+}
+
+
+#scvcontainer{
+height: 100vh;
+display: flex;
+flex-direction: column;;
+}
+
+
+#scvcontent > div.pagetitle{
+    margin-bottom: $vr-5;
+    margin-top: $vr-2;
+}
+
+
+
+
+.row#scvcontent{
+    //     display: flex;
+    flex-direction: column;
+    // align-content: center;
+    height: 80vh;
+    justify-content: center;
+    // flex-wrap: nowrap;
+}
+
+#scvheadline{
+    margin-bottom: $vr-2;
+}
+
+
+.scvblock{
+ @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (6);
+    } 
+}
+
+.scvshell{
+    margin-bottom: $vr-1;
+}
+
+.scvcopy{
+    @include body-4;
+    max-width: 34rem;
+}
+
+
 
 //
 // strategic marketing management panel
 // ==========================================================================
 
 
+
 #smmbox{
 display: inline-flex;
-justify-content: center;
 align-items: center;
+flex-direction: row;
 }
 
 
 #smmcontainer{
 height: 100vh;
 display: flex;
-flex-direction: column;
-align-content: center;
+flex-direction: column;;
 }
+
+
+#smmcontent > div.pagetitle{
+    margin-bottom: $vr-5;
+    margin-top: $vr-2;
+}
+
+
+
+.row#smmcontent{
+    //     display: flex;
+    flex-direction: column;
+    // align-content: center;
+    height: 80vh;
+    justify-content: center;
+    // flex-wrap: nowrap;
+}
+
+
+.endtoend{
+    width: 1201px;
+    margin: $vr-1 0;
+}
+
+.smmblock{
+ justify-content: end;   
+}
+
+.smmcopy{
+    @include body-6;
+@include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+        left: 50%;
+    }
+}
+
+
+.clead{
+    font-weight: bold;
+    // font-family: $font-family-sans-serif;
+    font-style: italic;
+}
+
 /*
 #smmcontentblock{
     @include make-col-ready;
@@ -56,20 +165,16 @@ align-content: center;
 
 
 
-#smmcontent{
-    @include make-col-ready;
-    @include media-breakpoint-up(sm) {
-        @include make-col (12);
-    }
-    @include media-breakpoint-up(md) {
-        @include make-col (10);
-    }
-}
+// #smmcontent{
+//     @include make-col-ready;
+//     @include media-breakpoint-up(sm) {
+//         @include make-col (12);
+//     }
+//     @include media-breakpoint-up(md) {
+//         @include make-col (10);
+//     }
+// }
 
-#smmcontentrow{
-        display: flex;
-    flex-direction: row;
-}
 
 //
 // i'm available panel

@@ -15,6 +15,85 @@
 // ==========================================================================
 
 
+
+//
+// home/cash panel
+// ==========================================================================
+#cash{
+    height: 95vh;
+}
+#cashcontainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: left;
+    height: 95vh;
+    flex-direction: column;
+}
+
+.cashheadline{
+    margin-bottom: $vr-2;
+}
+
+.cashheadline h2{
+// @include v-1;
+}
+
+.cashheadline span{
+@include display-4;
+}
+
+// #cashcontainer > span{
+//     @include display-4;
+//     @include v-0;
+// }
+
+// #cashcontainer > span.cash2{
+//     @include display-2;
+//     @include v-2;
+// }
+
+
+.cashblock{
+ @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    } 
+}
+
+.cashshell{
+    margin-bottom: $vr-1;
+}
+
+.cashcontent{
+    max-width: 20rem;
+}
+
+.cashcontent h4{
+@include v0;
+}
+
+.cashsubhead{
+@include display-5;
+margin-bottom: $vr-1;
+}
+
+.cashlist{
+    list-style: none;
+    padding: 0;
+}
+
+.cashlist li{
+@include body-4;
+}
+
+
+
+
+
 //
 // customer-driven engagement
 // ==========================================================================
@@ -163,11 +242,16 @@ flex-direction: column;;
 }
 
 
+
+
 #smmcontent > div.pagetitle{
     margin-bottom: $vr-5;
     margin-top: $vr-2;
 }
 
+#smmheadline span{
+    @include display-4;
+}
 
 
 .row#smmcontent{
@@ -292,13 +376,18 @@ margin-bottom: vr(2);
     height: 95vh;
     flex-direction: column;
 }
+
+#splashcontainer h1{
+@include v-1;
+}
+
 #splashcontainer > span{
-    @include display-3
+    @include display-4;
     @include v-0;
 }
 
 #splashcontainer > span.splash2{
-    @include display-2
+    @include display-2;
     @include v-2;
 }
 
@@ -598,6 +687,14 @@ margin-bottom: $vr-2;
     background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg');
     background-repeat: no-repeat;
     background-position: right bottom;
+    background-size: cover;
+}
+
+.arrow {
+    opacity: 1;
+    background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/arrow.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 

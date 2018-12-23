@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 					<div id="smmheadline">
-						<h2>Strategic Marketing Management</h2><span class="display-4">End to end leadership focused on business outcomes</span>
+						<h2>Strategic Marketing Management</h2><span>End to end leadership focused on business outcomes</span>
 					</div>
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/endtoend.svg" alt="" class="style-svg endtoend"/>
 					<div class="smmblock">

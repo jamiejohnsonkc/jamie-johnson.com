@@ -81,11 +81,13 @@ $display1-size:               $ms-5;
 $display2-size:               $ms-4;
 $display3-size:               $ms-3;
 $display4-size:               $ms-2;
+$display5-size:               $ms-1;
 
 $display1-weight:             300;
 $display2-weight:             300;
 $display3-weight:             300;
 $display4-weight:             300;
+$display5-weight:             300;
 
 $display-font-family:         inherit;
 $display-color:               inherit;
@@ -177,19 +179,18 @@ $vr-8:    vr(8);
 @mixin v-7{margin: $rvr-7 0; margin: $vr-7 0;}
 @mixin v-8{margin: $rvr-8 0; margin: $vr-8 0;}
 
-@mixin v0{margin: 0 0; margin: 0 0;}
-@mixin v-_5{margin: $rvr-_5 0; margin: $vr-_5 0;}
-@mixin v-_75{margin: $rvr-_75 0; margin: $vr-_75 0;}
-@mixin v-1{margin: $rvr-1 0; margin: $vr-1 0;}
-
-@mixin v1_5(){ margin: $rvr-1_5 0; margin: $vr-1_5 0;}
-@mixin v2{ margin: $rvr-2 0; margin: $vr-2 0;}
-@mixin v2-5(){margin: $rvr-2_5 0; margin: $vr-2_5 0;}
-@mixin v3(){ margin: $rvr-3 0; margin: $vr-3 0;}
-@mixin v4(){ margin: $rvr-4 0; margin: $vr-4 0;}
-@mixin v5(){ margin: $rvr-5 0; margin: $vr-5 0;}
-@mixin v6(){ margin: $rvr-6 0; margin: $vr-6 0;}
-@mixin v7(){ margin: $rvr-7 0; margin: $vr-7 0;}
+@mixin v0     { margin: 0 0; margin: 0 0;}
+@mixin v-_5   { margin: $rvr-_5 0; margin: $vr-_5 0;}
+@mixin v-_75  { margin: $rvr-_75 0; margin: $vr-_75 0;}
+@mixin v-1    { margin: $rvr-1 0; margin: $vr-1 0;}
+@mixin v1_5   { margin: $rvr-1_5 0; margin: $vr-1_5 0;}
+@mixin v2     { margin: $rvr-2 0; margin: $vr-2 0;}
+@mixin v2-5   { margin: $rvr-2_5 0; margin: $vr-2_5 0;}
+@mixin v3     { margin: $rvr-3 0; margin: $vr-3 0;}
+@mixin v4     { margin: $rvr-4 0; margin: $vr-4 0;}
+@mixin v5     { margin: $rvr-5 0; margin: $vr-5 0;}
+@mixin v6     { margin: $rvr-6 0; margin: $vr-6 0;}
+@mixin v7     { margin: $rvr-7 0; margin: $vr-7 0;}
 
  
 
@@ -204,7 +205,7 @@ $vr-8:    vr(8);
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 /*  margin-bottom: $headings-margin-bottom;*/
-  font-family: unset;
+  font-family: $headings-font-family;
   font-weight: unset;
   line-height: unset;
   color: $headings-color;
@@ -223,7 +224,7 @@ h6, .h6 { font-size: $h6-font-size; }
   font-weight: $lead-font-weight;
 }
 
-.display-1, .display-2, .display-3, .display-4{
+.display-1, .display-2, .display-3, .display-4, .display-5{
   color: unset;
   font-weight: unset;
   font-size: unset;
@@ -248,6 +249,10 @@ h6, .h6 { font-size: $h6-font-size; }
 @mixin display-4 {
   font-size: $display4-size;
   font-weight: $display4-weight;
+}
+@mixin display-5 {
+  font-size: $display5-size;
+  font-weight: $display5-weight;
 }
 
 // Paragraphs

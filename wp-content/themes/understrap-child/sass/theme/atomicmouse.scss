@@ -5,7 +5,7 @@
 //
 // => fix rvr units
 // => transform sidenav spacing from modularscale to vertical rhythm
-
+// => find/replace cover-container to container-fluid (home and modus panels)
 
 
 
@@ -22,6 +22,13 @@
 #cash{
     height: 95vh;
 }
+
+#cashcontainer > div.pagetitle{
+    margin-bottom: $vr-5;
+    margin-top: $vr-2;
+}
+
+
 #cashcontainer{
     display: flex;
     margin: 0 auto;
@@ -362,19 +369,331 @@ margin-bottom: vr(2);
 }
 
 
-//
+// 
+// cats panel
+// ==========================================================================
+// #cats{
+// // height: 100vh;
+// }
+
+
+
+#catscontainer{
+padding-top: ms(5);
+}
+
+#catscontainer h2{
+@include v-3;
+}
+
+.catscontent{
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    } 
+}
+
+.catscopy{
+    max-width: ms(10);
+    @include body-4;
+    @include v-1;
+    line-height: 1.2;
+}
+
+.catsblock{
+    display:flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+        margin-bottom: $vr-1;
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (8);
+    }
+    } 
+
+
+.catfig{
+    margin-top: $vr-_5;
+    margin-bottom: $vr-_5;
+    margin-left: $vr-_5;
+    margin-right: $vr-_5;
+    position: relative;
+    width: $ms-9;
+}
+
+.vert{
+max-width: 100%;
+  
+}
+
+.caption-text{
+opacity: 0;
+position: absolute;
+width: 100%;
+color: #fff;
+left: 0;
+bottom: 0;
+padding: $vr-_25;
+font-weight: 300;
+z-index: 2;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+background-color: rgba(0,0,0,.7);
+-webkit-transition: opacity .3s ease-in-out;
+transition: opacity .3s ease-in-out;
+font-family: $font-family-sans-serif;
+font-size: $ms-0-8;
+}
+
+.catfig:hover .caption-text{
+opacity: 1;
+}
+
+
+
+.expbox{
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (12);
+    } 
+}
+
+
+.catstitle{
+       @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+    } 
+    @include display-5;
+    font-weight: 400;
+    @include v-1;
+    padding-left: 0;
+}
+
+
+
+
+
+
+
+// 
+// brands panel
+// ==========================================================================
+// #brands{
+// // height: 100vh;
+// }
+
+.brandsblock{
+    align-items: stretch;
+}
+
+.brandsblock .style-svg{
+width: $ms-8;
+fill: #000;
+padding: 0 $ms-1_5 $vr-2 $ms-1_5;
+}
+
+
+
+#brandscontainer{
+padding-top: ms(5);
+}
+
+#brandscontainer h2{
+@include v-3;
+}
+
+
+.brandscontent{
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    } 
+}
+
+.brandscopy{
+    max-width: ms(10);
+    @include body-4;
+    @include v-1;
+    line-height: 1.2;
+}
+
+.brandsblock{
+    display:flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+        margin-bottom: $vr-1;
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (8);
+    }
+    } 
+
+
+
+
+
+.expbox{
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (12);
+    } 
+}
+
+
+.brandstitle{
+       @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+    } 
+    @include display-5;
+    font-weight: 400;
+    @include v-1;
+    padding-left: 0;
+}
+
+
+
+
+
+// 
+// hybrid panel
+// ==========================================================================
+// #hybrid{
+// // height: 100vh;
+// }
+
+.helix {
+    background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/helix2.jpg');
+    background-size: 22%;
+    background-repeat: no-repeat;
+    background-position: 90% 45%;
+    background-attachment: fixed;
+}
+
+#gap{
+    height: 25vh;
+}
+#hybridcontainer{
+padding-top: ms(5);
+}
+
+#hybridcontainer h2{
+@include v-3;
+}
+
+
+.hybridblock{
+    display:flex;
+    @include make-col-ready;
+        @include make-col (12);
+    margin-bottom: $vr-1;
+    }
+
+.hybridtitle{
+       @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+    } 
+    @include display-5;
+    font-weight: 400;
+    @include v-1;
+    padding-left: 0;
+}
+
+
+
+.hybridtext{
+       @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (9);
+    } 
+}
+
+.hybridcopy{
+    max-width: ms(10);
+    @include body-4;
+    @include v-1;
+    line-height: 1.2;
+}
+
+
+// 
+// aboutme/splash panel
+// ==========================================================================
+#aboutsplash{
+
+}
+#aboutsplashcontainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    height: 95vh;
+}
+
+#aboutsplashcontainer h1{
+@include v-1;
+}
+
+#aboutsplashcontainer > span{
+    @include display-4;
+    @include v-0;
+}
+
+#aboutsplashcontainer .aboutsplash2{
+    @include display-2;
+    @include v-2;
+}
+
+// 
 // home/splash panel
 // ==========================================================================
 #splash{
-    height: 95vh;
+
 }
 #splashcontainer{
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: left;
-    height: 95vh;
     flex-direction: column;
+    height: 95vh;
 }
 
 #splashcontainer h1{
@@ -386,11 +705,39 @@ margin-bottom: vr(2);
     @include v-0;
 }
 
-#splashcontainer > span.splash2{
+#splashcontainer .splash2{
     @include display-2;
     @include v-2;
 }
 
+// 
+// home call to action panel
+// ==========================================================================
+#homecta{
+
+}
+#homectacontainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    height: 95vh;
+}
+
+#homectacontainer h1{
+@include v-1;
+}
+
+#homectacontainer > span{
+    @include display-4;
+    @include v-0;
+}
+
+#homectacontainer .homecta2{
+    @include display-2;
+    @include v-2;
+}
 
 //
 // what i do panel
@@ -573,6 +920,35 @@ align-items: center;
     flex-direction: row;
 }
 
+// 
+// help cta panel
+// ==========================================================================
+#helpcta{
+
+}
+#helpctacontainer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    height: 95vh;
+}
+
+#helpctacontainer h1{
+@include v-1;
+}
+
+#helpctacontainer > span{
+    @include display-4;
+    @include v-0;
+}
+
+#helpctacontainer .helpcta2{
+    @include display-2;
+    @include v-2;
+}
+
 
 // ==========================================================================
 // global page styles
@@ -697,6 +1073,26 @@ margin-bottom: $vr-2;
     background-position: center center;
     background-size: cover;
 }
+
+.evo {
+    opacity: 1;
+    background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolution.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 97% 100%;
+    // background-size: cover;
+}
+
+// .helix {
+//     opacity: .8;
+//     background-image: url('http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/helix2.jpg');
+//     background-size: 22%;
+//     background-repeat: no-repeat;
+//     background-position: 90% 45%;
+//     background-attachment: fixed;
+//     // background-size: cover;
+// }
+
 
 @media (min-width: 576px) {
     .bgme {

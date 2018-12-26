@@ -11,19 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-<section class="container-fluid" id="homectabox">
-	<!-- 	<div class="row"> -->
-		<!-- <div class="container-fluid" id="hhelp"> -->
-
-			<div class="container d-flex mx-auto justify-content-center align-items-left vh-95 flex-column" id="intro"><h1 class="v-1">Hire Me.</h1>
-						<span class="display-4 v-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</span>
-						<span class="display-2 v-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</span>
-					</div>
-
-
-
 			
-		</section><!-- Container end -->
-
+<section class="cover-container" id="homecta">
+	<div class="<?php echo esc_attr( $container ); ?>">
+		<!-- 	<div class="row"> -->
+	
 				
-
+					<div class="container" id="homectacontainer"><h1>Hire Me</h1>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+						<span class="homecta2">Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					</div>
+				
+	
+				<!-- 		</div> --><!-- .row end -->
+	</div><!-- Container end -->
+</section><!-- cover end -->

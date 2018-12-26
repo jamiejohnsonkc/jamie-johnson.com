@@ -13,9 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="cover-container arrow" id="cash">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- 	<div class="row"> -->
-	
+	<?php get_template_part( 'navcluster-left' ); ?>
 				
 					<div class="container" id="cashcontainer">
+						
+<div class="pagetitle">
+						<span>how i can help | 02 TRANSCEND THE COMPETITION</span>
+					</div>
 						<div class="cashheadline">
 							<h2>Don't Make Stuff. Make Money.</h2>
 							<span>If it doesn't produce, you're not marketing. You're Spending.</span>

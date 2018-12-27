@@ -3,11 +3,15 @@
     "proxy": "jamiejohnsonmev2.test",
     "notify": false
   },
+
+  "browser" : "chrome.exe",
+
   "browserSyncWatchFiles" : [
     "./css/*.min.css",
     "./js/*.min.js",
     "./**/*.php"
   ],
+
   "paths" : {
     "js": "./js",
     "css": "./css",

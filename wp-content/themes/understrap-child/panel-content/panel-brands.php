@@ -18,8 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 			<div class="row">
 				<div class="brandsblock">
-						<img class="style-svg exp" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
-						<img class="style-svg exp" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
+						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
+						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_04.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_05.svg" alt="exp logo" />

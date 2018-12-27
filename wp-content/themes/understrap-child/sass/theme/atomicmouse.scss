@@ -7,12 +7,220 @@
 // => transform sidenav spacing from modularscale to vertical rhythm
 // => find/replace cover-container to container-fluid (home and modus panels)
 
+.tempcontainer{
+     display:flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+        margin-bottom: $vr-1;
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (12);
+    }
+    } 
 
 
+.temp-icon .style-svg{
+width: $ms-9;
+fill: #464646;
+padding: 0 $ms-1_5 $vr-2 $ms-1_5;
+}
+
+.tempsize{
+    @include v-1;
+    @include make-col-ready;
+        @include make-col (12);
+}
+
+.temp1{font-size: $ms-0-1;}
+.temp2{font-size: $ms-0-2;}
+.temp3{font-size: $ms-0-3;}
+.temp4{font-size: $ms-0-4;}
+.temp5{font-size: $ms-0-5;} //
+.temp6{font-size: $ms-0-6;} //.639
+.temp7{font-size: $ms-0-7;} // .75
+.temp8{font-size: $ms-0-8;} //.78
+.temp9{font-size: $ms-0-9;} //.851 
+.temp10{font-size:$ms-0;} // 1
+.temp11{font-size:$ms-_15;}
+.temp12{font-size:$ms-_25;}
+.temp13{font-size:$ms-_5;}
+.temp14{font-size:$ms-_75;}
+.temp15{font-size:$ms-1;}
 
 // ==========================================================================
 // PANELS 
 // ==========================================================================
+
+// 
+// expertise panel
+// ==========================================================================
+// #brands{
+// // height: 100vh;
+// }
+
+#expt{
+height: 100vh;
+overflow: hidden;
+padding: $vr-2;
+display: flex;
+align-items:center;
+}
+
+
+
+#exptcontainer{
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+}
+
+
+.exptnav{
+ @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (3);
+    }
+}
+
+
+#expt-nav-rule{
+    border-right: solid thin gray;
+    max-width: 95%;
+}
+
+#floatleft{
+}
+
+
+
+.expt-menu{
+    list-style: none;
+    padding-left: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 20vh;
+    margin-top: $vr-1;
+}
+
+.expt-menu a{
+    padding: 0;
+}
+
+.exptnav li{
+    max-width: $ms-9;
+    font-weight: 500;
+    font-size: $ms-0-8;
+    line-height: 1.2;
+}  
+
+
+.expt-skills{
+    height: 70vh;
+    overflow: scroll;
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (9);
+    }
+}
+
+.exptcontainer * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.expt-skills::-webkit-scrollbar { display:none }
+
+
+.exptblock{
+    display:flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+        margin-bottom: $vr-1;
+    } 
+
+.expt-head{
+@include make-col-ready;
+@include make-col (12);
+@include v-1;
+}
+
+
+.expt-head h4{
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.exptbox{
+    margin-bottom: $vr-2;
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    }
+}
+
+
+.expt-icon{
+    width: $ms-7;
+    margin-left: -1.25em;
+    margin-bottom: $vr-1;
+}
+
+.expt-icon .style-svg{
+fill: #464646;
+width: 7em;
+}
+
+.expt-icon .cls-1, .expt-cion .cls-2{
+    fill: #000;
+}
+
+.expt-copy{
+    width: 100%;
+}
+
+.expt-text{
+    max-width: $ms-9_5;
+}
+
+
+
+#exptcontainer h2{
+margin-bottom: $vr-2;
+}
+
+
+.exptcontent{
+     @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col (12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col (4);
+    } 
+}
+
+
+
+
+
 
 
 

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="gap"></div>
-<section class="container-fluid helix" id="hybrid">
+<section class="container-fluid gel" id="hybrid">
 
 				
 <div class="container" id="hybridcontainer">

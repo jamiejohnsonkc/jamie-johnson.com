@@ -9,26 +9,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="container-fluid" id="expt">
-
-
-
-			<div class="exptnav-vert">
-			
+	<div class="container" id="exptcontainer">
+		<div class="section-head"><h2>End to End Marketing Expertise</h2></div>
+		<div class="row">
+			<div class="exptnav">
+				<div id="expt-nav-rule">
 					<ul class="expt-menu">
 						<li class="nav-item"><a class="nav-link" href="#post-sub-panel">Post-Digital Marketing</a></li>
 						<li class="nav-item"><a class="nav-link" href="#smm-sub-panel">Strategic Marketing Management</a></li>
 						<li class="nav-item"><a class="nav-link" href="#marcom-sub-panel">Marketing Communications</a></li>
 						<li class="nav-item"><a class="nav-link" href="#webdev-sub-panel">Mobile + Web <br>Design & Development</a></li>
 					</ul>
-			
+				</div>
 			</div>
-
-	<div class="container" id="exptcontainer">
-		<h2>End to End Marketing Expertise</h2>
-		
-
-		<div class="row">
-			
 			<!-- POST DIGITAL SUBPANEL -->
 			<div class="expt-skills">
 				<div class="exptblock" id="post-sub-panel">
@@ -91,7 +84,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- Strategic Marketing Management SUBPANEL -->
 				<div class="exptblock" id="smm-sub-panel">
 					<div class="expt-head"><h4>Strategic Marketing Management</h4></div>
-					<div class="exptbox col-md-auto">
+					<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" />
 						</div>
@@ -109,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 						</div>
 					</div>
-					<div class="exptbox col-md-auto">
+					<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" />
 						</div>
@@ -117,11 +110,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<h6>Concepts & Frameworks</h6>
 							<div class="expt-text">
 								<ul>
-									<li>Performance Quantification</li>
-									<li>Superior Customer Value</li>
-									<li>Zero-Base Budget Development</li>
-									<li>Eiusmod nulla ea duis cupidatat</li>
-									<li>Customer Experience Management</li>
+									<li>Quantifying the Marketing Function</li>
+									<li>Achieving Superior Competitive Value</li>
+									<li>Post Digital Differentiation & Superior Competitive Value</li>
+									<li>Marketing & Transformation For Small / New Organizations</li>
+									<li>The Importance of Customer Experience Management</li>
 								</ul>
 							</div>
 						</div>

@@ -1,5 +1,5 @@
 // Use this file to overwrite the basic Bootstrap variables and add your own variables
-// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// To overwrite a Bootstrap variable you don┬┤t have to touch the Bootstrap folder. 
 // Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
@@ -7,223 +7,290 @@
 @import "node_modules/modularscale-sass/stylesheets/_modularscale.scss";
 @import "node_modules/mathsass/dist/math";
 
-$modularscale:(
-  base: 1em,
-  ratio: 1.33
-  );
+$modularscale: (base: 1em, ratio: 1.33);
 
+$ms-0-1: 0.178em;
+$ms-0-2: 0.238em;
+$ms-0-3: 0.317em;
+$ms-0-4: 0.422em;
+$ms-0-5: 0.563em;
+$ms-0-6: 0.639em;
+$ms-0-7: 0.75em;
+$ms-0-8: 0.78em;
+$ms-0-9: 0.851em;
+$ms-0: ms(0);
+$ms-_15: ms(0.15);
+$ms-_25: ms(0.25);
+$ms-_5: ms(0.5);
+$ms-_75: ms(0.75);
+$ms-1: ms(1);
+$ms-1_5: ms(1.5);
+$ms-2: ms(2);
+$ms-3: ms(3);
+$ms-3_5: ms(3.5);
+$ms-4: ms(4);
+$ms-5: ms(5);
+$ms-6: ms(6);
+$ms-7: ms(7);
+$ms-8: ms(8);
+$ms-8_5: ms(8.5);
+$ms-9: ms(9);
+$ms-9_5: ms(9.5);
 
-
-
-
-$ms-0-1:                      .178em;
-$ms-0-2:                      .238em;
-$ms-0-3:                      .317em;
-$ms-0-4:                      .422em;
-$ms-0-5:                      .563em;
-$ms-0-6:                      .639em;
-$ms-0-7:                      .75em;
-$ms-0-8:                      .78em;
-$ms-0-9:                      .851em;
-$ms-0:                        ms(0);
-$ms-_15:                      ms(.15);
-$ms-_25:                      ms(.25);
-$ms-_5:                       ms(.5);
-$ms-_75:                      ms(.75);
-$ms-1:                        ms(1);
-$ms-1_5:                      ms(1.5);
-$ms-2:                        ms(2);
-$ms-3:                        ms(3);
-$ms-3_5:                      ms(3.5);
-$ms-4:                        ms(4);
-$ms-5:                        ms(5);
-$ms-6:                        ms(6);
-$ms-7:                        ms(7);
-$ms-8:                        ms(8);
-$ms-8_5:                        ms(8.5);
-$ms-9:                        ms(9);
-$ms-9_5:                      ms(9.5);
-
-$ms-10:                       ms(10);
-$ms-10_5:                      ms(10.5);
-$ms-10_75:                      ms(10.75);
-$ms-11:                       ms(11);
-$ms-12:                       ms(12);
-$ms-12_5:                     ms(12.5);
-$ms-13:                       ms(13);
-$ms-13_5:                       ms(13.5);
-$ms-14:                       ms(14);
-$ms-15:                       ms(15);
-$ms-16:                       ms(16);
-
+$ms-10: ms(10);
+$ms-10_5: ms(10.5);
+$ms-10_75: ms(10.75);
+$ms-11: ms(11);
+$ms-12: ms(12);
+$ms-12_5: ms(12.5);
+$ms-13: ms(13);
+$ms-13_5: ms(13.5);
+$ms-14: ms(14);
+$ms-15: ms(15);
+$ms-16: ms(16);
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, geomanist, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-monospace:       roboto mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:            $font-family-sans-serif;
-$font-family-serif: 		  adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, geomanist, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: roboto mono, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+$font-family-serif: adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
+
 // stylelint-enable value-keyword-case
 
-$font-weight-thin:            100;
-$font-weight-light:           200;
-$font-weight-normal:          300;
-$font-weight-bold:            400;
-$font-weight-black:           700;
+$font-weight-thin: 100;
+$font-weight-light: 200;
+$font-weight-normal: 300;
+$font-weight-bold: 400;
+$font-weight-black: 700;
 
-$h1-font-size:                $ms-6;
-$h2-font-size:                $ms-3;
-$h3-font-size:                $ms-2;
-$h4-font-size:                $ms-1;
-$h5-font-size:                $ms-_75;
-$h6-font-size:                $ms-_25;
+$h1-font-size: $ms-6;
+$h2-font-size: $ms-3;
+$h3-font-size: $ms-2;
+$h4-font-size: $ms-1;
+$h5-font-size: $ms-_75;
+$h6-font-size: $ms-_25;
 
+$headings-font-family: inherit;
+$headings-font-weight: 500;
+$headings-color: inherit;
 
+$body-1-font-size: $ms-4;
+$body-2-font-size: $ms-3;
+$body-3-font-size: $ms-2;
+$body-4-font-size: $ms-1;
+$body-5-font-size: $ms-_75;
+$body-6-font-size: $ms-_25;
 
-$headings-font-family:        inherit;
-$headings-font-weight:        500;
-$headings-color:              inherit;
+$body-font-family: $font-family-serif;
+$body-font-weight: 300;
+$body-color: inherit;
 
-$body-1-font-size:            $ms-4;
-$body-2-font-size:            $ms-3;
-$body-3-font-size:            $ms-2;
-$body-4-font-size:            $ms-1;
-$body-5-font-size:            $ms-_75;
-$body-6-font-size:            $ms-_25;
+$display1-size: $ms-5;
+$display2-size: $ms-4;
+$display3-size: $ms-3;
+$display4-size: $ms-2;
+$display5-size: $ms-1;
 
-$body-font-family:        	   $font-family-serif;
-$body-font-weight:        	   300;
-$body-color:              	   inherit;
+$display1-weight: 300;
+$display2-weight: 300;
+$display3-weight: 300;
+$display4-weight: 300;
+$display5-weight: 300;
 
-$display1-size:               $ms-5;
-$display2-size:               $ms-4;
-$display3-size:               $ms-3;
-$display4-size:               $ms-2;
-$display5-size:               $ms-1;
+$display-font-family: inherit;
+$display-color: inherit;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
-$display5-weight:             300;
+$lead-font-size: $ms-2;
+$lead-font-weight: 500;
 
-$display-font-family:         inherit;
-$display-color:               inherit;
-
-
-$lead-font-size:              $ms-2;
-$lead-font-weight:            500;
-
-
-
-$width-1:                     $ms-5;
-$width-2:                     $ms-6;
-$width-3:                     $ms-7;
-$width-4:                     $ms-8;
-$width-5:                     $ms-9;
-$width-6:                     $ms-10;
-$width-7:                     $ms-11;
-$width-8:                     $ms-12;
-$width-8_5:                   $ms-12_5;
-$width-9:                     $ms-13;
-$width-9_5:                   $ms-13_5;
-$width-10:                    $ms-14;
-$width-11:                    $ms-15;
-$width-12:                    $ms-16;
-
-
-
-
+$width-1: $ms-5;
+$width-2: $ms-6;
+$width-3: $ms-7;
+$width-4: $ms-8;
+$width-5: $ms-9;
+$width-6: $ms-10;
+$width-7: $ms-11;
+$width-8: $ms-12;
+$width-8_5: $ms-12_5;
+$width-9: $ms-13;
+$width-9_5: $ms-13_5;
+$width-10: $ms-14;
+$width-11: $ms-15;
+$width-12: $ms-16;
 
 //---VERTICAL RHYTHM CONTROLS
 :root {
-  --baseline: 1.4;
-  /* Line-height fallback */
-  line-height: 1.4;
-  line-height: calc(var(--baseline) * 1rem);
+    --baseline: 1.4;
+
+    /* Line-height fallback */
+    line-height: 1.4;
+    line-height: calc(var(--baseline) * 1rem);
 }
-
-
 
 //function to caculate responsive vertical rhythm units (rvr)
 @function rvr($multiple) {
-  @return calc(var(--baseline) * $multiple * 1rem);
+    @return calc(var(--baseline) * $multiple * 1rem);
 }
 
 $rvr-_25: rvr(0);
-$rvr-_05: rvr(.05);
-$rvr-_15: rvr(.15);
-$rvr-_25: rvr(.25);
-$rvr-_5:  rvr(.5);
-$rvr-_6:  rvr(.6);
-$rvr-_75: rvr(.75);
-$rvr-1:   rvr(1);
+$rvr-_05: rvr(0.05);
+$rvr-_15: rvr(0.15);
+$rvr-_25: rvr(0.25);
+$rvr-_5: rvr(0.5);
+$rvr-_6: rvr(0.6);
+$rvr-_75: rvr(0.75);
+$rvr-1: rvr(1);
 $rvr-1_5: rvr(1.5);
-$rvr-2:   rvr(2);
+$rvr-2: rvr(2);
 $rvr-2_5: rvr(2.5);
-$rvr-3:   rvr(3);
-$rvr-4:   rvr(4);
-$rvr-5:   rvr(5);
-$rvr-6:   rvr(6);
-$rvr-7:   rvr(7);
-$rvr-8:   rvr(8);
-
-
+$rvr-3: rvr(3);
+$rvr-4: rvr(4);
+$rvr-5: rvr(5);
+$rvr-6: rvr(6);
+$rvr-7: rvr(7);
+$rvr-8: rvr(8);
 
 //function to caculate vertical rhythm (vr) fallback for unsupported browsers
 @function vr($multiple) {
-  @return 1.4 * $multiple * 1rem;
+    @return 1.4 * $multiple * 1rem;
 }
 
-$vr-0:	  vr(0);
-$vr-_05:  vr(.05);
-$vr-_15:  vr(.15);
-$vr-_25:  vr(.25);
-$vr-_5:   vr(.5);
-$vr-_6:   vr(.6);
-$vr-_75:  vr(.75);
-$vr-1:    vr(1);
-$vr-1-5:  vr(1.5);
-$vr-2:    vr(2);
-$vr-2_5:  vr(2.5);
-$vr-3:    vr(3);
-$vr-4:    vr(4);
-$vr-5:    vr(5);
-$vr-6:    vr(6);
-$vr-7:    vr(7);
-$vr-8:    vr(8);
+$vr-0: vr(0);
+$vr-_05: vr(0.05);
+$vr-_15: vr(0.15);
+$vr-_25: vr(0.25);
+$vr-_5: vr(0.5);
+$vr-_6: vr(0.6);
+$vr-_75: vr(0.75);
+$vr-1: vr(1);
+$vr-1-5: vr(1.5);
+$vr-2: vr(2);
+$vr-2_5: vr(2.5);
+$vr-3: vr(3);
+$vr-4: vr(4);
+$vr-5: vr(5);
+$vr-6: vr(6);
+$vr-7: vr(7);
+$vr-8: vr(8);
 
-@mixin v-0{margin: 0 0; margin: 0 0;}
-@mixin v-1{margin: $rvr-1 0; margin: $vr-1 0;}
-@mixin v-1_5{margin: $rvr-1_5 0; margin: $vr-1_5 0;}
-@mixin v-2{margin: $rvr-2 0; margin: $vr-2 0;}
-@mixin v-2_5{margin: $rvr-2_5 0; margin: $vr-2_5 0;}
-@mixin v-3{margin: $rvr-3 0; margin: $vr-3 0;}
-@mixin v-4{margin: $rvr-4 0; margin: $vr-4 0;}
-@mixin v-5{margin: $rvr-5 0; margin: $vr-5 0;}
-@mixin v-6{margin: $rvr-6 0; margin: $vr-6 0;}
-@mixin v-7{margin: $rvr-7 0; margin: $vr-7 0;}
-@mixin v-8{margin: $rvr-8 0; margin: $vr-8 0;}
+@mixin v-0 {
+    margin: 0 0;
+    margin: 0 0;
+}
 
-@mixin v0     { margin: 0 0; margin: 0 0;}
-@mixin v-_5   { margin: $rvr-_5 0; margin: $vr-_5 0;}
-@mixin v-_75  { margin: $rvr-_75 0; margin: $vr-_75 0;}
-@mixin v-1    { margin: $rvr-1 0; margin: $vr-1 0;}
-@mixin v1_5   { margin: $rvr-1_5 0; margin: $vr-1_5 0;}
-@mixin v2     { margin: $rvr-2 0; margin: $vr-2 0;}
-@mixin v2-5   { margin: $rvr-2_5 0; margin: $vr-2_5 0;}
-@mixin v3     { margin: $rvr-3 0; margin: $vr-3 0;}
-@mixin v4     { margin: $rvr-4 0; margin: $vr-4 0;}
-@mixin v5     { margin: $rvr-5 0; margin: $vr-5 0;}
-@mixin v6     { margin: $rvr-6 0; margin: $vr-6 0;}
-@mixin v7     { margin: $rvr-7 0; margin: $vr-7 0;}
+@mixin v-1 {
+    margin: $rvr-1 0;
+    margin: $vr-1 0;
+}
 
- 
+@mixin v-1_5 {
+    margin: $rvr-1_5 0;
+    margin: $vr-1_5 0;
+}
 
+@mixin v-2 {
+    margin: $rvr-2 0;
+    margin: $vr-2 0;
+}
 
+@mixin v-2_5 {
+    margin: $rvr-2_5 0;
+    margin: $vr-2_5 0;
+}
+
+@mixin v-3 {
+    margin: $rvr-3 0;
+    margin: $vr-3 0;
+}
+
+@mixin v-4 {
+    margin: $rvr-4 0;
+    margin: $vr-4 0;
+}
+
+@mixin v-5 {
+    margin: $rvr-5 0;
+    margin: $vr-5 0;
+}
+
+@mixin v-6 {
+    margin: $rvr-6 0;
+    margin: $vr-6 0;
+}
+
+@mixin v-7 {
+    margin: $rvr-7 0;
+    margin: $vr-7 0;
+}
+
+@mixin v-8 {
+    margin: $rvr-8 0;
+    margin: $vr-8 0;
+}
+
+@mixin v0 {
+    margin: 0 0;
+    margin: 0 0;
+}
+
+@mixin v-_5 {
+    margin: $rvr-_5 0;
+    margin: $vr-_5 0;
+}
+
+@mixin v-_75 {
+    margin: $rvr-_75 0;
+    margin: $vr-_75 0;
+}
+
+@mixin v-1 {
+    margin: $rvr-1 0;
+    margin: $vr-1 0;
+}
+
+@mixin v1_5 {
+    margin: $rvr-1_5 0;
+    margin: $vr-1_5 0;
+}
+
+@mixin v2 {
+    margin: $rvr-2 0;
+    margin: $vr-2 0;
+}
+
+@mixin v2-5 {
+    margin: $rvr-2_5 0;
+    margin: $vr-2_5 0;
+}
+
+@mixin v3 {
+    margin: $rvr-3 0;
+    margin: $vr-3 0;
+}
+
+@mixin v4 {
+    margin: $rvr-4 0;
+    margin: $vr-4 0;
+}
+
+@mixin v5 {
+    margin: $rvr-5 0;
+    margin: $vr-5 0;
+}
+
+@mixin v6 {
+    margin: $rvr-6 0;
+    margin: $vr-6 0;
+}
+
+@mixin v7 {
+    margin: $rvr-7 0;
+    margin: $vr-7 0;
+}
 
 // stylelint-disable declaration-no-important, selector-list-comma-newline-after
 
@@ -233,109 +300,128 @@ $vr-8:    vr(8);
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-/*  margin-bottom: $headings-margin-bottom;*/
-  font-family: $headings-font-family;
-  font-weight: unset;
-  line-height: unset;
-  color: $headings-color;
-  margin-bottom: $vr-1;
+    /*  margin-bottom: $headings-margin-bottom;*/
+    font-family: $headings-font-family;
+    font-weight: unset;
+    line-height: unset;
+    color: $headings-color;
+    margin-bottom: $vr-1;
 }
 
-h1, .h1 { font-size: $h1-font-size; }
-h2, .h2 { font-size: $h2-font-size; }
-h3, .h3 { font-size: $h3-font-size; }
-h4, .h4 { font-size: $h4-font-size; }
-h5, .h5 { font-size: $h5-font-size; }
-h6, .h6 { font-size: $h6-font-size; }
+h1, .h1 {
+    font-size: $h1-font-size;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+}
 
 .lead {
-  font-size: $lead-font-size;
-  font-weight: $lead-font-weight;
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
 }
 
-.display-1, .display-2, .display-3, .display-4, .display-5{
-  color: unset;
-  font-weight: unset;
-  font-size: unset;
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+    color: unset;
+    font-weight: unset;
+    font-size: unset;
 }
-
-
-
 
 // Type display classes
 @mixin display-1 {
-  font-size: $display1-size;
-  font-weight: $display1-weight;
+    font-size: $display1-size;
+    font-weight: $display1-weight;
 }
+
 @mixin display-2 {
-  font-size: $display2-size;
-  font-weight: $display2-weight;
+    font-size: $display2-size;
+    font-weight: $display2-weight;
 }
+
 @mixin display-3 {
-  font-size: $display3-size;
-  font-weight: $display3-weight;
+    font-size: $display3-size;
+    font-weight: $display3-weight;
 }
+
 @mixin display-4 {
-  font-size: $display4-size;
-  font-weight: $display4-weight;
+    font-size: $display4-size;
+    font-weight: $display4-weight;
 }
+
 @mixin display-5 {
-  font-size: $display5-size;
-  font-weight: $display5-weight;
+    font-size: $display5-size;
+    font-weight: $display5-weight;
 }
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom:   $rvr-1, $vr-1;
-p  {line-height: 1.4; font-family: $font-family-serif;}
+$paragraph-margin-bottom: $rvr-1, $vr-1;
 
-
+p {
+    line-height: 1.4;
+    font-family: $font-family-serif;
+}
 
 // Body type classes
-@mixin body-1{
-  font-size: $body-1-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
+@mixin body-1 {
+    font-size: $body-1-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
-@mixin body-2{
-  font-size: $body-2-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
 
+@mixin body-2 {
+    font-size: $body-2-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
+
 @mixin body-3 {
-  font-size: $body-3-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
-
+    font-size: $body-3-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
+
 @mixin body-4 {
-  font-size: $body-4-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
+    font-size: $body-4-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
 
 @mixin body-5 {
-  font-size: $body-5-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
+    font-size: $body-5-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
 
 @mixin body-6 {
-  font-size: $body-6-font-size;
-  font-weight: $body-font-weight;
-  font-family: $font-family-serif;
+    font-size: $body-6-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
 }
 
-.copy{
-@include body-4();
-margin-bottom: vr(.5);
-}
+.copy {
+    @include body-4;
 
+    margin-bottom: vr(0.5);
+}
 
 /*@import "theme/partials/_atomicmouse_type";*/
 @import "theme/partials/_atomicmouse_color_system";
-
-

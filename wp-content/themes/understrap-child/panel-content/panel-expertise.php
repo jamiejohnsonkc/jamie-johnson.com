@@ -24,14 +24,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 	<div class="container" id="exptcontainer">
-		<h2>End to End Marketing Expertise</h2>
-		
+	
 
-		<div class="row">
-			
-			<!-- POST DIGITAL SUBPANEL -->
-			<div class="expt-skills">
-				<div class="exptblock" id="post-sub-panel">
+		<div class="exptintro">
+					<h2>End to End Expertise & Leadership</h2>
+
+					<div class="exptsub">Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</div>
+		</div>
+								 <div class="row">
+								<!-- POST DIGITAL SUBPANEL -->
+											<div class="expt-skills">
+												<div class="exptblock" id="post-sub-panel">
 					<div class="expt-head"><h4>Post-Digital Marketing</h4></div>
 					<div class="exptbox">
 						<div class="expt-icon">
@@ -87,9 +90,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis.</div></div>
 						</div>
 					</div>
-				</div>
-				<!-- Strategic Marketing Management SUBPANEL -->
-				<div class="exptblock" id="smm-sub-panel">
+												</div>
+												<!-- Strategic Marketing Management SUBPANEL -->
+												<div class="exptblock" id="smm-sub-panel">
 					<div class="expt-head"><h4>Strategic Marketing Management</h4></div>
 					<div class="exptbox col-md-auto">
 						<div class="expt-icon">
@@ -197,11 +200,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<li>Strategic Thinking/Process SME</li></ul></div>
 						</div>
 					</div>
-				</div>
-				<!-- Marketing Communications SUBPANEL -->
-				<div class="exptblock" id="marcom-sub-panel">
-					<div class="expt-head"><h4>Marketing Communications</h4></div>
-					<div class="exptbox">
+												</div>
+												<!-- Marketing Communications SUBPANEL -->
+												<div class="exptblock" id="marcom-sub-panel">
+													<div class="expt-head"><h4>Marketing Communications</h4></div>
+													<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon" />
 						</div>
@@ -217,25 +220,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="exptbox">
+													</div>
+													<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_15.svg" alt="skill icon" />
 						</div>
 						<div class="expt-copy">
-							<h6>Mobile + Web</h6>
+							<h6>Digital Marketing</h6>
 							<div class="expt-text">
 								<ul>
 									<li>Responsive Web Development</li>
+									<li>UX / UI Design</li>
 									<li>Content Management System</li>
 									<li>Campaign Microsites</li>
 									<li>SEO, SEM, PPC</li>
-									<li>UX / UI Design</li>
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="exptbox">
+													</div>
+													<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_16.svg" alt="skill icon" />
 						</div>
@@ -250,8 +253,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="exptbox">
+													</div>
+													<div class="exptbox">
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_18.svg" alt="skill icon" />
 						</div>
@@ -295,18 +298,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</ul></div>
 							</div>
 						</div>
-					</div>
-					<!-- Mobile + Web Design & Development SUBPANEL -->
-					<div class="exptblock" id="webdev-sub-panel">
-						<div class="exptbox">
-							<div class="expt-icon"></div>
-							<div class="expt-copy">
-								<h6>Mobile + Web</h6>
-								<div class="expt-text"></div>
-							</div>
-						</div>
-					</div>
-					</div><!-- Container end -->
-				</div>
-			</div>
+												</div>
+												
+								
+											</div>
+								</div>
+		</div>
 			</section><!-- cover end -->

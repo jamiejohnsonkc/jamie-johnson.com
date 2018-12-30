@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
 * Panel expt template.
 *
@@ -102,4 +102,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	
 	
-</section><!-- cover end -->
+</section><!-- cover end --> -->

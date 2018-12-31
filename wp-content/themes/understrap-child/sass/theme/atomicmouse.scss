@@ -259,15 +259,48 @@ margin-bottom: $vr-3;
 .exptsub{
     @include display-5;
     font-weight: 400;
+    padding-top: $vr-1;
 }
 
 .expt-split{
-
 }
 
 
-.exptnav-vert {
+.expt-nav-horz{
+padding: 0;
+margin: $vr-2 0;
+    @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+    }
+}
 
+.expt-nav-horz ul{
+            margin-bottom: 0;
+            display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+.expt-menu-horz li{
+     
+    margin: 0;
+    bottom: unset;
+    height: unset;
+     list-style: none;
+     text-indent: 0;
+     padding: $vr-1_5 0;
+     padding: 0;
+}
+
+.expt-menu-horz a{
+    color: black;
+}
+
+.expt-menu-box{
+text-align: center;
            @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -275,33 +308,38 @@ margin-bottom: $vr-3;
     @include media-breakpoint-up(md) {
         @include make-col(3);
     }
+
 }
+
 
 
 .expt-menu {
-    position: relative;
-    list-style: none;
-    padding-left: 0;
+}
+//     position: relative;
+//     display: inline-flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: stretch;
+//     margin: 0;
+//     bottom: unset;
+//     height: unset;
+// }
+
+.expt-menu{
+    text-indent: 0px;
+    padding-left: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 0;
-    bottom: unset;
-    height: unset;
 }
 
-.expt-menu li {
+.expt-controls li {
     padding: 0;
+    list-style: none;
+    padding-left: 0;
     color: $primary;
-    max-width: $ms-9;
-    font-weight: 500;
-    font-size: $ms-0-8;
-    text-indent: 0px;
     line-height: 1.2;
     height: unset;
-    font-family: $font-family-sans-serif;
-    font-weight: 300;
+    padding: ms(1) ms(1) ms(1) 0;
 }
 
 .exptnav-vert li {
@@ -312,7 +350,16 @@ margin-bottom: $vr-3;
 .exptcontent{
 
 }
+.expt-vert {
 
+           @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col(4);
+    }
+}
 
 
 .expt-skills {
@@ -322,7 +369,7 @@ margin-bottom: $vr-3;
         @include make-col(12);
     }
     @include media-breakpoint-up(md) {
-        @include make-col(9);
+        @include make-col(8);
     }
     }
 
@@ -345,6 +392,8 @@ margin-bottom: $vr-3;
 .expt-head {
     @include make-col-ready;
     @include make-col(12);
+    @include v-2;
+    padding-left: 0;
     // @include v-2;
     // border-top: thin solid $primary;
     // padding-top: $vr-3;

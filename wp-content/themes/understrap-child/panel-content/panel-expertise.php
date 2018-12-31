@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;  //Exit if accessed directly.
 }
 ?>
+<div id="gap"></div>
 <section class="container-fluid" id="expt">
 
 		
@@ -15,20 +16,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="carousel" id="expt-carousel">
 							<div class="carousel-inner">
 		<div class="exptintro">
-				<h2>End to End Expertise & Leadership</h2>
+				<h2>Expertise & Leadership from End to End</h2>
 				<div class="exptsub">Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</div></div>
+
 			
+		
+
 		<div class="row expt-split">
-			<div class="exptnav-vert">
-				
-				<ul class="expt-menu">
-		<!-- 			<li data-target="#post-sub-panel" data-slide-to="0" class="active">Post-Digital Marketing</li>
-					<li data-target="#smm-sub-panel"      data-slide-to="1">Strategic Marketing Management</li>
-					<li data-target="#marcom-sub-panel"   data-slide-to="2">Marketing Communications</li> -->
+			<div class="expt-nav-horz">
+				<ul class="expt-menu-horz">
+					<div class="expt-menu-box"><a href="#expt-carousel" data-slide-to="0"><h4>Post-Digital <br>Marketing</h4><span>Officia cupidatat ut ea consequat quis consequat ullamco officia.</span></a></div>
+					<div class="expt-menu-box"><a href="#expt-carousel" data-slide-to="1"> <h4>Strategic Marketing Management</h4><span>Voluptate ea ut ex ullamco ut ut sint non.</span></a></div>
+					<div class="expt-menu-box"><a href="#expt-carousel" data-slide-to="2"> <h4>Marketing Communications</h4><span>Ex aliqua eiusmod sunt pariatur laborum elit enim.</span></a></div>
+					<div class="expt-menu-box"><a href="#expt-carousel" data-slide-to="3"> <h4>Mobile + Web Development</h4><span>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</span></a></div>
+				</ul>
+			</div>
+
+
+
+
+			<div class="expt-vert">
+				<h4>POST-DIGITAL MARKETING</h4>
+				<div class="expt-summary">
+					<span>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</span>
+					<span>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</span>
+				</div>
+		<!-- 		<ul class="expt-menu">
 					<li><a href="#expt-carousel" data-slide-to="0"> Post-Digital Marketing</a></li>
 					<li><a href="#expt-carousel" data-slide-to="1"> Strategic Marketing Management</a></li>
 					<li><a href="#expt-carousel" data-slide-to="2"> Marketing Communications</a></li>
-				</ul>
+				</ul> -->
 			</div>
 			
 			<div class="expt-skills">
@@ -36,8 +53,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 					<!-- POST DIGITAL SUBPANEL -->
 					<div class="carousel-item active"><div class="exptblock" id="post-sub-panel">
-						
-						<div class="expt-head"><h4>Post-Digital Marketing</h4></div>
+			<!-- 				<div class="expt-head"><h4>Post-Digital Marketing</h4></div> -->
+					
 						
 						<div class="exptbox">
 							<div class="expt-icon">
@@ -45,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Strategic Design</h6>
-								<div class="expt-text">Ut dolore minim culpa sunt aliqua dolore nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididun enim velit sunt aliqua dolore.</div>
+								<div class="expt-text">Ut dolore minim culpa sunt aliqua dolore nisi aliquip cupidatat deserunt ut consequat proident ut repret aliqua dolore.</div>
 							</div>
 						</div>
 						<div class="exptbox">
@@ -54,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Performance Optimization</h6>
-								<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquipt sunt aliqua dolore cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis duis enim velit sunt aliqua dolore.</div></div>
+								<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquipt sunt aliqua dolore cupidatat deserunt ut consequat proident ut .</div></div>
 							</div>
 						</div>
 						<div class="exptbox">
@@ -63,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Superior Customer Value</h6>
-								<div class="expt-text"><div class="expt-text">Ut dolore nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis duis enim velit sunt aliqua dolore.</div></div>
+								<div class="expt-text"><div class="expt-text">Ut dolore nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis duis.</div></div>
 							</div>
 						</div>
 						<div class="exptbox">
@@ -72,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Function Modernization</h6>
-								<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt quisunt aliqua dolore.</div></div>
+								<div class="expt-text"><div class="expt-text">Ut dolore deserunt ut consequatreprehenderit sit incididunt quisunt aliqua dolore.</div></div>
 							</div>
 						</div>
 						<div class="exptbox">
@@ -81,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Output to Outcomes</h6>
-								<div class="expt-text"><div class="expt-text">aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis duis enim velit sunt aliqua dolore.</div></div>
+								<div class="expt-text"><div class="expt-text">aliquip incididunt qui quis duis enim velit sunt aliqua dolore.</div></div>
 							</div>
 						</div>
 						<div class="exptbox">
@@ -90,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="expt-copy">
 								<h6>Customer Centricity</h6>
-								<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis.</div></div>
+								<div class="expt-text"><div class="expt-text">Ut dolore minim culpa nisi aliquip cupidatat deserunt ut consequat proident.</div></div>
 							</div>
 						</div></div></div>
 					<!-- Strategic Marketing Management SUBPANEL -->

@@ -1,9 +1,12 @@
 shift+ctrl+a 		selects first tag and contents
+shift+ctrl+a  + arrow  takes you to the tag
 shift+ctrl+a x2		select first tag, contents and closing tag
 
 ctrl + b + 			toggle sidebar
 
 sublime text search wildcard	[^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag 			
+
+alt + shift + f = reindent everything
 
 
 

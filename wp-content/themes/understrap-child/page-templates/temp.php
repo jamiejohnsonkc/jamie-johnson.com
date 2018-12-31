@@ -18,6 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
 	<article>
+						<?php get_template_part( 'panel-content/panel', 'animate' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'temp' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'appsicons' ); ?>
 </article>

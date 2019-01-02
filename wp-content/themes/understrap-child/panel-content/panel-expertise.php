@@ -12,18 +12,22 @@ exit;  //Exit if accessed directly.
 <div id="gap"></div>
 <section class="container-fluid" id="expt">
 
-
+<!-- Marketing Leadership SUBPANEL -->
 <div class="marketing-sub-panel" id="expt-overlay-1">
-	 <div id="expt-close-1">X</div>
-	<div class="row expt-row container container">
+	 <div id="expt-close-1"><div>X</div></div>
+	 	<div class="expt-container">
+	<div class="row expt-row">
+
 		<div class="expt-vert">
-			<h4>Marketing Leadership</h4>
+			<div class="expt-vert-box">
+			<h3>Marketing Leadership</h3>
 			<div class="expt-summary">
-				<span>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis 						aliqua in veniam aliqua.</span>
-				<span>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</span>
+				<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
-		<div class="exptblock">
+		</div>
+		<div class="expt-block">
 								
 										<div class="expt-box">
 											<div class="expt-icon">
@@ -88,19 +92,23 @@ exit;  //Exit if accessed directly.
 					</div>
 				</div>
 			</div>
-
+</div>
 <!-- Strategic Marketing Management SUBPANEL -->
 <div class="smm-sub-panel" id="expt-overlay-2">
 	 <div id="expt-close-2">X</div>
-	<div class="row expt-row container">
+		 	<div class="expt-container">
+	<div class="row expt-row">
+		
 		<div class="expt-vert">
-			<h4>Strategic Marketing Management</h4>
+			<div class="expt-vert-box">
+			<h3>Strategic Marketing Management</h3>
 			<div class="expt-summary">
-				<span>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis 						aliqua in veniam aliqua.</span>
-				<span>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</span>
+				<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
-		<div class="exptblock">
+	</div>
+		<div class="expt-block">
 			<div class="expt-box">
 				<div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" />
@@ -208,21 +216,24 @@ exit;  //Exit if accessed directly.
 						</div>
 					</div>
 				</div>
-</div>
+</div></div>
 <!-- Marketing Communications SUBPANEL -->
 <div class="marcom-sub-panel" id="expt-overlay-3">
 
 
 	 <div id="expt-close-3">X</div>
-				<div class="row expt-row container">
+					 	<div class="expt-container">
+	<div class="row expt-row">
 					<div class="expt-vert">
-						<h4>Marketing Communications</h4>
+						<div class="expt-vert-box">
+						<h3>Marketing Communications</h3>
 						<div class="expt-summary">
-							<span>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</span>
-							<span>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</span>
+							<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
-					<div class="exptblock">
+				</div>
+					<div class="expt-block">
 						<div class="expt-box">
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon"/>
@@ -323,24 +334,29 @@ exit;  //Exit if accessed directly.
 					</div>
 				</div>
 			</div>
+		</div>
 
 			
 			<!-- WebDev SUBPANEL -->
 
 <!-- Webdev SUBPANEL -->
 <div class="webdev-sub-panel" id="expt-overlay-4">
-	 <div id="expt-close-4">X</div>
-				<div class="row expt-row container">
+	 <div id="expt-close-4">x</div>
+					 	<div class="expt-container">
+	<div class="row expt-row">
 					<div class="expt-vert">
-						<h4>Mobile + Web Development</h4>
+						<div class="expt-vert-box">
+						<h3>Mobile + Web Development</h3>
 						<div class="expt-summary">
-							<span>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</span>
-							<span>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</span>
+						<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
-					<div class="exptblock">
+					</div>
+					<div class="expt-block">
 			<div class="row">
-				<div class="col-12"><h6>languages & frameworks </h6></div>
+				<div class="col-12 webdev-row-head"><h6>languages & frameworks </h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
@@ -352,7 +368,8 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12"><h6>systems & development environments</h6></div>
+				<div class="col-12 webdev-row-head"><h6>systems & development environments</h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_07.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
@@ -367,7 +384,8 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12"><h6>web design & prototyping/development</h6></div>
+				<div class="col-12 webdev-row-head"><h6>web design & prototyping/development</h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
@@ -377,7 +395,8 @@ exit;  //Exit if accessed directly.
 			</div>
 			
 			<div class="row">
-				<div class="col-12"><h6>task processors</h6></div>
+				<div class="col-12 webdev-row-head"><h6>task processors</h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
@@ -391,7 +410,8 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12"><h6>design & production</h6></div>
+				<div class="col-12 webdev-row-head"><h6>design & production</h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
@@ -400,7 +420,8 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12"><h6>collaboration</h6></div>
+				<div class="col-12 webdev-row-head"><h6>collaboration</h6></div>
+				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
@@ -409,12 +430,12 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_27.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
-				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_75.svg" alt="expt-icon" />
+		<!-- 		<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_75.svg" alt="expt-icon" /> -->
 			</div>
 					</div>
 				</div>
 			</div>
-
+</div>
 
 
 

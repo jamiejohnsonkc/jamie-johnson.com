@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 								<a class="btn btn-do" data-toggle="collapse" href="#do-card-1" role="button" aria-expanded="false" aria-controls="do-card-1">
-								<div class="btn-content d-flex mxauto justify-content-center align-items-center">+</div>
+								<div class="btn-content">+</div>
 								</a>
 								<div class="card-content collapse" id="do-card-1">
 									<hr><h6 class="card-subhead">Activities</h6>
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 								<a class="btn btn-do" data-toggle="collapse" href="#do-card-2" role="button" aria-expanded="true" aria-controls="do-card-1">
-								<div class="btn-content d-flex mxauto justify-content-center align-items-center">+</div>
+								<div class="btn-content">+</div>
 								</a>
 								<div class="card-content collapse" id="do-card-2">
 									<hr><h6 class="card-subhead">Activities</h6>
@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 								<a class="btn btn-do" data-toggle="collapse" href="#do-card-3" role="button" aria-expanded="true" aria-controls="do-card-1">
-								<div class="btn-content d-flex mxauto justify-content-center align-items-center">+</div>
+								<div class="btn-content">+</div>
 								</a>
 								<div class="card-content collapse" id="do-card-3">
 									<hr><h6 class="card-subhead">Activities</h6>
@@ -124,7 +124,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 								<a class="btn btn-do" data-toggle="collapse" href="#do-card-4" role="button" aria-expanded="true" aria-controls="do-card-1">
-								<div class="btn-content d-flex mxauto justify-content-center align-items-center">+</div>
+								<div class="btn-content ">+</div>
 								</a>
 								<div class="card-content collapse" id="do-card-4">
 									<hr><h6 class="card-subhead">Activities</h6>

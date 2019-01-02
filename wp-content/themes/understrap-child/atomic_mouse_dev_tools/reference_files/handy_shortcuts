@@ -7,7 +7,7 @@ ctrl + b + 			toggle sidebar
 sublime text search wildcard	[^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag 			
 
 alt + shift + f = reindent everything
-
+ctrl + alt + a = align
 
 
 

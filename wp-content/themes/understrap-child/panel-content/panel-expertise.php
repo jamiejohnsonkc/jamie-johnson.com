@@ -10,7 +10,7 @@ exit;  //Exit if accessed directly.
 ?>
 
 <div id="gap"></div>
-<section class="container-fluid" id="expt">
+<section class="container-fluid expt" id="expt">
 
 <!-- Marketing Leadership SUBPANEL -->
 <div class="marketing-sub-panel" id="expt-overlay-1">

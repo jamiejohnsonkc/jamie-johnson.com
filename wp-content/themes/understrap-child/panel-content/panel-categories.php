@@ -11,7 +11,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="container-fluid" id="cats">
 	<div class="container" id="catscontainer">
 		<div class="row" id="">
-			
+			<div class="catscontent">
+				<h2>Incomparible Depth</h2>
+				<div class="catscopy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation llamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+				<div class="catscopy">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</div>
+				<div class="catscopy"> mollit anim id est laborum.</div>
+			</div>
 			<div class="catsblock">
 				<figure class="catfig"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="vert"/>
 					<figcaption class="caption-content">
@@ -171,12 +176,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</figure>
 			</div> 
 
-<div class="catscontent">
-				<h2>Incomparible Depth</h2>
-				<div class="catscopy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation llamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-				<div class="catscopy">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</div>
-				<div class="catscopy"> mollit anim id est laborum.</div>
-			</div>
+
 
 		</div>
 	</div>

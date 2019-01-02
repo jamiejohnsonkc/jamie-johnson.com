@@ -1,0 +1,123 @@
+
+
+
+
+// Paragraphs
+//
+// Style p element.
+
+// $paragraph-margin-bottom: $rvr-1, $vr-1;
+
+p {
+    line-height: 1.4;
+    font-family: $font-family-serif;
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+    font-weight: 400;
+    min-height: 1px;
+    line-height: $line-height-0;
+    @include v-1;
+    // margin-top: calc(var(--baseline) * 1rem); 
+    // margin-bottom: calc(var(--baseline) * 1rem); 
+}
+
+
+h2, .h2 {
+    font-size: $h2-font-size;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+}
+
+
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+    color: unset;
+    font-weight: unset;
+    font-size: unset;
+}
+
+// Type display classes
+@mixin display-1 {
+    font-size: $display1-size;
+    font-weight: $display1-weight;
+}
+
+@mixin display-2 {
+    font-size: $display2-size;
+    font-weight: $display2-weight;
+}
+
+@mixin display-3 {
+    font-size: $display3-size;
+    font-weight: $display3-weight;
+}
+
+@mixin display-4 {
+    font-size: $display4-size;
+    font-weight: $display4-weight;
+    @include v-1;
+}
+
+@mixin display-5 {
+    font-size: $display5-size;
+    font-weight: $display5-weight;
+}
+
+
+// Body type classes
+@mixin body-1 {
+    font-size: $body-1-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+@mixin body-2 {
+    font-size: $body-2-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+@mixin body-3 {
+    font-size: $body-3-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+@mixin body-4 {
+    font-size: $body-4-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+@mixin body-5 {
+    font-size: $body-5-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+@mixin body-6 {
+    font-size: $body-6-font-size;
+    font-weight: $body-font-weight;
+    font-family: $font-family-serif;
+}
+
+.copy {
+    @include body-4;
+
+    margin-bottom: vr(0.5);
+}

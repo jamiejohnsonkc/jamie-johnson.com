@@ -1,6 +1,7 @@
 
 @import "theme/partials/_atomicmouse_fontface_import"; // <--------- Loads here to ensure @fontface placement at front of css
 @import "theme/atomicmouse_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+
 @import "assets/bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
 @import "../src/sass/understrap/understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
 @import "../src/sass/understrap/theme/contact-form7";// <-------- Loads some basic styling for contact form 7 plugin
@@ -8,6 +9,6 @@
 //Optional files - If you don´t use the corresponding scripts/fonts comment em out
 @import "assets/font-awesome"; // <------- Font Awesome Icon font
 @import "assets/underscores"; // <------- Underscores media styles
-
+@import "theme/partials/_atomicmouse_type"; 
 // Any additional imported files //
  @import "theme/atomicmouse";  // <--------- Add your styles into this file

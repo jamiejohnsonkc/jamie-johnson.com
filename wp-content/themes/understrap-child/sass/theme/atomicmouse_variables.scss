@@ -66,6 +66,7 @@ $ms-3_5:    ms(3.5);
 $ms-4:      ms(4);
 $ms-5:      ms(5);
 $ms-6:      ms(6);
+$ms-6_5:    ms(6.5);
 $ms-7:      ms(7);
 $ms-8:      ms(8);
 $ms-8_5:    ms(8.5);
@@ -131,12 +132,14 @@ $display2-size: $ms-4;
 $display3-size: $ms-3;
 $display4-size: $ms-2;
 $display5-size: $ms-1;
+$display6-size: $ms-_75;
 
 $display1-weight: 300;
 $display2-weight: 300;
 $display3-weight: 300;
 $display4-weight: 300;
 $display5-weight: 300;
+$display6-weight: 300;
 
 $display-font-family: inherit;
 $display-color: inherit;
@@ -181,7 +184,6 @@ $width-12: $ms-16;
 
 $rvr-0: 1;
 $rvr-_05: calc(var(--baseline) * .05rem);
-
 $rvr-_15: calc(var(--baseline) * 0.15rem);
 $rvr-_25: calc(var(--baseline) * 0.25rem);
 $rvr-_5:  calc(var(--baseline) * 0.5rem);

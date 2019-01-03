@@ -15,10 +15,10 @@ p {
 
 h1, .h1 {
     font-size: $h1-font-size;
-    font-weight: 400;
+    font-weight: 500;
     min-height: 1px;
     line-height: $line-height-0;
-    @include v-1;
+    @include v-2;
     // margin-top: calc(var(--baseline) * 1rem); 
     // margin-bottom: calc(var(--baseline) * 1rem); 
 }
@@ -26,6 +26,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: $h2-font-size;
+    font-weight: 500;
 }
 
 h3, .h3 {
@@ -76,6 +77,11 @@ h6, .h6 {
 @mixin display-5 {
     font-size: $display5-size;
     font-weight: $display5-weight;
+}
+
+@mixin display-6 {
+    font-size: $display6-size;
+    font-weight: $display6-weight;
 }
 
 

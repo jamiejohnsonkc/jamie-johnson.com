@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="container" id="availablecontainer">
 				<div class="row">
-					<div class="pagetitle">
+					<div class="page-title">
 						<hr>
 						<span>I'm Available</span>
 					</div>

@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						
 						
 				<div class="row" id="custcontent">
-					<div class="pagetitle">
+					<div class="page-title">
 						<span>how i can help | 03 MODERNIZE REVENUE GENERATION</span>
 					</div>
 

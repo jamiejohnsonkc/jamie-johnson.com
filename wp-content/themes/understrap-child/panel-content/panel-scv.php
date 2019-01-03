@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 						
 						
 				<div class="row" id="scvcontent">
-					<div class="pagetitle">
-						<span>how i can help | 02 TRANSCEND THE COMPETITION</span>
+					<div class="page-title">
+						<span>how i can help | 02 TRANSCEND COMPETITION</span>
 					</div>
 
 

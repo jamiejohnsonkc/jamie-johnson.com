@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				
 					<div class="container" id="cashcontainer">
 						
-<div class="pagetitle">
+<div class="page-title">
 						<span>how i can help | 02 TRANSCEND THE COMPETITION</span>
 					</div>
 						<div class="cashheadline">

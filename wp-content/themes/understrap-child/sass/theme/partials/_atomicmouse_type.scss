@@ -27,6 +27,7 @@ h1, .h1 {
 h2, .h2 {
     font-size: $h2-font-size;
     font-weight: 500;
+    @include v-2;
 }
 
 h3, .h3 {
@@ -83,6 +84,10 @@ h6, .h6 {
     font-size: $display6-size;
     font-weight: $display6-weight;
 }
+@mixin display-7{
+    font-size: $display7-size;
+    font-weight: $display7-weight;
+}
 
 
 // Body type classes
@@ -100,7 +105,7 @@ h6, .h6 {
 
 @mixin body-3 {
     font-size: $body-3-font-size;
-    font-weight: $body-font-weight;
+    font-weight: $body-font-weight; 
     font-family: $font-family-serif;
 }
 
@@ -122,8 +127,20 @@ h6, .h6 {
     font-family: $font-family-serif;
 }
 
+
+.subhead{
+    @include display-7;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .05rem; 
+}
+
+
 .copy {
     @include body-4;
-
-    margin-bottom: vr(0.5);
+    padding-bottom: $rvr-1;
 }
+
+div.copy:last-of-type{
+        padding-bottom: 0;
+    }

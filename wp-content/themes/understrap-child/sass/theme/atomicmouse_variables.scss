@@ -21,10 +21,10 @@
 
 
 $min_width: 400;
-$max_width: 800;
+$max_width: 3000;
 
 $min_font: 12;
-$max_font: 24; 
+$max_font: 20; 
 
 :root { font-size: #{$min_font}px; }
 
@@ -141,6 +141,7 @@ $display3-weight: 300;
 $display4-weight: 300;
 $display5-weight: 300;
 $display6-weight: 300;
+$display7-weight: 300;
 
 $display-font-family: inherit;
 $display-color: inherit;
@@ -254,7 +255,7 @@ $line-height-3:   $rvr-3;
     margin: $rvr-_75 0;
     // margin: $vr-_75 0;
 }
-
+@mixin v-0     {margin-bottom: $rvr-0 !important; margin-top: $rvr-0 !important;}
 @mixin v-1     {margin-bottom: $rvr-1 !important; margin-top: $rvr-1 !important;}
 @mixin v-1_5   {margin-bottom: $rvr-1_5 !important; margin-top: $rvr-1_5 !important;}
 @mixin v-2     {margin-bottom: $rvr-2   !important; margin-top: $rvr-2 !important;}

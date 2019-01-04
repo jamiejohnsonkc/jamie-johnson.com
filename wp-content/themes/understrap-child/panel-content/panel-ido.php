@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<div class="row" id="docontent">
 
-				<div id="doheadline"><h2>End to End Leadership</h2><div class="subhead">Strategy, Operations, Development & Execution</div></div>
+				<div class="do headline"><h2>I Provide End to End Marketing Leadership</h2></div><div class="do subhead">Strategy, Operations, Development & Execution</div>
 				<div class="row" id="do-content-row">
 				<div id="help-content-block">I marry business objectives with strategic marketing frameworks and the best practices of modern and traditional marketing.</div>
 			</div>

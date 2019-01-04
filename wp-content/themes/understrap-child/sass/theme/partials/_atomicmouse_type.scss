@@ -27,12 +27,11 @@ h1, .h1 {
 h2, .h2 {
     font-size: $h2-font-size;
     font-weight: 500;
-    @include v-2;
 }
 
 h3, .h3 {
     font-size: $h3-font-size;
-}
+} 
 
 h4, .h4 {
     font-size: $h4-font-size;
@@ -127,20 +126,3 @@ h6, .h6 {
     font-family: $font-family-serif;
 }
 
-
-.subhead{
-    @include display-7;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .05rem; 
-}
-
-
-.copy {
-    @include body-4;
-    padding-bottom: $rvr-1;
-}
-
-div.copy:last-of-type{
-        padding-bottom: 0;
-    }

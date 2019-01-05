@@ -22,14 +22,15 @@ exit; // Exit if accessed directly.
 						<div class="headline"><h2>I've been around</h2></div>
 						<div class="subhead">I've worked with some of the best, bare scars from some of the worst and learned lessons from them all.</div>
 							<div class="subhead about-block">
-								The result is an expansive expertise spanning from end to end of the marketing continuum that can bring value to your organization on day one.</div></div>
+								The result is an expansive expertise spanning from end to end of the marketing continuum.</div>	<div class="subhead about-block">
+								I will bring value to your organization on day one.</div></div>
 		
 							<div class="about-icons">
 								<div class="stats" id="stats-order-1"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_11.svg" class="style-svg" alt=""/><div class="stats-caption">brands supported</div></div>
 								<div class="stats" id="stats-order-2"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_09.svg"  class="style-svg" alt=""/><div class="stats-caption">categories served</div></div>
 								<div class="stats" id="stats-order-3"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_13.svg" class="style-svg" alt=""/><div class="stats-caption">years of experience</div></div>
-								<div class="stats" id="stats-order-4"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_12.svg" class="style-svg" alt=""/><div class="stats-caption">in agency settings</div></div>
-								<div class="stats" id="stats-order-5"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_14.svg" class="style-svg" alt=""/><div class="stats-caption">corporate teams</div></div>
+								<div class="stats" id="stats-order-4"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_12.svg" class="style-svg" alt=""/><div class="stats-caption">agency</div></div>
+								<div class="stats" id="stats-order-5"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_14.svg" class="style-svg" alt=""/><div class="stats-caption">corporate</div></div>
 									<div class="stats" id="stats-order-6"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_06.svg"  class="style-svg" alt=""/><div class="stats-caption">largest program</div></div>
 								<div class="stats" id="stats-order-7"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_10.svg"  class="style-svg" alt=""/><div class="stats-caption">operations responsibility</div></div>
 								<div class="stats" id="stats-order-8"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_04.svg"  class="style-svg" alt=""/><div class="stats-caption">largest employer</div></div>

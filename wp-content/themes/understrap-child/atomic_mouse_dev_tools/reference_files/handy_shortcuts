@@ -9,6 +9,11 @@ sublime text search wildcard	[^<]+  as in   <style>[^<]+</style>  will find anyt
 alt + shift + f = reindent everything
 ctrl + alt + a = align
 
+add line break via peuso class:
+[class]::before{
+  content: "\A";
+  white-space: pre;
+}
 
 
 <!--=====================================

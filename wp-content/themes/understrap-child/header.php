@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php 
 						the_custom_logo();
 						 ?>
-							<div class="navbar-brand mb-0">jamie-johnson.me</div>
+							<div class="navbar-brand mb-0"><a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top">Jamie Johnson</a></div>
 
 				
 

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- 	<div class="row"> -->
 	
 				
-					<div class="container" id="splashcontainer">
+					<div class="container" id="splash-container">
 					
 						<h1>Hi I'm Jamie</h1>
 			

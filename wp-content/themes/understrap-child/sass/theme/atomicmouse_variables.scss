@@ -20,10 +20,10 @@
 @import "node_modules/mathsass/dist/math";
 
 
-$min_width: 400;
+$min_width: 300;
 $max_width: 3000;
 
-$min_font: 12;
+$min_font: 10;
 $max_font: 20; 
 
 :root { font-size: #{$min_font}px; }
@@ -61,6 +61,8 @@ $ms-_75:    ms(0.75);
 $ms-1:      ms(1);
 $ms-1_5:    ms(1.5);
 $ms-2:      ms(2);
+$ms-2_25:      ms(2.25);
+$ms-2_5:      ms(2_5);
 $ms-3:      ms(3);
 $ms-3_5:    ms(3.5);
 $ms-4:      ms(4);

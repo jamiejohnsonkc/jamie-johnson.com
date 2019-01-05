@@ -27,6 +27,7 @@ h1, .h1 {
 h2, .h2 {
     font-size: $h2-font-size;
     font-weight: 500;
+    
 }
 
 h3, .h3 {
@@ -71,7 +72,6 @@ h6, .h6 {
 @mixin display-4 {
     font-size: $display4-size;
     font-weight: $display4-weight;
-    @include v-1;
 }
 
 @mixin display-5 {

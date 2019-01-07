@@ -1186,7 +1186,7 @@
 
 .row#scvcontent {
     //     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     // align-content: center;
     height: 80vh;
@@ -1225,49 +1225,100 @@
 // strategic marketing management panel
 // ==========================================================================
 
-#smmbox {
+#smm-box {
     display: inline-flex;
     align-items: center;
     flex-direction: row;
 }
 
-#smmcontainer {
-    height: 100vh;
+#smm-container {
+   @include media-breakpoint-up(md) {
+           height: 100vh;
     display: flex;
     flex-direction: column;
 }
+}
 
-#smmcontent > div.page-title {
+#smm-content > div.page-title {
     // margin-bottom: $rvr-5;
     // margin-top: $rvr-2;
 }
 
-#smmheadline span {
+#smm-headline span {
     @include display-4;
 }
 
-.row#smmcontent {
-    //     display: flex;
-    flex-direction: column;
+.row#smm-content {
+display: flex;
 
-    // align-content: center;
-    height: 80vh;
-    justify-content: center;
-
-    // flex-wrap: nowrap;
+    
+@include media-breakpoint-up(md){
+align-content: center;
+flex-direction: row;
+justify-content: flex-start;
+height: 80vh;
+}
 }
 
-.endtoend {
-    width: 1201px;
+
+.smm-vert{
+    height: 55rem;
+    .end2end-vert{
+        height: 55rem;
+    }
+    .st6{
+        fill: #000000;
+    }
+        @include media-breakpoint-up(md) {
+            display:none;
+            }
+    @include media-breakpoint-up(lg) {
+            }
+}
+
+
+
+.smm-horz{
+display: none;
+       @include make-col-ready;
+             @include media-breakpoint-up(xs) {
+                 @include make-col(12);
+             } 
+             @include media-breakpoint-up(md) {
+                     display: block;
+                     }
+             @include media-breakpoint-up(lg) {
+           // display: block;
+
+            }
+}
+.smm-horz .st1{
+    fill:  #707070;
+
+}
+
+.smm-vert .st0{
+    fill:  #707070;
+    stroke: #ffffff;
+}
+
+
+.end2end{        
+    width: 100%;
+    // width: 1201px;
 
     // margin: $rvr-1 0;
 }
 
-.smmblock {
+.end2end-vert{
+    height: 100%;
+}
+
+.smm-block {
     justify-content: end;
 }
 
-.smmcopy {
+.smm-copy {
     @include body-6;
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
@@ -1290,7 +1341,7 @@
 }
 
 //
-#smmcontent-block {
+#smm-content-block {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1314,7 +1365,7 @@
     }
 }
 
-// #smmcontent{
+// #smm-content{
 //     @include make-col-ready;
 //     @include media-breakpoint-up(sm) {
 //         @include make-col (12);
@@ -1362,12 +1413,10 @@
         @include make-col(4);
     }
             @include media-breakpoint-up(lg) {
-                @include make-col(3);
+                @include make-col(4);
+                padding: 0 0 0 0;
             }
     }
-
-
-
     border: none;
 }
 
@@ -1378,12 +1427,22 @@ margin-bottom: $rvr-2;
         }
 }
 
-.available .copy{
-    max-width: $ms-10_75;
+.available .blurb{
+    font-family: $font-family-serif;
+    font-size: $ms-1_5;
+    line-height: $rvr-1_5;
+    font-weight: 400;
+}
+
+.available .copy, .available .blurb{
+    max-width: $ms-9;
     @include media-breakpoint-up(md) {
             max-width: unset;
             }
-}
+               @include media-breakpoint-up(lg) {
+            max-width: $ms-10;
+            }
+        }
 
 .available h5{
     font-weight: 400;
@@ -1393,14 +1452,10 @@ margin-bottom: $rvr-2;
 #available-container > div > div.subhead{
     margin-bottom: $rvr-2;
 @include media-breakpoint-up(md) {
-        margin-bottom: 0;
+        margin-bottom: $rvr-2;
 }
 }
 
-
-#claims{
-    font-style: italic;
-}
 // 
 // cats panel
 // ==========================================================================
@@ -2104,21 +2159,6 @@ div#do-card-2 {
     padding-left: 0;
     text-indent: 0;
 }
-// #do-content > div.row.container-cards > div:nth-child(2) > a{    
-//     margin-top: $ms-4;
-// }
-
-// #do-content > div.row.container-cards > div:nth-child(3) > a{
-//     margin-top: $ms-2;
-// }
-
-// #do-content > div.row.container-cards > div:nth-child(4) > a{
-//     margin-top: $ms-2;
-// }
-
-// #do-content > div.row.container-cards > div:nth-child(5) > a{
-//     margin-top: $ms-0-3;
-// }
 
 .card-head{
      margin-bottom: $rvr-3;
@@ -2796,9 +2836,13 @@ body {
     #splash-container {
         max-width: 1000px;
     }
-}
+
 #available-container{
     max-width: 1100px;
+}
+#smm-container{
+    max-width: 1100px;    
+}
 }
 
 .grid-container {

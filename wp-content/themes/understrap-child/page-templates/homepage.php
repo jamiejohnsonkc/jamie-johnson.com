@@ -24,6 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php get_template_part( 'panel-content/panel', 'about' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'available' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
+					</article>
 </main><!-- #main -->
 
 </div><!-- Wrapper end -->

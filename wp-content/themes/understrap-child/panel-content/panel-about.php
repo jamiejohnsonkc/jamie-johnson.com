@@ -32,7 +32,7 @@ exit; // Exit if accessed directly.
 								<div class="stats" id="stats-order-4"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_12.svg" class="style-svg" alt=""/><div class="stats-caption">agency</div></div>
 								<div class="stats" id="stats-order-5"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_14.svg" class="style-svg" alt=""/><div class="stats-caption">corporate</div></div>
 									<div class="stats" id="stats-order-6"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_06.svg"  class="style-svg" alt=""/><div class="stats-caption">largest program</div></div>
-								<div class="stats" id="stats-order-7"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_10.svg"  class="style-svg" alt=""/><div class="stats-caption">operations responsibility</div></div>
+								<div class="stats" id="stats-order-7"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_10-1.svg"  class="style-svg" alt=""/><div class="stats-caption">operations responsibility</div></div>
 								<div class="stats" id="stats-order-8"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_04.svg"  class="style-svg" alt=""/><div class="stats-caption">largest employer</div></div>
 								<div class="stats" id="stats-order-9"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_05.svg"  class="style-svg" alt=""/><div class="stats-caption">tiniest employer</div></div>
 								<div class="stats" id="stats-order-10"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_01.svg" class="style-svg" alt=""/><div class="stats-caption">matric reports</div></div>

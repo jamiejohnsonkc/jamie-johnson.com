@@ -23,6 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php get_template_part( 'panel-content/panel', 'customers' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'money' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'helpcta' ); ?>
+					</article>
 </main><!-- #main -->
 
 </div><!-- Wrapper end -->

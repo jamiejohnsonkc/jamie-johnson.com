@@ -4,16 +4,26 @@ shift+ctrl+a x2		select first tag, contents and closing tag
 
 ctrl + b + 			toggle sidebar
 
-sublime text search wildcard	[^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag 			
+	
 
 alt + shift + f = reindent everything
 ctrl + alt + a = align
 
-add line break via peuso class:
-[class]::before{
+add line break via peuso class - note: &:: configures psuedo element for sass nesting:
+[class]
+&::before{
   content: "\A";
   white-space: pre;
 }
+
+sublime text search (following is regex, requiring enabling of "regular expressions")
+
+wildcard  [^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag    
+
+
+
+
+
 
 
 <!--=====================================

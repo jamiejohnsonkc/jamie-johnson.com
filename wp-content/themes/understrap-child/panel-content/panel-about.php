@@ -22,10 +22,13 @@ exit; // Exit if accessed directly.
 						<div class="headline"><h2>I've been around</h2></div>
 						<div class="subhead">I've worked with some of the best, bare scars from some of the worst and learned lessons from them all.</div>
 							<div class="subhead about-block">
-								The result is an expansive expertise spanning from end to end of the marketing continuum.</div>	<div class="subhead about-block">
-								I will bring value to your organization on day one.</div></div>
+								The result is an expansive expertise spanning from end to end of the marketing continuum.</div>	
+								<div class="subhead about-block">
+								I will bring value to your organization on day one.</div>
+							</div>
 		
 							<div class="about-icons">
+								<div class="icons-caption">Lorem ipsum sint nulla laborum culpa reprehenderit.</div>
 								<div class="stats" id="stats-order-1"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_11.svg" class="style-svg" alt=""/><div class="stats-caption">brands supported</div></div>
 								<div class="stats" id="stats-order-2"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_09.svg"  class="style-svg" alt=""/><div class="stats-caption">categories served</div></div>
 								<div class="stats" id="stats-order-3"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_13.svg" class="style-svg" alt=""/><div class="stats-caption">years of experience</div></div>

@@ -32,16 +32,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 					
 					<div class="copy" id="help-proclamations">How I Create Value for Businesses</div>
 					<ul>
-						<li><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></li>
-						<li><span>02</span><span class="help-links-li-content">Transcending Competition</span></li>
-						<li><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></li>
-						<li><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#advancing-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#superior-customer-value" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#post-digital-marketing" title="Strategic Marketing Management"><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#optimal-performance" title="Strategic Marketing Management"><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></a></li>
 					</ul>
 				</div>
 		<!-- 	</div> -->
 			
 		</div>
+		</div>
 		
-		<?php get_template_part( 'navcluster' ); ?>
 		
 		</section><!-- Container end -->

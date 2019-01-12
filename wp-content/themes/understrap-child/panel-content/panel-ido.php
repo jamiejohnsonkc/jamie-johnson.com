@@ -35,7 +35,7 @@ exit; // Exit if accessed directly.
 				
 						<div class="card-content collapse" id="do-card-1">
 							
-							<div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
 							<span>Facilitating the design, promotion, exhange and delivery of customer value.</span></div>
 							
 						
@@ -50,6 +50,7 @@ exit; // Exit if accessed directly.
 							</ul>
 						</div>
 					</div>
+				</div>
 					</div>
 					<div class="do card">
 						<div class="div-width" id="do-card-2-width">
@@ -62,7 +63,10 @@ exit; // Exit if accessed directly.
 						<!-- 	<a class="btn btn-do" data-toggle="collapse" href="#do-card-2" role="button" aria-expanded="true" aria-controls="do-card-1"> -->
 						<a class="do-toggle-2 collapsed" data-toggle="collapse" href="#do-card-2" aria-expanded="true" aria-controls="do-card-2"><span>more</span><b>less</b></a>
 						<div class="card-content collapse" id="do-card-2">
-							<div class="card-body"><h4 class="card-subhead">Activities</h4>
+							
+
+							<div class="row card-row">
+								<div class="card-body"><h4 class="card-subhead">Activities</h4>
 							<span>Attracting, earning and rewarding the trust of customers before, during and after the sale.</span></div>
 							
 					
@@ -78,19 +82,20 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					</div>
+					</div>
 					<div class="do card">
 						<div class="div-width" id="do-card-3-width">
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
 
 								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" viewbox="0 0 50 50" alt="" class="style-svg"/>
-						</div><div class="card-title"><span>Digital Design</span><span>&amp; Development</span> </div></div>
+						</div><div class="card-title">Digital Design &amp; Development</div></div>
 						
 						<div class="card-summary"><span><span class="lead">There's never been more potential for businesses to benefit from marketing.</span> But doing so requires discipline, perspective and the acumen to pull it all together.
 						</span>
 					</div></div></div>
 						<a class="do-toggle-3 collapsed" data-toggle="collapse" href="#do-card-3" aria-expanded="true" aria-controls="do-card-3"><span>more</span><b>less</b></a>
 						<div class="card-content collapse" id="do-card-3">
-							<div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
 							<span>Aligning resources, capabilities and practices to effect productive marketing intiatives and maximize returns:</span></div>
 							
 	
@@ -105,7 +110,7 @@ exit; // Exit if accessed directly.
 							</ul>
 						</div>
 					</div>
-					</div>
+					</div></div>
 <div class="do card">
 						<div class="div-width" id="do-card-4-width">
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
@@ -118,7 +123,7 @@ exit; // Exit if accessed directly.
 					</div></div></div>
 						<a class="do-toggle-4 collapsed" data-toggle="collapse" href="#do-card-4" aria-expanded="true" aria-controls="do-card-4"><span>more</span><b>less</b></a>
 						<div class="card-content collapse" id="do-card-4">
-							<div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
 							<span>Aligning resources, capabilities and practices to effect productive marketing intiatives and maximize returns:</span></div>
 							
 
@@ -134,9 +139,11 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php get_template_part( 'navcluster' ); ?>
+	
 	</section><!-- Container end -->

@@ -486,16 +486,159 @@
 }
 
 // ==========================================================================
-// SMM Strategic Marketing Managmenet Sub Panel
+// Advancing Business Objectives Sub Panel
 // ==========================================================================
-.smm-sub-panel {
+#adv-container{
+    height: 100vh;
+    display: flex;
+    align-items: center 
+}
+
+#adv-content{
+@include media-breakpoint-up(md) {
+    height: 80vh;
+    align-content: space-evenly;
+}
+}
+.adv-sub-panel {
     .expt-row {
         display: flex;
         justify-content: space-around;
         align-items: stretch;
     }
+}
 
-    .expt-block {
+.adv-vert, .adv-vert .row, .adv-horz, .adv-horz .row{
+@include make-col(12);
+}
+
+.delta-vert{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.adv-vert-row, .delta-vert{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.adv-vert-row, .delta-vert{
+    @include media-breakpoint-up(md) {
+        display: none;
+        }   
+    }
+
+.adv-horz, .delta-horz{
+    display: none;
+@include media-breakpoint-up(md) {
+        display: flex;
+        }   
+}
+
+.adv-horz-row{
+    display: inline-flex;
+        justify-content: space-around;
+        // max-width: 80% !important;
+        margin: 0 auto;
+        align-items: center;
+}
+
+.delta-frame{
+    @include media-breakpoint-up(md) {   
+    width: 2%;
+        flex-basis: 0;
+    max-width: 100%;
+}
+}
+
+.delta-horz .style-svg{
+    width: $ms-0;
+}
+
+.adv-frame .style-svg{
+    height: $rvr-9;
+    width: $ms-9;
+    @include media-breakpoint-up(md){
+        height: $rvr-7;
+        width: $ms-8;
+    }
+}
+
+
+.adv-box-head{
+    padding-right: $ms--4;
+    padding-left: $ms--4;
+     @include media-breakpoint-up(md) {
+            text-transform: uppercase;
+    font-size: $ms-2;
+}
+}
+
+.adv-box-subhead{
+    @include media-breakpoint-up(md){
+        font-size: $ms-1_5;
+    }
+}
+
+.vert-head{
+width: 100%;
+display: inline-flex;
+justify-content: center;
+@include media-breakpoint-up(md) {
+        display: none;
+        }
+}
+
+.adv-box-head, .adv-box-subhead{
+    display: inline-flex;
+    @include media-breakpoint-up(md) {
+            display: flex;
+            }
+}
+
+
+.adv-svg{
+    height: 10rem;
+    width: 7rem;
+    fill: black;
+}
+
+
+
+
+#adv-frame-1, #adv-frame-2, #adv-frame-3, #adv-frame-4{
+    width: 100%;
+    flex-basis: 0;
+    max-width: 100%;
+    @include media-breakpoint-up(md) {
+        width: 23.5%;
+            flex-basis: 0;
+    max-width: 100%;
+           display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+}
+
+.adv-block .row{
+    justify-content: flex-end;
+}
+
+.adv-copy{
+@include media-breakpoint-up(md) {
+            @include make-col(3);
+            padding-right: $ms-4;
+}
+}
+
+img.adv-img-box{
+    fill: black;
+    height: 7rem;
+    width: 7rem;
+}
+.expt-block {
         @include make-col-ready;
         @include media-breakpoint-up(sm) {
             @include make-col(12);
@@ -569,7 +712,7 @@
             @include make-col(4);
         }
     }
-}
+
 
 // ==========================================================================
 // Marketing Communications Sub Panel
@@ -963,18 +1106,18 @@
 }
 
 //
-// home/cash panel
+// home/cash- panel
 // ==========================================================================
-#cash {
+#cash- {
     height: 100vh;
 }
 
-#cashcontainer > div.page-title {
+#cash-container > div.page-title {
     // margin-bottom: $rvr-5;
     // margin-top: $rvr-2;
 }
 
-#cashcontainer {
+#cash-container {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -983,29 +1126,29 @@
     flex-direction: column;
 }
 
-.cashheadline {
+.cash-headline {
     // margin-bottom: $rvr-2;
 }
 
-.cashheadline h2 {
+.cash-headline h2 {
     // // @include v-1;
 }
 
-.cashheadline span {
+.cash-headline span {
     @include display-4;
 }
 
-// #cashcontainer > span{
+// #cash-container > span{
 //     @include display-4;
 //     // @include v-0;
 // }
 
-// #cashcontainer > span.cash2{
+// #cash-container > span.cash-2{
 //     @include display-2;
 //     // @include v-2;
 // }
 
-.cashblock {
+.cash-block {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1017,30 +1160,30 @@
     }
 }
 
-.cashshell {
+.cash-shell {
     margin-bottom: $rvr-1;
 }
 
-.cashcontent {
+.cash-content {
     max-width: 20rem;
 }
 
-.cashcontent h4 {
+.cash-content h4 {
     // @include v-0;
 }
 
-.cashsubhead {
+.cash-subhead {
     @include display-5;
 
     // margin-bottom: $rvr-1;
 }
 
-.cashlist {
+.cash-list {
     list-style: none;
     padding: 0;
 }
 
-.cashlist li {
+.cash-list li {
     @include body-4;
 }
 
@@ -1048,24 +1191,24 @@
 // customer-driven engagement
 // ==========================================================================
 
-#custbox {
+#post-digital-marketing {
     display: inline-flex;
     align-items: center;
     flex-direction: row;
 }
 
-#custcontainer {
+#cust-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-#custcontent > div.page-title {
+#cust-content > div.page-title {
     // margin-bottom: $rvr-5;
     // margin-top: $rvr-2;
 }
 
-.row#custcontent {
+.row#cust-content {
     //     display: flex;
     flex-direction: column;
 
@@ -1076,11 +1219,11 @@
     // flex-wrap: nowrap;
 }
 
-#custheadline {
+#cust-headline {
     // margin-bottom: $rvr-2;
 }
 
-.custblock {
+.cust-block {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1092,11 +1235,11 @@
     }
 }
 
-.custshell {
+.cust-shell {
     // margin-bottom: $rvr-1;
 }
 
-.custcopy {
+.cust-copy {
     @include body-4;
 
     max-width: 34rem;
@@ -1106,24 +1249,24 @@
 // strategic marketing management panel
 // ==========================================================================
 
-#scvbox {
+#superior-customer-value {
     display: inline-flex;
     align-items: center;
     flex-direction: row;
 }
 
-#scvcontainer {
+#scv-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-#scvcontent > div.page-title {
+#scv-content > div.page-title {
     // margin-bottom: $rvr-5;
     // margin-top: $rvr-2;
 }
 
-.row#scvcontent {
+.row#scv-content {
     //     display: flex;
     flex-direction: row;
 
@@ -1134,11 +1277,11 @@
     // flex-wrap: nowrap;
 }
 
-#scvheadline {
+#scv-headline {
     // margin-bottom: $rvr-2;
 }
 
-.scvblock {
+.scv-block {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1150,11 +1293,11 @@
     }
 }
 
-.scvshell {
+.scv-shell {
     margin-bottom: $rvr-1;
 }
 
-.scvcopy {
+.scv-block {
     @include body-4;
 
     max-width: 34rem;
@@ -1164,13 +1307,23 @@
 // strategic marketing management panel
 // ==========================================================================
 
-#smm-box {
+.evo {
+    opacity: 1;
+    background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: 97% 100%;
+
+    // background-size: cover;
+}
+
+#strategic-marketing-management{
     display: inline-flex;
     align-items: center;
     flex-direction: row;
 }
 
-#smm-container {
+#opt-container {
    @include media-breakpoint-up(md) {
            height: 100vh;
     display: flex;
@@ -1178,16 +1331,16 @@
 }
 }
 
-#smm-content > div.page-title {
+#opt-content > div.page-title {
     // margin-bottom: $rvr-5;
     // margin-top: $rvr-2;
 }
 
-#smm-headline span {
+#opt-headline span {
     @include display-4;
 }
 
-.row#smm-content {
+.row#opt-content {
 display: flex;
 
 
@@ -1200,7 +1353,7 @@ height: 80vh;
 }
 
 
-.smm-vert{
+.opt-vert{
     height: 55rem;
     .end2end-vert{
         height: 55rem;
@@ -1217,7 +1370,7 @@ height: 80vh;
 
 
 
-.smm-horz{
+.opt-horz{
 display: none;
        @include make-col-ready;
                  @include make-col(12);
@@ -1229,12 +1382,12 @@ display: none;
 
             }
 }
-.smm-horz .st1{
+.opt-horz .st1{
     fill:  #707070;
 
 }
 
-.smm-vert .st0{
+.opt-vert .st0{
     fill:  #707070;
     stroke: #ffffff;
 }
@@ -1251,11 +1404,11 @@ display: none;
     height: 100%;
 }
 
-.smm-block {
+.opt-block {
     justify-content: end;
 }
 
-.smm-copy {
+.opt-copy {
     @include body-6;
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
@@ -1278,7 +1431,7 @@ display: none;
 }
 
 //
-#smm-content-block {
+#opt-content-block {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1290,7 +1443,7 @@ display: none;
     }
 }
 
-#smmlinks {
+#optlinks {
     @include make-col-ready;
     @include media-breakpoint-up(sm) {
         @include make-col(12);
@@ -1302,7 +1455,7 @@ display: none;
     }
 }
 
-// #smm-content{
+// #opt-content{
 //     @include make-col-ready;
 //     @include media-breakpoint-up(sm) {
 //         @include make-col (12);
@@ -1316,19 +1469,24 @@ display: none;
 // i'm available panel
 // ==========================================================================
 
+
 #available-container {
     display: flex;
     align-items: center;
     min-height: 100vh;
 }
 
-#available-container .page-title, #available-headline {
+#available-container .page-title{
     // margin-bottom: rvr(2);
 
     @include make-col-ready;
     @include make-col(12);
     padding-left: 0;
     padding-right: 0;
+}
+
+#available-row{
+    display: flex;
 }
 
 #available-content {
@@ -1381,6 +1539,13 @@ margin-bottom: $rvr-2;
 .available h5{
     font-weight: 400;
     letter-spacing: .15rem;
+
+}
+
+#available-content h5{
+font-family: $font-family-sans-serif;
+font-weight: 400;
+    margin-bottom: $rvr-_75;
 }
 
 #available-container > div > div.subhead{
@@ -1388,6 +1553,10 @@ margin-bottom: $rvr-2;
 @include media-breakpoint-up(md) {
         margin-bottom: $rvr-2;
 }
+}
+
+#available-box .copy{
+    max-width: $ms-11_75;
 }
 
 //
@@ -1887,7 +2056,7 @@ margin-bottom: $rvr-2;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    height: 100vh;
+//     height: 100vh;
 }
 
 #homectacontainer h1 {
@@ -1911,21 +2080,19 @@ margin-bottom: $rvr-2;
 // ==========================================================================
 
 #do-box {
-
-            margin-bottom: $rvr-8;
-            padding-left: 0;
-            padding-right: 0;
+    margin-bottom: $rvr-8;
 
     @include media-breakpoint-up(md) {
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
+}
 
 #do-container {
-    padding: 0 $ms-3 0 0;
     display: flex;
     align-items: center;
+@include media-breakpoint-up(md){
     min-height: 100vh;
 }
 }
@@ -1948,9 +2115,21 @@ margin-bottom: $rvr-2;
     fill: black;
 }
 
+.do-icon .style-svg .svg-replaced-1{
+width: $ms-6_5;
+}
+
+.do-icon .style-svg.replaced-svg.svg-replaced-3{
+width: $ms-5_5;
+}
+
+.do-icon .style-svg.replaced-svg.svg-replaced-4{
+width: $ms-5_5;
+}
+
 .card-intro .row{
-        border-top: $ms--8 solid $primary;
-        padding-top: $rvr-2;
+border-top: $ms--8 solid $primary;
+padding-top: $rvr-2;
 }
 
 #do-content > div.row.container-cards > div:nth-child(4){
@@ -1960,6 +2139,7 @@ margin-bottom: $rvr-2;
 
 .do-icon{
     @include make-col(2);
+    padding-left: $ms--1;
 }
 
 .card-title{
@@ -1996,6 +2176,17 @@ margin-bottom: $rvr-2;
 //         content: none;
 //     }
 //  }
+
+// .svg-replaced-3{
+//     position: absolute;
+//     top: 15%;
+//     width: 5rem;
+// }
+
+#do-card-3-width > div.card-intro > div > div.head-row > div.card-title > span:nth-child(1){
+
+}
+
 
 #do-content {
     @include make-col-ready;
@@ -2042,6 +2233,9 @@ padding: $rvr-1 $ms-1 $rvr-1 $ms-1;
 //     max-width: $ms-11_5;
 }
 
+.head-row .card-title{
+    padding-left: $ms-2;
+}
 
 .do-toggle-1 b{display:inline;}
 .do-toggle-1:not(.collapsed) span{display:none}
@@ -2067,10 +2261,9 @@ padding: $rvr-1 $ms-1 $rvr-1 $ms-1;
     margin-bottom: $rvr-2;
     font-family: $font-family-sans-serif;
     font-weight: 300;
-    padding: 0 $ms-0 0 0;
-    font-size: $ms-2;
+    font-size: $ms-1_75;
     line-height:$rvr-2;
-    // letter-spacing: -.042rem;
+    letter-spacing: -.035rem;
 }
 
 .do.card *{
@@ -2087,13 +2280,13 @@ padding: $rvr-1 $ms-1 $rvr-1 $ms-1;
     text-transform: uppercase;
     letter-spacing: -.025rem;
     line-height: $rvr-1_5;
-    padding-left: $ms-1;
+    padding-left: $ms-3;
     }
 
-    #do-card-3-width > div.card-intro > div > div.head-row > div.do-icon{
-         width: $ms-6;
-         max-width: unset;   
-    }
+//     #do-card-3-width > div.card-intro > div > div.head-row > div.do-icon{
+//          width: $ms-6;
+//          max-width: unset;   
+//     }
 
    #do-card-3-width > div.card-intro > div > div.head-row > div.card-title > span{
            font-family: $font-family-sans-serif;
@@ -2162,9 +2355,6 @@ padding-left: 0;
 }
 
 
-// .card-body{
-// padding: $ms-1 0 $ms-1 0;
-// }
 
 .do.card > hr{
     margin-bottom: $rvr-_75;
@@ -2216,17 +2406,25 @@ div#do-card-2 {
 
 }
 
+.card-row{
+display: flex;
+justify-content: space-between;
+}
+
+
 .card-body{
     margin-top: $rvr-1;
     margin-left: 0;
     padding-left: 0;
+    @include make-col(6);
     @include media-breakpoint-up(md){
             height: $rvr-8;
     }
 }
 
 .card-list{
-    list-style: none;
+     @include make-col(4);
+   list-style: none;
     text-indent: 0;
 }
 
@@ -2323,12 +2521,7 @@ a.btn.btn-do {
     display: flex;
     flex-wrap: wrap;
         justify-content: center;
-    @include make-col-ready;
-        padding-left: 0;
-        padding-right: 0;
-
-
-
+padding-right: $ms-1;
     @include media-breakpoint-up(md) {
         @include make-col(5);
     }
@@ -2354,16 +2547,15 @@ a.btn.btn-do {
 
 
 .stats{
-background: $gray-100;
+background: $offwhite;
 display: flex;
 align-items: center;
 flex-direction: column;
 border: $ms--6 solid white;
-   @include make-col-ready;
             @include make-col(4);
             padding-left: $ms-1;
     padding-right: $ms-1;
-    padding-top: $rvr-_5;
+    padding-top: $rvr-7;
     padding-bottom: $rvr-_25;
     // margin-top: $rvr-3;
                 @include media-breakpoint-up(md) {
@@ -2434,9 +2626,7 @@ border: $ms--6 solid white;
 }
 
 #help-box {
-            margin-bottom: $rvr-8;
-            padding-left: 0;
-            padding-right: 0;
+    margin-bottom: $rvr-8;
     @include media-breakpoint-up(md) {
     display: inline-flex;
     justify-content: center;
@@ -2476,7 +2666,7 @@ font-family: $font-family-sans-serif;
 }
 
 .help-subhead, .cblock, .help-links{
-padding-left: $ms-1;
+// padding-left: $ms-1;
 }
 
 .help-headline{
@@ -2500,12 +2690,8 @@ max-width: $ms-12_25;
 #help-content-row {
     display: flex;
     flex-direction: column;
-    padding-left: 0px;
-    padding-right: 0px;
     width: 100%;
     @include media-breakpoint-up(md) {
-            padding-left: 0;
-            padding-right: 0;
             }
 }
 
@@ -2540,22 +2726,6 @@ margin-bottom: $rvr-2;
     }
 }
 
-// #help-content-row > hr {
-//     border-style: solid;
-//     border-width: $rvr-_05;
-//     border-color: $primary;
-
-//     // margin-top: $rvr-_5;
-//     // margin-bottom: $rvr-0;
-//     margin: 0 auto;
-//     width: 90%;
-
-//     @include v-1_5;
-
-//     @media-breakpoint-up (md) {
-//         visibility: hidden;
-//     }
-// }
 
 .help-links {
     @include media-breakpoint-up(md) {
@@ -2574,7 +2744,7 @@ margin-bottom: $rvr-2;
     padding-right: 0;
     @include media-breakpoint-up(md) {
     margin-bottom: $rvr-0;
-        argin-top: $rvr-2;
+        margin-top: $rvr-2;
     }
 }
 
@@ -2623,10 +2793,15 @@ margin-bottom: $rvr-2;
             }
 
 }
-.help-links > ul > li:nth-child(1) > span:nth-child(1) {
-    letter-spacing: 0.1rem;
+
+.help-links ul a{
+    color: black;
 }
 
+
+.help-links > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1) > span:nth-child(1){
+    letter-spacing: 0.1rem;
+}
 //
 // help cta panel
 // ==========================================================================
@@ -2662,6 +2837,26 @@ margin-bottom: $rvr-2;
 // ==========================================================================
 // global page styles
 // ==========================================================================
+.card, .row{
+    background-color: transparent;
+}
+
+// odd container background:
+#do-box, #available-box{
+padding-top: $rvr-4;
+padding-bottom: $rvr-4;
+background: $offwhite;
+}
+
+#homecta-box{
+    padding-top: $rvr-4;
+    padding-bottom: $rvr-5;
+}
+
+#about-box, #do-box, #help-box, #available-box{
+    padding-left: $ms-3;
+    padding-right: $ms-3;
+}
 
 .headline {
     margin-top: $rvr-1;
@@ -2821,15 +3016,7 @@ div.copy:last-of-type {
     background-size: cover;
 }
 
-.evo {
-    opacity: 1;
-    background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 97% 100%;
 
-    // background-size: cover;
-}
 
 // .helix {
 //     opacity: .8;
@@ -2953,7 +3140,7 @@ body {
 #available-container{
     max-width: 1100px;
 }
-#smm-container{
+#opt-container{
     max-width: 1100px;
 }
 }
@@ -2989,7 +3176,7 @@ body {
 
 .navbar-dark {
     .navbar-toggler {
-        background-color: $primary !important;
+        background-color: $tungsten !important;
     }
 }
 

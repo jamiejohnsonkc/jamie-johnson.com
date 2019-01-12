@@ -48,6 +48,5 @@ exit; // Exit if accessed directly.
 						</div>
 						</div>
 					</div>
-				</div>
-			</div>
+		
 </section><!-- Container end -->

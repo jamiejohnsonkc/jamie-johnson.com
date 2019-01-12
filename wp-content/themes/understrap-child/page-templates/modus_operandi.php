@@ -17,11 +17,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
-	<article>
-						<?php get_template_part( 'panel-content/panel', 'smm' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'scv' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'customers' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'money' ); ?>
+	<article>			<?php get_template_part( 'panel-content/panel', 'mosplash' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'advancement' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'transcendence' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'modernization ' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'optimization' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'helpcta' ); ?>
 					</article>
 </main><!-- #main -->

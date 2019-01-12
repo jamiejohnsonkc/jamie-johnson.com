@@ -17,10 +17,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
-	<article>
+					<article>
 						<?php get_template_part( 'panel-content/panel', 'splash' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'howihelp' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'ido' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'ido' ); ?>				
 						<?php get_template_part( 'panel-content/panel', 'about' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'available' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
@@ -30,3 +30,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+
+

@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- 	<div class="row"> -->
 	
 				
-					<div class="container" id="helpctacontainer"><h1>Hire Me</h1>
+					<div class="container" id="helpctacontainer"><h2>Hire Me</h2>
 						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
 						<span class="helpcta2">Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
 					</div>

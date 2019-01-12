@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel cash template.
+ * Panel cash- template.
  *
  * @package understrap
  */
@@ -10,30 +10,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cover-container arrow" id="cash">
+<section class="cover-container arrow" id="optimal-performance">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- 	<div class="row"> -->
 	<?php get_template_part( 'navcluster-left' ); ?>
 				
-					<div class="container" id="cashcontainer">
+					<div class="container" id="cash-container">
 						
 <div class="page-title">
 						<span>how i can help | 02 TRANSCEND THE COMPETITION</span>
 					</div>
-						<div class="cashheadline">
+						<div class="cash-headline">
 							<h2>Don't Make Stuff. Make Money.</h2>
 							<span>If it doesn't produce, you're not marketing. You're Spending.</span>
 						</div>
 
 				
 	
-			<div class="row" id="cashblockrow">
-					<div class="cashblock">
-							<div class="cashshell">
-								<div class="cashcontent">
+			<div class="row" id="cash-blockrow">
+					<div class="cash-block">
+							<div class="cash-shell">
+								<div class="cash-content">
 									<h4>Create Customers</h4>
-										<div class="cashsubhead">earn & reward trust</div>
-											<ul class="cashlist">
+										<div class="cash-subhead">earn & reward trust</div>
+											<ul class="cash-list">
 												<li>customer-led engagement</li>
 												<li>transparent & honorable intent</li>
 												<li>selfless disposition & behavior</li>
@@ -42,12 +42,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 										</div>
 							</div>
 					</div>
-<div class="cashblock">
-							<div class="cashshell">
-								<div class="cashcontent">
+<div class="cash-block">
+							<div class="cash-shell">
+								<div class="cash-content">
 									<h4>Facilitate Outcomes</h4>
-										<div class="cashsubhead">generate results, not overhead</div>
-											<ul class="cashlist">
+										<div class="cash-subhead">generate results, not overhead</div>
+											<ul class="cash-list">
 												<li>quantifiable business contributions</li>
 												<li>curate superior value</li>
 												<li>steward customer experiences</li>
@@ -56,12 +56,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 										</div>
 							</div>
 					</div>
-					<div class="cashblock">
-							<div class="cashshell">
-								<div class="cashcontent">
+					<div class="cash-block">
+							<div class="cash-shell">
+								<div class="cash-content">
 									<h4>Increase Returns</h4>
-										<div class="cashsubhead">create customers, not stuff</div>
-											<ul class="cashlist">
+										<div class="cash-subhead">create customers, not stuff</div>
+											<ul class="cash-list">
 												<li>operative creativity & technology</li>
 												<li>decide what not to do</li>
 												<li>evidence-guided strategy</li>

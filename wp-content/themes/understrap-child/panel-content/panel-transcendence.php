@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 
-<section class="container-fluid" id="superior-customer-value">
+<section class="container-fluid" id="i-transcend-competition">
 	<!-- 	<div class="row"> -->
 		<!-- <div class="container-fluid" id="hhelp"> -->
 
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						
 				<div class="row" id="scv-content">
 					<div class="page-title">
-						<span>how i can help | 02 TRANSCEND COMPETITION</span>
+						<span>how i create value for businesses <span class="mo-divider">|</span> </span><span class="mo-emph"><span class="mo-block">02</span>  Transcending Competition</span>
 					</div>
 
 

@@ -20,9 +20,13 @@ sublime text search (following is regex, requiring enabling of "regular expressi
 
 wildcard  [^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag    
 
-
-
-
+SNIPPETS
+@break - single bootstrap breakpoint mixin
+@breaks - all bootstrap default breakpoints
+@queries - all typical media queries
+@makecol - bootstrap col-ready and create col-() mixins;
+wpimg - wordpress img placeholder (html)
+wpbgimg - wordpress background img placeholder (css)
 
 
 

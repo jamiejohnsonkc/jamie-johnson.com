@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel Splash template.
+ * Panel mo-splash template.
  *
  * @package understrap
  */
@@ -10,18 +10,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cover-container evo" id="evo-splash">
+<section class="cover-container evo" id="mo-splash">
 	
 		<!-- 	<div class="row"> -->
 	
 					
-					<div class="container" id="splash-container">
+					<div class="container" id="mo-splash-container">
 					
 						<h1>Modus Operandi</h1>
 			
-						<div class="splash1">Marketing is a means, not the end.</div>
+						<div class="mo-splash1">"Marketing is a means, not the end"</div>
 					
-						<span class="splash2">I deliver value through four critical areas of strategic marketing.</span>
+						<span class="mo-splash2">I deliver value through four critical areas of strategic marketing.</span>
 					</div>
 				
 	

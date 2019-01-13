@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid register" id="help-box">
+<section class="container-fluid register" id="i-create-marketing-assets">
 	<div class="container" id="help-container">
 		<div class="row">
 			<div class="page-title">
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- 	<div class="row" id="help-content-row"> -->
 				<div class="help-links">
 					
-					<div class="copy" id="help-proclamations">How I Create Value for Businesses</div>
+					<div class="copy" id="help-proclamations">See How I Create Value As a Marketer</div>
 					<ul>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#advancing-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#superior-customer-value" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>

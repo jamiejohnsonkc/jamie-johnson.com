@@ -55,37 +55,37 @@ h6, .h6 {
 
 // Type display classes
 @mixin display-1 {
-    font-size: $display1-size;
+    font-size: $display-1-size;
     font-weight: $display1-weight;
 }
 
 @mixin display-2 {
-    font-size: $display2-size;
-    font-weight: $display2-weight;
+    font-size: $display-2-size;
+    font-weight: $display-2-weight;
 }
 
 @mixin display-3 {
-    font-size: $display3-size;
-    font-weight: $display3-weight;
+    font-size: $display-3-size;
+    font-weight: $display-3-weight;
 }
 
 @mixin display-4 {
-    font-size: $display4-size;
-    font-weight: $display4-weight;
+    font-size: $display-4-size;
+    font-weight: $display-4-weight;
 }
 
 @mixin display-5 {
-    font-size: $display5-size;
-    font-weight: $display5-weight;
+    font-size: $display-5-size;
+    font-weight: $display-5-weight;
 }
 
 @mixin display-6 {
-    font-size: $display6-size;
-    font-weight: $display6-weight;
+    font-size: $display-6-size;
+    font-weight: $display-6-weight;
 }
 @mixin display-7{
-    font-size: $display7-size;
-    font-weight: $display7-weight;
+    font-size: $display-7-size;
+    font-weight: $display-7-weight;
 }
 
 

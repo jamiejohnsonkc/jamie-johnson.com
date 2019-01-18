@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 				
 					<div class="container" id="home-cta-container"><div class="headline"><h2>Hire Me</h2></div>
-						<div class="subhead"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>
+						<div class="display-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>
 						<span class="cta-link">
 							<a>Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></a>
 					</div>

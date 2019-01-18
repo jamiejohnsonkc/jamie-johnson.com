@@ -22,8 +22,8 @@ exit;  //Exit if accessed directly.
 			<div class="expt-vert-box">
 			<h3>Marketing Leadership</h3>
 			<div class="expt-summary">
-				<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+				<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
 		</div>
@@ -33,7 +33,7 @@ exit;  //Exit if accessed directly.
 											<div class="expt-icon">
 												<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" />
 											</div>
-											<div class="expt-copy">
+											<div class="expt-body-text">
 												<h6>Strategic Design</h6>
 												<div class="expt-text">Ut dolore minim culpa sunt aliqua dolore nisi aliquip cupidatat deserunt ut consequat proident ut repret aliqua dolore.</div>
 											</div>
@@ -43,7 +43,7 @@ exit;  //Exit if accessed directly.
 											<div class="expt-icon">
 												<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" alt="skill icon" />
 											</div>
-											<div class="expt-copy">
+											<div class="expt-body-text">
 												<h6>Performance Optimization</h6>
 												<div class="expt-text">Ut dolore minim culpa nisi aliquipt sunt aliqua dolore cupidatat deserunt ut consequat proident ut .</div>
 											</div>
@@ -53,7 +53,7 @@ exit;  //Exit if accessed directly.
 										<div class="expt-icon">
 											<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_03.svg" alt="skill icon" />
 										</div>
-										<div class="expt-copy">
+										<div class="expt-body-text">
 											<h6>Superior Customer Value</h6>
 											<div class="expt-text">Ut dolore nisi aliquip cupidatat deserunt ut consequat proident ut reprehenderit sit incididunt qui quis duis.</div>
 										</div>
@@ -63,7 +63,7 @@ exit;  //Exit if accessed directly.
 									<div class="expt-icon">
 										<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_04.svg" alt="skill icon" />
 									</div>
-									<div class="expt-copy">
+									<div class="expt-body-text">
 										<h6>Function Modernization</h6>
 										<div class="expt-text">Ut dolore deserunt ut consequatreprehenderit sit incididunt quisunt aliqua dolore.</div>
 									</div>
@@ -72,7 +72,7 @@ exit;  //Exit if accessed directly.
 								<div class="expt-icon">
 									<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_05.svg" alt="skill icon" />
 								</div>
-								<div class="expt-copy">
+								<div class="expt-body-text">
 									<h6>Output to Outcomes</h6>
 									<div class="expt-text">aliquip incididunt qui quis duis enim velit sunt aliqua dolore.</div>
 								</div>
@@ -82,7 +82,7 @@ exit;  //Exit if accessed directly.
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_06.svg" alt="skill icon" />
 							</div>
-							<div class="expt-copy">
+							<div class="expt-body-text">
 								<h6>Customer Centricity</h6>
 								<div class="expt-text">
 									<div class="expt-text">Ut dolore minim culpa nisi aliquip cupidatat deserunt ut consequat proident.</div>
@@ -103,8 +103,8 @@ exit;  //Exit if accessed directly.
 			<div class="expt-vert-box">
 			<h3>Strategic Marketing Management</h3>
 			<div class="expt-summary">
-				<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+				<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
 	</div>
@@ -113,7 +113,7 @@ exit;  //Exit if accessed directly.
 				<div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" />
 				</div>
-				<div class="expt-copy">
+				<div class="expt-body-text">
 					<h6>Leadership</h6>
 					<div class="expt-text">
 						<ul>
@@ -131,7 +131,7 @@ exit;  //Exit if accessed directly.
 				<div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" />
 				</div>
-				<div class="expt-copy">
+				<div class="expt-body-text">
 					<h6>Concepts & Frameworks</h6>
 					<div class="expt-text">
 						<ul>
@@ -148,7 +148,7 @@ exit;  //Exit if accessed directly.
 				<div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_09.svg" alt="skill icon" />
 				</div>
-				<div class="expt-copy">
+				<div class="expt-body-text">
 					<h6>Operations</h6>
 					<div class="expt-text">
 						<ul><li>Marketing IT & Infrastructure</li>
@@ -162,7 +162,7 @@ exit;  //Exit if accessed directly.
 				<div class="expt-box"><div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_10.svg" alt="skill icon" />
 				</div>
-				<div class="expt-copy">
+				<div class="expt-body-text">
 					<h6>Information Management</h6>
 					<div class="expt-text">
 						<ul>
@@ -178,7 +178,7 @@ exit;  //Exit if accessed directly.
 				<div class="expt-icon">
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon" />
 				</div>
-				<div class="expt-copy">
+				<div class="expt-body-text">
 					<h6>Strategy</h6>
 					<div class="expt-text"><ul><li>Product/Service Management</li>
 						<li>Customer Value Design</li>
@@ -192,7 +192,7 @@ exit;  //Exit if accessed directly.
 					<div class="expt-icon">
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon" />
 					</div>
-					<div class="expt-copy">
+					<div class="expt-body-text">
 						<h6>Intelligence & Insights</h6>
 						<div class="expt-text"><ul><li>Performance Auditing</li>
 							<li>Competitive Auditing</li>
@@ -206,7 +206,7 @@ exit;  //Exit if accessed directly.
 						<div class="expt-icon">
 							<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon" />
 						</div>
-						<div class="expt-copy">
+						<div class="expt-body-text">
 							<h6>Cross Pollination</h6>
 							<div class="expt-text"><ul><li>Information curator</li>
 								<li>Customer Proxy</li>
@@ -228,8 +228,8 @@ exit;  //Exit if accessed directly.
 						<div class="expt-vert-box">
 						<h3>Marketing Communications</h3>
 						<div class="expt-summary">
-							<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+							<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
 				</div>
@@ -238,7 +238,7 @@ exit;  //Exit if accessed directly.
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon"/>
 							</div>
-							<div class="expt-copy">
+							<div class="expt-body-text">
 								<h6>Strategy & Planning</h6>
 								<div class="expt-text">
 									<ul>
@@ -255,7 +255,7 @@ exit;  //Exit if accessed directly.
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_15.svg" alt="skill icon" />
 							</div>
-							<div class="expt-copy">
+							<div class="expt-body-text">
 								<h6>Digital Marketing</h6>
 								<div class="expt-text">
 									<ul>
@@ -272,7 +272,7 @@ exit;  //Exit if accessed directly.
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_16.svg" alt="skill icon" />
 							</div>
-							<div class="expt-copy">
+							<div class="expt-body-text">
 								<h6>Lead-to-Revenue</h6>
 								<div class="expt-text">
 									<ul>
@@ -288,7 +288,7 @@ exit;  //Exit if accessed directly.
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_18.svg" alt="skill icon" />
 							</div>
-							<div class="expt-copy">
+							<div class="expt-body-text">
 								<h6>Content Development</h6>
 								<div class="expt-text">
 									<ul>
@@ -303,7 +303,7 @@ exit;  //Exit if accessed directly.
 						<div class="expt-box">
 							<div class="expt-icon">
 								<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_17.svg" alt="skill icon"/></div>
-								<div class="expt-copy">
+								<div class="expt-body-text">
 									<h6>Outbound</h6>
 									<div class="expt-text">
 										<ul>
@@ -320,7 +320,7 @@ exit;  //Exit if accessed directly.
 								<div class="expt-icon">
 									<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" alt="skill icon" />
 								</div>
-								<div class="expt-copy">
+								<div class="expt-body-text">
 									<h6>Graphic Design</h6>
 									<div class="expt-text"><ul>
 										<li>Brand Identity</li>
@@ -348,8 +348,8 @@ exit;  //Exit if accessed directly.
 						<div class="expt-vert-box">
 						<h3>Mobile + Web Development</h3>
 						<div class="expt-summary">
-						<div class="expt-sum-copy">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-copy">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+						<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
 					</div>

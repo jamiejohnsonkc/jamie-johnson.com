@@ -18,7 +18,7 @@ exit; // Exit if accessed directly.
 			</div>
 	<div class="row" id="do-content">
 	<div class="headline"><h2>I grow business.</h2></div>
-				<div class="subhead">I combine 2o years of strategic marketing expertise with proficiencies in web development and design to deliver programs that augment business development. </div>
+				<div class="display-text">I combine 2o years of strategic marketing expertise with proficiencies in web development and design to deliver programs that augment business development. </div>
 				<div class="row container-cards">
 					
 					<div class="card">
@@ -35,12 +35,12 @@ exit; // Exit if accessed directly.
 				
 						<div class="card-content collapse" id="do-card-1">
 							
-							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-display-text">Activities</h4>
 							<span>Facilitating the design, promotion, exhange and delivery of customer value.</span></div>
 							
 						
 							<ul class="card-list">
-									<h4 class="card-subhead">Outcomes</h4>
+									<h4 class="card-display-text">Outcomes</h4>
 								<li>lorum ispum</li>
 								<li>sin dolor</li>
 								<li>ni amet</li>
@@ -66,12 +66,12 @@ exit; // Exit if accessed directly.
 							
 
 							<div class="row card-row">
-								<div class="card-body"><h4 class="card-subhead">Activities</h4>
+								<div class="card-body"><h4 class="card-display-text">Activities</h4>
 							<span>Attracting, earning and rewarding the trust of customers before, during and after the sale.</span></div>
 							
 					
 							<ul class="card-list">
-										<h4 class="card-subhead">Outcomes</h4>
+										<h4 class="card-display-text">Outcomes</h4>
 								<li>lorum ispum</li>
 								<li>sin dolor</li>
 								<li>ni amet</li>
@@ -95,12 +95,12 @@ exit; // Exit if accessed directly.
 					</div></div></div>
 						<a class="do-toggle-3 collapsed" data-toggle="collapse" href="#do-card-3" aria-expanded="true" aria-controls="do-card-3"><span>more</span><b>less</b></a>
 						<div class="card-content collapse" id="do-card-3">
-							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-display-text">Activities</h4>
 							<span>Aligning resources, capabilities and practices to effect productive marketing intiatives and maximize returns:</span></div>
 							
 	
 							<ul class="card-list">
-														<h4 class="card-subhead">Outcomes</h4>
+														<h4 class="card-display-text">Outcomes</h4>
 								<li>lorum ispum</li>
 								<li>sin dolor</li>
 								<li>ni amet</li>
@@ -123,12 +123,12 @@ exit; // Exit if accessed directly.
 					</div></div></div>
 						<a class="do-toggle-4 collapsed" data-toggle="collapse" href="#do-card-4" aria-expanded="true" aria-controls="do-card-4"><span>more</span><b>less</b></a>
 						<div class="card-content collapse" id="do-card-4">
-							<div class="row card-row"><div class="card-body"><h4 class="card-subhead">Activities</h4>
+							<div class="row card-row"><div class="card-body"><h4 class="card-display-text">Activities</h4>
 							<span>Aligning resources, capabilities and practices to effect productive marketing intiatives and maximize returns:</span></div>
 							
 
 							<ul class="card-list">
-															<h4 class="card-subhead">Outcomes</h4>
+															<h4 class="card-display-text">Outcomes</h4>
 								<li>lorum ispum</li>
 								<li>sin dolor</li>
 								<li>ni amet</li>

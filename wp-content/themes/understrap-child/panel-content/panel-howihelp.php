@@ -17,11 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class=content id="help-content">
 				<div class="headline"><h2>I create assets. Not overhead.</h2></div>
-				<div class="subhead">After 20 years I've learned there are two types people in this line of work: spenders &amp; marketers.</div>
+				<div class="display-text">After 20 years I've learned there are two types people in this line of work: spenders &amp; marketers.</div>
 				
-				<div class="cblock" id="help-content-block">
+				<div class="block" id="help-content-block">
 					
-					<div class="copy">Spenders create stuff and call it marketing. Marketers create assets that bring value to the business.<span> I like to think of myself as a marketer.</span></div>
+					<div class="body-text">Spenders create stuff and call it marketing. Marketers create assets that bring value to the business.<span> I like to think of myself as a marketer.</span></div>
 				</div>
 				
 				
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- 	<div class="row" id="help-content-row"> -->
 				<div class="help-links">
 					
-					<div class="copy" id="help-proclamations">See How I Create Value As a Marketer</div>
+					<div class="body-text" id="help-proclamations">See How I Create Value As a Marketer</div>
 					<ul>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>

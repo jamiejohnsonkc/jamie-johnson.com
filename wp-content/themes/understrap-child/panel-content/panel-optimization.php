@@ -53,7 +53,7 @@ exit; // Exit if accessed directly.
 				<div class="opt-vert-diagram-content">
 					<div class="opt-vert-diagram-content-block">
 					<div class="opt-vert-diagram-headline">Ullamco dolore.</div>
-					<div class="opt-vert-diagram-subhead">Sint incididunt tempor qui quis elit in aliquip id duis in.</div>
+					<div class="opt-vert-diagram-display-text">Sint incididunt tempor qui quis elit in aliquip id duis in.</div>
 				</div>
 			</div>
 			<div class="opt-vert-diagram"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/e2e_vert.svg" alt="" class="style-svg end2end-vert"/></div>
@@ -65,10 +65,10 @@ exit; // Exit if accessed directly.
 
 			<div class="opt-block">
 				<div class="row">
-					<div class="opt-copy"><span class="clead">Tie it all together.</span>
+					<div class="opt-body-text"><span class="clead">Tie it all together.</span>
 					Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris. </div>
-				<div class="opt-copy"><span class="clead">Comprehensive leadership.</span> In voluptate velit esse
+				<div class="opt-body-text"><span class="clead">Comprehensive leadership.</span> In voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident.</div>
 		</div>

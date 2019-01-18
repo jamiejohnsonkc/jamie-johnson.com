@@ -19,7 +19,7 @@ exit; // Exit if accessed directly.
 			
 			<div class="mod-head"><div class="headline">
 				<h2>Post-Digital Marketing</h2></div>
-				<div class="subhead">Embracing New Paradigms of Revenue Generation</div>
+				<div class="display-text">Embracing New Paradigms of Revenue Generation</div>
 			</div>
 				
 
@@ -28,7 +28,7 @@ exit; // Exit if accessed directly.
 		
 		<div class="mod-block">
 			<div class="row">
-				<div class="copy">Sunt id irure deserunt dolor deserunt magna deserunt in in sunt et dolore aute aliquip sint enim aliqua occaecat nulla ea adipisicing dolore irure.</div>
+				<div class="body-text">Sunt id irure deserunt dolor deserunt magna deserunt in in sunt et dolore aute aliquip sint enim aliqua occaecat nulla ea adipisicing dolore irure.</div>
 			</div>
 		</div>
 

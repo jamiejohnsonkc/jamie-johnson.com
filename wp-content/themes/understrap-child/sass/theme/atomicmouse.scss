@@ -79,39 +79,39 @@ html [type=button] {
 }
 
 .temp1 {
-    font-size: $ms--2;
+    font-size: $ms-2;
 }
 
 .temp2 {
-    font-size: $ms--1_75;
+    font-size: $ms-1_75;
 }
 
 .temp3 {
-    font-size: $ms--1_5;
+    font-size: $ms-1_5;
 }
 
 .temp4 {
-    font-size: $ms--1_25;
+    font-size: $ms-1_25;
 }
 
 .temp5 {
-    font-size: $ms--1;
+    font-size: $ms-1;
 }
 
 .temp6 {
-    font-size: $ms--_75;
+    font-size: $ms-_75;
 }
 
 .temp7 {
-    font-size: $ms--_5;
+    font-size: $ms-_5;
 }
 
 .temp8 {
-    font-size: $ms--_25;
+    font-size: $ms-_25;
 }
 
 .temp9 {
-    font-size: $ms--_15;
+    font-size: $ms-_15;
 }
 
 .temp10 {
@@ -191,7 +191,7 @@ html [type=button] {
     transition: all 0.5s;
     overflow-y: scroll;
 
-    .expt-copy, .expt-vert {
+    .expt-body-text, .expt-vert {
         color: $primary;
     }
 }
@@ -276,7 +276,7 @@ html [type=button] {
     }
 }
 
-.exptcopy {
+.exptbody-text {
     @include body-4;
 
     // @include v-1;
@@ -588,7 +588,7 @@ html [type=button] {
 }
 
 
-.adv-head .subhead {
+.adv-head .display-text {
     display: none;
     @include media-breakpoint-up(md) {
         display: block;
@@ -596,7 +596,7 @@ html [type=button] {
     }
 }
 
-.copy {
+.body-text {
     @include v-1;
 
     font-size: $ms-1_5;
@@ -640,12 +640,12 @@ html [type=button] {
     }
 }
 
-.adv-vert-row {
+#adv-vert-row {
     display: flex;
     flex-direction: column;
 }
 
-.adv-vert-row, .delta-vert {
+#adv-vert-row, .delta-vert {
     @include media-breakpoint-up(md) {
         display: none;
     }
@@ -715,7 +715,7 @@ html [type=button] {
     }
 }
 
-.adv-box-subhead {
+.adv-box-display-text {
     font-size: $ms-2;
 
     @include media-breakpoint-up(md) {
@@ -734,7 +734,7 @@ html [type=button] {
     }
 }
 
-.adv-box-head, .adv-box-subhead {
+.adv-box-head, .adv-box-display-text {
     // display: inline-flex;
     @include media-breakpoint-up(md) {
         display: flex;
@@ -787,7 +787,7 @@ html [type=button] {
     justify-content: flex-end;
 }
 
-.copy {
+.body-text {
     @include media-breakpoint-up(md) {
         @include make-col-ready;
         @include make-col(3);
@@ -812,7 +812,7 @@ img.adv-img-box {
     font-family: $font-family-serif;
 }
 
-.vert-head .copy {
+.vert-head .body-text {
     font-family: $font-family-serif;
     font-size: $ms-1_5;
 }
@@ -821,10 +821,13 @@ img.adv-img-box {
 //     @include make-col-ready(); @include make-col-ready();
 //     @include make-col-ready(); @include make-col(12);
 // }
-// .adv-frame .copy{
+// .adv-frame .body-text{
 //        @include make-col-ready(); @include make-col-ready();
 //    @include make-col-ready(); @include make-col(12);
 // }
+
+
+
 // ==========================================================================
 // Marketing Communications Sub Panel
 // ==========================================================================
@@ -1019,13 +1022,16 @@ img.adv-img-box {
         }
     }
 
+
+
+
     .expt-row {
         h6 {
             color: $primary;
             margin-bottom: 0;
-            padding: $ms--9 0;
+            padding: $ms-9 0;
             font-weight: 400;
-            letter-spacing: $ms--10;
+            letter-spacing: $ms-10;
         }
 
         hr {
@@ -1054,7 +1060,7 @@ img.adv-img-box {
         // border-radius: 1em;
         width: $ms-8;
         height: 100%;
-        padding-bottom: $ms--10;
+        padding-bottom: $ms-10;
 
         // margin-bottom: $rvr-1;
         text-align: center;
@@ -1162,7 +1168,7 @@ img.adv-img-box {
     width: 100%;
 }
 
-.expt-sum-copy {
+.expt-sum-body-text {
     padding: 0;
 
     @include make-col-ready;
@@ -1261,11 +1267,11 @@ img.adv-img-box {
     width: $ms-5;
 }
 
-.expt-copy {
+.expt-body-text {
     width: 100%;
 }
 
-.expt-copy h6 {
+.expt-body-text h6 {
     // margin-bottom: $rvr-1;
     // margin-top: $rvr-_75;
 }
@@ -1358,7 +1364,7 @@ img.adv-img-box {
     // @include v-0;
 }
 
-.cash-subhead {
+.cash-display-text {
     @include display-5;
 
     // margin-bottom: $rvr-1;
@@ -1425,7 +1431,7 @@ img.adv-img-box {
     // margin-bottom: $rvr-1;
 }
 
-.cust-copy {
+.cust-body-text {
     @include body-4;
 
     max-width: 34rem;
@@ -1479,7 +1485,7 @@ img.adv-img-box {
 //     @include media-breakpoint-up(md) {}
 // }
 
-// .mod-head .subhead {
+// .mod-head .display-text {
 //     //      text-align: center;
 //     // margin: 0 auto;
 //     font-family: $font-family-sans-serif;
@@ -1492,7 +1498,7 @@ img.adv-img-box {
 //     }
 // }
 
-// .copy {
+// .body-text {
 //     @include v-1;
 
 //     font-size: $ms-1_5;
@@ -1601,7 +1607,7 @@ img.adv-img-box {
     }
 }
 
-.mod-head .subhead {
+.mod-head .display-text {
     //      text-align: center;
     // margin: 0 auto;
     font-family: $font-family-sans-serif;
@@ -1614,13 +1620,12 @@ img.adv-img-box {
     }
 }
 
-.copy {
+.body-text {
     @include v-1;
-
-    font-size: $ms-1_5;
-
     @include make-col-ready;
     @include make-col(12);
+        font-size: $ms-1_5;
+    font-family: $font-family-serif;
 }
 
 .mod-block {
@@ -1724,7 +1729,7 @@ img.adv-img-box {
 }
 
 
-.scv-head .subhead {
+.scv-head .display-text {
     //      text-align: center;
     // margin: 0 auto;
     font-family: $font-family-sans-serif;
@@ -1737,7 +1742,7 @@ img.adv-img-box {
     }
 }
 
-// #scv-container .copy {
+// #scv-container .body-text {
 
 
 //     @include make-col-ready;
@@ -1797,8 +1802,8 @@ img.adv-img-box {
     font-size: $ms-_75;
 }
 
-.scv-diagram img {
-    width: 100%;
+.scv-diagram svg#layer1{
+    width: 95%;
 }
 
 .scv-shell {
@@ -2044,11 +2049,11 @@ img.adv-img-box {
     fill: #111;
 }
 
-.svg-replaced-21 .cls-6, .svg-replaced-21 .cls-10 {
+.svg-replaced-22 .cls-6, .svg-replaced-22 .cls-10 {
     font-weight: 600;
 }
 
-.svg-replaced-21 .cls-1, .svg-replaced-21 .cls-12 {
+.svg-replaced-22 .cls-1, .svg-replaced-22 .cls-12 {
     fill: $tungsten;
 }
 
@@ -2089,7 +2094,7 @@ img.adv-img-box {
     text-transform: uppercase;
 }
 
-.opt-vert-diagram-subhead {
+.opt-vert-diagram-display-text {
     font-size: $ms-_75;
 }
 
@@ -2130,7 +2135,7 @@ img.adv-img-box {
     margin-top: $rvr-3;
 }
 
-.opt-copy {
+.opt-body-text {
     margin-bottom: $rvr-1;
 
     @include body-6;
@@ -2255,7 +2260,7 @@ img.adv-img-box {
     font-weight: 400;
 }
 
-.available .copy, .available .blurb {
+.available .body-text, .available .blurb {
     max-width: $ms-9;
 
     @include media-breakpoint-up(md) {
@@ -2279,7 +2284,7 @@ img.adv-img-box {
     margin-bottom: $rvr-_75;
 }
 
-#available-box .copy {
+#available-box .body-text {
     max-width: $ms-11_75;
 }
 
@@ -2312,11 +2317,12 @@ img.adv-img-box {
 //    display: block;
 //    z-index: 1;
 //}
+
 #catscontainer h2 {
-    @include v-3;
+
 }
 
-.catscontent {
+#cats .content {
     @include media-breakpoint-up(sm) {
         @include make-col-ready;
         @include make-col(12);
@@ -2329,43 +2335,39 @@ img.adv-img-box {
     }
 }
 
-.catscopy {
-    max-width: ms(10);
-
-    @include body-4;
-
-    // @include v-1;
-    line-height: 1.2;
+#cats .body-text {
+    // max-width: ms(10);
 }
 
-.catsblock {
-    display: flex;
+#cats .block {
+   
+        @include make-col-ready;
+        @include make-col(12);
+   padding: $rvr-1 0 $rvr-1 0;
+
+
+
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(8);
+           display: flex;
     flex-wrap: wrap;
 
     // justify-content: space-around;
     align-items: flex-start;
     align-content: flex-start;
     margin-bottom: $rvr-1;
-
-    @include media-breakpoint-up(sm) {
-        @include make-col-ready;
-        @include make-col(12);
-    }
-
-
-    @include media-breakpoint-up(md) {
-        @include make-col-ready;
-        @include make-col(8);
     }
 }
 
-.catfig {
-    margin-top: $rvr-_5;
-    margin-bottom: $rvr-_5;
-    margin-left: $rvr-_5;
-    margin-right: $rvr-_5;
+#cats .fig {
+@include v-1;
     position: relative;
-    width: $ms-9;
+     @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(4);
+    }
 }
 
 .vert {
@@ -2391,7 +2393,7 @@ img.adv-img-box {
     font-family: $font-family-sans-serif;
 }
 
-.caption-copy {
+.caption-body-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2402,27 +2404,32 @@ img.adv-img-box {
 }
 
 .caption-title {
-    margin-bottom: $rvr-_25;
-    font-size: $ms--1;
     font-weight: 400;
     text-transform: uppercase;
+    font-size: $ms-2_5;
+    padding-bottom: $rvr-_5;
+    @include media-breakpoint-up(md) {
+            margin-bottom: $rvr-_25;
+    font-size: $ms-1;
+    } 
 }
 
 .caption-text {
-    font-size: $ms--6;
-    line-height: $rvr-_75;
+font-size: $ms-1;
+    line-height: $rvr-1_5;
     padding: 0 $ms-1_5;
+        @include media-breakpoint-up(md) {
+                font-size: $ms--6;
+}
 }
 
-.catfig:hover .caption-content {
+#cats .fig:hover .caption-content {
     opacity: 1;
 }
 
 .expbox {
-    @include media-breakpoint-up(sm) {
-        @include make-col-ready;
+
         @include make-col(12);
-    }
 
 
     @include media-breakpoint-up(md) {
@@ -2431,11 +2438,9 @@ img.adv-img-box {
     }
 }
 
-.catstitle {
-    @include media-breakpoint-up(sm) {
+#cats .title {
         @include make-col-ready;
         @include make-col(12);
-    }
 
 
     @include media-breakpoint-up(md) {
@@ -2458,10 +2463,11 @@ img.adv-img-box {
 // #brands{
 // // height: 100vh;
 // }
-.brands-block {
+#brands .block {
+margin: 0 auto;
 }
 
-.brands-block .style-svg {
+#brands .block .style-svg {
                 @include make-col-ready();
                 @include make-col(4);
     // width: $ms-8_5;
@@ -2480,7 +2486,7 @@ img.adv-img-box {
     // @include v-3;
 }
 
-.brands-content {
+#brands .content {
     @include make-col-ready;
     @include make-col(12);
         margin-bottom: $rvr-2;
@@ -2492,15 +2498,13 @@ img.adv-img-box {
 }
 
 
-.brands.copy {
+#brands .body-text {
     // max-width: ms(10);
-    @include body-4;
-    font-size: $ms-1_5;
-    font-family: $font-family-serif;
+
 }
 
 
-.brands-block {
+#brands .block {
     display: flex;
     flex-wrap: wrap;
 
@@ -2573,7 +2577,7 @@ img.adv-img-box {
     // background-attachment: fixed;
 }
 
-.hybrid-block {
+#hybrid .block{
     @include make-col-ready;
     @include make-col(12);
     @include v-2;
@@ -2584,10 +2588,8 @@ img.adv-img-box {
 
 
 
-.hybrid-title {
+#hybrid .subhead {
     @include make-col-ready;
-margin-bottom: $rvr-1;
-    font-weight: 400;
 
     // @include v-1;
     padding-left: 0;
@@ -2602,7 +2604,7 @@ margin-bottom: $rvr-1;
   @include make-col(1);
 }
 
-.hybrid-text {
+#hybrid .block-text {
     @include make-col-ready();
     @include make-col(11);
     @include media-breakpoint-up(md) {}
@@ -2610,13 +2612,7 @@ margin-bottom: $rvr-1;
 
 
 
-.hybrid-copy {
-    max-width: ms(11);
-    margin-bottom: $rvr-1;
-    @include body-4;
-
-    // @include v-1;
-    line-height: 1.2;
+#hybrid .body-text {
 }
 
 //
@@ -2821,7 +2817,7 @@ margin-bottom: $rvr-1;
     @include make-col-ready;
     @include make-col(2);
 
-    padding-left: $ms--1;
+    padding-left: $ms-1;
 }
 
 .card-title {
@@ -2972,7 +2968,7 @@ margin-bottom: $rvr-1;
     font-weight: 500;
 }
 
-// .do-subhead {
+// .do-display-text {
 //     font-family: $font-family-sans-serif;
 //     font-weight: 300;
 //     font-size: $ms-1_75;
@@ -2986,7 +2982,7 @@ margin-bottom: $rvr-1;
 }
 
 #do-content .card .card-title {
-    //     border-top: $ms--8 solid $primary;
+    //     border-top: $ms-8 solid $primary;
     // padding: $rvr-2 0 0 0;
     font-family: $font-family-sans-serif;
     font-weight: 400;
@@ -3052,7 +3048,7 @@ margin-bottom: $rvr-1;
     padding-left: $ms-1;
 }
 
-h4.card-subhead, .card-list h4 {
+h4.card-display-text, .card-list h4 {
     padding-bottom: $rvr-_75;
 }
 
@@ -3149,12 +3145,12 @@ div#do-card-2 {
     }
 }
 
-h4.card-subhead {
+h4.card-display-text {
     font-weight: 600;
     font-style: italic;
 }
 
-.card-head.copy {
+.card-head.body-text {
     padding-bottom: 0;
     padding-left: 0;
 }
@@ -3215,7 +3211,7 @@ a.btn.btn-do {
         @include make-col-ready;
         @include make-col(4);
 
-        .subhead {
+        .display-text {
             max-width: $ms-12;
         }
     }
@@ -3364,12 +3360,12 @@ a.btn.btn-do {
     }
 }
 
-#help-content-block .copy {
+#help-content-block .body-text {
     max-width: $ms-11_75;
     font-family: $font-family-sans-serif;
 }
 
-.help-subhead, .cblock, .help-links {
+.help-display-text, #help-content-block, .help-links {
     // padding-left: $ms-1;
 }
 
@@ -3377,7 +3373,7 @@ a.btn.btn-do {
     margin-bottom: $rvr-2;
 }
 
-.help-subhead {
+.help-display-text {
     max-width: $ms-11_75;
     margin-bottom: $rvr-2;
 }
@@ -3386,7 +3382,7 @@ a.btn.btn-do {
     max-width: $ms-12_25;
 }
 
-#help-content-block.copy span {}
+#help-content-block.body-text span {}
 
 #help-content-row {
     display: flex;
@@ -3419,7 +3415,7 @@ a.btn.btn-do {
     }
 }
 
-.help-subhead {
+.help-display-text {
     font-family: $font-family-sans-serif;
     font-size: $ms-1;
 
@@ -3532,7 +3528,7 @@ a.btn.btn-do {
     background-color: transparent;
 }
 
-#i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container {
+#i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container, #cats-container {
     padding-top: $rvr-8;
     padding-bottom: $rvr-3;
 }
@@ -3556,7 +3552,12 @@ a.btn.btn-do {
     }
 }
 
-.subhead {
+.subhead{
+    font-weight: 400;
+  letter-spacing: .05rem;
+}
+
+.display-text {
     margin-bottom: $rvr-1;
     font-weight: 300;
     letter-spacing: .025rem;
@@ -3568,21 +3569,21 @@ a.btn.btn-do {
     font-weight: 400;
 }
 
-.copy {
+.body-text {
     @include body-4;
     line-height: $rvr-1_5;
     padding-bottom: $rvr-1;
 }
 
 
-#home-cta .subhead, #help-cta .subhead{
+#home-cta .display-text, #help-cta .display-text{
     @include display-3;
     @include v-1;
     line-height: $rvr-2;
 }
 
 
-div.copy:last-of-type {
+div.body-text:last-of-type {
     padding-bottom: 0;
 }
 
@@ -3988,7 +3989,7 @@ body {
 .navbar,
 .navbar a {
     color: $primary !important;
-    font-size: $ms--1;
+    font-size: $ms-1;
 
     @include media-breakpoint-up(lg) {
         font-size: $ms-_25;

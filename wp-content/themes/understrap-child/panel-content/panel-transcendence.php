@@ -19,7 +19,7 @@ exit; // Exit if accessed directly.
 			
 			<div class="scv-head"><div class="headline">
 				<h2> Creating Customer Value</h2></div>
-				<div class="subhead">Facilitating the alignment of value offered with value sought</div>
+				<div class="display-text">Facilitating the alignment of value offered with value sought</div>
 			</div>
 				
 
@@ -28,13 +28,13 @@ exit; // Exit if accessed directly.
 		
 		<div class="scv-block">
 			<div class="row">
-				<div class="copy">When you stop talking about why you're the best and start giving customers evidence of your value, good things begin to happen.</div><div class="copy">That's what I help companies do.</div>
+				<div class="body-text">When you stop talking about why you're the best and start giving customers evidence of your value, good things begin to happen.<br><br>That's what I help companies do.</div>
 			</div>
 		</div>
 
 		<div class="scv-diagram">
 			
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv_chart_v3-01.svg" alt="" class=""/>
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv_chart_v3-01.svg" alt="" class="style-svg"/>
 				<div class="scv-diagram-caption-box"><!-- <div class="scv-diagram-caption-offset"></div> -->
 				<div class="scv-diagram-caption"><span class="lead">Adipisicing aute labore exercitation amet culpa dolore in </span> occaecat consequat consectetur eu irure eu anim ea consequat commodo labore.</div>
 			</div>

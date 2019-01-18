@@ -1,6 +1,6 @@
 // Use this file to overwrite the basic Bootstrap variables and add your own variables
 // To overwrite a Bootstrap variable you don┬┤t have to touch the Bootstrap folder. 
-// Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
+// Just body-text a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
@@ -26,11 +26,16 @@
 //    appearance:        none;
 // }
 
-$min_width: 300;
-$max_width: 3000;
+// ==========================================================================
+// Responsive Text Controls
+// ==========================================================================
 
-$min_font: 10;
-$max_font: 20; 
+
+$min_width:                 300;
+$max_width:                 3000;
+
+$min_font:                  10;
+$max_font:                  20; 
 
 :root { font-size: #{$min_font}px; }
 
@@ -45,158 +50,175 @@ $max_font: 20;
   }
 }
 
-
-
-
+// ==========================================================================
+// Modular Scale Variables
+// ==========================================================================
 $modularscale: (base: 1rem, ratio: 1.33);
-$ms--10:     ms(-10);
-$ms--9_5:    ms(-9.5);
-$ms--9:      ms(-9);
-$ms--8_5:    ms(-8.5);
-$ms--8:      ms(-8);
-$ms--7:      ms(-7);
-$ms--6_5:    ms(-6.5);
-$ms--6:      ms(-6);
-$ms--5:      ms(-5);
-$ms--4_5:    ms(-4.5);
-$ms--4:      ms(-4);
-$ms--3_5:    ms(-3.5);
-$ms--3:      ms(-3);
-$ms--2_5:    ms(-2_5);
-$ms--2_25:   ms(-2.25);
-$ms--2:      ms(-2);
-$ms--1_75:   ms(-1.75);
-$ms--1_5:    ms(-1.5);
-$ms--1_25:   ms(-1.25);
-$ms--1:      ms(-1);
-$ms--_75:    ms(-0.75);
-$ms--_5:     ms(-0.5);
-$ms--_25:    ms(-0.25);
-$ms--_15:    ms(-0.15);
-$ms-0:      ms(0);
-$ms-_15:    ms(0.15);
-$ms-_25:    ms(0.25);
-$ms-_5:     ms(0.5);
-$ms-_75:    ms(0.75);
-$ms-1:      ms(1);
-$ms-1_25:   ms(1.25);
-$ms-1_5:    ms(1.5);
-$ms-1_75:   ms(1.75);
-$ms-2:      ms(2);
-$ms-2_25:   ms(2.25);
-$ms-2_5:    ms(2_5);
-$ms-3:      ms(3);
-$ms-3_5:    ms(3.5);
-$ms-4:      ms(4);
-$ms-4_5:    ms(4.5);
-$ms-5:      ms(5);
-$ms-5_5:    ms(5.5);
-$ms-6:      ms(6);
-$ms-6_5:    ms(6.5);
-$ms-7:      ms(7);
-$ms-8:      ms(8);
-$ms-8_5:    ms(8.5);
-$ms-9:      ms(9);
-$ms-9_5:    ms(9.5);        
-$ms-10:     ms(10);
-$ms-10_25:  ms(10.25);
-$ms-10_5:   ms(10.5);
-$ms-10_75:  ms(10.75);
-$ms-11:     ms(11);
-$ms-11_5:   ms(11.5);
-$ms-11_75:  ms(11.75);
-$ms-12:     ms(12);
-$ms-12_25:  ms(12.25);
-$ms-12_5:   ms(12.5);
-$ms-13:     ms(13);    
-$ms-13_5:   ms(13.5);  
-$ms-14:     ms(14);
-$ms-15:     ms(15);
-$ms-16:     ms(16);
+$ms--10:                    ms(-10);
+$ms--9_5:                   ms(-9.5);
+$ms--9:                     ms(-9);
+$ms--8_5:                   ms(-8.5);
+$ms--8:                     ms(-8);
+$ms--7:                     ms(-7);
+$ms--6_5:                   ms(-6.5);
+$ms--6:                     ms(-6);
+$ms--5:                     ms(-5);
+$ms--4_5:                   ms(-4.5);
+$ms--4:                     ms(-4);
+$ms--3_5:                   ms(-3.5);
+$ms--3:                     ms(-3);
+$ms--2_5:                   ms(-2_5);
+$ms--2_25:                  ms(-2.25);
+$ms--2:                     ms(-2);
+$ms--1_75:                  ms(-1.75);
+$ms--1_5:                   ms(-1.5);
+$ms--1_25:                  ms(-1.25);
+$ms--1:                     ms(-1);
+$ms--_75:                   ms(-0.75);
+$ms--_5:                    ms(-0.5);
+$ms--_25:                   ms(-0.25);
+$ms--_15:                   ms(-0.15);
+$ms-0:                      ms(0);
+$ms-_15:                    ms(0.15);
+$ms-_25:                    ms(0.25);
+$ms-_5:                     ms(0.5);
+$ms-_75:                    ms(0.75);
+$ms-1:                      ms(1);
+$ms-1_25:                   ms(1.25);
+$ms-1_5:                    ms(1.5);
+$ms-1_75:                   ms(1.75);
+$ms-2:                      ms(2);
+$ms-2_25:                   ms(2.25);
+$ms-2_5:                    ms(2_5);
+$ms-3:                      ms(3);
+$ms-3_5:                    ms(3.5);
+$ms-4:                      ms(4);
+$ms-4_5:                    ms(4.5);
+$ms-5:                      ms(5);
+$ms-5_5:                    ms(5.5);
+$ms-6:                      ms(6);
+$ms-6_5:                    ms(6.5);
+$ms-7:                      ms(7);
+$ms-8:                      ms(8);
+$ms-8_5:                    ms(8.5);
+$ms-9:                      ms(9);
+$ms-9_5:                    ms(9.5);        
+$ms-10:                     ms(10);
+$ms-10_25:                  ms(10.25);
+$ms-10_5:                   ms(10.5);
+$ms-10_75:                  ms(10.75);
+$ms-11:                     ms(11);
+$ms-11_5:                   ms(11.5);
+$ms-11_75:                  ms(11.75);
+$ms-12:                     ms(12);
+$ms-12_25:                  ms(12.25);
+$ms-12_5:                   ms(12.5);
+$ms-13:                     ms(13);    
+$ms-13_5:                   ms(13.5);  
+$ms-14:                     ms(14);
+$ms-15:                     ms(15);
+$ms-16:                     ms(16);
 
-// Fonts
-//
-// Font, line-height, and color for body text, headings, and more.
-
-// stylelint-disable value-keyword-case
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, geomanist, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-monospace: roboto, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base: $font-family-sans-serif;
-$font-family-serif: adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
+// ==========================================================================
+// Font Family Definitions
+// ==========================================================================
+$font-family-sans-serif:    -apple-system, BlinkMacSystemFont, geomanist, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace:     roboto, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:          $font-family-sans-serif;
+$font-family-serif:         adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
 
 
 
-// stylelint-enable value-keyword-case
-$font-weight-thin: 100;
-$font-weight-light: 200;
-$font-weight-normal: 300;
-$font-weight-bold: 400;
-$font-weight-black: 700;
+// ==========================================================================
+// Font Weights
+// ==========================================================================
+$font-weight-thin:          100;
+$font-weight-light:         200;
+$font-weight-normal:        300;
+$font-weight-bold:          500;
+$font-weight-black:         700;
 
-$h1-font-size: $ms-7;
-$h2-font-size: $ms-3;
-$h3-font-size: $ms-2_5;
-$h4-font-size: $ms-1;
-$h5-font-size: $ms-_75;
-$h6-font-size: $ms-_25;
+// ==========================================================================
+// Headings Base Styles
+// ==========================================================================
 
-$headings-margin-bottom: unset;
-$headings-font-family: inherit;
-$headings-font-weight:unset;
-$headings-color: inherit;
+$h1-font-size:              $ms-7;
+$h2-font-size:              $ms-3;
+$h3-font-size:              $ms-2_5;
+$h4-font-size:              $ms-1;
+$h5-font-size:              $ms-_75;
+$h6-font-size:              $ms-_25;
 
-$body-1-font-size: $ms-4;
-$body-2-font-size: $ms-3;
-$body-3-font-size: $ms-2;
-$body-4-font-size: $ms-1;
-$body-5-font-size: $ms-_75;
-$body-6-font-size: $ms-_25;
+$headings-margin-bottom:    unset;
+$headings-font-family:      inherit;
+$headings-font-weight:      unset;
+$headings-color:            inherit;
 
-$body-font-family: $font-family-serif;
-$body-font-weight: 300;
-$body-color: inherit;
+// ==========================================================================
+// Body Text Base Styles
+// ==========================================================================
 
-$display1-size: $ms-5;
-$display2-size: $ms-4;
-$display3-size: $ms-3;
-$display4-size: $ms-2;
-$display5-size: $ms-1;
-$display6-size: $ms-_75;
-$display7-size: $ms-_5; 
+$body-1-font-size:          $ms-4;
+$body-2-font-size:          $ms-3;
+$body-3-font-size:          $ms-2;
+$body-4-font-size:          $ms-1;
+$body-5-font-size:          $ms-_75;
+$body-6-font-size:          $ms-_25;
+        
+$body-font-family:          $font-family-serif;
+$body-font-weight:          300;
+$body-color:                inherit;
 
-$display1-weight: 300;
-$display2-weight: 300;
-$display3-weight: 300;
-$display4-weight: 300;
-$display5-weight: 300;
-$display6-weight: 300;
-$display7-weight: 300;
+// ==========================================================================
+// Display Text Base Styles
+// ==========================================================================
 
-$display-font-family: inherit;
-$display-color: inherit;
+$display-1-size:            $ms-5;
+$display-2-size:            $ms-4;
+$display-3-size:            $ms-3;
+$display-4-size:            $ms-2;
+$display-5-size:            $ms-1;
+$display-6-size:            $ms-_75;
+$display-7-size:            $ms-_5; 
 
-$lead-font-size: $ms-2;
-$lead-font-weight: 500;
+$display-1-weight:          300;
+$display-2-weight:          300;
+$display-3-weight:          300;
+$display-4-weight:          300;
+$display-5-weight:          300;
+$display-6-weight:          300;
+$display-7-weight:          300;
 
-$width-1: $ms-5;
-$width-2: $ms-6;
-$width-3: $ms-7;
-$width-4: $ms-8;
-$width-5: $ms-9;
-$width-6: $ms-10;
-$width-7: $ms-11;
-$width-8: $ms-12;
-$width-8_5: $ms-12_5;
-$width-9: $ms-13;
-$width-9_5: $ms-13_5;
-$width-10: $ms-14;
-$width-11: $ms-15;
-$width-12: $ms-16;
+$display-font-family:       inherit;
+$display-color:             inherit;
+
+$lead-font-size:            $ms-2;
+$lead-font-weight:          500;
+
+// ==========================================================================
+// Width variables 
+// ==========================================================================
+
+$width-1:                   $ms-5;
+$width-2:                   $ms-6;
+$width-3:                   $ms-7;
+$width-4:                   $ms-8;
+$width-5:                   $ms-9;
+$width-6:                   $ms-10;
+$width-7:                   $ms-11;
+$width-8:                   $ms-12;
+$width-8_5:                 $ms-12_5;
+$width-9:                   $ms-13;
+$width-9_5:                 $ms-13_5;
+$width-10:                  $ms-14;
+$width-11:                  $ms-15;
+$width-12:                  $ms-16;
 
 
 
-
-//---VERTICAL RHYTHM CONTROLS
+// ==========================================================================
+// Vertical Rythmn Controls
+// ==========================================================================
 :root {
     --baseline: 1.4;
     line-height: var(--baseline)
@@ -212,148 +234,95 @@ $width-12: $ms-16;
     @return calc(var(--baseline) * $multiple * 1rem);
 }
 
-
-$rvr-0: 1;
-$rvr-_05: calc(var(--baseline) * .05rem);
-$rvr-_15: calc(var(--baseline) * 0.15rem);
-$rvr-_25: calc(var(--baseline) * 0.25rem);
-$rvr-_5:  calc(var(--baseline) * 0.5rem);
-$rvr-_6:  calc(var(--baseline) * 0.6rem);
-$rvr-_75: calc(var(--baseline) * 0.75rem);
-$rvr-1:   calc(var(--baseline) * 1rem);
-$rvr-1_5: calc(var(--baseline) * 1.5rem);
-$rvr-1_75: calc(var(--baseline) * 1.75rem);
-$rvr-2:   calc(var(--baseline) * 2rem);
-$rvr-2_5: calc(var(--baseline) * 2.5rem);
-$rvr-3:   calc(var(--baseline) * 3rem);
-$rvr-4:   calc(var(--baseline) * 4rem);
-$rvr-5:   calc(var(--baseline) * 5rem);
-$rvr-6:   calc(var(--baseline) * 6rem);
-$rvr-7:   calc(var(--baseline) * 7rem);
-$rvr-8:   calc(var(--baseline) * 8rem);
-$rvr-9:   calc(var(--baseline) * 9rem);
+// ==========================================================================
+// Vertical Rythmn Variables
+// ==========================================================================
+$rvr-0:                                1;
+$rvr-_05:   calc(var(--baseline) * .05rem);
+$rvr-_15:   calc(var(--baseline) * 0.15rem);
+$rvr-_25:   calc(var(--baseline) * 0.25rem);
+$rvr-_5:    calc(var(--baseline) * 0.5rem);
+$rvr-_6:    calc(var(--baseline) * 0.6rem);
+$rvr-_75:   calc(var(--baseline) * 0.75rem);
+$rvr-1:     calc(var(--baseline) * 1rem);
+$rvr-1_5:   calc(var(--baseline) * 1.5rem);
+$rvr-1_75:  calc(var(--baseline) * 1.75rem);
+$rvr-2:     calc(var(--baseline) * 2rem);
+$rvr-2_5:   calc(var(--baseline) * 2.5rem);
+$rvr-3:     calc(var(--baseline) * 3rem);
+$rvr-4:     calc(var(--baseline) * 4rem);
+$rvr-5:     calc(var(--baseline) * 5rem);
+$rvr-6:     calc(var(--baseline) * 6rem);
+$rvr-7:     calc(var(--baseline) * 7rem);
+$rvr-8:     calc(var(--baseline) * 8rem);
+$rvr-9:     calc(var(--baseline) * 9rem);
 
 //function to caculate vertical rhythm (vr) fallback for unsupported browsers
 @function vr($multiple) {
     @return 1.4 * $multiple * 1rem;
 }
 
-$vr-0: 1;
-$vr-_05: vr(0.05);
-$vr-_15: vr(0.15);
-$vr-_25: vr(0.25);
-$vr-_5: vr(0.5);
-$vr-_6: vr(0.6);
-$vr-_75: vr(0.75);
-$vr-1: vr(1);
-$vr-1-5: vr(1.5);
-$vr-2: vr(2);
-$vr-2_5: vr(2.5);
-$vr-3: vr(3);
-$vr-4: vr(4);
-$vr-5: vr(5);
-$vr-6: vr(6);
-$vr-7: vr(7);
-$vr-8: vr(8);
+
+// ==========================================================================
+// Top/Bottom Margin Variables
+// ==========================================================================
+$vr-0:                  1;
+$vr-_05:                vr(0.05);
+$vr-_15:                vr(0.15);
+$vr-_25:                vr(0.25);
+$vr-_5:                 vr(0.5);
+$vr-_6:                 vr(0.6);
+$vr-_75:                vr(0.75);
+$vr-1:                  vr(1);
+$vr-1-5:                vr(1.5);
+$vr-2:                  vr(2);
+$vr-2_5:                vr(2.5);
+$vr-3:                  vr(3);
+$vr-4:                  vr(4);
+$vr-5:                  vr(5);
+$vr-6:                  vr(6);
+$vr-7:                  vr(7);
+$vr-8:                  vr(8);
 
 
-$line-height-0:   $rvr-0;  
-$line-height-_05: $rvr-_05;
-$line-height-_15: $rvr-_15;
-$line-height-_25: $rvr-_25;
-$line-height-_5:  $rvr-_5; 
-$line-height-_6:  $rvr-_6; 
-$line-height-_75: $rvr-_75;
-$line-height-1:   $rvr-1;  
-$line-height-1_5: $rvr-1_5;
-$line-height-2:   $rvr-2;  
-$line-height-2_5: $rvr-2_5;
-$line-height-3:   $rvr-3;  
-
-
-
-
-@mixin v-0 {
-    margin: 0 0;
-}
-
-@mixin v-_5 {
-    margin: $rvr-_5 0;
-    // margin: $vr-_5 0;
-}
-
-@mixin v-_75 {
-    margin: $rvr-_75 0;
-    // margin: $vr-_75 0;
-}
-@mixin v-0     {margin-bottom: $rvr-0 !important; margin-top: $rvr-0 !important;}
-@mixin v-1     {margin-bottom: $rvr-1 !important; margin-top: $rvr-1 !important;}
-@mixin v-1_5   {margin-bottom: $rvr-1_5 !important; margin-top: $rvr-1_5 !important;}
-@mixin v-2     {margin-bottom: $rvr-2   !important; margin-top: $rvr-2 !important;}
-@mixin v-2_5   {margin-bottom: $rvr-2_5 !important; margin-top: $rvr-2_5 !important;}
-@mixin v-3     {margin-bottom: $rvr-3   !important; margin-top: $rvr-3 !important;}
-@mixin v-4     {margin-bottom: $rvr-4   !important; margin-top: $rvr-4 !important;}
-@mixin v-5     {margin-bottom: $rvr-5   !important; margin-top: $rvr-5 !important;}
-@mixin v-6     {margin-bottom: $rvr-6   !important; margin-top: $rvr-6 !important;}
-@mixin v-7     {margin-bottom: $rvr-7   !important; margin-top: $rvr-7 !important;}
-@mixin v-8     {margin-bottom: $rvr-8   !important; margin-top: $rvr-8 !important;}
-@mixin v-9     {margin-bottom: $rvr-9   !important; margin-top: $rvr-9 !important;}
-@mixin v-10    {margin-bottom: $rvr-10  !important; margin-top: $rvr-10 !important;}
-@mixin v-11    {margin-bottom: $rvr-11  !important; margin-top: $rvr-11 !important;}
-@mixin v-12    {margin-bottom: $rvr-12  !important; margin-top: $rvr-12 !important;}
-@mixin v-13    {margin-bottom: $rvr-13  !important; margin-top: $rvr-13 !important;}
-
-// @mixin v0 {
-    // margin: 0 0;
-    // margin: 0 0;
-// }
-
-
-
-// @mixin v2 {
-//     margin: $rvr-2 0;
-//     margin: $vr-2 0;
-// }
-
-// @mixin v2-5 {
-//     margin: $rvr-2_5 0;
-//     // margin: $vr-2_5 0;
-// }
-
-// @mixin v3 {
-//     margin: $rvr-3 0;
-//     // margin: $vr-3 0;
-// }
-
-// @mixin v4 {
-//     margin: $rvr-4 0;
-//     // margin: $vr-4 0;
-// }
-
-// @mixin v5 {
-//     margin: $rvr-5 0;
-//     // margin: $vr-5 0;
-// }
-
-// @mixin v6 {
-//     margin: $rvr-6 0;
-//     // margin: $vr-6 0;
-// }
-
-// @mixin v7 {
-//     margin: $rvr-7 0;
-//     // margin: $vr-7 0;
-// }
-
-// stylelint-disable declaration-no-important, selector-list-comma-newline-after
-
-//
-// Headings
-//
+// ==========================================================================
+// Line Height Variables Variables
+// ==========================================================================
+$line-height-0:         $rvr-0;  
+$line-height-_05:       $rvr-_05;
+$line-height-_15:       $rvr-_15;
+$line-height-_25:       $rvr-_25;
+$line-height-_5:        $rvr-_5; 
+$line-height-_6:        $rvr-_6; 
+$line-height-_75:       $rvr-_75;
+$line-height-1:         $rvr-1;  
+$line-height-1_5:       $rvr-1_5;
+$line-height-2:         $rvr-2;  
+$line-height-2_5:       $rvr-2_5;
+$line-height-3:         $rvr-3;  
 
 
 
 
+@mixin v-0     {margin: 0 0;}
+@mixin v-_5    {margin: $rvr-_5 0;}
+@mixin v-_75   {margin: $rvr-_75 0;}
+@mixin v-0     {margin-bottom: $rvr-0;     margin-top: $rvr-0;}
+@mixin v-1     {margin-bottom: $rvr-1;     margin-top: $rvr-1;}
+@mixin v-1_5   {margin-bottom: $rvr-1_5;   margin-top: $rvr-1_5;}
+@mixin v-2     {margin-bottom: $rvr-2;     margin-top: $rvr-2;}
+@mixin v-2_5   {margin-bottom: $rvr-2_5;   margin-top: $rvr-2_5;}
+@mixin v-3     {margin-bottom: $rvr-3;     margin-top: $rvr-3;}
+@mixin v-4     {margin-bottom: $rvr-4;     margin-top: $rvr-4;}
+@mixin v-5     {margin-bottom: $rvr-5;     margin-top: $rvr-5;}
+@mixin v-6     {margin-bottom: $rvr-6;     margin-top: $rvr-6;}
+@mixin v-7     {margin-bottom: $rvr-7;     margin-top: $rvr-7;}
+@mixin v-8     {margin-bottom: $rvr-8;     margin-top: $rvr-8;}
+@mixin v-9     {margin-bottom: $rvr-9;     margin-top: $rvr-9;}
+@mixin v-10    {margin-bottom: $rvr-10;    margin-top: $rvr-10;}
+@mixin v-11    {margin-bottom: $rvr-11;    margin-top: $rvr-11;}
+@mixin v-12    {margin-bottom: $rvr-12;    margin-top: $rvr-12;}
+@mixin v-13    {margin-bottom: $rvr-13;    margin-top: $rvr-13;}
 
 
 .lead {

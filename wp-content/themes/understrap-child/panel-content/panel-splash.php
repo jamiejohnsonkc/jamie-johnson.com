@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 						<div class="splash1">strategist | creator | developer | leader | <strong>marketer</strong></div>
 					
-						<span class="splash2">I produce business outcomes.</span>
+						<span class="splash2">End to end marketing that achieves business outcomes.</span>
 					</div>
 				
 	

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 						<div class="mo-splash1">"Marketing is a means, not the end"</div>
 					
-						<span class="mo-splash2">I deliver value through four critical areas of strategic marketing.</span>
+						<span class="mo-splash2">I make marketing productive.</span>
 					</div>
 				
 	

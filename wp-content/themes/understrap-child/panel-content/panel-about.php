@@ -21,11 +21,9 @@ exit; // Exit if accessed directly.
 						<div class="about-content">
 						<div class="headline"><h2>I've been around</h2></div>
 						<div class="subhead">I've worked with some of the best, bare scars from some of the worst and learned lessons from them all.</div>
-							<div class="subhead about-block">
-								The result is an expansive expertise spanning from end to end of the marketing continuum.</div>	
-								<div class="subhead about-block">
-								I will bring value to your organization on day one.</div>
-							</div>
+							<div class="subhead">The result is an expansive expertise spanning from end to end of the marketing continuum.</div>
+								<div class="subhead">I will bring value to your organization on day one.</div>
+								
 		
 							<div class="about-icons">
 								<div class="icons-caption">Lorem ipsum sint nulla laborum culpa reprehenderit.</div>

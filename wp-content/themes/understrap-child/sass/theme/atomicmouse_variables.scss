@@ -20,11 +20,11 @@
 @import "node_modules/mathsass/dist/math";
 
 
-html [type=button]{
-  -webkit-appearance: none;
-   -moz-appearance:   none;
-   appearance:        none;
-}
+// html [type=button]{
+//   -webkit-appearance: none;
+//    -moz-appearance:   none;
+//    appearance:        none;
+// }
 
 $min_width: 300;
 $max_width: 3000;

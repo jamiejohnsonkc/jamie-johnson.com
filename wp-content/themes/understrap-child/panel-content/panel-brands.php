@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel brands template.
+ * Panel brands- template.
  *
  * @package understrap
  */
@@ -9,24 +9,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<div id="gap"></div>
 <section class="container-fluid" id="brands">
 
 				
-<div class="container" id="brandscontainer">
+<div class="container" id="brands-container">
 
 	
 			<div class="row">
-				<div class="brandscontent">
-									<h2>Exceptional Breadth</h2>
-									<div class="catscopy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				<div class="brands-content">
+									<div class="headline"><h2>Exceptional Breadth</h2></div>
+									<div class="subhead">Voluptate fugiat mollit amet dolore excepteur.</div>
+									<div class="brands copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-									consequat. </div><div class="catscopy">Duis aute irure dolor in reprehenderit in voluptate velit esse
+									consequat. </div><div class="brands copy">Duis aute irure dolor in reprehenderit in voluptate velit esse
 									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-									proident, sunt in culpa qui officia deserunt.</div> <div class="catscopy"> mollit anim id est laborum.</div>
+									proident, sunt in culpa qui officia deserunt.</div><div class="brands copy"> mollit anim id est laborum.</div>
 							</div>
-				<div class="brandsblock">
+				<div class="brands-block">
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />

@@ -9,12 +9,26 @@ ctrl + b + 			toggle sidebar
 alt + shift + f = reindent everything
 ctrl + alt + a = align
 
-add line break via peuso class - note: &:: configures psuedo element for sass nesting:
-[class]
-&::before{
-  content: "\A";
-  white-space: pre;
-}
+
+
+// ctrl + enter in find/replace to target returns or \n in regex
+
+
+//     add line break via peuso class - note: &:: configures psuedo element for sass nesting:
+//     [class]
+//     &::before{
+//       content: "\A";
+//       white-space: pre;
+//     }
+
+
+//     remove all newlines 
+//     This will remove all newlines (\n+) followed by all whitespace (\s+) in the next line.
+//     enable "Regular Expression" (circled in red)
+//     enter \n\s+ in the search field, clear the replace field
+//     press "Replace all"
+
+
 
 sublime text search (following is regex, requiring enabling of "regular expressions")
 
@@ -58,3 +72,7 @@ $container-max-widths: (
 );
 
 <!--====  End of Section comment  ====-->
+
+NPM
+svgi to analyze svg files
+svgo to minify/prettify svg

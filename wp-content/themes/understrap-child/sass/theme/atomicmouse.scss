@@ -8,17 +8,15 @@
     padding-left: 0;
 }
 
-
 .row {
     margin-left: 0;
     margin-right: 0;
 }
 
-
-html [type=button]{
-  -webkit-appearance: none;
-   -moz-appearance:   none;
-   appearance:        none;
+html [type=button] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 //
@@ -31,8 +29,8 @@ html [type=button]{
 // => find/replace cover-container to container-fluid (home and modus panels)
 #wrapper-navbar {
     position: fixed;
-    width: 100%;
     z-index: 500;
+    width: 100%;
 }
 
 .tempcontainer .row {
@@ -57,17 +55,14 @@ html [type=button]{
     align-content: flex-start;
 
     // margin-bottom: $rvr-1;
-
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 }
@@ -79,9 +74,7 @@ html [type=button]{
 
 .tempsize {
     // @include v-1;
-
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 }
 
@@ -148,7 +141,6 @@ html [type=button]{
 // ==========================================================================
 // PANELS
 // ==========================================================================
-
 //
 // webdev panel
 // ==========================================================================
@@ -169,12 +161,10 @@ html [type=button]{
 // #brands{
 // // height: 100vh;
 // }
-
 .expt {
     display: flex;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     position: relative;
@@ -290,7 +280,6 @@ html [type=button]{
     @include body-4;
 
     // @include v-1;
-
     line-height: 1.2;
     max-width: $ms-11;
 }
@@ -310,13 +299,11 @@ html [type=button]{
 //         @include make-col-ready(); @include make-col(12);
 //     }
 // }
-
 .expt-split {}
 
 // #expt-carousel-inner{
 //     height: 100vh;
 // }
-
 .expt-overlay {
     position: absolute;
     top: 0;
@@ -371,15 +358,13 @@ html [type=button]{
     text-align: center;
 
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(6);
 
         padding: 0;
@@ -387,8 +372,7 @@ html [type=button]{
 
 
     @include media-breakpoint-up(lg) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(3);
 
         padding: 0;
@@ -443,12 +427,10 @@ html [type=button]{
     min-height: 100vh;
     align-items: center;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 }
@@ -460,16 +442,13 @@ html [type=button]{
     align-content: flex-start;
 
     // margin-bottom: $rvr-1;
-
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 }
 
 // ==========================================================================
 // Marketing Sub Panel
 // ==========================================================================
-
 .marketing-sub-panel {
     .expt-row {
         display: flex;
@@ -481,44 +460,38 @@ html [type=button]{
         align-content: center;
 
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
     }
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
 
             .expt-text {
@@ -528,41 +501,33 @@ html [type=button]{
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
     }
 
     .expt-vert {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
         @include v-4;
-
         @include media-breakpoint-up(sm) {}
-
 
         @include media-breakpoint-up(md) {}
 
-
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
     }
@@ -571,8 +536,7 @@ html [type=button]{
 // ==========================================================================
 // Advancing Business Objectives Sub Panel
 // ==========================================================================
-
-#advancing-business-objectives {
+#i-advance-business-objectives {
     @include media-breakpoint-up(md) {
         height: unset;
     }
@@ -598,10 +562,6 @@ html [type=button]{
 
     .adv-block {
         order: 3;
-
-        @include v-1;
-
-        font-size: $ms-1_5;
     }
 
     .adv-horze {
@@ -613,7 +573,6 @@ html [type=button]{
     }
 
     @include media-breakpoint-up(md) {
-
         .adv-horze {
             order: 3;
         }
@@ -628,30 +587,21 @@ html [type=button]{
     }
 }
 
-.adv-head .headline {
-    // text-align: center;
-    // margin: 0 auto;
-    margin: 0;
-    padding-bottom: $rvr-1;
-
-    @include media-breakpoint-up(md) {}
-}
 
 .adv-head .subhead {
-    //      text-align: center;
-    // margin: 0 auto;
     display: none;
-
     @include media-breakpoint-up(md) {
         display: block;
-        font-size: $ms-2_5;
         font-family: $font-family-sans-serif;
     }
 }
 
-.adv-copy {
-   @include make-col-ready();
+.copy {
+    @include v-1;
 
+    font-size: $ms-1_5;
+
+    @include make-col-ready;
     @include make-col(12);
 }
 
@@ -671,14 +621,12 @@ html [type=button]{
 }
 
 .adv-vert-frame-wrapper {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(11);
 }
 
 .adv-vert, .adv-vert .row, .adv-horz, .adv-horz .row {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 }
 
@@ -721,8 +669,7 @@ html [type=button]{
 }
 
 .delta-frame {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include v-2;
 
@@ -749,7 +696,7 @@ html [type=button]{
 .adv-frame .style-svg {
     height: $rvr-6;
     width: $ms-6;
-    margin-left: -($ms-1);
+    margin-left: -$ms-1;
 
     @include media-breakpoint-up(md) {
         height: $rvr-7;
@@ -777,8 +724,9 @@ html [type=button]{
 }
 
 .vert-head {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(10);
+
     padding-left: $ms-1_5;
 
     @include media-breakpoint-up(md) {
@@ -794,8 +742,7 @@ html [type=button]{
 }
 
 #adv-vert-frame-1, #adv-vert-frame-2, #adv-vert-frame-3, #adv-vert-frame-4 {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     display: flex;
@@ -840,11 +787,11 @@ html [type=button]{
     justify-content: flex-end;
 }
 
-.adv-copy {
+.copy {
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(3);
+
         padding-right: $ms-4;
     }
 }
@@ -859,32 +806,28 @@ img.adv-img-box {
 }
 
 .adv-img-box {
-   @include make-col-ready();
+    @include make-col-ready;
+    @include make-col(2);
 
-    @include make-col(2);    font-family: $font-family-serif;
+    font-family: $font-family-serif;
 }
 
-.vert-head .adv-copy{
-        font-family: $font-family-serif;
-        font-size: $ms-1_5;
+.vert-head .copy {
+    font-family: $font-family-serif;
+    font-size: $ms-1_5;
 }
 
 // .adv-box-head{
 //     @include make-col-ready(); @include make-col-ready();
 //     @include make-col-ready(); @include make-col(12);
 // }
-
-// .adv-frame .adv-copy{
+// .adv-frame .copy{
 //        @include make-col-ready(); @include make-col-ready();
 //    @include make-col-ready(); @include make-col(12);
 // }
-
-
-
 // ==========================================================================
 // Marketing Communications Sub Panel
 // ==========================================================================
-
 .marcom-sub-panel {
     .expt-row {
         display: flex;
@@ -894,15 +837,13 @@ img.adv-img-box {
 
     .expt-block {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(8);
 
             .expt-text {
@@ -912,30 +853,26 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
     }
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
 
             .expt-text {
@@ -945,45 +882,39 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
     }
 
     .expt-vert {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
             @include v-3;
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
     }
@@ -992,15 +923,13 @@ img.adv-img-box {
         align-content: center;
 
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
 
             .expt-text {
@@ -1010,30 +939,26 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(7);
         }
     }
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
 
             .expt-text {
@@ -1043,45 +968,39 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
         }
     }
 
     .expt-vert {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
             @include v-3;
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(xl) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
         }
     }
@@ -1090,7 +1009,6 @@ img.adv-img-box {
 // ==========================================================================
 // WebDev Sub Panel
 // ==========================================================================
-
 .webdev-sub-panel {
     .style-svg {
         fill: $primary;
@@ -1144,8 +1062,7 @@ img.adv-img-box {
 
     .expt-vert {
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
 
             height: 315vh;
@@ -1154,15 +1071,13 @@ img.adv-img-box {
 
     .expt-block {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
 
             float: right;
@@ -1170,8 +1085,7 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(6);
 
             height: 325vh;
@@ -1193,15 +1107,13 @@ img.adv-img-box {
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-           @include make-col-ready();
-
+            @include make-col-ready;
             @include make-col(4);
 
             .expt-text {
@@ -1214,7 +1126,6 @@ img.adv-img-box {
 // ==========================================================================
 // Post Sass Global ExPT Sytles
 // ==========================================================================
-
 .expt-menu {}
 
 //     position: relative;
@@ -1226,7 +1137,6 @@ img.adv-img-box {
 //     bottom: unset;
 //     height: unset;
 // }
-
 .expt-menu {
     text-indent: 0px;
     padding-left: 0px;
@@ -1255,17 +1165,13 @@ img.adv-img-box {
 .expt-sum-copy {
     padding: 0;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     // padding: 0 0 $rvr-1 0;
-
     @include media-breakpoint-up(sm) {}
 
-
     @include media-breakpoint-up(md) {}
-
 
     @include media-breakpoint-up(lg) {
         @include display-5;
@@ -1279,15 +1185,11 @@ img.adv-img-box {
 .expt-vert {
     // display: flex;
     // align-items: center;
-
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include v-5;
-
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(6);
     }
 
@@ -1299,8 +1201,7 @@ img.adv-img-box {
 
 .expt-vert-box {
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
@@ -1319,14 +1220,11 @@ img.adv-img-box {
 // .expt-skills::-webkit-scrollbar {
 //     display: none;
 // }
-
 .expt-head {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     // @include v-2;
-
     padding-left: 0;
 
     // // @include v-2;
@@ -1383,15 +1281,13 @@ img.adv-img-box {
 
 .exptcontent {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -1433,23 +1329,19 @@ img.adv-img-box {
 //     @include display-4;
 //     // @include v-0;
 // }
-
 // #cash-container > span.cash-2{
 //     @include display-2;
 //     // @include v-2;
 // }
-
 .cash-block {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -1484,7 +1376,6 @@ img.adv-img-box {
 //
 // customer-driven engagement
 // ==========================================================================
-
 #post-digital-marketing {
     display: inline-flex;
     align-items: center;
@@ -1519,15 +1410,13 @@ img.adv-img-box {
 
 .cust-block {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(6);
     }
 }
@@ -1542,20 +1431,278 @@ img.adv-img-box {
     max-width: 34rem;
 }
 
-//
-// strategic marketing management panel
-// ==========================================================================
+// //
+// // post-digital marketing / modernizing the marketing function
+// // ==========================================================================
+// #i-optimize-marketing-investments {
+//     @include media-breakpoint-up(md) {
+//         display: inline-flex;
+//         align-items: center;
+//         flex-direction: row;
+//     }
+// }
 
-#i-transcend-competition {
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
+// .container#mod-container {
+//     //       padding-left: 0px;
+//     //     padding-right: 0px;
+//     @include media-breakpoint-up(md) {
+//         height: 100vh;
+//         display: flex;
+//         flex-direction: column;
+//     }
+// }
+
+// #mod-content > div.page-title {
+//     // margin-bottom: $rvr-5;
+//     // margin-top: $rvr-2;
+// }
+
+// #mod-content {
+//     @include media-breakpoint-up(md) {
+//         //     display: flex;
+//         flex-direction: row;
+
+//         // align-content: center;
+//         height: 80vh;
+//         justify-content: center;
+
+//         // flex-wrap: nowrap;
+//     }
+// }
+
+// .mod-head .headline {
+//     // text-align: center;
+//     // margin: 0 auto;
+//     margin: 0;
+//     padding-bottom: $rvr-1;
+
+//     @include media-breakpoint-up(md) {}
+// }
+
+// .mod-head .subhead {
+//     //      text-align: center;
+//     // margin: 0 auto;
+//     font-family: $font-family-sans-serif;
+//     display: none;
+
+//     @include media-breakpoint-up(md) {
+//         display: block;
+//         font-size: $ms-2_5;
+//         font-family: $font-family-sans-serif;
+//     }
+// }
+
+// .copy {
+//     @include v-1;
+
+//     font-size: $ms-1_5;
+
+//     @include make-col-ready;
+//     @include make-col(12);
+// }
+
+// .mod-block {
+//     @include make-col-ready;
+//     @include make-col(12);
+//     @include media-breakpoint-up(md) {
+//         @include make-col-ready;
+//         @include make-col(6);
+//     }
+// }
+
+// .mod-diagram {
+//     @include make-col-ready;
+//     @include make-col(12);
+
+//     margin-top: $rvr-3;
+
+//     @include media-breakpoint-up(md) {
+//         @include make-col-ready;
+//         @include make-col(6);
+//     }
+// }
+
+// .mod-diagram-caption-box {
+//     @include make-col-ready;
+//     @include make-col(12);
+
+//     display: flex;
+//     justify-content: flex-start;
+// }
+
+// // .mod-diagram-caption-offset{
+// //                 @include make-col-ready();
+// //                 @include make-col(3);
+// //     margin-top: $rvr-2;
+// // }
+// .mod-diagram-caption {
+//     @include make-col-ready;
+//     @include make-col(9);
+
+//     font-family: $font-family-monospace;
+//     margin-top: $rvr-3;
+
+//     // background-color: $tungsten;
+//     padding: $ms-1_5 $ms-_25 $ms-_25 $ms-_25;
+//     border-top: thin solid $tungsten;
+// }
+
+// .mod-diagram-caption .lead {
+//     font-weight: 400;
+//     font-size: $ms-_75;
+// }
+
+// .mod-diagram img {
+//     width: 105%;
+// }
+
+// .mod-shell {
+//     margin-bottom: $rvr-1;
+// }
+
+// .mod-block {}
+
+//
+// post-digital marketing / modernizing the marketing function
+// ==========================================================================
+#i-modernize-marketing-functions {
+    @include media-breakpoint-up(md) {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+    }
 }
 
-#scv-container {
-    height: 100vh;
+.container#mod-container {
+    //       padding-left: 0px;
+    //     padding-right: 0px;
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#mod-content > div.page-title {
+    // margin-bottom: $rvr-5;
+    // margin-top: $rvr-2;
+}
+
+#mod-content {
+    @include media-breakpoint-up(md) {
+        //     display: flex;
+        flex-direction: row;
+
+        // align-content: center;
+        height: 80vh;
+        justify-content: center;
+
+        // flex-wrap: nowrap;
+    }
+}
+
+.mod-head .subhead {
+    //      text-align: center;
+    // margin: 0 auto;
+    font-family: $font-family-sans-serif;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+        font-size: $ms-2_5;
+        font-family: $font-family-sans-serif;
+    }
+}
+
+.copy {
+    @include v-1;
+
+    font-size: $ms-1_5;
+
+    @include make-col-ready;
+    @include make-col(12);
+}
+
+.mod-block {
+    @include make-col-ready;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+.mod-diagram {
+    @include make-col-ready;
+    @include make-col(12);
+
+    margin-top: $rvr-3;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+.mod-diagram-caption-box {
+    @include make-col-ready;
+    @include make-col(12);
+
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+}
+
+// .mod-diagram-caption-offset{
+//                 @include make-col-ready();
+//                 @include make-col(3);
+//     margin-top: $rvr-2;
+// }
+.mod-diagram-caption {
+    @include make-col-ready;
+    @include make-col(10);
+
+    font-family: $font-family-monospace;
+    margin-top: $rvr-3;
+
+    // background-color: $tungsten;
+    padding: $ms-2 $ms-_25 $ms-_25 0;
+    border-top: thin solid $tungsten;
+}
+
+.mod-diagram-caption .lead {
+    font-weight: 400;
+    font-size: $ms-_75;
+}
+
+.mod-diagram img {
+    width: 105%;
+}
+
+.mod-shell {
+    margin-bottom: $rvr-1;
+}
+
+.mod-block {}
+
+//
+// superior customer value / transcending compeition
+// ==========================================================================
+#i-transcend-competition {
+    @include media-breakpoint-up(md) {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.container#scv-container {
+    //       padding-left: 0px;
+    //     padding-right: 0px;
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #scv-content > div.page-title {
@@ -1563,50 +1710,199 @@ img.adv-img-box {
     // margin-top: $rvr-2;
 }
 
-.row#scv-content {
-    //     display: flex;
-    flex-direction: row;
+#scv-content {
+    @include media-breakpoint-up(md) {
+        //     display: flex;
+        flex-direction: row;
 
-    // align-content: center;
-    height: 80vh;
-    justify-content: center;
+        // align-content: center;
+        height: 80vh;
+        justify-content: center;
 
-    // flex-wrap: nowrap;
-}
-
-#scv-headline {
-    // margin-bottom: $rvr-2;
-}
-
-.scv-block {
-    @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
-        @include make-col(12);
+        // flex-wrap: nowrap;
     }
+}
 
+
+.scv-head .subhead {
+    //      text-align: center;
+    // margin: 0 auto;
+    font-family: $font-family-sans-serif;
+    display: none;
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
+        display: block;
+        font-size: $ms-2_5;
+        font-family: $font-family-sans-serif;
+    }
+}
 
+// #scv-container .copy {
+
+
+//     @include make-col-ready;
+//     @include make-col(12);
+// }
+
+.scv-block {
+    @include make-col-ready;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
         @include make-col(6);
     }
+}
+
+.scv-diagram {
+    @include make-col-ready;
+    @include make-col(12);
+
+    margin-top: $rvr-3;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+.scv-diagram-caption-box {
+    @include make-col-ready;
+    @include make-col(12);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+// .scv-diagram-caption-offset{
+//                 @include make-col-ready();
+//                 @include make-col(3);
+//     margin-top: $rvr-2;
+// }
+
+.scv-diagram-caption {
+    @include make-col-ready;
+    @include make-col(10);
+
+    font-family: $font-family-monospace;
+    margin-top: $rvr-3;
+
+    // background-color: $tungsten;
+    padding: $ms-2 0 $ms-_25 $ms-_25;
+    border-top: thin solid $tungsten;
+    text-align: right;
+}
+
+.scv-diagram-caption .lead {
+    font-weight: 400;
+    font-size: $ms-_75;
+}
+
+.scv-diagram img {
+    width: 100%;
 }
 
 .scv-shell {
     margin-bottom: $rvr-1;
 }
 
-.scv-block {
-    @include body-4;
+.scv-block {}
 
-    max-width: 34rem;
+//     max-width: 34rem;
+// }
+//
+// about splash panel
+// ==========================================================================
+#about-splash, #about-splash-container {
+    height: 100vh;
+}
+
+#about-splash-container {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+#about-splash-container h1 {
+    font-size: $ms-5;
+
+    // @include v-1;
+    @include media-breakpoint-up(lg) {
+        @include v-1;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        font-size: $h1-font-size;
+    }
+}
+
+#about-splash-container .about-splash1 {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: $ms-2_5;
+    margin-bottom: $rvr-4;
+
+    // @include v-0;
+}
+
+.about-splash-emp strong {}
+
+#about-splash-container .about-splash2 {
+    @include display-3;
+    @include v-2;
+
+    line-height: $rvr-2;
+
+    @include media-breakpoint-up(lg) {
+        @include v-1;
+    }
+}
+
+.evo {
+    opacity: 1;
+    background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
+    background-size: 37%;
+    background-repeat: no-repeat;
+    background-position: 97% 100%;
+
+    // background-size: cover;
+    @include media-breakpoint-up(sm) {
+        background-size: 155%;
+        background-position: 130% bottom;
+    }
+
+
+    @include media-breakpoint-up(md) {
+        background-position: right bottom;
+        background-size: 100%;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        background-size: 80%;
+        background-position: right bottom;
+    }
+
+
+    @include media-breakpoint-up(xl) {}
+}
+
+#about-splash {
+    height: 100vh;
 }
 
 //
 // modus operandi panel
 // ==========================================================================
-
 #mo-splash, #mo-splash-container {
     height: 100vh;
 }
@@ -1670,7 +1966,6 @@ img.adv-img-box {
     background-position: 97% 100%;
 
     // background-size: cover;
-
     @include media-breakpoint-up(sm) {
         background-size: 155%;
         background-position: 130% bottom;
@@ -1699,7 +1994,6 @@ img.adv-img-box {
 //
 // optimizing performance panel
 // ==========================================================================
-
 #optimal-performance {
     display: inline-flex;
     align-items: center;
@@ -1719,6 +2013,10 @@ img.adv-img-box {
     // margin-top: $rvr-2;
 }
 
+#opt-headline {
+    margin-bottom: $rvr-4;
+}
+
 #opt-headline span {
     @include display-4;
 }
@@ -1734,17 +2032,27 @@ img.adv-img-box {
     }
 }
 
+// ==========================================================================
+// Misc svg corrections
+// ==========================================================================
+//      svg-replaced-8 architecture icon from MO/Advancement Panel
+//      svg-replaced-10 architecture icon from MO/Advancement Panel
+//      svg-replaced-12 bar chart from MO/Advancement Panel
+//      svg-replaced-14 instrument cluster from MO/Advancement Panel
+//      svg-replaced-21 vertical end to end chart from MO/performance integration Panel
+.svg-replaced-8 .cls-2, .svg-replaced-10 .cls-1, .svg-replaced-10 .cls-12, .svg-replaced-12, .svg-replaced-12 .cls-1, .svg-replaced-14 .cls-1 {
+    fill: #111;
+}
+
+.svg-replaced-21 .cls-6, .svg-replaced-21 .cls-10 {
+    font-weight: 600;
+}
+
+.svg-replaced-21 .cls-1, .svg-replaced-21 .cls-12 {
+    fill: $tungsten;
+}
+
 .opt-vert {
-    height: 55rem;
-
-    .end2end-vert {
-        height: 55rem;
-    }
-
-    .st6 {
-        fill: #000000;
-    }
-
     @include media-breakpoint-up(md) {
         display: none;
     }
@@ -1753,11 +2061,42 @@ img.adv-img-box {
     @include media-breakpoint-up(lg) {}
 }
 
+.opt-vert-diagram {
+    @include make-col-ready;
+    @include make-col(7);
+
+    width: 100%;
+}
+
+.opt-vert-diagram-content {
+    @include make-col-ready;
+    @include make-col(5);
+
+    width: 100%;
+}
+
+.opt-vert-diagram-content-block {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: $rvr-3;
+    padding-bottom: $rvr-3;
+}
+
+.opt-vert-diagram-headline {
+    font-size: $h4-font-size;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.opt-vert-diagram-subhead {
+    font-size: $ms-_75;
+}
+
 .opt-horz {
     display: none;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {
         display: block;
@@ -1769,44 +2108,40 @@ img.adv-img-box {
     }
 }
 
-.opt-horz .st1 {
-    fill: #707070;
-}
-
-.opt-vert .st0 {
-    fill: #707070;
-    stroke: #ffffff;
-}
-
+// .opt-horz .st1 {
+//     fill: #707070;
+// }
+// .opt-vert .st0 {
+//     fill: #707070;
+//     stroke: #ffffff;
+// }
 .end2end {
     width: 100%;
 
     // width: 1201px;
-
     // margin: $rvr-1 0;
 }
 
 .end2end-vert {
-    height: 100%;
+    min-height: 100%;
 }
 
 .opt-block {
-    justify-content: end;
+    margin-top: $rvr-3;
 }
 
 .opt-copy {
+    margin-bottom: $rvr-1;
+
     @include body-6;
-
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(3);
 
         left: 50%;
@@ -1823,30 +2158,26 @@ img.adv-img-box {
 //
 #opt-content-block {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(8);
     }
 }
 
 #optlinks {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -1860,11 +2191,9 @@ img.adv-img-box {
 //         @include make-col-ready(); @include make-col (10);
 //     }
 // }
-
 //
 // i'm available panel
 // ==========================================================================
-
 #available-container {
     display: flex;
     align-items: center;
@@ -1873,9 +2202,7 @@ img.adv-img-box {
 
 #available-container .page-title {
     // margin-bottom: rvr(2);
-
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     padding-left: 0;
@@ -1887,8 +2214,7 @@ img.adv-img-box {
 }
 
 #available-content {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     padding-left: 0;
@@ -1898,20 +2224,16 @@ img.adv-img-box {
 #available-content .card {
     border: none;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
-
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 
 
     @include media-breakpoint-up(lg) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
 
         padding: 0 0 0 0;
@@ -1957,14 +2279,6 @@ img.adv-img-box {
     margin-bottom: $rvr-_75;
 }
 
-#available-container > div > div.subhead {
-    margin-bottom: $rvr-2;
-
-    @include media-breakpoint-up(md) {
-        margin-bottom: $rvr-2;
-    }
-}
-
 #available-box .copy {
     max-width: $ms-11_75;
 }
@@ -1975,7 +2289,6 @@ img.adv-img-box {
 // #cats{
 // // height: 100vh;
 // }
-
 //.maincontainer {
 //    perspective: 1px;
 //    transform-style: preserve-3d;
@@ -1999,22 +2312,19 @@ img.adv-img-box {
 //    display: block;
 //    z-index: 1;
 //}
-
 #catscontainer h2 {
     @include v-3;
 }
 
 .catscontent {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -2025,7 +2335,6 @@ img.adv-img-box {
     @include body-4;
 
     // @include v-1;
-
     line-height: 1.2;
 }
 
@@ -2039,15 +2348,13 @@ img.adv-img-box {
     margin-bottom: $rvr-1;
 
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(8);
     }
 }
@@ -2113,30 +2420,26 @@ img.adv-img-box {
 
 .expbox {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 }
 
 .catstitle {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(3);
     }
 
@@ -2146,7 +2449,6 @@ img.adv-img-box {
     font-weight: 400;
 
     // @include v-1;
-
     padding-left: 0;
 }
 
@@ -2156,51 +2458,49 @@ img.adv-img-box {
 // #brands{
 // // height: 100vh;
 // }
-
-.brandsblock {
-    // align-items: stretch;
+.brands-block {
 }
 
-.brandsblock .style-svg {
-    width: $ms-8_5;
+.brands-block .style-svg {
+                @include make-col-ready();
+                @include make-col(4);
+    // width: $ms-8_5;
     fill: #000;
-    padding: 0 $ms-1_5 $rvr-2 $ms-1_5;
+    padding-top: 0; 
+    padding-right: $ms-1; 
+    padding-bottom: $rvr-2; 
+    padding-left: $ms-1;
 }
 
-#brandscontainer {
+#brands-container {
     padding-top: ms(5);
 }
 
-#brandscontainer h2 {
+#brands-container h2 {
     // @include v-3;
 }
 
-.brandscontent {
-    @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
-        @include make-col(12);
-    }
-
+.brands-content {
+    @include make-col-ready;
+    @include make-col(12);
+        margin-bottom: $rvr-2;
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
     }
 }
 
-.brandscopy {
-    max-width: ms(10);
 
+.brands.copy {
+    // max-width: ms(10);
     @include body-4;
-
-    // @include v-1;
-
-    line-height: 1.2;
+    font-size: $ms-1_5;
+    font-family: $font-family-serif;
 }
 
-.brandsblock {
+
+.brands-block {
     display: flex;
     flex-wrap: wrap;
 
@@ -2208,47 +2508,36 @@ img.adv-img-box {
     align-items: flex-start;
     align-content: flex-start;
     margin-bottom: $rvr-1;
-
-    @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
-    }
-
-
+           padding: 0;
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
         @include make-col(8);
     }
 }
 
 .expbox {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 }
 
-.brandstitle {
+.brands-title {
     @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(3);
     }
 
@@ -2258,7 +2547,6 @@ img.adv-img-box {
     font-weight: 400;
 
     // @include v-1;
-
     padding-left: 0;
 }
 
@@ -2268,7 +2556,6 @@ img.adv-img-box {
 // #hybrid{
 // // height: 100vh;
 // }
-
 .helix {
     background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/helix2.jpg");
     background-size: 22%;
@@ -2286,74 +2573,49 @@ img.adv-img-box {
     // background-attachment: fixed;
 }
 
-#gap {
-    height: 25vh;
-}
-
-#hybridcontainer {
-    padding-top: ms(5);
-}
-
-#hybridcontainer h2 {
-    @include v-3;
-}
-
-.hybridblock {
-    display: flex;
-
-   @include make-col-ready();
-
+.hybrid-block {
+    @include make-col-ready;
     @include make-col(12);
-
+    @include v-2;
     margin-bottom: $rvr-1;
+    @include media-breakpoint-up(md) {}
+
 }
 
-.hybridtitle {
-    @include media-breakpoint-up(sm) {
-       @include make-col-ready();
-
-        @include make-col(12);
-    }
 
 
-    @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
-        @include make-col(3);
-    }
-
-
-    @include display-5;
-
+.hybrid-title {
+    @include make-col-ready;
+margin-bottom: $rvr-1;
     font-weight: 400;
 
     // @include v-1;
-
     padding-left: 0;
+
+    @include make-col(12);
+    @include media-breakpoint-up(md) {}
 }
 
-.hybridtext {
-    @include media-breakpoint-up(sm) {
-       @include make-col-ready();
 
-        @include make-col(12);
-    }
-
-
-    @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
-        @include make-col(9);
-    }
+.hybrid-text-offset{
+  @include make-col-ready();
+  @include make-col(1);
 }
 
-.hybridcopy {
+.hybrid-text {
+    @include make-col-ready();
+    @include make-col(11);
+    @include media-breakpoint-up(md) {}
+}
+
+
+
+.hybrid-copy {
     max-width: ms(11);
-
+    margin-bottom: $rvr-1;
     @include body-4;
 
     // @include v-1;
-
     line-height: 1.2;
 }
 
@@ -2434,7 +2696,6 @@ img.adv-img-box {
 //                     width: auto;
 //                     }
 // }
-
 #splash-container .splash1 {
     @include display-6;
 
@@ -2485,38 +2746,23 @@ img.adv-img-box {
 //
 // home call to action panel
 // ==========================================================================
-#homecta {}
+#home-cta {}
 
-#homectacontainer {
+#home-cta-container {
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-
-    //     height: 100vh;
+    height: 100vh;
 }
 
-#homectacontainer h1 {
-    // @include v-1;
-}
 
-#homectacontainer > span {
-    @include display-4;
-
-    // @include v-0;
-}
-
-#homectacontainer .homecta2 {
-    @include display-2;
-
-    // @include v-2;
-}
+#home-cta-container .home-cta2 {}
 
 //
 // what i do panel
 // ==========================================================================
-
 #do-box {
     margin-bottom: $rvr-8;
 
@@ -2536,19 +2782,12 @@ img.adv-img-box {
     }
 }
 
-#do-container .page-title, .do-headline {
+#do-container .page-title, #do-box .headline {
     // margin-bottom: rvr(2);
-
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 }
 
-.do-headline {
-    margin-bottom: $rvr-2;
-    font-size: $h2-font-size;
-    letter-spacing: -0.04rem;
-}
 
 .do-icon .style-svg {
     height: $rvr-4;
@@ -2579,22 +2818,19 @@ img.adv-img-box {
 }
 
 .do-icon {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(2);
 
     padding-left: $ms--1;
 }
 
 .card-title {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(10);
 }
 
 .card-summary {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 }
 
@@ -2603,13 +2839,11 @@ img.adv-img-box {
 //     font-size: $h4-font-size;
 //     font-weight: 400;
 // }
-
 // #do-content > div.do-headline > span:nth-child(1){
 //     font-size: $h2-font-size;
 //     margin-bottom: $rvr-2;
 //     font-weight: 400;
 // }
-
 // div.do-headline > span {
 //     &::after{
 //     content: "...\A\A";
@@ -2626,18 +2860,15 @@ img.adv-img-box {
 //         content: none;
 //     }
 //  }
-
 // .svg-replaced-3{
 //     position: absolute;
 //     top: 15%;
 //     width: 5rem;
 // }
-
 #do-card-3-width > div.card-intro > div > div.head-row > div.card-title > span:nth-child(1) {}
 
 #do-content {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
 
     padding-left: 0;
@@ -2657,12 +2888,10 @@ img.adv-img-box {
     padding: 0;
     align-content: flex-start;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(9);
 
         padding-left: 0;
@@ -2672,12 +2901,10 @@ img.adv-img-box {
 
 #do-content .card {
     border: none;
-    padding: $rvr-1 $ms-1 $rvr-1 $ms-1;
-    margin-bottom: $rvr-0;
+    padding: $rvr-1 0;
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(5);
 
         padding-right: $ms-1_5;
@@ -2745,21 +2972,20 @@ img.adv-img-box {
     font-weight: 500;
 }
 
-.do-subhead {
-    margin-bottom: $rvr-2;
-    font-family: $font-family-sans-serif;
-    font-weight: 300;
-    font-size: $ms-1_75;
-    line-height: $rvr-2;
-    letter-spacing: -.035rem;
-}
+// .do-subhead {
+//     font-family: $font-family-sans-serif;
+//     font-weight: 300;
+//     font-size: $ms-1_75;
+//     line-height: $rvr-2;
+//     letter-spacing: -.035rem;
+// }
 
-.do.card * {
+#do-content .card * {
     font-family: $font-family-serif;
     font-size: $ms-1;
 }
 
-.do.card .card-title {
+#do-content .card .card-title {
     //     border-top: $ms--8 solid $primary;
     // padding: $rvr-2 0 0 0;
     font-family: $font-family-sans-serif;
@@ -2775,7 +3001,6 @@ img.adv-img-box {
 //          width: $ms-6;
 //          max-width: unset;   
 //     }
-
 #do-card-3-width > div.card-intro > div > div.head-row > div.card-title > span {
     font-family: $font-family-sans-serif;
     font-weight: 400;
@@ -2794,7 +3019,7 @@ img.adv-img-box {
     }
 }
 
-.card-summary, .card-body, .card-list, .do.card .card-title, .do-toggle-1, .do-toggle-2, .do-toggle-3, .do-toggle-4 {
+.card-summary, .card-body, .card-list, #do-content .card .card-title, .do-toggle-1, .do-toggle-2, .do-toggle-3, .do-toggle-4 {
     // padding-left: $ms-0;
     // padding-right: $ms-0;
     // margin-left: $ms-_5;
@@ -2840,23 +3065,21 @@ h4.card-subhead, .card-list h4 {
     // padding-left: 0;
 }
 
-.do.card > hr {
+#do-content .card > hr {
     margin-bottom: $rvr-_75;
 }
 
 #do-content > div.row.container-cards > hr {
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
     }
 }
 
-.do.card h6 {
+#do-content .card h6 {
     font-weight: 600;
 }
-
-.do.card .lead {
+#do-content .card .lead {
     // font-family: $font-family-sans-serif;
     font-style: italic;
     font-weight: 600;
@@ -2900,8 +3123,7 @@ div#do-card-2 {
     margin-left: 0;
     padding-left: 0;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(6);
     @include media-breakpoint-up(md) {
         height: $rvr-8;
@@ -2909,8 +3131,7 @@ div#do-card-2 {
 }
 
 .card-list {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(4);
 
     list-style: none;
@@ -2921,8 +3142,7 @@ div#do-card-2 {
     margin-bottom: $rvr-3;
 
     @include media-breakpoint-up(lg) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
 
         margin-bottom: $rvr-2;
@@ -2955,7 +3175,6 @@ a.btn.btn-do {
 //     height: $ms-3;
 //     width: $ms-3;
 //     display: flex;
-
 //     // display: flex;
 //     // justify-content: center;
 //     vertical-align: middle;
@@ -2963,11 +3182,9 @@ a.btn.btn-do {
 //     padding: 0;
 //     box-sizing: content-box;
 // }
-
 //
 // about- me panel
 // ==========================================================================
-
 #about-box {
     margin-bottom: $rvr-8;
 
@@ -2980,8 +3197,6 @@ a.btn.btn-do {
 }
 
 #about-container {
-    padding-left: 0;
-    padding-right: 0;
 
     @include media-breakpoint-up(md) {
         height: 100vh;
@@ -2997,8 +3212,7 @@ a.btn.btn-do {
 
 .about-content {
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(4);
 
         .subhead {
@@ -3014,18 +3228,11 @@ a.btn.btn-do {
     padding-right: $ms-1;
 
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(5);
     }
 }
 
-// .about-content{
-//     .headline, .subhead{
-//         padding: 0 $ms-1;
-//     }
-// padding-right: $ms-2;
-// }
 
 #about-blocks > div.about-content > div:nth-child(4) {
     font-style: italic;
@@ -3045,13 +3252,12 @@ a.btn.btn-do {
     flex-direction: column;
     border: $ms--6 solid white;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(4);
 
     padding-left: $ms-1;
     padding-right: $ms-1;
-    padding-top: $rvr-7;
+    padding-top: $rvr-1;
     padding-bottom: $rvr-_25;
 
     // margin-top: $rvr-3;
@@ -3089,25 +3295,20 @@ a.btn.btn-do {
 //     display: flex;
 //     flex-direction: row;
 // }
-
 // #about-content-block {
-
 //   
 //     @include media-breakpoint-up(xs) {
 //         @include make-col-ready(); @include make-col(12);
 //         padding-left: 0;
 //     padding-right: 0;
 //     }
-
 //     @include media-breakpoint-up(md) {
 //         @include make-col-ready(); @include make-col(8);
 //     }
 // }
-
 //
 // how i help panel
 // ==========================================================================
-
 .register {
     background-image: url(http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg);
     background-size: 35%;
@@ -3149,19 +3350,16 @@ a.btn.btn-do {
 }
 
 #help-content {
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(7);
     }
 
 
     @include media-breakpoint-up(lg) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(7);
     }
 }
@@ -3236,8 +3434,7 @@ a.btn.btn-do {
 
 .help-links {
     @include media-breakpoint-up(md) {
-       @include make-col-ready();
-
+        @include make-col-ready;
         @include make-col(12);
 
         padding-left: 0;
@@ -3315,9 +3512,9 @@ a.btn.btn-do {
 //
 // help cta panel
 // ==========================================================================
-#helpcta {}
+#help-cta {}
 
-#helpctacontainer {
+#help-cta-container {
     display: flex;
     margin: 0 auto;
     justify-content: center;
@@ -3326,21 +3523,7 @@ a.btn.btn-do {
     height: 100vh;
 }
 
-#helpctacontainer h1 {
-    // @include v-1;
-}
-
-#helpctacontainer > span {
-    @include display-4;
-
-    // @include v-0;
-}
-
-#helpctacontainer .helpcta2 {
-    @include display-2;
-
-    // @include v-2;
-}
+#help-cta-container .help-cta2 {}
 
 // ==========================================================================
 // global page styles
@@ -3349,7 +3532,7 @@ a.btn.btn-do {
     background-color: transparent;
 }
 
-#advancing-business-objectives, #i-transcend-competition, #optimal-performance {
+#i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container {
     padding-top: $rvr-8;
     padding-bottom: $rvr-3;
 }
@@ -3361,34 +3544,24 @@ a.btn.btn-do {
     background: $offwhite;
 }
 
-#homecta-box {
-    padding-top: $rvr-4;
-    padding-bottom: $rvr-5;
-}
-
-#about-box, #do-box, #i-create-marketing-assets, #available-box {
+#about-box, #do-box, #i-create-marketing-assets, #available-box{
     padding-left: $ms-3;
     padding-right: $ms-3;
 }
 
 .headline {
-    margin-top: $rvr-1;
-    margin-bottom: $rvr-2;
-
+@include v-1;
     @include media-breakpoint-up(md) {
         margin-top: 0;
     }
 }
 
 .subhead {
-    @include display-4;
-
     margin-bottom: $rvr-1;
-
-    //     line-height: $rvr-1_5;
     font-weight: 300;
     letter-spacing: .025rem;
-    font-family: $font-family-serif;
+    font-family: $font-family-sans-serif;
+    font-size: $ms-1_75;
 }
 
 .caption {
@@ -3397,10 +3570,17 @@ a.btn.btn-do {
 
 .copy {
     @include body-4;
-
     line-height: $rvr-1_5;
     padding-bottom: $rvr-1;
 }
+
+
+#home-cta .subhead, #help-cta .subhead{
+    @include display-3;
+    @include v-1;
+    line-height: $rvr-2;
+}
+
 
 div.copy:last-of-type {
     padding-bottom: 0;
@@ -3454,7 +3634,6 @@ div.copy:last-of-type {
 }
 
 // up & down chevron svg's
-
 .wp-image-23, .wp-image-24 {
     width: $ms-4;
     height: $ms-4;
@@ -3475,17 +3654,14 @@ div.copy:last-of-type {
     font-style: italic;
     color: $primary;
 
-   @include make-col-ready();
-
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {}
 }
 
 // .page-id-36 = modus operandi
-.page-id-36 {
-    .page-title {
-        margin-bottom: $rvr-6;
-    }
+.page-id-36 .page-title {
+    margin-bottom: $rvr-6;
 }
 
 .mo-emph {
@@ -3562,106 +3738,104 @@ body {
     padding: 0;
 }
 
-
 //
 // Modus Operandi Hyperlinks (Note: Panel-specific styles found in panel sections )
 //================================================================================
-
-.mo-link-box{
+.mo-link-box {
     margin-top: $rvr-6;
-                @include make-col-ready();
-                @include make-col(11);
-                margin-left: auto;
-                margin-right: auto;
+
+    @include make-col-ready;
+    @include make-col(11);
+
+    margin-left: auto;
+    margin-right: auto;
 }
-.mo-links{
+
+.mo-links {
     font-family: $font-family-monospace;
-                @include make-col-ready();
-                @include make-col(12);
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
 
+    @include make-col-ready;
+    @include make-col(12);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.mo-links a{
-                @include make-col-ready();
-                @include make-col(6);
-}
-.mo-btn{
-                // @include make-col-ready();
-                // @include make-col(6);
-                min-width: 100%;
-                margin: 0 auto 0 auto;
-                height: $rvr-4;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: $primary;
-                color: #fff;
-
+.mo-links a {
+    @include make-col-ready;
+    @include make-col(6);
 }
 
-.mo-btn.return{
-margin-bottom: $rvr-1;
-border-radius: $ms-6 0 0 $ms-6;
-border: thin solid white;
-
+.mo-btn {
+    // @include make-col-ready();
+    // @include make-col(6);
+    min-width: 100%;
+    margin: 0 auto 0 auto;
+    height: $rvr-2_5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $tungsten;
+    color: $primary;
 }
 
-.mo-btn.proceed{
+.mo-btn.return {
     margin-bottom: $rvr-1;
-border-radius: 0 $ms-6 $ms-6 0;
-border: thin solid white;
+    border-radius: $ms-6 0 0 $ms-6;
+    border: thin solid white;
 }
 
-.mo-link-button-text{
+.mo-btn.proceed {
+    margin-bottom: $rvr-1;
+    border-radius: 0 $ms-6 $ms-6 0;
+    border: thin solid white;
+}
+
+.mo-link-button-text {
     width: $ms-6;
     font-size: $ms-_75;
-    letter-spacing: .025rem;
+    letter-spacing: .05rem;
+    font-weight: 400;
 }
 
-.return .mo-link-button-text{
+.return .mo-link-button-text {
     // margin-right: $ms-1;
     text-align: right;
 }
 
-
-.proceed .mo-link-button-text{
+.proceed .mo-link-button-text {
     margin-right: $ms-1;
     margin-left: $ms-1;
-        text-align: left;
+    text-align: left;
 }
 
-.return .svg-replaced-15{
-        width: $ms-1;
+.return .svg-replaced-15 {
+    width: $ms-1;
     height: $rvr-1;
     margin-top: $rvr-_05;
 }
 
-.return .svg-replaced-15 .st0{
-    fill:none;
+.return .svg-replaced-15 .st0 {
+    fill: none;
     stroke: white;
     stroke-width: 5;
 }
 
-
-.proceed .svg-replaced-16 .st0{
-    fill:none;
+.proceed .svg-replaced-16 .st0 {
+    fill: none;
     stroke: white;
     stroke-width: 5;
 }
 
-.proceed .svg-replaced-16{
-        width: $ms-1;
+.proceed .svg-replaced-16 {
+    width: $ms-1;
     height: $rvr-1;
 }
-
 
 //
 // primary content container
 // ==========================================================================
-
 .container {
     width: 100%;
     margin-right: auto;
@@ -3763,7 +3937,6 @@ border: thin solid white;
 //   padding-left: 15px;
 //   margin-right: auto;
 //   margin-left: auto; }
-
 // .row {
 //   display: -webkit-box;
 //   display: -ms-flexbox;
@@ -3772,9 +3945,7 @@ border: thin solid white;
 //       flex-wrap: wrap;
 //   margin-right: -15px;
 //   margin-left: -15px; }
-
 //----------  NAVBAR  ----------//
-
 .navbar {
     padding: 1rem;
 }
@@ -3812,7 +3983,6 @@ border: thin solid white;
 .nav-link {
     font-family: $font-family-monospace;
 }
-
 
 .navbar-brand,
 .navbar,

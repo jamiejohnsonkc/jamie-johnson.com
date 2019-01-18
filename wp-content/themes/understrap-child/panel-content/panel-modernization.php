@@ -5,43 +5,66 @@
 * @package understrap
 */
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="post-digital-marketing">
+<section class="container-fluid" id="i-modernize-marketing-functions">
 	<!-- 	<div class="row"> -->
 	<!-- <div class="container-fluid" id="hhelp"> -->
-	
-	<div class="container" id="cust-container">
-		
-		
-		
-		
-		<div class="row" id="cust-content">
+	<div class="container" id="mod-container">
+		<div class="row" id="mod-content">
 			<div class="page-title">
-				<span>how i can help | 03 MODERNIZE REVENUE GENERATION</span>
+				<span>how i create value for businesses <span class="mo-divider">|</span> </span><span class="mo-emph"><span class="mo-block">03</span>  Modernizing Marketing</span>
 			</div>
-			<div id="cust-headline">
-				<h2>Customer Led Engagement</h2><span class="display-4">Serving The Post-Digital Customer</span>
+			
+			<div class="mod-head"><div class="headline">
+				<h2>Post-Digital Marketing</h2></div>
+				<div class="subhead">Embracing New Paradigms of Revenue Generation</div>
 			</div>
-			<div class="row" id="cust-block-row">
-				<div class="cust-block">
-					<div class="cust-shell"><div class="cust-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div></div>
-					<div class="cust-shell"><div class="cust-copy">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</div></div>
-					<div class="cust-shell"><div class="cust-copy">
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-				</div>
-				<div class="cust-block">	<div class="cust-shell"><div class="cust-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div></div>
-				<div class="cust-shell"><div class="cust-copy">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</div></div>
-				<div class="cust-shell"><div class="cust-copy">
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
 				
+
+
+				
+		
+		<div class="mod-block">
+			<div class="row">
+				<div class="copy">Sunt id irure deserunt dolor deserunt magna deserunt in in sunt et dolore aute aliquip sint enim aliqua occaecat nulla ea adipisicing dolore irure.</div>
 			</div>
 		</div>
+
+		<div class="mod-diagram">
+			
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/post-digital-diagram.svg" alt="" class=""/>
+				<div class="mod-diagram-caption-box"><!-- <div class="mod-diagram-caption-offset"></div> -->
+				<div class="mod-diagram-caption"><span class="lead">Adipisicing aute labore exercitation amet culpa dolore</span> in occaecat consequat consectetur eu irure eu anim ea consequat commodo labore.</div>
+			</div>
+
+		</div>
+
+
+
+
 	</div>
 </div>
 
+
+<div class="mo-link-box">
+	<div class="mo-links">
+<a href="http://jamiejohnsonmev2.test#i-create-marketing-assets" title="return to prior page">
+	<div class="mo-btn return" input type="button">
+	<img src="//localhost:3000/wp-content/uploads/2018/12/chevlf.svg" alt="" class="style-svg"/>
+	<div class="mo-link-button-text">return</div>
+
+</div>
+</a>
+<a href="#i-transcend-competition" title="continue to next">
+<div class="mo-btn proceed" input type="button">
+	
+		<div class="mo-link-button-text">proceed</div>
+		<img src="//localhost:3000/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+		</div></a>
+
+	</div>
+</div>
 
 </section><!-- Container end -->

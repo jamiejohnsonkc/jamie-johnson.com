@@ -16,8 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<span>how i can help</span>
 			</div>
 			<div class=content id="help-content">
-				<div class="help-headline"><h2>I create assets. Not overhead.</h2></div>
-				<div class="help-subhead">After 20 years I've learned there are two types people in this line of work: spenders &amp; marketers.</div>
+				<div class="headline"><h2>I create assets. Not overhead.</h2></div>
+				<div class="subhead">After 20 years I've learned there are two types people in this line of work: spenders &amp; marketers.</div>
 				
 				<div class="cblock" id="help-content-block">
 					
@@ -32,10 +32,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					
 					<div class="copy" id="help-proclamations">See How I Create Value As a Marketer</div>
 					<ul>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#advancing-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#superior-customer-value" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#post-digital-marketing" title="Strategic Marketing Management"><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#optimal-performance" title="Strategic Marketing Management"><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-modernize-marketing-functions" title="Strategic Marketing Management"><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></a></li>
+						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></a></li>
 					</ul>
 				</div>
 		<!-- 	</div> -->

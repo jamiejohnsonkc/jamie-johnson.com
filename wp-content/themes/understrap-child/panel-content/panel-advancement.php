@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="advancing-business-objectives">
+<section class="container-fluid" id="i-advance-business-objectives">
 	<!-- 	<div class="row"> -->
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="adv-container">
@@ -59,7 +59,7 @@ exit; // Exit if accessed directly.
 								<div class="adv-img-box"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="" class="adv-svg style-svg"/></div>
 								<div class="vert-head">
 										<div class="adv-box-head">business goals</div>
-										<div class="adv-copy">Everything I do begins and ends with the business. Otherwise you are just spending, not marketing.</div>
+										<div class="copy">Everything I do begins and ends with the business. Otherwise you are just spending, not marketing.</div>
 									</div>
 								</div>
 							</div>
@@ -76,7 +76,7 @@ exit; // Exit if accessed directly.
 								<div class="adv-img-box"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="" class="adv-svg style-svg"/></div>
 								<div class="vert-head">
 										<div class="adv-box-head">marketing programs</div>
-										<div class="adv-copy">Responsible investments in strategy, technology and creativity required to achieve the objective. No more. No less.  </div>  
+										<div class="copy">Responsible investments in strategy, technology and creativity required to achieve the objective. No more. No less.  </div>  
 									</div>
 								</div>
 							</div>
@@ -93,7 +93,7 @@ exit; // Exit if accessed directly.
 								<div class="adv-img-box"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="adv-svg style-svg"/></div>
 								<div class="vert-head">
 										<div class="adv-box-head">program performance</div>
-										<div class="adv-copy">The knowledge to capture meaningful, helpful information at the right scale and scope plus the wherewithal to make use of it.</div>
+										<div class="copy">The knowledge to capture meaningful, helpful information at the right scale and scope plus the wherewithal to make use of it.</div>
 									</div>
 								</div>
 							</div>
@@ -110,7 +110,7 @@ exit; // Exit if accessed directly.
 								<div class="adv-img-box"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="adv-svg style-svg"/></div>
 								<div class="vert-head">
 										<div class="adv-box-head">business contribution</div>
-										<div class="adv-copy">Systematic, unbiased and objective performance assessments to retain what really works and scrap what doesn't.</div>
+										<div class="copy">Systematic, unbiased and objective performance assessments to retain what really works and scrap what doesn't.</div>
 									</div>
 								</div>
 							</div>
@@ -121,7 +121,7 @@ exit; // Exit if accessed directly.
 		
 		<div class="adv-block">
 			<div class="row">
-				<div class="adv-copy">I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes.</div>
+				<div class="copy">I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes.</div>
 			</div>
 		</div>
 	</div>
@@ -138,11 +138,11 @@ exit; // Exit if accessed directly.
 </div>
 </a>
 <a href="#i-transcend-competition" title="continue to next">
-<div class="mo-btn proceed" input type="button">
-	
-		<div class="mo-link-button-text">proceed</div>
-		<img src="//localhost:3000/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
-		</div></a>
+		<div class="mo-btn proceed" input type="button">
+			<div class="mo-link-button-text">proceed</div>
+			<img src="//localhost:3000/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+		</div>
+</a>
 
 	</div>
 </div>

@@ -13,14 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 			
-<section class="cover-container" id="helpcta">
+<section class="cover-container" id="help-cta">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- 	<div class="row"> -->
 	
 				
-					<div class="container" id="helpctacontainer"><h2>Hire Me</h2>
-						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-						<span class="helpcta2">Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+					<div class="container" id="help-cta-container"><div class="headline"><h2>Hire Me</h2></div>
+						<div class="subhead"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></div>
+						<span class="cta-link">
+							<a>Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></a>
 					</div>
 				
 	

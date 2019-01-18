@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<article>			<?php get_template_part( 'panel-content/panel', 'mosplash' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'advancement' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'transcendence' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'modernization ' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'modernization' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'optimization' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'helpcta' ); ?>
 					</article>

@@ -1,62 +1,70 @@
 <?php
 /**
- * Panel transcendence template.
- *
- * @package understrap
- */
-
+* Panel Splash template.
+*
+* @package understrap
+*/
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+exit; // Exit if accessed directly.
 }
 ?>
-
-
 <section class="container-fluid" id="i-transcend-competition">
 	<!-- 	<div class="row"> -->
-		<!-- <div class="container-fluid" id="hhelp"> -->
-
-
-
-
-
-			<div class="container" id="scv-container">
-		
-							
-						
-						
-				<div class="row" id="scv-content">
-					<div class="page-title">
-						<span>how i create value for businesses <span class="mo-divider">|</span> </span><span class="mo-emph"><span class="mo-block">02</span>  Transcending Competition</span>
-					</div>
-
-
-					<div id="scv-headline">
-						<h2>Superior Customer Value</h2><span class="display-4">Competing in the customer-led economy</span>
-					</div>
-				<div class="row" id="scv-block-row">
-					<div class="scv-block">
-	<div class="scv-shell"><div class="scv-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div></div>
-	<div class="scv-shell"><div class="scv-copy">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</div></div>
-	<div class="scv-shell"><div class="scv-copy">
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-					</div>
-					<div class="scv-block">	<div class="scv-shell"><div class="scv-copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</div></div>
-	<div class="scv-shell"><div class="scv-copy">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut iquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</div></div>
-	<div class="scv-shell"><div class="scv-copy">
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div>
-					
-					</div>
-				</div>
-</div>
-
+	<!-- <div class="container-fluid" id="hhelp"> -->
+	<div class="container" id="scv-container">
+		<div class="row" id="scv-content">
+			<div class="page-title">
+				<span>how i create value for businesses <span class="mo-divider">|</span> </span><span class="mo-emph"><span class="mo-block">02</span>  Transcending competition</span>
 			</div>
-	
-
-
 			
-		</section><!-- Container end -->
-
+			<div class="scv-head"><div class="headline">
+				<h2> Creating Customer Value</h2></div>
+				<div class="subhead">Facilitating the alignment of value offered with value sought</div>
+			</div>
 				
 
+
+				
+		
+		<div class="scv-block">
+			<div class="row">
+				<div class="copy">When you stop talking about why you're the best and start giving customers evidence of your value, good things begin to happen.</div><div class="copy">That's what I help companies do.</div>
+			</div>
+		</div>
+
+		<div class="scv-diagram">
+			
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv_chart_v3-01.svg" alt="" class=""/>
+				<div class="scv-diagram-caption-box"><!-- <div class="scv-diagram-caption-offset"></div> -->
+				<div class="scv-diagram-caption"><span class="lead">Adipisicing aute labore exercitation amet culpa dolore in </span> occaecat consequat consectetur eu irure eu anim ea consequat commodo labore.</div>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+</div>
+
+
+<div class="mo-link-box">
+	<div class="mo-links">
+<a href="http://jamiejohnsonmev2.test#i-create-marketing-assets" title="return to prior page">
+	<div class="mo-btn return" input type="button">
+	<img src="//localhost:3000/wp-content/uploads/2018/12/chevlf.svg" alt="" class="style-svg"/>
+	<div class="mo-link-button-text">return</div>
+
+</div>
+</a>
+<a href="#i-transcend-competition" title="continue to next">
+<div class="mo-btn proceed" input type="button">
+	
+		<div class="mo-link-button-text">proceed</div>
+		<img src="//localhost:3000/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+		</div></a>
+
+	</div>
+</div>
+
+</section><!-- Container end -->

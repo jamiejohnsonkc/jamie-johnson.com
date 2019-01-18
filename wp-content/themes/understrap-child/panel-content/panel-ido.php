@@ -17,11 +17,11 @@ exit; // Exit if accessed directly.
 				<span>What I do</span>
 			</div>
 	<div class="row" id="do-content">
-	<div class="do-headline">I grow business.</div>
-				<div class="do-subhead">I combine 2o years of strategic marketing expertise with proficiencies in web development and design to deliver programs that augment business development. </div>
+	<div class="headline"><h2>I grow business.</h2></div>
+				<div class="subhead">I combine 2o years of strategic marketing expertise with proficiencies in web development and design to deliver programs that augment business development. </div>
 				<div class="row container-cards">
 					
-					<div class="do card">
+					<div class="card">
 						<div class="div-width" id="do-card-1-width">
 
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
@@ -52,7 +52,7 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 					</div>
-					<div class="do card">
+					<div class="card">
 						<div class="div-width" id="do-card-2-width">
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
 
@@ -83,7 +83,7 @@ exit; // Exit if accessed directly.
 					</div>
 					</div>
 					</div>
-					<div class="do card">
+					<div class="card">
 						<div class="div-width" id="do-card-3-width">
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
 
@@ -111,7 +111,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					</div></div>
-<div class="do card">
+<div class="card">
 						<div class="div-width" id="do-card-4-width">
 						<div class="card-intro"><div class="row"><div class="head-row"><div class="do-icon">
 

@@ -18,7 +18,7 @@ exit; // Exit if accessed directly.
 			</div>
 			
 			<div class="adv-head"><div class="headline">
-				<h2> Outcome-Driven Marketing</h2></div><div class="display-text">Marketing focused on achieving strategic adjectives</div></div>
+				<h2>Outcome-Driven Marketing</h2></div><div class="display-text">Marketing focused on achieving strategic adjectives</div></div>
 				<div class="adv-horz">
 					<div class="row adv-horz-row">
 						<div class="adv-frame" id="adv-frame-1">

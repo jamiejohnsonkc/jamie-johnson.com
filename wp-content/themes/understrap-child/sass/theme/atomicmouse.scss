@@ -29,8 +29,9 @@ html [type=button] {
 // => find/replace cover-container to container-fluid (home and modus panels)
 #wrapper-navbar {
     position: fixed;
-    z-index: 500;
     width: 100%;
+    z-index: 99;
+    flex-grow: 0;
 }
 
 .tempcontainer .row {
@@ -597,21 +598,13 @@ fill: #000;
 
 
 .adv-head .display-text {
-    display: none;
+    // display: none;
     @include media-breakpoint-up(md) {
         display: block;
         font-family: $font-family-sans-serif;
     }
 }
 
-.body-text {
-    @include v-1;
-
-    font-size: $ms-1_5;
-
-    @include make-col-ready;
-    @include make-col(12);
-}
 
 #adv-content {
     @include media-breakpoint-up(md) {
@@ -1889,8 +1882,7 @@ margin-bottom: $rvr-2;
 .scv-diagram {
     @include make-col-ready;
     @include make-col(12);
-
-    margin-top: $rvr-3;
+    margin-top: $rvr-1;
 
     @include media-breakpoint-up(md) {
         @include make-col-ready;
@@ -1914,7 +1906,7 @@ margin-bottom: $rvr-2;
 
 .scv-diagram-caption {
     @include make-col-ready;
-    @include make-col(10);
+    @include make-col(12);
 
     font-family: $font-family-monospace;
     margin-top: $rvr-3;
@@ -1930,8 +1922,39 @@ margin-bottom: $rvr-2;
     font-size: $ms-_75;
 }
 
+.svg-replaced-17{
+    width: 110%;
+    margin-left: -5%;
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+    }
+}
+
+
+.scv-diagram #Layer_2 .st0{
+    fill: $tungsten;
+}
+
+
+
+.scv-diagram #Layer_1{
+    fill: $gray-700;
+}
+
+.scv-diagram #Layer_1{
+    .st1, .st12, .st13{
+        stroke: $gray-700;
+    }
+}
+
+.scv-diagram{
+    .st1, .st2, .st3, .st4, .st5, .st7, .st8, .st12, .st13{
+        stroke: $gray-700;
+    }
+}
+
 .scv-diagram svg#layer1{
-    width: 95%;
+    // width: 95%;
 }
 
 .scv-shell {
@@ -1943,117 +1966,29 @@ margin-bottom: $rvr-2;
 //     max-width: 34rem;
 // }
 //
-// about splash panel
-// ==========================================================================
-#about-splash, #about-splash-container {
-    height: 100vh;
-}
 
-#about-splash-container {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    text-align: center;
-
-    @include media-breakpoint-up(lg) {
-        text-align: left;
-        align-items: flex-start;
-    }
-}
-
-#about-splash-container h1 {
-    font-size: $ms-5;
-
-    // @include v-1;
-    @include media-breakpoint-up(lg) {
-        @include v-1;
-    }
-
-
-    @include media-breakpoint-up(xl) {
-        font-size: $h1-font-size;
-    }
-}
-
-#about-splash-container .about-splash1 {
-    font-family: $font-family-serif;
-    font-style: italic;
-    font-size: $ms-2_5;
-    margin-bottom: $rvr-4;
-
-    // @include v-0;
-}
-
-.about-splash-emp strong {}
-
-#about-splash-container .about-splash2 {
-    @include display-3;
-    @include v-2;
-
-    line-height: $rvr-2;
-
-    @include media-breakpoint-up(lg) {
-        @include v-1;
-    }
-}
-
-.evo {
-    opacity: 1;
-    background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
-    background-size: 37%;
-    background-repeat: no-repeat;
-    background-position: 97% 100%;
-
-    // background-size: cover;
-    @include media-breakpoint-up(sm) {
-        background-size: 155%;
-        background-position: 130% bottom;
-    }
-
-
-    @include media-breakpoint-up(md) {
-        background-position: right bottom;
-        background-size: 100%;
-    }
-
-
-    @include media-breakpoint-up(lg) {
-        background-size: 80%;
-        background-position: right bottom;
-    }
-
-
-    @include media-breakpoint-up(xl) {}
-}
-
-#about-splash {
-    height: 100vh;
-}
 
 //
 // modus operandi panel
 // ==========================================================================
-#mo-splash, #mo-splash-container {
-    height: 100vh;
-}
+// #mo-splash, #mo-splash-container {
+//     height: 100vh;
+// }
 
-#mo-splash-container {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    text-align: center;
+// #mo-splash-container {
+//     display: flex;
+//     margin: 0 auto;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     height: 100vh;
+//     text-align: center;
 
-    @include media-breakpoint-up(lg) {
-        text-align: left;
-        align-items: flex-start;
-    }
-}
+//     @include media-breakpoint-up(lg) {
+//         text-align: left;
+//         align-items: flex-start;
+//     }
+// }
 
 #mo-splash-container h1 {
     font-size: $ms-5;
@@ -2069,22 +2004,19 @@ margin-bottom: $rvr-2;
     }
 }
 
-#mo-splash-container .mo-splash1 {
-    font-family: $font-family-serif;
-    font-style: italic;
-    font-size: $ms-2_5;
-    margin-bottom: $rvr-4;
+#mo-splash-container #mo-splash-1 {
 
-    // @include v-0;
+}
+
+#evo-small{
+//     height: $rvr-8;
+    width: auto;
 }
 
 .mo-splash-emp strong {}
 
-#mo-splash-container .mo-splash2 {
-    @include display-3;
-    @include v-2;
+#mo-splash-container #mo-splash-2 {
 
-    line-height: $rvr-2;
 
     @include media-breakpoint-up(lg) {
         @include v-1;
@@ -2094,13 +2026,13 @@ margin-bottom: $rvr-2;
 .evo {
     opacity: 1;
     background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
-    background-size: 37%;
+        background-size: 0%;
     background-repeat: no-repeat;
     background-position: 97% 100%;
 
     // background-size: cover;
     @include media-breakpoint-up(sm) {
-        background-size: 155%;
+            background-size: 0%;
         background-position: 130% bottom;
     }
 
@@ -2120,9 +2052,7 @@ margin-bottom: $rvr-2;
     @include media-breakpoint-up(xl) {}
 }
 
-#mo-splash {
-    height: 100vh;
-}
+
 
 //
 // optimizing performance panel
@@ -2593,18 +2523,41 @@ font-size: $ms-1;
 // }
 #brands .block {
 margin: 0 auto;
+display: flex;
+flex-wrap: wrap;
 }
 
 #brands .block .style-svg {
-                @include make-col-ready();
-                @include make-col(4);
+    // @include make-col-ready();
+    // @include make-col(4);
     // width: $ms-8_5;
-    fill: #000;
-    padding-top: 0; 
-    padding-right: $ms-1; 
-    padding-bottom: $rvr-2; 
-    padding-left: $ms-1;
+
+    padding: $ms--5;
+    // background: $primary;
+    flex-basis: $ms-7_5;
+    margin: $ms--7;
+    // padding-top: 0; 
+    // padding-right: $ms-1; 
+    // padding-bottom: $rvr-2; 
+    // padding-left: $ms-1;
+    // border: thin solid $primary;
+    fill: $gray-700;
+    background: $tungsten;
+
 }
+
+// .svg-replaced-13{
+//     margin-left: -.5rem;
+// }
+
+
+// .svg-replaced-17{
+//     margin-left: .15rem;
+// }
+
+// .svg-replaced-17{
+//     margin-left: -.15rem;
+// }
 
 #brands-container {
     padding-top: ms(5);
@@ -2638,7 +2591,7 @@ margin: 0 auto;
 
     // justify-content: space-around;
     align-items: flex-start;
-    align-content: flex-start;
+    justify-content: center;
     margin-bottom: $rvr-1;
         @include make-col-ready;
         @include make-col(12);
@@ -2743,58 +2696,129 @@ margin: 0 auto;
 #hybrid .body-text {
 }
 
-//
-// about-me/splash panel
+
 // ==========================================================================
-#about-splash {}
+// about splash panel
+// ==========================================================================
+// #about-splash, #about-splash-container {
+//     height: 100vh;
+// }
 
-#about-splashcontainer {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    height: 100vh;
-}
+// #about-splash-container {
+//     display: flex;
+//     margin: 0 auto;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     height: 100vh;
+//     text-align: center;
 
-#about-splashcontainer h1 {
+//     @include media-breakpoint-up(lg) {
+//         text-align: left;
+//         align-items: flex-start;
+//     }
+// }
+
+#about-splash-container h1 {
+    font-size: $ms-5;
+
     // @include v-1;
+    @include media-breakpoint-up(lg) {
+        @include v-1;
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        font-size: $h1-font-size;
+    }
 }
 
-#about-splashcontainer > span {
-    @include display-4;
+#about-splash-container #about-splash-1 {
 
-    // @include v-0;
 }
 
-#about-splashcontainer .about-splash2 {
-    @include display-2;
+.about-splash-emp strong {}
 
-    // @include v-2;
+#about-splash-container #about-splash-2 {
+   
+}
+
+#sponge-small{
+    height: $rvr-6;
 }
 
 //
-// home/splash panel
+// Global Splash Panel Settings
 // ==========================================================================
-#splash, #splash-container {
+#splash, #mo-splash, #about-splash{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-#splash-container {
+#splash-container{
+    height: 80vh;
+}
+
+#mo-splash-container, #about-splash-container{
+        height: 90vh;
+}
+
+#splash-container, #mo-splash-container, #about-splash-container {
+    margin-top: auto;
     display: flex;
-    margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     text-align: center;
+    // flex-basis: height;
+    .headline{flex-basis:$rvr-5; margin-top: auto; margin-bottom: unset;}
+    .splash-1{flex-basis:auto;}
+    .splash-2{flex-basis:$rvr-5; margin-bottom: auto;}
+    a.advance-link{flex-basis:auto;}
+    .hero-img-mobile{flex-basis:$rvr-12; margin-top: auto;}
 
+    @include media-breakpoint-up(md) {
+    height: 100vh;
+    }
     @include media-breakpoint-up(lg) {
         text-align: left;
         align-items: flex-start;
     }
 }
 
+.splash-1{
+        font-family: $font-family-serif;
+    font-style: italic;
+    font-size: $ms-2_5;
+}
+.splash-2{
+        @include display-3;
+    margin-top: $rvr-2;
+    line-height: $rvr-2;
+        @include media-breakpoint-up(lg) {
+        @include v-1;
+    }
+}
+
+
+
+
+
+.hero-img-mobile{
+height: $rvr-12;
+display: flex;
+}
+
+.hero-img-mobile img{
+   align-self: flex-end;
+}
+
+
+//
+// home/splash panel
+// ==========================================================================
 #splash-container h1 {
     font-size: $ms-5;
 
@@ -2820,35 +2844,45 @@ margin: 0 auto;
 //                     width: auto;
 //                     }
 // }
-#splash-container .splash1 {
+#splash-1{
     @include display-6;
-
+        font-family: $font-family-sans-serif;
+        font-style: normal;
     // @include v-0;
 }
 
 .splash-emp strong {}
 
-#splash-container .splash2 {
+#splash-2 {
     @include display-3;
-    @include v-2;
-
     line-height: $rvr-2;
-
     @include media-breakpoint-up(lg) {
         @include v-1;
     }
+}
+
+
+#profile-small{
+    height: $rvr-15;
+}
+
+#profile-me{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 100%;
 }
 
 .bgme {
     opacity: 1;
     background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
     background-position: 150% bottom;
-    background-size: 135%;
+    background-size: 0%;
     background-repeat: no-repeat;
 
     @include media-breakpoint-up(sm) {
-        background-size: 155%;
-        background-position: 130% bottom;
+        // background-size: 155%;
+        // background-position: 130% bottom;
     }
 
 
@@ -3652,12 +3686,13 @@ a.btn.btn-do {
 // ==========================================================================
 // global page styles
 // ==========================================================================
+
 .card, .row {
     background-color: transparent;
 }
 
 #i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container, #cats-container, #expt {
-    padding-top: $rvr-8;
+    padding-top: $rvr-4;
     padding-bottom: $rvr-3;
 }
 
@@ -3675,9 +3710,13 @@ a.btn.btn-do {
 
 .headline {
 @include v-1;
-    @include media-breakpoint-up(md) {
+@include media-breakpoint-up(md) {
         margin-top: 0;
     }
+}
+
+.headline h2{
+
 }
 
 .subhead{
@@ -3693,6 +3732,14 @@ a.btn.btn-do {
     font-size: $ms-1_75;
 }
 
+.body-text {
+    @include v-1;
+
+    font-size: $ms-1_5;
+
+    @include make-col-ready;
+    @include make-col(12);
+}
 .caption {
     font-weight: 400;
 }
@@ -3774,7 +3821,7 @@ div.body-text:last-of-type {
 }
 
 .page-title {
-    font-size: $ms-1;
+    font-size: $ms-_5;
     font-weight: 200;
     position: relative;
     margin-bottom: $rvr-2;
@@ -3782,6 +3829,8 @@ div.body-text:last-of-type {
     font-family: $font-family-serif;
     font-style: italic;
     color: $primary;
+//     border-top: thin solid $primary;
+    padding-top: $rvr-4;
 
     @include make-col-ready;
     @include make-col(12);
@@ -3796,7 +3845,7 @@ div.body-text:last-of-type {
 .mo-emph {
     font-family: $font-family-monospace;
     font-style: normal;
-    font-size: $ms-_5;
+    font-size: $ms-_15;
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .075rem;
@@ -3834,6 +3883,13 @@ div.body-text:last-of-type {
     width: 80%;
 }
 
+a.advance-link{
+    font-family: $font-family-serif;
+    width: $ms-10;
+    align-self: center;
+    text-align: center;
+}
+
 .chevup {
     margin-bottom: $rvr-2;
 }
@@ -3858,10 +3914,30 @@ div.body-text:last-of-type {
     height: 100vh;
 }
 
-html,
-body {
+html {
     height: 100%;
     scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+div#page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.wrapper#full-width-page-wrapper{
+    flex: 3 0 auto;
+}
+
+#wrapper-footer{
+    flex-shrink: 0;
 }
 
 .wrapper {
@@ -3872,10 +3948,10 @@ body {
 // Modus Operandi Hyperlinks (Note: Panel-specific styles found in panel sections )
 //================================================================================
 .mo-link-box {
-    margin-top: $rvr-6;
+    margin-top: $rvr-3;
 
     @include make-col-ready;
-    @include make-col(11);
+    @include make-col(9);
 
     margin-left: auto;
     margin-right: auto;
@@ -3902,7 +3978,7 @@ body {
     // @include make-col(6);
     min-width: 100%;
     margin: 0 auto 0 auto;
-    height: $rvr-2_5;
+    height: $rvr-2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4059,6 +4135,10 @@ body {
     @include media-breakpoint-up(md) {
         @include make-container-max-widths;
     }
+}
+
+.container-fluid, .container{
+    padding: 0;
 }
 
 // .container-fluid {

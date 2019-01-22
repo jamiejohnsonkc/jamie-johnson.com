@@ -10,14 +10,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="container-fluid evo" id="about-splash">
+<section class="container-fluid" id="about-splash">
 	
 		<!-- 	<div class="row"> -->
 	
 				
-					<div class="container" id="about-splash-container"><h1>About Me</h1>
-						<span class="about-splash1">lorem ispum sino et dolemet</span>
-						<span class="about-splash2">Excepteur sint occaecat cupidatat non.</span>
+					<div class="container" id="about-splash-container">
+						<div class="headline"><h1>About Me</h1></div>
+						<div class="splash-1" id="about-splash-1">lorem ispum sino et dolemet</div>
+						<div class="splash-2" id="about-splash-2">Excepteur sint occaecat cupidatat non.</div>
+						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">see how</a>
+						<div class="hero-img-mobile" id="sponge-mobile"><img src="/wp-content/uploads/2019/01/sponge-small.jpg" alt="profile pic" id="sponge-small"></div>
 					</div>
 				
 	

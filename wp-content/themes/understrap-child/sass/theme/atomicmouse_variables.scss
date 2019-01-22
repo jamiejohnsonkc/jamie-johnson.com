@@ -99,6 +99,9 @@ $ms-5_5:                    ms(5.5);
 $ms-6:                      ms(6);
 $ms-6_5:                    ms(6.5);
 $ms-7:                      ms(7);
+$ms-7_25:                   ms(7.25);
+$ms-7_5:                    ms(7.5);
+$ms-7_75:                   ms(7.75);
 $ms-8:                      ms(8);
 $ms-8_5:                    ms(8.5);
 $ms-9:                      ms(9);
@@ -255,7 +258,21 @@ $rvr-5:     calc(var(--baseline) * 5rem);
 $rvr-6:     calc(var(--baseline) * 6rem);
 $rvr-7:     calc(var(--baseline) * 7rem);
 $rvr-8:     calc(var(--baseline) * 8rem);
-$rvr-9:     calc(var(--baseline) * 9rem);
+$rvr-9:     calc(var(--baseline) *  9rem);
+$rvr-10:     calc(var(--baseline) * 10rem);
+$rvr-11:     calc(var(--baseline) * 11rem);
+$rvr-12:     calc(var(--baseline) * 12rem);
+$rvr-13:     calc(var(--baseline) * 13rem);
+$rvr-14:     calc(var(--baseline) * 14rem);
+$rvr-15:     calc(var(--baseline) * 15rem);
+$rvr-16:     calc(var(--baseline) * 16rem);
+$rvr-17:     calc(var(--baseline) * 17rem);
+$rvr-18:     calc(var(--baseline) * 18rem);
+$rvr-19:     calc(var(--baseline) * 19rem);
+$rvr-20:     calc(var(--baseline) * 20rem);
+$rvr-21:     calc(var(--baseline) * 21rem);
+$rvr-22:     calc(var(--baseline) * 22rem);
+
 
 //function to caculate vertical rhythm (vr) fallback for unsupported browsers
 @function vr($multiple) {

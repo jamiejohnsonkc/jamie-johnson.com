@@ -34,7 +34,7 @@ exit; // Exit if accessed directly.
 
 		<div class="scv-diagram">
 			
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv_chart_v3-01.svg" alt="" class="style-svg"/>
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv4-01.svg" alt="" class="style-svg"/>
 				<div class="scv-diagram-caption-box"><!-- <div class="scv-diagram-caption-offset"></div> -->
 				<div class="scv-diagram-caption"><span class="lead">Adipisicing aute labore exercitation amet culpa dolore in </span> occaecat consequat consectetur eu irure eu anim ea consequat commodo labore.</div>
 			</div>

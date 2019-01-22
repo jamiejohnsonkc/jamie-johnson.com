@@ -61,8 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
 						<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
-				</div>
-							
+				</div>		
 			</div><!-- Container end -->
 		</div>
 </section><!-- cover end -->

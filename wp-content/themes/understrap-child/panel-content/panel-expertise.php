@@ -9,7 +9,6 @@ exit;  //Exit if accessed directly.
 }
 ?>
 
-<div id="gap"></div>
 <section class="container-fluid expt" id="expt">
 
 <!-- Marketing Leadership SUBPANEL -->
@@ -20,10 +19,10 @@ exit;  //Exit if accessed directly.
 
 		<div class="expt-vert">
 			<div class="expt-vert-box">
-			<h3>Marketing Leadership</h3>
-			<div class="expt-summary">
-				<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+<div class="headline"><h3>Marketing Leadership</h3>
+			</div>			<div class="expt-summary">
+				<div class="body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
 		</div>
@@ -101,10 +100,10 @@ exit;  //Exit if accessed directly.
 		
 		<div class="expt-vert">
 			<div class="expt-vert-box">
-			<h3>Strategic Marketing Management</h3>
-			<div class="expt-summary">
-				<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+<div class="headline"><h3>Strategic Marketing Management</h3>
+			</div>			<div class="expt-summary">
+				<div class="body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 			</div>
 		</div>
 	</div>
@@ -226,10 +225,10 @@ exit;  //Exit if accessed directly.
 	<div class="row expt-row">
 					<div class="expt-vert">
 						<div class="expt-vert-box">
-						<h3>Marketing Communications</h3>
-						<div class="expt-summary">
-							<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+<div class="headline"><h3>Marketing Communications</h3>
+						</div>						<div class="expt-summary">
+							<div class="body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
 				</div>
@@ -346,16 +345,16 @@ exit;  //Exit if accessed directly.
 	<div class="row expt-row">
 					<div class="expt-vert">
 						<div class="expt-vert-box">
-						<h3>Mobile + Web Development</h3>
-						<div class="expt-summary">
-						<div class="expt-sum-body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
-							<div class="expt-sum-body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
+<div class="headline"><h3>Mobile + Web Development</h3></div>						
+<div class="expt-summary">
+						<div class="body-text">Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</div>
+							<div class="body-text">Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</div>
 						</div>
 					</div>
 					</div>
 					<div class="expt-block">
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>languages & frameworks </h6></div>
+				<div class="webdev-row-head"><h5>languages & frameworks </h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
@@ -368,10 +367,10 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>systems & development environments</h6></div>
+				<div class="webdev-row-head"><h5>systems & development environments</h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
-				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_07.svg" alt="expt-icon" />
+				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_09.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_29.svg" alt="expt-icon" />
@@ -384,7 +383,7 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>web design & prototyping/development</h6></div>
+				<div class="webdev-row-head"><h5>web design & prototyping/development</h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
@@ -395,7 +394,7 @@ exit;  //Exit if accessed directly.
 			</div>
 			
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>task processors</h6></div>
+				<div class="webdev-row-head"><h5>task processors</h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
@@ -410,7 +409,7 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>design & production</h6></div>
+				<div class="webdev-row-head"><h5>design & production</h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
@@ -420,7 +419,7 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
 			</div>
 			<div class="row">
-				<div class="col-12 webdev-row-head"><h6>collaboration</h6></div>
+				<div class="webdev-row-head"><h5>collaboration</h5></div>
 				<hr>
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
 				<img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
@@ -438,17 +437,40 @@ exit;  //Exit if accessed directly.
 </div>
 			<div class="container expt-intro">
 			<div class="expt-content">
-				<h2>Expertise & Leadership from End to End</h2>
-				<div class="exptsub">Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</div>
+				<div class="headline"><h2>Expertise & Leadership from End to End</h2></div>
+				<div class="display-text">Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</div>
 		
 		
 		
 					<div class="expt-menu-horz">
 						<div class="row">
-						<div class="expt-menu-box" id="open-expt-overlay-1"><div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" alt="skills_icon"/></div><h4>Marketing Leadership</h4><span>Officia cupidatat ut ea consequat quis consequat ullamco officia.</span></div>
-						<div class="expt-menu-box" id="open-expt-overlay-2"><div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" alt="skills_icon"/></div> <h4>Strategic Marketing Management</h4><span>Voluptate ea ut ex ullamco ut ut sint non.</span></div>
-						<div class="expt-menu-box" id="open-expt-overlay-3"><div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_24.svg" alt="skills_icon"/></div> <h4>Marketing Communications</h4><span>Ex aliqua eiusmod sunt pariatur laborum elit enim.</span></div>
-						<div class="expt-menu-box" id="open-expt-overlay-4"><div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_20.svg" alt="skills_icon"/></div> <h4>Mobile + Web Development</h4><span>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</span></div>
+						<div class="expt-menu-box" id="open-expt-overlay-1">
+
+							<div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="style-svg" alt="skills_icon"/></div>
+								<div class="menu-icon-text-wrap"><h3>Marketing Leadership</h3><div class="display-text">Officia cupidatat ut ea consequat quis consequat ullamco officia.</div>
+							<div class="body-text">learn more</div>
+							</div></div>
+						
+						<div class="expt-menu-box" id="open-expt-overlay-2">
+
+							<div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="style-svg" alt="skills_icon"/></div> 
+								<div class="menu-icon-text-wrap"><h3>Strategic Marketing Management</h3><div class="display-text">Voluptate ea ut ex ullamco ut ut sint non.</div>
+									<div class="body-text">learn more</div>
+							</div></div>
+						
+						<div class="expt-menu-box" id="open-expt-overlay-3">
+
+							<div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_24.svg" class="style-svg" alt="skills_icon"/></div> 
+								<div class="menu-icon-text-wrap"><h3>Marketing Communications</h3><div class="display-text">Ex aliqua eiusmod sunt pariatur laborum elit enim.</div>
+									<div class="body-text">learn more</div>
+							</div></div>
+						
+						<div class="expt-menu-box" id="open-expt-overlay-4">
+
+							<div class="expt-menu-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="skills_icon"/></div> 
+								<div class="menu-icon-text-wrap"><h3>Mobile + Web Development</h3><div class="display-text">Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</div>
+									<div class="body-text">learn more</div>
+							</div></div>
 					</div>
 				       	</div>
 				</div> 

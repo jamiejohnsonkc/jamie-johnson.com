@@ -141,19 +141,6 @@ html [type=button] {
 // ==========================================================================
 // PANELS
 // ==========================================================================
-//
-// webdev panel
-// ==========================================================================
-// #brands{
-// // height: 100vh;
-// }
-#webdev {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
 
 //
 // expertise panel
@@ -224,7 +211,7 @@ html [type=button] {
 }
 
 #expt-overlay-4 {
-    height: 125vh;
+    height: 100vh;
     order: 5;
 
     @include media-breakpoint-up(lg) {
@@ -282,15 +269,6 @@ html [type=button] {
     // @include v-1;
     line-height: 1.2;
     max-width: $ms-11;
-}
-
-.exptsub {
-    @include display-5;
-
-    font-weight: 400;
-
-    // margin: $rvr-1 0;
-    padding-left: 0;
 }
 
 // .expt-content, .expt-menu-horz{
@@ -356,34 +334,67 @@ html [type=button] {
 
 .expt-menu-box {
     text-align: center;
-
-    @include media-breakpoint-up(sm) {
-        @include make-col-ready;
+            @include make-col-ready;
         @include make-col(12);
-    }
-
-
+        @include v-2;
+        border: thin solid $tungsten;
     @include media-breakpoint-up(md) {
-        @include make-col-ready;
+
         @include make-col(6);
 
-        padding: 0;
     }
 
 
     @include media-breakpoint-up(lg) {
-        @include make-col-ready;
         @include make-col(3);
 
-        padding: 0;
     }
 }
 
-.expt-container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+.menu-icon-text-wrap{
+
+    margin: 0 auto;
 }
+
+.menu-icon-text-wrap .display-text{
+    max-width:$ms-11;
+    margin: 0 auto;
+    line-height: $rvr-1_5;
+}
+
+.expt-menu-box h3{
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $rvr-_75;
+}
+
+
+.expt-menu-box .body-text{
+    font-style: italic;
+    font-spacing: 0.5rem;
+    margin-bottom: $rvr-2;
+}
+
+     .expt-menu-box .body-text:hover{
+        text-decoration-line: underline;
+     }
+
+.expt-container {
+   padding: $ms-4;
+    // margin-right: auto;
+    // margin-left: auto;
+}
+
+.expt-container .headline{
+    font-weight: 400;
+}
+
+.expt-menu-icon .style-svg{
+max-width: $ms-10;
+fill: #000;
+}
+
+
 
 @media (min-width: 576px) {
     .expt-container {
@@ -484,11 +495,8 @@ html [type=button] {
     }
 
     .expt-box {
-        @include media-breakpoint-up(sm) {
             @include make-col-ready;
-            @include make-col(12);
-        }
-
+            @include make-col(6);
 
         @include media-breakpoint-up(md) {
             @include make-col-ready;
@@ -826,6 +834,102 @@ img.adv-img-box {
 //    @include make-col-ready(); @include make-col(12);
 // }
 
+// ==========================================================================
+// contact page
+// ==========================================================================
+
+#contact-content.block{
+@include make-col-ready();
+@include make-col(12);
+    margin-top: $rvr-5;
+@include media-breakpoint-up(md) {
+@include make-col-ready();
+@include make-col(6);
+}
+}
+
+#contact-form.block{
+@include make-col-ready();
+@include make-col(12);
+@include media-breakpoint-up(md) {
+@include make-col-ready();
+@include make-col(6);
+}
+}
+
+.contact-form-message{
+        padding: $ms-1;
+    margin-bottom: $rvr-2;
+    margin-top: $rvr-2;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.contact-form-message#success{
+    background-color: green;
+    border: thin solid green;
+
+}
+
+.contact-form-message#error{
+    background-color: red;
+    border: thin solid red;
+}
+
+#respond label{
+    font-family: $font-family-sans-serif;
+    width: 100%;
+    margin-bottom: $rvr-1;
+}
+
+.form-control, textarea{
+    font: 300 13.333px Roboto;
+    border-radius: 5px;
+}
+
+#respond > form > input[type="submit"]:nth-child(7){
+    background: $tungsten;
+    -webkit-appearance: none;
+    border: 1px solid $tungsten;
+    border-radius: 5px;
+    padding: $rvr-_25 $ms-_5;
+    color: $gray-600;
+}
+
+// ==========================================================================
+// footer
+// ==========================================================================
+.footer-content{
+                @include make-col-ready();
+                @include make-col(11);
+}
+
+.scroll-top{
+                // @include make-col-ready();
+                // @include make-col(1);
+                display: none;
+          display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */    
+}
+
+.scroll-top svg{
+    width: $ms-3;
+
+    .st0{
+            fill: none;
+    stroke: $primary;
+    stroke-width: 5;
+
+    }
+}
+
 
 
 // ==========================================================================
@@ -1009,14 +1113,27 @@ img.adv-img-box {
     }
 }
 
+
+// webdev panel
 // ==========================================================================
-// WebDev Sub Panel
-// ==========================================================================
+
+#webdev {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 .webdev-sub-panel {
+    
+        .webdev-icon{
+                @include make-col-ready();
+                @include make-col(3);
+        }
     .style-svg {
         fill: $primary;
-        width: $ms-6;
-
+        width: $ms-8;
+margin-bottom: $rvr-2;
         @include media-breakpoint-up(sm) {
             width: $ms-7;
         }
@@ -1026,17 +1143,20 @@ img.adv-img-box {
 
 
     .expt-row {
-        h6 {
+        h5 {
             color: $primary;
             margin-bottom: 0;
-            padding: $ms-9 0;
+            padding: $ms--9 0;
             font-weight: 400;
-            letter-spacing: $ms-10;
+            letter-spacing: .09rem;
+            text-transform: capitalize;
+            line-height: $ms-2;
         }
 
         hr {
             border: thin solid $primary;
             width: 90%;
+            @include v-2;
         }
 
         justify-content: space-around;
@@ -1053,14 +1173,16 @@ img.adv-img-box {
     .row {
         // margin-bottom: $rvr-2;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
     }
 
     .webdev-row-head {
         // background: $primary;
         // border-radius: 1em;
-        width: $ms-8;
-        height: 100%;
-        padding-bottom: $ms-10;
+                    
+        max-width: 70%;
+        
 
         // margin-bottom: $rvr-1;
         text-align: center;
@@ -1076,10 +1198,9 @@ img.adv-img-box {
     }
 
     .expt-block {
-        @include media-breakpoint-up(sm) {
             @include make-col-ready;
             @include make-col(12);
-        }
+    
 
 
         @include media-breakpoint-up(md) {
@@ -1102,10 +1223,10 @@ img.adv-img-box {
         }
     }
 
-    .expt-block .row {
+    .expt-block .row + .row {
         display: flex;
         justify-content: center;
-
+        margin-top: $rvr-7;
         @include media-breakpoint-up(lg) {
             max-width: 90%;
         }
@@ -1244,7 +1365,12 @@ img.adv-img-box {
 }
 
 .expt-box {
-    // margin-bottom: $rvr-2;
+    margin-bottom: $rvr-2;
+                @include make-col-ready();
+                @include make-col(6);
+    @include media-breakpoint-up(md) {
+
+    }
 }
 
 .expt-row, .expt-row * {
@@ -1268,12 +1394,14 @@ img.adv-img-box {
 }
 
 .expt-body-text {
-    width: 100%;
+    max-width: $ms-9_5;
 }
 
 .expt-body-text h6 {
-    // margin-bottom: $rvr-1;
-    // margin-top: $rvr-_75;
+    margin-bottom: $rvr-1;
+    margin-top: $rvr-_75;
+    font-weight: 400;
+    font-size: $h5-font-size;
 }
 
 .expt-text ul {
@@ -2371,7 +2499,7 @@ img.adv-img-box {
 }
 
 .vert {
-    max-width: 100%;
+    width: 100%;
 }
 
 .caption-content {
@@ -3528,7 +3656,7 @@ a.btn.btn-do {
     background-color: transparent;
 }
 
-#i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container, #cats-container {
+#i-advance-business-objectives, #i-transcend-competition, #i-modernize-marketing-functions, #i-optimize-marketing-performance,#hybrid-container, #brands-container, #categories-container, #expertise-container, #cats-container, #expt {
     padding-top: $rvr-8;
     padding-bottom: $rvr-3;
 }
@@ -3733,6 +3861,7 @@ div.body-text:last-of-type {
 html,
 body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 .wrapper {

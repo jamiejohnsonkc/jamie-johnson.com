@@ -25,10 +25,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
+					<div class="row">
+<div class="footer-content"></div>
+</div>
+					<div class="container-fluid">
 
-					<div class="container-fluid site-info d-flex flex-column text-center">
-
-						<div class="">circleC 2018. AtomicMouse Web Co. All Rights Reserved.</div>
+						<div class="site-info">&copy; 2018. AtomicMouse Web Co. All Rights Reserved.</div>
 
 					</div><!-- .site-info -->
 

@@ -22,6 +22,17 @@ ctrl + alt + a = align
 //     }
 
 
+.class .class [will select all combinations of the two classes]
+.class.class [will select only when the 2nd class is a direct child of the first]
+
+selector + selector [will target all instances of the selector except the first (ex.  .class li + li)]
+selector:not(:last-child) [will target all instances of the selector except the last (ex.  .class:not(:last-child))]
+
+
+
+
+
+
 //     remove all newlines 
 //     This will remove all newlines (\n+) followed by all whitespace (\s+) in the next line.
 //     enable "Regular Expression" (circled in red)

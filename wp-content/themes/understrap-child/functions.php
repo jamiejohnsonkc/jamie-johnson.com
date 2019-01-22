@@ -29,10 +29,27 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
+
+
 function understrap_change_logo_class( $html ) {
         $html = str_replace( 'class="custom-logo"', 'class="style-svg img-fluid"', $html );
         return $html;
     }
+
+
+
+
+function contact_page_recaptcha() {
+if ( is_page( '12' ) ) {
+wp_enqueue_script('google-recaptcha', 'https://www.google.com/recaptcha/api.js');
+}
+}
+add_action('wp_enqueue_scripts', 'contact_page_recaptcha');
+    
+
+
+
+
 
 
 //     body .page-template-wfs {

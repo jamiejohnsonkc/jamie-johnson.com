@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="row">
 			<div class="content">
 				<div class="headline"><h2>Incomparible Depth</h2></div>
-				<div class="display-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation llamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.<br><br>mollit anim id est laborum.</div>
+				<div class="display-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</div> <div class="body-text">quis nostrud exercitation llamco laboris nisi ut aliquip ex ea commodo consequat.</div><div class="body-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</div>
 			</div>
 			<div class="block">
 				<figure class="fig"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="vert"/>

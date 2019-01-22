@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php get_template_part( 'panel-content/panel', 'brands' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'categories' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'expertise' ); ?>
-
+<?php get_template_part( 'panel-content/panel', 'about-cta' ); ?>
 	</article>
 </main><!-- #main -->
 

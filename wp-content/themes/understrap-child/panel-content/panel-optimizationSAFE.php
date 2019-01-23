@@ -24,18 +24,14 @@ exit; // Exit if accessed directly.
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="opt-container">
 		<div class="row" id="opt-content">
-				<div class="page-title">
-				<span>how i create value for businesses</span>
+			<div class="page-title">
+				<span>how i can help | 04 i optimize marketing investments</span>
 			</div>
-			<div class="block" id="opt-head">
-				<div class="row">
-					<div class="mo-block"><h1>04</h1></div>
-					<div class="headline"><h2>I optimize<br>performance</h2></div>
-				</div>
-				
+			<div class="headline">
+				<h2>Performance Integration</h2><span>End to end expertise to achieve optimal results</span>
 			</div>
-			
-			<div class="display-text">Competiting in the post-digital age requires new</div>
+
+
 
 
 
@@ -69,12 +65,14 @@ exit; // Exit if accessed directly.
 
 			<div class="opt-block">
 				<div class="row">
-					<div class="body-text">Nostrud cupidatat excepteur consequat proident excepteur dolor dolore nulla dolore ullamco ut ut fugiat nulla est deserunt ea aute pariatur sunt aute quis laborum dolor sint nisi eu in.</div>
+					<div class="opt-body-text"><span class="clead">Tie it all together.</span>
+					Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris. </div>
+				<div class="opt-body-text"><span class="clead">Comprehensive leadership.</span> In voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident.</div>
 		</div>
 	</div>
-		<a class="advance-link" href="//localhost:3000/modus-operandi#i-modance-business-objectives" title="go to next">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
-			</a>
 </div>
 </div>
 </section><!-- Container end -->

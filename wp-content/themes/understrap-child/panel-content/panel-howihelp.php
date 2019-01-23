@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid register" id="i-create-marketing-assets">
+<section class="container-fluid" id="i-create-marketing-assets">
 	<div class="container" id="help-container">
 		<div class="row">
 			<div class="page-title">
@@ -21,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				
 				<div class="block" id="help-content-block">
 					
-					<div class="body-text">Spenders create stuff and call it marketing. Marketers create assets that bring value to the business.<span> I like to think of myself as a marketer.</span></div>
+					<div class="body-text">Spenders create stuff and call it marketing. Marketers bring value to the business.<span> I like to think of myself as a marketer.</span></div>
 				</div>
 				
-				
+				<a href="http://jamiejohnsonmev2.test/modus-operandi" title="">see how I bring value to a business</a>
 			</div>
 
 		<!-- 	<div class="row" id="help-content-row"> -->
-				<div class="help-links">
+				<!-- <div class="help-links">
 					
 					<div class="body-text" id="help-proclamations">See How I Create Value As a Marketer</div>
 					<ul>
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-modernize-marketing-functions" title="Strategic Marketing Management"><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></a></li>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></a></li>
 					</ul>
-				</div>
+				</div> -->
 		<!-- 	</div> -->
 			
 		</div>

@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="splash-1" id="splash-1">strategist | creator | developer | leader | <strong>marketer</strong></div>
 					
 						<div class="splash-2" id="splash-2">End to end marketing that achieves business outcomes.</div>
+						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">see how</a>
 						<div class="hero-img-mobile" id="profile-img"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic" id="profile-small"></div>
 					</div>
 

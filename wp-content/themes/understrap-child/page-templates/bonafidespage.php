@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: canvas
+ * Template Name: bonafidespage
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
@@ -17,10 +17,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
-	<article>			
-						<?php get_template_part( 'panel-content/panel', 'basic-page' ); ?>
-						
-					</article>
+	<article>
+<?php get_template_part( 'panel-content/panel', 'bona-splash' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'brands' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'categories' ); ?>
+				
+<?php get_template_part( 'panel-content/panel', 'about-cta' ); ?>
+	</article>
 </main><!-- #main -->
 
 </div><!-- Wrapper end -->

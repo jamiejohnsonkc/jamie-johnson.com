@@ -21,8 +21,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php get_template_part( 'panel-content/panel', 'splash' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'howihelp' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'ido' ); ?>				
-						<?php get_template_part( 'panel-content/panel', 'about' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'available' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'qualifications' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'aboutme' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
 					</article>
 </main><!-- #main -->

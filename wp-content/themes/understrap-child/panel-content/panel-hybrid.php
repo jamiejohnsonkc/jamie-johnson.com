@@ -12,7 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <section class="container-fluid" id="hybrid">
 	
 	<div class="container" id="hybrid-container">
-		<h2>I'm a little bit of everything.</h2>
+		<div class="headline"><h2>I'm a little bit of everything.</h2></div>
+		<div class="sub-list">strategist | designer | nerd</div>
+		<div class="display-text">Dolore magna dolor commodo amet anim veniam aliquip sit eiusmod quis veniam aliqua laborum veniam eiusmod ut culpa et dolor amet sunt in nulla in enim mollit ex ad.</div>
+
 		
 		<div class="row">
 			<div class="block">

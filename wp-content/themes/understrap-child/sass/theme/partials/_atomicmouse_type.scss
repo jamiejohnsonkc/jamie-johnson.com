@@ -18,6 +18,7 @@ h1, .h1 {
     font-weight: 500;
     min-height: 1px;
     line-height: $line-height-0;
+       letter-spacing: -.05rem;
     @include v-2;
     // margin-top: calc(var(--baseline) * 1rem); 
     // margin-bottom: calc(var(--baseline) * 1rem); 
@@ -27,11 +28,15 @@ h1, .h1 {
 h2, .h2 {
     font-size: $h2-font-size;
     font-weight: 500;
+    // line-height: $line-height-2;
+        letter-spacing: -.05rem;
     
 }
 
 h3, .h3 {
     font-size: $h3-font-size;
+        line-height: $rvr-1_75;
+        letter-spacing: .075rem;
 } 
 
 h4, .h4 {

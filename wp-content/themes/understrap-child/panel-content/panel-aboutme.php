@@ -19,11 +19,27 @@ exit; // Exit if accessed directly.
 <div class="row">
 <div class="page-title">
 <hr>
-<span>I'm Available</span>
+<span>About Me</span>
 </div>
 
+<div class=content id="help-content">
+				<div class="headline"><h2>My Philosophy</h2></div>
+				<div class="subhead"><h3>Spending Isn't Marketing</h3></div>
+				<div class="display-text"></div>
+				
+				<div class="block" id="help-content-block">
+					
+					<div class="display-text">After 20 years I've learned there are two types people in this line of work &mdash; spenders &amp; marketers. <br><br>Spenders create stuff and call it marketing. Marketers bring value to the business.<span> I'm a Marketer.</span></div>
+				</div>
+			
+				<a href="http://jamiejohnsonmev2.test/modus-operandi" class="learn" title="">learn more about me</a>
+			
+			</div>
+			<a class="advance-link" href="//localhost:3000/modus-operandi#i-scvance-business-objectives" title="go to next">
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+			</a>
 
-<div class="row" id="available-row">
+<!-- <div class="row" id="available-row">
 
 <div class="row" id="available-content">
 <div class="headline"><h2>Salty Veteran Seeks Reentry</h2></div>
@@ -45,12 +61,11 @@ Today I'm looking to regain the forward momentum I enjoyed before the recession.
 <div class="body-text">
 <h5>Available for Project Work</h5>
 Until then I'm available for freelance or contract opportunities&mdash; especially in any web design or development capacity.</div>
-</div>
+</div> -->
 </div>
 </div>
 
-</div>
-</div>
+
 
 
 

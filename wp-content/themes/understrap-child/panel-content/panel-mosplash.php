@@ -22,7 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="splash-1" id="mo-splash-1">"marketing is a means, not the end" &mdash;me </div>
 					
 						<div class="splash-2" id="mo-splash-2">I bring real, tangible value to businesses through marketing.</div>
-										<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">see how i do it</a>
+				<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+</a>
+
 						<div class="hero-img-mobile" id="reg-img"><img src="/wp-content/uploads/2019/01/register-small.jpg" alt="cash register" id="register-small"></div>
 					</div>
 

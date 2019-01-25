@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php get_template_part( 'panel-content/panel', 'transcendence' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'modernization' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'optimization' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'helpcta' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'help-cta' ); ?>
 					</article>
 </main><!-- #main -->
 

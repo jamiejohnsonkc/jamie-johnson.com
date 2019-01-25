@@ -19,10 +19,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <main class="site-main" id="main" role="main">
 	<article>
 						<?php get_template_part( 'panel-content/panel', 'aboutsplash' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'hybrid' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'brands' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'categories' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'expertise' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'backstory' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'personal' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'aboutme-cta' ); ?>
+						
+
 <?php get_template_part( 'panel-content/panel', 'about-cta' ); ?>
 	</article>
 </main><!-- #main -->

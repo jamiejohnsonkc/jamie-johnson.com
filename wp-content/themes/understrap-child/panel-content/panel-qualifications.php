@@ -16,13 +16,15 @@ exit; // Exit if accessed directly.
 					<div class="row" id="about-blocks">
 											<div class="page-title">
 						<hr>
-						<span>About Me</span>
+						<span>My Qualifications</span>
 					</div>
 						<div class="about-content">
 						<div class="headline"><h2>I've been around</h2></div>
-						<div class="display-text">I've worked with some of the best, bare scars from some of the worst and learned lessons from them all.</div>
-							<div class="display-text">The result is an expansive expertise spanning from end to end of the marketing continuum.</div>
-								<div class="display-text">I will bring value to your organization on day one.</div>
+						<div class="display-text">Et consequat exercitation id ea ea do ad laborum pariatur eu cupidatat culpa excepteur velit non nostrud.</div>
+						<!-- <div class="display-text">I've worked with some of the best, bare scars from some of the worst and gleamed lessons from them all.</div> -->
+					<!-- 	<div class="display-text" id="list">Agencies <span class="bullet">&#9679;</span>  Corporations <span class="bullet">&#9679;</span> Large <span class="bullet">&#9679;</span> Small <span class="bullet">&#9679;</span> Local <span class="bullet">&#9679;</span>  Global <span class="bullet">&#9679;</span>  B2B <span class="bullet">&#9679;</span>  B2C <span class="bullet">&#9679;</span> Ag <span class="bullet">&#9679;</span> CPG Retail</div> -->
+							
+								<!-- <div class="display-text">I will bring value to your organization on day one.</div> -->
 							<div class="about-icons">
 								<div class="icons-caption">Lorem ipsum sint nulla laborum culpa reprehenderit.</div>
 								<div class="stats" id="stats-order-1"> <img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_11.svg" class="style-svg" alt=""/><div class="stats-caption">brands supported</div></div>
@@ -38,8 +40,13 @@ exit; // Exit if accessed directly.
 								<div class="stats" id="stats-order-11"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_02.svg"  class="style-svg" alt=""/><div class="stats-caption">direct reports</div></div>
 								<div class="stats" id="stats-order-12"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_03.svg"  class="style-svg" alt=""/><div class="stats-caption">user friendly</div></div>
 								<div class="stats" id="stats-order-13"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_08.svg"  class="style-svg" alt=""/><div class="stats-caption">bullshit</div></div>
+
 							</div>
+							<a href="http://jamiejohnsonmev2.test/modus-operandi" title="" class="learn">learn more about me</a>
 						</div>
+						<a class="advance-link" href="//localhost:3000/modus-operandi#i-scvance-business-objectives" title="go to next">
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+			</a>
 						</div>
 					</div>
 		

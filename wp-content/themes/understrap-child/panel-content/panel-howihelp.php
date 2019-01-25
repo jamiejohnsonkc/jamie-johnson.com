@@ -5,10 +5,13 @@
 * @package understrap
 */
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+exit; // Exit if accessed directly.
 }
 ?>
 <section class="container-fluid" id="i-create-marketing-assets">
+	<div class="mobile-subpage" id="trend-arrow">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrow-01.svg" alt="" class="style-svg"/>
+	</div>
 	<div class="container" id="help-container">
 		<div class="row">
 			<div class="page-title">
@@ -16,32 +19,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<span>how i can help</span>
 			</div>
 			<div class=content id="help-content">
-				<div class="headline"><h2>I create assets. Not overhead.</h2></div>
+				<div class="headline"><h2>Assets not overhead</h2></div>
+				<div class="subhead"><h3>I create marketing that contributes to business growth</h3></div>
 				<div class="display-text">After 20 years I've learned there are two types people in this line of work: spenders &amp; marketers.</div>
-				
 				<div class="block" id="help-content-block">
-					
-					<div class="body-text">Spenders create stuff and call it marketing. Marketers bring value to the business.<span> I like to think of myself as a marketer.</span></div>
+					<div class="display-text">Spenders create stuff and call it marketing. Marketers bring value to the business.<span> I like to think of myself as a marketer.</span></div>
 				</div>
-				
-				<a href="http://jamiejohnsonmev2.test/modus-operandi" title="">see how I bring value to a business</a>
 			</div>
-
-		<!-- 	<div class="row" id="help-content-row"> -->
-				<!-- <div class="help-links">
-					
-					<div class="body-text" id="help-proclamations">See How I Create Value As a Marketer</div>
-					<ul>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="Strategic Marketing Management"><span>01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><span>02</span><span class="help-links-li-content">Transcending Competition</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-modernize-marketing-functions" title="Strategic Marketing Management"><span>03</span><span class="help-links-li-content">Modernizing The Marketing Function</span></a></li>
-						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span>04</span><span class="help-links-li-content">Optimizing Marketing Investments</span></a></li>
-					</ul>
-				</div> -->
-		<!-- 	</div> -->
-			
-		</div>
-		</div>
-		
-		
-		</section><!-- Container end -->
+			<a class="learn" href="http://jamiejohnsonmev2.test/modus-operandi" title="learn more link">see how I bring value to a business</a>
+			<a class="advance-link" href="//localhost:3000/modus-operandi#i-modance-business-objectives" title="go to next">
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+		</a>
+	</div>
+	</div>
+</section><!-- Container end -->

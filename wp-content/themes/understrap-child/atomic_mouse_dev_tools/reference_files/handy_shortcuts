@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 shift+ctrl+a 		selects first tag and contents
 shift+ctrl+a  + arrow  takes you to the tag
 shift+ctrl+a x2		select first tag, contents and closing tag

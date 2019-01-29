@@ -13,45 +13,52 @@ exit; // Exit if accessed directly.
 		<div class="row">
 			<div class="page-title">
 				<hr>
-				<span>What I do</span>
+				<span>how i do it</span>
 			</div>
 			<div class="content" id="do-content"> 
-				<div class="headline"><h2>End to End &amp;<span class="br"><br></span>Everything Between</h2></div>
+				<div class="headline"><h2>I Do End to End &amp;<span class="br"><br></span>Everything Between</h2></div>
 				<div class="sub-list">leadership | strategy | design | development | ops</div>
-				<div class="display-text">I combine 2o years of strategic marketing expertise with proficiencies in web development and design to deliver programs that augment business development.</div>
+				<div class="display-text">No matter the pursuit, my focus is always on achieving strategic outcomes that drive business forward.</div>
 			</div>
 			<div class="row" id="do-blocks">
+						<div class="block-content">
+					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="" class="style-svg"/></div>
+					<div class="block-copy">
+						<div class="caption">marketing leadership</div>
+						<div class="body-text">augmenting business growth & performance</div>
+					</div>
+				</div>
 				<div class="block-content">
 					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_21.svg" alt="" class="style-svg"/></div>
 					<div class="block-copy">
 						<div class="caption">strategic marketing management</div>
-						<div class="body-text">Labore eu in mollit dolore voluptate sint ex exercitation cupidatat velit irure sunt eiusmod.</div>
+						<div class="body-text">creating and retaining customers</div>
 					</div>
 				</div>
 				<div class="block-content">
 					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_25.svg" alt="" class="style-svg"/></div>
 					<div class="block-copy">
 						<div class="caption">marketing communications</div>
-						<div class="body-text">Labore eu in mollit dolore voluptate sint ex exercitation cupidatat velit irure sunt eiusmod.</div>
+						<div class="body-text">earning and maintaining customer trust</div>
 					</div>
 				</div>
 				<div class="block-content">
 					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" alt="" class="style-svg"/></div>
 					<div class="block-copy">
 						<div class="caption">digital design & development</div>
-						<div class="body-text">Labore eu in mollit dolore voluptate sint ex exercitation cupidatat velit irure sunt eiusmod.</div>
+						<div class="body-text">engaging and converting customers</div>
 					</div>
 				</div>
 				<div class="block-content">
-					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_09.svg" alt="" class="style-svg"/></div>
+					<div class="icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" alt="" class="style-svg"/></div>
 					<div class="block-copy">
 						<div class="caption">operations & infrastructure</div>
-						<div class="body-text">Labore eu in mollit dolore voluptate sint ex exercitation cupidatat velit irure sunt eiusmod.</div>
+						<div class="body-text">optimizing marketing function performance and business contribution</div>
 					</div>
 				</div>
 			</div>
 			
-			<a href="http://jamiejohnsonmev2.test/modus-operandi" class="learn" title="">see how I bring value to a business</a>
+			<a href="http://jamiejohnsonmev2.test/modus-operandi" class="learn" title="">Learn More About My Skills & Expertise</a>
 			<a class="advance-link" href="//localhost:3000/modus-operandi#i-modance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 		</a>

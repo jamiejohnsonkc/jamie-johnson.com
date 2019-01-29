@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: modusoperandi
+ * Template Name: my value
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *

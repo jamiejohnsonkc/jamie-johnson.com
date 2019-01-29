@@ -35,33 +35,33 @@ exit; // Exit if accessed directly.
 						<div class="icon" id="goals">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
 						</div>
-						<div class="display-text">business goals</div>
+						<div class="display-text">1. business goals</div>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
-						<div class="icon" id="goals">
+						<div class="icon" id="architecture">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="style-svg architecture"/></div>
-						<div class="display-text">marketing solutions</div>
+						<div class="display-text">2. marketing solutions</div>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
-						<div class="icon" id="goals">
+						<div class="icon" id="metrics">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
 						</div>
-						<div class="display-text">performance metrics</div>
+						<div class="display-text">3. performance metrics</div>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
-						<div class="icon" id="goals">
+						<div class="icon" id="impact">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
 						</div>
-						<div class="display-text">business impact</div>
+						<div class="display-text">4. business impact</div>
 					</div>
 				</div>
 			</div>

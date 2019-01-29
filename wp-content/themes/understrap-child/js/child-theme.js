@@ -4023,6 +4023,22 @@ window.addEventListener("load", function(){
   });
 });
 
+3-open-close.js
+window.addEventListener("load", function(){
+  var open = document.getElementById("open-expt-overlay-5"),
+      close = document.getElementById("expt-close-5"),
+      over = document.getElementById("expt-overlay-5");
+
+  open.addEventListener("click", function(){
+    over.classList.add("show");
+   body.classList.add("nope");
+  });
+  close.addEventListener("click", function(){
+    over.classList.remove("show");
+    body.classList.remove("nope");
+  });
+});
+
 
 var lastTop;
 

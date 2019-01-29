@@ -19,7 +19,7 @@ exit; // Exit if accessed directly.
 			<div class="block" id="scv-head">
 				<div class="row">
 					<div class="mo-block"><h1>02</h1></div>
-					<div class="headline"><h2>I transcend <br>competition</h2></div>
+					<div class="headline"><h2>I grow competitive advantage</h2></div>
 				</div>
 			</div>
 			<div class="display-text">Competiting in the post-digital age requires new</div>

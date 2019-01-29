@@ -18,9 +18,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
 	<article>			
-						<?php get_template_part( 'panel-content/panel', 'expertise-splash' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'expertise' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'hybrid' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'areasofexpertise-splash' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'skills' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'expertise-cta' ); ?>
 					</article>
 </main><!-- #main -->

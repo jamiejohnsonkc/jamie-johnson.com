@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel aboutsplash template.
+ * Panel whymesplash template.
  *
  * @package understrap
  */
@@ -9,32 +9,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-				<div class="mobile-subpage" id="shoes-container">
-		<!-- <div class="sticky-container" id="sticky-shoes"> --><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes-small.jpg" alt="" id="shoes-img"/>
+<div class="mobile-subpage" id="brains-container">
+		<!-- <div class="sticky-container" id="sticky-shoes"> --><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" id="brains-img"/>
 	</div><!-- </div> -->
-<section class="container-fluid" id="about-splash">
+<section class="container-fluid bgbrains" id="whyme-splash">
 	
 		<!-- 	<div class="row"> -->
 	
-
-					<div class="container" id="about-splash-container">
-						<div class="headline"><h1>About Me</h1></div>
-						<div class="splash-1" id="about-splash-1">lorem ispum sino et dolemet</div>
-						<div class="splash-2" id="about-splash-2">Excepteur sint occaecat cupidatat non.</div>
-						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">see how</a>
-						<!-- <div class="hero-img-mobile" id="shoes-mobile"><img src="/wp-content/uploads/2019/01/shoes-small.jpg" alt="clown shoes pic" id="shoes-small"></div> -->
+				
+					<div class="container" id="whyme-splash-container">
+						<div class="headline"><h1>Why Me</h1></div>
+						<div class="splash-1" id="whyme-splash-1">lorem ispum sino et dolemet</div>
+						<div class="splash-2" id="whyme-splash-2">Excepteur sint occaecat cupidatat non.</div>
+						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/></a>
+						
 					</div>
 				
 	
 				<!-- 		</div> --><!-- .row end -->
-
 </section><!-- cover end -->
-					<section class="container intro" id="about-intro">
-	<div class="headline"><h2>About Me Intro/Summary</h2></div>
-	<div class="display-text">Combining frameworks, technology and operations to effect marketing that behaves and performs like a business function and less of an administrative activity.</div>
+
+<section class="container intro" id="bo-intro">
+	<div class="headline"><h2>I'm qualified</h2></div>
+	<div class="subhead"><h3>Cillum occaecat ullamco ut consectetur anim aute.</h3></div>
+	<div class="display-text">Eiusmod nostrud commodo et dolor consectetur anim aute fugiat dolore.</div>
 	
 
-<!-- <div class="intro-links" id="help-links">
+<div class="intro-links" id="help-links">
 					
 					<div class="display-text" id="help-proclamations">I help businesses enable operative marketing programs through four critical paths:</div>
 					<ul>
@@ -44,9 +45,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span class="integer">04</span><span class="help-links-li-content">Maximizing Marketing Performance</span></a></li>
 					</ul>
 				</div>
- -->
+
 <a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 </a>
 
 </section>	
+					

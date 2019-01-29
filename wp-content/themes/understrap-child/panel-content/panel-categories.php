@@ -1,4 +1,4 @@
---<?php
+<?php
 /**
 * Panel cats template.
 *
@@ -177,6 +177,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 		</div>
+		<div class="adv-link-box"><a class="advance-link" href="//localhost:3000/modus-operandi#i-scvance-business-objectives" title="go to next">
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+			</a></div>
 	</div>
 </section>
 

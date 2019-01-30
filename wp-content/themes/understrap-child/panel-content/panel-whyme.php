@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 
 	<div class="container" id="whyme-container">
 		
-			<div class=content id="whyme-content">
+		
 				<div class="page-title">
 					<hr>
 					<span>why me</span>
@@ -26,6 +26,6 @@ exit; // Exit if accessed directly.
 				<a class="advance-link" href="#about-box" title="go to next">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 				</a>
-		</div>
+	
 	</div>
 </section>

@@ -11,14 +11,12 @@ exit; // Exit if accessed directly.
 <section class="container-fluid" id="about-box">
 	
 			<div class="container" id="about-container">
-				<div class="row">
-
 					<div class="row" id="about-blocks">
 											<div class="page-title">
 						<hr>
 						<span>my qualifications</span>
 					</div>
-						<div class="about-content">
+			
 						<div class="headline"><h2>I've been around</h2></div>
 						<div class="subhead"><h3>Do qui non non pariatur nisi adipisicing nostrud in veniam laboris fugiat</h3></div>
 						<div class="display-text">Et consequat exercitation id ea ea do ad laborum pariatur eu cupidatat culpa excepteur velit non nostrud.</div>
@@ -43,13 +41,11 @@ exit; // Exit if accessed directly.
 								<div class="stats" id="stats-order-13"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_08.svg"  class="style-svg" alt=""/><div class="stats-caption">bullshit</div></div>
 
 							</div>
-							
-						</div>
+					
 						<a href="http://jamiejohnsonmev2.test/why-me#brands" title="" class="learn">See More about My Background</a>
 						<a class="advance-link" href="//localhost:3000/modus-operandi#i-scvance-business-objectives" title="go to next">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 			</a>
 						</div>
-					</div>
-		
+				
 </section><!-- Container end -->

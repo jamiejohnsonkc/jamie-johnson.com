@@ -17,11 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- 	<div class="row"> -->
 	
 
-					<div class="container" id="about-splash-container">
+					<div class="container" id="about-splash">
 						<div class="headline"><h1>About Me</h1></div>
 						<div class="splash-1" id="about-splash-1">lorem ispum sino et dolemet</div>
 						<div class="splash-2" id="about-splash-2">Excepteur sint occaecat cupidatat non.</div>
-						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">see how</a>
+						<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/></a>
 						<!-- <div class="hero-img-mobile" id="shoes-mobile"><img src="/wp-content/uploads/2019/01/shoes-small.jpg" alt="clown shoes pic" id="shoes-small"></div> -->
 					</div>
 				

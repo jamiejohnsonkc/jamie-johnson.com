@@ -29,15 +29,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- 		</div> --><!-- .row end -->
 </section><!-- cover end -->
 
-<section class="container intro" id="bo-intro">
+<section class="container intro" id="whyme-intro">
 	<div class="headline"><h2>I'm qualified</h2></div>
 	<div class="subhead"><h3>Cillum occaecat ullamco ut consectetur anim aute.</h3></div>
 	<div class="display-text">Eiusmod nostrud commodo et dolor consectetur anim aute fugiat dolore.</div>
 	
 
-<div class="intro-links" id="help-links">
+<div class="intro-links" id="whyme-links">
 					
-					<div class="display-text" id="help-proclamations">I help businesses enable operative marketing programs through four critical paths:</div>
+					<div class="display-text" id="whyme-callout">I help businesses enable operative marketing programs through four critical paths:</div>
 					<ul>
 						<li><a href="#i-advance-business-objectives" title="Strategic Marketing Management"><span class="integer">01</span><span class="help-links-li-content">Advancing Business Objectives</span></a></li>
 						<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><span class="integer">02</span><span class="help-links-li-content">Transcending Competition</span></a></li>

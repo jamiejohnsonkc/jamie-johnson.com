@@ -1,0 +1,429 @@
+//mixins placed here to ensure processing prior to @make-col mixins called in css that fallows
+
+
+@mixin make-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@mixin make-col-ready {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+// panel template bottom image w vert center content
+
+#splash, #areas-splash, #val-splash, #whyme-splash, #whyme-box, #about-splash, #val-intro, #adv-container, #splash-intro, #whyme-intro, #pers-panel, #story, #about-box, #home-cta, #whatido, #do-box{
+
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+.container{
+    height: 100vh;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+.headline{
+    flex-basis: $rvr-7;
+    margin-top: auto;
+    margin-bottom: unset;
+}
+
+.subhead{
+    flex-basis: $rvr-2;
+}
+
+.display-text{
+                @include make-col-ready();
+                @include make-col(12);
+    flex-basis: $rvr-2;
+
+}
+
+.hero-img-mobile{
+    height: $rvr-12;
+    display: flex;
+    align-self: flex-end;
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.hero-img-mobile img{
+align-self: flex-end;
+margin: 0 auto;
+}
+
+}
+
+
+.splash-1{
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: $ms-2_5;
+        flex-basis: $rvr-1;
+}
+.splash-2{
+  
+    @include display-3;
+    margin-top: $rvr-2;
+    line-height: $rvr-2;
+    flex-basis: $rvr-1;
+    margin-bottom: auto;
+}
+
+.callout{
+flex-basis: $rvr-1;
+font-size: $ms-2;
+font-family: $font-family-serif;
+font-style: italic;
+}
+
+a.advance-link{
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    font-weight: 400;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+
+}
+
+
+//mobile background image panels
+#whatido, #pers-panel, #whyme-box{
+    position: relative;
+}
+
+
+//panel-specific adjustments
+
+//all splash pages
+#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash{
+    .container{
+    text-align: center;
+}
+}
+
+//value intro
+#val-intro{
+    .page-title{
+        margin-top: auto;
+        flex-basis: 0;
+        margin-bottom: $rvr-4;
+    }
+    .headline{
+        margin-top: unset;
+    }
+    .display-text{
+        margin-bottom: $rvr-2;
+    }
+    #val-links{
+        margin-bottom: $rvr-4;
+    }
+    a.advance-link{
+        align-self: unset;
+        margin-bottom: auto;
+    }
+}
+
+
+
+
+//home-splash 
+#splash{ 
+.splash-2{
+margin-bottom:unset;
+}
+.callout{
+   margin-top: $rvr-6;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: auto; 
+   }
+}
+
+//why me splash
+
+//why me box
+ #whyme-box{
+    .page-title{
+        margin-top: auto;
+        flex-basis: $rvr-10;
+        margin-bottom: $rvr-4;
+    }
+    .headline{
+        margin-top: unset;
+    }
+    .display-text{
+        margin-bottom: $rvr-2;
+    }
+
+    #whyme-container > div:nth-child(5){
+        margin-bottom: unset;
+    }
+    a.learn{
+        align-self: flex-end;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: unset;
+       flex-basis: $rvr-9;
+    }
+    a.advance-link{
+        align-self: flex-end;
+        
+    }
+}
+//advance business obj panel
+#adv-content > div.display-text, #adv-container .display-text{
+flex-basis: inherit;
+}
+
+//splash-intro
+#splash-intro{
+    .headline{
+        margin-top: auto;
+    }
+    .display-text{
+        margin-bottom: $rvr-1;
+    }
+    #splash-intro-container > div:nth-child(6){
+    margin-bottom: auto;
+    }
+    a.advance-link{
+    margin: 0 auto 0 auto;
+    }
+    .hero-img-mobile{
+        height: $rvr-5;
+    }
+}
+
+//personal panel
+#pers-panel{
+    .page-title{
+        margin-top: auto;
+        flex-basis: $rvr-1;
+    }
+    .headline{
+        margin-top: inherit;
+        margin-bottom: $rvr-2;
+    }
+
+    #pers-container > div:nth-child(5){
+        margin-bottom: auto;
+        padding-bottom: $rvr-10;
+    }
+}
+#pers-container{
+    // z-index:2;
+}
+
+
+//story panel
+#story{
+    .row{
+        flex-direction: column;
+    justify-content: space-between;
+    }
+    .page-title{
+        flex-basis: $rvr-1;
+        margin-top: $rvr-6;
+        margin-bottom: $rvr-6;
+    }
+     .headline{
+        flex-basis: $rvr-1;
+        margin-top: $rvr-4;
+        margin-bottom: $rvr-4;
+    }
+    .display-text{
+        margin-bottom: $rvr-1;
+        flex-basis: $rvr-1;
+    }
+    a.advance-link{
+    margin: 0 auto 0 auto;
+    flex-basis: $rvr-1;
+    }
+
+    #story-container > div > div:nth-child(5){
+        margin-bottom: auto;
+    }
+    a.learn{
+    flex-basis: $rvr-1;
+    }
+}
+
+//about box{
+    #about-box{
+    height: inherit;
+    }
+    #about-container{
+        height: inherit !important;
+    }
+
+#about-box .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height:150vh;
+}
+    #about-blocks{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 150vh;
+    }
+
+    #about-box {
+        .page-title{
+        flex-basis: $rvr-5;
+        margin-top: auto;
+    }
+
+    .headline{
+        margin-top: unset;
+        flex-basis: $rvr-5;
+    }
+    .subhead{
+        flex-basis: $rvr-2;
+    }
+    .display-text{
+        flex-basis: $rvr-6;
+    }
+    .about-icons{
+        flex-basis: 50rem;
+        margin-bottom: auto;
+    }
+     .icons-caption{
+        margin-bottom: $rvr-4;
+     }
+.stats{
+    padding-bottom: $rvr-1;
+}
+        a.advance-link{
+    margin: 0 auto 0 auto;
+    flex-basis: $rvr-8;
+    }
+
+    a.learn{
+    flex-basis: $rvr-1;
+    }
+}
+
+//home cta
+#home-cta{
+    .page-title{
+        flex-basis: $rvr-10;
+        margin-top: auto;
+    }
+      .headline{
+        flex-basis: $rvr-4;
+        margin-top: unset;
+    }
+      .subhead{
+        flex-basis: $rvr-1;
+    }
+      .sub-list{
+        flex-basis: $rvr-2;
+    }
+        .display-text{
+        flex-basis: $rvr-18;
+        margin-bottom: auto;
+    }
+        a.learn{
+        flex-basis: $rvr-1;
+        align-self: felx-end;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#whatido, #whatido .container{
+height: 130vh;
+}
+
+#whatido{
+     .container{
+        width: ms(12);
+     }
+      .page-title{
+        flex-basis: $rvr-6;
+        margin-top: auto;
+    }
+      .headline{
+        flex-basis: $rvr-4;
+        margin-top: inherit;
+        margin-bottom: auto;
+    }
+      .subhead{
+        flex-basis: $rvr-4;
+        max-width: $ms-11_5;
+    }
+      .sub-list{
+        flex-basis: $rvr-2;
+    }
+       .display-text{
+        max-width: $ms-11_25;
+        flex-basis: $rvr-8;
+        flex-grow: 0;
+        font-family: $font-family-serif;
+        .lead{
+            font-weight: 600;
+            font-style: italic;
+        }
+    }
+
+   .display-text:last-of-type{
+        margin-bottom: auto;
+    }
+        a.learn{
+        flex-basis: $rvr-1;
+        align-self: felx-end;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#do-box{
+   .page-title{
+        flex-basis: $rvr-6;
+        margin-top: auto;
+    }
+      .headline{
+        flex-basis: $rvr-4;
+        margin-top: inherit;
+        margin-bottom: auto;
+    }
+      .subhead{
+        flex-basis: $rvr-4;
+    }
+      .sub-list{
+        flex-basis: $rvr-2;
+    }
+       .display-text{
+        flex-basis: $rvr-8;
+        flex-grow: 0;
+        font-family: $font-family-serif;
+    }
+
+   .display-text:last-of-type{
+        margin-bottom: auto;
+    }
+        a.learn{
+        flex-basis: $rvr-1;
+        align-self: felx-end;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}  

@@ -1,0 +1,85 @@
+// panel template bottom image w vert center content
+
+
+///
+// panel is enabled with justify space between on flex-column
+// be sure to assign margin (top/bottom) to auto for the first and last elements
+// to take items out of the flex/grow add align-self to selector
+// increase gaps above and below centered content with flex-basis on top/bottom element
+//when you have something you can't explain adjust the flex-basis
+//
+.container-fluid{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container{
+    height: 100vh;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.headline{
+    flex-basis: $rvr-8;
+    margin-top: auto;
+    margin-bottom: unset;
+}
+
+.subhead{
+    flex-basis: $rvr-2;
+}
+
+
+.hero-img-mobile{
+    height: $rvr-12;
+    display: flex;
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.hero-img-mobile img{
+align-self: flex-end;
+margin: 0 auto;
+}
+
+.splash-1{
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: $ms-2_5;
+        flex-basis: $rvr-1;
+}
+.splash-2{
+  
+    @include display-3;
+    margin-top: $rvr-2;
+    line-height: $rvr-2;
+    flex-basis: $rvr-1;
+    margin-bottom: auto;
+}
+
+
+.callout{
+flex-basis: $rvr-1;
+font-size: $ms-2;
+font-family: $font-family-serif;
+font-style: italic;
+}
+
+a.advance-link{
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    font-weight: 400;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+
+}
+

@@ -13,21 +13,17 @@ exit; // Exit if accessed directly.
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="adv-container">
 		<div class="row" id="adv-content">
-			<!-- <div class="page-title">
-					<span>how i create value for businesses <span class="mo-divider">|</span> </span><span class="mo-emph"><span class="mo-block">01</span></span>
-			</div> -->
-			
 			<div class="page-title">
 				<span>how i create value for businesses</span>
 			</div>
+	
 			<div class="block" id="adv-head">
 				<div class="row">
 					<div class="mo-block"><h1>01</h1></div>
-					<div class="headline"><h2>I advance <br>business objectives</h2></div>
+					<div class="headline"><h2>I advance <br>business objectives</h2>
+					</div>
 				</div>
-				
 			</div>
-			
 			<div class="display-text">Outcome-Driven marketing designed to enhance business performance</div>
 			<div class="summary" id="outcomes">
 				<div class="row">
@@ -35,7 +31,7 @@ exit; // Exit if accessed directly.
 						<div class="icon" id="goals">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
 						</div>
-						<div class="display-text">1. business goals</div>
+						<ol><li>business goals</li></ol>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
@@ -43,7 +39,7 @@ exit; // Exit if accessed directly.
 					<div class="block-content">
 						<div class="icon" id="architecture">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="style-svg architecture"/></div>
-						<div class="display-text">2. marketing solutions</div>
+					<ol start=2><li>marketing solutions</li></ol>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
@@ -52,7 +48,7 @@ exit; // Exit if accessed directly.
 						<div class="icon" id="metrics">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
 						</div>
-						<div class="display-text">3. performance metrics</div>
+						<ol start=3><li>performance metrics</li></ol>
 					</div>
 					<div class="delta">
 						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
@@ -61,13 +57,13 @@ exit; // Exit if accessed directly.
 						<div class="icon" id="impact">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
 						</div>
-						<div class="display-text">4. business impact</div>
+						<ol start=4><li>business <br>impact</li></ol>
 					</div>
 				</div>
 			</div>
 			<div class="adv-block">
 				<div class="row">
-					<div class="body-text">I combine business acumen and design thinking with two decades of strategic marketing expertise. The result is marketing that begins and ends with business performance. <!-- I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes. --></div>
+					<div class="body-text">I combine business acumen and design thinking with two decades of strategic marketing expertise to create marketing that achieves business objectives. <!-- I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes. --></div>
 				</div>
 			</div>
 			<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">

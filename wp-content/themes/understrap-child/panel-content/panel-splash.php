@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="splash-1" id="splash-1">strategist | creator | developer | leader | <strong>marketer</strong></div>
 		
 		<div class="splash-2" id="splash-2">Salty Marketing Veteran <span class="br"><br></span>& Front-End Developer</div>
-		<div class="subhead">Available for Contract, consulting or freelance <br>(or the right long-term gig)</div>
+		<div class="callout">Available for contract, consulting or freelance <br>(or the right long-term gig)</div>
 		<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/></a>
 		<div class="hero-img-mobile" id="profile-img"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic" id="profile-small"></div>
 	</div>

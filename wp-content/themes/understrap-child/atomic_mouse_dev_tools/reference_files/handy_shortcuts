@@ -24,12 +24,11 @@ ctrl + alt + a = align
 //     }
 
 
-.class .class [will select all combinations of the two classes]
-.class.class [will select only when the 2nd class is a direct child of the first]
-
-selector + selector [will target all instances of the selector except the first (ex.  .class li + li)]
-selector:not(:last-child) [will target all instances of the selector except the last (ex.  .class:not(:last-child))]
-
+.class .class             [select all combinations of the two classes]
+.class.class              [select only when the 2nd class is a direct child of the first]
+selector + selector       [target all instances of the selector except the first (ex.  .class li + li)]
+selector:not(:last-child) [target all instances of the selector except the last (ex.  .class:not(:last-child))]
+.class:last-of-type       [target last instance of selector]
 
 
 

@@ -10,13 +10,13 @@ exit; // Exit if accessed directly.
 ?>
 <section class="container-fluid" id="do-box">
 	<div class="container" id="do-container">
-		<div class="row">
+		<div class="row" id="do-row">
 			<div class="page-title">
 				<hr>
 				<span>how i do it</span>
 			</div>
 			<div class="content" id="do-content"> 
-				<div class="headline"><h2>I Do End to End &amp;<span class="br"><br></span>Everything Between</h2></div>
+				<div class="headline"><h2>I Go From End to End &amp;<span class="br"><br></span>Do Everything Between</h2></div>
 				<div class="sub-list">leadership | strategy | design | development | ops</div>
 				<div class="display-text">No matter the pursuit, my focus is always on achieving strategic outcomes that drive business forward.</div>
 			</div>

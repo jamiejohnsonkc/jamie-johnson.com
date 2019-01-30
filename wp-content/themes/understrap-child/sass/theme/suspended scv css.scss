@@ -1,0 +1,161 @@
+#i-transcend-competition {
+    @include media-breakpoint-up(md) {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.container#scv-container {
+    //       padding-left: 0px;
+    //     padding-right: 0px;
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#scv-head {
+    // flex-basis: $rvr-4;
+    @include make-col-ready;
+    @include make-col(12);
+}
+
+#scv-head .row {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: $rvr-3;
+}
+
+#scv-head .mo-block {
+    @include make-col-ready;
+    @include make-col(3);
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        letter-spacing: -.7rem;
+    }
+}
+
+#scv-head .headline {
+    @include make-col-ready;
+    @include make-col(9);
+
+    padding-left: $ms-1_5;
+    margin: unset;
+}
+
+#scv-content .display-text {
+    @include make-col-ready;
+    @include make-col(12);
+
+    margin-bottom: $rvr-1;
+    flex-basis: auto;
+}
+
+#scv-head .display-text {
+    // display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+        font-family: $font-family-sans-serif;
+    }
+}
+
+#scv-diagram {
+    @include make-col-ready;
+    @include make-col(12);
+
+    margin-top: $rvr-2;
+    margin-bottom: $rvr-2;
+    margin-left: -$ms-1;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(10);
+
+        //         margin-left: auto;
+        //         margin-right: auto;
+    }
+}
+
+#scv-diagram-caption-box {
+    @include make-col-ready;
+    @include make-col(12);
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+// #scv-diagram-caption-offset{
+//                 @include make-col-ready();
+//                 @include make-col(3);
+//     margin-top: $rvr-2;
+// }
+
+#scv-diagram-caption {
+    @include make-col-ready;
+    @include make-col(12);
+
+    font-family: $font-family-monospace;
+    margin-top: $rvr-3;
+
+    // background-color: $tungsten;
+    padding: $ms-2 0 $ms-_25 $ms-_25;
+    border-top: thin solid $tungsten;
+    text-align: right;
+}
+
+#scv-diagram-caption .lead {
+    font-weight: 400;
+    font-size: $ms-_75;
+}
+
+.svg-replaced-17 {
+    width: 110%;
+    margin-left: -5%;
+
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+    }
+}
+
+#scv-diagram #Layer_2 .st0 {
+    fill: $tungsten;
+}
+
+#scv-diagram #Layer_1 {
+    fill: $gray-700;
+}
+
+#scv-diagram #Layer_1 {
+    .st12, .st13 {
+        stroke: $gray-700;
+    }
+}
+
+#scv-diagram .st0 {
+    stroke: $gray-700;
+}
+
+#scv-diagram {
+    .st8, .st12, .st13 {
+        stroke: $gray-700;
+    }
+}
+
+#scv-diagram svg#layer1 {
+    // width: 95%;
+}
+
+.scv-shell {
+    margin-bottom: $rvr-1;
+}
+
+.scv-block {}
+
+//     max-width: 34rem;
+// }
+//

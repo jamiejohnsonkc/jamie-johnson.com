@@ -1,0 +1,333 @@
+// ==========================================================================
+// Advancing Business Objectives Sub Panel
+// ==========================================================================
+// .page-id-36 = modus operandi
+
+#adv-head .headline {
+    @include make-col-ready;
+    @include make-col(9);
+
+    padding-left: $ms-0;
+    margin: unset;
+}
+
+#adv-head .mo-block {
+    @include make-col-ready;
+    @include make-col(3);
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#adv-head .row {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: $rvr-3;
+    width: 100%;
+}
+
+#adv-head, #scv-head, #mod-head, #opt-head {
+    .mo-block h1 {
+        @include media-breakpoint-up(md) {
+            font-size: $ms-8_5;
+        }
+    }
+
+    h2 {
+        font-size: ms(2.8);
+
+        // @include media-breakpoint-up(md) {
+        //     font-size: $rvr-2_5;
+        // }
+   
+    }
+}
+
+.summary {
+    @include make-col-ready;
+    @include make-col(12);
+}
+
+#outcomes .icon {
+    width: 70%;
+
+    @include media-breakpoint-up(md) {
+        width: 60%;
+    }
+}
+
+#outcomes .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    // margin-left: -($ms-1_5);
+    margin-top: $rvr-1;
+    margin-bottom: $rvr-2;
+
+    @include media-breakpoint-up(md) {
+        flex-wrap: wrap;
+    }
+}
+
+#outcomes .block-content {
+    @include make-col-ready;
+    @include make-col(3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // align-content: center;
+    @include media-breakpoint-up(md) {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-bottom: $rvr-2;
+    }
+}
+
+#outcomes ol {
+    text-indent: 0;
+    padding: 0 0 0 $ms-_5;
+}
+
+#outcomes .delta svg {
+    .cls-1 {
+        fill: $tungsten;
+    }
+
+    @include media-breakpoint-up(md) {}
+}
+
+#outcomes > div > div:nth-child(4) {
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+#adv-content {
+    @include media-breakpoint-up(md) {
+        //         height: 80vh;
+        //         align-content: space-evenly;
+    }
+}
+
+.adv-sub-panel {
+    .expt-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+}
+
+.adv-vert-frame-wrapper {
+    @include make-col-ready;
+    @include make-col(11);
+}
+
+.adv-vert, .adv-vert .row, .adv-horz, .adv-horz .row {
+    @include make-col-ready;
+    @include make-col(12);
+}
+
+.delta-vert {
+    @include media-breakpoint-up(md) {
+        height: 2.5rem;
+        width: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+#adv-vert-row {
+    display: flex;
+    flex-direction: column;
+}
+
+#adv-vert-row, .delta-vert {
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.adv-horz, .delta-horz {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+}
+
+.adv-horz-row {
+    display: inline-flex;
+    justify-content: space-around;
+
+    // max-width: 80% !important;
+    margin: 0 auto;
+    align-items: center;
+}
+
+// .delta-frame {
+//     @include make-col-ready();
+//     @include make-col(12);
+//     @include v-2;
+
+//     display: flex;
+//     justify-content: center;
+
+//     @include media-breakpoint-up(md) {
+//         width: 2%;
+//         flex-basis: 0;
+//         max-width: 100%;
+//     }
+// }
+
+.delta-horz .style-svg {
+    width: $ms-0;
+    fill: $primary;
+}
+
+.delta-vert .style-svg {
+    fill: $primary;
+    width: $ms--3;
+
+    @include media-breakpoint-up(md) {
+        width: $ms-6;
+    }
+}
+
+.adv-frame .style-svg {
+    height: $rvr-6;
+    width: $ms-6;
+    margin-left: -$ms-1;
+
+    @include media-breakpoint-up(md) {
+        height: $rvr-7;
+        width: $ms-8;
+    }
+}
+
+.adv-box-head {
+    font-size: $ms-1_5;
+    letter-spacing: .05rem;
+    font-weight: 400;
+
+    @include media-breakpoint-up(md) {
+        text-transform: uppercase;
+        font-size: $ms-2;
+    }
+}
+
+.adv-box-display-text {
+    font-size: $ms-2;
+
+    @include media-breakpoint-up(md) {
+        font-size: $ms-1_5;
+    }
+}
+
+.vert-head {
+    @include make-col-ready;
+    @include make-col(10);
+
+    padding-left: $ms-1_5;
+
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+.adv-box-head, .adv-box-display-text {
+    // display: inline-flex;
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+}
+
+#adv-vert-frame-1, #adv-vert-frame-2, #adv-vert-frame-3, #adv-vert-frame-4 {
+    @include make-col-ready;
+    @include make-col(12);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media-breakpoint-up(md) {
+        width: 100%;
+        width: 23.5%;
+        flex-basis: 0;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#adv-vert-frame-1 {
+    margin-top: $rvr-3;
+
+    @include media-breakpoint-up(md) {
+        margin-top: unset;
+    }
+}
+
+#adv-vert-frame-4 {
+    margin-bottom: $rvr-3;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+    }
+}
+
+.adv-block {
+    //     order: 1;
+
+    @include media-breakpoint-up(md) {}
+}
+
+.adv-block .row {
+    justify-content: flex-end;
+}
+
+.adv-block .body-text {
+    @include media-breakpoint-up(md) {
+        //         @include make-col-ready();
+        //         @include make-col(3);
+
+        //         padding-right: $ms-4;
+    }
+}
+
+.adv-img-box {
+    display: flex;
+    justify-content: center;
+}
+
+img.adv-img-box {
+    fill: black;
+}
+
+.adv-img-box {
+    @include make-col-ready;
+    @include make-col(2);
+
+    font-family: $font-family-serif;
+}
+
+.vert-head .body-text {
+    font-family: $font-family-serif;
+    font-size: $ms-1_5;
+}
+
+// .adv-box-head{
+//     @include make-col-ready(); @include make-col-ready();
+//     @include make-col-ready(); @include make-col(12);
+// }
+// .adv-frame .body-text{
+//        @include make-col-ready(); @include make-col-ready();
+//    @include make-col-ready(); @include make-col(12);
+// }

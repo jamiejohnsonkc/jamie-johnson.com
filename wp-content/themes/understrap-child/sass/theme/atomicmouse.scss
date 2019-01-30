@@ -1,5 +1,3 @@
-
-
 .row {
     margin-left: 0;
     margin-right: 0;
@@ -11,24 +9,17 @@ html [type=button] {
     appearance: none;
 }
 
-button:focus{
+button:focus {
     outline: $primary;
 }
-
-
-
-
 
 // ==========================================================================
 // PANELS
 // ==========================================================================
 
-
 ///
 //  PERS PANEL
 //=================================================
-
-
 
 #pers-panel {
     position: relative;
@@ -41,7 +32,6 @@ button:focus{
         position: relative;
     }
 }
- 
 
 // #pers-container {  
 //     // height: 115vh;  
@@ -57,13 +47,10 @@ button:focus{
 //         max-width: 800px;
 //     }
 
-
 //     @include media-breakpoint-up(lg) { 
 //         max-width: 900px;
 //     }
 // }
-
-
 
 // #fam-container{
 //     position: absolute;
@@ -81,44 +68,44 @@ button:focus{
 //     }
 // }
 
-img.fam-img{
-width: 100%;
-margin-top: $rvr-4;
-// margin-bottom:-5rem;
+img.fam-img {
+    width: 100%;
+    margin-top: $rvr-4;
+
+    // margin-bottom:-5rem;
 }
 
-#pers-content > div.headline h2{
-font-size: ms(3.9);
+#pers-content > div.headline h2 {
+    font-size: ms(3.9);
 }
 
-#trend-arrow svg#Layer_1{
+#trend-arrow svg#Layer_1 {
     fill: $tungsten;
     width: 105%;
     margin-left: -3rem;
     margin-top: 35rem;
 }
 
-
 #pers-content {
-  
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
+
     padding: 0;
-      margin-bottom: $rvr-1;
+    margin-bottom: $rvr-1;
+
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(7);
     }
 
 
     @include media-breakpoint-up(lg) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(7);
     }
 }
 
 #pers-content-block {
-
     @include media-breakpoint-up(md) {
         margin-bottom: $rvr-_5;
 
@@ -128,12 +115,9 @@ font-size: ms(3.9);
     }
 }
 
-
-
 .pers-headline {
     margin-bottom: $rvr-2;
 }
-
 
 #pers-proclamations {
     max-width: $ms-12_25;
@@ -141,16 +125,9 @@ font-size: ms(3.9);
     font-family: $font-family-sans-serif;
 }
 
-#pers-content .display-text{
+#pers-content .display-text {
     margin-bottom: $rvr-2;
 }
-
-
-
-
-
-
-
 
 //
 // expertise panel
@@ -159,7 +136,7 @@ font-size: ms(3.9);
 .expt {
     display: flex;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 
     position: relative;
@@ -237,13 +214,13 @@ font-size: ms(3.9);
 }
 
 // This CSS class will show the overlay */
-#expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {    
+#expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {
     visibility: visible;
     opacity: 1;
 }
 
 // [OVERLAY CLOSE BUTTON] */
-#expt-close-1, #expt-close-2, #expt-close-3, #expt-close-4,  #expt-close-5{
+#expt-close-1, #expt-close-2, #expt-close-3, #expt-close-4, #expt-close-5 {
     position: fixed;
     top: $ms-4;
     right: $ms-4;
@@ -350,77 +327,71 @@ font-size: ms(3.9);
 }
 
 .expt-menu-box {
+    @include make-col-ready;
+    @include make-col(12);
+    @include v-1;
 
-            @include make-col-ready();
-        @include make-col(12);
-        @include v-1;
-        background: $tungsten;
-        color: #111;
-        border-radius: 1rem;
-        cursor: pointer;
-            text-align: center;
-            padding: $rvr-2 0;
-//         border: thin solid $tungsten;
+    background: $tungsten;
+    color: #111;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+    padding: $rvr-2 0;
+
+    //         border: thin solid $tungsten;
     @include media-breakpoint-up(md) {
-
         @include make-col(6);
-
     }
 
 
     @include media-breakpoint-up(lg) {
         @include make-col(3);
-
     }
 }
 
-.menu-icon-text-wrap{
-
+.menu-icon-text-wrap {
     margin: 0 auto;
 }
 
-.menu-icon-text-wrap .display-text{
-    max-width:$ms-11;
+.menu-icon-text-wrap .display-text {
+    max-width: $ms-11;
     margin: 0 auto;
     line-height: $rvr-1_5;
 }
 
-.expt-menu-box h3{
+.expt-menu-box h3 {
     font-weight: 400;
     letter-spacing: .05rem;
     margin-bottom: $rvr-_75;
 }
 
-
-.expt-menu-box .body-text{
+.expt-menu-box .body-text {
     font-style: italic;
     font-spacing: 0.5rem;
     margin-bottom: $rvr-2;
 }
 
- .expt-menu-box .body-text:hover{
-   text-decoration-line: underline;
+.expt-menu-box .body-text:hover {
+    text-decoration-line: underline;
 }
 
 .expt-container {
-   padding: $ms-4;
+    padding: $ms-4;
+
     // margin-right: auto;
     // margin-left: auto;
 }
 
-.expt-container .headline{
+.expt-container .headline {
     font-weight: 400;
 }
 
 .expt-menu-icon {
-    .style-svg, .cls-1, .cls-3, .cls-4{
-max-width: $ms-8;
-fill: #111;
+    .style-svg, .cls-1, .cls-3, .cls-4 {
+        max-width: $ms-8;
+        fill: #111;
+    }
 }
-}
-
-
-
 
 .expt-row {
     display: flex;
@@ -428,10 +399,10 @@ fill: #111;
     min-height: 100vh;
     align-items: center;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 }
@@ -443,7 +414,7 @@ fill: #111;
     align-content: flex-start;
 
     // margin-bottom: $rvr-1;
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 }
 
@@ -451,474 +422,143 @@ fill: #111;
 // Marketing Sub Panel
 // ==========================================================================
 
-    .expt-row {
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-    }
-
-    .expt-block {
-        align-content: center;
-
-        @include media-breakpoint-up(sm) {
-            @include make-col-ready();
-            @include make-col(12);
-        }
-
-
-        @include media-breakpoint-up(md) {
-            @include make-col-ready();
-            @include make-col(12);
-        }
-
-
-        @include media-breakpoint-up(lg) {
-            @include make-col-ready();
-            @include make-col(7);
-        }
-
-
-        @include media-breakpoint-up(xl) {
-            @include make-col-ready();
-            @include make-col(7);
-        }
-    }
-
-    .expt-box {
-            @include make-col-ready();
-            @include make-col(6);
-
-        @include media-breakpoint-up(md) {
-            @include make-col-ready();
-            @include make-col(6);
-
-            .expt-text {
-                max-width: $ms-10_5;
-            }
-        }
-
-
-        @include media-breakpoint-up(lg) {
-            @include make-col-ready();
-            @include make-col(6);
-        }
-
-
-        @include media-breakpoint-up(xl) {
-            @include make-col-ready();
-            @include make-col(6);
-        }
-    }
-
-    .expt-vert {
-        @include make-col-ready();
-        @include make-col(12);
-        @include v-4;
-        @include media-breakpoint-up(sm) {}
-
-        @include media-breakpoint-up(md) {}
-
-        @include media-breakpoint-up(lg) {
-            @include make-col-ready();
-            @include make-col(4);
-        }
-
-
-        @include media-breakpoint-up(xl) {
-            @include make-col-ready();
-            @include make-col(4);
-        }
-    }
-
-
-
-
-
-
-// ==========================================================================
-// Advancing Business Objectives Sub Panel
-// ==========================================================================
-// .page-id-36 = modus operandi
-
-#adv-head .headline{
-                @include make-col-ready();
-                @include make-col(9);
-                padding-left: $ms-0;
-                margin: unset;
-}
-#adv-head .mo-block{
-            @include make-col-ready();
-            @include make-col(3);
-            h1{
-                margin: 0;
-                padding: 0;
-            }
-}
-
-#adv-head .row{
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: $rvr-3;
-    width: 100%;
-        
-}
-
-#adv-head, #scv-head, #mod-head, #opt-head{
-.mo-block h1{
-@include media-breakpoint-up(md) {
-    font-size: $ms-8_5;
-}
-}
- h2{
-font-size: ms(2.8);
-    // @include media-breakpoint-up(md) {
-    //     font-size: $rvr-2_5;
-    // }
-    }
-}
-
-
-.summary{
- @include make-col-ready();
- @include make-col(12);
-}
-
-#outcomes .icon{
-    width: 70%;
-    @include media-breakpoint-up(md){
-        width: 60%;
-    }
-}
-
-#outcomes .row{
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    // margin-left: -($ms-1_5);
-    margin-top: $rvr-1;
-    margin-bottom: $rvr-2;
-    @include media-breakpoint-up(md) {
-        flex-wrap: wrap;
-}
-}
-
-
-
-#outcomes .block-content{
-@include make-col-ready();
-@include make-col(3);
-display: flex;
-flex-direction: column;
-align-items: center;
-// align-content: center;
-@include media-breakpoint-up(md) {
-    flex: 0 0 48%;
-    max-width: 48%;
-    margin-bottom: $rvr-2;
-}
-}
-
-#outcomes ol{
-    text-indent: 0;
-    padding: 0 0 0 $ms-_5;
-}
-
-
-#outcomes .delta svg{
-.cls-1{
-    fill: $tungsten;
-}
-@include media-breakpoint-up(md) {
-}
-}
-
-#outcomes > div > div:nth-child(4){
-    @include media-breakpoint-up(md) {
-        display: none;
-    }
-}
-
-
-#adv-content {
-    @include media-breakpoint-up(md) {
-//         height: 80vh;
-//         align-content: space-evenly;
-    }
-}
-
-.adv-sub-panel {
-    .expt-row {
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-    }
-}
-
-.adv-vert-frame-wrapper {
-    @include make-col-ready();
-    @include make-col(11);
-}
-
-.adv-vert, .adv-vert .row, .adv-horz, .adv-horz .row {
-    @include make-col-ready();
-    @include make-col(12);
-}
-
-.delta-vert {
-    @include media-breakpoint-up(md) {
-        height: 2.5rem;
-        width: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-}
-
-#adv-vert-row {
+.expt-row {
     display: flex;
-    flex-direction: column;
-}
-
-#adv-vert-row, .delta-vert {
-    @include media-breakpoint-up(lg) {
-        display: none;
-    }
-}
-
-.adv-horz, .delta-horz {
-    display: none;
-
-    @include media-breakpoint-up(md) {
-        display: flex;
-    }
-}
-
-.adv-horz-row {
-    display: inline-flex;
     justify-content: space-around;
-
-    // max-width: 80% !important;
-    margin: 0 auto;
-    align-items: center;
+    align-items: stretch;
 }
 
-// .delta-frame {
-//     @include make-col-ready();
-//     @include make-col(12);
-//     @include v-2;
+.expt-block {
+    align-content: center;
 
-//     display: flex;
-//     justify-content: center;
-
-//     @include media-breakpoint-up(md) {
-//         width: 2%;
-//         flex-basis: 0;
-//         max-width: 100%;
-//     }
-// }
-
-.delta-horz .style-svg {
-    width: $ms-0;
-    fill: $primary;
-}
-
-.delta-vert .style-svg {
-    fill: $primary;
-    width: $ms--3;
-    @include media-breakpoint-up(md){
-    width: $ms-6;
+    @include media-breakpoint-up(sm) {
+        @include make-col-ready;
+        @include make-col(12);
     }
-}
 
-.adv-frame .style-svg {
-    height: $rvr-6;
-    width: $ms-6;
-    margin-left: -$ms-1;
 
     @include media-breakpoint-up(md) {
-        height: $rvr-7;
-        width: $ms-8;
+        @include make-col-ready;
+        @include make-col(12);
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(7);
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(7);
     }
 }
 
-.adv-box-head {
-    font-size: $ms-1_5;
-    letter-spacing: .05rem;
-    font-weight: 400;
+.expt-box {
+    @include make-col-ready;
+    @include make-col(6);
 
     @include media-breakpoint-up(md) {
-        text-transform: uppercase;
-        font-size: $ms-2;
+        @include make-col-ready;
+        @include make-col(6);
+
+        .expt-text {
+            max-width: $ms-10_5;
+        }
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(6);
     }
 }
 
-.adv-box-display-text {
-    font-size: $ms-2;
-
-    @include media-breakpoint-up(md) {
-        font-size: $ms-1_5;
-    }
-}
-
-.vert-head {
-    @include make-col-ready();
-    @include make-col(10);
-
-    padding-left: $ms-1_5;
-
-    @include media-breakpoint-up(md) {
-        display: none;
-    }
-}
-
-.adv-box-head, .adv-box-display-text {
-    // display: inline-flex;
-    @include media-breakpoint-up(md) {
-        display: flex;
-    }
-}
-
-#adv-vert-frame-1, #adv-vert-frame-2, #adv-vert-frame-3, #adv-vert-frame-4 {
-    @include make-col-ready();
+.expt-vert {
+    @include make-col-ready;
     @include make-col(12);
+    @include v-4;
+    @include media-breakpoint-up(sm) {}
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-
-    @include media-breakpoint-up(md) {
-        width: 100%;
-        width: 23.5%;
-        flex-basis: 0;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-#adv-vert-frame-1 {
-    margin-top: $rvr-3;
-
-    @include media-breakpoint-up(md) {
-        margin-top: unset;
-    }
-}
-
-#adv-vert-frame-4 {
-    margin-bottom: $rvr-3;
-
-    @include media-breakpoint-up(md) {
-        margin-bottom: 0;
-    }
-}
-
-.adv-block {
-//     order: 1;
 
     @include media-breakpoint-up(md) {}
-}
 
-.adv-block .row {
-    justify-content: flex-end;
-}
 
-.adv-block .body-text {
-    @include media-breakpoint-up(md) {
-//         @include make-col-ready();
-//         @include make-col(3);
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(4);
+    }
 
-//         padding-right: $ms-4;
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(4);
     }
 }
 
-.adv-img-box {
-    display: flex;
-    justify-content: center;
-}
-
-img.adv-img-box {
-    fill: black;
-}
-
-.adv-img-box {
-    @include make-col-ready();
-    @include make-col(2);
-
-    font-family: $font-family-serif;
-}
-
-.vert-head .body-text {
-    font-family: $font-family-serif;
-    font-size: $ms-1_5;
-}
-
-// .adv-box-head{
-//     @include make-col-ready(); @include make-col-ready();
-//     @include make-col-ready(); @include make-col(12);
-// }
-// .adv-frame .body-text{
-//        @include make-col-ready(); @include make-col-ready();
-//    @include make-col-ready(); @include make-col(12);
-// }
 
 // ==========================================================================
 // contact page
 // ==========================================================================
 
-#contact-content.block{
-@include make-col-ready();
-@include make-col(12);
+#contact-content.block {
+    @include make-col-ready;
+    @include make-col(12);
+
     margin-top: $rvr-5;
-@include media-breakpoint-up(md) {
-@include make-col-ready();
-@include make-col(6);
-}
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
 }
 
-#contact-form.block{
-@include make-col-ready();
-@include make-col(12);
-@include media-breakpoint-up(md) {
-@include make-col-ready();
-@include make-col(6);
-}
+#contact-form.block {
+    @include make-col-ready;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
 }
 
-.contact-form-message{
-        padding: $ms-1;
+.contact-form-message {
+    padding: $ms-1;
     margin-bottom: $rvr-2;
     margin-top: $rvr-2;
     color: white;
     border-radius: 5px;
 }
 
-
-.contact-form-message#success{
+.contact-form-message#success {
     background-color: green;
     border: thin solid green;
-
 }
 
-.contact-form-message#error{
+.contact-form-message#error {
     background-color: red;
     border: thin solid red;
 }
 
-#respond label{
+#respond label {
     font-family: $font-family-sans-serif;
     width: 100%;
     margin-bottom: $rvr-1;
 }
 
-.form-control, textarea{
+.form-control, textarea {
     font: 300 13.333px Roboto;
     border-radius: 5px;
 }
 
-#respond > form > input[type="submit"]:nth-child(7){
+#respond > form > input[type="submit"]:nth-child(7) {
     background: $tungsten;
     -webkit-appearance: none;
     border: 1px solid $tungsten;
@@ -926,7 +566,6 @@ img.adv-img-box {
     padding: $rvr-_25 $ms-_5;
     color: $gray-600;
 }
-
 
 // ==========================================================================
 // Marketing Communications Sub Panel
@@ -940,13 +579,13 @@ img.adv-img-box {
 
     .expt-block {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(8);
 
             .expt-text {
@@ -956,26 +595,26 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(7);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(7);
         }
     }
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
 
             .expt-text {
@@ -985,39 +624,39 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
         }
     }
 
     .expt-vert {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
             @include v-3;
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
     }
@@ -1026,13 +665,13 @@ img.adv-img-box {
         align-content: center;
 
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(7);
 
             .expt-text {
@@ -1042,26 +681,26 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(7);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(7);
         }
     }
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
 
             .expt-text {
@@ -1071,44 +710,43 @@ img.adv-img-box {
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
         }
     }
 
     .expt-vert {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
             @include v-3;
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
 
 
         @include media-breakpoint-up(xl) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
         }
     }
 }
-
 
 // webdev panel
 // ==========================================================================
@@ -1120,23 +758,22 @@ img.adv-img-box {
     align-items: center;
     position: relative;
 }
+
 .webdev-sub-panel {
-    
-    .webdev-icon{
-      @include make-col-ready();
-      @include make-col(3);
+    .webdev-icon {
+        @include make-col-ready;
+        @include make-col(3);
     }
+
     .style-svg {
         fill: $primary;
         width: $ms-8;
-margin-bottom: $rvr-2;
+        margin-bottom: $rvr-2;
+
         @include media-breakpoint-up(sm) {
             width: $ms-7;
         }
     }
-
-
-
 
     .expt-row {
         h5 {
@@ -1152,6 +789,7 @@ margin-bottom: $rvr-2;
         hr {
             border: thin solid $primary;
             width: 90%;
+
             @include v-2;
         }
 
@@ -1176,9 +814,8 @@ margin-bottom: $rvr-2;
     .webdev-row-head {
         // background: $primary;
         // border-radius: 1em;
-                    
+
         max-width: 70%;
-        
 
         // margin-bottom: $rvr-1;
         text-align: center;
@@ -1186,7 +823,7 @@ margin-bottom: $rvr-2;
 
     .expt-vert {
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
 
             height: 315vh;
@@ -1194,13 +831,11 @@ margin-bottom: $rvr-2;
     }
 
     .expt-block {
-            @include make-col-ready();
-            @include make-col(12);
-    
-
+        @include make-col-ready;
+        @include make-col(12);
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
 
             float: right;
@@ -1208,7 +843,7 @@ margin-bottom: $rvr-2;
 
 
         @include media-breakpoint-up(lg) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(6);
 
             height: 325vh;
@@ -1223,6 +858,7 @@ margin-bottom: $rvr-2;
         display: flex;
         justify-content: center;
         margin-top: $rvr-7;
+
         @include media-breakpoint-up(lg) {
             max-width: 90%;
         }
@@ -1230,13 +866,13 @@ margin-bottom: $rvr-2;
 
     .expt-box {
         @include media-breakpoint-up(sm) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(12);
         }
 
 
         @include media-breakpoint-up(md) {
-            @include make-col-ready();
+            @include make-col-ready;
             @include make-col(4);
 
             .expt-text {
@@ -1288,13 +924,15 @@ margin-bottom: $rvr-2;
 .expt-sum-body-text {
     padding: 0;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 
     // padding: 0 0 $rvr-1 0;
     @include media-breakpoint-up(sm) {}
 
+
     @include media-breakpoint-up(md) {}
+
 
     @include media-breakpoint-up(lg) {
         @include display-5;
@@ -1308,11 +946,11 @@ margin-bottom: $rvr-2;
 .expt-vert {
     // display: flex;
     // align-items: center;
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
     @include v-5;
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(6);
     }
 
@@ -1324,7 +962,7 @@ margin-bottom: $rvr-2;
 
 .expt-vert-box {
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
@@ -1344,7 +982,7 @@ margin-bottom: $rvr-2;
 //     display: none;
 // }
 .expt-head {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 
     // @include v-2;
@@ -1362,11 +1000,10 @@ margin-bottom: $rvr-2;
 
 .expt-box {
     margin-bottom: $rvr-2;
-                @include make-col-ready();
-                @include make-col(6);
-    @include media-breakpoint-up(md) {
 
-    }
+    @include make-col-ready;
+    @include make-col(6);
+    @include media-breakpoint-up(md) {}
 }
 
 .expt-row, .expt-row * {
@@ -1385,13 +1022,13 @@ margin-bottom: $rvr-2;
 }
 
 .expt-icon .style-svg {
-    .cls-1, .cls-2{
-    fill: $tungsten;
-}
+    .cls-1, .cls-2 {
+        fill: $tungsten;
+    }
 }
 
-.expt-icon .style-svg{
-    width:5rem;
+.expt-icon .style-svg {
+    width: 5rem;
 }
 
 .expt-body-text {
@@ -1416,13 +1053,13 @@ margin-bottom: $rvr-2;
 
 .exptcontent {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -1470,13 +1107,13 @@ margin-bottom: $rvr-2;
 // }
 .cash-block {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -1545,13 +1182,13 @@ margin-bottom: $rvr-2;
 
 .cust-block {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(6);
     }
 }
@@ -1569,340 +1206,100 @@ margin-bottom: $rvr-2;
 //
 // post-digital marketing / modernizing the marketing function
 // ==========================================================================
-#i-modernize-marketing-functions {
-    @include media-breakpoint-up(md) {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row;
-    }
-}
 
-
-#mod-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-
-    @include media-breakpoint-up(md) {
-        height: 100vh;
-    }
-}
-
-#mod-content{
-    display: flex;
-    flex-direction: column;
-}
-
-#mod-head{
-    flex-basis: $rvr-4;
-}
-
-#mod-head .row{
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: $rvr-3;
-        
-}
-
-#mod-head .mo-block{
-            @include make-col-ready();
-            @include make-col(3);
-            h1{
-                margin: 0;
-                padding: 0;
-            }
-}
-#mod-head .mo-block h1{
-    letter-spacing: -.7rem;
-}
-
-#mod-head .headline{
-            @include make-col-ready();
-            @include make-col(9);
-            padding-left: $ms-2;
-            margin: unset;
-
-}
-
-#mod-content .display-text{
-                @include make-col-ready();
-                @include make-col(12);
-                margin-bottom: $rvr-1;
-                    flex-basis: auto;
-}
-
-
-#mod-head .headline h2{
-    // font-family: $font-family-serif;
-
-}
-
-#mod-head .display-text {
-    // display: none;
-    @include media-breakpoint-up(md) {
-        display: block;
-        font-family: $font-family-sans-serif;
-    }
-}
-
-.mod-diagram {
-    margin-bottom: $rvr-2;
-    @include make-col-ready();
-    @include make-col(12);
-
-    @include media-breakpoint-up(md) {
-        @include make-col-ready();
-        @include make-col(10);
-    }
-}
-
-.mod-diagram img{
-    height: $rvr-20;
-        @include media-breakpoint-up(md) {
-            height: 50rem;
-        }
-}
-
-.mod-diagram-caption-box {
-    @include make-col-ready();
-    @include make-col(12);
-
-    display: flex;
-    justify-content: flex-start;
-}
-
-// .mod-diagram-caption-offset{
-//                 @include make-col-ready();
-//                 @include make-col(3);
-//     margin-top: $rvr-2;
-// }
-.mod-diagram-caption {
-    @include make-col-ready();
-    @include make-col(10);
-
-    font-family: $font-family-monospace;
-    margin-top: $rvr-3;
-
-    // background-color: $tungsten;
-    padding: $ms-2 $ms-_25 $ms-_25 0;
-    border-top: thin solid $tungsten;
-}
-
-.mod-diagram-caption .lead {
-    font-weight: 400;
-    font-size: $ms-_75;
-}
-
-.mod-diagram img {
-    // width: 105%;
-}
-
-.mod-shell {
-    margin-bottom: $rvr-1;
-}
-
-.mod-block {}
 
 //
 // superior customer value / transcending compeition
 // ==========================================================================
-#i-transcend-competition {
-    @include media-breakpoint-up(md) {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row;
-    }
-}
-
-.container#scv-container {
-    //       padding-left: 0px;
-    //     padding-right: 0px;
-    @include media-breakpoint-up(md) {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-#scv-head{
-    // flex-basis: $rvr-4;
-                @include make-col-ready();
-                @include make-col(12);
-}
-
-#scv-head .row{
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: $rvr-3;
-        
-}
-
-#scv-head .mo-block{
-            @include make-col-ready();
-            @include make-col(3);
-            h1{
-                margin: 0;
-                padding: 0;
-                letter-spacing: -.7rem;
-            }
-}
-
-#scv-head .headline{
-                @include make-col-ready();
-                @include make-col(9);
-                padding-left: $ms-1_5;
-                margin: unset;
-
-}
-
-#scv-content .display-text{
-                @include make-col-ready();
-                @include make-col(12);
-                margin-bottom: $rvr-1;
-                    flex-basis: auto;
-}
 
 
-
-#scv-head .display-text {
-    // display: none;
-    @include media-breakpoint-up(md) {
-        display: block;
-        font-family: $font-family-sans-serif;
-    }
-}
-
-.scv-diagram {
-    @include make-col-ready();
-    @include make-col(12);
-    margin-top: $rvr-2;
-    margin-bottom: $rvr-2;
-    margin-left: -($ms-1);
-
-    @include media-breakpoint-up(md) {
-        @include make-col-ready();
-        @include make-col(10);
-//         margin-left: auto;
-//         margin-right: auto;
-    }
-}
-
-.scv-diagram-caption-box {
-    @include make-col-ready();
-    @include make-col(12);
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-// .scv-diagram-caption-offset{
-//                 @include make-col-ready();
-//                 @include make-col(3);
-//     margin-top: $rvr-2;
-// }
-
-.scv-diagram-caption {
-    @include make-col-ready();
-    @include make-col(12);
-
-    font-family: $font-family-monospace;
-    margin-top: $rvr-3;
-
-    // background-color: $tungsten;
-    padding: $ms-2 0 $ms-_25 $ms-_25;
-    border-top: thin solid $tungsten;
-    text-align: right;
-}
-
-.scv-diagram-caption .lead {
-    font-weight: 400;
-    font-size: $ms-_75;
-}
-
-.svg-replaced-17{
-    width: 110%;
-    margin-left: -5%;
-    @include media-breakpoint-up(md) {
-        margin-left: 0;
-    }
-}
-
-
-.scv-diagram #Layer_2 .st0{
+#scv-diagram #Layer_2 .st0 {
     fill: $tungsten;
 }
 
-
-
-.scv-diagram #Layer_1{
+#scv-diagram #Layer_1 {
     fill: $gray-700;
 }
 
-.scv-diagram #Layer_1{
-    .st12, .st13{
+#scv-diagram #Layer_1 {
+    .st12, .st13 {
         stroke: $gray-700;
     }
 }
 
-.scv-diagram .st0{
+#scv-diagram .st0 {
     stroke: $gray-700;
 }
 
-.scv-diagram{
-    .st8, .st12, .st13{
+#scv-diagram {
+    .st8, .st12, .st13 {
         stroke: $gray-700;
     }
 }
 
-.scv-diagram svg#layer1{
-    // width: 95%;
+#scv-diagram{
+    .st1{
+        font-weight: 600;
+        font-size: $ms-1;
+    }
+    .st4{
+        font-size: $ms-_5;
+        font-weight: 300;
+        letter-spacing: .05rem;
+    }
+    .st7{
+        font-size: $ms-_75;
+    }
+    .st1, .st4, .st6, .st7{
+        font-family: $font-family-monospace;
+    }
 }
-
-.scv-shell {
-    margin-bottom: $rvr-1;
-}
-
-.scv-block {}
-
-//     max-width: 34rem;
-// }
-//
 
 
 //
 // value splash panel
 // ==========================================================================
 
-
 #val-splash-container #val-splash-2 {
-@include display-4;
-margin-left: auto;
-margin-right: auto;
-text-transform: uppercase;
-text-align: left;
-.indentspan{
-    padding-left: $ms-3_5;
-}
-.indentmorespan{
-    padding-left: $ms-1
-}
-.hidespan{
-    display: none;
-}
-    .spanunderline{border-bottom: thin solid $primary; padding-bottom: $ms--6;}
+    @include display-4;
 
-@include media-breakpoint-up(md) {
-    .indentspan {padding-left: 0;}
-    .hidespan {display: none;}
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    text-align: left;
 
-}
+    .indentspan {
+        padding-left: $ms-3_5;
+    }
+
+    .indentmorespan {
+        padding-left: $ms-1;
+    }
+
+    .hidespan {
+        display: none;
+    }
+
+    .spanunderline {
+        border-bottom: thin solid $primary;
+        padding-bottom: $ms--6;
+    }
+
+    @include media-breakpoint-up(md) {
+        .indentspan {
+            padding-left: $ms-3_5;
+        }
+
+        .hidespan {
+            display: none;
+        }
+    }
+
+
     @include media-breakpoint-up(lg) {
         @include v-1;
     }
 }
-
 
 //
 // value intro panel
@@ -1914,34 +1311,138 @@ text-align: left;
     padding-left: 0;
     margin-bottom: 0;
     line-height: $rvr-1_5;
-a{
-    color: #111;
-}
+
+    a {
+        color: #111;
+    }
+
     span.integer {
         font-weight: 600;
         padding-right: $ms-1;
-    }   
+    }
 }
+
+//
+// advancing business objectives panel
+//==================================================
+
+
+.mo-divider {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+    }
+}
+
+.create-path{
+    font-weight: 900;
+    padding-right: $ms--4;
+    color: $tungsten;
+}
+
+
+#outcomes .icon {
+    width: 70%;
+
+    @include media-breakpoint-up(md) {
+        width: 60%;
+    }
+}
+
+#outcomes .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    // margin-left: -($ms-1_5);
+    margin-top: $rvr-1;
+    margin-bottom: $rvr-2;
+
+    @include media-breakpoint-up(md) {
+        flex-wrap: wrap;
+    }
+}
+
+#outcomes .block-content {
+    @include make-col-ready;
+    @include make-col(3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // align-content: center;
+    @include media-breakpoint-up(md) {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-bottom: $rvr-2;
+    }
+}
+
+#outcomes ol {
+    text-indent: 0;
+    padding: 0 0 0 $ms-_5;
+}
+
+#outcomes .delta svg {
+    .cls-1 {
+        fill: $tungsten;
+    }
+
+    @include media-breakpoint-up(md) {}
+}
+
+#outcomes > div > div:nth-child(4) {
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+.block-content li{
+    font-size: $ms-2;
+    .br{
+        display: none;
+    }
+}
+
+.delta-vert {
+    @include media-breakpoint-up(md) {
+        height: 2.5rem;
+        width: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.delta-vert .style-svg {
+    fill: $primary;
+    width: $ms--3;
+
+    @include media-breakpoint-up(md) {
+        width: inherit;
+    }
+}
+
+
 
 
 //
 // optimizing performance panel
 // ==========================================================================
 
+// #opt-head .headline h2 {
+//     // font-family: $font-family-serif;
+// }
 
-#opt-head .headline h2{
-    // font-family: $font-family-serif;
-}
-
-#opt-head .display-text {
-    // display: none;
-    @include media-breakpoint-up(md) {
-        display: block;
-        font-family: $font-family-sans-serif;
-    }
-}
-
-
+// #opt-head .display-text {
+//     // display: none;
+//     @include media-breakpoint-up(md) {
+//         display: block;
+//         font-family: $font-family-sans-serif;
+//     }
+// }
 
 // #opt-container {
 //     @include media-breakpoint-up(md) {
@@ -1964,21 +1465,20 @@ a{
 //     @include display-4;
 // }
 
-.row#opt-content {
-    display: flex;
+// .row#opt-content {
+//     display: flex;
 
-    @include media-breakpoint-up(md) {
-        align-content: center;
-        flex-direction: row;
-        justify-content: flex-start;
-        height: 80vh;
-    }
-}
-
+//     @include media-breakpoint-up(md) {
+//         align-content: center;
+//         flex-direction: row;
+//         justify-content: flex-start;
+//         height: 80vh;
+//     }
+// }
 
 .opt-vert {
     @include media-breakpoint-up(md) {
-        display: none;
+        // display: none;
     }
 
 
@@ -1986,14 +1486,14 @@ a{
 }
 
 .opt-vert-diagram {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(7);
 
     width: 100%;
 }
 
 .opt-vert-diagram-content {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(5);
 
     width: 100%;
@@ -2016,7 +1516,8 @@ a{
 .opt-vert-diagram-display-text {
     font-size: $ms-_25;
     font-family: $font-family-monospace;
-    .strong{
+
+    .strong {
         font-weight: 600;
     }
 }
@@ -2024,25 +1525,25 @@ a{
 .opt-horz {
     display: none;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {
-        display: block;
     }
 
+
     @include media-breakpoint-up(lg) {
+               display: block;
         // display: block;
     }
 }
 
-#content{
+#content {
     font-family: $font-family-monospace;
 }
 
 // .end2end-horz svg{
 //     width: 20rem;
 // }
-
 
 // .opt-horz .st1 {
 //     fill: #707070;
@@ -2071,13 +1572,13 @@ a{
 
     @include body-6;
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(3);
 
         left: 50%;
@@ -2094,26 +1595,26 @@ a{
 //
 #opt-content-block {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(8);
     }
 }
 
 #optlinks {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -2128,18 +1629,9 @@ a{
 //     }
 // }
 
-
-
-
-
-
-
-
 //
 // whyme panel
 // ==========================================================================
-
-
 
 #whyme-row {
     display: flex;
@@ -2162,7 +1654,6 @@ a{
 //         @include make-col-ready();
 //         @include make-col(4);
 //     }
-
 
 //     @include media-breakpoint-up(lg) {
 //         @include make-col-ready();
@@ -2194,7 +1685,6 @@ a{
 //         max-width: unset;
 //     }
 
-
 //     @include media-breakpoint-up(lg) {
 //         max-width: $ms-10;
 //     }
@@ -2219,23 +1709,21 @@ a{
 // cats panel
 // ==========================================================================
 
-
-#cats{
+#cats {
     background: #ffffff;
 }
-#catscontainer h2 {
 
-}
+#catscontainer h2 {}
 
 #cats .content {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -2245,32 +1733,32 @@ a{
 }
 
 #cats .block {
-   
-        @include make-col-ready();
-        @include make-col(12);
-   padding: $rvr-1 0 $rvr-1 0;
+    @include make-col-ready;
+    @include make-col(12);
 
-
-
+    padding: $rvr-1 0 $rvr-1 0;
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(8);
-           display: flex;
-    flex-wrap: wrap;
 
-    // justify-content: space-around;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin-bottom: $rvr-1;
+        display: flex;
+        flex-wrap: wrap;
+
+        // justify-content: space-around;
+        align-items: flex-start;
+        align-content: flex-start;
+        margin-bottom: $rvr-1;
     }
 }
 
 #cats .fig {
-@include v-1;
+    @include v-1;
+
     position: relative;
-     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
         @include make-col(4);
     }
 }
@@ -2313,19 +1801,21 @@ a{
     text-transform: uppercase;
     font-size: $ms-2_5;
     padding-bottom: $rvr-_5;
+
     @include media-breakpoint-up(md) {
-            margin-bottom: $rvr-_25;
-    font-size: $ms-1;
-    } 
+        margin-bottom: $rvr-_25;
+        font-size: $ms-1;
+    }
 }
 
 .caption-text {
-font-size: $ms-1;
+    font-size: $ms-1;
     line-height: $rvr-1_5;
     padding: 0 $ms-1_5;
-        @include media-breakpoint-up(md) {
-                font-size: $ms--6;
-}
+
+    @include media-breakpoint-up(md) {
+        font-size: $ms--6;
+    }
 }
 
 #cats .fig:hover .caption-content {
@@ -2333,23 +1823,20 @@ font-size: $ms-1;
 }
 
 .expbox {
-
-        @include make-col(12);
-
+    @include make-col(12);
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 }
 
 #cats .title {
-        @include make-col-ready();
-        @include make-col(12);
-
+    @include make-col-ready;
+    @include make-col(12);
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(3);
     }
 
@@ -2365,13 +1852,14 @@ font-size: $ms-1;
 //
 // brands panel
 // ==========================================================================
-#brands{
-background: #ffffff;
+#brands {
+    background: #ffffff;
 }
+
 #brands .block {
-margin: 0 auto;
-display: flex;
-flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #brands .block .style-svg {
@@ -2380,9 +1868,11 @@ flex-wrap: wrap;
     // width: $ms-8_5;
 
     padding: $ms--5;
+
     // background: $primary;
     flex-basis: $ms-7_5;
     margin: $ms--7;
+
     // padding-top: 0; 
     // padding-right: $ms-1; 
     // padding-bottom: $rvr-2; 
@@ -2390,13 +1880,11 @@ flex-wrap: wrap;
     // border: thin solid $primary;
     fill: $gray-700;
     background: $tungsten;
-
 }
 
 // .svg-replaced-13{
 //     margin-left: -.5rem;
 // }
-
 
 // .svg-replaced-17{
 //     margin-left: .15rem;
@@ -2415,22 +1903,20 @@ flex-wrap: wrap;
 }
 
 #brands .content {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
-        margin-bottom: $rvr-2;
+
+    margin-bottom: $rvr-2;
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(4);
     }
 }
 
-
 #brands .body-text {
     // max-width: ms(10);
-
 }
-
 
 #brands .block {
     display: flex;
@@ -2440,9 +1926,12 @@ flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     margin-bottom: $rvr-1;
-        @include make-col-ready();
-        @include make-col(12);
-           padding: 0;
+
+    @include make-col-ready;
+    @include make-col(12);
+
+    padding: 0;
+
     @include media-breakpoint-up(md) {
         @include make-col(8);
     }
@@ -2450,26 +1939,26 @@ flex-wrap: wrap;
 
 .expbox {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 }
 
 .brands-title {
     @include media-breakpoint-up(sm) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(12);
     }
 
 
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(3);
     }
 
@@ -2485,47 +1974,45 @@ flex-wrap: wrap;
 //
 // hybrid panel
 // ==========================================================================
-#hybrid{
+#hybrid {
     background: #ffffff;
-// height: 100vh;
+
+    // height: 100vh;
 }
 
-
-.head-wrap{
+.head-wrap {
     position: relative;
 }
 
-
-img#sponge-small{
+img#sponge-small {
     max-width: 20%;
     margin-top: 8rem;
     margin-left: 70%;
     position: relative;
-// position: absolute;
-// bottom: 0;
-// left: 80%;
+
+    // position: absolute;
+    // bottom: 0;
+    // left: 80%;
 }
 
-#hybrid-rule{
-@include v-2;
-border-top: $ms--9 $primary solid;
-width: 100%;
-display: none;
+#hybrid-rule {
+    @include v-2;
+
+    border-top: $ms--9 $primary solid;
+    width: 100%;
+    display: none;
 }
 
+#hybrid-container > div.row > div:nth-child(2) {
+    .subhead {
+        margin-bottom: $rvr-_25;
+    }
 
-
-#hybrid-container > div.row > div:nth-child(2){
- .subhead{
-margin-bottom: $rvr-_25;
+    .sub-list {
+        width: 100%;
+        margin-bottom: $rvr-1;
+    }
 }
-    .sub-list{
-  width: 100%;
-  margin-bottom: $rvr-1;
-}
-}
-
-
 
 // .helix {
 //     background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/helix2.jpg");
@@ -2544,51 +2031,47 @@ margin-bottom: $rvr-_25;
 //     // background-attachment: fixed;
 // }
 
-
-
 #hybrid-container > div.row > div:nth-child(2),
 #hybrid-container > div.row > div:nth-child(8),
-#hybrid-container > div.row > div:nth-child(14){
-background: $primary;
-color: #fff;
-padding: $ms-6 $ms-4;
+#hybrid-container > div.row > div:nth-child(14) {
+    background: $primary;
+    color: #fff;
+    padding: $ms-6 $ms-4;
 }
-
 
 #hybrid-container > div.row > div:nth-child(4),
 #hybrid-container > div.row > div:nth-child(10),
-#hybrid-container > div.row > div:nth-child(16){
-  background: $tungsten;
-color: #111;
-padding: $ms-6 $ms-4;
-margin-top: -2rem;
-margin-bottom: -2rem;  
-}
-
-#hybrid-container > div.row > div:nth-child(8){
+#hybrid-container > div.row > div:nth-child(16) {
+    background: $tungsten;
+    color: #111;
+    padding: $ms-6 $ms-4;
+    margin-top: -2rem;
     margin-bottom: -2rem;
 }
 
-#hybrid-container > div.row > div:nth-child(10){
-margin-top: 0;
+#hybrid-container > div.row > div:nth-child(8) {
+    margin-bottom: -2rem;
 }
 
+#hybrid-container > div.row > div:nth-child(10) {
+    margin-top: 0;
+}
 
-
-#hybrid .block{
-    @include make-col-ready();
+#hybrid .block {
+    @include make-col-ready;
     @include make-col(10);
     @include media-breakpoint-up(md) {}
 }
 
-#hybrid .block-offset{
-@include make-col-ready();
-@include make-col(2);
-// margin-right: 25%;
+#hybrid .block-offset {
+    @include make-col-ready;
+    @include make-col(2);
+
+    // margin-right: 25%;
 }
 
 #hybrid .subhead {
-    @include make-col-ready();
+    @include make-col-ready;
 
     // @include v-1;
     padding-left: 0;
@@ -2597,46 +2080,44 @@ margin-top: 0;
     @include media-breakpoint-up(md) {}
 }
 
-
-.hybrid .block-offset{
-  @include make-col-ready();
-  @include make-col(1);
+.hybrid .block-offset {
+    @include make-col-ready;
+    @include make-col(1);
 }
 
 #hybrid .block-body {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
     @include media-breakpoint-up(md) {}
 }
 
-
-
-#hybrid .sub-list{
-margin-bottom: $rvr-2;
+#hybrid .sub-list {
+    margin-bottom: $rvr-2;
 }
 
-#hybrid .block .subhead{
+#hybrid .block .subhead {
     margin-bottom: $rvr-1;
     font-weight: 400;
 }
 
-#hybrid .block-body .body-text{
+#hybrid .block-body .body-text {
     margin: 0;
     padding-bottom: $rvr-1;
     line-height: $rvr-1_25;
     font-family: $font-family-sans-serif;
     max-width: $ms-11;
+
     // max-width: $ms-10_5;
     // max-width: $ms-9;
 }
 
-
-
-
-
 // ==========================================================================
 // areas of expertise -splash panel
 // ==========================================================================
+#conductor-mobile{
+margin-left: auto;
+margin-right: auto;
+}
 
 
 .bgconductor {
@@ -2645,20 +2126,23 @@ margin-bottom: $rvr-2;
     background-position: 150% bottom;
     background-size: 0%;
     background-repeat: no-repeat;
+
     @include media-breakpoint-up(lg) {
         background-size: 80%;
         background-position: right bottom;
     }
+
+
     @include media-breakpoint-up(xl) {}
 }
-
 
 // ==========================================================================
 // whyme-splash panel
 // ==========================================================================
-#brains-img{
+#brains-img {
     height: 20rem;
     max-width: 100%;
+
     // position: sticky;
     position: absolute;
     bottom: 0;
@@ -2693,13 +2177,9 @@ margin-bottom: $rvr-2;
     @include media-breakpoint-up(xl) {}
 }
 
-
-
 // ==========================================================================
 // why me intro
 // ==========================================================================
-
-
 
 #whyme-links > ul {
     margin-top: 0;
@@ -2707,15 +2187,16 @@ margin-bottom: $rvr-2;
     padding-left: 0;
     margin-bottom: 0;
     line-height: $rvr-1_5;
-a{
-    color: #111;
-}
+
+    a {
+        color: #111;
+    }
+
     span.integer {
         font-weight: 600;
         padding-right: $ms-1;
-    }   
+    }
 }
-
 
 // #whyme-splash-container h1 {
 //     font-size: $ms-5;
@@ -2725,13 +2206,10 @@ a{
 //         @include v-1;
 //     }
 
-
 //     @include media-breakpoint-up(xl) {
 //         font-size: $h1-font-size;
 //     }
 // }
-
-
 
 // #whyme-splash-container #whyme-splash-1 {
 // // flex-basis: 2rem;
@@ -2744,13 +2222,9 @@ a{
 //  // margin-bottom:auto;
 // }
 
-
-
 // // ==========================================================================
 // // story splash panel
 // // ==========================================================================
-
-
 
 // #story{
 //     height: 100vh;
@@ -2780,13 +2254,10 @@ a{
 //         @include v-1;
 //     }
 
-
 //     @include media-breakpoint-up(xl) {
 //         font-size: $h1-font-size;
 //     }
 // }
-
-
 
 // #story-container #story-1 {
 
@@ -2795,38 +2266,27 @@ a{
 // .story-emp strong {}
 
 // #story-container #story-2 {
-   
-// }
 
+// }
 
 // ==========================================================================
 // about splash panel
 // ==========================================================================
 
-
-#shoes-container{
+#shoes-container {
     height: 100vh;
     position: fixed;
     z-index: -1;
 }
 
-#shoes-img{
+#shoes-img {
     height: 20rem;
     width: auto;
+
     // position: sticky;
     position: absolute;
     bottom: 0;
-
 }
-
-
-
-
-
-
-
-
-
 
 //
 // home/splash panel
@@ -2840,28 +2300,31 @@ a{
     }
 }
 
-#splash-1{
+#splash-1 {
     @include display-6;
-        font-family: $font-family-sans-serif;
-        font-style: normal;
+
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+
     // @include v-0;
 }
 
-.sub-list{
+.sub-list {
     @include display-6;
-        font-family: $font-family-sans-serif;
-        font-style: normal;
+
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+
     // @include v-0;
 }
 
-
-#profile-small{
+#profile-small {
     height: $rvr-18;
+
     @include media-breakpoint-up(md) {
         height: unset;
     }
 }
-
 
 .bgme {
     opacity: 1;
@@ -2869,20 +2332,21 @@ a{
     background-position: 150% bottom;
     background-size: 0%;
     background-repeat: no-repeat;
+
     @include media-breakpoint-up(lg) {
         background-size: 80%;
         background-position: right bottom;
     }
 
+
     @include media-breakpoint-up(xl) {}
 }
-
 
 ///
 // Home Intro Panel
 //
 
-#evo-small, #evo-small-img{
+#evo-small, #evo-small-img {
     height: $rvr-10;
     width: 100%;
     margin: 0 auto;
@@ -2895,7 +2359,7 @@ a{
 .evo {
     opacity: 1;
     background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolutionv2.jpg");
-        background-size: 0%;
+    background-size: 0%;
     background-repeat: no-repeat;
     background-position: 97% 100%;
 
@@ -2904,21 +2368,20 @@ a{
         background-position: right bottom;
     }
 
+
     @include media-breakpoint-up(xl) {}
 }
 
-    // background-size: cover;
-    // @include media-breakpoint-up(sm) {
-    //         background-size: 0%;
-    //     background-position: 130% bottom;
-    // }
+// background-size: cover;
+// @include media-breakpoint-up(sm) {
+//         background-size: 0%;
+//     background-position: 130% bottom;
+// }
 
-
-    // @include media-breakpoint-up(md) {
-    //     background-position: right bottom;
-    //     background-size: 100%;
-    // }
-
+// @include media-breakpoint-up(md) {
+//     background-position: right bottom;
+//     background-size: 100%;
+// }
 
 //
 // home call to action panel
@@ -2934,7 +2397,6 @@ a{
     height: 100vh;
 }
 
-
 #home-cta-container .home-cta2 {}
 
 //
@@ -2942,83 +2404,145 @@ a{
 // ==========================================================================
 
 
-.card-intro {
-    // display: inline-flex;
-    // align-content: center;
-    margin-bottom: $rvr-1;
 
-    //     max-width: $ms-12;
-    @include media-breakpoint-up(md) {
-        height: $rvr-8;
-        padding-left: 0;
-    }
-}
-
-.head-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: $rvr-_75;
-}
-
-.card-content {}
-
-.card-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card-body {
-    margin-top: $rvr-1;
-    margin-left: 0;
-    padding-left: 0;
-
-    @include make-col-ready();
-    @include make-col(6);
-    @include media-breakpoint-up(md) {
-        height: $rvr-8;
-    }
-}
-
-.card-list {
-    @include make-col-ready();
-    @include make-col(4);
-
-    list-style: none;
-    text-indent: 0;
-}
-
-.card-head {
-    margin-bottom: $rvr-3;
-
-    @include media-breakpoint-up(lg) {
+#do-blocks {
+    //  width: 100%;
+    // display: flex;
+    .block-content{
         @include make-col-ready();
         @include make-col(12);
-
+        display: inline-flex;
+        align-items: center;
         margin-bottom: $rvr-2;
+        // align-items: center;
+}
+    .icon{
+        @include make-col-ready();
+        @include make-col(2);
+        padding-left: $ms-1;
+    .style-svg {
+        height: $rvr-4;
+        // width: $ms-6;
+}
+}
+    .block-copy {
+        @include make-col-ready;
+        @include make-col(10);
+        display: flex;
+        flex-direction: column;
+        padding-left: $ms-1;
+    }
+
+    .caption {
+        font-size: $ms-1;
+        margin: unset;
+        line-height: $rvr-1_25;
+        font-weight: 400;
+        // margin-bottom: $rvr-_25;
+        text-transform: capitalize;
+}
+    .body-text {
+        margin: unset;
+        margin-bottom: unset;
+        font-size: $ms-1_5;
+        line-height: $rvr-1_5;
+            max-width: ms(10.6);
+        @include media-breakpoint-up(md) {
+            max-width: $ms-11_5;
+            }
+        }
+    svg{
+    .cls-1, .cls-2, .cls-3{
+        fill: $primary;
     }
 }
-
-h4.card-display-text {
-    font-weight: 600;
-    font-style: italic;
 }
 
-.card-head.body-text {
-    padding-bottom: 0;
-    padding-left: 0;
+#do-content{
+    width: 100%;
+    .sub-list{
+    font-weight: 400;
+    letter-spacing: .05rem;
+}
 }
 
-.toggle-content {
-    @include v-_5;
-}
+// .card-intro {
+//     // display: inline-flex;
+//     // align-content: center;
+//     margin-bottom: $rvr-1;
 
-a.btn.btn-do {
-    border-radius: 100%;
-    color: white;
-    background: $primary;
-    border: none;
-    padding: 0;
-}
+//     //     max-width: $ms-12;
+//     @include media-breakpoint-up(md) {
+//         height: $rvr-8;
+//         padding-left: 0;
+//     }
+// }
+
+// .head-row {
+//     display: flex;
+//     align-items: center;
+//     margin-bottom: $rvr-_75;
+// }
+
+// .card-content {}
+
+// .card-row {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+// .card-body {
+//     margin-top: $rvr-1;
+//     margin-left: 0;
+//     padding-left: 0;
+
+//     @include make-col-ready();
+//     @include make-col(6);
+//     @include media-breakpoint-up(md) {
+//         height: $rvr-8;
+//     }
+// }
+
+// .card-list {
+//     @include make-col-ready();
+//     @include make-col(4);
+
+//     list-style: none;
+//     text-indent: 0;
+// }
+
+// .card-head {
+//     margin-bottom: $rvr-3;
+
+//     @include media-breakpoint-up(lg) {
+//         @include make-col-ready();
+//         @include make-col(12);
+
+//         margin-bottom: $rvr-2;
+//     }
+// }
+
+// h4.card-display-text {
+//     font-weight: 600;
+//     font-style: italic;
+// }
+
+// .card-head.body-text {
+//     padding-bottom: 0;
+//     padding-left: 0;
+// }
+
+// .toggle-content {
+//     @include v-_5;
+// }
+
+// a.btn.btn-do {
+//     border-radius: 100%;
+//     color: white;
+//     background: $primary;
+//     border: none;
+//     padding: 0;
+// }
 
 // .btn-content {
 //     height: $ms-3;
@@ -3032,15 +2556,11 @@ a.btn.btn-do {
 //     box-sizing: content-box;
 // }
 
-
-
-
-
 //
 // about- me panel
 // ==========================================================================
 
-#about-intro{
+#about-intro {
     height: 110vh;
 }
 
@@ -3052,9 +2572,6 @@ a.btn.btn-do {
 // #about-blocks .display-text{
 //     margin-bottom: $rvr-2;
 // }
-
-
-
 
 // .about-content {
 //     @include media-breakpoint-up(md) {
@@ -3072,15 +2589,16 @@ a.btn.btn-do {
     flex-wrap: wrap;
     justify-content: center;
     padding-right: $ms-_75;
-margin-bottom: $rvr-2;
+    margin-bottom: $rvr-2;
+
     @include media-breakpoint-up(md) {
-        @include make-col-ready();
+        @include make-col-ready;
         @include make-col(10);
+
         margin-left: auto;
         margin-right: auto;
     }
 }
-
 
 // #about-blocks > div.about-content > div:nth-child(4) {
 //     // font-style: italic;
@@ -3091,16 +2609,15 @@ margin-bottom: $rvr-2;
 //     margin-bottom: 0;
 // }
 
-#list{
+#list {
     font-size: $ms-1;
     text-transform: lowercase;
 }
 
-.bullet{
+.bullet {
     color: $tungsten;
     font-size: $ms-_25;
 }
-
 
 .stats .style-svg {
     fill: red;
@@ -3115,7 +2632,7 @@ margin-bottom: $rvr-2;
     flex-direction: column;
     border: $ms--6 solid white;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(4);
 
     padding-left: $ms-1;
@@ -3125,9 +2642,9 @@ margin-bottom: $rvr-2;
 
     // margin-top: $rvr-3;
     @include media-breakpoint-up(md) {
-//         padding-right: 0;
-//         margin-top: 0;
-//         margin-bottom: $rvr-2;
+        //         padding-right: 0;
+        //         margin-top: 0;
+        //         margin-bottom: $rvr-2;
     }
 }
 
@@ -3136,8 +2653,7 @@ margin-bottom: $rvr-2;
     font-weight: 400;
     line-height: 1.33;
     text-align: center;
-
-        letter-spacing: .075rem;
+    letter-spacing: .075rem;
     padding-top: $ms--10;
     padding-bottom: $ms-_15;
     font-family: $font-family-monospace;
@@ -3149,8 +2665,9 @@ margin-bottom: $rvr-2;
 }
 
 .icons-caption {
-                @include make-col-ready();
-                @include make-col(12);
+    @include make-col-ready;
+    @include make-col(12);
+
     margin-bottom: $rvr-2;
     font-weight: 400;
     align-self: flex-start;
@@ -3180,9 +2697,10 @@ margin-bottom: $rvr-2;
     background-size: 0;
     background-repeat: no-repeat;
     background-position: 93% 98%;
-// @include media-breakpoint-up(md) {
-//       background-size: 35%;
-// }
+
+    // @include media-breakpoint-up(md) {
+    //       background-size: 35%;
+    // }
     @include media-breakpoint-up(lg) {
         background-size: 65%;
         background-repeat: no-repeat;
@@ -3191,17 +2709,18 @@ margin-bottom: $rvr-2;
 }
 
 .mobile-subpage {
-    height: 100vh;
+    height: 100%;
     position: absolute;
     z-index: -1;
-    top:  0;
-    left:  0;
+    top: 0;
+    left: 0;
     width: 100%;
     overflow: visible;
-        display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+
     @include media-breakpoint-up(lg) {
         display: none;
     }
@@ -3209,13 +2728,12 @@ margin-bottom: $rvr-2;
 
 .bgarrow {
     opacity: 1;
+
     // background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/profile-small.svg");
     background-image: url(http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 0;
-
-
 
     @include media-breakpoint-up(lg) {
         background-size: cover;
@@ -3230,23 +2748,16 @@ margin-bottom: $rvr-2;
     fill: $tungsten;
 }
 
-
-
-#trend-arrow svg#Layer_1{
+#trend-arrow svg#Layer_1 {
     fill: $tungsten;
     width: 105%;
     margin-left: -3rem;
     margin-top: 5rem;
 }
+
 ///
 // Value Intro Panel
 //
-
-
-
-
-
-
 
 //
 // help cta panel
@@ -3266,15 +2777,13 @@ margin-bottom: $rvr-2;
 
 #help-cta-container .help-cta2 {}
 
-
-
 //
 // Modus Operandi Hyperlinks (Note: Panel-specific styles found in panel sections )
 //================================================================================
 .mo-link-box {
     margin-top: $rvr-3;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(9);
 
     margin-left: auto;
@@ -3284,7 +2793,7 @@ margin-bottom: $rvr-2;
 .mo-links {
     font-family: $font-family-monospace;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 
     display: flex;
@@ -3293,7 +2802,7 @@ margin-bottom: $rvr-2;
 }
 
 .mo-links a {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(6);
 }
 
@@ -3372,42 +2881,66 @@ margin-bottom: $rvr-2;
     margin-left: auto;
 }
 
-  @media (min-width: 576px) {
+@media (min-width: 576px) {
     .container {
-      padding-right: 40px;
-      padding-left: 40px; } }
-  @media (min-width: 768px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 768px) {
     .container {
-      padding-right: 40px;
-      padding-left: 40px; } }
-  @media (min-width: 992px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 992px) {
     .container {
-      padding-right: 40px;
-      padding-left: 40px; } }
-  @media (min-width: 1200px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
     .container {
-      padding-right: 40px;
-      padding-left: 40px; } }
-  @media (min-width: 576px) {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 576px) {
     .container {
-      width: 540px;
-      max-width: 100%; } }
-  @media (min-width: 768px) {
-    .navbar .container {
-      width: 720px;
-      max-width: 100%; }
-      .container{
         width: 540px;
         max-width: 100%;
-        } }
-  @media (min-width: 992px) {
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
     .container {
-      width: 960px;
-      max-width: 100%; } }
-  @media (min-width: 1200px) {
+        width: 540px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
     .container {
-      width: 1140px;
-      max-width: 100%; } }
+        width: 960px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+        max-width: 100%;
+    }
+}
 
 @media (min-width: 1400px) {
     .container {
@@ -3458,7 +2991,7 @@ margin-bottom: $rvr-2;
     }
 }
 
-.container-fluid, .container{
+.container-fluid, .container {
     padding: 0;
 }
 
@@ -3518,9 +3051,10 @@ margin-bottom: $rvr-2;
 .navbar-brand,
 .navbar,
 .navbar a {
-    color: $primary !important;
+    color: $secondary !important;
     font-size: $ms-1;
     text-transform: lowercase;
+
     @include media-breakpoint-up(lg) {
         font-size: $ms-_25;
     }

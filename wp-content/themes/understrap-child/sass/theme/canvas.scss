@@ -12,19 +12,24 @@
 }
 
 
-// panel template bottom image w vert center content
-
-#splash, #areas-splash, #val-splash, #whyme-splash, #whyme-box, #about-splash, #val-intro, #adv-container, #splash-intro, #whyme-intro, #pers-panel, #story, #about-box, #home-cta, #whatido, #do-box{
-
-
+// PANEL VERTICAL STYLES
+// container divs with flex column nested within panels styled using flex-columns with justify flex-end to push images to bottom of divs and justify/center remaining content
+#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash{
     height: 100vh;
+    .container{
+        height: 100vh;
+    }
+}
+
+
+#splash, #areas-splash, #val-splash, #whyme-splash, #whyme-box, #about-splash, #val-intro, #splash-intro, #whyme-intro, #pers-panel, #story, #about-box, #home-cta, #whatido, #do-container{
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
 
 .container{
-    height: 100vh;
     margin-top: auto;
     display: flex;
     justify-content: space-between;
@@ -117,6 +122,12 @@ a.advance-link{
 }
 }
 
+//value splash{
+   #reg-img{
+    margin-left: auto;
+    margin-right: auto;
+   }
+
 //value intro
 #val-intro{
     .page-title{
@@ -171,8 +182,9 @@ margin-bottom:unset;
         margin-bottom: $rvr-2;
     }
 
-    #whyme-container > div:nth-child(5){
+    #whyme-container > div:nth-child(6){
         margin-bottom: unset;
+        font-weight: 600;
     }
     a.learn{
         align-self: flex-end;
@@ -188,19 +200,22 @@ margin-bottom:unset;
 }
 //advance business obj panel
 #adv-content > div.display-text, #adv-container .display-text{
-flex-basis: inherit;
+flex-basis: $rvr-2;
 }
 
 //splash-intro
 #splash-intro{
     .headline{
-        margin-top: auto;
+        margin-top: $rvr-6;
+        flex-basis: $rvr-8;
     }
     .display-text{
         margin-bottom: $rvr-1;
+        flex-basis: $rvr-3;
     }
     #splash-intro-container > div:nth-child(6){
     margin-bottom: auto;
+    flex-basis: $rvr-12;
     }
     a.advance-link{
     margin: 0 auto 0 auto;
@@ -276,13 +291,13 @@ flex-basis: inherit;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height:150vh;
+    height:inherit;
 }
     #about-blocks{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 150vh;
+        height: inherit;
     }
 
     #about-box {
@@ -302,7 +317,7 @@ flex-basis: inherit;
         flex-basis: $rvr-6;
     }
     .about-icons{
-        flex-basis: 50rem;
+        flex-basis: auto;
         margin-bottom: auto;
     }
      .icons-caption{
@@ -317,7 +332,7 @@ flex-basis: inherit;
     }
 
     a.learn{
-    flex-basis: $rvr-1;
+    flex-basis: $rvr-4;
     }
 }
 
@@ -350,7 +365,7 @@ flex-basis: inherit;
 }
 
 #whatido, #whatido .container{
-height: 130vh;
+height: inherit;
 }
 
 #whatido{
@@ -362,21 +377,27 @@ height: 130vh;
         margin-top: auto;
     }
       .headline{
-        flex-basis: $rvr-4;
+        flex-basis: $rvr-8;
         margin-top: inherit;
         margin-bottom: auto;
     }
       .subhead{
         flex-basis: $rvr-4;
-        max-width: $ms-11_5;
+        max-width: $ms-12;
     }
       .sub-list{
         flex-basis: $rvr-2;
     }
+    .block-body{
+        flex-basis: 46rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
        .display-text{
-        max-width: $ms-11_25;
+        max-width: ms(11.65);
+        letter-spacing: -.02rem;
         flex-basis: $rvr-8;
-        flex-grow: 0;
         font-family: $font-family-serif;
         .lead{
             font-weight: 600;
@@ -384,46 +405,197 @@ height: 130vh;
         }
     }
 
-   .display-text:last-of-type{
-        margin-bottom: auto;
-    }
+   // .display-text:last-of-type{
+   //      margin-bottom: auto;
+   //  }
         a.learn{
         flex-basis: $rvr-1;
-        align-self: felx-end;
-        margin-left: auto;
+        align-self: flex-end;
+//         margin-left: auto;
         margin-right: auto;
     }
 }
 
-#do-box{
+//how i do it panel
+
+#do-container{
+   height: inherit;
+   .container{
+height: inherit;
+   }
+#do-row{
+    flex-direction: column;
+}
    .page-title{
         flex-basis: $rvr-6;
         margin-top: auto;
     }
+
+    #do-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: $rvr-18;
+    margin-bottom: $rvr-2;        
+    }
+
       .headline{
-        flex-basis: $rvr-4;
+        flex-basis: $rvr-8;
         margin-top: inherit;
         margin-bottom: auto;
     }
-      .subhead{
+    //   .subhead{
+    //     flex-basis: $rvr-4;
+    // }
+      .sub-list{
         flex-basis: $rvr-4;
     }
-      .sub-list{
-        flex-basis: $rvr-2;
-    }
        .display-text{
-        flex-basis: $rvr-8;
+        flex-basis: $rvr-6;
         flex-grow: 0;
         font-family: $font-family-serif;
     }
-
-   .display-text:last-of-type{
-        margin-bottom: auto;
+    #do-blocks{
+        flex-basis: auto;
     }
-        a.learn{
-        flex-basis: $rvr-1;
-        align-self: felx-end;
-        margin-left: auto;
-        margin-right: auto;
+   // .display-text:last-of-type{
+   //      margin-bottom: auto;
+   //  }
+   a.learn{
+        align-self: flex-end;
+       margin-left: auto;
+       margin-right: auto;
+       margin-bottom: unset;
+       flex-basis: $rvr-9;
+    }
+    a.advance-link{
+        align-self: flex-end;
+        
     }
 }  
+
+//glabal how-i-create-value subpanels (advance, optimize, grow, modernize)
+
+.create-head{
+.row{
+        display: inline-flex;
+        align-items: center;
+        width: 100%;
+    }
+    .create-path, .create-offset {
+        @include make-col-ready();
+        @include make-col(2);
+            h1{
+               margin: 0;
+               padding: 0;
+               letter-spacing: -1rem;
+                }
+            }
+
+    .headline{
+            @include make-col-ready;
+            @include make-col(10);
+            padding-left: $ms-0;
+            margin: unset;
+            max-width: $ms-11;
+             h2 {
+                    font-size: ms(2.8);
+                    font-weight: 400;
+                }
+            }
+    div#head-display-text{
+            @include make-col-ready;
+            @include make-col(10);
+            max-width: 100%;
+            padding-left: 1rem;
+            } 
+            } 
+
+
+
+
+
+
+#advance, #grow, #optimize, #modernize{
+
+    .create-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .page-title   {                    @include make-col-ready();
+                    @include make-col(12);
+                    flex-basis: $rvr-2;  }
+    .create-head.row  {
+                            @include make-col-ready();
+                    @include make-col(12);
+        display: inline-flex;
+        align-items: center;
+        flex-basis: $rvr-8;  
+        }
+        .create-head{
+            flex-basis: $rvr-8;
+        }
+    .display-text {flex-basis: $rvr-6;  }
+    .block        {flex-basis: $rvr-2;  }
+    a.advance-link{flex-basis: $rvr-2;  }
+}
+
+// #grow .display-text{
+//         @include media-breakpoint-up(md) {
+//     }    flex-basis: $rvr-6;
+//         @include media-breakpoint-up(lg) {
+//     }
+//         @include media-breakpoint-up(xl) {
+//     }
+
+// }
+
+
+#scv-diagram{
+    flex-basis: 40rem !important;
+    @include media-breakpoint-up(md) {
+        flex-basis: 44rem !important;
+        margin-left: -3.5rem;
+    margin-right: 3.5rem;
+}
+    @include media-breakpoint-up(lg) {
+}
+    @include media-breakpoint-up(xl) {
+}
+
+}
+#outcomes   {flex-basis: auto;}
+
+#mod-diagram{
+      flex-basis: 35rem;
+        @include media-breakpoint-up(md) {
+     flex-basis: 50rem;
+    }
+        @include media-breakpoint-up(lg) {
+    }
+        @include media-breakpoint-up(xl) {
+    }
+}
+   
+#end-to-end     {flex-basis: auto;}
+
+#mod-content .display-text{
+    flex-basis: $rvr-6;
+}
+
+.page-id-12{
+    .site-main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contact{
+        h1{
+            font-weight: 700;
+            letter-spacing: -.5rem;
+        }
+    }
+    }

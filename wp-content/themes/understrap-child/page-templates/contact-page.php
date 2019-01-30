@@ -82,7 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main" role="main">
 					<section class="container" id="contact">
 						<div class="block" id="contact-content">
-							<div class="headline"><h2>Amet incididunt.</h2></div>
+							<div class="headline"><h1>Contact</h1></div>
 							<div class="display-text">Lorem ipsum pariatur nisi dolor aute cillum adipisicing ut pariatur officia esse sunt eu esse sed qui.</div>
 						</div>
 						<div class="block" id="contact-form"> 

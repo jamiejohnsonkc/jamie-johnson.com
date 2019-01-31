@@ -41,15 +41,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 			
 			<div class="display-text" id="val-callout">I help businesses enable operative marketing programs through five critical paths:</div>
-			<div id="val-links">
-				<ul>
-				<li><a href="#i-advance-business-objectives" title="Strategic Marketing Management"><span class="integer">01</span><span class="val-links-li-content">Advancing Business Objectives</span></a></li>
-				<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><span class="integer">02</span><span class="val-links-li-content">Transcending Competition</span></a></li>
-				<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-modernize-marketing-functions" title="Strategic Marketing Management"><span class="integer">03</span><span class="val-links-li-content">Modernizing Marketing Operations</span></a></li>
-				<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span class="integer">04</span><span class="val-links-li-content">Maximizing Marketing Performance</span></a></li>
-				<li><a href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><span class="integer">05</span><span class="val-links-li-content">Lean Execution</span></a></li>
-			</ul>
-		</div>
+			
+				<div class="links-box">
+				<div class="val-links"><a class="val-link" href="#i-advance-business-objectives" title="Strategic Marketing Management"><div class="integer">01</div>                                             <div class="val-links-li-content">Advancing Business Objectives</div></a></div>
+				<div class="val-links"><a class="val-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-transcend-competition" title="Strategic Marketing Management"><div class="integer">02</div>        <div class="val-links-li-content">Transcending Competition</div></a></div>
+				<div class="val-links"><a class="val-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-modernize-marketing-functions" title="Strategic Marketing Management"><div class="integer">03</div><div class="val-links-li-content">Modernizing Marketing Operations</div></a></div>
+				<div class="val-links"><a class="val-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><div class="integer">04</div>         <div class="val-links-li-content">Maximizing Marketing Performance</div></a></div>
+				<div class="val-links"><a class="val-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-optimize-performance" title="Strategic Marketing Management"><div class="integer">05</div>         <div class="val-links-li-content">Lean Execution</div></a></div>
+			</div>
+
 		<a class="advance-link" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 		</a>

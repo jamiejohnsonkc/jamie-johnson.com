@@ -21,18 +21,13 @@ exit; // Exit if accessed directly.
 					<div class="create-path"><h1>01</h1></div>
 					<div class="headline"><h2>I advance <br>business objectives</h2>
 					</div>
-				<div class="row">
-					<div class="create-offset"></div>
-					<div class="display-text" id="head-display-text">Outcome-Driven marketing designed to enhance business performance</div>
 				</div>
 			</div>
-
-			</div>
-			
+			<div class="display-text">Outcome-Driven marketing designed to enhance business performance</div>
 
 
 			<div class="visual" id="outcomes">
-				<div class="row">
+				<div class="row" id="columns">
 					<div class="block-content">
 						<div class="icon" id="goals">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
@@ -40,7 +35,7 @@ exit; // Exit if accessed directly.
 						<ol><li>business <span class="br"><br></span>goals</li></ol>
 					</div>
 					<div class="delta">
-						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
 						<div class="icon" id="architecture">
@@ -48,7 +43,7 @@ exit; // Exit if accessed directly.
 					<ol start=2><li>marketing <span class="br"><br></span>solutions</li></ol>
 					</div>
 					<div class="delta">
-						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
 						<div class="icon" id="metrics">
@@ -57,13 +52,51 @@ exit; // Exit if accessed directly.
 						<ol start=3><li>performance <span class="br"><br></span>metrics</li></ol>
 					</div>
 					<div class="delta">
-						<div class="delta-vert"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta-right"/></div>
 					</div>
 					<div class="block-content">
 						<div class="icon" id="impact">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
 						</div>
 						<ol start=4><li>business <span class="br"><br></span>impact</li></ol>
+					</div>
+				</div>
+
+
+
+
+				<div class="row" id="rows">
+					<div class="block-content">
+						<div class="icon" id="goals">
+							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
+						</div>
+						<div class="label-wrap"><ol><li>business <span class="br"><br></span>goals</li></ol></div>
+					</div>
+					<div class="delta">
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta-down" class="style-svg delta-down"/></div>
+					</div>
+					<div class="block-content">
+						<div class="icon" id="architecture">
+						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="style-svg architecture"/></div>
+					<div class="label-wrap"><ol start=2><li>marketing <span class="br"><br></span>solutions</li></ol></div>
+					</div>
+					<div class="delta">
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta-down" class="style-svg delta-down"/></div>
+					</div>
+					<div class="block-content">
+						<div class="icon" id="metrics">
+							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
+						</div>
+						<div class="label-wrap"><ol start=3><li>performance <span class="br"><br></span>metrics</li></ol></div>
+					</div>
+					<div class="delta">
+						<div class="delta-horz"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta-down" class="style-svg delta-down"/></div>
+					</div>
+					<div class="block-content">
+						<div class="icon" id="impact">
+							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
+						</div>
+						<div class="label-wrap"><ol start=4><li>business <span class="br"><br></span>impact</li></ol></div>
 					</div>
 				</div>
 			</div>

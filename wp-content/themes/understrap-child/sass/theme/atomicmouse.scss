@@ -263,6 +263,13 @@ img.fam-img {
     // @include v-1;
     line-height: 1.2;
     max-width: $ms-11;
+    @include media-breakpoint-up(md) {
+
+    }
+
+
+    @include media-breakpoint-up(lg) {
+    }
 }
 
 // .expt-content, .expt-menu-horz{
@@ -340,7 +347,16 @@ img.fam-img {
 
     //         border: thin solid $tungsten;
     @include media-breakpoint-up(md) {
-        @include make-col(6);
+        @include make-col(5);
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        background: inherit;
+            // border: $ms--7 solid $tungsten;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
     }
 
 
@@ -349,26 +365,66 @@ img.fam-img {
     }
 }
 
-.menu-icon-text-wrap {
-    margin: 0 auto;
+.expt-menu-icon{
+        @include media-breakpoint-up(sm) {
+    }
+        @include media-breakpoint-up(md) {
+        margin-left: -2rem;
+       
+    }
+        @include media-breakpoint-up(lg) {
+    }
+        @include media-breakpoint-up(xl) {
+    }
+    
 }
 
-.menu-icon-text-wrap .display-text {
-    max-width: $ms-11;
+ #open-expt-overlay-4 .expt-menu-icon{
+            margin-left: -.8rem;
+        }
+
+.menu-icon-text-wrap {
     margin: 0 auto;
-    line-height: $rvr-1_5;
+        @include media-breakpoint-up(sm) {
+    }
+        @include media-breakpoint-up(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+            h3{flex-basis: $rvr-4;}
+            .display-text{flex-basis: $rvr-1; width: ms(9.75);}
+            .body-text{
+                margin-top: auto;
+                flex-basis: 0;
+            }
+            #open-expt-overlay-4 > div.expt-menu-icon{
+                margin-left: 0 !important;
+            }
+    }
+        @include media-breakpoint-up(lg) {
+    }
+        @include media-breakpoint-up(xl) {
+    }
+    
 }
+
+#open-expt-overlay-5{
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
 
 .expt-menu-box h3 {
     font-weight: 400;
-    letter-spacing: .05rem;
-    margin-bottom: $rvr-_75;
+//     letter-spacing: .05rem;
+//     margin-bottom: $rvr-_75;
 }
 
 .expt-menu-box .body-text {
     font-style: italic;
     font-spacing: 0.5rem;
-    margin-bottom: $rvr-2;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .expt-menu-box .body-text:hover {
@@ -1305,23 +1361,43 @@ img.fam-img {
 // value intro panel
 // ==========================================================================
 
-#val-links > ul {
+
+
+.val-links{
+                @include make-col-ready();
+                @include make-col(12);
     margin-top: 0;
-    list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    line-height: $rvr-1_5;
+    font-size: $ms-1;
+    position: relative;
 
-    a {
-        color: #111;
-    }
+   a.val-link{
+width: 100%;
+color: #111;
+}
 
-    span.integer {
+   .integer {
         font-weight: 600;
-        padding-right: $ms-1;
+        display: inline-block;
+        width: $ms-2;
+
+        
     }
 }
 
+.val-links-li-content{
+    margin-left: $ms-2;
+    display: inline-block;  
+}
+
+#val-intro-container > div:nth-child(5) > a > div.integer, #val-intro-container > div:nth-child(5) > a > div.integer{
+padding-right: .025rem;
+}
+
+#val-intro-container > div:nth-child(7) > a > div.integer{
+    padding-right:2.05rem;
+}
 //
 // advancing business objectives panel
 //==================================================
@@ -1342,7 +1418,115 @@ img.fam-img {
 }
 
 
-#outcomes .icon {
+#outcomes{
+    flex-basis: 24rem;
+    @include media-breakpoint-up(sm) {
+}
+    @include media-breakpoint-up(md) {
+    flex-basis: 28rem;
+}
+    @include media-breakpoint-up(lg) {
+}
+    @include media-breakpoint-up(xl) {
+}
+
+}
+
+//visual #rows=================================
+
+.visual #rows{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+
+.block-content {
+    @include make-col-ready;
+    @include make-col(10);
+    width: 100%;
+
+    display: inline-flex;
+    // flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: $rvr-3;
+  @include media-breakpoint-up(md) {
+  margin: inherit;
+  margin-left: 24%;
+  flex-basis: $rvr-4;
+}
+    // align-content: center;
+    // @include media-breakpoint-up(md) {
+    //     flex: 0 0 48%;
+    //     max-width: 48%;
+    //     margin-bottom: $rvr-2;
+    // }
+}
+ .icon {
+                @include make-col-ready();
+                  @include make-col(2);
+                @include media-breakpoint-up(md) {
+                                @include make-col(2);
+                                svg{
+                                    width: 90%;
+                                }
+                }
+              
+}
+.label-wrap{
+                @include make-col-ready();
+                @include make-col(10);
+                padding-left: $ms-3;
+                .br{
+                    display: none;
+                }
+                  @include media-breakpoint-up(md) {
+                    padding-left: $ms-1;
+}
+ ol {
+    text-indent: 0;
+    padding: 0 0 0 $ms-_5;
+    margin-bottom: inherit;
+}
+}
+.delta{
+                @include make-col-ready();
+                @include make-col(12);
+                flex-basis: $rvr-1;
+}
+
+.delta-horz{
+    width: $ms-2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delta svg {
+    .cls-1 {
+        fill: $tungsten;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+}
+
+
+
+//END visual #rows=================================
+
+
+
+
+//visual #columns=================================
+.visual #columns{
+    display: none;
+        @include media-breakpoint-up(lg) {
+    display: block;
+    .icon {
     width: 70%;
 
     @include media-breakpoint-up(md) {
@@ -1350,7 +1534,7 @@ img.fam-img {
     }
 }
 
-#outcomes .row {
+.row {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
@@ -1364,7 +1548,7 @@ img.fam-img {
     }
 }
 
-#outcomes .block-content {
+.block-content {
     @include make-col-ready;
     @include make-col(3);
 
@@ -1380,24 +1564,24 @@ img.fam-img {
     }
 }
 
-#outcomes ol {
+ ol {
     text-indent: 0;
     padding: 0 0 0 $ms-_5;
 }
 
-#outcomes .delta svg {
+.delta svg {
     .cls-1 {
         fill: $tungsten;
     }
 
     @include media-breakpoint-up(md) {}
 }
-
-#outcomes > div > div:nth-child(4) {
-    @include media-breakpoint-up(md) {
-        display: none;
-    }
 }
+}
+
+//=====================================
+
+
 
 .block-content li{
     font-size: $ms-2;

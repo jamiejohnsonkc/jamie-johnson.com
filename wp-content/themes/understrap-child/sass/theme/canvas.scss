@@ -1,6 +1,5 @@
 //mixins placed here to ensure processing prior to @make-col mixins called in css that fallows
 
-
 @mixin make-container {
     padding-right: 0;
     padding-left: 0;
@@ -11,90 +10,85 @@
     padding-left: 0;
 }
 
-
 // PANEL VERTICAL STYLES
 // container divs with flex column nested within panels styled using flex-columns with justify flex-end to push images to bottom of divs and justify/center remaining content
-#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash{
+#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash {
     height: 100vh;
-    .container{
+
+    .container {
         height: 100vh;
     }
 }
 
-
-#splash, #areas-splash, #val-splash, #whyme-splash, #whyme-box, #about-splash, #val-intro, #splash-intro, #whyme-intro, #pers-panel, #story, #about-box, #home-cta, #whatido, #do-container{
-
+#splash, #areas-splash, #val-splash, #whyme-splash, #whyme-box, #about-splash, #val-intro, #splash-intro, #whyme-intro, #pers-panel, #story, #about-box, #home-cta, #whatido, #do-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
+    .container {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 
-.container{
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
+    .headline {
+        flex-basis: $rvr-7;
+        margin-top: auto;
+        margin-bottom: unset;
+    }
 
+    .subhead {
+        flex-basis: $rvr-2;
+    }
 
+    .display-text {
+        @include make-col-ready;
+        @include make-col(12);
 
-.headline{
-    flex-basis: $rvr-7;
-    margin-top: auto;
-    margin-bottom: unset;
-}
+        flex-basis: $rvr-2;
+    }
 
-.subhead{
-    flex-basis: $rvr-2;
-}
+    .hero-img-mobile {
+        height: $rvr-12;
+        display: flex;
+        align-self: flex-end;
 
-.display-text{
-                @include make-col-ready();
-                @include make-col(12);
-    flex-basis: $rvr-2;
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
 
-}
-
-.hero-img-mobile{
-    height: $rvr-12;
-    display: flex;
-    align-self: flex-end;
-    @include media-breakpoint-up(lg) {
-        display: none;
+    .hero-img-mobile img {
+        align-self: flex-end;
+        margin: 0 auto;
     }
 }
 
-.hero-img-mobile img{
-align-self: flex-end;
-margin: 0 auto;
-}
-
-}
-
-
-.splash-1{
+.splash-1 {
     font-family: $font-family-serif;
     font-style: italic;
     font-size: $ms-2_5;
-        flex-basis: $rvr-1;
+    flex-basis: $rvr-1;
 }
-.splash-2{
-  
+
+.splash-2 {
     @include display-3;
+
     margin-top: $rvr-2;
     line-height: $rvr-2;
     flex-basis: $rvr-1;
     margin-bottom: auto;
 }
 
-.callout{
-flex-basis: $rvr-1;
-font-size: $ms-2;
-font-family: $font-family-serif;
-font-style: italic;
+.callout {
+    flex-basis: $rvr-1;
+    font-size: $ms-2;
+    font-family: $font-family-serif;
+    font-style: italic;
 }
 
-a.advance-link{
+a.advance-link {
     text-transform: uppercase;
     letter-spacing: .075rem;
     font-weight: 400;
@@ -103,260 +97,309 @@ a.advance-link{
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
-
 }
-
 
 //mobile background image panels
-#whatido, #pers-panel, #whyme-box{
+#whatido, #pers-panel, #whyme-box {
     position: relative;
 }
-
 
 //panel-specific adjustments
 
 //all splash pages
-#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash{
-    .container{
-    text-align: center;
-}
+#splash, #areas-splash, #val-splash, #whyme-splash, #about-splash {
+    .container {
+        text-align: center;
+    }
 }
 
 //value splash{
-   #reg-img{
+#reg-img {
     margin-left: auto;
     margin-right: auto;
-   }
+}
 
 //value intro
-#val-intro{
-    .page-title{
-        margin-top: auto;
-        flex-basis: 0;
-        margin-bottom: $rvr-4;
+#val-intro {
+    .page-title {
+        margin-top: $rvr-6;
+        flex-basis: 4rem;
+
+        // margin-bottom: $rvr-4;
+   
     }
-    .headline{
-        margin-top: unset;
+
+    .headline {
+        // margin-top: unset;
+        flex-basis: 8rem;
     }
-    .display-text{
-        margin-bottom: $rvr-2;
+
+    .display-text {
+        // margin-bottom: $rvr-2;
+        flex-basis: 8rem;
     }
-    #val-links{
-        margin-bottom: $rvr-4;
+
+    .links-box {
+        // margin-bottom: $rvr-4
+        flex-basis: 22rem;
     }
-    a.advance-link{
+
+    .val-links {
+        margin-bottom: $rvr-1;
+    }
+
+    a.advance-link {
         align-self: unset;
+
+        // margin-bottom: auto;
+        flex-basis: 0;
+    }
+
+    @media-breakpoint-up (md) {
+        .headline {
+            // margin-top: unset;
+            flex-basis: 10rem;
+        }
+
+        .display-text {
+            // margin-bottom: $rvr-2;
+            flex-basis: 10rem;
+        }
+    }
+}
+
+//home-splash
+#splash {
+    .splash-2 {
+        margin-bottom: unset;
+    }
+
+    .callout {
+        margin-top: $rvr-6;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: auto;
     }
-}
-
-
-
-
-//home-splash 
-#splash{ 
-.splash-2{
-margin-bottom:unset;
-}
-.callout{
-   margin-top: $rvr-6;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: auto; 
-   }
 }
 
 //why me splash
 
 //why me box
- #whyme-box{
-    .page-title{
+#whyme-box {
+    .page-title {
         margin-top: auto;
         flex-basis: $rvr-10;
         margin-bottom: $rvr-4;
     }
-    .headline{
+
+    .headline {
         margin-top: unset;
     }
-    .display-text{
+
+    .display-text {
         margin-bottom: $rvr-2;
     }
 
-    #whyme-container > div:nth-child(6){
+    #whyme-container > div:nth-child(6) {
         margin-bottom: unset;
         font-weight: 600;
     }
-    a.learn{
+
+    a.learn {
         align-self: flex-end;
-       margin-left: auto;
-       margin-right: auto;
-       margin-bottom: unset;
-       flex-basis: $rvr-9;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: unset;
+        flex-basis: $rvr-9;
     }
-    a.advance-link{
+
+    a.advance-link {
         align-self: flex-end;
-        
     }
-}
-//advance business obj panel
-#adv-content > div.display-text, #adv-container .display-text{
-flex-basis: $rvr-2;
 }
 
+//advance business obj panel
+// #adv-content > div.display-text, #adv-container .display-text {
+//     flex-basis: $rvr-6;
+// }
+
 //splash-intro
-#splash-intro{
-    .headline{
+#splash-intro {
+    .headline {
         margin-top: $rvr-6;
         flex-basis: $rvr-8;
     }
-    .display-text{
+
+    .display-text {
         margin-bottom: $rvr-1;
         flex-basis: $rvr-3;
     }
-    #splash-intro-container > div:nth-child(6){
-    margin-bottom: auto;
-    flex-basis: $rvr-12;
+
+    #splash-intro-container > div:nth-child(6) {
+        margin-bottom: auto;
+        flex-basis: $rvr-12;
     }
-    a.advance-link{
-    margin: 0 auto 0 auto;
+
+    a.advance-link {
+        margin: 0 auto 0 auto;
     }
-    .hero-img-mobile{
+
+    .hero-img-mobile {
         height: $rvr-5;
     }
 }
 
 //personal panel
-#pers-panel{
-    .page-title{
+#pers-panel {
+    .page-title {
         margin-top: auto;
         flex-basis: $rvr-1;
     }
-    .headline{
+
+    .headline {
         margin-top: inherit;
         margin-bottom: $rvr-2;
     }
 
-    #pers-container > div:nth-child(5){
+    #pers-container > div:nth-child(5) {
         margin-bottom: auto;
         padding-bottom: $rvr-10;
     }
 }
-#pers-container{
+
+#pers-container {
     // z-index:2;
 }
 
-
 //story panel
-#story{
-    .row{
+#story {
+    .row {
         flex-direction: column;
-    justify-content: space-between;
+        justify-content: space-between;
     }
-    .page-title{
+
+    .page-title {
         flex-basis: $rvr-1;
         margin-top: $rvr-6;
         margin-bottom: $rvr-6;
     }
-     .headline{
+
+    .headline {
         flex-basis: $rvr-1;
         margin-top: $rvr-4;
         margin-bottom: $rvr-4;
     }
-    .display-text{
+
+    .display-text {
         margin-bottom: $rvr-1;
         flex-basis: $rvr-1;
     }
-    a.advance-link{
-    margin: 0 auto 0 auto;
-    flex-basis: $rvr-1;
+
+    a.advance-link {
+        margin: 0 auto 0 auto;
+        flex-basis: $rvr-1;
     }
 
-    #story-container > div > div:nth-child(5){
+    #story-container > div > div:nth-child(5) {
         margin-bottom: auto;
     }
-    a.learn{
-    flex-basis: $rvr-1;
+
+    a.learn {
+        flex-basis: $rvr-1;
     }
 }
 
 //about box{
-    #about-box{
+#about-box {
     height: inherit;
-    }
-    #about-container{
-        height: inherit !important;
-    }
+}
 
-#about-box .container{
+#about-container {
+    height: inherit !important;
+}
+
+#about-box .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height:inherit;
+    height: inherit;
 }
-    #about-blocks{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: inherit;
-    }
 
-    #about-box {
-        .page-title{
+#about-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+}
+
+#about-box {
+    .page-title {
         flex-basis: $rvr-5;
         margin-top: auto;
     }
 
-    .headline{
+    .headline {
         margin-top: unset;
         flex-basis: $rvr-5;
     }
-    .subhead{
+
+    .subhead {
         flex-basis: $rvr-2;
     }
-    .display-text{
+
+    .display-text {
         flex-basis: $rvr-6;
     }
-    .about-icons{
+
+    .about-icons {
         flex-basis: auto;
         margin-bottom: auto;
     }
-     .icons-caption{
+
+    .icons-caption {
         margin-bottom: $rvr-4;
-     }
-.stats{
-    padding-bottom: $rvr-1;
-}
-        a.advance-link{
-    margin: 0 auto 0 auto;
-    flex-basis: $rvr-8;
     }
 
-    a.learn{
-    flex-basis: $rvr-4;
+    .stats {
+        padding-bottom: $rvr-1;
+    }
+
+    a.advance-link {
+        margin: 0 auto 0 auto;
+        flex-basis: $rvr-8;
+    }
+
+    a.learn {
+        flex-basis: $rvr-4;
     }
 }
 
 //home cta
-#home-cta{
-    .page-title{
+#home-cta {
+    .page-title {
         flex-basis: $rvr-10;
         margin-top: auto;
     }
-      .headline{
+
+    .headline {
         flex-basis: $rvr-4;
         margin-top: unset;
     }
-      .subhead{
+
+    .subhead {
         flex-basis: $rvr-1;
     }
-      .sub-list{
+
+    .sub-list {
         flex-basis: $rvr-2;
     }
-        .display-text{
+
+    .display-text {
         flex-basis: $rvr-18;
         margin-bottom: auto;
     }
-        a.learn{
+
+    a.learn {
         flex-basis: $rvr-1;
         align-self: felx-end;
         margin-left: auto;
@@ -364,182 +407,244 @@ flex-basis: $rvr-2;
     }
 }
 
-#whatido, #whatido .container{
-height: inherit;
+#whatido, #whatido .container {
+    height: inherit;
 }
 
-#whatido{
-     .container{
+#whatido {
+    .container {
         width: ms(12);
-     }
-      .page-title{
+    }
+
+    .page-title {
         flex-basis: $rvr-6;
         margin-top: auto;
     }
-      .headline{
+
+    .headline {
         flex-basis: $rvr-8;
         margin-top: inherit;
         margin-bottom: auto;
     }
-      .subhead{
+
+    .subhead {
         flex-basis: $rvr-4;
         max-width: $ms-12;
     }
-      .sub-list{
+
+    .sub-list {
         flex-basis: $rvr-2;
     }
-    .block-body{
+
+    .block-body {
         flex-basis: 46rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-       .display-text{
+
+    .display-text {
         max-width: ms(11.65);
         letter-spacing: -.02rem;
         flex-basis: $rvr-8;
         font-family: $font-family-serif;
-        .lead{
+
+        .lead {
             font-weight: 600;
             font-style: italic;
         }
     }
 
-   // .display-text:last-of-type{
-   //      margin-bottom: auto;
-   //  }
-        a.learn{
+    // .display-text:last-of-type{
+    //      margin-bottom: auto;
+    //  }
+    a.learn {
         flex-basis: $rvr-1;
         align-self: flex-end;
-//         margin-left: auto;
+
+        //         margin-left: auto;
         margin-right: auto;
     }
 }
 
 //how i do it panel
 
-#do-container{
-   height: inherit;
-   .container{
-height: inherit;
-   }
-#do-row{
-    flex-direction: column;
-}
-   .page-title{
+#do-container {
+    height: inherit;
+
+    .container {
+        height: inherit;
+    }
+
+    #do-row {
+        flex-direction: column;
+    }
+
+    .page-title {
         flex-basis: $rvr-6;
         margin-top: auto;
     }
 
-    #do-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: $rvr-18;
-    margin-bottom: $rvr-2;        
+    #do-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: $rvr-18;
+        margin-bottom: $rvr-2;
     }
 
-      .headline{
+    .headline {
         flex-basis: $rvr-8;
         margin-top: inherit;
         margin-bottom: auto;
     }
+
     //   .subhead{
     //     flex-basis: $rvr-4;
     // }
-      .sub-list{
+    .sub-list {
         flex-basis: $rvr-4;
     }
-       .display-text{
+
+    .display-text {
         flex-basis: $rvr-6;
         flex-grow: 0;
         font-family: $font-family-serif;
     }
-    #do-blocks{
+
+    #do-blocks {
         flex-basis: auto;
     }
-   // .display-text:last-of-type{
-   //      margin-bottom: auto;
-   //  }
-   a.learn{
+
+    // .display-text:last-of-type{
+    //      margin-bottom: auto;
+    //  }
+    a.learn {
         align-self: flex-end;
-       margin-left: auto;
-       margin-right: auto;
-       margin-bottom: unset;
-       flex-basis: $rvr-9;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: unset;
+        flex-basis: $rvr-9;
     }
-    a.advance-link{
+
+    a.advance-link {
         align-self: flex-end;
-        
     }
-}  
+}
 
 //glabal how-i-create-value subpanels (advance, optimize, grow, modernize)
 
-.create-head{
-.row{
+.create-head {
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(11);
+        width: inherit;
+    }
+
+
+    .row {
         display: inline-flex;
         align-items: center;
         width: 100%;
     }
+
     .create-path, .create-offset {
-        @include make-col-ready();
-        @include make-col(2);
-            h1{
-               margin: 0;
-               padding: 0;
-               letter-spacing: -1rem;
-                }
+        @include make-col-ready;
+        @include make-col(3);
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            letter-spacing: -.5rem;
+        }
+    }
+
+    .headline {
+        @include make-col-ready;
+        @include make-col(9);
+
+        padding-left: $ms-0;
+        margin: unset;
+        max-width: $ms-11;
+
+        h2 {
+            @include ms-respond(font-size,3.4);
+            font-weight: 400;
+            @include media-breakpoint-up(md) {
+            @include ms-respond(font-size,2.5);
+            line-height: $rvr-2;
             }
+        }
 
-    .headline{
-            @include make-col-ready;
-            @include make-col(10);
-            padding-left: $ms-0;
-            margin: unset;
-            max-width: $ms-11;
-             h2 {
-                    font-size: ms(2.8);
-                    font-weight: 400;
-                }
-            }
-    div#head-display-text{
-            @include make-col-ready;
-            @include make-col(10);
-            max-width: 100%;
-            padding-left: 1rem;
-            } 
-            } 
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            max-width: inherit;
+        }
+    }
 
+    div#head-display-text {
+        @include make-col-ready;
+        @include make-col(10);
 
+        max-width: 100%;
+        padding-left: 1rem;
+    }
+}
 
-
-
-
-#advance, #grow, #optimize, #modernize{
-
-    .create-row{
+#advance, #grow, #optimize, #modernize {
+    
+    .create-row {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 100%;
     }
-    .page-title   {                    @include make-col-ready();
-                    @include make-col(12);
-                    flex-basis: $rvr-2;  }
-    .create-head.row  {
-                            @include make-col-ready();
-                    @include make-col(12);
+
+    .page-title {
+        @include make-col-ready;
+        @include make-col(12);
+        flex-basis: $rvr-6;
+    }
+
+    .create-head.row {
+        @include make-col-ready;
+        @include make-col(12);
+
         display: inline-flex;
         align-items: center;
-        flex-basis: $rvr-8;  
+        flex-basis: $rvr-8;
+         @include media-breakpoint-up(md) {
+            display: flex;
+         }
+    }
+
+    .create-head {
+        flex-basis: $rvr-8;
+        @include media-breakpoint-up(md) {
+            display: flex;
+            direction: row;
+            flex-basis: $rvr-10;
         }
-        .create-head{
-            flex-basis: $rvr-8;
-        }
-    .display-text {flex-basis: $rvr-6;  }
-    .block        {flex-basis: $rvr-2;  }
-    a.advance-link{flex-basis: $rvr-2;  }
+    }
+
+    .display-text {
+        flex-basis: $rvr-6;
+          @include media-breakpoint-up(md) {
+            flex-basis: $rvr-6;
+          }
+    }
+
+    .block {
+        flex-basis: $rvr-2;
+             @include media-breakpoint-up(md) {
+         margin-left: 24%;
+         flex-basis: $rvr-4;
+         }
+    }
+
+    a.advance-link {
+        flex-basis: $rvr-2;
+    }
 }
 
 // #grow .display-text{
@@ -552,50 +657,158 @@ height: inherit;
 
 // }
 
+#outcomes {
+    flex-basis: auto;
+}
 
-#scv-diagram{
-    flex-basis: 40rem !important;
+
+#scv-diagram {
+    flex-basis: 32rem !important;
+    margin-left: -1.5rem;
+    margin-right: 1.5rem;
+
     @include media-breakpoint-up(md) {
-        flex-basis: 44rem !important;
-        margin-left: -3.5rem;
-    margin-right: 3.5rem;
-}
-    @include media-breakpoint-up(lg) {
-}
-    @include media-breakpoint-up(xl) {
+        flex-basis: auto !important;
+       margin-right: auto;
+       margin-left: auto;
+        width: ms(12.5);
+        padding-right: ms(4);
+        margin-bottom: $rvr-2;
+    }
+
+
+    @include media-breakpoint-up(lg) {}
+
+
+    @include media-breakpoint-up(xl) {}
 }
 
-}
-#outcomes   {flex-basis: auto;}
 
-#mod-diagram{
-      flex-basis: 35rem;
-        @include media-breakpoint-up(md) {
-     flex-basis: 50rem;
-    }
-        @include media-breakpoint-up(lg) {
-    }
-        @include media-breakpoint-up(xl) {
-    }
-}
-   
-#end-to-end     {flex-basis: auto;}
 
-#mod-content .display-text{
+#mod-diagram {
+    flex-basis: 35rem;  
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        flex-basis: auto;
+        margin-bottom: $rvr-2;
+    }
+
+
+    @include media-breakpoint-up(lg) {}
+
+
+    @include media-breakpoint-up(xl) {}
+}
+
+#mod-diagram img{
+    width: 100%;
+}
+
+#end-to-end {
+    flex-basis: auto;
+}
+
+#mod-content .display-text {
     flex-basis: $rvr-6;
 }
 
-.page-id-12{
-    .site-main{
+.page-id-12 {
+    .site-main {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    #contact{
-        h1{
+
+    #contact {
+        h1 {
             font-weight: 700;
             letter-spacing: -.5rem;
         }
     }
+}
+
+#advance{
+    #adv-content > div.display-text{
+            @include media-breakpoint-up(md) {
+        }        flex-basis: $rvr-4;
+            margin-left: 24%;
+            @include media-breakpoint-up(lg) {
+        }
+            @include media-breakpoint-up(xl) {
+        }
     }
+}
+
+#expt{
+        @include media-breakpoint-up(sm) {
+    }
+        @include media-breakpoint-up(md) {
+
+    .expt-intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 0;
+        padding-right: 0;
+    }
+       .expt-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        .headline{
+        max-width: $ms-12;
+        flex-basis: $rvr-6;
+    } 
+    .display-text{
+           flex-basis: $rvr-6;
+    } 
+    .expt-menu-horz{
+        flex-basis: auto;
+    }
+ 
+    .menu-icon-text-wrap{
+        h3{
+        font-size: $ms-1_5;
+        line-height: $rvr-1_5;
+        }
+         @include media-breakpoint-up(md) {
+            max-width: ms(10.6);
+            text-align: left;
+             margin-left: auto;
+                         margin-right: auto;
+
+         }
+        .display-text{
+                    @include media-breakpoint-up(sm) {
+                }
+                    @include media-breakpoint-up(md) {
+                         @include display-5;
+                         max-width: ms(10.6);
+                         text-align: left;
+                         margin-left: auto;
+                         margin-right: auto;
+                            
+                }
+                    @include media-breakpoint-up(lg) {
+                }
+                    @include media-breakpoint-up(xl) {
+                }
+
+        }
+
+    }
+        .display-text{}
+    .expt-menu-horz{}
+    }
+
+
+
+        @include media-breakpoint-up(lg) {
+    }
+        @include media-breakpoint-up(xl) {
+    }
+
+}

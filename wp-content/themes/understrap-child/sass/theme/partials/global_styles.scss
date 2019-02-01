@@ -2,8 +2,6 @@
 // GLOBAL & COMBO CSS - COMBINED SELECTORS BROKEN OUT FOR REFERENCE WHILE STYLING
 // ==========================================================================
 
-
-
 // ==========================================================================
 // CONTAINER MEDIA QUERIES
 // ==========================================================================
@@ -44,8 +42,6 @@
     }
 }
 
-
-
 // ==========================================================================
 // global page styles
 // ==========================================================================
@@ -71,21 +67,19 @@
 }
 
 .headline {
-@include v-1;
-@include media-breakpoint-up(md) {
+    @include v-1;
+    @include media-breakpoint-up(md) {
         margin-top: 0;
     }
 }
 
-.headline h2{
+.headline h2 {}
 
-}
-
-.subhead{
+.subhead {
     font-weight: 300;
-  letter-spacing: .05rem;
-  margin-bottom: $rvr-2;
-  text-transform: uppercase;
+    letter-spacing: .05rem;
+    margin-bottom: $rvr-2;
+    text-transform: uppercase;
 }
 
 .display-text {
@@ -101,23 +95,25 @@
 
     font-size: $ms-2;
 
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
 }
+
 .caption {
     font-weight: 400;
 }
 
 .body-text {
     @include body-4;
+
     line-height: $rvr-1_75;
     padding-bottom: $rvr-1;
 }
 
-
-#home-cta .display-text, #help-cta .display-text{
+#home-cta .display-text, #help-cta .display-text {
     @include display-3;
     @include v-1;
+
     line-height: $rvr-2;
 }
 
@@ -180,8 +176,9 @@
 }
 
 .page-title {
-    @include make-col-ready();
+    @include make-col-ready;
     @include make-col(12);
+
     font-size: $ms-1;
     font-weight: 200;
     position: relative;
@@ -194,7 +191,6 @@
 
     @include media-breakpoint-up(md) {}
 }
-
 
 .mo-emph {
     font-family: $font-family-monospace;
@@ -231,7 +227,6 @@
     color: $tungsten;
 }
 
-
 // #adv-head > div > div.headline > h2{
 //     font-size: ms(2.8);
 // }
@@ -244,8 +239,6 @@
     width: 80%;
 }
 
-
-
 .chevup {
     margin-bottom: $rvr-2;
 }
@@ -254,40 +247,43 @@
     height: 90vh;
 }
 
-a.learn{
-    @include make-col-ready();
+a.learn {
+    @include make-col-ready;
     @include make-col(12);
+
     text-transform: uppercase;
     letter-spacing: .075rem;
-    font-weight: 400; 
+    font-weight: 400;
     text-align: center;
     cursor: pointer;
+
     @include v-4;
 }
 
-.adv-link-box{
-    @include make-col-ready();
-                @include make-col(12);
-                display: flex;
-                align-items: center;
+.adv-link-box {
+    @include make-col-ready;
+    @include make-col(12);
+
+    display: flex;
+    align-items: center;
 }
+
 // .page-id-36 a.advance-link, .page-id-5 a.advance-link, {
 
+a.advance-link {
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    font-weight: 400;
+    text-align: center;
+    margin: $rvr-2 auto $rvr-2 auto;
+}
 
-               a.advance-link{
-            
-                text-transform: uppercase;
-                letter-spacing: .075rem;
-                font-weight: 400; 
-                text-align: center;
-                margin: $rvr-2 auto $rvr-2 auto;
-            }
-a.advance-link svg{
+a.advance-link svg {
     fill: none;
-stroke-width: 3.6765;
-stroke-linecap: round;
-stroke-miterlimit: 10;
-   stroke: $primary;
+    stroke-width: 3.6765;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke: $primary;
     width: $ms-2;
 }
 
@@ -312,24 +308,24 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-div#page{
+div#page {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
 
-.wrapper#full-width-page-wrapper{
+.wrapper#full-width-page-wrapper {
     flex: 3 0 auto;
 }
 
-#wrapper-footer{
+#wrapper-footer {
     flex-shrink: 0;
     background: #ffffff;
 }
@@ -345,124 +341,141 @@ div#page{
     flex-grow: 0;
 }
 
-
 // ==========================================================================
 // footer
 // ==========================================================================
-.footer-content{
-                @include make-col-ready();
-                @include make-col(11);
+.footer-content {
+    @include make-col-ready;
+    @include make-col(11);
 }
 
-.scroll-top{
-                // @include make-col-ready();
-                // @include make-col(1);
-                display: none;
-          display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  cursor: pointer; /* Add a mouse pointer on hover */    
-background: $tungsten;
-padding: $ms-_15;
-border-radius: 1rem;
+.scroll-top {
+    // @include make-col-ready();
+    // @include make-col(1);
+    display: none;
+    display: none;
+
+    /* Hidden by default */
+    position: fixed;
+
+    /* Fixed/sticky position */
+    bottom: 20px;
+
+    /* Place the button at the bottom of the page */
+    right: 30px;
+
+    /* Place the button 30px from the right */
+    z-index: 99;
+
+    /* Make sure it does not overlap */
+    border: none;
+
+    /* Remove borders */
+    outline: none;
+
+    /* Remove outline */
+    cursor: pointer;
+
+    /* Add a mouse pointer on hover */
+    background: $tungsten;
+    padding: $ms-_15;
+    border-radius: 1rem;
 }
 
-.scroll-top svg{
+.scroll-top svg {
     width: $ms-3;
 
-    .st0{
-            fill: none;
-    stroke: white;
-    stroke-width: 5;
-
+    .st0 {
+        fill: none;
+        stroke: white;
+        stroke-width: 5;
     }
 }
-
-
 
 // ==========================================================================
 // Misc svg corrections
 // ==========================================================================
 
-
-
-#goals, #metrics, #impact, #outcomes, #architecture{ 
+#goals, #metrics, #impact, #outcomes, #architecture {
     .cls-4, .cls-1, .cls-2, .cls-3 {
-    fill: #111;
-}
-}
-
-.opt-vert-diagram{
-    .cls-2, .cls-12{
-    fill: $tungsten;
-}
-.cls-5, .cls-6, .cls-7, .cls-10{
-    font-weight: 600;
-}
-.cls-3{
-    font-size: $ms-1;
-}
-.cls-6, .cls-10, .cls-3{
-    font-family: $font-family-monospace; 
-}
+        fill: #111;
+    }
 }
 
+.opt-vert-diagram {
+    .cls-2, .cls-12 {
+        fill: $tungsten;
+    }
 
+    .cls-5, .cls-6, .cls-7, .cls-10 {
+        font-weight: 600;
+    }
+
+    .cls-3 {
+        font-size: $ms-1;
+    }
+
+    .cls-6, .cls-10, .cls-3 {
+        font-family: $font-family-monospace;
+    }
+}
 
 // ==========================================================================
 // GLOBAL SPLASH PANEL SETTINGS
 // ==========================================================================Global Splash Panel Settings
 
-
 // ==========================================================================
 // GLOBAL SPLASH-INTRO PANEL SETTINGS
 // ==========================================================================Global Splash Panel Settings
 
+.container.intro {
+    height: 85vh;
+    padding-top: $rvr-3;
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
 
-.container.intro{
-height: 85vh;
-padding-top: $rvr-3;
-margin-top: auto;
-display: flex;
-justify-content: flex-end;
     // align-items: center;
     flex-direction: column;
+
     // flex-basis: height;
-    .headline{
-        flex-basis: $rvr-4; 
+    .headline {
+        flex-basis: $rvr-4;
         margin-bottom: $rvr-2;
-        margin-top: auto; 
-        // margin-bottom: auto; 
-        flex-grow: 0;
-    }
-    .subhead{
-        flex-basis: auto; 
-        flex-grow: 0;
-    }
-    .display-text{
-        flex-basis: auto; 
+        margin-top: auto;
+
         // margin-bottom: auto;
-        // margin-bottom: $rvr-2; 
         flex-grow: 0;
     }
-    .intro-links{
-        flex-basis: auto; 
-        // margin-top: auto; 
+
+    .subhead {
+        flex-basis: auto;
         flex-grow: 0;
     }
-    a.advance-link{
-        flex-basis:auto; 
+
+    .display-text {
+        flex-basis: auto;
+
+        // margin-bottom: auto;
+        // margin-bottom: $rvr-2;
+        flex-grow: 0;
+    }
+
+    .intro-links {
+        flex-basis: auto;
+
+        // margin-top: auto;
+        flex-grow: 0;
+    }
+
+    a.advance-link {
+        flex-basis: auto;
         flex-grow: 0;
         margin-top: $rvr-4;
         margin-bottom: auto;
     }
 }
 
-.container.intro .display-text{
-   // @include display-5;
+.container.intro .display-text {
+    // @include display-5;
 }
-

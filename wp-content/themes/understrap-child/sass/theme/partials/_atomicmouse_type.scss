@@ -14,7 +14,7 @@ p {
 }
 
 h1, .h1 {
-    @include ms-respond(font-size, 6);
+    font-size: $h1-font-size;
     font-weight: 500;
     min-height: 1px;
     line-height: $line-height-0;
@@ -26,7 +26,7 @@ h1, .h1 {
 
 
 h2, .h2 {
-    @include ms-respond(font-size, 2.75);
+    font-size: $h2-font-size;
     font-weight: 500;
     // line-height: $line-height-2;
         letter-spacing: -.05rem;
@@ -59,6 +59,14 @@ h6, .h6 {
     color: unset;
     font-weight: unset;
     font-size: unset;
+}
+
+.tldr{
+    font-family: $font-family-monospace;
+    // padding: 0 $ms-2 0 $ms-2;
+    font-size: ms(-5);
+    line-height: $rvr-10;
+    font-weight: 400;
 }
 
 // Type display classes

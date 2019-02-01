@@ -19,6 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <main class="site-main" id="main" role="main">
 	<article>
 						<?php get_template_part( 'panel-content/panel', 'aboutsplash' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'mygoal' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'backstory' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'personal' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'aboutme-cta' ); ?>

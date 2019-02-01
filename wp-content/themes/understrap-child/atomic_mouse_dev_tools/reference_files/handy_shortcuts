@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
+@include ms-respond(font-size, 2.75);
+
 shift+ctrl+a 		selects first tag and contents
 shift+ctrl+a  + arrow  takes you to the tag
 shift+ctrl+a x2		select first tag, contents and closing tag
@@ -88,3 +91,10 @@ $container-max-widths: (
 NPM
 svgi to analyze svg files
 svgo to minify/prettify svg
+
+
+flywheel window fix:
+close local
+run following in cmd
+del "%AppData%\Local by Flywheel\window-state.json"
+start flywheel

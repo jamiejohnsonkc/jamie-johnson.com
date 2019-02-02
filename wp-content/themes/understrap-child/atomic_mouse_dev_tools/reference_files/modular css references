@@ -1,0 +1,163 @@
+Shared Modular Principles
+These frameworks are more alike than they are different. I see a clear path from OOCSS to BEM to SMACSS. Their evolution represents our industry’s growing experience with performance and writing CSS at scale.
+
+You don’t need to pick just one. Instead, let’s try to define the universal themes of Modular CSS. Let’s see what these frameworks share and keep the best parts.
+
+Modular Elements
+A modular system is composed of these elements:
+
+Module: (aka object, block, or component) a reusable and self-contained pattern. Examples include media object, navigation, and page header.
+
+Child Element: a discrete piece of a module that can’t stand alone. Examples include media object image, navigation tab, and page header logo.
+
+Module Modifier: (aka skin or theme) alters the visual appearance of a module. Examples include left/right aligned media objects, vertical/horizontal navigation.
+
+Modular Categories
+Styles in a modular system can be organized into the following categories:
+
+Base rules are default styles for HTML elements. Examples: a, li, h1 
+
+Layout rules control how modules are laid out, but not visual appearance. Examples: .l-centered, .l-grid, .l-fixed-top  
+
+Modules are visual styles for reusable, self-contained UI components. Examples: .m-profile, .m-card, .m-modal 
+
+State rules are added by JavaScript. Examples: .is-hidden, .is-collapsed, .is-active  
+
+Helper (aka utility) rules are small in scope and independent of modules. Examples: .h-uppercase, .h-nowrap, .h-muted 
+
+Modular Rules
+When writing styles in a modular system, follow these rules:
+
+Don’t use IDs
+Don’t nest CSS deeper than one level
+Add classes to child elements
+Follow a naming convention
+Prefix class names
+
+
+
+
+There are four distinct categories which define the specificity level of a given selector: 
+inline styles, 
+IDs, 
+classes, 
+attributes
+elements
+
+BEM (Blocks Elements & Modifiers)
+.block-name__element--modifier
+
+-names are written in lower case
+-words within names are separated by hyphens( - )
+-elements are delimited by double underscores( __ )
+-modifiers are delimited by double hyphens ( -- )
+
+.lego-man--red
+ .lego-man__head
+ .lego-man__headgear
+ .lego-man__backpack
+ .lego-man__torso
+ .lego-man__legs
+
+in action:
+
+<button class="btn btn--big btn--orange">
+  <span class="btn__price">$9.99</span>
+  <span class="btn__text">Subscribe</span>
+</button>
+
+via sass, this...
+
+.media {
+  ...
+  &--inverter {...}
+  &__image-wrapper {...}
+  &__image {...}
+  &__content {...}
+}
+
+will output this...
+.media {...}
+.media--inverter {...}
+.media__image-wrapper {...}
+.media__image {...}
+.media__content {...}
+
+
+more...
+
+
+
+.link {
+    $self: &;
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+
+#{ $self }.advance{
+	background: red;
+}
+}
+
+equals 
+
+.link {
+  text-transform: uppercase;
+  letter-spacing: .075rem;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer; }
+  .link .link.advance {
+    background: red; }
+
+
+.component {
+  $self: &; // Hey look, it's our new best friend!
+  display: block;
+  max-width: 30rem;
+  min-height: 30rem;
+  // Other styles redacted
+  
+  &--reversed {
+    background: white;
+    border-color: lightgray;
+    
+    // Here, we use $self to get the correct scope
+    #{ $self }__child-element {
+      background: rebeccapurple;
+    }
+  }
+}
+
+
+quals
+
+.component {
+  display: block;
+  max-width: 30rem;
+  min-height: 30rem; }
+  .component--reversed {
+    background: white;
+    border-color: lightgray; }
+    .component--reversed .component__child-element {
+      background: rebeccapurple; }
+
+
+Base rules are default styles for HTML elements like links, paragraphs, and headlines.
+
+Layout rules divide the page into sections, and hold one or more modules together. They only define the layout, not color or typography.
+
+Modules (aka “objects” or “blocks”) are the reusable, modular parts of a design. For example, buttons, media objects, product lists, etc.
+
+State rules describe how modules or layouts look in a particular state. Typically applied or removed with JavaScript. For example, hidden, expanded, active, etc.
+
+Theme rules describe how modules or layouts look when a theme is applied. For example, in Yahoo Mail, you might apply a user theme, which would affect every modules on the page. (This is really specific to apps like Yahoo. Most sites won’t use this category.)
+
+Naming Convention Prefixes
+The next principle he introduced was using prefixes to differentiate between categories of rules. He liked the idea that BEM had a clear naming convention, but he wanted to be able to tell at a glance what type of module he was looking at.
+
+l- is used as a prefix for layout rules: l-inline
+m- is used as a prefix for module rules: m-callout
+is- is used as a prefix for state rules: is-collapsed

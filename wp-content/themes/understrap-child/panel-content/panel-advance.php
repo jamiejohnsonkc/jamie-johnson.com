@@ -23,8 +23,11 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 			</div>
-			<div class="display-text">Outcome-Driven marketing designed to enhance business performance</div>
-
+			<div class="create-block">
+				<div class="row">
+				<div class="create-block-offset"></div>
+			<div class="create-block-content">Outcome-Driven marketing designed to enhance business performance</div>
+</div></div>
 
 			<div class="visual" id="outcomes">
 				<div class="row" id="columns">

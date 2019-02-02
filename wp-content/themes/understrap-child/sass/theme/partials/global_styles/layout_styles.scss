@@ -1,0 +1,148 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.splash-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.intro-panel {}
+
+.business-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cta-panel {}
+
+
+.diagram{
+	margin: $rvr-2 auto;
+}
+
+.diagram {
+	&__vertical {
+		display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    	margin: $rvr-2 auto;
+}
+}
+
+
+
+.diagram__vertical{
+	.diagram-content{
+
+    @include make-row;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    	// margin: $rvr-1 0;
+}
+}
+
+.diagram__horizontal{
+	.diagram-content{
+
+    @include make-row;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    width: 100%;
+    	// margin: $rvr-1 0;
+}
+}
+
+
+.diagram__vertical .icon{
+            @include make-col-ready();
+            @include make-col(2);
+}
+
+
+.diagram-content{ 
+	ol{
+		   @include make-col-ready();
+            @include make-col(10);
+	}
+}
+
+.delta--horz {
+margin: $rvr-1 auto;
+width: $ms-3;
+}
+
+
+.panel {
+    @extend .container;
+}
+
+.panel-fluid {
+    @extend .container-fluid;
+}
+
+.container {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+@media (min-width: 576px) {
+    .panel, .container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
+    .panel, .container {
+        width: 540px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .panel, .container {
+        width: 960px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .panel, .container {
+        width: 1140px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .panel, .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .panel, .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .panel, .container {
+        max-width: 1600px;
+    }
+}

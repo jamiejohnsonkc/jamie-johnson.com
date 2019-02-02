@@ -1,0 +1,62 @@
+// ==========================================================================
+// contact page
+// ==========================================================================
+
+#contact-content.block {
+    @include make-col-ready;
+    @include make-col(12);
+
+    margin-top: $rvr-5;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+#contact-form.block {
+    @include make-col-ready;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+.contact-form-message {
+    padding: $ms-1;
+    margin-bottom: $rvr-2;
+    margin-top: $rvr-2;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form-message#success {
+    background-color: green;
+    border: thin solid green;
+}
+
+.contact-form-message#error {
+    background-color: red;
+    border: thin solid red;
+}
+
+#respond label {
+    font-family: $font-family-sans-serif;
+    width: 100%;
+    margin-bottom: $rvr-1;
+}
+
+.form-control, textarea {
+    font: 300 13.333px Roboto;
+    border-radius: 5px;
+}
+
+#respond > form > input[type="submit"]:nth-child(7) {
+    background: $tungsten;
+    -webkit-appearance: none;
+    border: 1px solid $tungsten;
+    border-radius: 5px;
+    padding: $rvr-_25 $ms-_5;
+    color: $gray-600;
+}

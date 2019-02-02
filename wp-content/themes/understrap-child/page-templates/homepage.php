@@ -19,11 +19,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <main class="site-main" id="main" role="main">
 					<article>
 						<?php get_template_part( 'panel-content/panel', 'splash' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'mygoal' ); ?>	
+						<?php get_template_part( 'panel-content/panel', 'goal' ); ?>	
 						<?php get_template_part( 'panel-content/panel', 'splashintro' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'whatido' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'howidoit' ); ?>		
-						<?php get_template_part( 'panel-content/panel', 'whyme' ); ?>		
+				<!-- 		get_template_part( 'panel-content/panel', 'whyme' ); ?> -->		
 						<?php get_template_part( 'panel-content/panel', 'qualifications' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
 					</article>

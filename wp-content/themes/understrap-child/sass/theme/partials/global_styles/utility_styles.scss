@@ -1,0 +1,47 @@
+
+.tldr{
+    font-family: $font-family-monospace;
+    // padding: 0 $ms-2 0 $ms-2;
+    font-size: ms(-5);
+    line-height: $rvr-10;
+    font-weight: 400;
+}
+
+
+
+ 
+
+// ==========================================================================
+// svg fills
+// ==========================================================================
+
+// business value panel__advancing objectives--horz diagram
+.diagram-content .icon{
+    .cls-4, .cls-1, .cls-2, .cls-3 {
+        fill: $gray-700;
+    }
+}
+
+// business value panel__advancing objectives--horz diagram
+
+.opt-vert-diagram {
+    .cls-2, .cls-12 {
+        fill: $tungsten;
+    }
+
+    .cls-5, .cls-6, .cls-7, .cls-10 {
+        font-weight: 600;
+    }
+
+    .cls-3 {
+        font-size: $ms-1;
+    }
+
+    .cls-6, .cls-10, .cls-3 {
+        font-family: $font-family-monospace;
+    }
+}
+
+.diagram-content .metrics{
+	padding: 0 .5rem;
+}

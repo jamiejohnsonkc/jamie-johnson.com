@@ -1,13 +1,4 @@
 
-
-
-
-// Paragraphs
-//
-// Style p element.
-
-// $paragraph-margin-bottom: $rvr-1, $vr-1;
-
 p {
     line-height: 1.4;
     font-family: $font-family-serif;
@@ -61,13 +52,6 @@ h6, .h6 {
     font-size: unset;
 }
 
-.tldr{
-    font-family: $font-family-monospace;
-    // padding: 0 $ms-2 0 $ms-2;
-    font-size: ms(-5);
-    line-height: $rvr-10;
-    font-weight: 400;
-}
 
 // Type display classes
 @mixin display-1 {

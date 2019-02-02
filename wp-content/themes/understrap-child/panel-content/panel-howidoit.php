@@ -16,9 +16,9 @@ exit; // Exit if accessed directly.
 				<span>how i do it</span>
 			</div>
 			<div class="content" id="do-content"> 
-				<div class="headline"><h2>I Go From End to End &amp;<span class="br"><br></span>Do Everything Between</h2></div>
+				<div class="headline"><h2>I Cover From End to End &amp; All Parts Between</h2></div>
 				<div class="sub-list">leadership | strategy | design | development | ops</div>
-				<div class="display-text">No matter the pursuit, my focus is always on achieving strategic outcomes that drive business forward.</div>
+				<div class="display-text">Whether you're fortune 500 or a small business I can help. If not, I'll help you find someone who can.</div>
 			</div>
 			<div class="row" id="do-blocks">
 						<div class="block-content">

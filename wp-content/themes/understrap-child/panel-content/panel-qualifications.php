@@ -14,12 +14,12 @@ exit; // Exit if accessed directly.
 					<div class="row" id="about-blocks">
 											<div class="page-title">
 						<hr>
-						<span>my qualifications</span>
+						<span>bona fides</span>
 					</div>
 			
 						<div class="headline"><h2>I've been around</h2></div>
-						<div class="subhead"><h3>Do qui non non pariatur nisi adipisicing nostrud in veniam laboris fugiat</h3></div>
-						<div class="display-text">Et consequat exercitation id ea ea do ad laborum pariatur eu cupidatat culpa excepteur velit non nostrud.</div>
+						<div class="subhead"><h3>And I've Got The Scars To Prove It</h3></div>
+						<div class="display-text">From KC to NYC and back. Global leaders to domestic challengers. From seven figure budgets to champagne wishes.</div>
 						<!-- <div class="display-text">I've worked with some of the best, bare scars from some of the worst and gleamed lessons from them all.</div> -->
 					<!-- 	<div class="display-text" id="list">Agencies <span class="bullet">&#9679;</span>  Corporations <span class="bullet">&#9679;</span> Large <span class="bullet">&#9679;</span> Small <span class="bullet">&#9679;</span> Local <span class="bullet">&#9679;</span>  Global <span class="bullet">&#9679;</span>  B2B <span class="bullet">&#9679;</span>  B2C <span class="bullet">&#9679;</span> Ag <span class="bullet">&#9679;</span> CPG Retail</div> -->
 							

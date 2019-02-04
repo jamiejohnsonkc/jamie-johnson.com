@@ -1,16 +1,131 @@
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
+.wrapper{ padding: 0;}
 
-.splash-panel {
+.splash {
+    margin-top: 7vh;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    justify-content: space-around;
+    height: 93vh;
+    text-align: center;
+    h1{
+@extend .headings-line-height;
+    }
+    h2{
+   @extend .display-line-height;
+margin-bottom: $display-margin-bottom;
+    } 
+    h3,{
+@extend .display-line-height;
+margin-bottom: $display-margin-bottom;
+    }
+    p{
+@extend .body-line-height;
+margin-bottom: $body-margin-bottom; 
+    }
 }
 
-.intro-panel {}
+.splash{
+    @extend .container-fluid;
+    @extend .panel-hero__img--background;
+}
+
+
+
+.panel-hero__img--mobile{
+position: absolute;
+bottom: 0;
+left:25%;
+z-index: -1;
+@include media-breakpoint-up(lg) {
+display: none;
+}
+}
+
+.panel.home-page.splash{
+    h1, h2, h3, h4, p{
+        margin-bottom: 0;
+    }
+    h1{
+    margin-top: auto;
+      flex: 0 0 10rem;
+
+    br{
+        display: none;
+    }
+    }
+    h2{
+      flex: 0 0 10rem;
+      line-height: $rvr-2_25;
+
+    }
+    h3{
+      flex: 0 0 6rem;
+    }
+    p:first-of-type{
+        flex: 0 0 10rem;
+        max-width: $ms-10;
+        margin: 0 auto;
+        
+    }
+
+    p:last-of-type{
+          flex: 0 0 1rem;
+        margin-bottom: auto;
+    }
+
+    .link__advance--chevron{
+        flex: 0 0 0;
+    }
+}
+
+.panel.about-me.splash{
+     h1{
+    margin-top: auto;
+    }
+    h1.br{
+        display: none;
+    }
+    h2{
+    margin-bottom: $rvr-1;    
+    }
+    h3{
+    flex: 0 1 $rvr-4;
+    margin-bottom: auto;
+    }
+    .link__advance--chevron{
+        flex: 0 1 0;
+    }
+}
+
+
+
+#wrapper-navbar{
+    positon: fixed;
+    top: 0;
+    height: $rvr-3;
+}
+
+.navbar{
+    padding-left: 5px;
+    padding-right: 5px;
+    @include media-breakpoint-up(sm) {
+    }
+}
+
+.nav-link{
+    padding: 1rem 0;
+       @include media-breakpoint-up(sm) {
+    }
+        @include media-breakpoint-up(md) {
+    }
+        @include media-breakpoint-up(lg) {
+    }
+        @include media-breakpoint-up(xl) {
+    }
+     
+}
+
 
 .business-value {
     display: flex;
@@ -18,69 +133,126 @@
     justify-content: space-between;
 }
 
-.cta-panel {}
-
-
-.diagram{
-	margin: $rvr-2 auto;
-}
-
-.diagram {
-	&__vertical {
-		display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    	margin: $rvr-2 auto;
-}
-}
-
-
-
-.diagram__vertical{
-	.diagram-content{
-
-    @include make-row;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    	// margin: $rvr-1 0;
-}
-}
-
-.diagram__horizontal{
-	.diagram-content{
-
-    @include make-row;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    // justify-content: space-around;
-    width: 100%;
-    	// margin: $rvr-1 0;
-}
-}
-
-
-.diagram__vertical .icon{
-            @include make-col-ready();
-            @include make-col(2);
-}
-
-
-.diagram-content{ 
-	ol{
-		   @include make-col-ready();
-            @include make-col(10);
+.page__header{
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+	display: inline-flex;
+	width: 100%;
+	h2{
+          @include make-col-ready();
+          @include make-col(3);
+          padding-left: 0px;
+          padding-right: 0px;
+	}
+	h3{
+     @include make-col-ready();
+     @include make-col(9);
+     padding-left: 0px;
+     padding-right: 0px; 
+	}
+	h4{
+		@include make-col-ready();
+		@include make-col(12);
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-bottom: $rvr-1;
 	}
 }
 
-.delta--horz {
-margin: $rvr-1 auto;
-width: $ms-3;
+.scroll-top{
+    position: fixed;
+
+    /* Fixed/sticky position */
+    bottom: 30px;
+
+    /* Place the button at the bottom of the page */
+    right: 30px;
+
+    /* Place the button 30px from the right */
+    z-index: 99;
+   }
+
+.diagram {
+    margin: $rvr-2 auto;
 }
 
+.diagram__competitive-advantage{
+@extend .diagram;
+}
+
+.competitive-advantage__svg{
+	width: 100%;
+}
+
+.diagram__modern-marketing{
+	@extend .diagram;
+}
+
+.diagram__end-to-end{}
+
+
+.diagram__objectives {
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: $rvr-2 auto;
+    }
+}
+
+.diagram__objectives--vertical {
+    .diagram-content {
+    @include make-row();
+    margin-left: auto;
+    margin-right: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 90%;
+
+        // margin: $rvr-1 0;
+   
+    }
+}
+
+.diagram__objectives--horizontal {
+    .diagram-content {
+        display: flex;
+        flex-direction: column;
+
+        // align-items: center;
+        // justify-content: space-around;
+
+
+        // margin: $rvr-1 0;
+   
+    }
+}
+
+.diagram__objectives--vertical .icon {
+    @include make-col-ready;
+    @include make-col(2);
+}
+
+.diagram-content {
+    ol {
+        @include make-col-ready;
+        @include make-col(10);
+    }
+}
+
+.modern-marketing-diagram{
+	width: 100%;
+}
+
+.delta--horz {
+    margin: $rvr-1 auto;
+    width: $ms-3;
+}
 
 .panel {
     @extend .container;
@@ -90,59 +262,7 @@ width: $ms-3;
     @extend .container-fluid;
 }
 
-.container {
-    width: 100%;
-    padding-right: 40px;
-    padding-left: 40px;
+.link__advance--chevron, .link__advance--text{
+margin: $rvr-4 auto;
 }
 
-@media (min-width: 576px) {
-    .panel, .container {
-        padding-right: 40px;
-        padding-left: 40px;
-    }
-}
-
-@media (min-width: 768px) {
-    .navbar .container {
-        width: 720px;
-        max-width: 100%;
-    }
-
-    .panel, .container {
-        width: 540px;
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .panel, .container {
-        width: 960px;
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .panel, .container {
-        width: 1140px;
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .panel, .container {
-        max-width: 1200px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .panel, .container {
-        max-width: 1400px;
-    }
-}
-
-@media (min-width: 1900px) {
-    .panel, .container {
-        max-width: 1600px;
-    }
-}

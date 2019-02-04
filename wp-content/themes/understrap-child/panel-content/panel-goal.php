@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 
 
-<section class="container-fluid" id="goals">
+<article class="container-fluid" id="goals">
 <div class="container" id="goals-container">
 <div class="page-title">
 				<hr>
@@ -87,4 +87,4 @@ exit; // Exit if accessed directly.
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 </a>
 </div>
-</section>
+</article>

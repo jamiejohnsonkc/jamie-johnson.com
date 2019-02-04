@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="brands">
+<article class="container-fluid" id="brands">
 
 				
 <div class="container" id="brands-container">
@@ -67,6 +67,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 			</a></div>
 		</div>
-</section><!-- cover end -->
+</article><!-- cover end -->
 
 					

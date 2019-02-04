@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;  //Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="webdev">
+<article class="container-fluid" id="webdev">
 	<div class="exptnav-vert">
 		
 		<ul class="expt-menu">
@@ -102,4 +102,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 	
 	
-</section><!-- cover end --> -->
+</article><!-- cover end --> -->

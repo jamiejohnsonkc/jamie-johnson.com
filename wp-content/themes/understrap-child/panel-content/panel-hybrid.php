@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="container-fluid" id="hybrid">
+<article class="container-fluid" id="hybrid">
 	
 		
 
@@ -109,4 +109,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- 		</div> --><!-- .row end -->
 			</div><!-- Container end -->
 			</div>
-			</section><!-- cover end -->
+			</article><!-- cover end -->

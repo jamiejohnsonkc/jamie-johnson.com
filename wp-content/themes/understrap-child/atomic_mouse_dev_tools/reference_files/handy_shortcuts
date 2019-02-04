@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+when using a "$" in a snippet you have to place a \ in front of it (referred to as "escaping") so if you want
+
+$h1-font-size you snippet it as   \$h1-font-size
 
 @include ms-respond(font-size, 2.75);
 

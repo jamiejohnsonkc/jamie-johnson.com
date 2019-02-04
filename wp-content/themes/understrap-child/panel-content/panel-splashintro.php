@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 	
-	<section class="container-fluid intro evo" id="splash-intro">
+	<article class="container-fluid intro evo" id="splash-intro">
 		<div class="container" id="splash-intro-container">
 					<div class="page-title">
 				<hr>
@@ -37,4 +37,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</a>
 			<div class="hero-img-mobile" id="evo-small-img"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="profile pic" id="evo-small"></div>
 		</div>
-	</section>
+	</article>

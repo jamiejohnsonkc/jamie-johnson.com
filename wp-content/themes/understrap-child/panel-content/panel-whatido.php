@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid bgarrow" id="whatido">
+<article class="container-fluid bgarrow" id="whatido">
 	<div class="mobile-subpage" id="trend-arrow">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
 	</div>
@@ -38,4 +38,4 @@ exit; // Exit if accessed directly.
 			
 	<!-- </div> -->
 	</div>
-</section><!-- Container end -->
+</article><!-- Container end -->

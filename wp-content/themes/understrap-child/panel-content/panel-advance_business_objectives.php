@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* Panel Advancing Business Objectives
 *
 * @package understrap
 */
@@ -8,14 +8,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="panel business-value objectives"> <!-- CONTAINER -->
-	<h1 class="page__title"> how i create value for businesses</h1>
+<article class="panel business-value objectives"> <!-- CONTAINER -->
+	<div class="row">
+	<h1>how i create value for businesses</h1>
 	<hgroup class="page__header"><!-- ROW -->
-		<h2>02</h2><!-- COL -->
+		<h2>01</h2><!-- COL -->
 		<h3>I advance <br>business objectives</h3><!-- COL -->
-		<title class="header__title">Outcome-Driven marketing designed to enhance business performance</title>
+		<h4>Outcome-Driven marketing designed to enhance business performance</h4>
 	</hgroup>
-	<figure class="diagram__vertical">
+	<figure class="diagram__objectives--vertical">
 		<div class="diagram-content">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
 			<ol><li>business <span class="br"><br></span>goals</li></ol>
@@ -37,10 +38,11 @@ exit; // Exit if accessed directly.
 		</div>
 	</figure>
 	<p>I combine business acumen and design thinking with two decades of strategic marketing expertise to create marketing that achieves business objectives. <!-- I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes. --></p>
-	<a class="link__advance" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
-</section>
+</div>
+</article>
 <!-- <div class="block-content">
 <div class="icon" id="architecture">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="style-svg architecture"/></div>

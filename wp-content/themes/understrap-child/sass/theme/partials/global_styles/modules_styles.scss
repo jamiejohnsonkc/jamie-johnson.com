@@ -1,83 +1,137 @@
+
+.navbar-dark .navbar-brand a, .navbar-dark .navbar-nav .nav-link{
+	color: $primary;
+	text-transform: lowercase;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+	color: $primary;
+	font-weight: 600;
+}
+
+.custom-logo-link{
+	width: $ms-5;
+}
+
+svg#bug{
+	.st0{
+	fill: $primary;
+	width: $ms-5;
+	// height: $rvr-5;
+}
+}
+
+.navbar-toggler{
+	background: $primary;
+}
+
+
+
 button:focus {
     outline: $primary;
 }
 
 .link{
-    color: $link-color;
+	width: $ms-4;
+	stroke: $link-color; 
+	svg#Layer_1{
+stroke: $link-color; 
+	}
+}
+
+a.link{
+   &__advance{
+ 	&--chevron{
+    cursor: pointer;
+	width: $ms-4;
+		.st0{
+			stroke: $link-color;
+		}
+	}
+	}
+	}
+
+.link{
+   &__advance{
+ 	&--text{
+ 	color: $link-color;
     font-weight: 400;
     cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: .075rem;
+	width: inherit;
+	}
+	}
+	}
 
-&__advance{
-color: $link-color;
-font-weight: 400;
-cursor: pointer;
-text-transform: uppercase;
-letter-spacing: .075rem;
-}
-}
-
+.link__advance--chevron{}
 
 .page__title{
-	font-size: $h3-font-size;
+	font-size: $h1-font-size;
 	font-weight: 300;
 	font-family: $font-family-serif;
-		font-style: italic;
+	font-style: italic;
 }
 
+
 .page__header{
-    @include make-row();
-	display: inline-flex;
-	width: 100%;
 	align-items: center;
-
-
 	h2{
-          @include make-col-ready();
-          @include make-col(3);
-          font-size: ms(6.15);
+          font-size: ms(6.5);
           letter-spacing: -.75rem;
           padding: 0;
+          margin-left: -1rem;
+          margin-right: 1rem;
 
 	}
 	h3{
-        @include make-col-ready();
-        @include make-col(9);
         letter-spacing: -.05rem;
-		font-size: ms(3.2);
-		line-height: $rvr-2;
-		padding-right: 0;
+		font-size: ms(3.9);
+		line-height: $rvr-1_75;
+		padding-right: ms(1);
 		
-	}
+	} 
+	h4{
+		@extend .display-line-height;
+		font-size:$display-3-font-size;
+		color: $display-color;
+		font-family: $display-font-family;
+		font-weight: $display-font-weight;
+		margin-bottom: $display-margin-bottom;
 }
-
+}  
 
     .delta--down {
         fill: $secondary;
     }
+ 
 
-.diagram__vertical .diagram-content{
-	li{
-		font-size: ms(2.25);
-        padding-right: 0;
-		}
-		ol{
-			margin-block-end: 0px;
-			margin-block-start: 0px;
-			padding-inline-start: $ms-4;
-			}
-		
-	.br{
-		display: none;
-		}
-		.icon{
-			padding: 0;
-		}
-.cls-1{
-	fill: $secondary;
-}
+
+.scroll-top{
+
+    /* Make sure it does not overlap */
+    border: none;
+
+    /* Remove borders */
+    outline: none;
+
+    /* Remove outline */
+    cursor: pointer;
+
+    /* Add a mouse pointer on hover */
+    background: $tungsten;
+    padding: 1rem .75rem 1rem 0.75rem;
+    border-radius: .25rem;
 }
 
+.scroll-top svg {
+    width: ms(2.5);
 
-
+    .st0 {
+        fill: none;
+        stroke: white;
+        stroke-width: 5;
+    }
+}
 
 

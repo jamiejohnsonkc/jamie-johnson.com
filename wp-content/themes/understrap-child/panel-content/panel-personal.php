@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="pers-panel">
+<article class="container-fluid" id="pers-panel">
 <!-- <div class="mobile-subpage" id="fam-container">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/famv2.jpg" alt="" id="fam-img"/>
 	</div> -->
@@ -35,5 +35,5 @@ exit; // Exit if accessed directly.
 
 	</div>
 	<!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/famv2.jpg" alt="" class="fam-img"/> --><div class="hero-img-mobile" id="fam-container"><img src="/wp-content/uploads/2019/01/famv2.jpg" alt="profile pic" id="fam-img"></div>
-</section><!-- Container end -->
+</article><!-- Container end -->
 

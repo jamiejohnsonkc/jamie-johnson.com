@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* Panel Modernize marketing Operations
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="modernize">
+<article class="container-fluid" id="modernize">
 	<!-- 	<div class="row"> -->
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="mod-container">
@@ -38,4 +38,4 @@ exit; // Exit if accessed directly.
 			</a>
 		</div>
 	</div>
-		</section>
+		</article>

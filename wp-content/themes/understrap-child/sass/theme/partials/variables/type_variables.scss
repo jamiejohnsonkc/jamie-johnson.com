@@ -21,14 +21,14 @@ $font-weight-black:         700;
 // Headings Base Styles
 // ==========================================================================
 
-$h1-font-size:              $ms-7;
+$h1-font-size:              $ms-3;
 $h2-font-size:              $ms-4;
-$h3-font-size:              $ms-2_5;
-$h4-font-size:              $ms-1;
-$h5-font-size:              $ms-_75;
-$h6-font-size:              $ms-_25;
+$h3-font-size:              $ms-5;
+$h4-font-size:              $ms-6;
+$h5-font-size:              $ms-7;
+$h6-font-size:              $ms-8;
 
-$headings-margin-bottom:    $rvr-2;
+$headings-margin-bottom:    $rvr-4;
 $headings-font-family:      inherit;
 $headings-font-weight:      500;
 $headings-color:            inherit;
@@ -36,33 +36,36 @@ $headings-color:            inherit;
 // ==========================================================================
 // Body Text Base Styles
 // ==========================================================================
-
-$body-1-font-size:          $ms-_75;
-$body-2-font-size:          $ms-1;
-$body-3-font-size:          $ms-1_5;
-$body-4-font-size:          $ms-3;
-$body-5-font-size:          $ms-4;
-$body-6-font-size:          $ms-5;
+$body-_5-font-size:			$ms-_5;
+$body-_75-font-size:		$ms-_75;
+$body-1-font-size:         	$ms-1;
+$body-2-font-size:          $ms-2;
+$body-3-font-size:          $ms-3;
+$body-4-font-size:          $ms-4;
+$body-5-font-size:          $ms-5;
+$body-6-font-size:          $ms-6;
                             
 $body-font-family:          $font-family-serif;
 $body-font-weight:          300;
 $body-color:                inherit;
+$body-margin-bottom:		$rvr-1;
 
 // ==========================================================================
 // Display Text Base Styles
 // ==========================================================================
 
-$display-1-font-size:       $ms-_5; 
-$display-2-font-size:       $ms-_75;
-$display-3-font-size:       $ms-1;
-$display-4-font-size:       $ms-2;
-$display-5-font-size:       $ms-3;
-$display-6-font-size:       $ms-4;
-$display-7-font-size:       $ms-5;
+$display-1-font-size: 		$ms-1;     
+$display-2-font-size: 		$ms-2;     
+$display-3-font-size: 		$ms-3;     
+$display-4-font-size: 		$ms-4;     
+$display-5-font-size: 		$ms-5;     
+$display-6-font-size:       $ms-6;
+$display-7-font-size:       $ms-7;
                             
 $display-font-family:       inherit;
 $display-color:             inherit;
-
+$display-font-weight:		300;
+$display-margin-bottom:		$rvr-2;
 
 // ==========================================================================
 // Misc Text Elements Base Styles
@@ -70,9 +73,6 @@ $display-color:             inherit;
 $lead-font-size:            $ms-2;
 $lead-font-weight:          400;
 $link-color:				$secondary;
-
-
-
 
 
 

@@ -17,8 +17,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="full-width-page-wrapper">
 <main class="site-main" id="main" role="main">
-					<article>
-						<?php get_template_part( 'panel-content/panel', 'splash' ); ?>
+					<section>
+						<?php get_template_part( 'panel-content/panel', 'homepage__splash' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'goal' ); ?>	
 						<?php get_template_part( 'panel-content/panel', 'splashintro' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'whatido' ); ?>
@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<!-- 		get_template_part( 'panel-content/panel', 'whyme' ); ?> -->		
 						<?php get_template_part( 'panel-content/panel', 'qualifications' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
-					</article>
+					</section>
 </main><!-- #main -->
 <div class="scroll-top" id="scroll-up" onclick="topFunction()"><a href="" title=""><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevup.svg" alt="" class="style-svg" id="scroll-top"/></a></div>
 </div><!-- Wrapper end -->

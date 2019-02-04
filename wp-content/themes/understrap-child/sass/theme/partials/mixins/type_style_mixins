@@ -1,0 +1,40 @@
+// @mixin display-text(){
+// @extend .display-line-height;
+// font-size:$display-3-font-size;
+// color: $display-color;
+// font-family: $display-font-family;
+// font-weight: $display-font-weight;
+// margin-bottom: $display-margin-bottom;	
+// }
+
+// @mixin headings-text(){
+// @extend .headings-line-height;
+// font-size:$h1-font-size;
+// color: $headings-color;
+// font-family: $headings-font-family;
+// font-weight: $headings-font-weight;
+// margin-bottom: $headings-margin-bottom;	
+// }
+
+// @mixin body-text(){
+// @extend .body-line-height;
+// font-size:$body--font-size;
+// color: $body-color;
+// font-family: $body-font-family;
+// font-weight: $body-font-weight;
+// margin-bottom: $body-margin-bottom;	
+// }
+
+
+// // $headings-font-family  
+// // $headings-font-weight  
+// // $headings-color 
+// // $headings-margin-bottom
+
+
+// // $body-font-family
+// // $body-font-weight
+// // $body-color      
+
+// // $display-font-family
+// // $display-color      

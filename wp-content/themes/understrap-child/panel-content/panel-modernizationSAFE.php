@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="i-modernize-marketing-functions">
+<article class="container-fluid" id="i-modernize-marketing-functions">
 	<!-- 	<div class="row"> -->
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="mod-container">
@@ -67,4 +67,4 @@ exit; // Exit if accessed directly.
 	</div>
 </div>
 
-</section><!-- Container end -->
+</article><!-- Container end -->

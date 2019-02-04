@@ -4,7 +4,6 @@ html {
 }
 
 body {
-    display: flex;
     height: 100%;
     // flex-direction: column;
     // height: 100vh;
@@ -17,44 +16,50 @@ html [type=button] {
     appearance: none;
 }
 
-p {
-    line-height: 1.4;
-    font-family: $font-family-serif;
-}
+// p {
+//     line-height: 1.4;
+//     font-family: $font-family-serif;
+//     color: $body-color;
+// }
 
-h1, .h1 {
-    font-size: $h1-font-size;
-    font-weight: 600;
-    min-height: 1px;
-    line-height: $line-height-0;
-    letter-spacing: -.05rem;
+// h1, .h1 {
+//     font-size: $h1-font-size;
+//     font-weight: 600;
+//     min-height: 1px;
+//     line-height: $line-height-0;
+//     letter-spacing: -.05rem;
 
-}
+// }
 
 
-h2, .h2 {
-    font-size: $h2-font-size;
-    font-weight: 500;
-    letter-spacing: -.05rem;
+// h2, .h2 {
+//     font-size: $h2-font-size;
+//     font-weight: 500;
+//     letter-spacing: -.05rem;
     
-}
+// }
 
-h3, .h3 {
-    font-size: $h3-font-size;
-        line-height: $rvr-1_75;
-        letter-spacing: .075rem;
-} 
+// h3, .h3 {
+//     font-size: $h3-font-size;
+//         line-height: $rvr-1_75;
+//         letter-spacing: .075rem;
+// } 
 
-h4, .h4 {
-    font-size: $h4-font-size;
-}
+// h4, .h4 {
+//     font-size: $h4-font-size;
+// }
 
-h5, .h5 {
-    font-size: $h5-font-size;
-}
+// h5, .h5 {
+//     font-size: $h5-font-size;
+// }
 
-h6, .h6 {
-    font-size: $h6-font-size;
+// h6, .h6 {
+//     font-size: $h6-font-size;
+// }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .link{
@@ -68,9 +73,6 @@ h6, .h6 {
 }
 
 section{
-    margin-top: $rvr-6;
-    margin-bottom: $rvr-6;
-
 }
 
 header{
@@ -89,9 +91,82 @@ figure{}
 
 .row{}
 
-
 // .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .display-7 {
 //     color: unset;
 //     font-weight: unset;
 //     font-size: unset;
 // }
+.panel,.container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+@media (min-width: 300px){
+    .panel, .container{
+    width: 320px;
+    max-width: 100%
+    }
+    .navbar .container{
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 576px) {
+    .panel, .container {
+       
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .container {
+        width: 720px;
+        max-width: 100%;
+    }
+
+    .panel, .container {
+        width: 540px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .panel, .container {
+        width: 960px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .panel, .container {
+        width: 1140px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .panel, .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .panel, .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .panel, .container {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 3000px){
+.navbar .container {
+        width: 2560px;
+        max-width: 100%;
+    }
+}

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="mobile-subpage" id="shoes-container">
 		<!-- <div class="sticky-container" id="sticky-shoes"> --><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes-small.jpg" alt="" id="shoes-img"/>
 	</div><!-- </div> -->
-<section class="container-fluid" id="about-splash">
+<article class="container-fluid" id="about-splash">
 	
 		<!-- 	<div class="row"> -->
 	
@@ -28,8 +28,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 				<!-- 		</div> --><!-- .row end -->
 
-</section><!-- cover end -->
-					<section class="container intro" id="about-intro">
+</article><!-- cover end -->
+					<article class="container intro" id="about-intro">
 	<div class="headline"><h2>About Me Intro/Summary</h2></div>
 	<div class="display-text">Combining frameworks, technology and operations to effect marketing that behaves and performs like a business function and less of an administrative activity.</div>
 	
@@ -49,4 +49,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 </a>
 
-</section>	
+</article>	

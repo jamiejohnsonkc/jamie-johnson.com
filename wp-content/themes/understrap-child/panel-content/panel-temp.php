@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="gap"></div>
-<section class="container-fluid" id="brands">
+<article class="container-fluid" id="brands">
 
 				
 <div class="container" id="brandscontainer">
@@ -37,6 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			</div><!-- Container end -->
 		</div>
-</section><!-- cover end -->
+</article><!-- cover end -->
 
 					

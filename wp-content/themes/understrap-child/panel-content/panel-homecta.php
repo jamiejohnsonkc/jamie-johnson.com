@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cover-container" id="home-cta">
+<article class="cover-container" id="home-cta">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<div class="container" id="home-cta-container">
 	
@@ -25,4 +25,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 		</div><!-- Container end -->
 	</div>
-				</section><!-- cover end -->
+				</article><!-- cover end -->

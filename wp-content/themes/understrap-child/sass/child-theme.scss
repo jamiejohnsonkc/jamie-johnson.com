@@ -1,6 +1,5 @@
 
 @import "theme/partials/3rd_party_imports/fontface_imports"; // <--------- Loads here to ensure @fontface placement at front of css
-// @import "theme/partials/functions/vertical_rhythm_functions";
 // @import "node_modules/modularscale-sass/stylesheets/_modularscale.scss";
 // @import "node_modules/mathsass/dist/math";
 @import "theme/partials/controls/vertical_rhythm_controls";
@@ -9,11 +8,13 @@
 @import "theme/partials/variables/color_variables";
 @import "theme/partials/variables/type_variables";
 
-@import "theme/partials/variables/line_height_variables";
+
 // @import "theme/am_theme_partials_import";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
 
 
 @import "assets/bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+@import "theme/partials/variables/line_height_variables";
+@import "theme/partials/mixins/type_style_mixins";
 @import "../src/sass/understrap/understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
 @import "../src/sass/understrap/theme/contact-form7";// <-------- Loads some basic styling for contact form 7 plugin
  
@@ -26,10 +27,10 @@
 // Any additional imported files //
  // @import "theme/devstyles";  // <--------- scratchpad for css templates DELETE BEFORE STAGING
 @import "theme/dev_utilities/canvas"; //<---------------css staging for invididual elements
- // @import "theme/partials/vertical_styles"; 
 @import "theme/partials/global_styles/base_styles";
 @import "theme/partials/global_styles/layout_styles";
 @import "theme/partials/global_styles/modules_styles";
+@import "theme/partials/section_styles/panel_styles";
 @import "theme/partials/global_styles/state_styles";
 @import "theme/partials/global_styles/utility_styles";
 @import "theme/partials/global_styles/global_styles";

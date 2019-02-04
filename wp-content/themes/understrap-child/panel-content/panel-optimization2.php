@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="cover-container arrow" id="optimal-performance">
+<article class="cover-container arrow" id="optimal-performance">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<!-- 	<div class="row"> -->
 	<?php get_template_part( 'navcluster-left' ); ?>
@@ -73,5 +73,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div>
 	</div><!-- Container end -->
-</section><!-- cover end -->
+</article><!-- cover end -->
 					

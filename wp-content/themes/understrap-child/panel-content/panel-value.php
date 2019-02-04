@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="panel name" id="basic-panel">
+<article class="panel name" id="basic-panel">
 	<div class="" id="basic-container">
 		<hgroup class="header__multi-level">
 			<div class="page-title">
@@ -31,7 +31,7 @@ exit; // Exit if accessed directly.
 		</a>
 	</div>
 	</div>
-</section><!-- Container end -->
+</article><!-- Container end -->
 
 		<hgroup class="page__header"><!-- ROW -->
 					<div class="page__header--integer"><h1>01</h1></div><!-- COL -->

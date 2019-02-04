@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="i-optimize-marketing-performance">
+<article class="container-fluid" id="i-optimize-marketing-performance">
 	<!-- 	<div class="row"> -->
 	<!-- <div class="container-fluid" id="hhelp"> -->
 	<div class="container" id="opt-container">
@@ -75,6 +75,6 @@ exit; // Exit if accessed directly.
 	</div>
 </div>
 </div>
-</section><!-- Container end -->
+</article><!-- Container end -->
 
 					

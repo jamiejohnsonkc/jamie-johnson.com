@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="container-fluid" id="cats">
+<article class="container-fluid" id="cats">
 	<div class="container" id="cats-container">
 		<div class="row">
 			<div class="content">
@@ -181,5 +181,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 			</a></div>
 	</div>
-</section>
+</article>
 

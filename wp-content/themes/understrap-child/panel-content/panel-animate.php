@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="container-fluid" id="brands">
+<article class="container-fluid" id="brands">
 
 <div id="overlay">
 	   <div id="o-close">X</div>
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         Pellentesque pulvinar dolor sed faucibus vestibulum. 
       </p>
     </div>
-</section><!-- cover end -->
+</article><!-- cover end -->
 
 
 					

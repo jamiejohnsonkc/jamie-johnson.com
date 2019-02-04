@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div id="gap"></div>
-<section class="container-fluid" id="brands">
+<article class="container-fluid" id="brands">
 	<div class="row">
 		<div class="tempcontainer temp-icon">
 			<div class="row">
@@ -105,4 +105,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a><img class="style-svg flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_72.svg" alt="expt-icon" /><span>messenger</span></a>
 		</div>
 		</div><!-- Container end -->
-		</section><!-- cover end -->
+		</article><!-- cover end -->

@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="cover-container register" id="val-splash">
+<article class="cover-container register" id="val-splash">
 	
 	<!-- 	<div class="row"> -->
 	
@@ -28,9 +28,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 	
 	<!-- 		</div> --><!-- .row end -->
-	</section><!-- cover end -->
+	</article><!-- cover end -->
 	
-	<section class="cover-fluid intro" id="val-intro">
+	<article class="cover-fluid intro" id="val-intro">
 			<div class="container" id="val-intro-container">
 		<div class="page-title">
 				<hr>
@@ -54,4 +54,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 		</a>
 	</div>
-	</section>
+	</article>

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="mobile-subpage" id="brains-container">
 		<!-- <div class="sticky-container" id="sticky-shoes"> --><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" id="brains-img"/>
 	</div><!-- </div> -->
-<section class="container-fluid bgbrains" id="whyme-splash">
+<article class="container-fluid bgbrains" id="whyme-splash">
 	
 		<!-- 	<div class="row"> -->
 	
@@ -27,9 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				
 	
 				<!-- 		</div> --><!-- .row end -->
-</section><!-- cover end -->
+</article><!-- cover end -->
 
-<section class="container intro" id="whyme-intro">
+<article class="container intro" id="whyme-intro">
 	<div class="headline"><h2>I'm qualified</h2></div>
 	<div class="subhead"><h3>Cillum occaecat ullamco ut consectetur anim aute.</h3></div>
 	<div class="display-text">Eiusmod nostrud commodo et dolor consectetur anim aute fugiat dolore.</div>
@@ -50,5 +50,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
 </a>
 
-</section>	
+</article>	
 					

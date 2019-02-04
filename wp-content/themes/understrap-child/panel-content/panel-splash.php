@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="cover-container bgme" id="splash">
+<article class="cover-container bgme" id="splash">
 	
 	<!-- 	<div class="row"> -->
 	
@@ -25,6 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="hero-img-mobile" id="profile-img"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic" id="profile-small"></div>
 	</div>
 
-	</section><!-- cover end -->
+	</article><!-- cover end -->
 	
 	

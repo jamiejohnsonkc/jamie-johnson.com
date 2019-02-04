@@ -1298,18 +1298,8 @@ img.fam-img {
     fill: $gray-700;
 }
 
-#scv-diagram #Layer_1 {
-    .st12, .st13 {
-        stroke: $gray-700;
-    }
-}
-
-#scv-diagram .st0 {
-    stroke: $gray-700;
-}
-
-#scv-diagram {
-    .st8, .st12, .st13 {
+#scv-diagram, #scv-diagram #Layer_1 {
+    .st0, .st8, .st12, .st13 {
         stroke: $gray-700;
     }
 }
@@ -2538,10 +2528,7 @@ img#sponge-small {
 
 .bgme {
     opacity: 1;
-    background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
-    background-position: 150% bottom;
-    background-size: 0%;
-    background-repeat: no-repeat;
+
 
     @include media-breakpoint-up(lg) {
         background-size: 80%;
@@ -4699,24 +4686,6 @@ a.advance-link svg {
     background-size: cover;
 }
 
-.vh-100 {
-    height: 100vh;
-}
-
-.vh-95 {
-    height: 100vh;
-}
-
-html {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
 
 div#page {
     display: flex;
@@ -4748,53 +4717,9 @@ div#page {
 // ==========================================================================
 // footer
 // ==========================================================================
-.footer-content {
-    @include make-col-ready;
-    @include make-col(11);
-}
 
-.scroll-top {
-    // @include make-col-ready();
-    // @include make-col(1);
-    display: none;
-    display: none;
 
-    /* Hidden by default */
-    position: fixed;
 
-    /* Fixed/sticky position */
-    bottom: 30px;
-
-    /* Place the button at the bottom of the page */
-    right: 30px;
-
-    /* Place the button 30px from the right */
-    z-index: 99;
-
-    /* Make sure it does not overlap */
-    border: none;
-
-    /* Remove borders */
-    outline: none;
-
-    /* Remove outline */
-    cursor: pointer;
-
-    /* Add a mouse pointer on hover */
-    background: $tungsten;
-    padding: 1rem .75rem 1rem 0.75rem;
-    border-radius: .25rem;
-}
-
-.scroll-top svg {
-    width: ms(2.5);
-
-    .st0 {
-        fill: none;
-        stroke: white;
-        stroke-width: 5;
-    }
-}
 
 // ==========================================================================
 // Misc svg corrections

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<section class="container-fluid bgconductor" id="areas-splash">
+<article class="container-fluid bgconductor" id="areas-splash">
 	
 		<!-- 	<div class="row"> -->
 	
@@ -26,5 +26,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 				<!-- 		</div> --><!-- .row end -->
 
-</section><!-- cover end -->
+</article><!-- cover end -->
 					

@@ -9,14 +9,61 @@
 	font-weight: 600;
 }
 
-.custom-logo-link{
-	width: $ms-5;
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover, .navbar__mail-link:hover, .navbar__call-link:hover, .navbar-dark .navbar-brand a:focus, .navbar-dark .navbar-brand a:hover{
+	color: $tungsten;
 }
+
+.navbar-brand a:hover{
+	color: $tungsten;
+}
+
+.navbar-nav li{
+	background: #fff;
+}
+
+.navbar-collapse{
+}
+
+#wrapper-navbar > nav > div{
+
+}
+
+.custom-logo-link{
+	margin-bottom: -.5rem;
+}
+
+.navbar-brand{
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: 0;
+	font-size: inherit;
+	display: inherit;
+	margin-left: $ms-2;
+}
+
+// .navbar-collapse{
+// 	flex: 1 0 auto;
+// }
+
+
+.custom-logo-link{
+	width: $ms-4;
+}
+
+.navbar__mail-link{
+
+}
+
+.navbar__call-link{
+	margin-left: $ms-2;
+}
+
 
 svg#bug{
 	.st0{
 	fill: $primary;
-	width: $ms-5;
 	// height: $rvr-5;
 }
 }
@@ -120,7 +167,7 @@ a.link{
 
     /* Add a mouse pointer on hover */
     background: $tungsten;
-    padding: 1rem .75rem 1rem 0.75rem;
+    padding: .75rem;
     border-radius: .25rem;
 }
 
@@ -134,4 +181,86 @@ a.link{
     }
 }
 
+.fixed {
+    max-width: 300px;
+	  min-width: 300px;
+}
+.fluid {
+		width: 50%;
+}
+
+.table-wrap{
+	position: relative;
+	width: 100%;
+}
+
+.table.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#capabilities_table{
+table{border-radius: 5rem;}
+thead th{
+	background-color: $gray-700;
+	color: #fff;
+	padding: $ms-2_25;
+}
+tbody>tr>:nth-child(1){ 
+padding-left: $ms-2_25;
+}
+tbody tr{
+}
+
+tbody td{
+	padding: 1.5rem .5rem;
+	color: $gray-900;
+	font-weight: 400;
+	line-spacing: .025rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: $primary;
+}
+
+tbody tr:nth-child(even) {
+  background-color: $tungsten;
+}
+	// background: $primary;
+	padding: 3rem;
+	color: #111;
+	table-layout: fixed;
+	width: 95%;
+	td{
+		text-align: left;
+		line-height: $rvr-_75;
+		height: $rvr-2;
+		vertical-align: top;
+		padding-right: $rvr-2;
+	}
+	th{
+		text-align: left;
+	}
+	caption{
+		caption-side: top;
+		color: #111;
+		font-size: ms(1.5);
+		font-weight: 400;
+		margin-bottom: $rvr-_25;
+	}
+}
+
+
+#capabilities_table > thead > tr > th.capa-table__column--2, #capabilities_table > thead > tr > th.capa-table__column--3{
+	padding-left: $ms-1;
+}
+.capa-table__column--1{
+	width: 35%;
+	padding-left: $ms-2_25;
+	}
+.capa-table__column--2{
+	width: 40%;
+	}
+.capa-table__column--3{
+	width: 25%;}
 

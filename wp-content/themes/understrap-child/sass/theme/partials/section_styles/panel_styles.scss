@@ -1,175 +1,417 @@
-
-.splash {
-    h1{
-font-size:$h4-font-size;
-color: $headings-color;
-font-family: $headings-font-family;
-font-weight: $headings-font-weight;
-    }
-    h2, h3{
-font-size:$display-3-font-size;
-color: $display-color;
-font-family: $display-font-family;
-font-weight: $display-font-weight;
-
-    }
-    p{
-font-size: $body-3-font-size;
-color: $body-color;
-font-family: $body-font-family;
-font-weight: $body-font-weight;
-    }
+.panel + .panel{
+	padding-top: $rvr-10;
 }
 
+.splash{
+    h1 {
+        font-size: $h4-font-size;  
+        color: $headings-color;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+    }
+
+    h2, h3 {						
+        font-size: $display-3-font-size;
+        color: $display-color;
+        font-family: $display-font-family;
+        font-weight: $display-font-weight;
+    }
+
+    p {								
+        font-size: $body-3-font-size;
+        color: $body-color;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight;
+    }
+}
 
 // .splash{
 // 	@extend .container-fluid;
 // 	}
 
-.home-page.splash{ 
-	h1{
-	font-size: ms(5.5);	
-	}
-	h2{
-	font-size: ms(3.85);
-	letter-spacing: -.05rem;
-	}
-	p:first-of-type{
-       font-size:$display-3-font-size;
-color: $display-color;
-font-family: $display-font-family;
-font-weight: $display-font-weight;
-    }
-
-    p:last-of-type{
-        font-size: ms(2.25);
-    }
-}
-
-
-.home-page.splash.panel-hero__img--background{
+.home-page.splash.panel-hero__img--background {
     background: none;
+
     @include media-breakpoint-up(lg) {
-	background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
-    background-position: right bottom;
-    background-size: 100%;
-    background-repeat: no-repeat;	
-	}
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
+        background-position: right bottom;
+        background-size: 90% 90%;
+        background-repeat: no-repeat;
+    }
+}
+
+.home-page.splash {
+    .panel-hero__img--mobile {
+        width: 50%;
+        left: 50%;
+    }
+}
+
+.home-page.splash {
+    h1 {
+        font-size: ms(5.5);
+    }
+
+    h2 {
+        font-size: ms(3.85);
+        letter-spacing: -.05rem;
+
+        @include media-breakpoint-up(lg) {
+            letter-spacing: 0;
+        }
+    }
+
+    p:first-of-type {
+        font-size: ms(3);
+   
+    }
+
+    p:last-of-type {
+        font-size: ms(2.25);
+        font-style: italic;
+    }
 }
 
 
-.home-page.splash{
-	.panel-hero__img--mobile{
-	width: 50%;
-	left: 50%;
-	}
+.basic.home__the-goal.splash {
+    .panel-hero__img--mobile {
+        width: 100%;
+        left: 0%;
+    }
 }
 
+.basic.home__the-goal.panel-hero__img--background {
+    background: none;
 
-.about-me.splash.panel-hero__img--background{
-  background: none;
     @include media-breakpoint-up(lg) {
-	background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes.jpg");
-    background-position: left bottom;
-    background-size: 100%;
-    background-repeat: no-repeat;
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+        background-position: left 135%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
 }
+  .basic h1 {
+      @extend .page__title;
+      text-align: left;
+    }
+
+.basic.home__the-goal {
+   margin-left: auto;
+   margin-right: auto;
+   text-align:left;
+   padding: $rvr-6 $ms-5;
+    h2 {  
+     line-height: $rvr-2_5;
+    font-size:$h3-font-size;
+    color: $headings-color;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+// padding-left: ms(3);
+    
+
+    }
+    h3{
+    	@extend .headings-line-height;
+    	 font-size:$h1-font-size;
+    	 color: $headings-color;
+    	 font-family: $headings-font-family;
+    	 font-weight: $headings-font-weight;
+   } 	
+  p{
+  	@extend .body-line-height;
+  	font-size: $body-3-font-size;
+  	color: $body-color;
+  	font-family: $body-font-family;
+  	font-weight: $body-font-weight;
+  	text-align: left;
+  	max-width: ms(11);
+//   	margin-left: auto;
+//   	margin-right: auto;
+  }
+  strong{
+  	font-weight: 400;
+  	font-family: $font-family-sans-serif;
+  	font-size: ms(2.5);
+  	letter-spacing: -.025rem;
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+.why-me.splash {
+    .panel-hero__img--mobile {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+.why-me.splash.panel-hero__img--background {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+        background-position: left 135%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+}
+
+.why-me.splash {
+    padding-left: ms(3);
+    text-align: left;
+    h1 {
+        font-size: ms(5.5);
+        margin-top: auto;
+        padding-left: $ms-3;
+
+    }
+
+    h2 {
+        font-size: ms(3.5);
+        font-family: $font-family-serif;
+        padding-left: $ms-3;
+        font-style: italic;
+
+    }
+    h3{
+    	padding-left: $ms-3;
+  
+    }
 }
 
 
-.about-me.splash{
-	.panel-hero__img--mobile{
-	width: 50%;
-	left: 0;
-	}
+.my-expertise.splash {
+    .panel-hero__img--mobile {
+        width: 100%;
+        left: 15%;
+    }
 }
+
+.my-expertise.splash.panel-hero__img--background {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+        background-position: left 135%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+}
+
+.my-expertise.splash {
+    padding-left: ms(3);
+    text-align: left;
+    h1 {
+        font-size: ms(5.5);
+        margin-top: auto;
+        padding-left: $ms-3;
+
+    }
+
+    h2 {
+        font-size: ms(3.5);
+        font-family: $font-family-serif;
+        padding-left: $ms-3;
+        font-style: italic;
+
+    }
+    h3{
+    	padding-left: $ms-3;
+  
+    }
+}
+
+.my-value.splash {
+    .panel-hero__img--mobile {
+        width: 100%;
+        left: 50%;
+    }
+}
+
+.my-value.splash.panel-hero__img--background {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register.jpg");
+        background-position: left 135%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+}
+
+.my-value.splash {
+    padding-left: ms(3);
+    text-align: left;
+    h1 {
+        font-size: ms(5.5);
+        margin-top: auto;
+        padding-left: $ms-3;
+        flex: 0 0 auto;
+    }
+
+    h2 {
+        font-size: ms(3.5);
+        font-family: $font-family-serif;
+        padding-left: $ms-3;
+        font-style: italic;
+        flex: 0 0 auto;
+        margin-bottom: $rvr-4;
+    }
+}
+
+.value-table{
+	font-family: $font-family-monospace;
+	font-size: ms(3);
+	width: ms(8.75);
+	flex: 0 0 auto;
+	margin-bottom: auto;
+}
+
+.value-table-left-pad{
+	padding-left: ms(.5);
+}
+
+.value-row-underscore{
+border-bottom: thin solid $primary;
+}
+
+
+
+.about-me.splash.panel-hero__img--background {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
+        background-position: left 135%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+    }
+}
+
+.about-me.splash {
+    .panel-hero__img--mobile {
+        width: 75%;
+        left: 0;
+    }
+}
+
+.about-me.splash {
+    padding-left: ms(3);
+    text-align: left;
+    h1 {
+        font-size: ms(5.5);
+        margin-top: auto;
+        padding-left: $ms-3;
+
+    }
+
+    h2 {
+        font-size: ms(3.5);
+        font-family: $font-family-serif;
+        padding-left: $ms-3;
+        font-style: italic;
+
+    }
+    h3{
+    	padding-left: $ms-3;
+  
+    }
+}
+
+
+
+
 
 // business-value panel / subpanels
-.business-value h1{
-	@extend .page__title;
+.business-value h1 {
+    @extend .page__title;
 }
 
-.business-value p{
-@extend .body-line-height;
-font-size: $body-4-font-size;
-color: $body-color;
-font-family: $body-font-family;
-font-weight: $body-font-weight;
-margin-bottom: $body-margin-bottom;	
-
+.business-value p {
+    @extend .body-line-height;
+    font-size: $body-3-font-size;
+    color: $body-color;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    margin-bottom: $body-margin-bottom;
 }
 
-
-
-.diagram__objectives--vertical .diagram-content{
-	li{
-		font-size: ms(3);
+.diagram__objectives--vertical .diagram-content {
+    li {
+        font-size: ms(3);
         padding-right: 0;
-		}
-		ol{
-			margin-block-end: 0px;
-			margin-block-start: 0px;
-			padding-inline-start: $ms-5;
-			}
-		
-	.br{
-		display: none;
-		}
-		.icon{
-			padding: 0;
-		}
-	.cls-1{
-		fill: $secondary;
-		}
-		}
+    }
 
+    ol {
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        padding-inline-start: $ms-5;
+    }
 
+    .br {
+        display: none;
+    }
 
-.diagram-content__end-to-end--vertical{
-	@include make-row();
-	position: relative;
-	margin-left: 0px;
-	margin-right: 0px;
-	width: 100%;
-	height: auto;
+    .icon {
+        padding: 0;
+    }
+
+    .cls-1 {
+        fill: $secondary;
+    }
 }
-.diagram-content__caption--sticky{
-	@include make-col-ready();
-	@include make-col(4);
-	padding-top: $rvr-4;
-	margin-bottom: $rvr-4;
-	padding-left: 0px;
-	padding-right: 0px;
-	position: sticky;
+
+.diagram-content__end-to-end--vertical {
+    @include make-row;
+
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.diagram-content__caption--sticky {
+    @include make-col-ready;
+    @include make-col(4);
+
+    padding-top: $rvr-4;
+    margin-bottom: $rvr-4;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: sticky;
     top: 0;
     left: 0;
     height: 10rem;
     font-family: $font-family-monospace;
 }
 
-.diagram-content__end-to-end-diagram--vert{
-	@include make-col-ready();
-	@include make-col(8);
-	padding-left: 0px;
-	padding-right: 0px;
+.diagram-content__end-to-end-diagram--vert {
+    @include make-col-ready;
+    @include make-col(8);
+
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-.end-to-end--vert{
-	width: 100%;
+.end-to-end--vert {
+    width: 100%;
 }
 
-.diagram__modern-marketing{
-	width: 100%;
+.diagram__modern-marketing {
+    width: 100%;
 }
 
 .intro-panel {}
 
-
-
-
-
-.cta-panel{}
-
+.cta-panel {}
 
 .diagram__competitive-advantage #Layer_2 .st0 {
     fill: $tungsten;

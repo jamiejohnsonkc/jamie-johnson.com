@@ -38,10 +38,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav class="navbar navbar-expand-md navbar-dark">
 
 			<div class="container" >
-	<?php 
-						the_custom_logo();
-						 ?>
-							<div class="navbar-brand mb-0"><a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top">Jamie Johnson</a></div>
+			
+				<a href="//localhost:3000/" class="custom-logo-link" rel="home" itemprop="url">	<img src="//localhost:3000/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
+
+
+				<div class="navbar-brand mb-0">
+					<a class="navbar__mail-link" href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top">jamie@jamie-johnson.me</a>
+					<a class="navbar__call-link" href="tel:+1-913-207-6966">913 207 6966</a>
+				</div>
 
 				
 

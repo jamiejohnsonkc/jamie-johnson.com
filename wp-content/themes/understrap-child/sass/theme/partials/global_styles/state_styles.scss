@@ -1,3 +1,13 @@
+.navbar-brand{
+@include media-breakpoint-up(xs) {
+display: none;
+@include media-breakpoint-up(md) {
+	display: block;
+}
+}
+}
+
+
 .panel.home-page.splash{
     .hide-2 {display: none;}
     @include media-breakpoint-up(sm) {

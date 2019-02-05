@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel home-page splash">
+<article class="panel-fluid home-page splash">
 	
 		<h1>Hi <span class="br"><br></span>I'm Jamie</h1>
 		

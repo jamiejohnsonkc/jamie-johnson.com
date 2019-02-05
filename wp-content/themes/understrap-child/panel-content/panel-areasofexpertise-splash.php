@@ -2,7 +2,7 @@
 /**
  * Panel areassplash template.
  *
- * @package understrap
+ * @package understrap 
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

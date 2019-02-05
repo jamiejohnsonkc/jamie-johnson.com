@@ -1,13 +1,22 @@
 .wrapper{ padding: 0;}
 
-.splash {
+
+#wrapper-navbar{
+}
+
+.splash{
+    height: 93vh;
     margin-top: 7vh;
+}
+
+.splash, .basic{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 93vh;
     text-align: center;
+    overflow: hidden;
+    }
     h1{
 @extend .headings-line-height;
     }
@@ -23,10 +32,14 @@ margin-bottom: $display-margin-bottom;
 @extend .body-line-height;
 margin-bottom: $body-margin-bottom; 
     }
-}
+        .link__advance--chevron{
+        flex: 0 0 0;
+    }
 
-.splash{
-    @extend .container-fluid;
+
+
+.splash, .basic{
+    // @extend .container;
     @extend .panel-hero__img--background;
 }
 
@@ -42,13 +55,43 @@ display: none;
 }
 }
 
-.panel.home-page.splash{
+.panel-fluid.basic.home__the-goal{
+
+    h1{
+        margin-top: auto;
+    }
+    h2{
+    line-height: $rvr-2_75;
+    margin-bottom: $rvr-3;
+    font-size: ms(4.5);
+    letter-spacing: -.01rem;    
+    }
+    h3{
+    flex: 0 1 $rvr-4;
+    margin-bottom: auto;
+    }
+    .link__advance--chevron{
+        flex: 0 0 0;
+    }
+    p{
+        max-width: ms(9.9);
+        margin-bottom: $rvr-2;
+    }
+    p:last-of-type{
+        margin-bottom: $rvr-2;
+    }
+}
+
+
+
+
+.home-page.splash{
     h1, h2, h3, h4, p{
         margin-bottom: 0;
     }
     h1{
-    margin-top: auto;
-      flex: 0 0 10rem;
+    margin-top: 10rem;
+      flex: 0 0 8rem;
 
     br{
         display: none;
@@ -60,27 +103,25 @@ display: none;
 
     }
     h3{
-      flex: 0 0 6rem;
+      flex: 0 0 9rem;
     }
     p:first-of-type{
-        flex: 0 0 10rem;
+        flex: 0 0 auto;
         max-width: $ms-10;
-        margin: 0 auto;
+        margin: 0 auto $rvr-1 auto;
+        padding: 0 $ms-4;
         
     }
 
     p:last-of-type{
-          flex: 0 0 1rem;
+          flex: 0 0 8rem;
         margin-bottom: auto;
-    }
-
-    .link__advance--chevron{
-        flex: 0 0 0;
     }
 }
 
-.panel.about-me.splash{
-     h1{
+
+.panel-fluid.about-me.splash{
+    h1{
     margin-top: auto;
     }
     h1.br{
@@ -100,32 +141,44 @@ display: none;
 
 
 
-#wrapper-navbar{
-    positon: fixed;
-    top: 0;
-    height: $rvr-3;
-}
-
-.navbar{
-    padding-left: 5px;
-    padding-right: 5px;
-    @include media-breakpoint-up(sm) {
+.panel-fluid.my-expertise.splash{
+     h1{
+    margin-top: auto;
+    }
+    h1.br{
+        display: none;
+    }
+    h2{
+    margin-bottom: $rvr-2;    
+    }
+    h3{
+    flex: 0 1 $rvr-4;
+    margin-bottom: auto;
+    }
+    .link__advance--chevron{
+        flex: 0 1 0;
     }
 }
 
-.nav-link{
-    padding: 1rem 0;
-       @include media-breakpoint-up(sm) {
+.panel-fluid.why-me.splash{
+     h1{
+    margin-top: auto;
     }
-        @include media-breakpoint-up(md) {
+    h1.br{
+        display: none;
     }
-        @include media-breakpoint-up(lg) {
+    h2{
+    margin-bottom: $rvr-1;    
     }
-        @include media-breakpoint-up(xl) {
+    h3{
+    flex: 0 1 $rvr-4;
+    margin-bottom: auto;
     }
-     
+    .link__advance--chevron{
+        flex: 0 1 0;
+    }
 }
-
+        
 
 .business-value {
     display: flex;

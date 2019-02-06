@@ -20,12 +20,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<section>
 						<?php get_template_part( 'panel-content/panel', 'homepage__splash' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'home_page__the-goal' ); ?>	
-						<?php get_template_part( 'panel-content/panel', 'splashintro' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'whatido' ); ?>
-						<?php get_template_part( 'panel-content/panel', 'howidoit' ); ?>		
+					<?php get_template_part( 'panel-content/panel', 'home_page__mymo' ); ?>
+						<?php get_template_part( 'panel-content/panel', 'home_page__whatido' ); ?>
+					<?php get_template_part( 'panel-content/panel', 'home_page__howidoit' ); ?>		
 				<!-- 		get_template_part( 'panel-content/panel', 'whyme' ); ?> -->		
 						<?php get_template_part( 'panel-content/panel', 'qualifications' ); ?>
 						<?php get_template_part( 'panel-content/panel', 'homecta' ); ?>
+						
 					</section>
 </main><!-- #main -->
 <div class="scroll-top" id="scroll-up" onclick="topFunction()"><a href="" title=""><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevup.svg" alt="" class="style-svg" id="scroll-top"/></a></div>

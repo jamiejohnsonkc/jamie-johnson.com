@@ -16,46 +16,110 @@ html [type=button] {
     appearance: none;
 }
 
-// p {
-//     line-height: 1.4;
-//     font-family: $font-family-serif;
-//     color: $body-color;
-// }
-
-// h1, .h1 {
-//     font-size: $h1-font-size;
-//     font-weight: 600;
-//     min-height: 1px;
-//     line-height: $line-height-0;
-//     letter-spacing: -.05rem;
-
-// }
 
 
-// h2, .h2 {
-//     font-size: $h2-font-size;
-//     font-weight: 500;
-//     letter-spacing: -.05rem;
-    
-// }
+section{}
 
-// h3, .h3 {
-//     font-size: $h3-font-size;
-//         line-height: $rvr-1_75;
-//         letter-spacing: .075rem;
-// } 
+header{}
+title{}
+hgroup{}
+title{}
+figure{}
+strong{
+    font-weight: 400;
+}
 
-// h4, .h4 {
-//     font-size: $h4-font-size;
-// }
 
-// h5, .h5 {
-//     font-size: $h5-font-size;
-// }
+h1{font-size: $h1-font-size;}
+h2{font-size: $h2-font-size;}
+h3{font-size: $h3-font-size;}
+h4{font-size: $h4-font-size;}
+h5{font-size: $h5-font-size;}
+h6{font-size: $h6-font-size;}
 
-// h6, .h6 {
-//     font-size: $h6-font-size;
-// }
+
+h1, h2, h3, h4, h5, h6{
+font-family:   $headings-font-family;
+color:         $headings-color;        
+font-weight:   $headings-font-weight; 
+margin-bottom: $headings-margin-bottom;
+line-height:   $rvr-2_75;
+}
+
+p{
+font-size:      $body-3-font-size;
+font-family:   $body-font-family;
+color:         $body-color;        
+font-weight:   $body-font-weight; 
+margin-bottom: $body-margin-bottom;
+line-height:   $rvr-1_75;
+}
+
+
+
+.boiler{
+font-size:     ms(5.5);
+font-family:   $headings-font-family;
+color:         $headings-color;        
+font-weight:   $headings-font-weight; 
+margin-bottom: $headings-margin-bottom;
+line-height:   $rvr-2;
+}
+
+.headline{
+font-size:     $h5-font-size;
+font-family:   $headings-font-family;
+color:         $headings-color;        
+font-weight:   $headings-font-weight; 
+margin-bottom: $headings-margin-bottom;
+line-height:   $rvr-2_75;
+}
+
+.subhead{
+font-size:     $h3-font-size;
+font-family:   $headings-font-family;
+color:         $headings-color;        
+font-weight:   400; 
+margin-bottom: $headings-margin-bottom;
+line-height:   $rvr-2_25;
+}
+
+.sublist{
+    font-size:     $display-4-font-size;
+font-family:   $display-font-family;
+color:         $display-color;        
+font-weight:   $display-font-weight; 
+margin-bottom: $display-margin-bottom;
+line-height:   $rvr-2_25;    
+}
+
+.display{
+font-size:     $display-4-font-size;
+font-family:   $display-font-family;
+color:         $display-color;        
+font-weight:   $display-font-weight; 
+margin-bottom: $display-margin-bottom;
+line-height:   $rvr-2_25;    
+}
+
+.body{
+font-size:     $body-3-font-size;
+font-family:   $body-font-family;
+color:         $body-color;        
+font-weight:   $body-font-weight; 
+margin-bottom: $body-margin-bottom;
+line-height:   $rvr-1_75;
+}
+
+.lead {
+    font-weight: $lead-font-weight;
+}
+
+
+.copy{
+    line-height: 1.4;
+    font-family: $font-family-serif;
+}
 
 .row {
     margin-left: 0;
@@ -68,25 +132,9 @@ html [type=button] {
     color: $link-color;
     }
 
-.lead {
-    font-weight: $lead-font-weight;
-}
-
-section{
-}
-
-header{
-
-}
-
-title{}
-
-hgroup{ }
 
 
-title{}
 
-figure{}
 
 
 .row{}
@@ -97,8 +145,8 @@ figure{}
 //     font-size: unset;
 // }
 .container{
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
  .navbar .container{
         padding-left: 15px;
@@ -109,7 +157,7 @@ figure{}
 
 @media (min-width: 300px){
      .container{
-    width: 320px;
+    width: 340px;
     max-width: 100%
     } 
 }

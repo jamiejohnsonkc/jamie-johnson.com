@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 		<h1>Areas of Expertise</h1>
 		
-		<h2>lorem ispum sino et dolemet</h2>
+		<h2>I do more than words and pictures</h2>
 		
 		<h3>Excepteur sint occaecat cupidatat non.</h3>
 		

@@ -28,9 +28,12 @@
  // @import "theme/devstyles";  // <--------- scratchpad for css templates DELETE BEFORE STAGING
 @import "theme/dev_utilities/canvas"; //<---------------css staging for invididual elements
 @import "theme/partials/global_styles/base_styles";
-@import "theme/partials/global_styles/layout_styles";
+@import "theme/partials/global_styles/navbar_styles";
+@import "theme/partials/global_styles/layout_templates";
+@import "theme/partials/global_styles/layout_settings";
 @import "theme/partials/global_styles/modules_styles";
-@import "theme/partials/section_styles/panel_styles";
+@import "theme/partials/section_styles/article_styles";
+@import "theme/partials/global_styles/graphics_and_artwork_styles";
 @import "theme/partials/global_styles/state_styles";
 @import "theme/partials/global_styles/utility_styles";
 @import "theme/partials/global_styles/global_styles";

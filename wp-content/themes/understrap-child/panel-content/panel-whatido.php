@@ -2,7 +2,7 @@
 /**
 * Panel Splash template.
 *
-* @package understrap
+* @package understrap 
 */
 if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
@@ -21,9 +21,9 @@ exit; // Exit if accessed directly.
 				<span>what i do</span>
 			</div>
 				<div class="headline"><h2>My goal Is To Make You Money</h2></div>
-				<div class="subhead"><h3>I'm All About Quality Design & Content. But it doesn't matter if the register doesn't ring.</h3></div>
+				<div class="subhead"><h3>I'm all about quality design and content, but none of that matters if the register doesn't ring.</h3></div>
 				<div class="block-body">
-				<div class="display-text">I can design traditional marketing materials and code digital work. But my strength is making sure investments like these have a positive impact on your business. </div>
+				<div class="display-text">I can design traditional marketing materials and code digital work. My strength is making sure investments like these have a positive impact on your business. </div>
 				<!-- <div class="display-text"><span class="lead">Post-digital changed all the rules.</span> What customers value, how they buy, what we promote and how we sell are all different. They're calling it "the age of the customer".</div>
 			
 					<div class="display-text"><span class="lead">Creating and retaining customer relationships today requires new approaches.</span> And the marketing capabilities to do so have never been more accessible, more affordable or more effective.</div>

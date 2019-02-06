@@ -1,25 +1,18 @@
-.navbar-brand{
-@include media-breakpoint-up(xs) {
-display: none;
-@include media-breakpoint-up(md) {
-	display: block;
-}
-}
-}
 
 
-.panel.home-page.splash{
-    .hide-2 {display: none;}
-    @include media-breakpoint-up(sm) {
-}
-    @include media-breakpoint-up(md) {
-}
-    @include media-breakpoint-up(lg) {
-}
-    @include media-breakpoint-up(xl) {
-}
 
-}
+// .panel.home-page.splash{
+//     .hide-2 {display: none;}
+//     @include media-breakpoint-up(sm) {
+// }
+//     @include media-breakpoint-up(md) {
+// }
+//     @include media-breakpoint-up(lg) {
+// }
+//     @include media-breakpoint-up(xl) {
+// }
+
+// }
 
 .scroll-top {
     display: none;

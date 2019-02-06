@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+snippet directory
+C:\Users\Jamie Johnson\AppData\Roaming\Sublime Text 3\Packages\User
+
+
 when using a "$" in a snippet you have to place a \ in front of it (referred to as "escaping") so if you want
 
 $h1-font-size you snippet it as   \$h1-font-size
@@ -37,6 +41,18 @@ selector:not(:last-child) [target all instances of the selector except the last 
 .class:last-of-type       [target last instance of selector]
 
 
+table selectors:
+
+tbody tr:nth-child(odd) {
+  background-color: $primary;
+}
+
+tbody tr:nth-child(even) {
+  background-color: $tungsten;
+}
+
+
+tbody>tr>:nth-child(1){}
 
 
 

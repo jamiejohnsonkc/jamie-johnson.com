@@ -105,16 +105,9 @@ exit;  //Exit if accessed directly.
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" />
 				</div>
 				<div class="expt-body-text">
-					<h6>Leadership</h6>
+					
 					<div class="expt-text">
-						<ul>
-							<li>Performance Optimization</li>
-							<li>Function Leadership</li>
-							<li>Revenue Generation</li>
-							<li>Competitive Advantage</li>
-							<li>Customer Experience</li>
-							<li>Goal Setting</li>
-						</ul>
+						
 					</div>
 				</div>
 			</div>
@@ -123,7 +116,7 @@ exit;  //Exit if accessed directly.
 					<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" />
 				</div>
 				<div class="expt-body-text">
-					<h6>Concepts & Frameworks</h6>
+				<!-- 	<h6>Concepts & Frameworks</h6>
 					<div class="expt-text">
 						<ul>
 							<li>Performance Quantification</li>
@@ -131,7 +124,7 @@ exit;  //Exit if accessed directly.
 							<li>Zero-Base Budget Development</li>
 							<li>Eiusmod nulla ea duis cupidatat</li>
 							<li>Customer Experience Management</li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 			</div>
@@ -140,19 +133,19 @@ exit;  //Exit if accessed directly.
 				<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon" />
 			</div>
 			<div class="expt-body-text">
-				<h6>Strategy</h6>
+				<!-- <h6>Strategy</h6>
 				<div class="expt-text"><ul><li>Product/Service Management</li>
 				<li>Customer Value Design</li>
 				<li>Pricing & Promotions</li>
 				<li>Distribution Programs</li>
 				<li>Packaging Development</li>
-				<li>Product Naming</li></ul></div>
+				<li>Product Naming</li></ul></div> -->
 			</div>
 		</div>
 		<div class="expt-box">
 			<div class="expt-icon">
 				<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon" />
-			</div>
+	<!-- 		</div>
 			<div class="expt-body-text">
 				<h6>Intelligence & Insights</h6>
 				<div class="expt-text"><ul><li>Performance Auditing</li>
@@ -162,7 +155,7 @@ exit;  //Exit if accessed directly.
 				<li>Issues Identification</li>
 				<li>Situation Analysis</li></ul></div>
 			</div>
-		</div>
+		</div> -->
 		<div class="expt-box">
 			<div class="expt-icon">
 				<img class="style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon" />

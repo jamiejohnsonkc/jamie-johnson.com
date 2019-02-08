@@ -10,8 +10,8 @@ exit; // Exit if accessed directly.
 ?>
 
 
-<article class="container-fluid" id="goals">
-<div class="container" id="goals-container">
+<article class="panel-fluid about-me">
+	<div class="container about-me__container__personal">
 <div class="page-title">
 				<hr>
 				<span>what i am</span>

@@ -8,11 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid my-expertise splash">
-	
-		<h1>Areas of Expertise</h1>
+<article class="panel-fluid about-me">
+		<div class="container splash about-me__container__splash">
+		<h1>About Me</h1>
 		
-		<h2>I do more than words and pictures</h2>
+		<h2>lorem ispum sino et dolemet</h2>
 		
 		<h3>Excepteur sint occaecat cupidatat non.</h3>
 		
@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
-		<div class="panel-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-small.jpg" alt="" class="conductor-small"/></div>
-
+		<div class="panel-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes-small.jpg" alt="" id="shoes-img"/></div>
+</div>
 	</article><!-- cover end -->
 	
 	

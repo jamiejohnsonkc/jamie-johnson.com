@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+home    keystroke returns cursor to first empty space before text character
+
+home x2 moves cursor to beginning of line
+
+shift + end   selects from cursor to first white space at end of the line
+
+
 snippet directory
 C:\Users\Jamie Johnson\AppData\Roaming\Sublime Text 3\Packages\User
 
@@ -8,7 +15,11 @@ when using a "$" in a snippet you have to place a \ in front of it (referred to 
 
 $h1-font-size you snippet it as   \$h1-font-size
 
+
+
 @include ms-respond(font-size, 2.75);
+
+
 
 shift+ctrl+a 		selects first tag and contents
 shift+ctrl+a  + arrow  takes you to the tag
@@ -66,15 +77,50 @@ tbody>tr>:nth-child(1){}
 
 sublime text search (following is regex, requiring enabling of "regular expressions")
 
+\n  is regex for new line break
+
+<div[^<>]*class="expt-text"[^<>]*>[\s\S]*?</div>     will find the tag, contents and closing tag of the class you specify
+
+
+
 wildcard  [^<]+  as in   <style>[^<]+</style>  will find anything with the <style> tag    
 
+
+<h2>[^<>]*</h2>     find all h2 tags and content
+
+<<!--></!-->         find all comments
+
+
+to leave the content in place and remove the surrounding div
+Select Find -> Replace, and make sure the Regular Expression button is selected. In Find What:, put
+
+(?s)<div class="some-class">(.*?)<\/div>
+and in Replace With:
+
+$1
+Example here
+
+(?s) makes . match newline characters as well. The capture group (.*?) matches all characters in a non-greedy fashion, so that the group ends at the first </div>. Otherwise, it would match all the way up to the last </div> (example). The replace value $1 is the first (and in this case only) matching group.
+
+
+
+
+
+
+
+
+
 SNIPPETS
-@break - single bootstrap breakpoint mixin
-@breaks - all bootstrap default breakpoints
+@onebreak - single bootstrap breakpoint mixin
+@allbreaks - all bootstrap default breakpoints
 @queries - all typical media queries
 @makecol - bootstrap col-ready and create col-() mixins;
 wpimg - wordpress img placeholder (html)
 wpbgimg - wordpress background img placeholder (css)
+break - insert br in span for conditional display
+flexb - flex-basis: 0 0 1;
+flex - flex display & direction
+
 
 
 
@@ -212,3 +258,21 @@ container media queries - WITH set width
         max-width: 1600px;
     }
 }
+
+!!!!!!!!!!!!the following plug in never worked !!!!!!!!!!!!!!!!
+select tools/create new plugin and paste the following then create the new key binding
+
+import sublime
+import sublime_plugin
+class MyLineSelectionCommand(sublime_plugin.TextCommand):
+    def run(self, edit):
+        view = self.view
+        new_cursors = []
+        cursors = view.sel()
+        for cursor in cursors:
+            new_cursors.append(view.line(cursor))
+        cursors.clear()
+        for cursor in new_cursors:
+            cursors.add(cursor)
+
+{ "keys": "ctrl+l", "command": "my_line_selection" }

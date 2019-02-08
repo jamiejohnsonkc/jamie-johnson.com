@@ -1,0 +1,757 @@
+// GLOBAL ELEMENT POSITIONING & LAYOUT
+
+.wrapper {
+    padding: 0;
+}
+
+// #wrapper-navbar{
+// }
+
+.panel {
+    @extend .container;
+}
+
+.panel-fluid {
+    @extend .container-fluid;
+}
+
+.link__advance--chevron, .link__advance--text {
+    margin: $rvr-4 auto;
+}
+
+.page__header {
+    @include make-row;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    display: inline-flex;
+    width: 100%;
+
+    h2 {
+        @include make-col-ready;
+        @include make-col(3);
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    h3 {
+        @include make-col-ready;
+        @include make-col(9);
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    h4 {
+        @include make-col-ready;
+        @include make-col(12);
+
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: $rvr-1;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+
+    /* Fixed/sticky position */
+    bottom: 30px;
+
+    /* Place the button at the bottom of the page */
+    right: 30px;
+
+    /* Place the button 30px from the right */
+    z-index: 99;
+}
+
+.panel-hero__img--mobile {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    z-index: -1;
+
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+// ARTICLE LAYOUTS
+
+.basic.home-page__howidoit {
+    .whatido__disciplines {
+        @extend .row;
+    }
+}
+
+.whatido__disciplines_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(3);
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.howidoit__disciplines_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .disciplines__content-icon {
+        width: 50%;
+    }
+
+    h5 {
+        margin-bottom: $rvr-1;
+    }
+}
+
+.myqualifications__stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: $ms-_75;
+    margin-bottom: $rvr-2;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(10);
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.myqualifications__stats_caption {
+    @include make-col-ready;
+    @include make-col(12);
+
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: $rvr-1_5;
+    margin-top: $rvr-1;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include make-col-ready;
+    @include make-col(4);
+
+    padding-left: $ms-1;
+    padding-right: $ms-1;
+    padding-top: $rvr-1;
+    padding-bottom: $rvr-_25;
+}
+
+.my-mo {
+    // @extend .container;
+    @extend .panel-hero__img--background;
+}
+
+.my-mo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: auto;
+}
+
+h2 {
+    line-height: $rvr-2_75;
+    margin-bottom: $rvr-3;
+    font-size: ms(4.5);
+    letter-spacing: -.01rem;
+}
+
+h3 {
+    flex: 0 1 $rvr-4;
+    margin-bottom: auto;
+}
+
+.link__advance--chevron {
+    flex: 0 0 0;
+}
+
+p {
+    //         max-width: ms(9.9);
+    margin-bottom: $rvr-2;
+}
+
+p:last-of-type {
+    margin-bottom: $rvr-2;
+}
+
+.panel-fluid.basic.home-page__the-goal {
+    margin-left: auto;
+    margin-right: auto;
+
+    h1 {
+        margin-top: auto;
+    }
+
+    h2 {
+        line-height: $rvr-2_75;
+        margin-bottom: $rvr-3;
+        font-size: ms(4.5);
+        letter-spacing: -.01rem;
+    }
+
+    h3 {
+        flex: 0 1 $rvr-4;
+        margin-bottom: auto;
+    }
+
+    .link__advance--chevron {
+        flex: 0 0 0;
+    }
+
+    p {
+        max-width: ms(9.9);
+        margin-bottom: $rvr-2;
+    }
+
+    p:last-of-type {
+        margin-bottom: $rvr-2;
+    }
+}
+
+//splash panel layout styles
+
+#main > section > article.panel-fluid.basic.home-page.home-page__whatido > div > a{
+  // @include make-col-ready;
+  //   @include make-col(12);
+  //   left: 50%;
+      
+}
+
+.panel-fluid.about-me.splash,
+.panel-fluid.my-expertise.splash,
+.panel-fluid.why-me.splash {
+    // h1, h2, h3{
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+    h1 {
+        margin-top: auto;
+        margin-bottom: $rvr-3;
+    }
+
+    h1.br {
+        display: none;
+    }
+
+    h2 {
+        @extend .display;
+
+        margin-bottom: $rvr-2;
+    }
+
+    h3 {
+        @extend .body;
+
+        flex: 0 1 $rvr-10;
+        margin-bottom: auto;
+        line-height: $rvr-1_75;
+    }
+
+    .link__advance--chevron {
+        flex: 0 1 0;
+    }
+}
+
+.my-value__splash__container {
+    text-align: left;
+    max-width: 280px;
+    @media (min-width: 400px){
+max-width: inherit;
+}
+    h1 {
+        flex: 0 0 auto;
+        margin-top: auto;
+    }
+
+    h2 {
+        flex: 0 0 auto;
+    }
+}
+
+
+#main > section > article:nth-child(2) > div > div > hgroup > h2{
+    letter-spacing: .025rem;
+}
+
+.my-expertise .skills {
+    display: flex;
+
+    @include make-col-ready;
+    @include make-col(12);
+
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+}
+
+.my-expertise__main-page {
+    @extend .container;
+
+    h1 {
+        @extend .headline;
+    }
+
+    h2 {
+        @extend .display;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+
+        @include make-col-ready;
+        @include make-col(4);
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        order: 5;
+    }
+}
+
+.expertise__mainpage_menu {
+    @extend .row;
+
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+.expertise__menu_item {
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        @extend .subhead;
+
+        margin-bottom: $rvr-1;
+        text-align: center;
+        line-height: $rvr-1_5;
+    }
+
+    p {}
+
+    @include make-col-ready;
+    @include make-col(12);
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.expertise__overlay {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+// @include media-breakpoint-up(lg) {
+//             height: 315vh;
+
+//             // align-items: center;
+//         }
+//     }
+
+.overlay__container {
+    @extend .row;
+
+    padding: $ms-8 $ms-4;
+    justify-content: left;
+
+    p {
+        max-width: ms(9.75);
+    }
+}
+
+.overlay__content {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // align-content: flex-start;
+    .overlay__content--icon {
+        margin-right: $ms-1;
+        margin-left: -$ms-1;
+    }
+
+    h3 {
+        flex: 0 0 12rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-bottom: $rvr-3;
+        flex: 0 0 25rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+
+
+    @include media-breakpoint-up(md) {}
+}
+
+#open-expt-overlay-4 .expertise__menu {
+    margin-left: -.8rem;
+}
+
+.expertise__overlay--marketing-leadership {}
+
+.expertise__overlay--marketing-management {}
+
+.expertise__overlay--marketing-communications {}
+
+.expertise__overlay--webdev {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.expertise__overlay--operations {}
+
+#expt-overlay-1, #expt-overlay-2, #expt-overlay-3, #expt-overlay-4, #expt-overlay-5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    // height: 120vh;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 999;
+
+    // We hide the overlay by default */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    overflow-y: scroll;
+
+    // .expt-body-text, .expt-vert {
+    //     color: $tungsten;
+    // }
+}
+
+#expt-overlay-1 {
+    order: 2;
+
+    @include media-breakpoint-up(lg) {
+        order: 1;
+    }
+}
+
+#expt-overlay-2 {
+    order: 3;
+}
+
+#expt-overlay-2, #expt-overlay-3, #expt-overlay-5 {
+    height: 100vh;
+
+    li {
+        margin-left: $ms-6_5;
+        line-height: $rvr-1_75;
+    }
+
+    ul {
+        margin-bottom: $rvr-2;
+    }
+
+    @include media-breakpoint-up(lg) {
+        order: 2;
+    }
+}
+
+#expt-overlay-3 {
+    height: 100vh;
+    order: 4;
+
+    @include media-breakpoint-up(lg) {
+        order: 3;
+    }
+}
+
+#expt-overlay-4 {
+    height: 100vh;
+    order: 5;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        flex: 0 1 auto;
+        margin-bottom: $rvr-2;
+        text-align: center;
+        width: 90%;
+    }
+
+    .overlay__content:first-of-type {
+        margin-top: $rvr-2;
+    }
+
+    .overlay__content {
+        justify-content: center;
+        margin-bottom: $rvr-4;
+    }
+
+    // overflow: hidden;
+    // display: flex;
+    // align-items: center;
+    // position: relative;
+
+    @include media-breakpoint-up(lg) {
+        order: 4;
+    }
+}
+
+#expt-overlay-5 {
+    height: 100vh;
+    order: 6;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+        order: 5;
+    }
+}
+
+// This CSS class will show the overlay */
+#expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+// [OVERLAY CLOSE BUTTON] */
+#expt-close-1, #expt-close-2, #expt-close-3, #expt-close-4, #expt-close-5 {
+    position: fixed;
+    top: $ms-4;
+    right: $ms-4;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+    background: $primary;
+    height: $ms-5;
+    width: $ms-5;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-me__brands {
+    h1 {
+        @extend .page__title;
+    }
+}
+
+.why-me__brands_content {
+    display: flex;
+    flex-wrap: wrap;
+
+    // justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: $rvr-1;
+
+    @include make-col-ready;
+    @include make-col(12);
+
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+        @include make-col(8);
+    }
+}
+
+.why-me__brands_logo {}
+
+.why-me__brands {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-me___content {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.panel-fluid.alternate.why-me__categories {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    a.link__advance--chevron {
+        order: 100;
+    }
+}
+
+.why-me__categories_content {
+    width: 100%;
+
+    // height:30rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: $rvr-_5;
+    flex: 0 0 auto;
+}
+
+.why-me__categories_content--industrial {
+    order: 9;
+}
+
+.why-me__categories_content--crops {
+    order: 16;
+}
+
+.why-me__categories_content--pork {
+    order: 13;
+}
+
+.why-me__categories_content--power {
+    order: 6;
+}
+
+.why-me__categories_content--chems {
+    order: 15;
+}
+
+.why-me__categories_content--beef {
+    order: 3;
+}
+
+.why-me__categories_content--poultry {
+    order: 19;
+}
+
+.why-me__categories_content--epc {
+    order: 8;
+}
+
+.why-me__categories_content--financial {
+    order: 4;
+}
+
+.why-me__categories_content--construction {
+    order: 10;
+}
+
+.why-me__categories_content--ltl {
+    order: 17;
+}
+
+.why-me__categories_content--retail {
+    order: 12;
+}
+
+.why-me__categories_content--companion {
+    order: 1;
+}
+
+.why-me__categories_content--controls {
+    order: 7;
+}
+
+.why-me__categories_content--dairy {
+    order: 5;
+}
+
+.why-me__categories_content--information {
+    order: 2;
+}
+
+.why-me__categories_content--telecom {
+    order: 11;
+}
+
+.why-me__categories_content--equine {
+    order: 18;
+}
+
+.why-me__categories_content--maritime {
+    order: 14;
+}
+
+.why-me__categories_content--healthcare {
+    order: 20;
+}
+
+.categories__content_caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: $rvr-_25;
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(59, 68, 76, 0.9);
+    -webkit-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    h3 {
+        margin-bottom: 0;
+        padding: 0;
+        flex: 0 0 auto;
+        line-height: inherit;
+    }
+
+    p {
+        margin-bottom: 0;
+        padding: 0;
+        flex: 0 0 auto;
+        line-height: inherit;
+        max-width: $ms-10;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

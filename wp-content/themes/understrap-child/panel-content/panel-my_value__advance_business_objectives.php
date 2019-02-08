@@ -8,13 +8,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel business-value objectives"> <!-- CONTAINER -->
-	<div class="row">
+<article class="panel-fluid my-value"> <!-- CONTAINER -->
+<div class="container business-value my-value__advance__container">
+<div class="row">
 	<h1>how i create value for businesses</h1>
 	<hgroup class="page__header"><!-- ROW -->
-		<h2>01</h2><!-- COL -->
-		<h3>I advance <br>business objectives</h3><!-- COL -->
-		<h4>Outcome-Driven marketing designed to enhance business performance</h4>
+	<h2>01</h2><!-- COL -->
+	<h3>I advance <br>business objectives</h3><!-- COL -->
+	<h4>Outcome-Driven marketing designed to enhance business performance</h4>
 	</hgroup>
 	<figure class="diagram__objectives--vertical">
 		<div class="diagram-content">
@@ -42,6 +43,7 @@ exit; // Exit if accessed directly.
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 </div>
+</div>
 </article>
 <!-- <div class="block-content">
 <div class="icon" id="architecture">
@@ -53,7 +55,7 @@ exit; // Exit if accessed directly.
 </div>
 <div class="block-content">
 <div class="icon" id="metrics">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
+	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
 </div>
 <ol start=3><li>performance <span class="br"><br></span>metrics</li></ol>
 </div>
@@ -62,7 +64,7 @@ exit; // Exit if accessed directly.
 </div>
 <div class="block-content">
 <div class="icon" id="impact">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
+	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
 </div>
 <ol start=4><li>business <span class="br"><br></span>impact</li></ol>
 </div>
@@ -71,7 +73,7 @@ exit; // Exit if accessed directly.
 <!-- <div class="row" id="rows">
 <div class="block-content">
 <div class="icon" id="goals">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
+	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="bullseye style-svg"/>
 </div>
 <div class="label-wrap"><ol><li>business <span class="br"><br></span>goals</li></ol></div>
 </div> -->
@@ -88,7 +90,7 @@ exit; // Exit if accessed directly.
 </div>
 <div class="block-content">
 <div class="icon" id="metrics">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
+	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="" class="style-svg"/>
 </div>
 <div class="label-wrap"><ol start=3><li>performance <span class="br"><br></span>metrics</li></ol></div>
 </div>
@@ -97,7 +99,7 @@ exit; // Exit if accessed directly.
 </div>
 <div class="block-content">
 <div class="icon" id="impact">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
+	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="" class="style-svg"/>
 </div>
 <div class="label-wrap"><ol start=4><li>business <span class="br"><br></span>impact</li></ol></div>
 </div>

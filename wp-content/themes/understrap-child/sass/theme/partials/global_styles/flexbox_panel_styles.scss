@@ -1,0 +1,141 @@
+// .container {
+//     h1 {
+//         flex: 0 1 auto;
+//     }
+
+//     h2 {
+//         flex: 0 1 auto;
+//     }
+
+//     h3 {
+//         flex: 0 1 auto;
+//     }
+
+//     h4 {
+//         flex: 0 1 auto;
+//     }
+
+//     p {
+//         flex: 0 1 auto;
+//     }
+
+//     p {
+//         flex: 0 1 auto;
+//     }
+
+//     a.link__avance--chevron {
+//         flex: 0 1 auto;
+//     }
+
+//     .panel-hero__img--mobile {
+//         flex: 0 1 auto;
+//     }
+// }
+
+
+.home-page__splash {
+    align-items: center;
+  
+    h1, h2, h3, h4, p {
+        margin-bottom: 0;
+    }
+
+    h1 {
+        margin-top: 10rem;
+        flex: 0 0 8rem;
+
+        br {
+            display: none;
+        }
+    }
+
+    h2 {
+        flex: 0 0 10rem;
+        line-height: $rvr-2_25;
+    }
+
+    h3 {
+        flex: 0 0 7rem;
+        line-height: $rvr-2;
+    }
+
+    p:first-of-type {
+        flex: 0 0 auto;
+        max-width: $ms-10;
+        margin: 0 auto $rvr-1_5 auto;
+        padding: 0 $ms-4;
+    }
+
+    p:last-of-type {
+        flex: 0 0 8rem;
+        margin-bottom: auto;
+    }
+}
+
+.home-page__my-mo__container{
+    h1
+    h2
+    p{}
+    p{}
+    p{}
+}
+
+.home_page__myqualifications__container{}
+
+.home-page__howidoit{
+    height: inherit;
+ .home-page__howidoit__container{}
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.home-page__the-goal__container{}
+
+.home-page__whatido{
+    justify-content: flex-end;
+.home-page__whatido__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h1{flex: 0 1 auto;}
+    h2{flex: 0 1 auto;}
+    h3{flex: 0 1 auto;}
+    p{flex: 0 1 16rem;}
+    a.link__advance--chevron{
+        align-self: flex-end;
+        flex: 0 0 1;
+    }
+    }
+}
+
+
+.home-page__cta__container{}
+
+.my-expertise__container__splash{}
+.my-expertise__container__skills{}
+.my-expertise__container__cta{}
+
+.about-me__container__backstory{}
+.about-me__container__personal{}
+.about-me__container__splash{}
+.about-me__container__cta{}
+
+.why-me__container__splash{}
+.why-me__container__atypical{}
+.why-me__container__brands{}
+.why-me__container__categories{}
+.why-me__container__cta{}
+
+.my-value__container__splash{}
+.my-value__container__advance{}
+.my-value__container__grow{}
+.my-value__container__modernize{}
+.my-value__container__optimize{}
+.my-value__container__cta{}
+
+.container__contact{
+    h1{}
+    p{}
+    .container_form{}
+}

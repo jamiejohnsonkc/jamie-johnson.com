@@ -29,6 +29,9 @@ strong{
     font-weight: 400;
 }
 
+article + article{
+    padding-top: $rvr-6;
+}
 
 h1{font-size: $h1-font-size;}
 h2{font-size: $h2-font-size;}
@@ -136,7 +139,6 @@ line-height:   $rvr-1_75;
 
 
 
-
 .row{}
 
 // .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .display-7 {
@@ -218,3 +220,4 @@ line-height:   $rvr-1_75;
         max-width: 100%;
     }
 }
+

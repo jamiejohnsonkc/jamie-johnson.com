@@ -1,5 +1,5 @@
-<article class="panel-fluid my-value splash">
-	
+<article class="panel-fluid my-value">
+	<div class="container splash my-value__splash__container">
 	<h1>I deliver value</h1>
 	<h2>I believe marketing is a means, not the end.</h2>
 	<table class="value-table">
@@ -34,4 +34,5 @@
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 	<div class="panel-hero__img--mobile"><img class="register-small" src="/wp-content/uploads/2019/01/register-small.jpg" alt="cash register"></div>
+	</div>
 	</article><!-- cover end -->

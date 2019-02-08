@@ -8,7 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly. 
 }
 ?>
-<article class="panel business-value modernize"> <!-- CONTAINER -->
+<article class="panel-fluid my-value"> <!-- CONTAINER -->
+	<div class="container business-value my-value__modernize__container">
 	<div class="row">
 	<h1>how i create value for businesses</h1>
 	<hgroup class="page__header"><!-- ROW -->
@@ -25,5 +26,6 @@ exit; // Exit if accessed directly.
 	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
+</div>
 </div>
 </article>

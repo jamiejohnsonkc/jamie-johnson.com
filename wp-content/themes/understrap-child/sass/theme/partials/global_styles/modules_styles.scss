@@ -1,23 +1,20 @@
 
-
-.link {
-    width: $ms-4;
-    stroke: $link-color;
-
-    svg#Layer_1 {
-        stroke: $link-color;
-    }
-}
-
 a.link {
     &__advance {
         &--chevron {
             cursor: pointer;
             width: $ms-4;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
 
             .st0 {
                 stroke: $link-color;
             }
+               svg#Layer_1 {
+        stroke: $link-color;
+    }
+        stroke: $link-color;
         }
     }
 }
@@ -38,10 +35,11 @@ a.link {
 .link__advance--chevron {}
 
 .page__title {
-    font-size: $h2-font-size;
+    font-size: $h3-font-size;
     font-weight: 300;
     font-family: $font-family-serif;
     font-style: italic;
+    margin-bottom: $rvr-4;
 }
 
 .page__header {
@@ -93,15 +91,6 @@ a.link {
     border-radius: .25rem;
 }
 
-.scroll-top svg {
-    width: ms(2.5);
-
-    .st0 {
-        fill: none;
-        stroke: white;
-        stroke-width: 5;
-    }
-}
 
 .table-wrap {
     position: relative;
@@ -151,7 +140,7 @@ a.link {
     }
 
     caption {
-        caption-side: bottom;
+        caption-side: top;
         color: #111;
         font-size: ms(1.5);
         font-weight: 400;
@@ -217,4 +206,73 @@ a.link {
 
 .value-row-underscore{
 border-bottom: thin solid $primary;
+}
+
+// ==========================================================================
+// contact page
+// ==========================================================================
+#contact{
+    h1{
+        @extend .headline;
+    }
+    p{
+        @extend .display;
+    }
+}
+
+.container__contact {
+    @include make-col-ready;
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(10);
+    }
+}
+
+.contact__form {
+    @include make-col-ready;
+    @include make-col(12);
+    padding-left: 0;
+    padding-right: 0;
+    @include media-breakpoint-up(md) {
+        
+    }
+}
+
+.contact-form-message {
+    padding: $ms-1;
+    margin-bottom: $rvr-2;
+    margin-top: $rvr-2;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form-message#success {
+    background-color: green;
+    border: thin solid green;
+}
+
+.contact-form-message#error {
+    background-color: red;
+    border: thin solid red;
+}
+
+#respond label {
+    font-family: $font-family-sans-serif;
+    width: 100%;
+    margin-bottom: $rvr-1;
+}
+
+.form-control, textarea {
+    font: 300 13.333px Roboto;
+    border-radius: 5px;
+}
+
+#respond > form > input[type="submit"]:nth-child(7) {
+    background: $tungsten;
+    -webkit-appearance: none;
+    border: 1px solid $tungsten;
+    border-radius: 5px;
+    padding: $rvr-_25 $ms-_5;
+    color: $gray-600;
 }

@@ -80,12 +80,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main" id="main" role="main">
-					<section class="container" id="contact">
-						<div class="block" id="contact-content">
-							<div class="headline"><h1>Contact</h1></div>
-							<div class="display-text">Lorem ipsum pariatur nisi dolor aute cillum adipisicing ut pariatur officia esse sunt eu esse sed qui.</div>
-						</div>
-						<div class="block" id="contact-form"> 
+					<section class="container-fluid" id="contact">
+            <div class="container container__contact">
+					
+              <h1>Contact</h1>
+							<p>Lorem ipsum pariatur nisi dolor aute cillum adipisicing ut pariatur officia esse sunt eu esse sed qui.</p>
+				
+						<div class="contact__form"> 
 						<div id="respond">
                 <?php echo $response; ?>
                 <form role="form" action="<?php the_permalink(); ?>" method="post">
@@ -98,6 +99,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                   <input type="submit">
                 </form>
               </div>
+                  </div>
           </div>
 							<!-- <form role="form">
 									<br style="clear:both">

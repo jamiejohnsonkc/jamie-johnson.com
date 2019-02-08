@@ -1,19 +1,37 @@
 //SECTION/PAGE POSITIONING & LAYOUT
+.panel-fluid{
+padding-left: 0;
+padding-right: 0;
+max-width: 100%;
+width: 100%;
+position: relative;
+// display: flex;
+// flex-direction: column;
+// justify-content: flex-end;
+}
+
+
+
 .business-value {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    h2, h3{
+        margin-bottom: 0;
+    }
+    h4{
+        margin-top: $rvr-1;
+    }
 }
 
-#main > section > article.panel.business-value.modernize > div{
-    justify-content: left;
-}
+
+
 
 // PANEL POSITIONING & LAYOUT TEMPLATES
 
 .splash{
     height: 93vh;
-    margin-top: 7vh;
+    text-align: left;
     h1{
     	margin-top: auto;
     }
@@ -30,7 +48,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: center;
     overflow: hidden;
     }
      .link__advance--chevron{
@@ -41,3 +58,13 @@
     @extend .panel-hero__img--background;
 }
 
+
+.my-value{}
+.why-me{}
+.about-me{}
+.my-expertise{}
+.home-page{
+    height: 100vh;
+}
+
+#contact{}

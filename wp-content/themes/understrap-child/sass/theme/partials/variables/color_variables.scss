@@ -23,6 +23,58 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
+$slate-tints: () !default;
+$slate-tint-100: #f1f3f4;
+$slate-tint-200: #e3e7ea;
+$slate-tint-300: #d6dbe0;
+$slate-tint-400: #c8cfd6;
+$slate-tint-500: #bbc3cc;
+$slate-tint-600: #adb7c1;
+$slate-tint-700: #9fabb7;
+$slate-tint-800: #929fad;
+$slate-tint-900: #8493a3;
+
+
+$slate-tints: () !default;
+$slate-tints: map-merge((
+  "100": $slate-tint-100,
+  "200": $slate-tint-200,
+  "300": $slate-tint-300,
+  "400": $slate-tint-400,
+  "500": $slate-tint-500,
+  "600": $slate-tint-600,
+  "700": $slate-tint-700,
+  "800": $slate-tint-800,
+  "900": $slate-tint-900
+), $slate-tints);
+
+
+$slate-shades: () !default;
+$slate-shade-100: #6b7a89;
+$slate-shade-200: #5f6c7a;
+$slate-shade-300: #535f6b;
+$slate-shade-400: #47515b;
+$slate-shade-500: #3b444c;
+$slate-shade-600: #2f363d;
+$slate-shade-700: #23282d;
+$slate-shade-800: #171b1e;
+$slate-shade-900: #0b0d0f;
+
+$slate-shades: () !default;
+$slate-shades: map-merge((
+  "100": $slate-shade-100,
+  "200": $slate-shade-200,
+  "300": $slate-shade-300,
+  "400": $slate-shade-400,
+  "500": $slate-shade-500,
+  "600": $slate-shade-600,
+  "700": $slate-shade-700,
+  "800": $slate-shade-800,
+  "900": $slate-shade-900
+), $slate-shades);
+
+
+
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -40,7 +92,12 @@ $test1: #ecf2f9;
 $offwhite1: rgba(253, 253, 253, 1);
 $offwhite: rgba(250,250,250, 1);
 $ghostwhite: #F8F8FF;
-
+$primaryrgba: rgba(153, 165, 177, 1);
+$tungstenrgba: rgba(210, 219, 226, 1);
+$slate: #778899;
+$slatergba: rgba(119,136,153, 1);
+$slate-dark: #3b444c;
+$slate-dark-rgba: rgba(59,68,76, 1);
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,

@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			
 <article class="cover-container" id="help-cta">
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="container help__cta">
 		<!-- 	<div class="row"> -->
 	
 				

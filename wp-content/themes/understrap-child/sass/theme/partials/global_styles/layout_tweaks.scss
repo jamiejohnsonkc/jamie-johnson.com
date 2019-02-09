@@ -16,7 +16,7 @@
 }
 
 .link__advance--chevron, .link__advance--text {
-    margin: $rvr-4 auto;
+    margin: 01 auto;
 }
 
 .page__header {
@@ -79,20 +79,98 @@
 
 // ARTICLE LAYOUTS
 
-.basic.home-page__howidoit {
-    .whatido__disciplines {
-        @extend .row;
+.home-page__howidoit__container {
+    // h1{
+    //    @include make-col-ready();
+    //    @include make-col(12);
+    //    padding-left: 0px;
+    //    padding-right: 0px;
+    //     @include media-breakpoint-up(md) {
+
+    //     }
+    //     }
+    @extend .row;
+
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        max-width: ms(10.8);
+        display: flex;
+        flex-direction: row;
+
+        h1, h2 {
+            width: 100%;
+        }
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        display: inline-flex;
+        flex-direction: row;
     }
 }
 
-.whatido__disciplines_content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.home-page__howidoit__container .split-container {
+    flex: 0 0 auto;
 
     @include media-breakpoint-up(md) {
         @include make-col-ready;
-        @include make-col(3);
+        @include make-col(12);
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(5);
+
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.howidoit__disciplines, .howidoit__disciplines_content {
+    @extend .row;
+
+    width: 100%;
+}
+
+.howidoit__disciplines {
+    h4 {
+        @include make-col-ready;
+        @include make-col(12);
+
+        padding-left: 0px;
+        padding-right: 0px;
+        flex: 0 0 auto;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(12);
+
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: $rvr-2;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(7);
 
         padding-left: 0px;
         padding-right: 0px;
@@ -100,16 +178,86 @@
 }
 
 .howidoit__disciplines_content {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 
-    .disciplines__content-icon {
-        width: 50%;
-    }
+    @include make-col-ready;
+    @include make-col(12);
+
+    padding-left: 0px;
+    padding-right: 0px;
 
     h5 {
-        margin-bottom: $rvr-1;
+        margin-bottom: $rvr-0;
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(12);
+
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: $rvr-3;
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: column;
+
+        @include make-col-ready;
+        @include make-col(4);
+
+        padding-left: 0px;
+        padding-right: 0px;
+
+        h5 {
+            margin-bottom: $rvr-_25;
+        }
+    }
+}
+
+// @media (min-width: 992px) {
+// @include make-col-ready;    
+// @include make-col(3);
+//         padding-left: 30px;
+//         padding-right: 30px;
+
+.disciplines__content-icon {
+    @include make-col-ready;
+    @include make-col(3);
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(2);
+
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.howidoit__disciplines_content--description {
+    @include make-col-ready;
+    @include make-col(9);
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(10);
+
+        padding-left: 0px;
+        padding-right: 0px;
+
+        .br {
+            display: none;
+        }
     }
 }
 
@@ -122,7 +270,7 @@
 
     @include media-breakpoint-up(md) {
         @include make-col-ready;
-        @include make-col(10);
+        @include make-col(12);
 
         margin-left: auto;
         margin-right: auto;
@@ -152,52 +300,87 @@
     padding-right: $ms-1;
     padding-top: $rvr-1;
     padding-bottom: $rvr-_25;
+
+    @include media-breakpoint-up(md) {
+        padding-top: $rvr-2_25;
+        padding-bottom: $rvr-2_25;
+        flex: 0 0 32%;
+        max-width: 32%;
+
+        // margin: ms(.025);
+    }
 }
 
-.my-mo {
+.stats-caption {
+    @include media-breakpoint-up(md) {
+        font-size: ms(3);
+        max-width: ms(7);
+    }
+}
+
+.home-page__my-mo__container {
     // @extend .container;
     @extend .panel-hero__img--background;
 }
 
-.my-mo {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    overflow: hidden;
+.home-page__my-mo__container {
+    @include media-breakpoint-up(md) {
+        width: ms(10.7);
+    }
 }
 
-h1 {
-    margin-top: auto;
+article.panel-fluid.home-page {
+    .home-page__my-mo__container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        // #main > section > article:nth-child(3) > div > p:nth-child(6){
+        //       // margin-bottom: auto;
+        // }
+        .split-container {
+            margin-top: auto;
+            margin-bottom: auto;
+            flex: 0 0 auto;
+        }
+
+        h1 {
+            @extend .page__title;
+
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        h2 {
+            line-height: $rvr-2_75;
+            margin-bottom: $rvr-3;
+            font-size: ms(4.5);
+            letter-spacing: -.01rem;
+        }
+
+        h3 {
+            // flex: 0 1 $rvr-4;
+       
+        }
+
+        a.link__advance--chevron {
+            align-self: flex-end;
+
+            // align-self: flex-end;
+            flex: 0 0 auto;
+        }
+
+        p {
+            //         max-width: ms(9.9);
+            // margin-bottom: auto;
+       
+        }
+    }
 }
 
-h2 {
-    line-height: $rvr-2_75;
-    margin-bottom: $rvr-3;
-    font-size: ms(4.5);
-    letter-spacing: -.01rem;
-}
-
-h3 {
-    flex: 0 1 $rvr-4;
-    margin-bottom: auto;
-}
-
-.link__advance--chevron {
-    flex: 0 0 0;
-}
-
-p {
-    //         max-width: ms(9.9);
-    margin-bottom: $rvr-2;
-}
-
-p:last-of-type {
-    margin-bottom: $rvr-2;
-}
-
-.panel-fluid.basic.home-page__the-goal {
+.panel-fluid.basic.home-page__whatiam {
     margin-left: auto;
     margin-right: auto;
 
@@ -233,23 +416,48 @@ p:last-of-type {
 
 //splash panel layout styles
 
-#main > section > article.panel-fluid.basic.home-page.home-page__whatido > div > a{
-  // @include make-col-ready;
-  //   @include make-col(12);
-  //   left: 50%;
-      
+#main > section > article.panel-fluid.basic.home-page.home-page__whatido > div > a {
+    // @include make-col-ready;
+    //   @include make-col(12);
+    //   left: 50%;
 }
 
-.panel-fluid.about-me.splash,
-.panel-fluid.my-expertise.splash,
-.panel-fluid.why-me.splash {
-    // h1, h2, h3{
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
+.panel-fluid.my-expertise {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
+        position: relative;
+    }
+
+    .panel-fluid.about-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
+        position: relative;
+    }
+
+    .panel-fluid.why-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
+        position: relative;
+    }
+
+
+.about-me__container__splash,
+.my-expertise__container__splash,
+.why-me__container__splash{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
     h1 {
         margin-top: auto;
         margin-bottom: $rvr-3;
+        flex: 0 1 auto;
     }
 
     h1.br {
@@ -258,29 +466,32 @@ p:last-of-type {
 
     h2 {
         @extend .display;
-
+    flex: 0 1 auto;
         margin-bottom: $rvr-2;
     }
 
     h3 {
         @extend .body;
-
+        flex: 0 1 auto;
         flex: 0 1 $rvr-10;
         margin-bottom: auto;
         line-height: $rvr-1_75;
     }
 
     .link__advance--chevron {
-        flex: 0 1 0;
+        margin-top: auto;
+        flex: 0 0 0;
     }
 }
 
 .my-value__splash__container {
     text-align: left;
     max-width: 280px;
-    @media (min-width: 400px){
-max-width: inherit;
-}
+
+    @media (min-width: 400px) {
+        max-width: inherit;
+    }
+
     h1 {
         flex: 0 0 auto;
         margin-top: auto;
@@ -291,10 +502,18 @@ max-width: inherit;
     }
 }
 
-
-#main > section > article:nth-child(2) > div > div > hgroup > h2{
+#main > section > article:nth-child(2) > div > div > hgroup > h2 {
     letter-spacing: .025rem;
 }
+
+#main > section > article.panel-fluid.my-expertise.skills{
+    height: initial;
+}
+
+#main > section > article.panel-fluid.my-expertise.skills > div > div.my-expertise__main-page{
+    background: #fff;
+}
+
 
 .my-expertise .skills {
     display: flex;
@@ -356,6 +575,7 @@ max-width: inherit;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: $rvr-2;
 
     h1 {
         @extend .subhead;
@@ -394,7 +614,11 @@ max-width: inherit;
     justify-content: left;
 
     p {
-        max-width: ms(9.75);
+        max-width: ms(12.75);
+        text-align: left;
+    }
+     p:last-of-type{
+        margin-bottom: $rvr-2;
     }
 }
 
@@ -418,8 +642,11 @@ max-width: inherit;
 
     p {
         margin-bottom: $rvr-3;
-        flex: 0 0 25rem;
+        flex: 1 0 25rem;
+        text-align: left;
     }
+
+
 
     @include media-breakpoint-up(sm) {
         @include make-col-ready;
@@ -458,7 +685,7 @@ max-width: inherit;
 
     // height: 120vh;
     background: rgba(0, 0, 0, 0.92);
-    z-index: 999;
+    z-index: 9999;
 
     // We hide the overlay by default */
     visibility: hidden;
@@ -473,7 +700,7 @@ max-width: inherit;
 
 #expt-overlay-1 {
     order: 2;
-
+height: 100vh;
     @include media-breakpoint-up(lg) {
         order: 1;
     }

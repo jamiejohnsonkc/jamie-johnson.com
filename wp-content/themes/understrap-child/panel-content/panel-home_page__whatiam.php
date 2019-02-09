@@ -8,16 +8,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid home-page"> <!-- CONTAINER --><div class="container basic home-page__the-goal__container">
-
+<article class="panel-fluid home-page"> <!-- CONTAINER --><div class="container home-page__whatiam__container">
+<div class="split-container">
 	<h1>what i am</h1>
-	<h2>Strategic Marketing & Front-end Design + Development</h2>
+	<h2>Strategic Marketing, <span class="br"><br></span>Front-end Design + Development</h2>
 <!-- 	<h3>Seeking the Cashy Cash</h3> -->
 <!-- 	<p><span><strong>I know what I'm doing &mdash;</strong></span>I've been in marketing my entire career (20+ years).</p>
 	<p><span><strong>I do a bit of everything &mdash;</strong></span>I've led the team and I've been the team.</p> -->
 	<p><span><strong>I'm up for anything where I can be of help &mdash;</strong></span>I'm looking for short term engagements while I conduct a job search.</p>
 	<p><strong>No Front-End Dev/Design opportunit is too small &mdash;</strong> So whether you need a simple website refresh or a comprehensive marketing program, I can help.</p>
-
+</div>
 <!-- <div class="table-wrap"> -->
 	<table id="capabilities_table">
 		<caption>My capabilities range from leading C-Level strategic initiatives to slap'n logos on mugs. And if I'm not the right person to help you, chance are I can help you find someone who can.</caption>

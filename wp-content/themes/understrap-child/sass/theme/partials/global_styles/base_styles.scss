@@ -136,7 +136,10 @@ line-height:   $rvr-1_75;
     }
 
 
-
+.br{
+    line-height: 0;
+    display: none;
+}
 
 
 .row{}
@@ -157,10 +160,21 @@ line-height:   $rvr-1_75;
         position: relative;
     }
 
-@media (min-width: 300px){
+.fixed-top{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar{
+    @extend .fixed-top;
+}
+
+@media (min-width: 319px){
      .container{
-    width: 340px;
-    max-width: 100%
+    width: 310px;
+    max-width: 100%;
     } 
 }
 
@@ -198,26 +212,40 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 1400px) {
      .container {
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1000px;
     }
 }
 
 @media (min-width: 1600px) {
      .container {
-        max-width: 1400px;
+        max-width: 1000px;
     }
 }
 
 @media (min-width: 1900px) {
      .container {
-        max-width: 1600px;
+        max-width: 1100px;
+    }
+    .navbar .container{
+        width: 1800px;
+        max-width: 1800px;
     }
 }
 
 @media (min-width: 3000px){
+    .container{
+        max-width: 2012px;
+    }
+
 .navbar .container {
-        width: 2560px;
+        width: 2400px;
         max-width: 100%;
     }
+     .navbar .container{
+        width: 3000px;
+        max-width: 3000px;
+    }
 }
+
 

@@ -107,9 +107,10 @@ a.link {
     // color: #111;
     table-layout: fixed;
     width: 95%;
+    align-self: baseline;
 
     thead th {
-        background-color: $gray-700;
+        background-color: $slate;
         color: #fff;
         padding: $ms-2_25;
     }
@@ -140,12 +141,13 @@ a.link {
     }
 
     caption {
-        caption-side: top;
+        caption-side: bottom;
         color: #111;
         font-size: ms(1.5);
         font-weight: 400;
         margin-bottom: $rvr-_25;
         padding-left: $ms-2_25;
+        max-width: ms(11);
     }
 }
 

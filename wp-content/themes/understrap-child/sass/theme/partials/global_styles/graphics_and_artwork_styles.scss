@@ -1,14 +1,14 @@
 //IMAGES===========================================
 
 
-.basic.home__the-goal.splash {
+.home-page__whatiam__container {
     .panel-hero__img--mobile {
         width: 100%;
         left: 0%;
     }
 }
 
-.basic.home__the-goal.panel-hero__img--background {
+.home-page__whatiam.container.panel-hero__img--background {
     background: none;
 
     @include media-breakpoint-up(lg) {
@@ -37,17 +37,39 @@
     }
 }
 
-.home-page.splash.panel-hero__img--background {
+.bgme {
     background: none;
 
     @include media-breakpoint-up(lg) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
         background-position: right bottom;
-        background-size: 90% 90%;
+        background-size: 80%;
         background-repeat: no-repeat;
     }
 }
 
+.bgevo {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolution.jpg");
+        background-position: right bottom;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+.bgarrow {
+    background: none;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg");
+        background-position: left 165%;
+        background-size: 75%;
+        background-repeat: no-repeat;
+    }
+}
 
 
 .my-expertise.splash.panel-hero__img--background {
@@ -86,6 +108,9 @@
     }
 }
 
+
+
+
 .about-me.splash.panel-hero__img--background {
     background: none;
 
@@ -97,25 +122,24 @@
     }
 }
 
-.home-page__splash {
-    .panel-hero__img--mobile {
-        width: 55%;
-        left: 55%;
+.profile {
+        width: 45%;
+        left: 65%;
         z-index:-1;
           @include media-breakpoint-up(md) {
         left: 50%;
     }
 }
-}
 
 
-        .panel-hero__img--mobile .evo {
+.panel-hero__img--mobile.evo{
         width: 100%;
         height: auto;
-        left: 55%;
+        left: 0;
         z-index:-1;
+        position: relative;
           @include media-breakpoint-up(md) {
-        left: 50%;
+        left: inherit;
 }
 }
 
@@ -142,20 +166,21 @@
 .stats .style-svg {
     height: $ms-6;
     width: $ms-6;
-}
-
-.howidoit__disciplines_content {
-    svg, .cls-1 {
-        fill: $primary;
+    @include media-breakpoint-up(md) {
+        height: ms(6.5);
+        width: ms(6.5);
     }
 }
 
-.expertise__menu {
-    .style-svg, .cls-1, .cls-3, .cls-4 {
-        max-width: $ms-10;
+
+
+.expertise__menu_icon, .expertise__menu_icon .cls-2, .expertise__menu_icon .cls-1{
+    // .style-svg, .cls-1, .cls-3, .cls-4 {
+    //     max-width: $ms-10;
         fill: $tungsten;
+        width: 20%;
     }
-}
+
 
 .scroll-top svg {
     width: ms(2.5);
@@ -242,6 +267,20 @@
     }
 }
 
+.disciplines__content-icon {
+        .cls-1, .cls-2 {
+        fill: $slate;
+    } 
+    width: 50%;
+    @include media-breakpoint-up(md) {
+    width: 40%;
+    }
+    @include media-breakpoint-up(lg) {
+    width: 30%;
+}
+    
+@include media-breakpoint-up(xl) {}
+}     
 
 
 

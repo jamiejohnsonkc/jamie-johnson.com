@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid my-expertise">
+<article class="panel-fluid my-expertise cta">
 	<div class="container m-expertise my-expertise__container__cta">
 		<!-- 	<div class="row"> -->
 		

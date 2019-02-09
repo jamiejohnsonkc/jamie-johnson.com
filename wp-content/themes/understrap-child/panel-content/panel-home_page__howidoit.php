@@ -10,43 +10,48 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- <article class="panel-fluid basic home-page home-page__howidoit">
 		<div class="container home-page__howidoit__container"> -->
-			<article class="panel-fluid home-page home-page__howidoit">
-		<div class="container basic home-page__howidoit__container">
+	<article class="panel-fluid home-page home-page__howidoit">
+		<div class="container home-page__howidoit__container">
 		<h1>how i do it</h1>
 		
-		<h2>I Cover From End to End &amp; All Parts Between</h2>
-		<h3>leadership | strategy | design | development | ops</h3>  <!-- sublist!!! -->
-		<h4>Whether you're fortune 500 or a small business I can help. If not, I'll help you find someone who can.</h4>
+		<h2>Soup to Nuts.</h2>
+		<div class="split-container">
+	<!-- 	<h3>leadership | strategy | design | development | ops</h3>   --><!-- sublist!!! -->
+		<h4><strong>I've been responsible for </strong>the planning, development, execution and <strong>successful outcomes</strong> programs <strong>my entire career.</strong></h4><h4>So whether you're fortune 500 or getting started, I can bring value to your business.</h4> <h4>If not, I'll help you find someone who can.</h4>
+		</div>
 
-<div class="howidoit__disciplines">  <!-- row
- --><div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
+<div class="howidoit__disciplines"> 
+<h4>This Is What I Do</h4>
+<div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--bullseye"/>
-<h5>marketing leadership</h5>
-<p>augmenting business growth & performance</p>
- 	</div>  
+<div class="howidoit__disciplines_content--description">
+	<div class="howidoit__disciplines_content--description"><h5>strategic leadership</h5>
+<p>augmenting business growth & performance</p></div>
+ 	
+ 	</div></div>
 
 <div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_21.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--marekting"/>
-<h5>strategic marketing management</h5>
-<p>creating and retaining customers</p>
+<div class="howidoit__disciplines_content--description"><h5>marketing <span class="br"><br></span>management</h5>
+<p>creating and retaining customers</p></div>
  	</div>  
 
  	<div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_25.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--conversation"/>
-<h5>marketing communications</h5>
-<p>earning and maintaining customer trust</p>
+<div class="howidoit__disciplines_content--description"><h5>marketing <span class="br"><br></span>communications</h5>
+<p>earning and maintaining customer trust</p></div>
  	</div>  
 
  	<div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" alt=""class="style-svg disciplines__content-icon disciplines__content-icon--devices"/>
-<h5>digital design & development</h5>
-<p>engaging and converting prospects</p>
+<div class="howidoit__disciplines_content--description"><h5>digital design & development</h5>
+<p>engaging and converting prospects</p></div>
  	</div>  
 
  	<div class="howidoit__disciplines_content"><!-- make column --> <!--  flex-col -->
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--gears"/>
-<h5>operations & infrastructure</h5>
-<p>optimizing marketing function performance and business contribution</p>
+<div class="howidoit__disciplines_content--description"><h5>operations <span class="br"><br></span>& infrastructure</h5>
+<p>optimizing marketing function performance and business contribution</p></div>
  	</div>  
 
 </div>

@@ -8,8 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid my-expertise">
+<article class="panel-fluid my-expertise skills">
 	<div class="container my-expertise my-expertise__container__skills">
+	<h1>I kick ass</h1>
 	<!-- Marketing Leadership SUBPANEL -->
 	<div class="expertise__overlay expertise__overlay--marketing-leadership" id="expt-overlay-1">
 		<div id="expt-close-1"><div>X</div></div>
@@ -329,30 +330,30 @@ exit; // Exit if accessed directly.
 <nav class="expertise__main-page_menu">  <!--  extend this to row -->
 <div class="expertise__menu_item" id="open-expt-overlay-1">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
-<h1>Marketing Leadership</h1>
+<h3>Marketing Leadership</h3>
 <p>Officia cupidatat ut ea consequat quis consequat ullamco officia.<p>
 <p>learn more</p>
 </div>
 <div class="expertise__menu_item" id="open-expt-overlay-2">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="expertise__menu_icon expertise__menu_icon--marketing style-svg" alt="skills_icon"/>
-<h1>Strategic Marketing Management</h1>
+<h3>Strategic Marketing Management</h3>
 <p>Voluptate ea ut ex ullamco ut ut sint non.</p>
 <p>learn more</p>
 </div>
 <div class="expertise__menu_item" id="open-expt-overlay-3">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="expertise__menu_icon expertise__menu_icon--communications style-svg" alt="skills_icon"/>
-<h1>Marketing Communications</h1>
+<h3>Marketing Communications</h3>
 <p>Ex aliqua eiusmod sunt pariatur laborum elit enim.</p>
 <p>learn more</p>
 </div>
 <div class="expertise__menu_item" id="open-expt-overlay-4">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="expertise__menu_icon expertise__menu_icon--webdev style-svg" alt="skills_icon"/>
-<h1>Mobile + Web Development</h1>
+<h3>Mobile + Web Development</h3>
 <p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p><p>learn more</p>
 </div>
 <div class="expertise__menu_item" id="open-expt-overlay-5">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="expertise__menu_icon expertise__menu_icon--operations style-svg" alt="skills_icon"/>
-<h1>Operations & Infrastructure</h1>
+<h3>Operations & Infrastructure</h3>
 <p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
 <p>learn more</p>
 </div>

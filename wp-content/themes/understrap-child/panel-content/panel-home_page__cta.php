@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <article class="panel-fluid home-page">
-		<div class="container basic home-page__cta__container">
+		<div class="container home-page__cta__container">
 	
 				
 					

@@ -31,111 +31,404 @@
 //         flex: 0 1 auto;
 //     }
 // }
+//SECTION/PAGE POSITIONING & LAYOUT
+.panel-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
 
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
+}
 
-.home-page__splash {
-    align-items: center;
-  
-    h1, h2, h3, h4, p {
+.business-value {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2, h3 {
         margin-bottom: 0;
     }
 
-    h1 {
-        margin-top: 10rem;
-        flex: 0 0 8rem;
+    h4 {
+        margin-top: $rvr-1;
+    }
+}
 
-        br {
-            display: none;
-        }
+// PANEL POSITIONING & LAYOUT TEMPLATES
+
+.splash {
+    height: 100vh;
+    text-align: left;
+
+    h1 {
+        margin-top: auto;
     }
 
     h2 {
-        flex: 0 0 10rem;
-        line-height: $rvr-2_25;
+        margin-bottom: $rvr-2;
+    }
+
+    h3 {}
+}
+
+.splash, .basic {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+
+    h1 {
+        flex: 0 0 auto;
+    }
+
+    h2 {
+        flex: 0 0 auto;
     }
 
     h3 {
-        flex: 0 0 7rem;
-        line-height: $rvr-2;
-    }
-
-    p:first-of-type {
         flex: 0 0 auto;
-        max-width: $ms-10;
-        margin: 0 auto $rvr-1_5 auto;
-        padding: 0 $ms-4;
     }
 
-    p:last-of-type {
-        flex: 0 0 8rem;
+    h4 {
+        flex: 0 0 auto;
+    }
+
+    .split-container {}
+}
+
+.link__advance--chevron {
+    flex: 0 0 0;
+}
+
+.splash{
+    @extend .panel-hero__img--background;
+}
+
+.my-value {}
+
+.why-me {}
+
+.about-me {}
+
+.my-expertise {}
+
+.home-page {
+    padding-top: $rvr-6 ;
+    padding-bottom: $rvr-6;
+
+    h1 {
+        flex: 0 0 auto;
+    }
+
+    h2 {
+        flex: 0 0 auto;
+    }
+
+    h3 {
+        flex: 0 0 auto;
+    }
+
+    h4 {
+        flex: 0 0 auto;
+    }
+
+    p {
+        flex: 0 0 auto;
+    }
+
+    p {
+        flex: 0 0 auto;
+    }
+
+    .split-container {}
+}
+
+#contact {}
+
+article.panel-fluid.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+article.panel-fluid.home-page.bgme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+
+    .home-page__splash {
+        align-items: center;
+        text-align: center;
+
+        h1, h2, h3, h4, p {
+            margin-bottom: 0;
+        }
+
+        h1 {
+            margin-top: auto;
+            flex: 0 0 12rem;
+            padding-top: $rvr-3;
+        }
+
+        h2 {
+            flex: 0 0 10rem;
+            line-height: $rvr-2_25;
+        }
+
+        .split-container {
+            flex: 0 0 auto;
+            margin-bottom: auto;
+        }
+
+        h3 {
+            line-height: $rvr-2;
+            margin-bottom: $rvr-1_5;
+        }
+
+        p:first-of-type {
+            flex: 0 0 auto;
+            max-width: $ms-10;
+            margin: 0 auto $rvr-1 auto;
+            padding: 0 $ms-4;
+        }
+
+        p:last-of-type {
+            flex: 0 0 8rem;
+            margin-bottom: auto;
+        }
+
+        @include media-breakpoint-up(xl) {
+            align-items: flex-start;
+            justify-content: space-around;
+
+            h1 {
+                flex: 0 0 4rem;
+            }
+
+            .split-container {
+                flex: 0 0 auto;
+                text-align: left;
+                margin-bottom: auto;
+            }
+
+            h2 {
+                margin-bottom: $rvr-1;
+                flex: 0 0 0;
+            }
+
+            h3 {
+                margin-bottom: $rvr-_25;
+                line-height: $rvr-1_25;
+            }
+
+            p:first-of-type {
+                padding: 0;
+                margin-left: 0;
+                margin-right: 0;
+                flex: 0 0 0rem;
+                line-height: $rvr-1;
+                margin-bottom: $rvr-2;
+            }
+
+            p:last-of-type {
+                flex: 0 0 8rem;
+            }
+        }
+    }
+}
+
+//       @include media-breakpoint-up(md) {
+//         align-items: flex-start;
+//         text-align: left;
+
+// }
+
+article.panel-fluid.home-page {
+    .home-page__whatiam__container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        h1 {
+            @extend .page__title;
+
+            text-align: left;
+            align-self: flex-start;
+        }
+
+        h2 {}
+
+        p {}
+
+        p {}
+
+        p {}
+       a.link__advance--chevron{
+        margin-top: auto;
+        }
+
+    @include media-breakpoint-up(md) {
+        justify-content: initial;
+    }
+    }
+}
+
+.home_page__myqualifications__container {
+    h3 {
+        margin-bottom: $rvr-2;
+    }
+}
+
+.home-page__howidoit__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .howidoit__disciplines {
+        @extend .row;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    
+}
+
+.home-page__whatiam__container {
+    .split-container{
+        @include media-breakpoint-up(md) {margin-bottom: $rvr-2;
+        }
+    }
+}
+
+article.panel-fluid.home-page.home-page__whatido {
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.home-page__my-mo__container{
+    h1{
+        padding-top: $rvr-4;
+    }
+}
+
+
+
+.home-page__whatido__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+.split-container{
+    h1 {
+        @extend .page__title;
+
+        text-align: left;
+        flex: 0 1 auto;
+    }
+
+    h2 {
+        flex: 0 1 auto;
+    }
+
+    h3 {
+        flex: 0 1 auto;
+        margin-bottom: $rvr-2;
+    }
+
+    p {
+        flex: 0 1 16rem;
+        margin-bottom: auto;
+    }
+}
+    a.link__advance--chevron {
+        align-self: flex-end;
+        flex: 0 0 0;
+        margin-top: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+        p {
+            flex: 0 1 2rem;
+        }
+    }
+}
+
+.home-page__cta__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+        @extend .page__title;
+
+        text-align: left;
+    }
+    h2{
+        margin-top: auto;
+    }
+    p{
+        margin-bottom: auto;
+    }
+
+    a.learn {
+        flex: 0 1 auto;
         margin-bottom: auto;
     }
 }
 
-.home-page__my-mo__container{
-    h1
-    h2
-    p{}
-    p{}
-    p{}
-}
+.my-expertise__container__splash {}
 
-.home_page__myqualifications__container{}
+.my-expertise__container__skills {}
 
-.home-page__howidoit{
-    height: inherit;
- .home-page__howidoit__container{}
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
+.my-expertise__container__cta {}
 
-.home-page__the-goal__container{}
+.about-me__container__backstory {}
 
-.home-page__whatido{
-    justify-content: flex-end;
-.home-page__whatido__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    h1{flex: 0 1 auto;}
-    h2{flex: 0 1 auto;}
-    h3{flex: 0 1 auto;}
-    p{flex: 0 1 16rem;}
-    a.link__advance--chevron{
-        align-self: flex-end;
-        flex: 0 0 1;
-    }
-    }
-}
+.about-me__container__personal {}
 
+.about-me__container__splash {}
 
-.home-page__cta__container{}
+.about-me__container__cta {}
 
-.my-expertise__container__splash{}
-.my-expertise__container__skills{}
-.my-expertise__container__cta{}
+.why-me__container__splash {}
 
-.about-me__container__backstory{}
-.about-me__container__personal{}
-.about-me__container__splash{}
-.about-me__container__cta{}
+.why-me__container__atypical {}
 
-.why-me__container__splash{}
-.why-me__container__atypical{}
-.why-me__container__brands{}
-.why-me__container__categories{}
-.why-me__container__cta{}
+.why-me__container__brands {}
 
-.my-value__container__splash{}
-.my-value__container__advance{}
-.my-value__container__grow{}
-.my-value__container__modernize{}
-.my-value__container__optimize{}
-.my-value__container__cta{}
+.why-me__container__categories {}
 
-.container__contact{
-    h1{}
-    p{}
-    .container_form{}
+.why-me__container__cta {}
+
+.my-value__container__splash {}
+
+.my-value__container__advance {}
+
+.my-value__container__grow {}
+
+.my-value__container__modernize {}
+
+.my-value__container__optimize {}
+
+.my-value__container__cta {}
+
+.container__contact {
+    h1 {}
+
+    p {}
+
+    .container_form {}
 }

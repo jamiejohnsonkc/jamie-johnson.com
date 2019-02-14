@@ -186,9 +186,10 @@ exit; // Exit if accessed directly.
 <div class="expertise__overlay expertise__overlay--webdev" id="expt-overlay-4">
 <div id="expt-close-4">x</div>
 <div class="overlay__container">
-	<h2>Mobile + Web Development</h2>
+	<h2>Mobile <span class="br"><br></span>+ Web Development</h2>
 	<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
 	<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
+	<div class="row">
 	
 	<div class="overlay__content">
 		<h3>languages & frameworks </h3>
@@ -203,8 +204,18 @@ exit; // Exit if accessed directly.
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 	</div>
+		<div class="overlay__content">
+		<h3>design & prototyping</h3>
+		<hr>
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
+		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
+	</div>
 	<div class="overlay__content">
-		<h3>systems & development environments</h3>
+		<h3>systems & environments</h3>
 		<hr>
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
@@ -219,16 +230,7 @@ exit; // Exit if accessed directly.
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 	</div>
-	<div class="overlay__content">
-		<h3>web design & prototyping/development</h3>
-		<hr>
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
-		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
-	</div>
+
 	<div class="overlay__content">
 		<h3>task processors</h3>
 		<hr>
@@ -266,6 +268,7 @@ exit; // Exit if accessed directly.
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
 		<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 	</div>
+</div>
 </div>
 </div>
 <div class="expertise__overlay expertise__overlay--operations" id="expt-overlay-5">

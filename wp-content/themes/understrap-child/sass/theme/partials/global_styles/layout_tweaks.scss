@@ -100,7 +100,7 @@
     left: 25%;
     z-index: -1;
 
-    @include media-breakpoint-up(lg) {
+  @media (min-width: 1200px) {
         display: none;
     }
 }
@@ -111,9 +111,43 @@ width: 70%;
 }
 
 .my-expertise .panel-hero__img--mobile{
-@include media-breakpoint-up(md){
-    left: 10%;
+
+@media (min-width: 300px) {
+    left: 4%;
 }
+
+
+@media (min-width: 400px) {}
+
+
+@media (min-width: 576px) {}
+
+
+@media (min-width: 768px) {
+    left: 15%;
+    overflow: hidden;
+    width: 150%;
+    max-width: auto;
+    .conductor-small{
+        width: 700px;
+    }
+}
+
+
+@media (min-width: 992px) {
+left: 35%;
+}
+
+@media (min-width: 1200px) {}
+
+
+@media (min-width: 1400px) {}
+
+
+@media (min-width: 1600px) {}
+
+@media (min-width: 1900px) {}
+
 }
 // ARTICLE LAYOUTS
 
@@ -132,12 +166,21 @@ width: 70%;
     margin: 0 auto;
 
     @include media-breakpoint-up(md) {
-        max-width: ms(10.8);
+        // max-width: ms(10.7);
+//         text-align: justify;
+max-width: auto;
         display: flex;
         flex-direction: row;
 
         h1, h2 {
-            width: 100%;
+        width: 100%;
+        text-align: left;
+        }
+//         h4{
+//             max-width: ms(11);
+//         }
+        h4+h4{
+            max-width: ms(11.2);
         }
     }
 
@@ -199,10 +242,6 @@ width: 70%;
 
         padding-left: 0px;
         padding-right: 0px;
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: $rvr-2;
     }
 
 
@@ -234,17 +273,23 @@ width: 70%;
 
     @include media-breakpoint-up(md) {
         @include make-col-ready;
-        @include make-col(12);
-
+        @include make-col(6);
+        display: flex;
+        // margin-left: $ms-1;
         padding-left: 0px;
         padding-right: 0px;
         margin-bottom: $rvr-3;
+    h5, p{ margin-left: $ms-1;}
+    p{
+//         text-align: justify;
+        max-width: ms(9.5);
+    }
     }
 
 
     @include media-breakpoint-up(lg) {
         flex-direction: column;
-
+        margin-left: inherit;
         @include make-col-ready;
         @include make-col(4);
 
@@ -361,11 +406,9 @@ width: 70%;
     @extend .panel-hero__img--background;
 }
 
-.home-page__my-mo__container {
-    @include media-breakpoint-up(md) {
-        width: ms(10.7);
-    }
-}
+
+
+
 
 article.panel-fluid.home-page {
     .home-page__my-mo__container {
@@ -374,6 +417,9 @@ article.panel-fluid.home-page {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @include media-breakpoint-up(md) {
+            min-height: auto;
+        }
 
         // #main > section > article:nth-child(3) > div > p:nth-child(6){
         //       // margin-bottom: auto;
@@ -415,7 +461,42 @@ article.panel-fluid.home-page {
             // margin-bottom: auto;
        
         }
+
     }
+}
+
+article.panel-fluid.home-page .home-page__my-mo__container {
+    
+        
+              @media (min-width: 300px) {}
+              
+              
+              @media (min-width: 400px) {}
+              
+              
+              @media (min-width: 576px) {}
+              
+              
+              @media (min-width: 768px) {    width: ms(11.25);
+              }
+              
+              
+              @media (min-width: 992px) {
+                width: ms(12.25);
+                align-items: flex-start;
+              }
+              
+              
+              @media (min-width: 1200px) {}
+              
+              
+              @media (min-width: 1400px) {}
+              
+              
+              @media (min-width: 1600px) {}
+              
+              @media (min-width: 1900px) {}
+                    
 }
 
 .panel-fluid.basic.home-page__whatiam {
@@ -571,7 +652,11 @@ article.panel-fluid.home-page {
     @include make-col(12);
 
     position: relative;
-
+@include media-breakpoint-up(md) {
+    h1{
+        align-self: center;
+    }
+}
     @include media-breakpoint-up(lg) {
         height: 100vh;
     }
@@ -706,6 +791,15 @@ padding-right: 0px;
     margin-bottom: $rvr-3;
     }
 }
+@include media-breakpoint-up(xl) {
+    p+p {
+        width: 100%;
+    }
+}
+}
+
+#expt-overlay-4 > div.overlay__container > div{
+    padding-top: $rvr-3;
 }
 
 .overlay__content {
@@ -714,11 +808,17 @@ padding-right: 0px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-content: start;
+    @extend .row;
 
     // align-content: flex-start;
     .overlay__content--icon {
-        margin-right: $ms-1;
-        margin-left: -$ms-1;
+        // margin-right: $ms-1;
+        // margin-left: -$ms-1;
+        @include make-col-ready();
+        @include make-col(4);
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     h3 {
@@ -741,6 +841,10 @@ padding-right: 0px;
 
 
     @include media-breakpoint-up(md) {}
+@include media-breakpoint-up(xl) {
+@include make-col(4);
+
+}
 }
 
 #open-expt-overlay-4 .expertise__menu {
@@ -827,6 +931,12 @@ height: 100vh;
     order: 5;
     display: flex;
     flex-direction: column;
+    .empty{
+        @include make-col-ready();
+        @include make-col(12);
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
     h3 {
         flex: 0 1 auto;
@@ -834,10 +944,21 @@ height: 100vh;
         text-align: center;
         width: 90%;
     }
+    @media (min-width: 992px){
+         p{ max-width: ms(11.65); }
+    }
+  @media (min-width: 1200px) {
+    p{max-width: ms(12.5);}
+  }
 
     .overlay__content:first-of-type {
         margin-top: $rvr-2;
-    }
+    @media (min-width: 992px){
+        margin-top: 0;
+  }
+}
+    
+    
 
     .overlay__content {
         justify-content: center;
@@ -846,19 +967,43 @@ height: 100vh;
         @include make-col(12);
         padding-left: 0px;
         padding-right: 0px;
+        flex: 0 0 auto;
+    
+    @media (min-width: 300px) {}
+    
+    
+    @media (min-width: 400px) {}
+    
+    
+    @media (min-width: 576px) {}
+    
+    
+    @media (min-width: 768px) {
+      
     }
-@include media-breakpoint-up(md) {
-p{ max-width: ms(11.25); }
-}
-    // overflow: hidden;
-    // display: flex;
-    // align-items: center;
-    // position: relative;
-
-    @include media-breakpoint-up(lg) {
+    
+    
+    @media (min-width: 992px) {
+        @include make-col(6);
+        align-items: baseline;
         order: 4;
     }
-}
+    
+    
+    @media (min-width: 1200px) {}
+    
+    
+    @media (min-width: 1400px) {}
+    
+    
+    @media (min-width: 1600px) {}
+    
+    @media (min-width: 1900px) {}
+    
+    }
+    }
+
+
 
 #expt-overlay-5 {
     height: 100vh;
@@ -882,7 +1027,7 @@ p{ max-width: ms(11.25); }
 #expt-close-1, #expt-close-2, #expt-close-3, #expt-close-4, #expt-close-5 {
     position: fixed;
     top: $ms-4;
-    right: $ms-4;
+    right: $ms-6;
     color: #fff;
     cursor: pointer;
     z-index: 1000;

@@ -23,7 +23,7 @@
 //         flex: 0 1 auto;
 //     }
 
-//     a.link__avance--chevron {
+//     a.link__advance--chevron {
 //         flex: 0 1 auto;
 //     }
 
@@ -156,8 +156,8 @@
 .my-expertise {}
 
 .home-page {
-    padding-top: $rvr-6 ;
-    padding-bottom: $rvr-6;
+    padding-top: $rvr-4 ;
+    padding-bottom: $rvr-4;
 
     h1 {
         flex: 0 0 auto;
@@ -184,6 +184,10 @@
     }
 
     .split-container {}
+    @include media-breakpoint-up(md) {
+    padding-top: $rvr-6 ;
+    padding-bottom: $rvr-6;
+}
 }
 
 #contact {}
@@ -242,6 +246,11 @@ article.panel-fluid.home-page.bgme {
         p:last-of-type {
             flex: 0 0 8rem;
             margin-bottom: auto;
+        }
+
+        a.link__advance--chevron{
+         flex: 0 0 0; 
+         margin: $rvr-4 auto $rvr-1 auto;  
         }
 
         @include media-breakpoint-up(xl) {
@@ -332,16 +341,32 @@ article.panel-fluid.home-page {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+@include media-breakpoint-up(md) {
+          h4{
+            margin-bottom: $rvr-1_25;
+        }
+    }
     
     .howidoit__disciplines {
         @extend .row;
         display: flex;
         flex-direction: row;
         width: 100%;
+        @include media-breakpoint-up(md) {
+            display: inline-flex;
+             flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: $rvr-2;
+        width: 100%;
+        max-width: 100%;
+
+        }
     }
 
     
 }
+
 
 .home-page__whatiam__container {
     .split-container{

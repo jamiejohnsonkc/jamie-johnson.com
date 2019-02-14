@@ -94,14 +94,20 @@
 
 
 .home-page__whatido {
+    text-align: center;
     h1 {
         @extend .page__title;
     }
-    text-align: left;
 .split-container{
     h3 {
         font-size: $h4-font-size;
         text-transform: lowercase;
+    }
+    h3, p{
+        text-align: justify;
+        max-width: ms(9.75);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 }
@@ -118,7 +124,13 @@
 
     h4 {
         @extend .display;
-        font-size: $display-3-font-size;
+          font-size: $h4-font-size;
+            line-height: $rvr-1_75;
+    }
+
+    h4+h4 {
+        @extend .display;
+          font-size: $display-3-font-size;
             line-height: $rvr-1_75;
     }
     @include media-breakpoint-up(lg) {

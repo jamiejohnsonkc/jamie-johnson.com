@@ -171,11 +171,14 @@ line-height:   $rvr-1_75;
     @extend .fixed-top;
 }
 
-@media (min-width: 319px){
+@media (min-width: 320px){
      .container{
     width: 310px;
     max-width: 100%;
     } 
+    .navbar .container{
+        width: 300px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -186,7 +189,7 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 768px) {
     .navbar .container {
-        width: 600px;
+        width: 660px;
         max-width: 100%;
     }
 
@@ -198,24 +201,38 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 992px) {
      .container {
-        width: 960px;
+        width: 700px;
+        max-width: 100%;
+    }
+    .navbar .container{
+        width: 900px;
         max-width: 100%;
     }
 }
 
 @media (min-width: 1200px) {
      .container {
-        width: 1140px;
+        width: 760px;
+        max-width: 100%;
+    }
+     .navbar .container{
+        width: 1000px;
         max-width: 100%;
     }
 }
 
 @media (min-width: 1400px) {
      .container {
-        width: 100%;
-        max-width: 1000px;
+        width: 1000px;
+        max-width: 100%;
     }
-}
+
+        .navbar .container{
+            width: 1300px ;
+            max-width: 100%;
+        }
+    }
+
 
 @media (min-width: 1600px) {
      .container {
@@ -228,8 +245,8 @@ line-height:   $rvr-1_75;
         max-width: 1100px;
     }
     .navbar .container{
-        width: 1800px;
-        max-width: 1800px;
+        width: 1600px;
+        max-width: 1700px;
     }
 }
 
@@ -241,10 +258,6 @@ line-height:   $rvr-1_75;
 .navbar .container {
         width: 2400px;
         max-width: 100%;
-    }
-     .navbar .container{
-        width: 3000px;
-        max-width: 3000px;
     }
 }
 

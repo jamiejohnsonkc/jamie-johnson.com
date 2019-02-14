@@ -7,7 +7,7 @@
 * @package understrap
 */
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+exit; // Exit if accessed directly.
 }
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
@@ -22,4 +22,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</section>
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->
-		<?php get_footer(); ?>
+<?php get_footer(); ?>

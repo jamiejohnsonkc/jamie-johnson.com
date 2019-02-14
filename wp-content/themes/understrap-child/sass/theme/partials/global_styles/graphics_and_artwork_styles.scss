@@ -8,16 +8,16 @@
     }
 }
 
-.home-page__whatiam.container.panel-hero__img--background {
-    background: none;
+// .home-page__whatiam.container.panel-hero__img--background {
+//     background: none;
 
-    @include media-breakpoint-up(lg) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
-        background-position: left 135%;
-        background-size: 40%;
-        background-repeat: no-repeat;
-    }
-}
+//     @include media-breakpoint-up(lg) {
+//         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+//         background-position: left 135%;
+//         background-size: 40%;
+//         background-repeat: no-repeat;
+//     }
+// }
 
 .why-me.splash {
     .panel-hero__img--mobile {
@@ -26,21 +26,21 @@
     }
 }
 
-.why-me.splash.panel-hero__img--background {
-    background: none;
+// .why-me.splash.panel-hero__img--background {
+//     background: none;
 
-    @include media-breakpoint-up(lg) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
-        background-position: left 135%;
-        background-size: 40%;
-        background-repeat: no-repeat;
-    }
-}
+//     @include media-breakpoint-up(lg) {
+//         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+//         background-position: left 135%;
+//         background-size: 40%;
+//         background-repeat: no-repeat;
+//     }
+// }
 
 .bgme {
     background: none;
 
-    @include media-breakpoint-up(lg) {
+@media (min-width: 1200px) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
         background-position: right bottom;
         background-size: 80%;
@@ -51,7 +51,7 @@
 .bgevo {
     background: none;
 
-    @include media-breakpoint-up(lg) {
+ @media (min-width: 1200px) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/evolution.jpg");
         background-position: right bottom;
         background-size: 80%;
@@ -63,7 +63,7 @@
 .bgarrow {
     background: none;
 
-    @include media-breakpoint-up(lg) {
+  @media (min-width: 1200px) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg");
         background-position: left 165%;
         background-size: 75%;
@@ -72,13 +72,13 @@
 }
 
 
-.my-expertise.splash.panel-hero__img--background {
+.bgconductor {
     background: none;
 
-    @include media-breakpoint-up(lg) {
+@media (min-width: 1200px) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
-        background-position: left 135%;
-        background-size: 40%;
+        background-position: 105% bottom;
+        background-size: 80%;
         background-repeat: no-repeat;
     }
 }
@@ -100,7 +100,7 @@
 .my-value.splash.panel-hero__img--background {
     background: none;
 
-    @include media-breakpoint-up(lg) {
+@media (min-width: 1200px) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register.jpg");
         background-position: left 135%;
         background-size: 40%;
@@ -111,16 +111,16 @@
 
 
 
-.about-me.splash.panel-hero__img--background {
-    background: none;
+// .about-me.splash.panel-hero__img--background {
+//     background: none;
 
-    @include media-breakpoint-up(lg) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
-        background-position: left 135%;
-        background-size: 40%;
-        background-repeat: no-repeat;
-    }
-}
+// @media (min-width: 1200px) {
+//         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
+//         background-position: left 135%;
+//         background-size: 40%;
+//         background-repeat: no-repeat;
+//     }
+// }
 
 .profile {
         width: 45%;
@@ -132,16 +132,16 @@
 }
 
 
-.bgme {
-    background: none;
+// .bgme {
+//     background: none;
 
-    @include media-breakpoint-up(lg) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
-        background-position: right bottom;
-        background-size: 80%;
-        background-repeat: no-repeat;
-    }
-}
+//     @include media-breakpoint-up(lg) {
+//         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
+//         background-position: right bottom;
+//         background-size: 80%;
+//         background-repeat: no-repeat;
+//     }
+// }
 
 .panel-hero__img--mobile.evo{
         width: 100%;
@@ -150,7 +150,10 @@
         z-index:-1;
         position: relative;
           @include media-breakpoint-up(md) {
-        left: inherit;
+        left: 5%;
+      #evo-small{
+        width: 125%;
+      }  // width: 125%;
 }
 }
 

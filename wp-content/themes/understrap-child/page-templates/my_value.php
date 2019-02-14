@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'panel-content/panel', 'my_value__grow_competitive_advantage' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_value__modernize_marketing_operations' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_value__optimize_marketing_performance' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'my_value__help-cta' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'my_value__cta' ); ?>
 		</section>
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->

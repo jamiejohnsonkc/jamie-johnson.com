@@ -4,8 +4,7 @@ a.link {
         &--chevron {
             cursor: pointer;
             width: $ms-4;
-            margin-left: auto;
-            margin-right: auto;
+            margin: $rvr-6 auto;
             position: relative;
 
             .st0 {
@@ -25,6 +24,7 @@ a.link {
             color: $link-color;
             font-weight: 400;
             cursor: pointer;
+            position: relative;
             text-transform: uppercase;
             letter-spacing: .075rem;
             width: inherit;
@@ -51,6 +51,7 @@ a.link {
         padding: 0;
         margin-left: -1rem;
         margin-right: 1rem;
+        margin-bottom: 0;
     }
 
     h3 {
@@ -58,6 +59,7 @@ a.link {
         font-size: ms(3.9);
         line-height: $rvr-1_75;
         padding-right: ms(1);
+        font-weight: 500;
     }
 
     h4 {
@@ -69,7 +71,20 @@ a.link {
         font-weight: $display-font-weight;
         margin-bottom: $display-margin-bottom;
     }
+    @include media-breakpoint-up(md) {
+        h2 { font-size: ms(6.75);
+        }
+        h3 { 
+            font-size: ms(4.5); 
+            line-height: $rvr-2;
+            }
+        h4 {
+            font-size: $display-4-font-size;
+        }  
+    }
 }
+
+
 
 .delta--down {
     fill: $secondary;

@@ -49,7 +49,10 @@
     flex-direction: column;
     justify-content: space-between;
 
-    h2, h3 {
+    h2{
+
+    }
+    h3 {
         margin-bottom: 0;
     }
 
@@ -108,6 +111,41 @@
 .splash{
     @extend .panel-hero__img--background;
 }
+
+.cta__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    h1 {
+        margin-top: auto;
+        margin-bottom: auto;
+        flex: 0 1 auto;
+    }
+
+    h1.br {
+        display: none;
+    }
+
+    h2 {
+    flex: 0 1 auto;
+        margin-bottom: $rvr-4;
+    }
+
+    h3 {
+        flex: 0 1 $rvr-10;
+        line-height: $rvr-1_75;
+    }
+
+    .link__advance--text {
+        flex: 0 0 auto;
+        margin-top: $rvr-6;
+               margin-bottom: auto;
+    }
+}
+
+
+
 
 .my-value {}
 

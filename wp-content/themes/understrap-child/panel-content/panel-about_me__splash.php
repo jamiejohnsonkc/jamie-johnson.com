@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <article class="panel-fluid about-me">
 		<div class="container splash about-me__container__splash">
-		<h1>About Me</h1>
+	<!-- 	<h1>About Me</h1> -->
 		
-		<h2>lorem ispum sino et dolemet</h2>
+		<h1>lorem ispum sino et dolemet</h1>
 		
-		<h3>Excepteur sint occaecat cupidatat non.</h3>
+		<h2>Excepteur sint occaecat cupidatat non.</h2>
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		

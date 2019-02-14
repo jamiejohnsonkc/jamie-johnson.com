@@ -325,8 +325,8 @@ exit; // Exit if accessed directly.
 </div>
 </div>
 <div class="my-expertise__main-page"> <!-- extend this to container -->
-<h1>Expertise & Leadership from End to End</h1>
-<h2>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</h2>
+<h2>Expertise & Leadership from End to End</h2>
+<h3>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</h3>
 <nav class="expertise__main-page_menu">  <!--  extend this to row -->
 <div class="expertise__menu_item" id="open-expt-overlay-1">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
@@ -359,5 +359,7 @@ exit; // Exit if accessed directly.
 </div>
 </nav>
 </div>
+		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 </div>
 </article>

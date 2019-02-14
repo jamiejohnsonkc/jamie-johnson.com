@@ -8,7 +8,7 @@ $max_width:                 40000;
 // These values represent the range of font-size to apply
 // These values effect the base font-size, headings and other elements will scale proportionally
 $min_font:                 8;
-$max_font:                  40; 
+$max_font:                  60; 
 
 :root { font-size: #{$min_font}px; }
 
@@ -17,6 +17,19 @@ $max_font:                  40;
     font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width})));
   }
 }
+
+
+
+// @media (min-width: 1000px) {
+//   :root { 
+//     font-size: 36px;
+//   }
+// }
+
+
+
+
+
 @media (min-width: #{$max_width}px) {
   :root { 
     font-size: #{$max_font}px;
@@ -25,35 +38,35 @@ $max_font:                  40;
 
 
 // ==========================================================================
-// Modular Scale Controls
+// Modular Scale-Sass Controls
 // ==========================================================================
-// $modularscale: (base: 1rem, ratio: 1.33);
+$modularscale: (base: .5rem, ratio: 1.5);
 
 
-$modularscale: (
-  base: .5rem,
-  ratio: 1.5,
-  320px: (
-    base: .75rem,
-    ratio: 1.5,
-    ),
-  576px: (  
-    base: 1rem,
-    ratio: 1.3,
-  ),
-  768px: (
-    base: 1.25rem,
-    ratio: 1.3,
-  ),
-  992px: (
-    base: 1rem,
-    ratio: 1.3,
-  ),
-  1200px: (
-    base: .5rem,
-    ratio: 1.3,
-  ),
-);
+// $modularscale: (
+//   base: .5rem,
+//   ratio: 1.5,
+//   320px: (
+//     base: .75rem,
+//     ratio: 1.5,
+//     ),
+//   576px: (  
+//     base: 1rem,
+//     ratio: 1.3,
+//   ),
+//   768px: (
+//     base: 1.25rem,
+//     ratio: 1.3,
+//   ),
+//   992px: (
+//     base: 1rem,
+//     ratio: 1.3,
+//   ),
+//   1200px: (
+//     base: .5rem,
+//     ratio: 1.3,
+//   ),
+// );
 
 // ==========================================================================
 // Modular Scale Variables

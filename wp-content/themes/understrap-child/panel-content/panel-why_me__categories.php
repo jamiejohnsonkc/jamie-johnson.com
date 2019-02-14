@@ -9,7 +9,8 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="panel-fluid alternate">
-		<div class="container alternate why-me__container__categories">
+		<div class="container-fluid alternate why-me__container__categories">
+	<div class="container">
 	<h1>category experience</h1>
 	<h2>Incomparible Breadth</h2>
 	<p>Aliqua incididunt ea deserunt aute exercitation ut incididunt consectetur ut ad pariatur laboris ut fugiat nisi eu esse in sit et in.</p>
@@ -161,5 +162,6 @@ exit; // Exit if accessed directly.
 	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img class="categories__content_image style-svg chev--dwn" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt=""/>
 	</a>
+</div>
 </div>
 	</article><!-- cover end -->

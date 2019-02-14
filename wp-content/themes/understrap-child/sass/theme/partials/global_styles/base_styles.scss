@@ -50,7 +50,7 @@ line-height:   $rvr-2_75;
 }
 
 p{
-font-size:      $body-3-font-size;
+font-size:     $body-3-font-size;
 font-family:   $body-font-family;
 color:         $body-color;        
 font-weight:   $body-font-weight; 
@@ -186,7 +186,7 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 768px) {
     .navbar .container {
-        width: 720px;
+        width: 600px;
         max-width: 100%;
     }
 

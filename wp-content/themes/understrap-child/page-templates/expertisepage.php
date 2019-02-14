@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__skills' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__cta' ); ?>
-		</section>my_
+		</section>
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->
 		<?php get_footer(); ?>

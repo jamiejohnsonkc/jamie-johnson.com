@@ -125,7 +125,7 @@ button:focus {
     text-transform: lowercase;
 
     @include media-breakpoint-up(lg) {
-        font-size: $ms-_25;
+        font-size: $ms-2_75;
     }
 }
 

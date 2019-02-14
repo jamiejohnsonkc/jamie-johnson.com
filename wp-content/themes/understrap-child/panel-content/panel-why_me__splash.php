@@ -21,8 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
-		<div class="panel-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
+		
 </div>
+<div class="panel-hero__img--mobile brains"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
 	</article><!-- cover end -->
 	
 	

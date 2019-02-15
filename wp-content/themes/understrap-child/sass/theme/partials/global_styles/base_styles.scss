@@ -212,7 +212,7 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 1200px) {
      .container {
-        width: 760px;
+        width: 1000px;
         max-width: 100%;
     }
      .navbar .container{
@@ -223,7 +223,7 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 1400px) {
      .container {
-        width: 1000px;
+        width: 1200px;
         max-width: 100%;
     }
 
@@ -236,23 +236,28 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 1600px) {
      .container {
-        max-width: 1000px;
+        
+        width: 1200px;
+        max-width: 100%;
     }
 }
 
 @media (min-width: 1900px) {
      .container {
-        max-width: 1100px;
+        width: 1200px;
+           max-width: 100%;
     }
     .navbar .container{
         width: 1600px;
-        max-width: 1700px;
+            max-width: 100%;
     }
 }
 
-@media (min-width: 3000px){
+@media (min-width: 2900px){
     .container{
-        max-width: 2012px;
+        
+        width: 2000px;
+        max-width: 100%;
     }
 
 .navbar .container {

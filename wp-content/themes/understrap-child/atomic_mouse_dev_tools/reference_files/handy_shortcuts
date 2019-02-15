@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+Top 10 Screen Resolutions
+1   640x360     22.34%
+2   1366x768    11.43%
+3   1920x1080   6.83%
+4   1024x768    6.08%
+5   667x375     5.73%
+6   720x360     2.76%
+7   736x414     2.58%
+8   1440x900    2.54%
+9   1280x800    2.19%
+10  1600x900    2.18%
+
+
+
 home    keystroke returns cursor to first empty space before text character
 
 home x2 moves cursor to beginning of line

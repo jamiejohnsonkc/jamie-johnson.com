@@ -11,11 +11,14 @@ exit; // Exit if accessed directly.
 <article class="panel-fluid alternate">
 	<div class="container-fluid alternate why-me__container__categories">
 		<div class="container">
+			<div class="split-container">
 			<h1>category experience</h1>
 			<h2>Incomparible Breadth</h2>
 			<p>Aliqua incididunt ea deserunt aute exercitation ut incididunt consectetur ut ad pariatur laboris ut fugiat nisi eu esse in sit et in.</p>
 			<p>Qui officia dolor mollit excepteur reprehenderit id velit cillum nostrud consectetur nulla minim.</p>
 			<p>Sunt eiusmod laborum proident.</p>
+		</div>
+			<div class="split-container--b">
 			<div class="why-me__categories_content why-me__categories_content--industrial">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
 				<div class="categories__content_caption">

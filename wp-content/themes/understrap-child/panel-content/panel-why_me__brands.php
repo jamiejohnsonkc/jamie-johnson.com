@@ -10,12 +10,15 @@ exit; // Exit if accessed directly.
 ?>
 <article class="panel-fluid alternate">
 	<div class="container alternate why-me__container__brands">
-		<h1>brand history</h1>
+		<div class="split-container">
+			<h1>brand history</h1>
 		<h2>Exceptional Breadth</h2>
 		<h3>Voluptate fugiat mollit amet dolore excepteur.</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
 		<p>consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+		
+		</div>
 		<div class="why-me__brands_content">
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
@@ -52,8 +55,9 @@ exit; // Exit if accessed directly.
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
 		</div>
-		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		
+	</div>
+	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
-	</div>
 </article>

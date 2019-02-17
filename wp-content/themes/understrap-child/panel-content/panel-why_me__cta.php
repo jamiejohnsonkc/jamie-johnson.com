@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid whyme cta">
+<article class="panel-fluid why-me cta">
 	<div class="container cta__container alternate why-me__container__cta">
 		<h1>Hire Me</h1>
 		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>

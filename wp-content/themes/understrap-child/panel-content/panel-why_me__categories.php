@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid alternate">
+<article class="panel-fluid alternate categories">
 	<div class="container-fluid alternate why-me__container__categories">
 		<div class="container">
 			<div class="split-container">

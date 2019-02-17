@@ -116,6 +116,12 @@ a.link {
 //     margin-left: auto;
 //     margin-right: auto;
 // }
+#capabilities_table > thead > tr:nth-child(1) > th{
+    background: none;
+    color: #111;
+    font-weight: 300;
+}
+
 #capabilities_table {
     // background: $primary;
     // padding: 3rem;
@@ -137,7 +143,7 @@ a.link {
     tbody td {
         padding: 1.5rem $ms-2_25;
         color: $gray-900;
-        font-weight: 400;
+        font-weight: 300;
         line-spacing: .025rem;
          border: thin solid #fff;
     }
@@ -159,7 +165,7 @@ a.link {
         caption-side: bottom;
         color: #111;
         font-size: ms(1.5);
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: $rvr-_25;
         padding-left: $ms-2_25;
         max-width: ms(11);

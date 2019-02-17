@@ -4106,6 +4106,8 @@ $(".backstory__content .button").click(function() {
   return false;
     
 });
+
+fitty('.fit');
 // /*no-scroll*/
 // var noScroll = require('..');
 

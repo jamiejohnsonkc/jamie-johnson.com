@@ -9,15 +9,15 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="panel-fluid my-value"> <!-- CONTAINER -->
-<div class="container business-value my-value__advance__container">
+<div class="container business-value my-value__container__advance">
 <div class="row">
 	<h1>how i create value for businesses</h1>
 	<hgroup class="page__header"><!-- ROW -->
 	<h2>01</h2><!-- COL -->
 	<h3>I advance <br>business objectives</h3><!-- COL -->
-	<h4>Outcome-Driven marketing designed to enhance business performance</h4>
+	<h4>The purpose of marketing is to create customers. Not stuff.</h4>
 	</hgroup>
-	<figure class="diagram__objectives--vertical">
+	<figure class="diagram diagram__objectives--vertical">
 		<div class="diagram-content">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
 			<ol><li>business <span class="br"><br></span>goals</li></ol>
@@ -38,7 +38,7 @@ exit; // Exit if accessed directly.
 			<ol start=4><li>business <span class="br"><br></span>impact</li></ol>
 		</div>
 	</figure>
-	<p>I combine business acumen and design thinking with two decades of strategic marketing expertise to create marketing that achieves business objectives. <!-- I marry business goals with operative modern and traditional marketing frameworks to achieve strategic outcomes. --></p>
+	<p>Everything I do is geared to achieve strategic objectives, improve business health and grow ROI. Otherwise, what's the point?</p>
 	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>

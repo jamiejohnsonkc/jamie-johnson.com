@@ -9,6 +9,7 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="panel-fluid why-me bgbrains">
+	<div class="bgbrainsv2"></div>
 	<div class="container splash why-me__container__splash">
 		<h1>Why Me</h1>
 		<h2>lorem ispum sino et dolemet</h2>

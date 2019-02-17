@@ -16,7 +16,9 @@ html [type=button] {
     appearance: none;
 }
 
-
+// .site{
+//     overflow-x: hidden;
+// }
 
 section{}
 
@@ -181,15 +183,30 @@ line-height:   $rvr-1_75;
     }
 }
 
+@media (min-width: 450px){
+     .container{
+    width: 430px;
+    max-width: 100%;
+    } 
+    .navbar .container{
+        width: 450px;
+    }
+}
+
+
 @media (min-width: 576px) {
      .container {
-       
+        width: 520px;
+        max-width: 100%;
+    }
+    .navbar .container{
+        width: 90%;
     }
 }
 
 @media (min-width: 768px) {
     .navbar .container {
-        width: 660px;
+        width: 700px;
         max-width: 100%;
     }
 
@@ -255,7 +272,6 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 2900px){
     .container{
-        
         width: 2000px;
         max-width: 100%;
     }

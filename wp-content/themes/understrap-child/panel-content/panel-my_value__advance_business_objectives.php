@@ -15,7 +15,7 @@ exit; // Exit if accessed directly.
 	<hgroup class="page__header"><!-- ROW -->
 	<h2>01</h2><!-- COL -->
 	<h3>I advance <br>business objectives</h3><!-- COL -->
-	<h4>The purpose of marketing is to create customers. Not stuff.</h4>
+	<h4>I believe marketing should create customers. Not "stuff".</h4>
 	</hgroup>
 	<figure class="diagram diagram__objectives--vertical">
 		<div class="diagram-content">

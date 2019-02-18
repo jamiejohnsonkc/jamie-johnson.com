@@ -14,8 +14,8 @@ exit; // Exit if accessed directly.
 		<h1>how i create value for businesses</h1>
 		<hgroup class="page__header"><!-- ROW -->
 		<h2>04</h2><!-- COL -->
-		<h3 class="fit">End <span class="br"><br></span>to End Expertise</h3><!-- COL -->
-		<h4>In a sea of increasingly fragmented disciplines, I'm one of the few who can tie them all together.</h4>
+		<h3>End <span class="br"><br></span>to End <span class="br__opt"><br></span>Expertise</h3><!-- COL -->
+		<h4>I bring strategic continuity and leadership to a discipline chock-full of tactical specialists.</h4>
 		</hgroup>
 		<figure class="diagram diagram__end-to-end">
 			<div class="diagram-content__end-to-end--horizontal">

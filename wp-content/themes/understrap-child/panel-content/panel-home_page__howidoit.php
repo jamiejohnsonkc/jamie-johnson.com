@@ -17,10 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<h2>Soup to Nuts.</h2>
 		<div class="split-container">
 	<!-- 	<h3>leadership | strategy | design | development | ops</h3>   --><!-- sublist!!! -->
-		<h4>From the corner office to the corner cubicle.</h4>
-		<h4>I've been strategizing, developing and executing marketing initiatives my entire career.</h4>
+		<h3>From the corner office to the corner cubicle.</h3>
+		<h4>I've been strategizing, creating and managing marketing initiatives my entire career.</h4>
 
-		<h4>So whether you're fortune 500 or getting started, I can bring value to your business.</h4> <h4>If not, I'll help you find someone who can.</h4>
+		<h4>So whether you're a fortune 500 or just getting started, I can bring value to your business.</h4><h4>If not, I'll help you find someone who can.</h4>
 		</div>
 
 <div class="howidoit__disciplines"> 

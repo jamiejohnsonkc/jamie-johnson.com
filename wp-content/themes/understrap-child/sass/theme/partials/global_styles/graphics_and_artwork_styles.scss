@@ -132,18 +132,29 @@
         width: 100%;
         left: 50%;
     }
+
 }
 
-.my-value.splash.panel-hero__img--background {
+.bgregister {
     background: none;
 
 @media (min-width: 1200px) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register.jpg");
-        background-position: left 135%;
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
+        background-position: right 100%;
         background-size: 40%;
         background-repeat: no-repeat;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,7 +175,7 @@
         left: 65%;
         z-index:-1;
           @include media-breakpoint-up(md) {
-        left: 50%;
+        left: 60%;
     }
 }
 
@@ -300,7 +311,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: $rvr-2 auto;
+        margin: $rvr-4 auto;
     }
 }
 
@@ -389,6 +400,12 @@
     .cls-1 {
         fill: $secondary;
     }
+    @include media-breakpoint-up(md) {
+        li {
+            @include ms-respond(font-size, 2.5);
+            margin-left: 2rem;
+        }
+    }
 }
 
 .diagram-content__end-to-end{
@@ -410,9 +427,14 @@ padding-right: 0px;
     height: auto;
 }
 
+
+.end-to-end--vert {
+    width: 100%;
+}
+
 .diagram-content__caption--sticky {
     @include make-col-ready;
-    @include make-col(4);
+    @include make-col(6);
 
     padding-top: $rvr-4;
     margin-bottom: $rvr-4;
@@ -423,19 +445,22 @@ padding-right: 0px;
     left: 0;
     height: 10rem;
     font-family: $font-family-monospace;
+    font-size: $ms-3_5;
 }
 
 .diagram-content__end-to-end-diagram--vert {
     @include make-col-ready;
-    @include make-col(8);
-
+    @include make-col(6);
     padding-left: 0px;
     padding-right: 0px;
+    @include media-breakpoint-up(md) {
+.end-to-end--vert{
+    width: 100%;
+    }
+}
 }
  
-.end-to-end--vert {
-    width: 100%;
-}
+
 
 .diagram__modern-marketing {
     width: 100%;
@@ -492,7 +517,7 @@ padding-right: 0px;
     .cls-1{
         fill: $slate;
     }
-    @media (min-width: 786px){
+    @media (min-width: 768px){
         margin: $rvr-_25 auto;
         }
     }

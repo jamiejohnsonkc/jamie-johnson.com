@@ -24,35 +24,40 @@ exit; // Exit if accessed directly.
 <!-- <div class="table-wrap"> -->
 	<table id="capabilities_table">
 		
-		<caption>My capabilities range from leading C-Level strategic initiatives to slap'n logos on mugs. And if I'm not the right person to help you, chance are I can help you find someone who can.</caption>
+		<caption>My capabilities range from leading C-Level strategic initiatives to slap'n logos on mugs. And if I'm not the right person to help you, chances are I can help you find someone who can.</caption>
 		<thead>
-			<tr><th colspan="3">Services & Capabilities</th></tr>
+			<tr><th class="capa-table__title" colspan="4">Services & Capabilities</th></tr>
 			<tr>
-				<th class="capa-table__column--1">Disciplines</th>
-				<th class="capa-table__column--2">Activities</th>
+				<th class="capa-table__column--1">Discipline</th>
+				<th class="capa-table__column--2">Function</th>
 				<th class="capa-table__column--3">Capacity</th>
+				<th class="capa-table__column--4">Scope</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr class="capa-table__row--1">
-				<td>Marketing Management</td>
-				<td class="capa__table-cell--padding-right">Planning & Strategy</td>
+				<td>Mobile + Web</td>	
+					<td>Strategy</td>
 				<td>Freelance</td>
+				<td>Directed</td>
 			</tr>
 			<tr class="capa-table__row--2">
 				<td>Marketing Communications</td>
-				<td>Digital Design & Development</td>
+				<td class="capa__table-cell--padding-right">Design</td>
 				<td>Contract</td>
+				<td>Guided</td>
 			</tr>
 			<tr class="capa-table__row--3">
 				<td>Revenue Generation</td>
-				<td>Content Production</td>
+				<td>Development</td>
 				<td>Consulting</td>
+				<td>Collaborative</td>
 			</tr>
 			<tr class="capa-table__row--4">
-				<td>Mobile + Web Development</td>	
-				<td>Operations & Infrastructure</td>
-				<td><br></td>
+				<td>Marketing Management</td>
+				<td>Operations</td>
+				<td>Retained</td>
+				<td>Turnkey</td>
 			</tr>
 		</tbody>
 	</table>

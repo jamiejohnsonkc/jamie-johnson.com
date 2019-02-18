@@ -64,10 +64,13 @@
 
     p {
         @extend .body;
-        font-size: $body-3-font-size;
     }
 }
 }
+
+
+
+
 
 .home-page__my-mo__container{
     text-align: left;
@@ -81,9 +84,15 @@
 }
 }
 
+
+.home-page__whatido__container, .home-page__my-mo__container, .home-page__howidoit__container{
+    @include media-breakpoint-up(md) {
+  
+    }
+}
+
 .home-page__whatido__container{
     @include media-breakpoint-up(md) {
-        max-width: ms(10.8);
     .split-container{
         margin-top: auto;
         margin-bottom: auto;
@@ -94,18 +103,19 @@
 
 
 .home-page__whatido {
-    text-align: center;
+    text-align:left;
     h1 {
         @extend .page__title;
     }
 .split-container{
+    h2{ @extend .headline; }
     h3 {
-        font-size: $h4-font-size;
+        @extend .display;
         text-transform: lowercase;
     }
     h3, p{
-        text-align: justify;
-        max-width: ms(9.75);
+        text-align: left;
+//         max-width: ms(9.75);
         margin-left: auto;
         margin-right: auto;
     }
@@ -115,43 +125,38 @@
     text-align: left;
     h1 {@extend .page__title;
         text-align: left; }
+    h2{ @extend .headline; }
     h3 {
-        @extend .sublist;
-        font-size: $display-3-font-size;
-        font-weight: 300;
-
-    }
+        @extend .subhead;
+        }
 
     h4 {
         @extend .display;
-          font-size: $h4-font-size;
-            line-height: $rvr-1_75;
     }
 
     h4+h4 {
-        @extend .display;
-          font-size: $display-3-font-size;
-            line-height: $rvr-1_75;
+        @extend .body;
+
     }
     @include media-breakpoint-up(lg) {
         h2{
-           font-size: ms(4.75);
-           letter-spacing: -.05rem; 
+//            font-size: ms(4.75);
+//            letter-spacing: -.05rem; 
         }
         h3{
-font-size: ms(2.5);
-line-height: $rvr-1_25;
+// font-size: ms(2.5);
+// line-height: $rvr-1_25;
       }
         h4{
-            font-size: ms(2);
-            line-height: $rvr-1_25;
-            padding-right: ms(3);  
+//             font-size: ms(2);
+//             line-height: $rvr-1_25;
+//             padding-right: ms(3);  
         }
     }
 }
 
 .howidoit__disciplines_content {
-    margin-bottom: $rvr-2;
+    margin-bottom: $rvr-_25;
     h5, p {
         text-align: left;
 
@@ -160,8 +165,8 @@ line-height: $rvr-1_25;
     h5 {
         @extend .subhead;
 text-transform: capitalize;
-        font-size: $h3-font-size;
-        line-height: $rvr-1_25;
+        font-size: ms(3);
+        line-height: $rvr-1;
         margin-bottom: $rvr-_25;
     }
 
@@ -169,7 +174,7 @@ text-transform: capitalize;
         @extend .display;
 
         font-size: ms(2.5);
-        line-height: $rvr-1_5;
+        line-height: $rvr-1;
         margin-bottom: 0;
     }
     @include media-breakpoint-up(md) {
@@ -177,11 +182,9 @@ text-transform: capitalize;
             display: block;
         }
         h5{
-            font-size: $h3-font-size;
-            line-height: $rvr-1_5;
+
         }
-        p {font-size: $body-3-font-size;
-            line-height: $rvr-1_25;
+        p {
         }
     }
         @include media-breakpoint-up(lg) {
@@ -200,7 +203,7 @@ text-transform: capitalize;
 
 .home_page__myqualifications__container {
     h3{
-        font-size: $display-4-font-size;
+        // font-size: $display-4-font-size;
     }
 }
 
@@ -223,8 +226,9 @@ text-transform: capitalize;
 }
 
 .stats {
-    background: $slate-tint-200;
-    border: ms(.0005) solid white;
+//     background: $slate-tint-200;
+    // border: ms(.00005) solid $slate-tint-200;
+    box-shadow: inset 0 0 0 .5px $slate-tint-200;
 }
 
 
@@ -301,7 +305,7 @@ text-transform: capitalize;
 .home-page__splash {
       text-align: center;
     h1 {
-        // font-size: ms(5.5);
+        @include ms-respond(font-size, 5);
     }
 
     h2 {
@@ -509,7 +513,8 @@ text-transform: capitalize;
 
     strong {
         font-family: $font-family-sans-serif;
-        font-size: ms(2.5);
+        @include ms-respond(font-size, 2);
+
         letter-spacing: -.025rem;
     }
 }

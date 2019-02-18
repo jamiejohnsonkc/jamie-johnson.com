@@ -25,7 +25,7 @@
 #wrapper-navbar > nav > div {}
 
 .custom-logo-link {
-    margin-bottom: -.5rem;
+    margin-bottom: -.25rem;
 }
 
 .navbar-brand {
@@ -64,6 +64,11 @@ svg#bug {
 
 .navbar-toggler {
     background: $primary;
+}
+
+.navbar-toggler-icon{
+    width: .75rem;
+    height: .75rem;
 }
 
 button:focus {
@@ -121,7 +126,7 @@ button:focus {
 .navbar,
 .navbar a {
     color: $secondary !important;
-    font-size: $ms-2;
+    font-size: $ms-1;
     text-transform: lowercase;
 
     @include media-breakpoint-up(lg) {

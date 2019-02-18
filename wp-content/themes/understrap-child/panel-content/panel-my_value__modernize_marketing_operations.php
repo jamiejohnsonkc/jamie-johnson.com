@@ -14,8 +14,8 @@ exit; // Exit if accessed directly.
 		<h1>how i create value for businesses</h1>
 		<hgroup class="page__header"><!-- ROW -->
 		<h2>03</h2><!-- COL -->
-		<h3>I modernize <br>marketing</h3><!-- COL -->
-		<h4>We used to bring products to market. Today you have to convince the market to pay attention to you.</h4>
+		<h3>I <span class="br"><br></span>modernize <br>marketing</h3><!-- COL -->
+		<h4>We used to bring products to market. Today you have to bring the market to you.</h4>
 		</hgroup>
 		<figure class="diagram diagram__modern-marketing">
 			<div class="diagram-content">

@@ -14,7 +14,7 @@ exit; // Exit if accessed directly.
 		<h1>how i create value for businesses</h1>
 		<hgroup class="page__header"><!-- ROW -->
 		<h2>02</h2><!-- COL -->
-		<h3>I cultivate customer value</h3><!-- COL -->
+		<h3>I cultivate <span class="br"><br></span>customer value</h3><!-- COL -->
 		<h4>In today's world the only perception that matters is your customer's.</h4>
 		</hgroup>
 		<figure class="diagram diagram__competitive-advantage">

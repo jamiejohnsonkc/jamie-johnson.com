@@ -48,7 +48,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     h2{
 
     }
@@ -58,6 +57,9 @@
 
     h4 {
         margin-top: $rvr-1;
+    }
+    @include media-breakpoint-up(md) {
+        height: 100vh;
     }
 }
 
@@ -108,9 +110,6 @@
     flex: 0 0 0;
 }
 
-.splash{
-    @extend .panel-hero__img--background;
-}
 
 .cta__container.business-value.my-value__container__cta {
   height: 100vh;

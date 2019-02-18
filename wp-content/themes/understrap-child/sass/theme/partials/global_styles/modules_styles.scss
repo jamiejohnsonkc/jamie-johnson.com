@@ -47,7 +47,7 @@ a.link {
 
     h2 {
         font-size: ms(6.5);
-        letter-spacing: -.75rem;
+        letter-spacing: -.5rem;
         padding: 0;
         margin-left: -1rem;
         margin-right: 1rem;
@@ -64,24 +64,38 @@ a.link {
 
     h4 {
         @extend .display-line-height;
-
         font-size: $display-3-font-size;
         color: $display-color;
         font-family: $display-font-family;
         font-weight: $display-font-weight;
         margin-bottom: $display-margin-bottom;
-    }
+        }
+
+    p {
+        @include ms-respond(font-size, 2);
+        }
+    
     @include media-breakpoint-up(md) {
-        h2 { font-size: ms(6.75);
+        h2 { 
+            @include ms-respond(font-size, 5.5);
+            line-height: 1;
+            margin-left: 0;
+            margin-right: 0;
         }
         h3 { 
-            font-size: ms(4.5); 
-            line-height: $rvr-2;
+            @include ms-respond(font-size, 3.4);
+             line-height: 1; 
+            // line-height: $rvr-2;
+            // line-height: 1;
             }
         h4 {
-            font-size: $display-4-font-size;
-        }  
-    }
+             @include ms-respond(font-size, 3);
+              line-height: 1.3; 
+        } 
+        p {
+             @include ms-respond(font-size, 2);
+        }
+}
 }
 
 
@@ -116,11 +130,11 @@ a.link {
 //     margin-left: auto;
 //     margin-right: auto;
 // }
-#capabilities_table > thead > tr:nth-child(1) > th{
-    background: none;
-    color: #111;
-    font-weight: 300;
-}
+// #capabilities_table > thead > tr:nth-child(1) > th{
+//     background: none;
+//     color: #111;
+//     font-weight: 300;
+// }
 
 #capabilities_table {
     // background: $primary;
@@ -130,45 +144,62 @@ a.link {
     width: 95%;
     align-self: baseline;
 
-    thead th {
+
+thead, th{
+       font-size: .75rem;
+               text-transform: lowercase;
+           }
+    thead th, .capa-table__title{
         background-color: $slate;
         color: #fff;
-        padding: $ms-2_25;
-    }
+        padding: ms(.25);
+        letter-spacing: .01rem;
+        font-weight: 300;
+}
+
+.capa-table__title{
+text-transform: uppercase;
+font-weight: 300;
+font-size: 1rem;
+letter-spacing: .05rem;
+ border-bottom: thin solid #fff;
+}
 
     // tbody > tr > :nth-child(1) {
     //     padding-left: $ms-2_25;
     // }
 
     tbody td {
-        padding: 1.5rem $ms-2_25;
+        padding: 1.25rem $ms-1_5;
         color: $gray-900;
         font-weight: 300;
-        line-spacing: .025rem;
          border: thin solid #fff;
+         font-size: .75rem;
+         letter-spacing: -.005rem;
+         vertical-align: middle;
     }
 
     td {
-        text-align: left;
-        line-height: $rvr-_75;
+        text-align: center;
+        line-height: $rvr-1;
         height: $rvr-2;
-        vertical-align: top;
-        padding-right: $rvr-2;
+        // vertical-align: top;
+        // padding-right: $rvr-2;
     }
 
     th {
-        text-align: left;
-        padding-left: $ms-1;
+        text-align: center;
+        // padding-left: $ms-1;
     }
 
     caption {
         caption-side: bottom;
         color: #111;
-        font-size: ms(1.5);
+        font-size: ms(2);
         font-weight: 300;
         margin-bottom: $rvr-_25;
         padding-left: $ms-2_25;
-        max-width: ms(11);
+        // max-width: ms(11);
     }
 }
 
@@ -186,6 +217,10 @@ a.link {
 
 #capabilities_table > tbody > tr > :nth-child(3) {
     background: $tungsten;
+}
+
+#capabilities_table > tbody > tr > :nth-child(4) {
+    background: $gray-200;
 }
 
 // #capabilities_table > thead > tr > th.capa-table__column--2 {
@@ -217,7 +252,7 @@ a.link {
 
 .value-table{
 	font-family: $font-family-monospace;
-	font-size: ms(2.25);
+	font-size: ms(2);
 	width: ms(8.75);
 	flex: 0 0 auto;
 	margin-bottom: auto;

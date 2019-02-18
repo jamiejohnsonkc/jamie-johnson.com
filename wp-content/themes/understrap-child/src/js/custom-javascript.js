@@ -145,9 +145,9 @@ $(".backstory__content .button").click(function() {
   // prevent jump-down
   return false;
     
-});
+}); 
 
-fitty('.fit');
+// fitty('.fit');
 // /*no-scroll*/
 // var noScroll = require('..');
 

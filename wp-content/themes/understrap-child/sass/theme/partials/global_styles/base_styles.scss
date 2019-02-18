@@ -35,9 +35,9 @@ article + article{
     padding-top: $rvr-6;
 }
 
-h1{font-size: $h1-font-size;}
-h2{font-size: $h2-font-size;}
-h3{font-size: $h3-font-size;}
+h1{@include ms-respond(font-size, 5);}
+h2{@include ms-respond(font-size, 3.5);}
+h3{@include ms-respond(font-size, 3);}
 h4{font-size: $h4-font-size;}
 h5{font-size: $h5-font-size;}
 h6{font-size: $h6-font-size;}
@@ -48,7 +48,6 @@ font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   $headings-font-weight; 
 margin-bottom: $headings-margin-bottom;
-line-height:   $rvr-2_75;
 }
 
 p{
@@ -63,7 +62,7 @@ line-height:   $rvr-1_75;
 
 
 .boiler{
-font-size:     ms(5.5);
+@include ms-respond(font-size, 5);
 font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   $headings-font-weight; 
@@ -72,16 +71,16 @@ line-height:   $rvr-2;
 }
 
 .headline{
-font-size:     $h5-font-size;
+@include ms-respond(font-size, 3.5);
 font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   $headings-font-weight; 
 margin-bottom: $headings-margin-bottom;
-line-height:   $rvr-2_75;
+line-height:   $rvr-3;
 }
 
 .subhead{
-font-size:     $h3-font-size;
+@include ms-respond(font-size, 3);
 font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   400; 
@@ -90,7 +89,7 @@ line-height:   $rvr-2_25;
 }
 
 .sublist{
-    font-size:     $display-4-font-size;
+@include ms-respond(font-size, 3);
 font-family:   $display-font-family;
 color:         $display-color;        
 font-weight:   $display-font-weight; 
@@ -99,16 +98,16 @@ line-height:   $rvr-2_25;
 }
 
 .display{
-font-size:     $display-4-font-size;
+@include ms-respond(font-size, 2.5);
 font-family:   $display-font-family;
 color:         $display-color;        
 font-weight:   $display-font-weight; 
 margin-bottom: $display-margin-bottom;
-line-height:   $rvr-2_25;    
+line-height:   $rvr-2;    
 }
 
 .body{
-font-size:     $body-3-font-size;
+@include ms-respond(font-size, 2.25);
 font-family:   $body-font-family;
 color:         $body-color;        
 font-weight:   $body-font-weight; 
@@ -209,7 +208,7 @@ line-height:   $rvr-1_75;
         width: 700px;
         max-width: 100%;
     }
-
++
      .container {
         width: 540px;
         max-width: 100%;

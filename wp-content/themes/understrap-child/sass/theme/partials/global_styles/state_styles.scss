@@ -126,3 +126,44 @@
 	}
 	
 }
+
+.br__opt{
+	display: none;
+	line-height: 0;
+}
+
+@media (min-width: 300px) {}
+
+
+@media (min-width: 400px) {}
+
+
+@media (min-width: 576px) {}
+
+
+@media (min-width: 768px) {
+.br__opt{
+	display: block;
+}
+#main > section > article:nth-child(3) > div > div > hgroup > h3{
+.br{
+	display: block;
+}
+}
+}
+
+
+@media (min-width: 992px) {}
+
+
+@media (min-width: 1200px) {}
+
+
+@media (min-width: 1400px) {}
+
+
+@media (min-width: 1600px) {}
+
+@media (min-width: 1900px) {}
+
+

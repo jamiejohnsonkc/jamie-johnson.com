@@ -2,25 +2,74 @@
 // ==========================================================================
 // Vertical Rythmn Controls
 // ==========================================================================
+
+
+
 :root {
     --baseline: 1;
-    line-height: var(--baseline)
-}
-
-    /* Line-height fallback */
-//     line-height: 1.4;
-//     line-height: calc(var(--baseline) * 1rem);
-
-// }
-//function to caculate responsive vertical rhythm units (rvr)
-@function rvr($multiple) {
-    @return calc(var(--baseline) * $multiple * .5rem);
+          // Line-height fallback 
+    	line-height: 1.4;
+     	line-height: calc(var(--baseline) * 1rem);
 }
 
 
-// ==========================================================================
-// Vertical Rythmn Variables
-// ==========================================================================
+
+
+//320px
+@media (min-width: 20em){
+	:root{
+		--baseline: 1.5;
+	}
+}
+
+//576px
+@media (min-width: 36em){
+	:root{
+		--baseline: 1.1;
+	}
+}
+
+//678px
+@media (min-width: 48em){
+	:root{
+		--baseline: 1.1;
+	}
+}
+//992px
+@media (min-width: 62em){
+	:root{
+		--baseline: 1.1;
+	}
+}
+//1200px
+@media (min-width: 75em){
+	:root{
+		--baseline: 1.5;
+	}
+
+}
+
+//1600px
+@media (min-width: 100em){
+	:root{
+		--baseline: 1.1;
+	}
+}
+
+
+
+
+@function dave($multiple) {
+  @return calc(var(--baseline) * $multiple * 1rem);
+}
+
+h1 {margin-top: dave(8) !important;}
+
+
+
+///==========================================================================
+///Vertical Rythmn Variables
+///==========================================================================
 $rvr-0:                                1;
 $rvr-_05:    calc(var(--baseline) * .05rem);
 $rvr-_15:    calc(var(--baseline) * 0.15rem);
@@ -41,6 +90,9 @@ $rvr-3_25:    calc(var(--baseline) * 3.25rem);
 $rvr-3_5:    calc(var(--baseline) *  3.5rem);
 $rvr-3_75:    calc(var(--baseline) * 3.75rem);
 $rvr-4:      calc(var(--baseline) * 4rem);
+$rvr-4_25:      calc(var(--baseline) * 4.25rem);
+$rvr-4_5:      calc(var(--baseline) * 4.5rem);
+$rvr-4_75:      calc(var(--baseline) * 4.75rem);
 $rvr-5:      calc(var(--baseline) * 5rem);
 $rvr-6:      calc(var(--baseline) * 6rem);
 $rvr-7:      calc(var(--baseline) * 7rem);

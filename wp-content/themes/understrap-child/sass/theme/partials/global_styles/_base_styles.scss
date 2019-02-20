@@ -35,12 +35,12 @@ article + article{
     padding-top: $rvr-6;
 }
 
-h1{@include ms-respond(font-size, 5);}
-h2{@include ms-respond(font-size, 3.5);}
-h3{@include ms-respond(font-size, 3);}
-h4{font-size: $h4-font-size;}
-h5{font-size: $h5-font-size;}
-h6{font-size: $h6-font-size;}
+h1{font-size: unset;}
+h2{font-size: unset;}
+h3{font-size: unset;}
+h4{font-size: unset;}
+h5{font-size: unset;}
+h6{font-size: unset;}
 
 
 h1, h2, h3, h4, h5, h6{
@@ -56,18 +56,16 @@ font-family:   $body-font-family;
 color:         $body-color;        
 font-weight:   $body-font-weight; 
 margin-bottom: $body-margin-bottom;
-line-height:   $rvr-1_75;
 }
 
 
 
-.boiler{
-@include ms-respond(font-size, 5);
+.title{
+@include ms-respond(font-size,4.5);
 font-family:   $headings-font-family;
 color:         $headings-color;        
-font-weight:   $headings-font-weight; 
-margin-bottom: $headings-margin-bottom;
-line-height:   $rvr-2;
+font-weight:   $headings-font-weight;
+margin-bottom: $rvr-10 !important; 
 }
 
 .headline{
@@ -76,7 +74,7 @@ font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   $headings-font-weight; 
 margin-bottom: $headings-margin-bottom;
-line-height:   $rvr-3;
+
 }
 
 .subhead{
@@ -85,7 +83,7 @@ font-family:   $headings-font-family;
 color:         $headings-color;        
 font-weight:   400; 
 margin-bottom: $headings-margin-bottom;
-line-height:   $rvr-2_25;
+
 }
 
 .sublist{
@@ -94,7 +92,7 @@ font-family:   $display-font-family;
 color:         $display-color;        
 font-weight:   $display-font-weight; 
 margin-bottom: $display-margin-bottom;
-line-height:   $rvr-2_25;    
+
 }
 
 .display{
@@ -103,7 +101,7 @@ font-family:   $display-font-family;
 color:         $display-color;        
 font-weight:   $display-font-weight; 
 margin-bottom: $display-margin-bottom;
-line-height:   $rvr-2;    
+
 }
 
 .body{
@@ -112,7 +110,7 @@ font-family:   $body-font-family;
 color:         $body-color;        
 font-weight:   $body-font-weight; 
 margin-bottom: $body-margin-bottom;
-line-height:   $rvr-1_75;
+
 }
 
 .lead {
@@ -137,8 +135,8 @@ line-height:   $rvr-1_75;
     }
 
 
-.br{
-    line-height: 0;
+.br, .br--2{
+    
     display: none;
 }
 
@@ -151,12 +149,16 @@ line-height:   $rvr-1_75;
 //     font-size: unset;
 // }
 .container{
-    padding-left: 30px;
-    padding-right: 30px;
-}
- .navbar .container{
+    padding-left: 0px;
+    padding-right: 0px;
+    @include media-breakpoint-up(sm) {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+ .navbar .container{
+        padding-left: 5px;
+        padding-right: 5px;
         margin: 0 auto;
         position: relative;
     }
@@ -174,11 +176,11 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 320px){
      .container{
-    width: 310px;
+    
     max-width: 100%;
     } 
     .navbar .container{
-        width: 300px;
+        max-width: 100%;
     }
 }
 
@@ -239,7 +241,7 @@ line-height:   $rvr-1_75;
 
 @media (min-width: 1400px) {
      .container {
-        width: 1200px;
+        width: 1100px;
         max-width: 100%;
     }
 
@@ -253,14 +255,14 @@ line-height:   $rvr-1_75;
 @media (min-width: 1600px) {
      .container {
         
-        width: 1200px;
+        width: 1100px;
         max-width: 100%;
     }
 }
 
 @media (min-width: 1900px) {
      .container {
-        width: 1200px;
+        width: 1100px;
            max-width: 100%;
     }
     .navbar .container{

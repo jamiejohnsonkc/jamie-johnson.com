@@ -9,7 +9,7 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="panel-fluid my-value"> <!-- CONTAINER -->
-<div class="container business-value my-value__container__grow">
+<div class="container business-value my-value__container__grow" id="grow">
 	<div class="row">
 		<h1>how i create value for businesses</h1>
 		<hgroup class="page__header"><!-- ROW -->

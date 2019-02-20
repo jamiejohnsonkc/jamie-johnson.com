@@ -46,19 +46,21 @@
     "gulp-sequence": "1.0.0",
     "gulp-sourcemaps": "2.6.4",
     "gulp-uglify": "^3.0.0",
-    "gulp-watch": "5.0.0",
+    "gulp-watch": "^5.0.1",
     "html-svg-connect": "^2.0.0",
     "merge2": "^1.2.1",
     "modular-scale": "^5.1.0",
     "modularscale-sass": "^3.0.8",
-    "popper.js": "^1.12.9",
+    "popper.js": "^1.14.7",
     "ruby": "^0.6.1",
     "run-sequence": "^2.2.1",
     "sass-convert": "^0.5.2",
-    "understrap": "^0.8.2",
-    "undescores-for-npm": "^1.0.0"
+    "understrap": "^0.9.1",
+    "undescores-for-npm": "^1.0.0",
+    "vertical-rhythm-reset": "^1.2.0"
   },
   "devDependencies": {
-    "mathsass": "^0.10.1"
+    "mathsass": "^0.10.1",
+    "typi": "^3.2.0"
   }
 }

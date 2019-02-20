@@ -14,7 +14,7 @@ exit; // Exit if accessed directly.
 	<div class="split-container">
 	
 
-	<h2>Strategic Marketing, <span class="br"><br></span>Front-end Design <span class="br"><br></span>+ Development</h2>
+	<h2>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br--2"><br></span>+ Development</h2>
 <!-- 	<h3>Seeking the Cashy Cash</h3> -->
 <!-- 	<p><span><strong>I know what I'm doing &mdash;</strong></span>I've been in marketing my entire career (20+ years).</p>
 	<p><span><strong>I do a bit of everything &mdash;</strong></span>I've led the team and I've been the team.</p> -->

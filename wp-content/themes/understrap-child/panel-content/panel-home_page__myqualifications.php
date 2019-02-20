@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- <article class="panel-fluid basic home_page home_page__myqualifications">
 	<div class="container home_page__myqualifications__container"> -->
-		<article class="panel-fluid home_page">
-	<div class="container home_page__myqualifications__container">
+		<article class="panel-fluid home-page">
+	<div class="container home-page__myqualifications__container">
 		<h1>bona fides</h1>
 		
 		<h2>I've Been Around</h2>

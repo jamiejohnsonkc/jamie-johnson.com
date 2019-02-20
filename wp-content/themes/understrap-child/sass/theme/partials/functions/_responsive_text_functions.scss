@@ -74,7 +74,7 @@ $modularscale: (
   ratio: 1.5,
   // 320px
   20rem: (
-    base: .5rem,
+    base: .4rem,
     ratio: 1.5,
     ),
   // 756px
@@ -97,6 +97,11 @@ $modularscale: (
     base: .5rem,
     ratio: 1.5,
   ),
+  //1600px
+  100rem:(
+    base: .35rem,
+    ratio: 1.5,
+  )
 );
 
 // ==========================================================================

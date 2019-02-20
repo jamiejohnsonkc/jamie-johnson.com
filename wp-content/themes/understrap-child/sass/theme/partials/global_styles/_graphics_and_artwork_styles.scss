@@ -148,9 +148,67 @@
 
 
 
+.bgregister .panel-hero__img--mobile{
+   
+    @media (min-width: 768px){
+        left: 45%;// width: 100%;
+    .register-small{
+        width: 400px;
+    }    
+    }
+}
+
+
+.panel-hero__img--mobile {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    z-index: -1;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
 
 
 
+
+.about-me .panel-hero__img--mobile {
+    left: 0;
+    width: 70%;
+}
+
+.my-expertise .panel-hero__img--mobile {
+    @media (min-width: 300px) {
+        left: 4%;
+    }
+
+    @media (min-width: 400px) {}
+
+    @media (min-width: 576px) {}
+
+    @media (min-width: 768px) {
+        left: 15%;
+        overflow: hidden;
+        width: 150%;
+        max-width: auto;
+        .conductor-small {
+            width: 700px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        left: 35%;
+    }
+
+    @media (min-width: 1200px) {}
+
+    @media (min-width: 1400px) {}
+
+    @media (min-width: 1600px) {}
+
+    @media (min-width: 1900px) {}
+}
 
 
 
@@ -196,9 +254,9 @@
         height: auto;
         left: 0;
         z-index:-1;
-        position: relative;
+        position: absolute;
           @include media-breakpoint-up(md) {
-        left: 5%;
+        left:0%;
       #evo-small{
         width: 125%;
       }  // width: 125%;
@@ -285,10 +343,7 @@
 
 
 .competitive-advantage__svg{
-    width: 100%;
-    @include media-breakpoint-up(md) {
-        width: 140%;
-    }
+    width: 75vw;
 }
 
 .diagram__modern-marketing{
@@ -311,7 +366,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: $rvr-4 auto;
+        margin: $rvr-2 auto;
+        @media (min-width: 992px){
+            display: none;
+        }
     }
 }
 
@@ -334,18 +392,37 @@
 }
 
 .diagram__objectives--horizontal {
+   display: flex;
+   flex-direction: row;
+align-items: center;
     .diagram-content {
-        display: flex;
+                       @include make-col-ready();
+       width: 20%;
+       max-width: 20%;
+       display: flex;
         flex-direction: column;
-
-        // align-items: center;
-        // justify-content: space-around;
-
-
+        flex: 0 0 auto;
+        align-items: center;
         // margin: $rvr-1 0;
-   
+    }
+    h5{
+        @extend .display;
+        text-align: center;
+       @include ms-respond(font-size, 1.5);
+       line-height: $rvr-1;
+    }
+svg.icon{
+
+    }
+    .delta--horz{
+        max-width: 1.5%;
+        .delta--down{
+        fill: $slate;
     }
 }
+}
+
+
 
 .diagram__objectives--vertical .icon {
     @include make-col-ready;
@@ -356,8 +433,18 @@
     ol {
         @include make-col-ready;
         @include make-col(10);
+    
+    @media (min-width: 992px){
+        width: 5%;
+        max-width: 5%;
+        flex: 0 0 0;
     }
 }
+}
+
+
+
+    
 
 .disciplines__content-icon {
         .cls-1, .cls-2 {
@@ -379,7 +466,8 @@
 
 .diagram__objectives--vertical .diagram-content {
     li {
-        font-size: ms(3);
+        @include ms-respond(font-size, 2.5);
+
         padding-right: 0;
     }
 
@@ -400,12 +488,22 @@
     .cls-1 {
         fill: $secondary;
     }
+    li {
+    @include media-breakpoint-up(sm) {
+        margin-left: ms(4);
+    }
     @include media-breakpoint-up(md) {
-        li {
-            @include ms-respond(font-size, 2.5);
+        @include ms-respond(font-size, 3);
             margin-left: 2rem;
         }
+    
+    @include media-breakpoint-up(lg) {
+   
+            @include ms-respond(font-size, 2);
+            margin-left: 1rem;
+        
     }
+}
 }
 
 .diagram-content__end-to-end{
@@ -512,13 +610,13 @@ padding-right: 0px;
 }
 
 .delta--horz {
-    margin: $rvr-1 auto;
+    // margin: $rvr-1 auto;
     width: $ms-3;
     .cls-1{
         fill: $slate;
     }
     @media (min-width: 768px){
-        margin: $rvr-_25 auto;
+        // margin: $rvr-_25 auto;
         }
     }
 

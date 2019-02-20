@@ -59,7 +59,7 @@
         margin-top: $rvr-1;
     }
     @include media-breakpoint-up(md) {
-        height: 100vh;
+//         height: 100vh;
     }
 }
 
@@ -111,7 +111,7 @@
 }
 
 
-.cta__container.business-value.my-value__container__cta {
+.my-value__container__cta {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ p{
 
 .home-page {
     padding-top: $rvr-4 ;
-    padding-bottom: $rvr-4;
+    padding-bottom: $rvr-2;
 
     h1 {
         flex: 0 0 auto;
@@ -195,8 +195,8 @@ p{
 
     .split-container {}
     @include media-breakpoint-up(md) {
-    padding-top: $rvr-6 ;
-    padding-bottom: $rvr-6;
+    padding-top: $rvr-4 ;
+    padding-bottom: $rvr-4;
 }
 }
 
@@ -220,6 +220,7 @@ article.panel-fluid.home-page.bgme {
     .home-page__splash {
         align-items: center;
         text-align: center;
+        height: 100vh;
 
         h1, h2, h3, h4, p {
             margin-bottom: 0;
@@ -227,13 +228,15 @@ article.panel-fluid.home-page.bgme {
 
         h1 {
             margin-top: auto;
-            flex: 0 0 12rem;
-            padding-top: $rvr-3;
+            flex: 0 0 auto;
+            padding-top: $rvr-8;
+            margin-bottom: $rvr-1
         }
 
         h2 {
-            flex: 0 0 10rem;
-            line-height: $rvr-2_25;
+            flex: 0 0 auto;
+            line-height: $rvr-2;
+            margin-bottom: $rvr-3;
         }
 
         .split-container {
@@ -242,25 +245,30 @@ article.panel-fluid.home-page.bgme {
         }
 
         h3 {
-            line-height: $rvr-2;
-            margin-bottom: $rvr-1_5;
+            line-height: $rvr-1_5;
+            margin-bottom: $rvr-2;
+            @include media-breakpoint-up(md) {
+                margin-bottom: $rvr-4;
+            }
         }
 
         p:first-of-type {
-            flex: 0 0 auto;
+            flex: 0 0 0;
             max-width: $ms-10;
-            margin: 0 auto $rvr-1 auto;
+            margin: $rvr-2 auto $rvr-2 auto;
             padding: 0 $ms-4;
+            line-height: $rvr-1_25;
         }
 
         p:last-of-type {
-            flex: 0 0 8rem;
-            margin-bottom: auto;
+            flex: 0 0 auto;
+            // margin-bottom: auto;
         }
 
         a.link__advance--chevron{
          flex: 0 0 0; 
-         margin: $rvr-4 auto $rvr-1 auto;  
+         margin: $rvr-2 auto $rvr-1 auto;
+         z-index: 10;  
         }
 
         @include media-breakpoint-up(xl) {

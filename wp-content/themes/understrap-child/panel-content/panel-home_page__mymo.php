@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="panel-fluid basic home-page home-page__my-mo">
-		<div class="container home-page__my-mo__container"> --><article class="panel-fluid home-page bgevo">
+<!-- <article class="article__wrapper  basic home-page home-page__my-mo">
+		<div class="container home-page__my-mo__container"> --><article class="article__wrapper  home-page bgevo">
 		<div class="container home-page__my-mo__container ">
 		<h1>my m.o.</h1>
 		<div class="split-container">
@@ -22,13 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<p>I can help your business thrive</p>
 
-		</div><a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		</div><a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 		
 </div>
 
-<div class="panel-hero__img--mobile evo"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="profile pic" id="evo-small"></div>	
+<div class="container-hero__img--mobile evo"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="profile pic" id="evo-small"></div>	
 	</article><!-- cover end -->
 	
 	

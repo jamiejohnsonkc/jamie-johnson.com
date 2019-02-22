@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="panel-fluid basic home_page home_page__myqualifications">
+<!-- <article class="article__wrapper  basic home_page home_page__myqualifications">
 	<div class="container home_page__myqualifications__container"> -->
-		<article class="panel-fluid home-page">
+		<article class="article__wrapper  home-page">
 	<div class="container home-page__myqualifications__container">
 		<h1>bona fides</h1>
 		
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="stats" id="stats-order-12"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_03.svg"  class="style-svg" alt=""/><div class="stats-caption">user friendly</div></div>
 			<div class="stats" id="stats-order-13"><img src=http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/stats_08.svg"  class="style-svg" alt=""/><div class="stats-caption">bullshit</div></div>
 		</div>
-		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 	</div>

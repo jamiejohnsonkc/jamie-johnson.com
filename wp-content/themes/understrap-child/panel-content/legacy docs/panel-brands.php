@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel brands- template.
+* container brands- template.
 *
 * @package understrap
 */
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid alternate why-me__brands">
+<article class="article__wrapper  alternate why-me__brands">
 
 <h1>brand history</h1>
 

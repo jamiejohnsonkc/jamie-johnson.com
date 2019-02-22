@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel business-value XXXXXXXXXX"> <!-- CONTAINER -->
+<article class="article__wrapper  business-value XXXXXXXXXX"> <!-- CONTAINER -->
 	<div class="row">
 	<h1>how i create value for businesses</h1>
 	<hgroup class="page__header"><!-- ROW -->
@@ -22,7 +22,7 @@ exit; // Exit if accessed directly.
 		</div>
 	</figure>
 	<p>I combine business acumen and design thinking with two decades of strategic marketing expertise to create marketing that achieves business objectives.</p>
-	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 </div>

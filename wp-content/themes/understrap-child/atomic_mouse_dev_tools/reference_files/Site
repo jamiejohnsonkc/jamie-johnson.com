@@ -26,6 +26,7 @@ about me
 
 
 Article structure
+///////////////////////////
 page-title
 content 
 cta
@@ -34,6 +35,7 @@ cta
 
 
 repeated layouts:
+///////////////////////////////////
 Splash page - single col
 CTA page - single col
 Expertise panel Overlay - 2 div

@@ -6,7 +6,7 @@ sitewide
 	|--sans
 	|--serif
 	|--mono
-|--definitions
+|--type definitions
 	|--page title (font-fam, weight, transform)
 	|--headline
 	|--subhead
@@ -17,7 +17,7 @@ sitewide
 	|--link
 	|--nav
 
-|--sizing & line-height by breakpoint 
+|--sizing, line-height by breakpoint 
 	|--headine
 		|--@ >320px (size, line-height spacing,)
 		|--@ <768p
@@ -88,7 +88,7 @@ sitewide
 |--display/hide
 |--hover/pointer
 |--flex order
-
+|--animations
 
 
 

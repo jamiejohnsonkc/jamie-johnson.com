@@ -1,0 +1,208 @@
+
+
+
+@include vr-reset(
+    $helpers: false,
+    $breakpoints:(
+    1rem: ( // 400px
+      font-size: 6px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: purple
+    ),
+    25rem: ( // 400px
+      font-size: 16px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: purple
+    ),
+  30rem: ( // 480px
+      font-size: 18px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: blue
+    ),
+  35rem: ( // 560px
+      font-size: 12px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: green
+    ),
+    40rem: ( // 640px
+        font-size: 14px,
+        line-height: 1.5,
+        modular-scale: perfect-fifth,
+        grid-color: yellow
+    ),
+    48rem: ( // 768px
+        font-size    : 16px,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : orange,
+    ),
+    64rem: ( // 1024px
+        font-size    : 18,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : purple,
+    ),
+    78rem: ( // 1248px
+        font-size    : 20,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    ),
+    90rem: ( // 1440px
+        font-size    : 16,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    ),
+    120rem: ( // 1920px
+        font-size    : 18,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : purple,
+    ),
+    160rem: ( // 2560px
+        font-size    : 16,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    )
+)
+    );
+
+
+
+
+//  $vr-breakpoints: (
+//     25rem: ( // 400px
+//       font-size: 16px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: purple
+//     ),
+//   30rem: ( // 480px
+//       font-size: 18px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: blue
+//     ),
+//   35rem: ( // 560px
+//       font-size: 12px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: green
+//     ),
+//     40rem: ( // 640px
+//         font-size: 14px,
+//         line-height: 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color: yellow
+//     ),
+//     48rem: ( // 768px
+//         font-size    : 16px,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : orange,
+//     ),
+//     64rem: ( // 1024px
+//         font-size    : 18,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : purple,
+//     ),
+//     78rem: ( // 1248px
+//         font-size    : 20,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     ),
+//     90rem: ( // 1440px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     ),
+//     120rem: ( // 1920px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : purple,
+//     ),
+//     160rem: ( // 2560px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     )
+// );
+
+
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+html [type=button] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body {
+    height: 100%;
+    // flex-direction: column;
+    // height: 100vh;
+    // @include vr-grid();
+}
+
+
+
+// .site{
+//     overflow-x: hidden;
+// }
+
+section{}
+header{}
+title{}
+hgroup{}
+title{}
+figure{}
+article{}
+
+
+.fixed-top{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+%row, .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.article__wrapper{
+   max-width: none;
+   margin-right: auto;
+   margin-left: auto;
+   position: relative; 
+}
+
+.article__wrapper-fluid{
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+
+.link__advance--chevron{
+    width: 2rem;
+    height: 2rem;
+}
+

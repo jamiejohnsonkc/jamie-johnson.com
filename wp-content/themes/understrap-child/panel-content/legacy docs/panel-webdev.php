@@ -1,6 +1,6 @@
 <!-- <?php
 /**
-* Panel expt template.
+* container expt template.
 *
 * @package understrap
 */
@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="exptnav-vert">
 		
 		<ul class="expt-menu">
-			<li class="nav-item"><a class="nav-link" href="#post-sub-panel">Post-Digital Marketing</a></li>
-			<li class="nav-item"><a class="nav-link" href="#smm-sub-panel">Strategic Marketing Management</a></li>
-			<li class="nav-item"><a class="nav-link" href="#marcom-sub-panel">Marketing Communications</a></li>
-			<li class="nav-item"><a class="nav-link" href="#webdev-sub-panel">Mobile + Web <br>Design & Development</a></li>
+			<li class="nav-item"><a class="nav-link" href="#post-sub-container">Post-Digital Marketing</a></li>
+			<li class="nav-item"><a class="nav-link" href="#smm-sub-container">Strategic Marketing Management</a></li>
+			<li class="nav-item"><a class="nav-link" href="#marcom-sub-container">Marketing Communications</a></li>
+			<li class="nav-item"><a class="nav-link" href="#webdev-sub-container">Mobile + Web <br>Design & Development</a></li>
 		</ul>
 		
 	</div>

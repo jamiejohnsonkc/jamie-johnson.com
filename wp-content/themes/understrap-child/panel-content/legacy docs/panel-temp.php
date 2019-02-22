@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel brands template.
+ * container brands template.
  *
  * @package understrap
  */

@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel expt template.
+* container expt template.
 *
 * @package understrap
 */
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="row">
 								
 	<div class="expt-skills">
-		<!-- POST DIGITAL SUBPANEL -->
-					<div class="exptblock" id="post-sub-panel">
+		<!-- POST DIGITAL SUBcontainer -->
+					<div class="exptblock" id="post-sub-container">
 					<div class="expt-head"><h4>Post-Digital Marketing</h4></div>
 					<div class="exptbox">
 						<div class="expt-icon">
@@ -71,8 +71,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					</div>
 												</div>
-												<!-- Strategic Marketing Management SUBPANEL -->
-												<div class="exptblock" id="smm-sub-panel">
+												<!-- Strategic Marketing Management SUBcontainer -->
+												<div class="exptblock" id="smm-sub-container">
 					<div class="expt-head"><h4>Strategic Marketing Management</h4></div>
 					<div class="exptbox col-md-auto">
 						<div class="expt-icon">
@@ -181,8 +181,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div>
 					</div>
 												</div>
-												<!-- Marketing Communications SUBPANEL -->
-												<div class="exptblock" id="marcom-sub-panel">
+												<!-- Marketing Communications SUBcontainer -->
+												<div class="exptblock" id="marcom-sub-container">
 													<div class="expt-head"><h4>Marketing Communications</h4></div>
 													<div class="exptbox">
 						<div class="expt-icon">
@@ -298,10 +298,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="exptnav-vert">
 			
 					<ul class="expt-menu">
-						<li class="nav-item"><a class="nav-link" href="#post-sub-panel">Post-Digital Marketing</a></li>
-						<li class="nav-item"><a class="nav-link" href="#smm-sub-panel">Strategic Marketing Management</a></li>
-						<li class="nav-item"><a class="nav-link" href="#marcom-sub-panel">Marketing Communications</a></li>
-						<li class="nav-item"><a class="nav-link" href="#webdev-sub-panel">Mobile + Web <br>Design & Development</a></li>
+						<li class="nav-item"><a class="nav-link" href="#post-sub-container">Post-Digital Marketing</a></li>
+						<li class="nav-item"><a class="nav-link" href="#smm-sub-container">Strategic Marketing Management</a></li>
+						<li class="nav-item"><a class="nav-link" href="#marcom-sub-container">Marketing Communications</a></li>
+						<li class="nav-item"><a class="nav-link" href="#webdev-sub-container">Mobile + Web <br>Design & Development</a></li>
 					</ul>
 			
 			</div>
@@ -466,7 +466,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     // }
 }
 
-#smm-sub-panel .exptbox{
+#smm-sub-container .exptbox{
    @include make-col-ready;
     @include media-breakpoint-up(md) {
         @include make-col(3);
@@ -476,7 +476,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     }  
 }
 
-#post-sub-panel .exptbox{
+#post-sub-container .exptbox{
      @include make-col-ready;
     @include media-breakpoint-up(md) {
         @include make-col(4);
@@ -486,7 +486,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
 }
 
-#marcom-sub-panel .exptbox{
+#marcom-sub-container .exptbox{
      @include make-col-ready;
     @include media-breakpoint-up(md) {
         @include make-col(3);
@@ -499,7 +499,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-// #smm-sub-panel .expt-text li{
+// #smm-sub-container .expt-text li{
 //     max-width: $ms-9_5;
 //     }
 

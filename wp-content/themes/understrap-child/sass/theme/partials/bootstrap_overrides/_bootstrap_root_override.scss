@@ -1,0 +1,107 @@
+:root {
+  // Custom variable values only support SassScript inside `#{}`.
+  background: $tungsten;
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+
+  @each $bp, $value in $grid-breakpoints {
+    --breakpoint-#{$bp}: #{$value};
+  }
+
+  // Use `inspect` for lists so that quoted items keep the quotes.
+  // See https://github.com/sass/sass/issues/2383#issuecomment-336349172
+  --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+  --font-family-monospace: #{inspect($font-family-monospace)};
+}
+
+
+
+
+
+
+//  $vr-breakpoints: (
+//     25rem: ( // 400px
+//       font-size: 16px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: purple
+//     ),
+//   30rem: ( // 480px
+//       font-size: 18px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: blue
+//     ),
+//   35rem: ( // 560px
+//       font-size: 12px,
+//       line-height: 1.5,
+//       modular-scale: perfect-fifth,
+//       grid-color: green
+//     ),
+//     40rem: ( // 640px
+//         font-size: 14px,
+//         line-height: 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color: yellow
+//     ),
+//     48rem: ( // 768px
+//         font-size    : 16px,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : orange,
+//     ),
+//     64rem: ( // 1024px
+//         font-size    : 18,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : purple,
+//     ),
+//     78rem: ( // 1248px
+//         font-size    : 20,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     ),
+//     90rem: ( // 1440px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     ),
+//     120rem: ( // 1920px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : purple,
+//     ),
+//     160rem: ( // 2560px
+//         font-size    : 16,
+//         line-height  : 1.5,
+//         modular-scale: perfect-fifth,
+//         grid-color   : blue,
+//     )
+// );
+
+// :root {
+// $vr-font-size: 16px;
+// $vr-line-height: 1.5;
+// // @include vr-reset();
+
+// // font-size: 14px;
+// }
+
+@mixin make-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+@mixin make-col-ready {
+    padding-right: 0;
+    padding-left: 0;
+}

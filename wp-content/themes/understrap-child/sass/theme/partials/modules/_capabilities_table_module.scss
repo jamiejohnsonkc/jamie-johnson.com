@@ -1,0 +1,136 @@
+.table-wrap {
+    position: relative;
+    width: 100%;
+}
+
+// .table.center {
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+// #capabilities_table > thead > tr:nth-child(1) > th{
+//     background: none;
+//     color: #111;
+//     font-weight: 300;
+// }
+
+#capabilities_table {
+    // background: $primary;
+    // padding: 3rem;
+    // color: #111;
+    table-layout: fixed;
+    width: 100%;
+    align-self: baseline;
+
+    thead, th {
+        font-size: .75rem;
+        text-transform: lowercase;
+    }
+
+    thead th, .capa-table__title {
+        background-color: $slate;
+        color: #fff;
+        padding: ms(0.25);
+        letter-spacing: .01rem;
+        font-weight: 300;
+    }
+
+    .capa-table__title {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1rem;
+        letter-spacing: .05rem;
+        border-bottom: thin solid #fff;
+    }
+
+    // tbody > tr > :nth-child(1) {
+    //     padding-left: $ms-2_25;
+    // }
+
+    tbody td {
+        padding: 1.25rem 0;
+        color: $gray-900;
+        font-weight: 300;
+        border: thin solid #fff;
+        font-size: .65rem;
+        letter-spacing: -.005rem;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(sm) {
+            font-size: .75rem;
+            // min-height: $rvr-4_75;
+        }
+    }
+
+    td {
+        text-align: center;
+        // line-height: $rvr-1;
+        // height: $rvr-2;
+
+        // vertical-align: top;
+        // padding-right: $rvr-2;
+   
+    }
+
+    th {
+        text-align: center;
+
+        // padding-left: $ms-1;
+   
+    }
+
+    caption {
+        caption-side: bottom;
+        color: #111;
+        font-size: ms(2);
+        font-weight: 300;
+        // margin-bottom: $rvr-_25;
+        // padding-left: $ms-2_25;
+
+        // max-width: ms(11);
+   
+    }
+}
+
+// #capabilities_table > thead > tr > th.capa-table__column--1{
+// background: $gray-200;
+// }
+
+#capabilities_table > tbody > tr > :nth-child(1) {
+    background: $tungsten;
+}
+
+#capabilities_table > tbody > tr > :nth-child(2) {
+    background: $gray-200;
+}
+
+#capabilities_table > tbody > tr > :nth-child(3) {
+    background: $tungsten;
+}
+
+#capabilities_table > tbody > tr > :nth-child(4) {
+    background: $gray-200;
+}
+
+// #capabilities_table > thead > tr > th.capa-table__column--2 {
+//     // background: $gray-400;
+//     padding-left: $ms-1;
+// }
+
+// #capabilities_table > thead > tr > th.capa-table__column--3 {
+//     padding-left: $ms-1;
+
+//     // background: $gray-200;
+// }
+
+.capa-table__column--1 {
+    // padding-left: $ms-2_25;
+    width: 35%;
+}
+
+.capa-table__column--2 {
+    width: 40%;
+}
+
+.capa-table__column--3 {
+    width: 25%;
+}

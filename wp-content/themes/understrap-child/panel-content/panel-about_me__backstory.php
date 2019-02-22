@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid about-me backstory">
+<article class="article__wrapper  about-me backstory">
 		<div class="container about-me__container__backstory">
 		
 				<h2>Don't Call It A Comeback</h2>

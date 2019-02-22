@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel name" id="basic-panel">
+<article class="article__wrapper  name" id="basic-container">
 	<div class="" id="basic-container">
 		<hgroup class="header__multi-level">
 			<div class="page-title">

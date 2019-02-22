@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="panel-fluid basic home-page home-page__howidoit">
+<!-- <article class="article__wrapper  basic home-page home-page__howidoit">
 	<div class="container home-page__howidoit__container"> -->
-		<article class="panel-fluid home-page home-page__howidoit">
+		<article class="article__wrapper  home-page home-page__howidoit">
 			<div class="container home-page__howidoit__container">
 				<h1>how i do it</h1>
 				<h2>Soup to Nuts.</h2>
@@ -47,7 +47,7 @@ exit; // Exit if accessed directly.
 			<p>optimizing marketing function performance and business contribution</p></div>
 		</div>
 	</div>
-	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 </div>

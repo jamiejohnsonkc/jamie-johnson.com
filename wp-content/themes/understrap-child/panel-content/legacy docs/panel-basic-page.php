@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel name" id="basic-panel">
-		<div class="container basic-panel__xxx">
+<article class="article__wrapper  name" id="basic-container">
+		<div class="container basic-container__xxx">
 	<div class="bg-image__mobile">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrow-01.svg" alt="" class="style-svg"/>
 	</div>

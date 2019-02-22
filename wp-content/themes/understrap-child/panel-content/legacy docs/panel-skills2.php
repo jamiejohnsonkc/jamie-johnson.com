@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel expt template.
+* container expt template.
 *
 * @package understrap
 */
@@ -8,9 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit;  //Exit if accessed directly.
 }
 ?>
-<article class="container-fluid expt" id="expt">
-	<!-- Marketing Leadership SUBPANEL -->
-	<div class="marketing-sub-panel" id="expt-overlay-1">
+<article class="article__wrapper  expt" id="expt">
+	<!-- Marketing Leadership SUBcontainer -->
+	<div class="marketing-sub-container" id="expt-overlay-1">
 		<div id="expt-close-1"><div>X</div></div>
 		<div class="expt-container">
 			<div class="row expt-row">
@@ -84,8 +84,8 @@ exit;  //Exit if accessed directly.
 		</div>
 	</div>
 </div>
-<!-- Strategic Marketing Management SUBPANEL -->
-<div class="smm-sub-panel" id="expt-overlay-2">
+<!-- Strategic Marketing Management SUBcontainer -->
+<div class="smm-sub-container" id="expt-overlay-2">
 	<div id="expt-close-2">X</div>
 	<div class="expt-container">
 		<div class="row expt-row">
@@ -172,8 +172,8 @@ exit;  //Exit if accessed directly.
 </div>
 </div>
 </div>
-<!-- Marketing Communications SUBPANEL -->
-<div class="marcom-sub-panel" id="expt-overlay-3">
+<!-- Marketing Communications SUBcontainer -->
+<div class="marcom-sub-container" id="expt-overlay-3">
 	<div id="expt-close-3">X</div>
 	<div class="expt-container">
 		<div class="row expt-row">
@@ -288,8 +288,8 @@ exit;  //Exit if accessed directly.
 	</div>
 </div>
 </div>
-<!-- WebDev SUBPANEL -->
-<div class="webdev-sub-panel" id="expt-overlay-4">
+<!-- WebDev SUBcontainer -->
+<div class="webdev-sub-container" id="expt-overlay-4">
 	<div id="expt-close-4">x</div>
 	<div class="expt-container">
 		<div class="row expt-row">
@@ -384,8 +384,8 @@ exit;  //Exit if accessed directly.
 		</div>
 	</div>
 </div>
-<!-- Operations & Infrastructure Subpanel -->
-<div class="operations-subpanel" id="expt-overlay-5">
+<!-- Operations & Infrastructure Subcontainer -->
+<div class="operations-subcontainer" id="expt-overlay-5">
 		<div id="expt-close-5"><div>X</div></div>
 		<div class="expt-container">
 			<div class="row expt-row">

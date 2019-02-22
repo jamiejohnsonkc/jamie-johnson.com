@@ -24,13 +24,13 @@
     text-align: center;
 }
 
-.headline{
+%headline{
     flex-basis: $rvr-8;
     margin-top: auto;
     margin-bottom: unset;
 }
 
-.subhead{
+%subhead{
     flex-basis: $rvr-2;
 }
 

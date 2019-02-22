@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash Intro.
+* container Splash Intro.
 *
 * @package understrap
 */
@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 
 
-<article class="panel-fluid about-me">
+<article class="article__wrapper  about-me">
 	<div class="container about-me__container__personal">
 <div class="page-title">
 				<hr>

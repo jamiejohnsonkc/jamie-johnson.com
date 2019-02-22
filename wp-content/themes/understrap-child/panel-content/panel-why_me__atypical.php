@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid alternate">
+<article class="article__wrapper  alternate">
 	<div class="container alternate why-me__container__atypical">
 		<div class="atypical__intro">
 			<h1>atypical</h1>
@@ -60,7 +60,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<!-- 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/sponge-small.jpg" alt="" id="sponge-small"/> -->
-		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
 	</div>

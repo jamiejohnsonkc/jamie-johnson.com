@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel expt template.
+ * container expt template.
  *
  * @package understrap
  */
@@ -19,19 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="exptnav sticky-top">
 					<div id="expt-nav-rule"
 					<ul class="expt-menu">
-						<li><a href="#post-sub-panel" title="">Post-Digital Marketing</a></li>
+						<li><a href="#post-sub-container" title="">Post-Digital Marketing</a></li>
 						<li>Strategic Marketing Management</li>
 						<li>Marketing Communications</li>
-						<li><a href="#webdev-sub-panel" title="">Mobile + Web Design & Development</a></li>
+						<li><a href="#webdev-sub-container" title="">Mobile + Web Design & Development</a></li>
 
 					</ul>
 				</div>
 				</div>
 
 				
-				<!-- POST DIGITAL SUBPANEL -->
+				<!-- POST DIGITAL SUBcontainer -->
 				<div class="expt-skills">
-				<div class="exptblock" id="post-sub-panel">
+				<div class="exptblock" id="post-sub-container">
 								<div class="expt-head"><h4>Strategic Marketing Management</h4></div>
 						<div class="exptbox">
 
@@ -92,9 +92,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 				
-				 <!-- Strategic Marketing Management SUBPANEL -->
+				 <!-- Strategic Marketing Management SUBcontainer -->
 				
-				<div class="exptblock" id="smm-sub-panel">
+				<div class="exptblock" id="smm-sub-container">
 						<div class="exptbox">
 							<div class="expt-icon"></div>
 							<div class="expt-copy">
@@ -105,9 +105,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 
 				
-				 <!-- Marketing Communications SUBPANEL -->
+				 <!-- Marketing Communications SUBcontainer -->
 				
-				<div class="exptblock" id="marcom-sub-panel">
+				<div class="exptblock" id="marcom-sub-container">
 						<div class="exptbox">
 							<div class="expt-icon"></div>
 							<div class="expt-copy">
@@ -118,9 +118,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 
 				
-				 <!-- Mobile + Web Design & Development SUBPANEL -->
+				 <!-- Mobile + Web Design & Development SUBcontainer -->
 				
-				<div class="exptblock" id="webdev-sub-panel">
+				<div class="exptblock" id="webdev-sub-container">
 						<div class="exptbox">
 							<div class="expt-icon"></div>
 							<div class="expt-copy">

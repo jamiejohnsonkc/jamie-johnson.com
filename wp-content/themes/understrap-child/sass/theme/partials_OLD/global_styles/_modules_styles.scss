@@ -1,0 +1,47 @@
+// a.link {
+//     &__advance {
+//         &--chevron {
+//             padding-left: 0px;
+//             padding-right: 0px;
+//             cursor: pointer;
+//             width: $ms-4;
+//             margin: $rvr-6 auto;
+//             position: relative;
+
+//             .st0 {
+//                 stroke: $link-color;
+//             }
+
+//             svg#Layer_1 {
+//                 stroke: $link-color;
+//             }
+
+//             stroke: $link-color;
+//         }
+//     }
+// }
+
+// .link {
+//     &__advance {
+//         &--text {
+//             color: $link-color;
+//             font-weight: 400;
+//             cursor: pointer;
+//             position: relative;
+//             text-transform: uppercase;
+//             letter-spacing: .075rem;
+//             width: inherit;
+//         }
+//     }
+// }
+
+
+// .my-value__container__advance .page__header{
+//     & h2{letter-spacing: -.2rem;
+//         width: 22%;}
+//     & h3{
+//         @include ms-respond(font-size, 2.5);
+//         padding-left: 0;
+//         width: 78%;
+//     }
+// }

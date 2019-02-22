@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel areassplash template.
+ * container areassplash template.
  *
  * @package understrap 
  */
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article class="container-fluid bgconductor" id="areas-splash">
+<article class="article__wrapper  bgconductor" id="areas-splash">
 	
 		<!-- 	<div class="row"> -->
 	

@@ -52,7 +52,7 @@
     }
 }
 
-#basic-content > div.headline h2{
+#basic-content > div%headline h2{
 font-size: ms(3.9);
 }
 
@@ -106,6 +106,6 @@ font-size: ms(3.9);
     font-family: $font-family-sans-serif;
 }
 
-#basic-content .display-text{
+#basic-content %display-text-text{
     margin-bottom: $rvr-2;
 }

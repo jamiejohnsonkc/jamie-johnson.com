@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap 
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="container-fluid bgarrow" id="whatido">
+<article class="article__wrapper  bgarrow" id="whatido">
 	<div class="mobile-subpage" id="trend-arrow">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
 	</div>

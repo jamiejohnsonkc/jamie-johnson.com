@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid home-page cta">
+<article class="article__wrapper  home-page cta">
 	<div class="container cta__container home-page__cta__container">
 		
 		
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		
-	<a class="link__advance--text" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>
+	<a class="link link__advance--text" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>
 		
 		</div><!-- Container end -->
 		</article><!-- cover end -->

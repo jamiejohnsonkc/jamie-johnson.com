@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel aboutsplash template.
+ * container aboutsplash template.
  *
  * @package understrap
  */
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!-- 		</div> --><!-- .row end -->
 
 </article><!-- cover end -->
-					<article class="container intro" id="about-intro">
+					<article class="article__wrapper  intro" id="about-intro">
 	<div class="headline"><h2>About Me Intro/Summary</h2></div>
 	<div class="display-text">Combining frameworks, technology and operations to effect marketing that behaves and performs like a business function and less of an administrative activity.</div>
 	

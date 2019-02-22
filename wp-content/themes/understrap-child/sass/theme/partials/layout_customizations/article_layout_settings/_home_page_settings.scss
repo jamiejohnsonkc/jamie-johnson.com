@@ -1,0 +1,76 @@
+#home__splash{
+    h2{
+		// @extend %display-text;
+
+	}
+    p {
+        // @extend %body-text;
+        font-style: italic;
+
+    }
+    @include center-center();
+   
+}
+
+
+
+
+
+// @extend %center-center;
+
+
+
+
+
+
+///////////////////////////////////////////////
+
+// @mixin two-rows(){
+// .conbox{
+//     @extend %row;
+//     @extend %center-top;
+
+// .content1, .content2{
+//     @include make-col-ready();
+//     @include make-col(6);
+// }
+// }
+// }
+
+
+
+
+
+
+
+// .whatiam{
+//    @include queue();
+//        @include center-center()
+//    @media (min-width: 90em){
+//         @include stack();
+
+// }
+// }
+
+.content1, .content2{
+    @include make-col-ready();
+    @include make-col(6);
+}
+
+
+
+
+
+
+%cols{
+.container{
+    @extend %row;
+}
+.content1, .content2{
+    @include make-col-ready();
+    @include make-col(6);
+}
+}
+
+
+

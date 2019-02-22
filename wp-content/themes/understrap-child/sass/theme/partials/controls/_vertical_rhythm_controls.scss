@@ -1,113 +1,44 @@
 
-// ==========================================================================
-// Vertical Rythmn Controls
-// ==========================================================================
+// $vr-modular-scale
 
 
+// $vr-modular-scale-map: (
+//     minor-second    : 1.067, // Ratio = 15:16
+//     major-second    : 1.125, // Ratio = 8:9
+//     minor-third     : 1.2,   // Ratio = 5:6
+//     major-third     : 1.25,  // Ratio = 4:5
+//     perfect-fourth  : 1.333, // Ratio = 3:4
+//     augmented-fourth: 1.514, // Ratio = 1:√2
+//     perfect-fifth   : 1.5,   // Ratio = 2:3
+//     minor-sixth     : 1.6,   // Ratio = 5:8
+//     golden          : 1.618, // Ratio = 1:1.618
+//     major-sixth     : 1.667, // Ratio = 3:5
+//     minor-seventh   : 1.778, // Ratio = 9:16
+//     major-seventh   : 1.875, // Ratio = 8:15
+//     octave          : 2      // Ratio = 1:2
+// );
 
-:root {
-    --baseline: 1;
-          // Line-height fallback 
-    	line-height: 1.4;
-     	line-height: calc(var(--baseline) * 1rem);
-}
-
-
-
-
-//320px
-@media (min-width: 20em){
-	:root{
-		--baseline: 1.5;
-	}
-}
-
-//576px
-@media (min-width: 36em){
-	:root{
-		--baseline: 1.1;
-	}
-}
-
-//678px
-@media (min-width: 48em){
-	:root{
-		--baseline: 1.1;
-	}
-}
-//992px
-@media (min-width: 62em){
-	:root{
-		--baseline: 1.1;
-	}
-}
-//1200px
-@media (min-width: 75em){
-	:root{
-		--baseline: 1.5;
-	}
-
-}
-
-//1600px
-@media (min-width: 100em){
-	:root{
-		--baseline: 1.1;
-	}
-}
+// $vr-modular-scale: perfect-fifth;
+// $vr-breakpoints: (
+//     60em: ( // 960px
+//         font-size: 16px
+//     ),
+//     90em: ( // 1440px
+//         font-size: 18px
+//     )
+// );
+// $vr-breakpoints: (
+//   // 1rem: ( // 400px
+//   //       font-size    : 16px,
+//   //       line-height  : 1.5,
+//   //       modular-scale: perfect-fifth,
+//   //       grid-color   : red,
+//   //   ),    
+  //   1rem: ( 
+  // font-size    : 16px,
+  // line-height  : 1.5,
+  // modular-scale: perfect-fifth,
+  // grid-color   : red,
+  //  ),
 
 
-
-
-@function dave($multiple) {
-  @return calc(var(--baseline) * $multiple * 1rem);
-}
-
-h1 {margin-top: dave(8) !important;}
-
-
-
-///==========================================================================
-///Vertical Rythmn Variables
-///==========================================================================
-$rvr-0:                                1;
-$rvr-_05:    calc(var(--baseline) * .05rem);
-$rvr-_15:    calc(var(--baseline) * 0.15rem);
-$rvr-_25:    calc(var(--baseline) * 0.25rem);
-$rvr-_5:     calc(var(--baseline) * 0.5rem);
-$rvr-_6:     calc(var(--baseline) * 0.6rem);
-$rvr-_75:    calc(var(--baseline) * 0.75rem);
-$rvr-1:      calc(var(--baseline) * 1rem);
-$rvr-1_25:   calc(var(--baseline) * 1.25rem);
-$rvr-1_5:    calc(var(--baseline) * 1.5rem);
-$rvr-1_75:   calc(var(--baseline) * 1.75rem);
-$rvr-2:      calc(var(--baseline) * 2rem);
-$rvr-2_25:    calc(var(--baseline) * 2.25rem);
-$rvr-2_5:    calc(var(--baseline) * 2.5rem);
-$rvr-2_75:    calc(var(--baseline) * 2.75rem);
-$rvr-3:      calc(var(--baseline) * 3rem);
-$rvr-3_25:    calc(var(--baseline) * 3.25rem);
-$rvr-3_5:    calc(var(--baseline) *  3.5rem);
-$rvr-3_75:    calc(var(--baseline) * 3.75rem);
-$rvr-4:      calc(var(--baseline) * 4rem);
-$rvr-4_25:      calc(var(--baseline) * 4.25rem);
-$rvr-4_5:      calc(var(--baseline) * 4.5rem);
-$rvr-4_75:      calc(var(--baseline) * 4.75rem);
-$rvr-5:      calc(var(--baseline) * 5rem);
-$rvr-6:      calc(var(--baseline) * 6rem);
-$rvr-7:      calc(var(--baseline) * 7rem);
-$rvr-8:      calc(var(--baseline) * 8rem);
-$rvr-9:      calc(var(--baseline) * 9rem);
-$rvr-10:     calc(var(--baseline) * 10rem);
-$rvr-11:     calc(var(--baseline) * 11rem);
-$rvr-12:     calc(var(--baseline) * 12rem);
-$rvr-13:     calc(var(--baseline) * 13rem);
-$rvr-14:     calc(var(--baseline) * 14rem);
-$rvr-15:     calc(var(--baseline) * 15rem);
-$rvr-16:     calc(var(--baseline) * 16rem);
-$rvr-17:     calc(var(--baseline) * 17rem);
-$rvr-18:     calc(var(--baseline) * 18rem);
-$rvr-19:     calc(var(--baseline) * 19rem);
-$rvr-20:     calc(var(--baseline) * 20rem);
-$rvr-21:     calc(var(--baseline) * 21rem);
-$rvr-22:     calc(var(--baseline) * 22rem);

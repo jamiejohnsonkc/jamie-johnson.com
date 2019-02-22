@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel hybrid- template.
+* container hybrid- template.
 *
 * @package understrap
 */

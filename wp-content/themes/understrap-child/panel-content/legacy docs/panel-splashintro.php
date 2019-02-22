@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash Intro.
+* container Splash Intro.
 *
 * @package understrap
 */
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 	
-	<article class="container-fluid intro evo" id="splash-intro">
+	<article class="article__wrapper  intro evo" id="splash-intro">
 		<div class="container" id="splash-intro-container">
 					<div class="page-title">
 				<hr>

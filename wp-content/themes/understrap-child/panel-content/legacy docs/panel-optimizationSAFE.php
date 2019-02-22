@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel cash- template.
+ * container cash- template.
  *
  * @package understrap
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */

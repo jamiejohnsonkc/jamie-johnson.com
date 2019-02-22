@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel cash- template.
+ * container cash- template.
  *
  * @package understrap
  */

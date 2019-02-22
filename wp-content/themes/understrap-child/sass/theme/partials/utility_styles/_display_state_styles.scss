@@ -1,0 +1,231 @@
+//homepage splash sublist dividers
+.hide-1{}
+.hide-2{}
+.hide-3{}
+.hide-4{}
+
+.br    {display: none;}
+.br-2  {display: none;}
+.br-3  {display: none;}
+
+.br-4  {display: none;}
+
+
+.container-hero__img--mobile{
+ 	display: none;
+ 	
+ 	@media (min-width: 25em){
+ 		display: inherit;
+ 	}
+ 	@media (min-width: 64em){
+ 		display: none;
+ 	}
+}
+
+#profile-small{
+ 		display: block;
+ 		@media (min-width: 64em){
+ 		display: none;
+ 	}
+ 	}
+
+.navbar-brand{
+	display: none;
+
+	@include mq('tablet'){
+		display: inherit;
+	}	
+	
+
+}
+
+
+
+
+#splash__home p{
+	.br{
+		display: block;
+	}
+}
+
+
+
+.scroll-top {
+    display: none;
+}
+
+.panel.business-value.grow > div > hgroup > h3 > br,
+.panel.business-value.modernize > div > hgroup > h3 > br{
+	display: none;
+}
+
+
+.diagram-content__end-to-end--horizontal{
+	   
+	   display: none;
+	   @media (min-width: 300px) {}
+	   
+	   
+	   @media (min-width: 400px) {}
+	   
+	   
+	   @media (min-width: 576px) {}
+	   
+	   
+	   @media (min-width: 768px) {}
+	   
+	   
+	   @media (min-width: 992px) {
+	   		display: block;
+	   }
+	   
+	   
+	   @media (min-width: 1200px) {}
+	   
+	   
+	   @media (min-width: 1400px) {}
+	   
+	   
+	   @media (min-width: 1600px) {}
+	   
+	   @media (min-width: 1900px) {}
+	   }
+
+
+// 	    @include media-breakpoint-up(sm) {
+// 	    	display: none;
+// 	}
+// 	    @include media-breakpoint-up(md) {
+// 	  	display: none;
+// 	  }
+// 	    @include media-breakpoint-up(lg) {
+// 			display: block;
+// 		}
+// 	    @include media-breakpoint-up(xl) {
+// 	}
+	
+// }
+
+.diagram-content__end-to-end--vertical{
+	 display: flex;
+	 @media (min-width: 300px) {}
+	 
+	 
+	 @media (min-width: 400px) {}
+	 
+	 
+	 @media (min-width: 576px) {}
+	 
+	 
+	 @media (min-width: 768px) {}
+	 
+	 
+	 @media (min-width: 992px) {
+	 	   		display: none;
+	 }
+	 
+	 
+	 @media (min-width: 1200px) {}
+	 
+	 
+	 @media (min-width: 1400px) {}
+	 
+	 
+	 @media (min-width: 1600px) {}
+	 
+	 @media (min-width: 1900px) {}
+}	 
+	//     @include media-breakpoint-up(sm) {
+	    	
+	// }
+	//     @include media-breakpoint-up(md) {
+	// }    
+	//     @include media-breakpoint-up(lg) {
+	// 		display: none;
+	// 	}
+	//     @include media-breakpoint-up(xl) {
+	// }
+	
+
+
+
+.panel.home-page.splash .hide{
+	// display: none;
+	    @include media-breakpoint-up(sm) {
+	}
+	    @include media-breakpoint-up(md) {
+	    	// display: block;
+	}
+	    @include media-breakpoint-up(lg) {
+	}
+	    @include media-breakpoint-up(xl) {
+	}
+	
+}
+.br__opt, .br{
+	display: none;
+	line-height: 0;
+}
+
+@media (min-width: 200px) {
+.page__header h3{
+		.br{
+		display: block;
+	}
+}
+
+.my-value__container__modernize h3, .my-value__container__optimize h3, {
+	.br{
+		display: none;
+	}
+}
+
+}
+
+@media (min-width: 300px) {
+
+.my-value__container__optimize h3{
+	.br__opt{
+		display: block;
+	}
+}
+}
+
+
+
+
+@media (min-width: 400px) {}
+
+
+@media (min-width: 576px) {}
+
+
+@media (min-width: 768px) {
+.br__opt{
+	display: block;
+}
+
+#main > section > article:nth-child(3) > div > div > hgroup > h3{
+.br{
+	display: block;
+}
+}
+}
+
+
+
+@media (min-width: 992px) {}
+
+
+@media (min-width: 1200px) {}
+
+
+@media (min-width: 1400px) {}
+
+
+@media (min-width: 1600px) {}
+
+@media (min-width: 1900px) {}
+
+
+

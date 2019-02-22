@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel mo-splash template.
+* container mo-splash template.
 *
 * @package understrap
 */

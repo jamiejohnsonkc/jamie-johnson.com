@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash Intro.
+* container Splash Intro.
 *
 * @package understrap
 */
@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid my-expertise skills">
+<article class="article__wrapper  my-expertise skills">
 	<div class="container my-expertise my-expertise__container__skills">
 		<h1>I kick ass</h1>
-		<!-- Marketing Leadership SUBPANEL -->
+		<!-- Marketing Leadership SUBcontainer -->
 		<div class="expertise__overlay expertise__overlay--marketing-leadership" id="expt-overlay-1">
 			<div id="expt-close-1"><div>X</div></div>
 			<div class="overlay__container">
@@ -363,7 +363,7 @@ exit; // Exit if accessed directly.
 </div>
 </nav>
 </div>
-<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/></a>
 </div>
 </article>

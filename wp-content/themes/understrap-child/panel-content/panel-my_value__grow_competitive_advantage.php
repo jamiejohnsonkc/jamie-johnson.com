@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  my-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__grow" id="grow">
 	<div class="row">
 		<h1>how i create value for businesses</h1>
@@ -23,7 +23,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</figure>
 		<p>Competitive dynamics are evolving. Winning business today is less about puffery and more about substance. You have to know your customer, offer value relevant to their needs and demonstrate it's potential.</p>
-		<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
 	</div>

@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel Splash template.
+* container Splash template.
 *
 * @package understrap
 */
@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="panel-fluid home-page whatiam"> <!-- CONTAINER -->
-<div class="container home-page__whatiam__container">
+<article class="article__wrapper  home-page whatiam"> <!-- CONTAINER -->
+<div class="container home-page__whatiam__container conbox">
 	<h1>what i am</h1>
-	<div class="split-container">
+	<div class="content1">
 	
 
-	<h2>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br--2"><br></span>+ Development</h2>
+	<h2>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br-2"><br></span>+ Development</h2>
 <!-- 	<h3>Seeking the Cashy Cash</h3> -->
 <!-- 	<p><span><strong>I know what I'm doing &mdash;</strong></span>I've been in marketing my entire career (20+ years).</p>
 	<p><span><strong>I do a bit of everything &mdash;</strong></span>I've led the team and I've been the team.</p> -->
@@ -22,6 +22,7 @@ exit; // Exit if accessed directly.
 	<p><strong>No Front-End Dev/Design opportunit is too small &mdash;</strong> So whether you need a simple website refresh or a comprehensive marketing program, I can help.</p>
 </div>
 <!-- <div class="table-wrap"> -->
+	<div class="content2">
 	<table id="capabilities_table">
 		
 		<caption>My capabilities range from leading C-Level strategic initiatives to slap'n logos on mugs. And if I'm not the right person to help you, chances are I can help you find someone who can.</caption>
@@ -61,11 +62,11 @@ exit; // Exit if accessed directly.
 			</tr>
 		</tbody>
 	</table>
-
+</div>
 
 
 </div>
-	<a class="link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 </article>

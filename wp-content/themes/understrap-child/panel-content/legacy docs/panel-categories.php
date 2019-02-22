@@ -1,6 +1,6 @@
 <?php
 /**
-* Panel cats template.
+* container cats template.
 *
 * @package understrap
 */

@@ -1,0 +1,67 @@
+// $breakpoints: (
+//     "phone":        400px,
+//     "phone-wide":   480px,
+//     "phablet":      560px,
+//     "tablet-small": 640px,
+//     "tablet":       768px,
+//     "tablet-wide":  1024px,
+//     "desktop":      1248px,
+//     "desktop-wide": 1440px,
+//     "desktop-hd":   1920px,
+//     "desktop-uhd":  2560px;px
+// );px
+
+$breakpoints: (
+    "phone":        25em, 	// 400px
+    "phone-wide":   30em, 	// 480px
+    "phablet":      35em, 	// 560px
+    "tablet-small": 40em, 	// 640px
+    "tablet":       48em, 	// 768px
+    "tablet-wide":  64em, 	// 1024px
+    "desktop":      78em, 	// 1248px
+    "desktop-wide": 90em, 	// 1440px
+    "desktop-xl":   120em,	// 1920px
+    "desktop-xxl":  160em	// 2560px
+);
+
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+//The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+//
+//.site-header {
+//    padding: 2rem;
+//    font-size: 1.8rem;
+//    @include mq('tablet-wide') {
+//        padding-top: 4rem;
+//        font-size: 2.4rem;
+//    }
+//}
+//
+
+
+
+
+
+$mq-phone:        	"(min-width: #{bp-phone})";
+$mq-phone-wide:   	"(min-width: #{bp-phone-wide})";
+$mq-phablet:      	"(min-width: #{bp-phablet})";
+$mq-tablet-small: 	"(min-width: #{bp-tablet-small})";
+$mq-tablet:       	"(min-width: #{bp-tablet})";
+$mq-tablet-wide:  	"(min-width: #{bp-tablet-wide})";
+$mq-desktop:      	"(min-width: #{bp-desktop})";
+$mq-desktop-wide: 	"(min-width: #{bp-desktop-wide})";
+$mq-desktop-xl:   	"(min-width: #{bp-desktop-xl})";
+$mq-desktop-xxl:  	"(min-width: #{bp-desktop-xxl})";
+$mq-retina: 		"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+

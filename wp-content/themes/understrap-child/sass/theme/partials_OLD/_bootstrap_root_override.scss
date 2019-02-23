@@ -1,6 +1,6 @@
 :root {
   // Custom variable values only support SassScript inside `#{}`.
-  background: $tungsten;
+
   @each $color, $value in $colors {
     --#{$color}: #{$value};
   }

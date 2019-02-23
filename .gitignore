@@ -1,3 +1,4 @@
+
 # -----------------------------------------------------------------
 # .gitignore for WordPress
 # Bare Minimum Git
@@ -108,3 +109,20 @@ wp-content/themes/twenty*/
 
 # ignore node/grunt dependency directories
 node_modules/
+=======
+.sass-cache
+
+bower_components
+
+node_modules
+
+understrap.zip
+
+dist
+
+dist-product
+
+npm-debug.log
+
+/vendor/
+

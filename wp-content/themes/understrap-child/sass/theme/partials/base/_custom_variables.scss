@@ -327,7 +327,7 @@ desktop-xxl:   2560px
 // // Font, line-height, and color for body text, headings, and more.
 
 // // stylelint-disable value-keyword-case
-$font-family-sans-serif:    -apple-system, BlinkMacSystemFont, geomanist, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif:    geomanist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-monospace:     arial, roboto, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-serif:         adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
 $font-family-base:          $font-family-sans-serif;

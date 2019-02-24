@@ -2,10 +2,11 @@
 
 
 @include vr-reset(
+    $line-height: 1.5,
     $helpers: false,
     $breakpoints:(
     1rem: ( // 400px
-      font-size: 6px,
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
@@ -74,70 +75,72 @@
     );
 
 
+/* body {
+  @include vr-grid();
+} */
 
-
-//  $vr-breakpoints: (
-//     25rem: ( // 400px
-//       font-size: 16px,
-//       line-height: 1.5,
-//       modular-scale: perfect-fifth,
-//       grid-color: purple
-//     ),
-//   30rem: ( // 480px
-//       font-size: 18px,
-//       line-height: 1.5,
-//       modular-scale: perfect-fifth,
-//       grid-color: blue
-//     ),
-//   35rem: ( // 560px
-//       font-size: 12px,
-//       line-height: 1.5,
-//       modular-scale: perfect-fifth,
-//       grid-color: green
-//     ),
-//     40rem: ( // 640px
-//         font-size: 14px,
-//         line-height: 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color: yellow
-//     ),
-//     48rem: ( // 768px
-//         font-size    : 16px,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : orange,
-//     ),
-//     64rem: ( // 1024px
-//         font-size    : 18,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : purple,
-//     ),
-//     78rem: ( // 1248px
-//         font-size    : 20,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : blue,
-//     ),
-//     90rem: ( // 1440px
-//         font-size    : 16,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : blue,
-//     ),
-//     120rem: ( // 1920px
-//         font-size    : 16,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : purple,
-//     ),
-//     160rem: ( // 2560px
-//         font-size    : 16,
-//         line-height  : 1.5,
-//         modular-scale: perfect-fifth,
-//         grid-color   : blue,
-//     )
-// );
+ /* $vr-breakpoints: (
+    25rem: ( // 400px
+      font-size: 16px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: purple
+    ),
+  30rem: ( // 480px
+      font-size: 18px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: blue
+    ),
+  35rem: ( // 560px
+      font-size: 12px,
+      line-height: 1.5,
+      modular-scale: perfect-fifth,
+      grid-color: green
+    ),
+    40rem: ( // 640px
+        font-size: 14px,
+        line-height: 1.5,
+        modular-scale: perfect-fifth,
+        grid-color: yellow
+    ),
+    48rem: ( // 768px
+        font-size    : 16px,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : orange,
+    ),
+    64rem: ( // 1024px
+        font-size    : 18,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : purple,
+    ),
+    78rem: ( // 1248px
+        font-size    : 20,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    ),
+    90rem: ( // 1440px
+        font-size    : 16,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    ),
+    120rem: ( // 1920px
+        font-size    : 16,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : purple,
+    ),
+    160rem: ( // 2560px
+        font-size    : 16,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    )
+ ); */
 
 
 
@@ -154,16 +157,9 @@ html [type=button] {
 
 body {
     height: 100%;
-    // flex-direction: column;
-    // height: 100vh;
-    // @include vr-grid();
+/*      flex-direction: column; */
 }
 
-
-
-// .site{
-//     overflow-x: hidden;
-// }
 
 section{}
 header{}

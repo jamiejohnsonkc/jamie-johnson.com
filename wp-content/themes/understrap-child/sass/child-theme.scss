@@ -1,50 +1,40 @@
 
-@import "theme/partials/3rd_party_imports/fontface_import"; 
+@import "theme/partials/3rd_party/fontface_import"; 
 @import "node_modules/mathsass/dist/math";
 @import "node_modules/vertical-rhythm-reset/dist/vertical-rhythm-reset";
-// <--------- Loads here to ensure @fontface placement at front of css
-// @import "node_modules/mathsass/dist/math";
-// @import "theme/partials/controls/vertical_rhythm_controls";
-// @import "theme/am_theme_partials_import";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
 
-@import "theme/partials/variables/variables_override";
-@import "assets/bootstrap4";// <--------- Loads Bootstrap3 or Bootstrap4. Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+
+@import "theme/partials/variables/bootstrap_variables_override";
+@import "assets/bootstrap4";
+@import "theme/partials/variables/custom_variables";
 
 
 
-// @import "theme/partials/mixins/type_style_mixins";
-// @import "theme/partials/bootstrap_overrides/bootstrap_root_override";
-
-@import "../src/sass/understrap/understrap/understrap";// <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
-@import "../src/sass/understrap/theme/contact-form7";// <-------- Loads some basic styling for contact form 7 plugin
- //Optional files - If you don´t use the corresponding scripts/fonts comment em out
-@import "assets/font-awesome"; // <------- Font Awesome Icon font
-@import "assets/underscores"; // <------- Underscores media styles
-
+@import "../src/sass/understrap/understrap/understrap";
+@import "../src/sass/understrap/theme/contact-form7";
+@import "assets/font-awesome"; 
+@import "assets/underscores"; 
+@import "theme/partials/base/global_styles.scss";
+@import "theme/partials/base/color_styles.scss";
+@import "theme/partials/base/type_styles.scss";
 
 
-// Any additional imported files //
- // @import "theme/devstyles";  // <--------- scratchpad for css templates DELETE BEFORE STAGING
-// @import "theme/dev_utilities/canvas"; //<---------------css staging for invididual elements
-@import "theme/partials/base_styles/global_styles.scss";
 
-
-// @import "theme/partials/base_styles/custom_variables.scss";
-// @import "theme/partials/base_styles/base_styles_import";
+@import "theme/partials/base/menu_styles.scss";
 @import "theme/partials/mixins/flexbox_mixins";
 @import "theme/partials/mixins/bp_and_query_definitions_mixins";
 
-@import "theme/partials/article_layout_templates/article_layout_templates_import";
-// @import "theme/partials/theme_customization/theme_customization_import";
-@import "theme/partials/layout_customizations/layout_customizations_import";
-@import "theme/partials/modules/modules_import";
-@import "theme/partials/utility_styles/flex_state_styles";
-@import "theme/partials/utility_styles/display_state_styles";
-@import "theme/partials/utility_styles/graphics_and_artwork_styles";
-@import "theme/partials/base_styles/vert_rhythm_base_styles.scss";
-@import "theme/dev_utilities/sandbox";
- @import "theme/atomicmouse";  // <--------- Add your styles into this file
- // @import "theme/partials/global_styles";//<-------combo css selectors broken out for easy reference while styleing
-//reorder these imports later
-// @import "theme/partials/_atomicmouse_color_system";
+
+@import "theme/partials/layout/layout_styles_import";
+
+@import "theme/partials/utilities/flex_state_styles";
+@import "theme/partials/utilities/display_state_styles"; 
+@import "theme/partials/utilities/graphics_and_artwork_styles";
+@import "theme/partials/base/vert_rhythm_styles.scss";
+
+/* @import "theme/dev_utilities/sandbox";
+ @import "theme/atomicmouse";   */
+
+
+
 

@@ -11,6 +11,16 @@
 .br-4  {display: none;}
 
 
+@include mq('phone-small'){
+width: 999%;
+}
+
+@include mq('phone'){
+width: 555%;
+}
+
+
+
 .container-hero__img--mobile{
  	display: none;
  	

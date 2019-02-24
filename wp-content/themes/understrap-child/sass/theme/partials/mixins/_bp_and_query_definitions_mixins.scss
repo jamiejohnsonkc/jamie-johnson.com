@@ -1,4 +1,4 @@
-// $breakpoints: (
+/* // $breakpoints: (
 //     "phone":        400px,
 //     "phone-wide":   480px,
 //     "phablet":      560px,
@@ -9,27 +9,39 @@
 //     "desktop-wide": 1440px,
 //     "desktop-hd":   1920px,
 //     "desktop-uhd":  2560px;px
-// );px
+// );px */
 
 $breakpoints: (
-    "phone":        25em, 	// 400px
-    "phone-wide":   30em, 	// 480px
-    "phablet":      35em, 	// 560px
-    "tablet-small": 40em, 	// 640px
-    "tablet":       48em, 	// 768px
-    "tablet-wide":  64em, 	// 1024px
-    "desktop":      78em, 	// 1248px
-    "desktop-wide": 90em, 	// 1440px
-    "desktop-xl":   120em,	// 1920px
-    "desktop-xxl":  160em	// 2560px
+    "phone-small":  25em,   
+    "phone":        25em, 	
+    "phone-wide":   30em, 	
+    "phablet":      35em, 	
+    "tablet-small": 40em, 	
+    "tablet":       48em, 	
+    "tablet-wide":  64em, 	
+    "desktop":      78em, 	
+    "desktop-wide": 90em, 	
+    "desktop-xl":   120em,	
+    "desktop-xxl":  160em	
 );
 
+/* // 400px
+// 400px
+// 480px
+// 560px
+// 640px
+// 768px
+// 1024px
+// 1248px
+// 1440px
+// 1920px
+// 2560px */
 
 @mixin mq($width, $type: min) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
         @if $type == max {
-            $width: $width - 1px;
+            $width: $width - .1rem;
         }
         @media only screen and (#{$type}-width: $width) {
             @content;
@@ -37,7 +49,9 @@ $breakpoints: (
     }
 }
 
-//The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+
+
+/* //The example below showing the padding and font-size increasing once the viewport gets over 1024px.
 //
 //.site-header {
 //    padding: 2rem;
@@ -47,12 +61,12 @@ $breakpoints: (
 //        font-size: 2.4rem;
 //    }
 //}
-//
+// */
 
 
 
 
-
+$mq-phone-small:    "(max-width: #{bp-phone-small})";
 $mq-phone:        	"(min-width: #{bp-phone})";
 $mq-phone-wide:   	"(min-width: #{bp-phone-wide})";
 $mq-phablet:      	"(min-width: #{bp-phablet})";

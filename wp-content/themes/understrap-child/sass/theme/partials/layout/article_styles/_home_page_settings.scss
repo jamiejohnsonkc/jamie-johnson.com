@@ -1,10 +1,9 @@
 #home__splash{
     h2{
-		// @extend %display-text;
+		@extend %display-text;
 
 	}
     p {
-        // @extend %body-text;
         font-style: italic;
 
     }

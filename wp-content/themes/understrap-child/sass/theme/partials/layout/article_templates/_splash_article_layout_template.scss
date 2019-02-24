@@ -1,33 +1,32 @@
 
 .splash{
+   height: 100vh;
    @include center-center();
     h1 {
         margin-top: auto;
         flex: 0 0 auto;
+        @extend %title;
        
     }
 
     h2 {
         flex: 0 0 auto;
+              @extend %subhead;
     }
 
     h3 {
         flex: 0 0 auto;
+              @extend %display-text;
     }
 
     p {
         flex: 0 0 auto;
         margin-bottom: auto;
+              @extend %body-text;
 
     }
     .link{
-    	flex: .5 0 auto;
+    	flex: .75 0 auto;
 
     }
-
-    
-    // @include mq('tablet-wide'){
-    //     @include left-center();
-    // }    
-    
 }

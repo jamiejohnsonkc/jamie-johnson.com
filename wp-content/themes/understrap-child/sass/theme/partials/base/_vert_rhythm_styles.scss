@@ -1,0 +1,12 @@
+%title							 { @include vr( $font-size: 6,   $margin-bottom: 1 );}       
+%headline						 { @include vr( $font-size: 5,   $margin-bottom: 1 );}
+%subhead                         { @include vr( $font-size: 4,   $margin-bottom: 1 );}
+%sublist                         { @include vr( $font-size: 4,   $margin-bottom: 1 );}
+%display-text                    { @include vr( $font-size: 3,   $margin-bottom: 1 );}
+%body-text                       { @include vr( $font-size: 2,   $margin-bottom: 1 );}
+%para                            { @include vr( $font-size: 1,   $margin-bottom: 1 );}
+%lead                            { @include vr( $font-size: 1,   $margin-bottom: 1 );}
+%caption                         { @include vr( $font-size: .75, $margin-bottom: 1 );}
+a.link__advance--text      		 {}
+a.link__advance--chevron   		 {}
+.navbar-brand, .navbar, .navbar a{ @include vr( $font-size: .5);}

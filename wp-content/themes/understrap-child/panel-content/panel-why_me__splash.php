@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 <article class="article__wrapper  why-me bgbrains">
 	<div class="bgbrainsv2"></div>
-	<div class="container splash why-me__container__splash">
+	<div class="container splash why-me__container__splash" id="why-me__splash">
 		<h1>Why Me</h1>
 		<h2>lorem ispum sino et dolemet</h2>
 		<h3>Excepteur sint occaecat cupidatat non.</h3>
@@ -18,5 +18,5 @@ exit; // Exit if accessed directly.
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
 	</div>
-	<div class="container-hero__img--mobile brains"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
+	<div class="container-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
 </article>

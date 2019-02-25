@@ -1,0 +1,30 @@
+@media (max-width: 48em){
+.container{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.navbar>.container, .navbar>.container-fluid{
+	position: relative;
+	   margin: 0 auto;
+	width: 90%;
+	max-width: 90%;
+}
+}
+@include mq('phone'){}    
+@include mq('phone-wide'){}    
+@include mq('phablet'){}    
+@include mq('tablet-small'){}    
+@include mq('tablet'){
+
+/* .navbar-expand-md .navbar-toggler{
+	display: flex;
+} */
+}   
+@include mq('tablet-wide'){
+
+} 
+
+@include mq('desktop-wide'){}    
+@include mq('desktop-xl'){}    
+@include mq('desktop-xxl'){}    

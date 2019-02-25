@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <article class="article__wrapper  about-me bgshoes">
-		<div class="container splash about-me__container__splash">
+		<div class="container splash about-me__container__splash" id="about-me__splash">
 	<!-- 	<h1>About Me</h1> -->
 		
 		<h1>lorem ispum sino et dolemet</h1>

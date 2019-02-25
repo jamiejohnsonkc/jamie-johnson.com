@@ -21,6 +21,11 @@ home x2 moves cursor to beginning of line
 shift + end   selects from cursor to first white space at end of the line
 
 
+all queries - @bps
+bptablet 
+bptabletw  
+bpdesk 
+
 snippet directory
 C:\Users\Jamie Johnson\AppData\Roaming\Sublime Text 3\Packages\User
 

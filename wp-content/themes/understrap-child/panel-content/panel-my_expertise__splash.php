@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <article class="article__wrapper  my-expertise bgconductor">
-		<div class="container splash my-expertise__container__splash">
+		<div class="container splash my-expertise__container__splash" id="my-expertise__splash">
 		<h1>Areas of Expertise</h1>
 		
 		<h2>I do much more than words and pictures</h2>

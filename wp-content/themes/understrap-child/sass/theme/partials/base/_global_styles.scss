@@ -2,65 +2,64 @@
 
 
 @include vr-reset(
-    $line-height: 1.5,
     $helpers: false,
     $breakpoints:(
     1rem: ( // 400px
-      font-size: 8px,
+      font-size: 6px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
     ),
     25rem: ( // 400px
-      font-size: 16px,
+      font-size: 6px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
     ),
   30rem: ( // 480px
-      font-size: 18px,
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: blue
     ),
   35rem: ( // 560px
-      font-size: 12px,
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: green
     ),
     40rem: ( // 640px
-        font-size: 14px,
+        font-size: 8px,
         line-height: 1.5,
         modular-scale: perfect-fifth,
         grid-color: yellow
     ),
     48rem: ( // 768px
-        font-size    : 16px,
+        font-size    : 8px,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : orange,
     ),
     64rem: ( // 1024px
-        font-size    : 18,
+        font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : purple,
     ),
     78rem: ( // 1248px
-        font-size    : 20,
+        font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : blue,
     ),
     90rem: ( // 1440px
-        font-size    : 16,
+        font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : blue,
     ),
     120rem: ( // 1920px
-        font-size    : 18,
+        font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : purple,
@@ -75,9 +74,9 @@
     );
 
 
-/* body {
+body {
   @include vr-grid();
-} */
+}
 
  /* $vr-breakpoints: (
     25rem: ( // 400px
@@ -198,7 +197,10 @@ article{}
 }
 
 .link__advance--chevron{
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    stroke: $slate;  
+    stroke-linecap: round;
+    stroke-width: .075rem;
 }
 

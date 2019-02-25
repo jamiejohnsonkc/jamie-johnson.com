@@ -13,16 +13,16 @@
 
 $breakpoints: (
     "phone-small":  25em,   
-    "phone":        25em, 	
-    "phone-wide":   30em, 	
-    "phablet":      35em, 	
-    "tablet-small": 40em, 	
-    "tablet":       48em, 	
-    "tablet-wide":  64em, 	
-    "desktop":      78em, 	
-    "desktop-wide": 90em, 	
-    "desktop-xl":   120em,	
-    "desktop-xxl":  160em	
+    "phone":        25em, 	/*400px*/
+    "phone-wide":   30em, 	/*5480px*/
+    "phablet":      35em, 	/*560px*/
+    "tablet-small": 40em, 	/*640px*/
+    "tablet":       48em, 	/*768px*/
+    "tablet-wide":  64em, 	/*1024px*/
+    "desktop":      78em, 	/*1248px*/
+    "desktop-wide": 90em, 	/*1440x*/
+    "desktop-xl":   120em,	/*1920px*/
+    "desktop-xxl":  160em	/*2560px*/
 );
 
 /* // 400px

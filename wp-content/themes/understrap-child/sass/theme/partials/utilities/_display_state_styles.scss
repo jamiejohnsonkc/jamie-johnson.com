@@ -7,52 +7,51 @@
 .br    {display: none;}
 .br-2  {display: none;}
 .br-3  {display: none;}
-
 .br-4  {display: none;}
 
 
-@include mq('phone-small'){
-width: 999%;
+
+.br__opt, .br{
+	display: none;
+	line-height: 0;
 }
 
-@include mq('phone'){
-width: 555%;
+@media (min-width: 200px) {
+.page__header h3{.br{display: block;}}
+.my-value__container__modernize h3, .my-value__container__optimize h3, {.br{display: none;}}
 }
+@media (min-width: 300px) {.my-value__container__optimize h3{.br__opt{display: block;}}
+}
+@media (min-width: 400px) {}
+@media (min-width: 576px) {}
+@media (min-width: 768px) {
+.br__opt{display: block;}
+#main > section > article:nth-child(3) > div > div > hgroup > h3{.br{display: block;}}
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}
+@media (min-width: 1400px) {}
+@media (min-width: 1600px) {}
+@media (min-width: 1900px) {}
 
 
 
 .container-hero__img--mobile{
  	display: none;
- 	
  	@media (min-width: 25em){
  		display: inherit;
  	}
- 	@media (min-width: 64em){
+ 	@media (min-width: 64.1em){
  		display: none;
  	}
 }
 
 #profile-small{
  		display: block;
- 		@media (min-width: 64em){
- 		display: none;
- 	}
  	}
 
-.navbar-brand{
-	display: none;
 
-	@include mq('tablet'){
-		display: inherit;
-	}	
-	
-
-}
-
-
-
-
-#splash__home p{
+#home__splash p{
 	.br{
 		display: block;
 	}
@@ -60,9 +59,9 @@ width: 555%;
 
 
 
-.scroll-top {
-    display: none;
-}
+// .scroll-top {
+//     display: none;
+// }
 
 .panel.business-value.grow > div > hgroup > h3 > br,
 .panel.business-value.modernize > div > hgroup > h3 > br{
@@ -156,86 +155,4 @@ width: 555%;
 	//     @include media-breakpoint-up(xl) {
 	// }
 	
-
-
-
-.panel.home-page.splash .hide{
-	// display: none;
-	    @include media-breakpoint-up(sm) {
-	}
-	    @include media-breakpoint-up(md) {
-	    	// display: block;
-	}
-	    @include media-breakpoint-up(lg) {
-	}
-	    @include media-breakpoint-up(xl) {
-	}
-	
-}
-.br__opt, .br{
-	display: none;
-	line-height: 0;
-}
-
-@media (min-width: 200px) {
-.page__header h3{
-		.br{
-		display: block;
-	}
-}
-
-.my-value__container__modernize h3, .my-value__container__optimize h3, {
-	.br{
-		display: none;
-	}
-}
-
-}
-
-@media (min-width: 300px) {
-
-.my-value__container__optimize h3{
-	.br__opt{
-		display: block;
-	}
-}
-}
-
-
-
-
-@media (min-width: 400px) {}
-
-
-@media (min-width: 576px) {}
-
-
-@media (min-width: 768px) {
-.br__opt{
-	display: block;
-}
-
-#main > section > article:nth-child(3) > div > div > hgroup > h3{
-.br{
-	display: block;
-}
-}
-}
-
-
-
-@media (min-width: 992px) {}
-
-
-@media (min-width: 1200px) {}
-
-
-@media (min-width: 1400px) {}
-
-
-@media (min-width: 1600px) {}
-
-@media (min-width: 1900px) {}
-
-
 

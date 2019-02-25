@@ -13,17 +13,19 @@
 @import "../src/sass/understrap/understrap/understrap";
 @import "../src/sass/understrap/theme/contact-form7";
 @import "assets/font-awesome"; 
-@import "assets/underscores"; 
+@import "assets/underscores";
+@import "theme/partials/base/color_variables.scss";
+@import "theme/partials/base/type_variables.scss"; 
 @import "theme/partials/base/global_styles.scss";
-@import "theme/partials/base/color_styles.scss";
-@import "theme/partials/base/type_styles.scss";
 
 
 
-@import "theme/partials/base/menu_styles.scss";
+
+
 @import "theme/partials/mixins/flexbox_mixins";
 @import "theme/partials/mixins/bp_and_query_definitions_mixins";
-
+@import "theme/partials/base/container_styles.scss";
+@import "theme/partials/base/menu_styles.scss";
 
 @import "theme/partials/layout/layout_styles_import";
 

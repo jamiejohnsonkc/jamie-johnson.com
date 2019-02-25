@@ -1,5 +1,5 @@
 <article class="article__wrapper  my-value bgregister">
-	<div class="container splash my-value__container__splash">
+	<div class="container splash my-value__container__splash" id="my-value__splash">
 		<h1>I deliver value</h1>
 		<h2>I believe marketing is a means, not the end.</h2>
 		<table class="value-table">

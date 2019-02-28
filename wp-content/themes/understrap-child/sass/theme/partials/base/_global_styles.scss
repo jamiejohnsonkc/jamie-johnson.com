@@ -4,61 +4,61 @@
 @include vr-reset(
     $helpers: false,
     $breakpoints:(
-    1rem: ( // 400px
-      font-size: 6px,
+    1em: ( // 400px
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
     ),
-    25rem: ( // 400px
-      font-size: 6px,
+    25em: ( // 400px
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
     ),
-  30rem: ( // 480px
+  30em: ( // 480px
       font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: blue
     ),
-  35rem: ( // 560px
-      font-size: 8px,
+  35em: ( // 560px
+      font-size: 10px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: green
     ),
-    40rem: ( // 640px
+    40em: ( // 640px
         font-size: 8px,
         line-height: 1.5,
         modular-scale: perfect-fifth,
         grid-color: yellow
     ),
-    48rem: ( // 768px
+    48em: ( // 768px
         font-size    : 8px,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : orange,
     ),
-    64rem: ( // 1024px
-        font-size    : 10,
+    64em: ( // 1024px
+        font-size    :8,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : purple,
     ),
-    78rem: ( // 1248px
+    78em: ( // 1248px
+        font-size    : 8,
+        line-height  : 1.5,
+        modular-scale: perfect-fifth,
+        grid-color   : blue,
+    ),
+    90em: ( // 1440px
         font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : blue,
     ),
-    90rem: ( // 1440px
-        font-size    : 10,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : blue,
-    ),
-    120rem: ( // 1920px
+    118em: ( // 1920px
         font-size    : 10,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
@@ -74,75 +74,6 @@
     );
 
 
-body {
-  @include vr-grid();
-}
-
- /* $vr-breakpoints: (
-    25rem: ( // 400px
-      font-size: 16px,
-      line-height: 1.5,
-      modular-scale: perfect-fifth,
-      grid-color: purple
-    ),
-  30rem: ( // 480px
-      font-size: 18px,
-      line-height: 1.5,
-      modular-scale: perfect-fifth,
-      grid-color: blue
-    ),
-  35rem: ( // 560px
-      font-size: 12px,
-      line-height: 1.5,
-      modular-scale: perfect-fifth,
-      grid-color: green
-    ),
-    40rem: ( // 640px
-        font-size: 14px,
-        line-height: 1.5,
-        modular-scale: perfect-fifth,
-        grid-color: yellow
-    ),
-    48rem: ( // 768px
-        font-size    : 16px,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : orange,
-    ),
-    64rem: ( // 1024px
-        font-size    : 18,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : purple,
-    ),
-    78rem: ( // 1248px
-        font-size    : 20,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : blue,
-    ),
-    90rem: ( // 1440px
-        font-size    : 16,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : blue,
-    ),
-    120rem: ( // 1920px
-        font-size    : 16,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : purple,
-    ),
-    160rem: ( // 2560px
-        font-size    : 16,
-        line-height  : 1.5,
-        modular-scale: perfect-fifth,
-        grid-color   : blue,
-    )
- ); */
-
-
-
 html {
     height: 100%;
     scroll-behavior: smooth;
@@ -156,6 +87,7 @@ html [type=button] {
 
 body {
     height: 100%;
+/* @include vr-grid(); */
 /*      flex-direction: column; */
 }
 
@@ -174,6 +106,10 @@ article{}
     right: 0;
     left: 0;
     z-index: 1030;
+}
+
+.container{
+  position: relative;
 }
 
 %row, .row{
@@ -195,12 +131,23 @@ article{}
     padding-right: 0;
     position: relative;
 }
+/* 
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+} */
 
 .link__advance--chevron{
     width: 3rem;
     height: 3rem;
-    stroke: $slate;  
+}
+
+svg.chev--dwn{
+      stroke: #111;  
     stroke-linecap: round;
     stroke-width: .075rem;
+    width: 3rem;
+    height: 3rem;
+
 }
 

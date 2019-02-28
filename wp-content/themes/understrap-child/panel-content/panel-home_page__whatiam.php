@@ -9,12 +9,15 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper  home-page whatiam"> <!-- CONTAINER -->
-<div class="container home-page__whatiam__container conbox">
+<div class="container home-page__whatiam__container core" id="whatiam">
 	<h1>what i am</h1>
-	<div class="content1">
+	<h2>End to End Marketer</h2>
+	<h3>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br-2"><br></span>+ Development</h3>	
+	<div class="content-container">
+	
 	
 
-	<h2>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br-2"><br></span>+ Development</h2>
+	<div class="content1">
 <!-- 	<h3>Seeking the Cashy Cash</h3> -->
 <!-- 	<p><span><strong>I know what I'm doing &mdash;</strong></span>I've been in marketing my entire career (20+ years).</p>
 	<p><span><strong>I do a bit of everything &mdash;</strong></span>I've led the team and I've been the team.</p> -->
@@ -27,8 +30,8 @@ exit; // Exit if accessed directly.
 		
 		<caption>My capabilities range from leading C-Level strategic initiatives to slap'n logos on mugs. And if I'm not the right person to help you, chances are I can help you find someone who can.</caption>
 		<thead>
-			<tr><th class="capa-table__title" colspan="4">Services & Capabilities</th></tr>
-			<tr>
+			<tr class="capa__row" id="capa__row--1"><th class="capa-table__title" colspan="4">Services & Capabilities</th></tr>
+			<tr class="capa__row" id="capa__row--2">
 				<th class="capa-table__column--1">Discipline</th>
 				<th class="capa-table__column--2">Function</th>
 				<th class="capa-table__column--3">Capacity</th>
@@ -36,25 +39,25 @@ exit; // Exit if accessed directly.
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="capa-table__row--1">
+				<tr class="capa__row" id="capa__row--3">
 				<td>Mobile + Web</td>	
 					<td>Strategy</td>
 				<td>Freelance</td>
 				<td>Directed</td>
 			</tr>
-			<tr class="capa-table__row--2">
+				<tr class="capa__row" id="capa__row--4">
 				<td>Marketing Communications</td>
 				<td class="capa__table-cell--padding-right">Design</td>
 				<td>Contract</td>
 				<td>Guided</td>
 			</tr>
-			<tr class="capa-table__row--3">
+				<tr class="capa__row" id="capa__row--5">
 				<td>Revenue Generation</td>
 				<td>Development</td>
 				<td>Consulting</td>
 				<td>Collaborative</td>
 			</tr>
-			<tr class="capa-table__row--4">
+				<tr class="capa__row" id="capa__row--6">
 				<td>Marketing Management</td>
 				<td>Operations</td>
 				<td>Retained</td>
@@ -66,7 +69,9 @@ exit; // Exit if accessed directly.
 
 
 </div>
+
 	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
+	</div>
 </article>

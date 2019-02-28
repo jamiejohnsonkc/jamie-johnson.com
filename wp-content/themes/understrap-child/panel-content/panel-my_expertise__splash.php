@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 		<h2>I do much more than words and pictures</h2>
 		
-		<h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3>
+		<!-- <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> -->
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</a>
 	
 </div>
-	<div class="container-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-small.jpg" alt="" class="conductor-small"/></div>
+	<div class="container-hero__img--mobile" id="my-conductor"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-small.jpg" alt="" class="conductor-small"/></div>
 	</article><!-- cover end -->
 	
 	

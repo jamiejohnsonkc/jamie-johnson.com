@@ -1,7 +1,9 @@
 
 .splash{
+   @include split-rows();
+   @include left-middle();
    height: 100vh;
-   @include center-center();
+
     h1 {
         margin-top: auto;
         flex: 0 0 auto;
@@ -11,22 +13,27 @@
 
     h2 {
         flex: 0 0 auto;
-              @extend %subhead;
+              @extend %subhead-lg;
     }
 
     h3 {
         flex: 0 0 auto;
-              @extend %display-text;
+              @extend %display-text-lg
     }
 
     p {
         flex: 0 0 auto;
         margin-bottom: auto;
-              @extend %body-text;
+              @extend %body-text-lg;
 
     }
     .link{
-    	flex: 0 0 auto;
+    	position: absolute;
+      bottom: 20rem;
+      left: 50%;
 
+    }
+    & :nth-last-child(2){
+  flex: .25 0 auto;
     }
 }

@@ -11,17 +11,16 @@
 //     "desktop-uhd":  2560px;px
 // );px */
 
-$breakpoints: (
-    "phone-small":  25em,   
+$breakpoints: (   
     "phone":        25em, 	/*400px*/
-    "phone-wide":   30em, 	/*5480px*/
+    "phone-wide":   30em, 	/*480px*/
     "phablet":      35em, 	/*560px*/
     "tablet-small": 40em, 	/*640px*/
     "tablet":       48em, 	/*768px*/
     "tablet-wide":  64em, 	/*1024px*/
     "desktop":      78em, 	/*1248px*/
     "desktop-wide": 90em, 	/*1440x*/
-    "desktop-xl":   120em,	/*1920px*/
+    "desktop-xl":   118em,	/*1900px //1920px*/
     "desktop-xxl":  160em	/*2560px*/
 );
 

@@ -1,14 +1,18 @@
 
-@import "theme/partials/layout/article_templates/splash_article_layout_template.scss";
-@import "theme/partials/layout/article_templates/cta_article_layout_template.scss";
-@import "theme/partials/layout/article_templates/contact_article_layout_template.scss";
-@import "theme/partials/layout/article_templates/splash_article_layout_template.scss";
-@import "theme/partials/layout/modules/my_value_page_header_module.scss";
-@import "theme/partials/layout/modules/capabilities_table_module.scss";
-@import "theme/partials/layout/modules/value_table_module.scss";
-@import "theme/partials/layout/modules/content_module.scss";
-@import "theme/partials/layout/modules/custom_cards_module.scss";
-@import "theme/partials/layout/article_styles/atypical_article_customization.scss";
-@import "theme/partials/layout/article_styles/expt_overlay_article_customization.scss";
-@import "theme/partials/layout/article_styles/my_value_articles_customization.scss";
-@import "theme/partials/layout/article_styles/home_page_settings";
+@import "theme/partials/layout/article_templates/splash_article_layout_template";
+@import "theme/partials/layout/article_templates/cta_article_layout_template";
+@import "theme/partials/layout/article_templates/contact_article_layout_template";
+@import "theme/partials/layout/article_templates/core_layout_template";
+
+@import "theme/partials/layout/modules/my_value_page_header_module";
+@import "theme/partials/layout/modules/capabilities_table_module";
+@import "theme/partials/layout/modules/value_table_module";
+@import "theme/partials/layout/modules/content_module";
+@import "theme/partials/layout/modules/custom_cards_module";
+
+@import "theme/partials/layout/article_styles/splash_articles_styles";
+@import "theme/partials/layout/article_styles/home-page_articles_styles";
+
+@import "theme/partials/layout/article_styles/atypical_article_customization";
+@import "theme/partials/layout/article_styles/expt_overlay_article_customization";
+@import "theme/partials/layout/article_styles/my_value_articles_customization";

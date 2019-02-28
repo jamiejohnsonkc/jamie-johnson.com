@@ -1,8 +1,74 @@
 
-/*     
-// .navbar{
-//     @extend .fixed-top;
-// } */
+.navbar{
+    @extend .fixed-top;
+}
+
+.navbar-toggler {
+    background: $primary;
+    padding: .5rem .5rem;
+}
+/* @include mq('tablet-wide'){
+display: none;
+} */
+
+
+/* .navbar-expand-md .navbar-toggler{
+    display: flex;
+    @include mq("tablet-wide"){
+        display: none;
+    }
+} */
+/* .navbar-brand {
+     @include media-breakpoint-up(md) {
+
+ }
+} */
+
+
+.navbar-brand{
+   padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+    font-size: inherit;
+     display:none; 
+
+@include mq('phone'){
+     display: flex;
+}
+@include mq('tablet-wide'){
+         margin-left: 4rem;
+}
+}
+
+
+
+.navbar {
+  padding: 2rem 0 2rem 0;
+/*     @include media-breakpoint-up(sm){
+
+} */
+}
+
+/* .navbar-expand-md .navbar-collapse{
+    @media (min-width: 48em){
+    display: none !important;
+}
+    @include mq('tablet-wide'){
+    display: flex !important;
+}
+} */
+
+.navbar-nav li{
+
+@media (max-width: 64em){
+@include vr($margin-top: 1);
+}
+}
+
+
+///////////////////* GENERAL NAV / NAVBAR STYLES *////////////////////////////
 
 
 .navbar-dark .navbar-brand a, .navbar-dark .navbar-nav .nav-link {
@@ -29,32 +95,11 @@
 
 }
 
-.navbar-collapse {}
-
-#wrapper-navbar > nav > div {}
-
 .custom-logo-link {
     margin-bottom: -.25rem;
 }
 
-.navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 0;
-    font-size: inherit;
-     margin-left: 2rem;
-     display:none; 
 
-@include mq('phone'){}    
-    display: inherit;
-}
-
-  .navbar-collapse{
- @include mq('tablet-wide'){flex: 1 0 auto;
-}
-}  
 
 .custom-logo-link {
     width: 4rem;
@@ -75,17 +120,7 @@ svg#bug {
     }
 }
 
-.navbar-toggler {
-    background: $primary;
-    padding: .5rem .5rem;
-@include mq('tablet-wide'){
-display: none;
-}
-}
 
-// .navbar-expand-md .navbar-toggler{
-//     display: flex;
-// }
 
 .navbar-toggler-icon{
     width: 1.75rem;
@@ -98,42 +133,6 @@ button:focus {
 
 button{
     height: unset;
-}
-
-.navbar-brand{
-    margin-right: 0;
-display: none;
-@include mq('phone'){
-        padding: 1rem;
-}
-@include mq('tablet'){
-    display: flex;
-}
-}
-
-
-.navbar {
-  padding: 2rem 0 2rem 0;
-    @include media-breakpoint-up(sm){
-
-}
-}
-
-.navbar-expand-md .navbar-collapse{
-    @media (min-width: 48em){
-    display: none !important;
-}
-@include mq('tablet-wide'){
-    display: flex !important;
-}
-}
-
-.navbar-brand {
-
-
-     @include media-breakpoint-up(md) {
-  margin-left: 2rem;  
- }
 }
 
 .navbar-dark {

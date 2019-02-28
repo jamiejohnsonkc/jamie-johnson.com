@@ -1,9 +1,12 @@
-@media (max-width: 48em){
-.container{
-	width: 100%;
+@media (max-width: 35em){
+.article__wrapper, .navbar>.container, .navbar>.container-fluid{
 	padding-left: 15px;
 	padding-right: 15px;
 }
+}
+
+@media (min-width: 35em){
+
 .navbar>.container, .navbar>.container-fluid{
 	position: relative;
 	   margin: 0 auto;
@@ -11,20 +14,65 @@
 	max-width: 90%;
 }
 }
+
 @include mq('phone'){}    
-@include mq('phone-wide'){}    
-@include mq('phablet'){}    
+@include mq('phone-wide'){
+	.container{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+}    
+@include mq('phablet'){
+
+}    
 @include mq('tablet-small'){}    
 @include mq('tablet'){
 
+.container{
+	max-width: 60em;
+	width: 60em;
+}
 /* .navbar-expand-md .navbar-toggler{
 	display: flex;
 } */
 }   
 @include mq('tablet-wide'){
+	.container{
+width: 99em;
+max-width: 99em;
+}
+ 
+.navbar>.container, .navbar>.container-fluid{
+	width: 90%;
+	max-width: 90%;
+}
+}
+@include mq('desktop'){
+/* 	.container{
+width: 48em;
+max-width: 48em;
+} */
+}
+@include mq('desktop-wide'){
+.container{
+	width: 99em;
+	max-width: 99em;
+}
+}    
+@include mq('desktop-xl'){
+ 
+	
+/* 	.navbar>.container, .navbar>.container-fluid{
+   width: 74em;
+   max-width: 74em;
+   }  */   
+}    
+@include mq('desktop-xxl'){
+	.navbar>.container, .navbar>.container-fluid{
 
-} 
+width: 99em;
+max-width: 99em;
+}  
+}  
 
-@include mq('desktop-wide'){}    
-@include mq('desktop-xl'){}    
-@include mq('desktop-xxl'){}    

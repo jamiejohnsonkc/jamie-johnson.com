@@ -1,0 +1,359 @@
+/* // SEE SPLASH ARTCILE STYLES FOR HOME SPLASH SETTINGS */
+
+#whatiam {
+    @include flush-left;
+    @include push-middle;
+    @include mq("tablet-wide") {
+        @include flush-cols-left;
+
+        .content-container {
+            flex-direction: row;
+
+            /*  @include split-cols(); */
+        }
+    }
+}
+
+.my-mo {
+    .content-container {
+        position: relative;
+    }
+
+    .link {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        bottom: -12rem;
+    }
+
+    .container-hero__img--mobile {
+        margin-top: 4rem;
+    }
+}
+
+#my-mo {
+    @include flush-left;
+
+    @include mq("tablet-wide") {
+        .br {
+            display: block;
+        }
+
+        @include push-middle;
+        @include flush-left;
+        @include narrow-single-col;
+
+        /* @include wide-container(); */
+        @include left-link;
+    }
+}
+
+#wrapper__whatido {
+    height: 120vh;
+
+    @include center-middle;
+
+    justify-content: space-around;
+
+    #whatido {
+        @include cols;
+
+        position: unset !important;
+
+        h1 {
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        h3, p {
+            text-align: left;
+
+            @include mq("phablet") {
+                text-align: left;
+            }
+
+
+            @include mq("tablet-small") {
+                text-align: justify;
+            }
+
+
+            @include mq("tablet") {
+                text-align: justify;
+            }
+        }
+
+        .content-container {
+            width: 70%;
+
+            @include cols;
+            @include push-auto;
+
+            flex: 0 0 auto;
+            position: unset;
+        }
+
+        @include mq("phone-wide") {
+            .content-container {
+                width: 80%;
+                max-width: 80%;
+            }
+
+            h1 {
+                margin-left: 10%;
+            }
+        }
+
+
+        .content1, .content2 {
+            flex: 0 0 auto;
+
+            /*     width: 85%;
+            max-width: 85%; */
+        }
+
+        .link {
+            /* flex: 0 0 auto;
+            position: relative; */
+            bottom: 10rem;
+            left: 50%;
+
+            @include mq("tablet-wide") {}
+        }
+
+        @include mq("tablet-wide") {
+            h1{
+                @include push-auto();
+                width: 40%;
+            }
+            .content-container {
+                width: 40%;
+                max-width: 40%;
+                @include push-auto;
+            }
+            .br {
+                display: block;
+            }
+
+            .content1, .content2 {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+#howidoit {
+    @include push-middle();
+    & h4{
+        width: 100%;
+
+    }
+    .content1 {
+        order: 2;
+        background: $tungsten;
+
+        @include vr($padding: 2 3);
+
+        border-radius: 2rem;
+
+        h4 {
+            @include vr($font-size: 2, $margin-bottom: 1, $line-height: 3);
+            padding-left: 1rem; letter-spacing: .25rem; font-weight: 300;
+        }
+
+        h4:last-of-type {
+            /*             margin-bottom: 1px; */
+        }
+
+        .quote {
+            @include vr($font-size: 6, $line-height: 1);
+
+            position: relative;
+            color: rgba(119, 136, 153, 0.3);
+        }
+
+        #quote__open {
+            line-height: 6.5rem;
+            margin-top: 2rem;
+        }
+
+        #quote__close {
+            line-height: 0rem;
+            margin-top: 6rem;
+            float: right;
+        }
+    }
+
+    .content2 {
+        order: 1;
+    }
+
+    .br {
+        display: block;
+    }
+
+    h3 {
+        @extend %subhead;
+    }
+
+    h4 {
+        @extend %display-text-lg;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include flush-left;
+
+    .howidoit__disciplines {}
+
+    .howidoit__disciplines_content {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+
+    h5 {
+        @extend %figure-head-lg;
+
+        font-size: 2rem;
+        margin-bottom: 0;
+        letter-spacing: .05rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 3rem;
+    }
+
+    p {
+        @extend %figure-text-lg;
+
+        font-size: 2rem;
+        margin-top: 0;
+        line-height: 1.25rem;
+        letter-spacing: .05rem;
+        line-height: 3rem;
+        font-style: italic;
+        max-width: 18em;
+    }
+
+    .disciplines__content-icon {
+        padding-right: 2rem;
+        width: 20%;
+        max-width: 20%;
+        flex: 0 0 auto;
+    }
+
+    @include mq("phone-wide") {
+/*         h1 {
+    margin-left: 10%;
+} */
+
+        .content-container {
+            max-width: 90%;
+
+            @include push-auto;
+        }
+    }
+@include mq('tablet'){
+/*     h1{
+    margin-left: 0;
+} */
+/*     .content-container{
+    max-width: 80%;
+    width: 100%;
+} */
+    .content1{
+        width: 100%;
+        margin-top: 4rem;
+    }
+}
+    @include mq('tablet-wide'){
+        .content-container{
+            @include flush-cols-left();
+            flex-direction: row;
+            width: 100%;
+            max-width: 100%;
+        }
+        .content1{
+          
+        }
+        .content2{
+
+        }
+    }
+
+    @include mq('desktop'){
+      h3, h4{
+        margin-left: 0;
+        margin-right: 0;
+      }
+      h4{
+  @include vr($width: 50);
+      }
+        .content-container{
+            @include flush-cols-left();
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+        
+      .content2{
+            @include make-row();
+            width: 100%;
+            max-width: 100%;
+            flex: 0 0 auto;
+        }
+        .howidoit__disciplines{
+            display: flex;
+            @include make-row();
+            width: 100%;
+            max-width: 100%;
+        }
+        .howidoit__disciplines_content{
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 20%;
+            align-items: normal;
+            justify-content: flex-start;
+            letter-spacing: 0;
+            }
+        .content1{
+         /*  margin-left: auto; */
+          background: none;
+
+          h4{
+            @include vr($font-size: 1);
+            width: unset;
+                 letter-spacing: 0;
+          }
+          .quote{
+            display: none;
+          }
+
+        }
+   .disciplines__content-icon{
+    width: 30%;
+    max-width: 30%;
+    padding-right: 0;
+    margin-bottom: -1rem;
+   }
+   h5{@include vr($font-size: 1, $line-height: 1.25);}
+   p{@include vr($font-size: 1, $margin-top: .75, $line-height: 1.25); font-style: normal; letter-spacing: 0; padding-right: 1.5rem;}
+
+    }
+
+}
+}
+
+#my-qualifications {
+    flex-direction: column;
+    h4{
+@extend %display-text-lg;
+    }
+}
+
+/*     width: 45%;
+max-width: 45%; */
+/* @include wide-container(); */

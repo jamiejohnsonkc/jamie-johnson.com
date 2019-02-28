@@ -5,18 +5,20 @@
 
 
 @import "theme/partials/variables/bootstrap_variables_override";
+
 @import "assets/bootstrap4";
 @import "theme/partials/variables/custom_variables";
 
+@import "theme/partials/base/color_variables";
 
 
 @import "../src/sass/understrap/understrap/understrap";
 @import "../src/sass/understrap/theme/contact-form7";
-@import "assets/font-awesome"; 
+/* @import "assets/font-awesome";  */
 @import "assets/underscores";
-@import "theme/partials/base/color_variables.scss";
-@import "theme/partials/base/type_variables.scss"; 
-@import "theme/partials/base/global_styles.scss";
+@import "theme/partials/mixins/bootstrap_mixins_override";
+@import "theme/partials/base/type_variables"; 
+@import "theme/partials/base/global_styles";
 
 
 
@@ -24,15 +26,15 @@
 
 @import "theme/partials/mixins/flexbox_mixins";
 @import "theme/partials/mixins/bp_and_query_definitions_mixins";
-@import "theme/partials/base/container_styles.scss";
-@import "theme/partials/base/menu_styles.scss";
+@import "theme/partials/base/container_styles";
+@import "theme/partials/base/menu_styles";
 
 @import "theme/partials/layout/layout_styles_import";
 
 @import "theme/partials/utilities/flex_state_styles";
 @import "theme/partials/utilities/display_state_styles"; 
 @import "theme/partials/utilities/graphics_and_artwork_styles";
-@import "theme/partials/base/vert_rhythm_styles.scss";
+@import "theme/partials/base/vert_rhythm_styles";
 
 /* @import "theme/dev_utilities/sandbox";
  @import "theme/atomicmouse";   */

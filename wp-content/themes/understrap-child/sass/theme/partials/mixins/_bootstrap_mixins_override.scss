@@ -1,0 +1,23 @@
+@mixin make-container() {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin make-row() {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+@mixin make-col-ready() {
+  position: relative;
+  // Prevent columns from becoming too narrow when at smaller grid tiers by
+  // always setting `width: 100%;`. This works because we use `flex` values
+  // later on to override this initial width.
+  width: 100%;
+  min-height: 1px; // Prevent collapsing
+}
+
+

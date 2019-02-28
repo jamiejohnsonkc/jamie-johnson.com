@@ -18,5 +18,5 @@ exit; // Exit if accessed directly.
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
 	</div>
-	<div class="container-hero__img--mobile"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
+	<div class="container-hero__img--mobile" id="my-brains"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
 </article>

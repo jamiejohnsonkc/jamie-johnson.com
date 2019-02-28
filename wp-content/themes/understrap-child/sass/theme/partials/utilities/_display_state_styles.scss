@@ -4,10 +4,12 @@
 .hide-3{}
 .hide-4{}
 
-.br    {display: none;}
-.br-2  {display: none;}
-.br-3  {display: none;}
-.br-4  {display: none;}
+.br, .br-2, .br-3, .br-4 {
+	display: none;
+	height: 0;
+	line-height: 0;
+}
+
 
 
 
@@ -16,35 +18,34 @@
 	line-height: 0;
 }
 
-@media (min-width: 200px) {
+@media (min-width: 14em) {
 .page__header h3{.br{display: block;}}
 .my-value__container__modernize h3, .my-value__container__optimize h3, {.br{display: none;}}
 }
-@media (min-width: 300px) {.my-value__container__optimize h3{.br__opt{display: block;}}
+@media (min-width: 19em) {.my-value__container__optimize h3{.br__opt{display: block;}}
 }
-@media (min-width: 400px) {}
-@media (min-width: 576px) {}
-@media (min-width: 768px) {
+@media (min-width: 25em) {}
+@media (min-width: 30em) {}
+@media (min-width: 35em) {}
+@media (min-width: 40em) {}
+@media (min-width: 48em) {
 .br__opt{display: block;}
 #main > section > article:nth-child(3) > div > div > hgroup > h3{.br{display: block;}}
+
 }
-@media (min-width: 992px) {}
-@media (min-width: 1200px) {}
-@media (min-width: 1400px) {}
-@media (min-width: 1600px) {}
-@media (min-width: 1900px) {}
-
-
-
-.container-hero__img--mobile{
- 	display: none;
- 	@media (min-width: 25em){
- 		display: inherit;
- 	}
- 	@media (min-width: 64.1em){
- 		display: none;
- 	}
+@media (min-width: 64em) {
+		.br{
+display: none;
+	}
 }
+@media (min-width: 78em) {}
+@media (min-width: 90em) {}
+@media (min-width: 120em) {}
+@media (min-width: 160em) {}
+
+
+
+
 
 #profile-small{
  		display: block;

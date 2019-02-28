@@ -1,0 +1,50 @@
+Bootstrap 4 Navbar Breakpoint
+Examples to change the breakpoint, never collapse or always use the vertical mobile navbar
+Go to the profile of Carol Skelly
+Carol Skelly
+Feb 9, 2017
+
+Bootstrap 4 Navbar Collapse Examples
+
+How to change the Navbar collapse in Bootstrap 4
+New: This article was updated in 2018 for Bootstrap 4.1
+
+The new Bootstrap 4 Navbar Component is a big improvement over it’s 3.x predecessor.
+
+The 3.x Navbar collapsed into its vertical mobile layout when the viewport width (breakpoint) was 768 pixels or less. It was possible to change this Navbar breakpoint via the `grid-float-breakpoint` LESS variable, or using this custom CSS override hack. Not ideal for quick responsive design.
+
+Hello Bootstrap 4
+In Bootstrap 4, the Navbar is responsive by default and utilizes flexbox to make alignment of Navbar content much easier. It’s also a simple matter of using the new navbar-expand-* classes to change the Bootstrap 4 Navbar breakpoint. Now the Navbar has 6 breakpoint sizes or “states” so that you can easily have one of the following Navbar options..
+
+— The Navbar never collapses into the vertical mobile view, and is always horizontal.
+
+— The Navbar is always collapsed into the vertical view, and toggled via the hamburger.
+
+— The Navbar expands into horizontal mode at one of the 4 responsive breakpoints.
+
+The Default Bootstrap 4 Navbar
+<nav class="navbar navbar-light navbar-expand-md">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar1">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+As you can see from the code above, the navbar-expand-md class in the nav would make this Navbar collapse vertically (and show the toggler icon) at the medium (md) breakpoint of 992px.
+
+To change to a different breakpoint, we’d just need to swap out navbar-expand-md with one of these..
+
+navbar-expand = never collapses vertically (remains horizontal)
+navbar-expand-sm = collapses below sm widths <576px
+navbar-expand-md = collapses below md widths <768px
+navbar-expand-lg = collapses below lg widths <992px
+navbar-expand-xl = collapses below xl widths <1200px

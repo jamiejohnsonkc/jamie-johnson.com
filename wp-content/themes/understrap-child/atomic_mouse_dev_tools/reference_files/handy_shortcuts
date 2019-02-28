@@ -71,6 +71,25 @@ selector:not(:last-child) [target all instances of the selector except the last 
 .class:last-of-type       [target last instance of selector]
 
 
+
+When nested, & means the entire chain of parent selectors up to that point. So this:
+
+.foo {
+    &,
+    & h4,
+        /* do the thing */
+    }
+}
+... will render to this:
+
+.foo,
+.foo h4 {
+    /* do the thing */
+}
+
+
+
+
 table selectors:
 
 tbody tr:nth-child(odd) {
@@ -277,6 +296,21 @@ container media queries - WITH set width
         max-width: 1600px;
     }
 }
+
+
+meqia query / ratio
+30  1.618033989 19
+35  1.618033989 22
+40  1.618033989 25
+48  1.618033989 30
+64  1.618033989 40
+78  1.618033989 48
+90  1.618033989 56
+120 1.618033989 74
+160 1.618033989 99
+
+
+
 
 !!!!!!!!!!!!the following plug in never worked !!!!!!!!!!!!!!!!
 select tools/create new plugin and paste the following then create the new key binding

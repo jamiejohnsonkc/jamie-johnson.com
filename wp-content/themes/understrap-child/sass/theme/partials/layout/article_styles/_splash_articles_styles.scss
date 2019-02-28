@@ -1,18 +1,17 @@
 #home__splash{
-       @include center-center();
+       @include center-middle();
     h2{
-		@extend %display-text;
+		@extend %display-text-lg
 
 	}
     p {
+        @extend %body-text-lg;
         font-style: italic;
+    }
+        .link{
+      bottom: 2rem;
 
-    }
-    @include mq('phone-wide'){
-        .br{
-        display: block;
-    }
-}
+    } 
 }
 
 #my-value__splash{
@@ -46,7 +45,7 @@
 }
 
 #my-expertise__splash{
-        @include center-center();
+        @include center-middle();
        h2{
         margin-bottom: auto;
     }
@@ -89,10 +88,7 @@
 // }
 // }
 
-.content1, .content2{
-    @include make-col-ready();
-    @include make-col(6);
-}
+
 
 
 

@@ -100,6 +100,10 @@ title{}
 figure{}
 article{}
 
+.article__spacer{
+  height: 25vh;
+  background: $body-bg;
+}
 
 .fixed-top{
     position: fixed;

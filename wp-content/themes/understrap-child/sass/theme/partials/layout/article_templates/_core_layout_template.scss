@@ -41,6 +41,7 @@
 } */
     .content-container{
 	@include split-rows();
+	flex-direction: column;
 }
 
     @include mq('tablet-wide'){

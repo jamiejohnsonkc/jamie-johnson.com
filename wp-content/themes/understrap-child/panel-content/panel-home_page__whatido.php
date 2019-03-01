@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
+		<div class="article__spacer"></div>
 <article class="article__wrapper  home-page home-page__whatido bgarrow" id="wrapper__whatido">
 	<div class="mobile__background--image" id="trend-arrow">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>

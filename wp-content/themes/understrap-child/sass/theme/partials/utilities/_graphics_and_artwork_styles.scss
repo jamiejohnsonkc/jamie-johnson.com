@@ -31,10 +31,17 @@ position: absolute;
 #evo-small{
 margin-left: 20%;
 width: 60%;
+@include mq('phone'){
+    width: 75%;
+    margin-left: 12.5%;
+}
+/* @include mq('tablet'){
+    margin-left: 12.5%;
+} */
 @include mq('tablet-wide') {
     width: 60%;
     max-width: 60%;
-    margin-left: 30%;
+    margin-left: 40%;
 }
 }
 
@@ -114,19 +121,24 @@ width: 60%;
 
 @media (min-width: 78em) {
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2.jpg");
-        background-position: 90% bottom;
+        background-position: 100% bottom;
         background-size: 65%;
         background-repeat: no-repeat;
     }
+@include mq('desktop-xl'){
+        background-size: 52%;
+        background-position: 60% bottom; 
+}
+    
 }
 
 
 .bgarrow {
     background: none;
-@media (min-width: 64em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg");
-        background-position: 98% 80%;
-        background-size: 80;
+        background-position: 72% 37%;
+        background-size: 93%;
         background-repeat: no-repeat;
     }
 }
@@ -186,7 +198,7 @@ width: 60%;
 
 }
 @include mq('tablet'){
-    margin-left: 5%;
+    margin-left: 0%;
 }
 @include mq('tablet-wide') {
     position: absolute;
@@ -244,7 +256,7 @@ width: 60%;
     justify-content: center;
     overflow: hidden;
 
-    @include mq('tablet-wide') {
+    @include mq('desktop') {
         display: none;
     }
 }

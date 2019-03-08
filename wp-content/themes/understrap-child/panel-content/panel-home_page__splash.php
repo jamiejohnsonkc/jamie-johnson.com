@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- <article class="article__wrapper  home-page splash home-page__splash">
 	<div class=" container home-page__splash__container"> -->
-	<article class="article__wrapper-fluid  home-page bgme">
+	<article class="article__wrapper-fluid splash-wrapper home-page bgme">
 	<div class=" container splash home-page__splash" id="home__splash">
 	<h1>Hi <span class="br"><br></span>I'm Jamie</h1>
 	
@@ -26,4 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="container-hero__img--mobile" id="profile-small"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic"></div>
 	
-	</article><!-- cover end -->
+	</article><!-- cover end <-->
+		<q1gvvgbq>													111111111																																																																																																																																																																									</q1gvvgbq>
+	</-->

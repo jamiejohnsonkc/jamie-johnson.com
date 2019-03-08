@@ -26,10 +26,11 @@
 
 #td-row-underscore{
   /* @include vr($height: -1); */
-  padding: 0 0;
+  padding: 3rem 0 0 0;
   height: 2.5rem;
   hr{
-    height: .000001rem;
+    border-top: thin solid $primary;
+
   }
 }
 

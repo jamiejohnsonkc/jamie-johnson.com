@@ -532,7 +532,7 @@ display: none;
 // #expt-carousel-inner{
 //     height: 100vh;
 // }
-.expt-overlay {
+.expt-overlay, .categories__content_caption {
     position: absolute;
     top: 0;
     right: 0;
@@ -550,7 +550,7 @@ display: none;
     transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
 
-.expt-menu-box:hover .expt-overlay.left {
+.expt-menu-box:hover .expt-overlay.left, .why-me__categories_content:hover {
     left: 0;
 }
 

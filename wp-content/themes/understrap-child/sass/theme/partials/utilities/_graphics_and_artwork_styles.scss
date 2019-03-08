@@ -6,19 +6,61 @@
 
 
 #profile-small {
-width: 50%;
-margin-left: 50%;
+width: 100%;
 bottom: 0;
 position: absolute;
+img#me-small{
+    width: 75%;
+}
+@include mq('tablet-small'){
+    // width: 75%;
+    // margin-left: 60%;
+}
+}
+
+
+#register-small{
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+}
+
+#my-conductor {
+width: 100%;
+bottom: 0;
+position: absolute;
+img.conductor-small{
+width: 185%;
+margin-left: 2rem;
+    }
 @include mq('tablet-small'){
     width: 75%;
     margin-left: 60%;
 }
+@include mq('tablet'){
+width: 100%;
+height: auto;
+margin-left: 0;
+img.conductor-small{
+    width: 250%;
+    height: auto;
+    margin-left: 0rem;
+    
+}
+}
+@include mq('tablet-wide'){
+bottom: -12em;
+img.conductor-small{
+margin-top: 10em;
+}
+}
 }
 
 #my-brains{
-    width: 100%;
-    margin-left: 5%;
+    bottom: 0;
+   left: 5%;
+    width: 96%;
+    position: fixed;
 @include mq('tablet-small'){
     bottom: 0;
     margin-left: 20%;
@@ -35,15 +77,6 @@ width: 60%;
     width: 75%;
     margin-left: 12.5%;
 }
-/* @include mq('tablet'){
-    margin-left: 12.5%;
-} */
-@include mq('tablet-wide') {
-    width: 60%;
-    max-width: 60%;
-    margin-left: 40%;
-}
-}
 
 #register-small {
         width: 100%;
@@ -56,6 +89,21 @@ width: 60%;
     overflow: hidden;
     bottom: 5rem;
 }
+
+
+/* @include mq('tablet'){
+    margin-left: 12.5%;
+} */
+@include mq('tablet-wide') {
+    width: 60%;
+    max-width: 60%;
+    margin-left: 40%;
+}
+}
+
+
+
+
 
 // .container-hero__img--mobile.evo{
 //         width: 100%;
@@ -173,12 +221,12 @@ width: 60%;
     }
 }
 
-.my-expertise.splash {
+/* .my-expertise.splash {
     .container-hero__img--mobile {
         width: 100%;
         left: 15%;
     }
-}
+} */
 
 
 
@@ -188,15 +236,15 @@ width: 60%;
     left: 0;
     z-index: -1;
     width: 100%;
-    display: none;
+    overflow: hidden;
     @media (min-width:18.75em){
         display: inherit;
         position: relative;
     }
-@include mq('phone'){
+/* @include mq('phone'){
     display: block;
 
-}
+} */
 @include mq('tablet'){
     margin-left: 0%;
 }
@@ -210,7 +258,7 @@ width: 60%;
 
 
 
-
+/* 
 .my-expertise .container-hero__img--mobile {
     @media (min-width: 300px) {
         left: 4%;
@@ -237,7 +285,7 @@ width: 60%;
     @media (min-width: 1600px) {}
 
     @media (min-width: 1900px) {}
-}
+} */
 
 
 
@@ -272,8 +320,7 @@ width: 60%;
     // height: $ms-6;
     // width: $ms-6;
     @include mq('tablet') {
-        height: ms(6.5);
-        width: ms(6.5);
+
     }
 }
 
@@ -292,8 +339,7 @@ width: 60%;
 
 
 .scroll-top svg {
-    width: ms(2.5);
-
+    width: 4rem;
     .st0 {
         fill: none;
         stroke: white;
@@ -301,302 +347,7 @@ width: 60%;
     }
 }
 
-//DIAGRAMS===============================================
 
-
-.diagram {
-    // margin: $rvr-2 auto;
-    @include mq('tablet') {
-        // margin: $rvr-3 0;
-    }
-}
-
-.diagram-content{
-}
-
-
-
-.competitive-advantage__svg{
-    width: 75vw;
-}
-
-.diagram__modern-marketing{
-    // @extend .diagram;
-}
-
-.diagram__competitive-advantage{
-// @extend .diagram;
-@include mq('tablet') {
-        // margin-left: auto;
-        // margin-right: auto;
-    }
-}
-
-.diagram__end-to-end{}
-
-
-.diagram__objectives {
-    &--vertical {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // margin: $rvr-2 auto;
-       @include mq('tablet-wide') {
-            display: none;
-        }
-    }
-}
-
-.diagram__objectives--vertical {
-    .diagram-content {
-    @include make-row();
-    margin-left: auto;
-    margin-right: auto;
-        padding-left: 0px;
-        padding-right: 0px;
-        display: inline-flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        max-width: 90%;
-
-        // margin: $rvr-1 0;
-   
-    }
-}
-
-.diagram__objectives--horizontal {
-   display: flex;
-   flex-direction: row;
-align-items: center;
-    .diagram-content {
-                       @include make-col-ready();
-       width: 20%;
-       max-width: 20%;
-       display: flex;
-        flex-direction: column;
-        flex: 0 0 auto;
-        align-items: center;
-        // margin: $rvr-1 0;
-    }
-    h5{
-        // @extend %display-text;
-        text-align: center;
-       // @include ms-respond(font-size, 1.5);
-       // line-height: $rvr-1;
-    }
-svg.icon{
-
-    }
-    .delta--horz{
-        max-width: 1.5%;
-        .delta--down{
-        fill: $slate;
-    }
-}
-}
-
-
-
-.diagram__objectives--vertical .icon {
-    @include make-col-ready;
-    @include make-col(2);
-}
-
-.diagram-content {
-    ol {
-        @include make-col-ready;
-        @include make-col(10);
-    
-   @include mq('tablet-wide') {
-        width: 5%;
-        max-width: 5%;
-        flex: 0 0 0;
-    }
-}
-}
-
-
-
-    
-
-.disciplines__content-icon {
-        .cls-1, .cls-2 {
-        fill: $slate;
-    } 
-    width: 50%;
-    @include mq('tablet') {
-    width: 40%;
-    }
-    @include mq('tablet-wide') {
-    width: 30%;
-}
-    
-@include mq('desktop') {}
-}     
-
-
-
-
-.diagram__objectives--vertical .diagram-content {
-    li {
-        // @include ms-respond(font-size, 2.5);
-
-        padding-right: 0;
-    }
-
-    ol {
-        margin-block-end: 0px;
-        margin-block-start: 0px;
-        // padding-inline-start: $ms-5;
-    }
-
-    .br {
-        display: none;
-    }
-
-    .icon {
-        padding: 0;
-    }
-
-    .cls-1 {
-        fill: $secondary;
-    }
-    li {
-    @include media-breakpoint-up(sm) {
-        margin-left: ms(4);
-    }
-    @include mq('tablet') {
-        // @include ms-respond(font-size, 3);
-            margin-left: 2rem;
-        }
-    
-    @include mq('tablet-wide') {
-   
-            // @include ms-respond(font-size, 2);
-            margin-left: 1rem;
-        
-    }
-}
-}
-
-.diagram-content__end-to-end{
-    @include mq('tablet') {
-
-    }
-}
-
-.diagram-content__end-to-end--vertical {
-    @include make-row;
-@include make-col-ready();
-@include make-col(12);
-padding-left: 0px;
-padding-right: 0px;
-    position: relative;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
-    height: auto;
-}
-
-
-.end-to-end--vert {
-    width: 100%;
-}
-
-.diagram-content__caption--sticky {
-    @include make-col-ready;
-    @include make-col(6);
-
-    // padding-top: $rvr-4;
-    // margin-bottom: $rvr-4;
-    padding-left: 0px;
-    padding-right: 0px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 10rem;
-    font-family: $font-family-monospace;
-    // font-size: $ms-3_5;
-}
-
-.diagram-content__end-to-end-diagram--vert {
-    @include make-col-ready;
-    @include make-col(6);
-    padding-left: 0px;
-    padding-right: 0px;
-    @include mq('tablet') {
-.end-to-end--vert{
-    width: 100%;
-    }
-}
-}
- 
-
-
-.diagram__modern-marketing {
-    width: 100%;
-}
-
-.intro-container {}
-
-.cta-container {}
-
-.diagram__competitive-advantage #Layer_2 .st0 {
-    fill: $tungsten;
-}
-
-.diagram__competitive-advantage #Layer_1 {
-    fill: $gray-700;
-}
-
-.diagram__competitive-advantage, .diagram__competitive-advantage #Layer_1 {
-    .st0, .st8, .st12, .st13 {
-        stroke: $gray-700;
-    }
-}
-
-.diagram__competitive-advantage {
-    .st1 {
-        font-weight: 600;
-        // font-size: $ms-3;
-    }
-
-    .st4 {
-        // font-size: $ms-2_5;
-        font-weight: 300;
-        letter-spacing: .05rem;
-    }
-
-    .st7 {
-        // font-size: $ms-2;
-    }
-
-    .st1, .st4, .st6, .st7 {
-        font-family: $font-family-monospace;
-    }
-}
-
-
-
-.modern-marketing-diagram{
-    width: 100%;
-}
-
-.delta--down {
-    fill: $secondary;
-}
-
-.delta--horz {
-    // margin: $rvr-1 auto;
-    // width: $ms-3;
-    .cls-1{
-        fill: $slate;
-    }
-    @media (min-width: 768px){
-        // margin: $rvr-_25 auto;
-        }
-    }
 
 
 img.categories__content_image {
@@ -625,7 +376,7 @@ img.categories__content_image {
 }
 #expt-overlay-2, #expt-overlay-3, #expt-overlay-5 {
     .overlay__content--icon {
-        // width: $ms-6_5;
+        width: 6rem;
     }
 }
 
@@ -648,7 +399,7 @@ img.categories__content_image {
     
     
     @media (min-width: 1200px) {
-            max-width: ms(8.25);
+            /* max-width: ms(8.25); */
     }
     
     

@@ -8,11 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-expertise bgconductor">
+<article class="article__wrapper splash-wrapper bgconductor">
 		<div class="container splash my-expertise__container__splash" id="my-expertise__splash">
 		<h1>Areas of Expertise</h1>
 		
-		<h2>I do much more than words and pictures</h2>
+		<h3>I do much more than words and pictures</h3>
 		
 		<!-- <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> -->
 		

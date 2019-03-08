@@ -8,12 +8,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  why-me bgbrains">
+<article class="article__wrapper  splash-wrapper why-me bgbrains">
 	<div class="bgbrainsv2"></div>
 	<div class="container splash why-me__container__splash" id="why-me__splash">
-		<h1>Why Me</h1>
+		<h1>Why Me?</h1>
 		<h2>lorem ispum sino et dolemet</h2>
 		<h3>Excepteur sint occaecat cupidatat non.</h3>
+		<ul>
+			<li>Leadership</li>
+			<li>Exceptional Breadth</li>
+			<li>Extraordinary Depth</li>
+			<li>I Don't Suck</li>
+		</ul>
 		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>

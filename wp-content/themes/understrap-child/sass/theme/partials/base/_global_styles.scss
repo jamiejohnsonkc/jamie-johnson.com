@@ -1,5 +1,12 @@
-
-
+/* bootstrap z-index placed here for future reference
+ *//* 
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default; */
 
 @include vr-reset(
     $helpers: false,
@@ -107,9 +114,8 @@ article{}
 
 .fixed-top{
     position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+    top: 0;
+    z-index: 1000;
 }
 
 .container{
@@ -121,11 +127,19 @@ article{}
     margin-right: 0;
 }
 
+.wrapper{
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .article__wrapper{
-   max-width: none;
    margin-right: auto;
    margin-left: auto;
-   position: relative; 
+   position: relative;
+   max-width: 100%;
+   top: 0;
 }
 
 .article__wrapper-fluid{
@@ -146,6 +160,12 @@ article{}
     height: 3rem;
 }
 
+.link__advance--text{
+bottom: 5rem;
+left: 0;
+}
+
+
 svg.chev--dwn{
       stroke: #111;  
     stroke-linecap: round;
@@ -155,3 +175,24 @@ svg.chev--dwn{
 
 }
 
+.scroll-top{
+    position: fixed;
+
+    /* Fixed/sticky position */
+    bottom: 30px;
+
+    /* Place the button at the bottom of the page */
+    right: 30px;
+
+    /* Place the button 30px from the right */
+    z-index: 99;
+   }
+
+
+button:focus {
+    outline: $primary;
+}
+
+button{
+    height: unset;
+}

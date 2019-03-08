@@ -1,0 +1,141 @@
+
+/* $grid-breakpoints: (
+phone-small:   0px,
+phone:         400px,
+phone-wide:    480px,
+phablet:       560px,
+tablet-small:  640px,
+tablet:        768px,
+tablet-wide:   1024px,
+desktop:       1248px,
+desktop-wide:  1440px,
+desktop-xl:    1920px,
+desktop-xxl:   2560px
+); */
+
+$font-family-sans-serif:      geomanist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace:       Arial, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-serif:         adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
+
+$font-weight-thin:          100;
+$font-weight-light:         200;
+$font-weight-normal:        300;
+$font-weight-medium:        400;
+$font-weight-bold:          500;
+$font-weight-black:         600;
+
+$headline-font-family:      $font-family-sans-serif;
+$subhead-font-family:      	$font-family-sans-serif;
+$sublist-font-family:      	$font-family-sans-serif;
+$display-text-font-family:  $font-family-sans-serif;
+$body-text-font-family:     $font-family-serif;
+$para-font-family:          $font-family-serif;
+$lead-font-family:          $font-family-sans-serif;
+$link-font-family:			    $font-family-monospace;
+$nav-font-family:			      $font-family-monospace;
+
+
+
+$headline-font-weight:      600;
+$subhead-font-weight:       400;
+$sublist-font-weight:       600;
+$display-text-font-weight:	300;
+$body-text-font-weight:     300;
+$para-font-weight:          300;
+$lead-font-weight:          400;
+
+// stylelint-disable
+/* $white:                     #fff    !default;
+$gray-100:                  #f8f9fa !default;
+$gray-200:                  #e9ecef !default;
+$gray-300:                  #dee2e6 !default;
+$gray-400:                  #ced4da !default;
+$gray-500:                  #adb5bd !default;
+$gray-600:                  #6c757d !default;
+$gray-700:                  #495057 !default;
+$gray-800:                  #343a40 !default;
+$gray-900:                  #212529 !default;
+$black:                     #000    !default;
+
+$grays: () !default;
+$grays: map-merge((
+  "100":                    $gray-100,
+  "200":                    $gray-200,
+  "300":                    $gray-300,
+  "400":                    $gray-400,
+  "500":                    $gray-500,
+  "600":                    $gray-600,
+  "700":                    $gray-700,
+  "800":                    $gray-800,
+  "900":                    $gray-900
+), $grays);
+
+$slate:                     #778899;
+$tungsten:                  #D2DBE2;
+$blue:                      #007bff;
+$indigo:                    #6610f2;
+$purple:                    #6f42c1;
+$pink:                      #e83e8c;
+$red:                       #dc3545;
+$orange:                    #fd7e14;
+$yellow:                    #ffc107;
+$green:                     #28a745;
+$teal:                      #20c997;
+$cyan:                      #17a2b8;
+
+$colors: () !default;
+$colors: map-merge((
+  "slate":                  $slate, 
+  "tungsten":               $tungsten,
+  "blue":                   $blue,
+  "indigo":                 $indigo,
+  "purple":                 $purple,
+  "pink":                   $pink,
+  "red":                    $red,
+  "orange":                 $orange,
+  "yellow":                 $yellow,
+  "green":                  $green,
+  "teal":                   $teal,
+  "cyan":                   $cyan,
+  "white":                  $white,
+  "gray":                   $gray-600,
+  "gray-dark":              $gray-800
+), $colors);
+
+$primary:                   $slate;
+$secondary:                 $tungsten;
+$success:                   $green;
+$info:                      $cyan;
+$warning:                   $yellow;
+$danger:                    $red;
+$light:                     $gray-100;
+$dark:                      $gray-800;
+
+$link-color:                green;
+$link-decoration:           none;
+$link-hover-color:          red;
+$link-hover-decoration:     none;
+
+$dropdown-min-width:                10rem !default;
+$dropdown-padding-y:                .5rem !default;
+$dropdown-spacer:                   .125rem !default;
+$dropdown-bg:                       $white !default;
+$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-radius:            $border-radius !default;
+$dropdown-border-width:             $border-width !default;
+$dropdown-divider-bg:               $gray-200 !default;
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
+
+$dropdown-link-color:               $gray-900 !default;
+$dropdown-link-hover-color:         darken($gray-900, 5%) !default;
+$dropdown-link-hover-bg:            $gray-100 !default;
+
+$dropdown-link-active-color:        $component-active-color !default;
+$dropdown-link-active-bg:           $component-active-bg !default;
+
+$dropdown-link-disabled-color:      $gray-600 !default;
+
+$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           1.5rem !default;
+
+$dropdown-header-color:             $gray-600 !default; */

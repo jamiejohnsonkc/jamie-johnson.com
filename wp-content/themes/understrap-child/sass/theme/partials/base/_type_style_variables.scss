@@ -1,0 +1,98 @@
+
+h1, h2, h3, h4, h5, h6{
+	font-family:    unset;
+	color:          unset;        
+	font-weight:    unset;
+	font-size:      unset;
+}
+
+p{
+
+font-family:        unset;
+color:              unset;
+font-weight:        unset;
+
+}
+
+%title{
+
+font-family:        $headline-font-family;
+color:              $headline-color;        
+font-weight:        600;
+
+}
+
+%headline{
+
+font-family:        $headline-font-family;
+color:              $headline-color;        
+font-weight:        $headline-font-weight;
+
+}
+
+%subhead, %subhead-lg{
+
+font-family:        $subhead-font-family;
+color:              $subhead-color;        
+font-weight:        400;
+                    
+}
+
+%sublist, %sublist-lg{
+
+font-family:        $subhead-font-family;
+color:              $subhead-color;        
+font-weight:        $subhead-font-weight;
+
+}
+
+%display-text, %display-text-lg, %figure-head-lg, %figure-text-lg{
+
+font-family:        $display-text-font-family;
+color:              $display-text-color;        
+font-weight:        200;
+
+}
+
+%body-text, %body-text-lg {
+
+font-family:        $body-text-font-family;
+color:              $body-text-color;        
+font-weight:        $body-text-font-weight;
+
+}
+
+
+
+%para{
+font-family:        $font-family-serif;
+}
+
+
+%caption{
+font-family:        $subhead-font-family;
+color:              $subhead-color;        
+font-weight:        $subhead-font-weight;
+}
+
+.nav-link{
+text-transform:     lowercase;
+}
+
+
+.lead {
+font-weight:        $lead-font-weight;
+}
+
+.page__title{
+font-family:        $font-family-serif;
+font-style:         italic;
+
+}
+
+
+.link{
+font-family:        $font-family-sans-serif;
+color:              $link-color;
+}
+

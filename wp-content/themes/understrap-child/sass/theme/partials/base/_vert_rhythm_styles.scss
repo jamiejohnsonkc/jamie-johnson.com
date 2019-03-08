@@ -1,11 +1,11 @@
-%title							    { @include vr( $font-size: 5,  );}       
+%title							    { @include vr( $font-size: 5, $line-height: 4);}       
 %headline						    { @include vr( $font-size: 4,  );}
 %subhead-lg                         { @include vr( $font-size: 3,  );}
 %sublist-lg                         { @include vr( $font-size: 3,  );}
 %subhead 							{ @include vr( $font-size: 2,  );}
 %sublist 							{ @include vr( $font-size: 2,  );}
 %display-text-lg                    { @include vr( $font-size: 2, $line-height: 2);}
-%display-text                       { @include vr( $font-size: 1, $line-height: 1.5);}
+%display-text                       { @include vr( $font-size: 1, $line-height: 2);}
 %body-text-lg                       { @include vr( $font-size: 2,  );}
 %body-text                          { @include vr( $font-size: 1,  );}
 %para                               { @include vr( $font-size: 0,  );}
@@ -15,7 +15,7 @@
 /* %caption                            { @include vr( $font-size: 0,  );} */
 .page__title                        { @include vr( $font-size: 1,  );}
 a.link__advance--text      		    {}
-.navbar-brand, .navbar, .navbar a   { @include vr( $font-size: 1,  );}
+.navbar-brand, .navbar, .navbar li, .navbar a   { @include vr( $font-size: 1, $margin-top: 0  );}
 /* %title							    { @include vr( $font-size: 5, $line-height: 5,     );}       
 %headline						    { @include vr( $font-size: 4,                      );}
 %subhead-lg                         { @include vr( $font-size: 3, $line-height: 3,   );}

@@ -42,53 +42,46 @@ $o: false !default;
 // Compile with or without classes
 $includeClasses: true !default;
 
-@mixin make-container() {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-@mixin make-row() {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 100%;
-}
 
-
-@mixin make-col-ready() {
-  position: relative;
-  // Prevent columns from becoming too narrow when at smaller grid tiers by
-  // always setting `width: 100%;`. This works because we use `flex` values
-  // later on to override this initial width.
-  width: 100%;
-  min-height: 1px; // Prevent collapsing
-}
-
-/* 
-@mixin hover {
-  &:hover { @content; }
-}
-
-@mixin hover-focus {
-  &:hover,
-  &:focus {
-    @content;
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
   }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
 }
 
-@mixin plain-hover-focus {
-  &,
-  &:hover,
-  &:focus {
-    @content;
-  }
+@mixin hardwareAccel() {
+	// Improve performance on mobile/tablet devices
+	// Perspective reduces blurryness of text in Chrome
+	@include prefixed(transform, perspective(1px) translateZ(0));
 }
 
-@mixin hover-focus-active {
-  &:hover,
-  &:focus,
-  &:active {
-    @content;
-  }
+@mixin improveAntiAlias() {
+	// Improve aliasing on mobile/tablet devices
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
- */
+
+@mixin forceBlockLevel() {
+	// Transforms need to be block-level to work
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@mixin hacks() {
+	@include forceBlockLevel();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+}

@@ -3,29 +3,33 @@
 @import "node_modules/mathsass/dist/math";
 @import "node_modules/vertical-rhythm-reset/dist/vertical-rhythm-reset";
 
+@import "theme/partials/mixins/bootstrap_mixins_override";
+@import "theme/partials/variables/theme_font_variables";
+@import "theme/partials/variables/theme_color_and_nav_variables";
 
-@import "theme/partials/variables/bootstrap_variables_override";
-
+/* @import "theme/partials/variables/navbar_variables"; */
 @import "assets/bootstrap4";
-@import "theme/partials/variables/custom_variables";
-
-@import "theme/partials/base/color_variables";
+@import "theme/partials/mixins/bp_and_query_definitions_mixins";
+@import "theme/partials/mixins/flexbox_mixins";
+@import "theme/partials/mixins/css_hover_mixins";
 
 
 @import "../src/sass/understrap/understrap/understrap";
+@import "theme/partials/base/navbar";
 @import "../src/sass/understrap/theme/contact-form7";
-/* @import "assets/font-awesome";  */
+ @import "assets/font-awesome";  
 @import "assets/underscores";
-@import "theme/partials/mixins/bootstrap_mixins_override";
-@import "theme/partials/base/type_variables"; 
+
+
+@import "theme/partials/base/type_style_variables"; 
 @import "theme/partials/base/global_styles";
 
 
 
 
 
-@import "theme/partials/mixins/flexbox_mixins";
-@import "theme/partials/mixins/bp_and_query_definitions_mixins";
+
+
 @import "theme/partials/base/container_styles";
 @import "theme/partials/base/menu_styles";
 

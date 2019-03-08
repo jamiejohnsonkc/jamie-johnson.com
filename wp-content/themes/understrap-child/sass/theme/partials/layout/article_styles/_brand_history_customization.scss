@@ -1,0 +1,27 @@
+
+
+.categories, .brands{
+    background: #fff;
+}
+
+.why-me__container__brands{
+    @include media-breakpoint-up(md) {
+        
+}
+}
+
+.why-me__brands_content{
+    @include make-row();
+    width: 100%;
+    max-width: 100%;
+    @include rows();
+    flex-wrap: wrap;
+}
+
+.why-me__brands--logo{
+    @include make-col-ready();
+    @include make-col(4);
+    @include vr($padding: .85);
+}
+
+// 

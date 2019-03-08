@@ -1,4 +1,8 @@
 
+.splash-wrapper{
+  overflow: hidden;
+}
+
 .splash{
    @include split-rows();
    @include left-middle();
@@ -18,7 +22,7 @@
 
     h3 {
         flex: 0 0 auto;
-              @extend %display-text-lg
+              @extend %display-text-lg;
     }
 
     p {
@@ -32,8 +36,6 @@
       bottom: 20rem;
       left: 50%;
 
-    }
-    & :nth-last-child(2){
   flex: .25 0 auto;
     }
 }

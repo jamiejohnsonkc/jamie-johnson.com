@@ -1,0 +1,673 @@
+
+.expertise__overlay{
+    background: rgba(0, 0, 0, 0.92);
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1001;
+color: $tungsten;
+    display: flex;
+    flex-direction: column;
+
+    .expt-body-text, .expt-vert {
+        color: $tungsten;
+    }
+       hr {
+        width: 90%;
+    }
+}
+
+.overlay__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+/*     margin-left: 2rem;
+margin-right: 2rem; */
+     h4 {
+    @extend %subhead-lg;
+    }
+    h5{
+        @extend %subhead;
+    }
+   /*  h5{
+   @extend %display-text-lg;
+   } */
+    /* p{
+    @extend %display-text;
+    @include mq('tablet'){
+    @include vr($font-size: 2);
+    }
+    } */
+}
+
+.overlay-intro{
+@include vr($margin: 6 0 4 0);
+@media (max-width: 30em){
+    .br{
+        display: block;
+    }
+}
+}
+
+
+
+.overlay__container > .overlay-intro{
+        @include mq('tablet'){
+            p{@include vr($font-size: 2, $line-height: 3);
+
+}
+}
+}
+
+.overlay__content--head h5{
+@include vr($font-size: 6);
+@media (min-width: 48em){
+    @include vr($font-size: 4);
+}
+}
+
+
+
+/* .overlay__container > .overlay__content > p{
+    @media (min-width: 48em){
+        @include vr($font-size: 8, $line-height: 3);
+}
+} */
+
+/* .overlay__content--head{
+      h5 {
+        @extend %display-text-lg;
+      }
+      p{
+        @extend %display-text;
+        } 
+    
+          @include mq('tablet'){
+           h5{ 
+            @include vr($font-size: 3);
+        }
+        p{
+            @include vr($font-size: 3);
+        }
+
+}
+} */
+
+
+
+
+.overlay__content{
+/*    h3{
+     @include vr($font-size: 1);
+ } */
+
+    p{}
+    li{
+        @include vr($line-height: 1.75, $font-size: 1);
+    }
+    @include vr($margin: 2 0 2 0);
+    @include make-col-ready();
+    @include make-col(12);
+    padding-left: 0;
+padding-right: 0;
+    @include mq('tablet'){
+        @include vr($margin: 3 1 3 1);
+        p{
+           margin-left: 19%;
+           @include vr($margin-top: -1, $width: 30);
+
+        }
+    }
+
+}
+
+.overlay-intro, .overlay__content{
+    max-width: 90%;
+    @include push-auto();
+    @include mq('tablet'){
+        max-width:70em;
+        width: 70em;
+        @include push-auto();
+
+    }
+}
+
+
+
+
+#expt-overlay-1 {order: 2;@media (min-width: 78em){order: 1;}}
+#expt-overlay-2 {order: 3;@media (min-width: 78em){order: 2;}}
+#expt-overlay-3 {order: 4;@media (min-width: 78em){order: 3;}}
+#expt-overlay-4 {order: 5;@media (min-width: 78em){order: 4;}}
+#expt-overlay-5 {order: 6;@media (min-width: 78em){order: 5;}}
+
+.expt__close--button {
+    align-items: center;
+    background: $primary;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+    width: 6rem;
+    z-index: 1000;
+}
+
+.bottom{
+ top: unset;
+ position: relative;
+ margin-left: 5rem;
+ margin-bottom: 7rem;
+
+}
+
+.overlay__content--head{
+    @include make-row();
+    @include rows();
+    align-items: center;
+    .overlay__content--icon{
+                margin-right: 1rem;
+                @include mq('tablet'){
+                margin-right: 2%;
+    }
+
+}
+}
+
+.overlay__content--icon{
+    @include make-col-ready();
+    @include make-col(2);
+    padding-left: 0;
+    padding-right: 0;
+    @include mq('tablet'){
+    @include make-col(2);
+    @include vr($padding: 1, $width: 6);
+    }
+}
+
+.overlay__content ul{
+@include make-row();
+width: 100%;
+max-width: 100%;
+@include rows();
+flex-wrap: wrap;
+@include vr($margin-top: 0);
+@include mq('tablet'){
+max-width: 48em;
+width: 48em;
+@include vr($margin-top: -2);
+margin-left: 19%;
+}
+/* margin-left: 3rem; */
+
+   li{
+        @include make-col-ready();
+        @include make-col(6);
+        @include mq('tablet'){
+            @include vr($font-size: 1, $line-height: 2);
+        }
+    }
+}
+
+
+
+.expertise__overlay--webdev{
+
+.overlay__content{
+flex: 0 0 auto;
+width: 100%;
+max-width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: baseline;
+@include mq('tablet'){
+    width: 70em;
+    max-width: 70em;
+}
+h5, hr{
+    border: 0;
+/*     max-width: 100%;
+width: 100%; */
+    flex: 0 0 auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+h5{
+    letter-spacing: .2rem;
+    @include vr($font-size: 1);
+    text-transform: uppercase;
+}
+.overlay__content--icon{
+    @include make-col-ready();
+    @include make-col(4);
+    @include vr($margin-bottom: 2);
+}
+}
+}
+
+
+  
+
+
+
+#expt-overlay-2, #expt-overlay-3, #expt-overlay-5 {
+    ul {
+        list-style: none;
+        padding-left: 0;
+        text-indent: 0;
+    }
+}
+
+
+
+
+// #webdev {
+//     align-items: center;
+//     display: flex;
+//     height: 100vh;
+//     overflow: hidden;
+//     position: relative;
+// }
+/* 
+.webdev-sub-panel {
+    .webdev-icon {
+        @include make-col(3);
+        @include make-col-ready;
+    }
+
+    .style-svg {
+        fill: $primary;
+        width: 8rem;
+
+            width: 6rem;
+        @include media-breakpoint-up(sm) {
+        }
+    }
+
+    .expt-row {
+        h5 {
+            padding: $ms--9 0;
+            color: $primary;
+            font-weight: 400;
+            letter-spacing: .09rem;
+            margin-bottom: 0;
+            text-transform: capitalize;
+        }
+  line-height: $ms-2;
+
+        hr {
+            border: thin solid $primary;
+            width: 90%;
+
+          
+        }
+
+        align-items: stretch;
+        display: flex;
+        justify-content: space-around;
+
+            height: 315vh;
+        @include media-breakpoint-up(lg) {
+
+            // align-items: center;
+        }
+    }
+
+    .row {
+        // margin-bottom: $rvr-2;
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .webdev-row-head {
+        // background: $primary;
+        // border-radius: 1em;
+
+        max-width: 70%;
+
+        // margin-bottom: $rvr-1;
+        text-align: center;
+    }
+
+    .expt-vert {
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+
+            height: 315vh;
+        }
+    }
+
+    .expt-block {
+        @include make-col(12);
+        @include make-col-ready;
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            float: right;
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+
+            height: 325vh;
+
+            // margin-top: $rvr-3;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .expt-block .row + .row {
+        margin-top: $rvr-7;
+        display: flex;
+        justify-content: center;
+
+            max-width: 90%;
+        @include media-breakpoint-up(lg) {
+        }
+    }
+
+    .expt-box {
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            .expt-text {
+            }
+         max-width: $ms-10_5;
+        }
+    }
+} */
+
+
+// ==========================================================================
+// ==========================================================================
+// Marketing Sub Panel
+/* 
+.expt-row {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+}
+
+.expt-block {
+    align-content: center;
+
+        @include make-col(12);
+        @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+    }
+
+
+        @include make-col(12);
+        @include make-col-ready;
+    @include media-breakpoint-up(md) {
+    }
+
+
+        @include make-col(7);
+        @include make-col-ready;
+    @include media-breakpoint-up(lg) {
+    }
+
+
+        @include make-col(7);
+        @include make-col-ready;
+    @include media-breakpoint-up(xl) {
+    }
+}
+
+.expt-box {
+    @include make-col(6);
+    @include make-col-ready;
+
+        @include make-col(6);
+        @include make-col-ready;
+    @include media-breakpoint-up(md) {
+
+        .expt-text {
+            max-width: $ms-10_5;
+        }
+    }
+
+
+        @include make-col(6);
+        @include make-col-ready;
+    @include media-breakpoint-up(lg) {
+    }
+
+
+        @include make-col(6);
+        @include make-col-ready;
+    @include media-breakpoint-up(xl) {
+    }
+}
+
+.expt-vert {
+    @include make-col(12);
+    @include make-col-ready;
+
+    @include media-breakpoint-up(sm) {}
+
+
+    @include media-breakpoint-up(md) {}
+
+
+        @include make-col(4);
+        @include make-col-ready;
+    @include media-breakpoint-up(lg) {
+    }
+
+
+        @include make-col(4);
+        @include make-col-ready;
+    @include media-breakpoint-up(xl) {
+    }
+}
+
+ */
+/* 
+// ==========================================================================
+// ==========================================================================
+// Marketing Communications Sub Panel
+.marcom-sub-panel {
+    .expt-row {
+        align-items: stretch;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .expt-block {
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(8);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            .expt-text {
+               max-width: $ms-10;
+            }
+        }
+
+
+            @include make-col(7);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(7);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+
+    .expt-box {
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            .expt-text {
+               max-width: $ms-10_5;
+            }
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+
+    .expt-vert {
+    
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+
+    .expt-block {
+        align-content: center;
+
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(7);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            .expt-text {
+              max-width: $ms-10;
+            }
+        }
+
+
+            @include make-col(7);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(7);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+
+    .expt-box {
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+
+            .expt-text {
+            }
+        }
+     max-width: $ms-10_5;
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(6);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+
+    .expt-vert {
+            @include make-col(12);
+            @include make-col-ready;
+        @include media-breakpoint-up(sm) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(md) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+        }
+
+
+            @include make-col(4);
+            @include make-col-ready;
+        @include media-breakpoint-up(xl) {
+        }
+    }
+}
+ */

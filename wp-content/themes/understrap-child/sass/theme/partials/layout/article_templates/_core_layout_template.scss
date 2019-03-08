@@ -29,10 +29,10 @@
 
     .link{
     	position: absolute;
-      bottom: 20rem;
+      // bottom: 20rem;
       left: 50%;
       @include mq('tablet-wide'){
-      	bottom: 10rem;
+      	// bottom: 10rem;
       }
 
     }
@@ -45,10 +45,8 @@
 }
 
     @include mq('tablet-wide'){
-.content-container{
+
 	@include split-cols();
 }
 }
-}
-
 

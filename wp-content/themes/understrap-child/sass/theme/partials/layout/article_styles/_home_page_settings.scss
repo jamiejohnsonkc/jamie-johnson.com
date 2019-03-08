@@ -6,8 +6,10 @@
 	}
     p {
         font-style: italic;
-
+        max-width: 30px;
     }
+
+
     @include mq('phone-wide'){
         .br{
         display: block;

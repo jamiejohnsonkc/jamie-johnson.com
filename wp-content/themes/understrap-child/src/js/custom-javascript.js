@@ -1,3 +1,24 @@
+
+// jQuery(document).ready(function($) {
+//     if(window.location !== "http://www.jamiejohnsonmev2.test/expertise/"){
+// window.addEventListener("load", function(){
+//   var open = document.getElementById("open-expt-overlay-1"),
+//       close = document.getElementById("expt-close-1"),
+//       over = document.getElementById("expt-overlay-1");
+//       body = document.body;
+    
+//   open.addEventListener("click", function(){
+//     over.classList.add("show");
+//    body.classList.add("nope");
+//   });
+//   close.addEventListener("click", function(){
+//     over.classList.remove("show");
+//     body.classList.remove("nope");
+//   });
+// });
+// }});
+
+
 3-open-close.js
 window.addEventListener("load", function(){
   var open = document.getElementById("open-expt-overlay-1"),
@@ -5,7 +26,8 @@ window.addEventListener("load", function(){
       over = document.getElementById("expt-overlay-1");
       body = document.body;
     
-  open.addEventListener("click", function(){
+  if(open){
+    open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
@@ -13,6 +35,7 @@ window.addEventListener("load", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
+}
 });
 
 3-open-close.js
@@ -20,7 +43,7 @@ window.addEventListener("load", function(){
   var open = document.getElementById("open-expt-overlay-2"),
       close = document.getElementById("expt-close-2"),
       over = document.getElementById("expt-overlay-2");
-
+  if(open){
   open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
@@ -29,6 +52,7 @@ window.addEventListener("load", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
+}
 });
 
 3-open-close.js
@@ -36,7 +60,8 @@ window.addEventListener("load", function(){
   var open = document.getElementById("open-expt-overlay-3"),
       close = document.getElementById("expt-close-3"),
       over = document.getElementById("expt-overlay-3");
-
+ 
+ if(open){
   open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
@@ -45,6 +70,7 @@ window.addEventListener("load", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
+}
 });
 
 3-open-close.js
@@ -52,7 +78,8 @@ window.addEventListener("load", function(){
   var open = document.getElementById("open-expt-overlay-4"),
       close = document.getElementById("expt-close-4"),
       over = document.getElementById("expt-overlay-4");
-
+ 
+ if(open){
   open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
@@ -61,6 +88,7 @@ window.addEventListener("load", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
+}
 });
 
 3-open-close.js
@@ -69,7 +97,8 @@ window.addEventListener("load", function(){
       close = document.getElementById("expt-close-5"),
       over = document.getElementById("expt-overlay-5");
 
-  open.addEventListener("click", function(){
+ if(open)
+  {  open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
@@ -77,10 +106,11 @@ window.addEventListener("load", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
+}
 });
 
 
-var lastTop;
+/*var lastTop;
 
 function stopScrolling() {
     lastTop = $(window).scrollTop();      
@@ -110,10 +140,10 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+*/
 
 
-
-var $el, $ps, $up, totalHeight;
+/*var $el, $ps, $up, totalHeight;
 
 $(".backstory__content .button").click(function() {
       
@@ -145,7 +175,21 @@ $(".backstory__content .button").click(function() {
   // prevent jump-down
   return false;
     
-}); 
+}); */
+
+
+ var alterClass = function() {
+    var ww = document.body.clientWidth;
+if (ww >= 1023) {
+      $('.quals').removeClass('stats');
+    };
+  };
+/*  $(window).resize(function(){
+    alterClass();
+  });*/
+  //Fire it when the page first loads:
+  /*alterClass();*/
+
 
 // fitty('.fit');
 // /*no-scroll*/

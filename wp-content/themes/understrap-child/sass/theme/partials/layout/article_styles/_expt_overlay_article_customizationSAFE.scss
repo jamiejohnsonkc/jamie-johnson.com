@@ -1,0 +1,399 @@
+
+
+#webdev {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.webdev-sub-panel {
+    .webdev-icon {
+        @include make-col-ready;
+        @include make-col(3);
+    }
+
+    .style-svg {
+        fill: $primary;
+        width: 8rem;
+
+        @include media-breakpoint-up(sm) {
+            width: 6rem;
+        }
+    }
+
+    .expt-row {
+        h5 {
+            color: $primary;
+            margin-bottom: 0;
+            /* padding: $ms--9 0; */
+            font-weight: 400;
+            letter-spacing: .09rem;
+            text-transform: capitalize;
+  /*           line-height: $ms-2; */
+        }
+
+        hr {
+            border: thin solid $primary;
+            width: 90%;
+
+          
+        }
+
+        justify-content: space-around;
+        align-items: stretch;
+        display: flex;
+
+        @include media-breakpoint-up(lg) {
+            height: 315vh;
+
+            // align-items: center;
+        }
+    }
+
+    .row {
+        // margin-bottom: $rvr-2;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .webdev-row-head {
+        // background: $primary;
+        // border-radius: 1em;
+
+        max-width: 70%;
+
+        // margin-bottom: $rvr-1;
+        text-align: center;
+    }
+
+    .expt-vert {
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(4);
+
+            height: 315vh;
+        }
+    }
+
+    .expt-block {
+        @include make-col-ready;
+        @include make-col(12);
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(6);
+
+            float: right;
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(6);
+
+            height: 325vh;
+
+            // margin-top: $rvr-3;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    .expt-block .row + .row {
+        display: flex;
+        justify-content: center;
+        /* margin-top: $rvr-7; */
+
+        @include media-breakpoint-up(lg) {
+            max-width: 90%;
+        }
+    }
+
+    .expt-box {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(4);
+
+            .expt-text {
+         /*        max-width: $ms-10_5; */
+            }
+        }
+    }
+}
+
+
+// ==========================================================================
+// Marketing Sub Panel
+// ==========================================================================
+
+.expt-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.expt-block {
+    align-content: center;
+
+    @include media-breakpoint-up(sm) {
+        @include make-col-ready;
+        @include make-col(12);
+    }
+
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(12);
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(7);
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(7);
+    }
+}
+
+.expt-box {
+    @include make-col-ready;
+    @include make-col(6);
+
+    @include media-breakpoint-up(md) {
+        @include make-col-ready;
+        @include make-col(6);
+
+        .expt-text {
+            /* max-width: $ms-10_5; */
+        }
+    }
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(6);
+    }
+}
+
+.expt-vert {
+    @include make-col-ready;
+    @include make-col(12);
+
+    @include media-breakpoint-up(sm) {}
+
+
+    @include media-breakpoint-up(md) {}
+
+
+    @include media-breakpoint-up(lg) {
+        @include make-col-ready;
+        @include make-col(4);
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        @include make-col-ready;
+        @include make-col(4);
+    }
+}
+
+
+
+// ==========================================================================
+// Marketing Communications Sub Panel
+// ==========================================================================
+.marcom-sub-panel {
+    .expt-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .expt-block {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(8);
+
+            .expt-text {
+               /*  max-width: $ms-10; */
+            }
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(7);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(7);
+        }
+    }
+
+    .expt-box {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(6);
+
+            .expt-text {
+               /*  max-width: $ms-10_5; */
+            }
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+    }
+
+    .expt-vert {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+    
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+    }
+
+    .expt-block {
+        align-content: center;
+
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(7);
+
+            .expt-text {
+              /*   max-width: $ms-10; */
+            }
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(7);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(7);
+        }
+    }
+
+    .expt-box {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(6);
+
+            .expt-text {
+     /*            max-width: $ms-10_5; */
+            }
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(6);
+        }
+    }
+
+    .expt-vert {
+        @include media-breakpoint-up(sm) {
+            @include make-col-ready;
+            @include make-col(12);
+        }
+
+
+        @include media-breakpoint-up(md) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+
+
+        @include media-breakpoint-up(xl) {
+            @include make-col-ready;
+            @include make-col(4);
+        }
+    }
+}

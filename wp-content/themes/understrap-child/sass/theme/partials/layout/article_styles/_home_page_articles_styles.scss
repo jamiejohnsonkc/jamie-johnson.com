@@ -1,4 +1,4 @@
-/* // SEE SPLASH ARTCILE STYLES FOR HOME SPLASH SETTINGS */
+// SEE SPLASH ARTCILE STYLES FOR HOME SPLASH SETTINGS */
 
 /* ////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////            WHATIAM      /////////////////////////// */
@@ -277,14 +277,14 @@
 
     .content1 {
         order: 2;
-        background: $tungsten;
-
-        @include vr($padding: 2 3);
-
+        background: $primary;
+        color: $white;
+        @include vr($padding: 2 3, $margin: 2 0);
         border-radius: 2rem;
 
+
         h4 {
-            @include vr($font-size: 2, $margin-bottom: 1, $line-height: 3);
+            @include vr($font-size: 1, $margin-bottom: 1, $line-height: 2);
 
             padding-left: 1rem;
             letter-spacing: .25rem;
@@ -296,20 +296,20 @@
         }
 
         .quote {
-            @include vr($font-size: 6, $line-height: 1);
+            @include vr($font-size: 4, $line-height: 1);
 
             position: relative;
-            color: rgba(119, 136, 153, 0.3);
+            color: rgba($black, .1);
         }
 
         #quote__open {
-            line-height: 6.5rem;
-            margin-top: 2rem;
+            line-height: 4rem;
+            margin-top: 1rem;
         }
 
         #quote__close {
             line-height: 0rem;
-            margin-top: 6rem;
+            margin-top: 4rem;
             float: right;
         }
     }
@@ -619,31 +619,49 @@
         text-transform: capitalize;
         line-height: 1.5;
 
+
         /*         margin-top: -5rem; */
-        background: #111;
-        padding: 1rem 1.75rem;
-        color: #fff;
-        border-radius: 2rem;
+        // background: #111;
+        // padding: 1rem 1.75rem;
+        // color: #fff;
+        // border-radius: 2rem;
     }
 
     .stats-caption {
-        align-self: flex-start;
-        border-radius: 2rem;
-        box-sizing: content-box;
+        // align-self: flex-start;
+        // border-radius: 2rem;
+        // box-sizing: content-box;
     }
 
-    #stats-order-1, #stats-order-4, #stats-order-7 {
-        .stats-caption {
-            margin-bottom: -6rem;
-        }
+/*     #stats-order-1, #stats-order-4, #stats-order-7 {
+    .stats-caption {
+        margin-bottom: -6rem;
     }
-    .myqualifications__stats{
+} */
+}
+
+
+ hr{
+ border-top: solid thick $slate;
+&:after{
+display: none;
+}
+}
+
+
+    .my-qualifications__stats {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .myqualifications__stats_caption {
+         .my-qualifications__stats.carousel {
+            overflow: hidden;
+            display: block;
+            @include vr($margin-top: 1, $margin-bottom: 3 );
+            }
+
+    .my-qualifications__stats--title {
         margin-top: 4rem;
         text-align: center;
 
@@ -651,23 +669,61 @@
         padding: 2rem 0; */
         display: none;
     }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
 
-    .stats {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 0 0 110%;
-        margin-bottom: 6rem;
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+    // .stats {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     flex: 0 0 110%;
+    //     margin-bottom: 6rem;
+    //     background: #fff;
+    // }
+
+    // .stats .style-svg {
+    //     order: 2;
+    // }
+
+    // .stats .style-svg {
+    //     .cls-1, .cls-2, .cls-3, .cls-4 {
+    //         fill: $qualifications-icon-fill-color;
+    //     }
+    // }
+
+    #digits {
+        color: $qualifications-icon-fill-color;
     }
 
-    .stats .style-svg, .stats .cls-1 {
-        order: 2;
-        fill: $slate;
+    .cls-1 {
+        fill: $qualifications-icon-fill-color;
     }
 
-    .stats-caption {
-        order: 1;
-    }
+    // #stats-order-9, #stats-order-13 {
+    //     .cls-1 {}
+    // }
+
+
 
     .divider__hr {
         width: 4rem;
@@ -675,8 +731,88 @@
         @include push-auto;
         @include vr($margin-top: 2);
     }
+
+  
+    .stats-caption{
+     @extend %caption;
+     position: relative;
+     padding-top: 0;
+     padding-bottom: 0;
+     bottom: 0;
+     width: 100%;
+     margin-top: 0;
+     left: 0;
+
+    }
+
+    .stats-caption h6{
+          @include vr($font-size: 1, $margin-bottom: 0, $margin-top: 0, $width: 6, $line-height: 1.25);
+          @include push-auto();
+          font-weight: 300;
+
+    }
+
+/*     .carousel-control-prev{
+ display: block;
+ height: 3rem;
+ width: 3rem;
+} */
+
+
+
+.carousel-inner{
+ width: 100%;
+ @include push-auto();
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ min-height: 140px;
 }
 
-/*     width: 45%;
-max-width: 45%; */
-/* @include wide-container(); */
+
+.quals{
+ @include make-col-ready();
+ @include make-col(4);
+ float: left;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+#odd-stats{
+ @include make-col(3);
+ height: 100%;
+}
+
+
+
+    // .quals svg{
+    //  width: 50%;
+    // }
+
+
+    @include mq("tablet-wide") {
+        .content-container {
+            @include split-cols;
+        }
+
+        .divider__hr {
+            display: none;
+        }
+
+        .stats {
+            display: block;
+            flex: none;
+        }
+
+        .myqualifications__stats.carousel {
+            height: 50rem;
+            overflow: hidden;
+            display: block;
+        }
+    }
+
+#home-page__cta > .link{
+position: relative;
+bottom: unset ;
+left: unset;
+}

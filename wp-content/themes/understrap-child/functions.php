@@ -36,11 +36,11 @@ function understrap_change_logo_class( $html ) {
         return $html;
     }
 
-
+/*
 function add_fitty_js_script() {
 wp_enqueue_script('fitty', get_stylesheet_directory_uri() . '/node_modules/fitty/dist/fitty.min.js', array('jquery'), '1.0', 'true' ); 
 }
-add_action('wp_enqueue_scripts', 'add_fitty_js_script');
+add_action('wp_enqueue_scripts', 'add_fitty_js_script');*/
 
 
 

@@ -1,0 +1,164 @@
+//value page header styles
+.my-value{
+
+h1{
+	@extend .page__title;
+}
+h2{
+	@extend %title;
+}
+
+h3{
+	@extend %subhead;
+}
+
+
+
+h4{
+	@extend %display-text-lg;
+}
+p{
+	@extend %display-text;
+	font-style: italic;
+}
+}
+
+
+#objectives{}
+
+
+#modernize{}
+
+#grow{}
+
+#optimize{}
+
+// ====================================================================================
+// NOTE - FOR DIAGRAM STYLES & DISPLAY STATES SEE "MY_VALUE_DIAGRAMS" IN MODULES FOLDER
+// ====================================================================================
+
+
+//CUSTOM CONTENT COLUMN WIDE FOR SMALL SCREENS
+.business-value{
+	@include mq('tablet'){
+		max-width: 50em;
+	}
+		@include mq('tablet-wide'){
+		max-width: 70em;
+		width: 100%;
+	}
+}
+
+#val-page-header{
+
+&,
+&>h2{
+	@include vr($font-size: 5, $line-height: 4);
+}
+
+&,
+&> h3{
+	@include vr($font-size: 3, $line-height: 1.9, $margin-left: 1);
+}
+
+h4{
+	@include vr($font-size: 2);
+}
+
+@include vr($margin-left: 0);
+}
+
+
+.page__header{
+@include make-row();
+	margin-left: 0px;
+	margin-right: 0px;
+display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+}
+
+
+
+// ====================================================================================
+// cultivate customer value
+// ====================================================================================
+
+#grow{
+@include mq('tablet-wide'){
+	.content-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	.diagram, .my-value__conclusion{
+	@include make-col-ready();
+	@include make-col(6);
+	p{
+		@include vr($font-size: 1, $line-height: 2.5, $width: 20);
+	}
+	}
+
+	.diagram{
+		order: 2;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.my-value__conclusion{
+		order: 1;
+		background: rgba(210, 219, 226, .5);
+		@include vr($padding: 2);
+	}
+	
+	.competitive__competitive-advantage{
+
+	}
+
+
+
+	.competitive-advantage__svg{
+	width: 90%;
+	display: block;
+	margin-left: auto;
+	}
+}
+}
+
+
+#modernize{
+.modern-marketing-diagram{
+	width: 100%;
+}
+@include mq('tablet-wide'){
+	.content-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	.diagram, .my-value__conclusion{
+	@include make-col-ready();
+	@include make-col(6);
+	p{
+		@include vr($font-size: 1, $line-height: 2.5, $width: 20);
+	}
+	}
+
+	.diagram{
+		order: 2;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.my-value__conclusion{
+		order: 1;
+		background: rgba(210, 219, 226, .5);
+		@include vr($padding: 2);
+	}
+	
+	.modern-marketing-diagram{
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	}
+}
+}
+

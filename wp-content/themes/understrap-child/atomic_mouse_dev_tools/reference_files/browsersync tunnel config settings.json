@@ -2,7 +2,9 @@
   "browserSyncOptions" : {
     "proxy": "jamiejohnsonmev2.test",
     "notify": false,
-    "online": true
+    "tunnel": "jjme", 
+    "online": true,
+    "logLevel": "debug"
   },
 
   "browser" : "chrome.exe",

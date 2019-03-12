@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  alternate brands">
+<article class="article__wrapper brands">
 	<div class="container alternate why-me__container__brands" id="brand-history">
 		<div class="content-container">
 			<h1>brand history</h1>
@@ -58,8 +58,9 @@ exit; // Exit if accessed directly.
 		</div>
 		</div>
 	</div>
-</div>
 	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
+</div>
+
 </article>

@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-value cta">
-	<div class="container cta__container business-value my-value__container__cta">
+<article class="article__wrapper  my-value">
+	<div class="container cta__container business-value my-value__container__cta cta" id="cta__value">
 		<!-- 	<div class="row"> -->
 		<h1>Hire Me</h1>
 		<h2>Hi Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>

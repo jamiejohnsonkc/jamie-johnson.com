@@ -32,10 +32,11 @@
 
     }
     .link{
-    	position: absolute;
-      bottom: 20rem;
-      left: 50%;
+       position: absolute;
+  flex: 0 0 0;
+  left: 50%;
+  bottom: 6em;
 
-  flex: .25 0 auto;
     }
+
 }

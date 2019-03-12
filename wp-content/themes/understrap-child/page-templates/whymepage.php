@@ -14,7 +14,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
-		<section>
+		<section id="section__why-me">
+					
 			<?php get_template_part( 'panel-content/panel', 'why_me__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'why_me__atypical' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'why_me__brands' ); ?>

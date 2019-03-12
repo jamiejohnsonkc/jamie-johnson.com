@@ -1,4 +1,4 @@
-// DEFAULT OPTIONS
+/* // DEFAULT OPTIONS
 
 // Prefix for Hover class names
 $nameSpace: 'hvr' !default;
@@ -40,12 +40,15 @@ $ms: false !default;
 $o: false !default;
 
 // Compile with or without classes
-$includeClasses: true !default;
+$includeClasses: true !default; */
+$grid-gutter-width: 0;
+
 
 @mixin make-container() {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+
 }
 @mixin make-row() {
   display: flex;
@@ -61,7 +64,7 @@ $includeClasses: true !default;
   // always setting `width: 100%;`. This works because we use `flex` values
   // later on to override this initial width.
   width: 100%;
-  min-height: 1px; // Prevent collapsing
+  min-height: 1px;
 }
 
 /* 

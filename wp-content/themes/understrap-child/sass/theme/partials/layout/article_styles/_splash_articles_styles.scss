@@ -11,10 +11,13 @@
         @extend %body-text-lg;
         font-style: italic;
     }
-        .link{
-      bottom: 8rem;
+    .link{
+       position: absolute;
+  flex: 0 0 0;
+  left: 50%;
+  bottom: 6em;
 
-    } 
+    }
 }
  
 #my-value__splash{

@@ -1,3 +1,12 @@
+$new-palette1: #68ABD8;
+$new-palette1: #636ce5;
+$new-palette1: #6794ef;
+$new-palette1: #67dcef;
+$new-palette1: #63e5d3;
+
+
+
+
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -126,7 +135,7 @@ $colors: map-merge((
 
 $primary:                           $slate;
 $secondary:                         $tungsten;
-$accent:                            $cyan;
+$accent:                            rgba(47, 151, 193, 1);
 $title-color:					              inherit;
 $headline-color:				            inherit;
 $subhead-color:					            inherit;
@@ -134,7 +143,7 @@ $display-text-color:			          inherit;
 $body-text-color:                   inherit;
 $para-color: 					              inherit;
 
-$link-color:                        $pink;
+$link-color:                        $accent;
 $link-decoration:                   $orange;
 $link-hover-color:                  $indigo;
 $link-hover-decoration:             none;
@@ -150,7 +159,7 @@ $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary":    				            $primary,
   "secondary":  				            $secondary,
-  "accent":     				            $cyan,
+  "accent":     				            $accent,
   "success":    				            $success,
   "info":       				            $info,
   "warning":    				            $warning,
@@ -178,7 +187,7 @@ $navbar-nav-background:				      rgba($black, .6);
 $navbar-background-color: 			    $black;
 $toggler-background-color:			    $primary;
 
-$navbar-all-text-hover-color:		    $slate;
+$navbar-all-text-hover-color:		    $accent;
 $navbar-brand-hover-color:			    $navbar-all-text-hover-color;
 $navbar-dark-hover-color:           $navbar-all-text-hover-color;
 $navbar-dark-color:                 $tungsten;          
@@ -199,7 +208,7 @@ $expertise-overlay-icon-fill-color: $tungsten;
 $qualifications-icon-fill-color:    $slate;
 
 
-$carousel-control-color: #7b277d;
+$carousel-control-color:            $slate;
 
 
 
@@ -239,12 +248,13 @@ $nav-tabs-border-color:             $gray-300 !default;
 
 $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $body-bg !default;
+$nav-tabs-link-active-bg:           $body-bg  !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-padding-y:          .25rem    !default;
+$navbar-toggler-padding-x:          .75rem    !default;
 
+$navbar-height:                     4em;
 
 
 

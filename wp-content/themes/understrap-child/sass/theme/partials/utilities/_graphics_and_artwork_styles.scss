@@ -6,11 +6,16 @@
 
 
 #profile-small {
-width: 100%;
+width: 50%;
+left: 50%;
 bottom: 0;
 position: absolute;
 img#me-small{
     width: 75%;
+}
+@include mq('phone-wide'){
+width:35%;
+left: 65%;
 }
 @include mq('tablet-small'){
     // width: 75%;
@@ -58,7 +63,7 @@ margin-top: 10em;
 
 #my-brains{
     bottom: 0;
-   left: 5%;
+    left: 5%;
     width: 96%;
     position: fixed;
 @include mq('tablet-small'){
@@ -71,24 +76,27 @@ margin-top: 10em;
 
 
 #evo-small{
-margin-left: 20%;
-width: 60%;
+display: block;
+margin: 0 auto;
+width: 80%;
 @include mq('phone'){
     width: 75%;
     margin-left: 12.5%;
+@include mq('desktop'){
+     width: 60%;
+     margin-left: 35%;
+    }
+}
 }
 
-#register-small {
-        width: 100%;
-        margin-left: 40%;
-    }
+
 
 #my-shoes{
     margin-left: -25%;
     width: 125%;
     overflow: hidden;
     bottom: 5rem;
-}
+
 
 
 /* @include mq('tablet'){
@@ -174,8 +182,8 @@ width: 60%;
         background-repeat: no-repeat;
     }
 @include mq('desktop-xl'){
-        background-size: 52%;
-        background-position: 60% bottom; 
+        background-size: 33%;
+        background-position: 70% bottom; 
 }
     
 }
@@ -183,7 +191,7 @@ width: 60%;
 
 .bgarrow {
     background: none;
-@include mq('desktop'){
+@include mq('desktop-xl'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg");
         background-position: 72% 37%;
         background-size: 93%;
@@ -231,16 +239,16 @@ width: 60%;
 
 
 .container-hero__img--mobile {
+    @media only screen and (max-height: 560px){
     position: relative;
+    }
+    position: absolute;
     bottom: 0;
     left: 0;
     z-index: -1;
     width: 100%;
     overflow: hidden;
-    @media (min-width:18.75em){
-        display: inherit;
-        position: relative;
-    }
+    
 /* @include mq('phone'){
     display: block;
 
@@ -248,11 +256,8 @@ width: 60%;
 @include mq('tablet'){
     margin-left: 0%;
 }
-@include mq('tablet-wide') {
-    position: absolute;
-}
     @include mq('desktop-wide'){
-        display: none;
+         display: none; 
     }
 }
 
@@ -303,8 +308,10 @@ width: 60%;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-
-    @include mq('desktop') {
+svg#Layer_1{
+    height: 100%;
+}
+    @include mq('desktop-xl') {
         display: none;
     }
 }

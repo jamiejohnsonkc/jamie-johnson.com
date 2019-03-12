@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
-		<section>
+		<section id="section__my-expertise">
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__skills' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_expertise__cta' ); ?>

@@ -20,7 +20,8 @@
 .navbar {
   position: relative;
   background: $navbar-background-color;
-  padding: 1rem 0 1rem 0;
+  height: $navbar-height;
+  padding: 0 0 0 0;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;

@@ -1,3 +1,9 @@
+➙
+U+02799
+&#x2799;
+&#10137;
+
+
 <?xml version="1.0" encoding="utf-8"?>
 
 Top 10 Screen Resolutions
@@ -21,7 +27,7 @@ home x2 moves cursor to beginning of line
 shift + end   selects from cursor to first white space at end of the line
 
 
-all queries - @bps
+all queries - @mqall 
 bptablet 
 bptabletw  
 bpdesk 
@@ -116,6 +122,8 @@ tbody>tr>:nth-child(1){}
 sublime text search (following is regex, requiring enabling of "regular expressions")
 
 \n  is regex for new line break
+
+search >< and replace with >\n< to split html tags to sep lines
 
 <div[^<>]*class="expt-text"[^<>]*>[\s\S]*?</div>     will find the tag, contents and closing tag of the class you specify
 

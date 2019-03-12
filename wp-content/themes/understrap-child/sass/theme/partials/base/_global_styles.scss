@@ -12,7 +12,7 @@ $zindex-tooltip:                    1070 !default; */
     $helpers: false,
     $breakpoints:(
     1em: ( // 400px
-      font-size: 8px,
+      font-size: 6px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
@@ -48,13 +48,13 @@ $zindex-tooltip:                    1070 !default; */
         grid-color   : orange,
     ),
     64em: ( // 1024px
-        font-size    :8,
+        font-size    :8px,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : purple,
     ),
     78em: ( // 1248px
-        font-size    : 8,
+        font-size    : 8px,
         line-height  : 1.5,
         modular-scale: perfect-fifth,
         grid-color   : blue,
@@ -94,6 +94,7 @@ html [type=button] {
 
 body {
     height: 100%;
+    // padding-top: $navbar-height;
 /* @include vr-grid(); */
 /*      flex-direction: column; */
 }
@@ -158,6 +159,9 @@ article{}
 .link__advance--chevron{
     width: 3rem;
     height: 3rem;
+    @include mq('phone-wide'){
+      position: relative;
+    }
 }
 
 .link__advance--text{
@@ -169,7 +173,7 @@ left: 0;
 svg.chev--dwn{
       stroke: #111;  
     stroke-linecap: round;
-    stroke-width: .075rem;
+    stroke-width: .5em;
     width: 3rem;
     height: 3rem;
 
@@ -196,3 +200,9 @@ button:focus {
 button{
     height: unset;
 }
+
+.content1, .content2{
+  padding-left: 0;
+  padding-right: 0;
+}
+

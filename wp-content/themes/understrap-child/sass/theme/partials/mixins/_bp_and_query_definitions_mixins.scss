@@ -24,6 +24,11 @@ $breakpoints: (
     "desktop-xxl":  160em	/*2560px*/
 );
 
+//example
+//@include mq('phone', $type:max){
+//min-height: 600px;
+//}
+
 /* // 400px
 // 400px
 // 480px
@@ -40,7 +45,7 @@ $breakpoints: (
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
         @if $type == max {
-            $width: $width - .1rem;
+            $width: $width - .1em;
         }
         @media only screen and (#{$type}-width: $width) {
             @content;

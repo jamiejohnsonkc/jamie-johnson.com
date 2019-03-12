@@ -21,10 +21,11 @@ exit; // Exit if accessed directly.
 					<div class="content2">
 						<p>I'm here to help your business thrive</p>
 					</div>
-					<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+					
+				</div>
+				<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 					</a>
-				</div>
 			</div>
 			<div class="container-hero__img--mobile evo"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="profile pic" id="evo-small"></div>
 			</article><!-- cover end -->

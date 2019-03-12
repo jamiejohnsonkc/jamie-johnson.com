@@ -48,7 +48,8 @@ width: 90%;
 }   
 @include mq('tablet-wide'){
 	.container{
-
+max-width: 99em;
+	width: 99em;
 }
  
 .navbar>.container, .navbar>.container-fluid{

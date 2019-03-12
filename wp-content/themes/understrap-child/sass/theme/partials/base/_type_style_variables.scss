@@ -25,7 +25,8 @@ font-weight:        600;
 %headline{
 
 font-family:        $headline-font-family;
-color:              $headline-color;        
+color:              $headline-color;       
+/* color:              $accent; */ 
 font-weight:        $headline-font-weight;
 
 }
@@ -77,6 +78,11 @@ font-weight:        $subhead-font-weight;
 
 .nav-link{
 text-transform:     lowercase;
+font-family: 		$font-family-monospace;
+}
+
+.navbar-brand{
+	font-family: 	$font-family-monospace;
 }
 
 

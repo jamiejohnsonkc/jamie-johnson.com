@@ -1,25 +1,3 @@
-#why-me-bg{
-     background: rgba(255,255,255,.8)
-}
-
- .alternate{
-    & h1{
-        @extend .page__title;
-    }
-
-    & h2 {
-        @extend %headline;
-    }
-
-    & h3 {
-        @extend %subhead;
-        letter-spacing: .05rem;
-    }
-    & p {
-        @extend %display-text;
-          @include vr($font-size: 6, $line-height: 2);   
-    }
-}
 
 .why-me__atypical {
     text-align: left;
@@ -68,7 +46,7 @@ position: relative;
 }
 
 .why-me__content__summary{
-
+@include vr($font-size: 1);
 }
 
 .why-me__content__verbose{

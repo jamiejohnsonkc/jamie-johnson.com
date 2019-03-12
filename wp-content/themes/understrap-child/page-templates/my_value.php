@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
-		<section>
+		<section id="section__my-value">
 			<?php get_template_part( 'panel-content/panel', 'my_value__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_value__advance_business_objectives' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'my_value__grow_competitive_advantage' ); ?>

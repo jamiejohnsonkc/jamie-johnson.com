@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  alternate categories">
-	<div class="container-fluid alternate why-me__container__categories" id="category-history">
+<article class="article__wrapper categories">
+	<div class="container alternate why-me__container__categories" id="category-history">
 		<div class="content-container">
 			<h1>category experience</h1>
 			<h2>Incomparible Breadth</h2>

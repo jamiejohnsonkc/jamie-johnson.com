@@ -14,12 +14,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
-		<section>
+		<section id="section__home-page">
 			<?php get_template_part( 'panel-content/panel', 'home_page__splash' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'home_page__whatiam' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'home_page__howidoit' ); ?>
+		<!-- 	php get_template_part( 'panel-content/panel', 'home_page__whatiam' ); ?> -->
 			<?php get_template_part( 'panel-content/panel', 'home_page__mymo' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__whatido' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'home_page__howidoit' ); ?>
+
 			<!-- 		get_template_part( 'panel-content/panel', 'whyme' ); ?> -->
 			<?php get_template_part( 'panel-content/panel', 'home_page__myqualifications' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__cta' ); ?>

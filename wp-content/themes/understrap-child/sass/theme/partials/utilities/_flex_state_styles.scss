@@ -58,7 +58,7 @@
 @include mq('phablet'){}
 @include mq('tablet-small'){}
 @include mq('tablet'){
-    height: 100vh;
+
 }
 @include mq('tablet-wide'){}
 @include mq('desktop'){

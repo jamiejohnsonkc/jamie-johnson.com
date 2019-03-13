@@ -1,4 +1,5 @@
-$new-palette1: #68ABD8;
+$new-primary: #68ABD8;
+$new-secondary: #111111; 
 $new-palette1: #636ce5;
 $new-palette1: #6794ef;
 $new-palette1: #67dcef;
@@ -133,9 +134,9 @@ $colors: map-merge((
 
 
 
-$primary:                           $slate;
-$secondary:                         $tungsten;
-$accent:                            rgba(47, 151, 193, 1);
+$primary:                           $new-primary;
+$secondary:                         $new-secondary;
+$accent:                            darken($new-primary, 20%);
 $title-color:					              inherit;
 $headline-color:				            inherit;
 $subhead-color:					            inherit;

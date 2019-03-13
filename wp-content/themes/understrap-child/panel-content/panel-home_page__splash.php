@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<h1>Hi <span class="br"><br></span>I'm Jamie</h1>
 	
 	
-	<h2>A Salty Strategic Marketing Veteran <span class="br"><br></span>+ Front-End Design/Developer <span class="br-2"><br></span></h2>
-	<p>I'm available for contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p>
+	<h2>I'm A Salty Strategic Marketing Veteran <span class="br"><br></span>and Front-End Developer <span class="br-2"><br></span></h2>
+	<p>I'm available for contract, consulting or freelance engagements <span class="br"><br></span>(and maybe the perfect long-term gig)</p>
 	
 	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>

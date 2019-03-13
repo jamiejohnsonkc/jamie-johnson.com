@@ -6,6 +6,7 @@
 %sublist 							{ @include vr( $font-size: 2,  );}
 %display-text-lg                    { @include vr( $font-size: 2, $line-height: 2);}
 %display-text                       { @include vr( $font-size: 1, $line-height: 2);}
+%display-text-sm                    { @include vr( $font-size: 1, $line-height: 2);}
 %body-text-lg                       { @include vr( $font-size: 2,  );}
 %body-text                          { @include vr( $font-size: 1,  );}
 %para                               { @include vr( $font-size: 0,  );}

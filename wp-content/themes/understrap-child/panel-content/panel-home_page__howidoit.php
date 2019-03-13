@@ -14,7 +14,7 @@ exit; // Exit if accessed directly.
 			<div class="container home-page__howidoit__container core"  id="howidoit">
 				<h1>thanks for stopping by!</h1>
 				<div class="page-head__howidoit"><h2>I'm an End to End Marketer</h2>
-					<h3>From the corner office to the keyboard</h3>
+					<h3>From the corner office to the keyboard </h3>
 					<!-- <h4>Labore in est deserunt dolore irure dolor exercitation anim aliquip elit amet non. Laboris id eiusmod cillum dolore laboris id qui eu dolore occaecat officia nulla mollit incididunt dolor ut veniam ut labore sit est id.</h4> -->
 				</div>
 				<div class="content-container">

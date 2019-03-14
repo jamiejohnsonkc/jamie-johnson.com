@@ -1,0 +1,54 @@
+  .management{
+  h1 {
+        @extend .page__title;
+        flex: 0 0 auto;
+        margin-top: auto;
+    }
+
+    h2 {
+              @extend %headline;
+        flex: 0 0 auto;
+
+    }
+
+    h3 {
+        flex: 0 0 auto;
+    @extend %subhead;
+    }
+
+    h4{
+     flex: 0 0 auto;
+/*      @extend %display-text-lg; */
+    }
+ /*         @extend %display-text-lg;  */
+
+    p {
+        @extend %body-text-lg;
+        flex: 0 0 auto;
+        margin-bottom: auto;
+
+    }
+
+}
+
+
+.intro > h3{
+@include vr($margin: 2 auto);
+color: $primary;
+}
+
+.intro{
+& h4{
+    @include vr($font-size: 1, $line-height: 2, $margin-top: 2, $width: 20);
+}
+& .content__item_caption{
+    padding: 0;
+    @include vr($width: 35, $line-height: 1.5);
+}
+& ul{
+    padding-left: 0;
+    list-style: none;
+    @include vr($font-size: 1, $line-height: 1.5);
+}
+}
+

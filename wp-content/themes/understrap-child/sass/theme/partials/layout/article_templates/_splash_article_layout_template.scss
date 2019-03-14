@@ -12,13 +12,14 @@
         margin-top: auto;
         flex: 0 0 auto;
         @extend %title;
-        color: $primary;
+
        
     }
 
     h2 {
         flex: 0 0 auto;
               @extend %subhead-lg;
+ 
     }
 
     h3 {

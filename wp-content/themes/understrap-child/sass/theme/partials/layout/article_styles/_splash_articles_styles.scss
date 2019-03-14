@@ -5,11 +5,15 @@
     
     h2{
 		@extend %display-text-lg;
+                         color: $primary;
+                         font-weight: 400;
+                         @include vr($width: 25);
 
 	}
     p {
         @extend %body-text-lg;
         font-style: italic;
+                    @include vr($width: 23);
     }
     .link{
        position: absolute;
@@ -20,22 +24,25 @@
     }
 }
  
-#my-value__splash{
-   h1{ @extend %title;
+#management__splash{
+   h1{ 
+    @extend .page__title;
+    margin-top: unset;
+    font-weight: 300;
+}
+  h2{
+
+    @extend %title;
     font-style: normal;
          }
+h3{
+  @extend %body-text-lg;
+  font-style: italic;
+}
+}
 
-   h1, h2{
-        @include vr($padding-left: 2);
-   }
-   text-align: left;
-   .value-table{
-      
-        margin-bottom: auto;
-}
-    .link{ left: 6rem;
-}
-}
+
+
 
 #about-me__splash{
     h2{

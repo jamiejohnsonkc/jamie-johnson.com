@@ -2,7 +2,7 @@
 			<div class="container core content__container_col"  id="article__container--strategy">
 				<h1>I'm also really good at</h1>
 				<h2>Design & Development is my bread and butter.</h2>
-				<h3>I create programs that establish rapport, earn trust and deliver superior value to customers.</h3>	
+				<h3>I product marketing programs and elements that establish rapport, earn trust and deliver superior value to customers.</h3>	
 			<div class="content__container_row strategy__content">
 					<div class="content__item_col strategy__img">
 						<div class="execution__icon--conversation"><img src="//localhost:3000/wp-content/uploads/2019/01/skills_25.svg" class="style-svg" alt=""></div>

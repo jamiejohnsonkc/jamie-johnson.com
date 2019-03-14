@@ -1,0 +1,552 @@
+ .my-expertise{
+  padding-top: 4rem;
+  h1 {
+       
+        @extend .page__title;
+        flex: 0 0 auto;
+        margin-top: auto;
+    }
+
+    h2 {
+              @extend %headline;
+        flex: 0 0 auto;
+
+    }
+
+    h3 {
+        flex: 0 0 auto;
+    @extend %subhead;
+    }
+
+    h4{
+     flex: 0 0 auto;
+/*      @extend %display-text-lg; */
+    }
+ /*         @extend %display-text-lg;  */
+
+    p {
+        @extend %display-text-lg;
+        flex: 0 0 auto;
+        margin-bottom: auto;
+
+    }
+
+}
+
+.skills{
+    .link__advance--chevron{
+position: relative;
+}
+}
+
+
+.my-expertise__main-page{
+ position: relative;
+}
+
+
+
+.my-expertise__container__skills{
+    position: relative;
+}
+
+
+.expertise__menu_item{
+display: flex;
+flex-direction: row;
+ cursor: pointer;
+ width: 100%;
+ max-width: 100%;
+ justify-content: flex-start;
+ align-items: center;
+@include vr($margin-bottom: 2, $margin-top: 2);
+
+}
+
+
+
+/* .expertise__menu_item > .expertise__menu-item--content > h3{ */
+.expertise__menu_item > div > h3{
+@include vr($font-size: 2);
+@include mq('tablet'){
+@include vr($font-size: 5);  
+}
+ margin-bottom: 0;
+}
+
+/* p{
+
+ @include vr($margin-top: 0, $font-size: 2);
+
+} */
+
+
+.expertise__menu_item > div > p{
+/*  @extend %display-text; */
+@include vr($line-height: 1.5, $font-size: 1, $margin-top: 0);
+@include mq('tablet'){
+    @include vr($font-size: 4, $line-height: 2, $margin-top: .5, $width: 26 );
+}
+}
+
+#mobile-icon{
+@include vr($padding: .5); 
+}
+
+ #gears-icon{
+@include vr($padding: 1); 
+}
+
+
+.expertise__menu_icon{
+@include make-col-ready();
+@include make-col(3);
+}
+
+
+
+.expertise__menu_item--content{
+ @include cols();
+ @include make-col-ready();
+ @include make-col(9);
+ justify-content: flex-start;
+ @include vr($padding-left: 1);
+}
+
+#expertise__menu_link{
+position: relative;
+bottom: unset;
+flex: 0 0 auto;
+@extend %body-text;
+font-style: italic;
+@include vr($margin-top: 1);
+}     
+
+
+.overlay__content--icon {
+      fill: $expertise-overlay-icon-fill-color;
+    .cls-1, .cls-2 {
+        fill: $expertise-overlay-icon-fill-color;
+    }
+}
+
+.expertise__overlay--webdev {
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+//         height: 100vh;
+//     @include make-col(12);
+//     @include make-col-ready;
+//     @include media-breakpoint-up(lg) {
+//     display: flex;
+//     position: relative;
+//     }
+// .expt {
+// }
+
+/* #expt-overlay-1, #expt-overlay-2, #expt-overlay-3, #expt-overlay-4, #expt-overlay-5 */ 
+// [OVERLAY]
+
+
+
+
+// This CSS class will show the overlay */
+
+#expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+// [OVERLAY CLOSE BUTTON] */
+
+
+/* 
+.exptcontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+} */
+
+
+/* .expt-intro {
+
+        height: 100vh;
+        order: 5;
+    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
+    }
+    }
+} */
+
+// .expt-overlay {
+//     background: rgba(0, 0, 0, 0.5);
+//     bottom: 0;
+//     color: #fff;
+//     left: 0;
+//     overflow-y: scroll;
+//     position: absolute;
+//     right: 0;
+//     text-align: center;
+//     top: 0;
+
+//     // fix text transition issue for .left and .right but need to overwrite left and right properties in .right
+//     -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+//     transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+//     -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+//     width: 100%;
+// }
+
+// .expt-menu-box:hover .expt-overlay.left {
+//     left: 0;
+// }
+
+// .expt-overlay.left {
+//     left: 100%;
+// }
+
+// .expt-menu-horz {
+//     align-content: center;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     margin-bottom: 0;
+//     padding: 0;
+// }
+
+// .expt-menu-horz li {
+//     bottom: unset;
+//     height: unset;
+//     list-style: none;
+//     margin: 0;
+//     text-indent: 0;
+
+//     // padding: $rvr-1_5 0;
+//     padding: 0;
+// }
+
+// .expt-menu-horz a {
+//     color: black;
+// }
+
+// .expt-menu-box {
+  
+//     @include make-col(12);
+//     @include make-col-ready;
+//     background: $tungsten;
+//     border-radius: 1rem;
+//     color: #111;
+//     cursor: pointer;
+//     text-align: center;
+// /*     padding: $rvr-2 0 */
+
+//         @include make-col(5);
+//     //         border: thin solid $tungsten;
+//     @include media-breakpoint-up(md) {
+
+//         background: inherit;
+//         margin-left: auto;
+//         margin-right: auto;
+//         text-align: left;
+
+//         // border: $ms--7 solid $tungsten;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: flex-end;
+//         padding: 0;
+//     }
+
+
+//         @include make-col(3);
+//     @include media-breakpoint-up(lg) {
+//     }
+// }
+
+// .expt-menu-icon {
+//     @include media-breakpoint-up(sm) {}
+
+
+//         margin-left: -2rem;
+//     @include media-breakpoint-up(md) {
+//     }
+
+
+//     @include media-breakpoint-up(lg) {}
+
+
+//     @include media-breakpoint-up(xl) {}
+// }
+
+
+
+// #mobile-icon {
+//     margin-left: -.8rem;
+//     margin-left: 0 !important;
+// }
+
+
+
+
+
+// .menu-icon-text-wrap {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//     @include media-breakpoint-up(md) {
+//     margin: 0 auto;
+//     }
+// }
+
+// #open-expt-overlay-5 {
+//     margin-left: inherit;
+//     margin-right: inherit;
+// }
+
+// .expt-menu-box %body-text-text {
+//     font-spacing: 0.5rem;
+//     font-style: italic;
+//     margin-bottom: 0;
+//     padding-bottom: 0;
+// }
+
+// .expt-menu-box %body-text-text:hover {
+//     text-decoration-line: underline;
+// }
+
+
+
+// .expt-menu-icon {
+//     .style-svg, .cls-1, .cls-3, .cls-4 {
+//         /* max-width: $ms-8; */
+//         fill: #111;
+//     }
+// }
+
+// .expt-row {
+//     align-items: center;
+//     display: flex;
+//     margin: 0 auto;
+//     min-height: 100vh;
+
+//         @include make-col(12);
+//         @include make-col-ready;
+//     @include make-col(12);
+//     @include make-col-ready;
+//     @include media-breakpoint-up(sm) {
+//     }
+// }
+
+// .expt-block {
+//     align-content: flex-start;
+//     align-items: flex-start;
+//     display: flex;
+//     flex-wrap: wrap;
+
+//     // margin-bottom: $rvr-1;
+//     @include make-col(12);
+//     @include make-col-ready;
+// }
+
+
+
+
+/* #expt {
+    @include media-breakpoint-up(sm) {}
+
+
+    @include media-breakpoint-up(md) {
+        .expt-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .expt-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+                .expt-menu-horz {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            flex-basis: auto;
+         @include media-breakpoint-up(md) {
+        flex-basis: $rvr-8;
+        }
+    %display-text-text {
+
+        }
+    .menu-icon-text-wrap {
+
+                margin-left: auto;
+                margin-right: auto;
+            @include media-breakpoint-up(md) {
+            }
+        }
+    }
+}
+
+.expt-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    text-indent: 0px;
+}
+
+.expt-controls li {
+    color: $primary;
+    height: unset;
+    line-height: 1.2;
+    list-style: none;
+    padding: 0;
+    padding-left: 0;
+padding: ms(1) ms(1) ms(1) 0;
+}
+.exptnav-vert li {}
+
+.exptcontent {}
+
+.expt-summary {
+    width: 100%;
+}
+
+.expt-sum-body-text {
+    padding: 0;
+
+    @include make-col(12);
+    @include make-col-ready;
+
+    // padding: 0 0 $rvr-1 0;
+    @include media-breakpoint-up(sm) {}
+
+
+    @include media-breakpoint-up(md) {}
+
+
+        max-width: $ms-13;
+    @include media-breakpoint-up(lg) {
+
+
+    }
+// 
+}
+.expt-vert {
+          height: 100vh;
+        @include make-col(6);
+        @include make-col-ready;
+    // align-items: center;
+    // display: flex;
+    @include make-col(12);
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+    }
+    @include media-breakpoint-up(lg) {
+    }
+}
+
+.expt-vert-box {
+        @include make-col(12);
+        @include make-col-ready;
+    @include media-breakpoint-up(md) {
+    }
+        -ms-transform: translateY(-50%);
+        position: sticky;
+        top: 40%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    @include media-breakpoint-up(lg) {
+    }
+}
+
+//     display: none;
+// .expt-skills::-webkit-scrollbar {
+// }
+.expt-head {
+    @include make-col(12);
+    @include make-col-ready;
+
+ 
+    padding-left: 0;
+
+
+    // border-top: thin solid $primary;
+    // padding-top: $rvr-3;
+}
+
+.expt-head h4 {
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.expt-box {
+    margin-bottom: $rvr-2;
+
+    @include make-col(6);
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {}
+}
+
+.expt-row, .expt-row * {
+        padding: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
+    @include media-breakpoint-up(md) {
+    }
+}
+
+.expt-icon {
+    width: $ms-7;
+    margin-left: -.8em;
+
+    // margin-bottom: $rvr-_25;
+}
+
+.expt-icon .style-svg {
+    .cls-1, .cls-2 {
+        fill: $tungsten;
+    }
+}
+
+.expt-icon .style-svg {
+    width: 5rem;
+}
+
+.expt-body-text {
+max-width: $ms-9;
+}
+
+.expt-body-text h6 {
+    font-weight: 400;
+font-size: $h2-font-size;
+margin-bottom: $rvr-_5;
+margin-top: $rvr-_75;
+}
+
+.expt-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+#exptcontainer h2 {
+    // margin-bottom: $rvr-1;
+}
+
+.exptcontent {
+        @include make-col(12);
+        @include make-col-ready;
+    @include media-breakpoint-up(sm) {
+    }
+
+
+        @include make-col(4);
+        @include make-col-ready;
+    @include media-breakpoint-up(md) {
+    }
+} */

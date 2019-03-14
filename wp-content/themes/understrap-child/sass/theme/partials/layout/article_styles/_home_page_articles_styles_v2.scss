@@ -196,16 +196,16 @@ h2.proof-intro, .proof__item_container h5{
         width: 90%;
 
     }
-    polygon{
-        fill: rgba(73, 80, 87, .4);
+    .st0{
+       fill:rgba(106, 173, 217, .5);
     }
 }
 
-#proof__content_marketer{
-/* 
-z-index: 0;
-background: rgba(73, 80, 87, .6); */
-}
+#proof__content_marketer > div > p > em{
+    color: $primary;
+    font-weight: 300;
+    } 
+
 
 
 #proof__content_end2end{
@@ -231,7 +231,7 @@ background: rgba(73, 80, 87, .6); */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $gray-700;
+    color: $primary;
     @include vr($font-size: 3, $margin: 2 auto 2 auto);
 }
 
@@ -416,6 +416,16 @@ display: block;
         }
     }
 
+
+#proof__service{}
+#bell__small{
+    svg#Layer_1{
+        fill: $primary;
+            width: 20%;
+    display: block;
+    @include vr($margin: 4 auto 0 auto);
+}
+}
 
 
 

@@ -17,10 +17,13 @@ exit; // Exit if accessed directly.
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
 				<div class="content__container">
 						<div class="content__item_col proof__item_container" id="proof__content_marketer">
+								<!-- <div class="mobile__background--image" id="trend-arrow">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
+									</div> -->
 							<h2 class="proof-intro">!</h2>
 							<h5>I do outcomes. Not overhead.</h5>
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p class="caption">It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p class="caption">Spenders create stuff and call it marketing. Marketers find ways to bring value to the business.</p><p class="caption"><em> I'm a Marketer.</em></p>
+							<div class="content__item_caption"><p class="caption">It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p class="caption">Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p class="caption"><em> I'm a Marketer.</em></p>
 							<div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div>
 						</div>
 					</div>
@@ -34,13 +37,13 @@ exit; // Exit if accessed directly.
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--equal">&#x3d;</div>
-							<div class="end2end__diagram_img--dollar">&#x24;</div>
+							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt=""></div>
 						</div>
-						<h5>strategy | design | execution</h5>
-						<p class="caption">Ut id culpa minim commodo officia ut non et sed amet magna cupidatat dolor fugiat est ut id enim.</p>
+						<h5>From Soup To Nuts</h5>
+						<p class="caption">I can scheme it, design it and execute it. That lowers cost and improves performance which means more cheddar for you.</p>
 					</div>
 					<div class="content__item_col proof__item_container" id="proof__content_vitae">
-						<h2 class="proof-intro">!</h2>
+						<h2 class="proof-intro">#</h2>
 						
 						<div class="vitae__stats carousel slide" id="stats-slider" data-interval="false">
 							<div class="carousel-inner">
@@ -221,6 +224,21 @@ exit; // Exit if accessed directly.
 						<h5>i've been around</h5>
 						<p class="caption">Ut id culpa minim commodo officia ut non et sed amet magna cupidatat dolor fugiat est ut id enim.</p>
 					</div>
+
+<div class="content__item_col proof__item_container" id="proof__service">
+								<!-- <div class="mobile__background--image" id="trend-arrow">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
+									</div> -->
+							<h2 class="proof-intro">$</h2>
+							<h5>It's You. Not Me.</h5>
+							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
+							<div class="content__item_caption"><p class="caption">I believe that professional services should be professional when it comes to their service.</p>
+							<div class="content__item_img" id="bell__small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="" class="style-svg"></div>
+						</div>
+					</div>
+
+
+
 				</div>
 
 		</div>

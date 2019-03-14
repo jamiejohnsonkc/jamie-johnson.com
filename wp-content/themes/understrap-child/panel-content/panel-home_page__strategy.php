@@ -13,7 +13,7 @@ exit; // Exit if accessed directly.
 		<article class="article__wrapper  home-page home-page__article--strategy" id="article__wrapper--strategy">
 			<div class="container core content__container_col"  id="article__container--strategy">
 				<h1>what I'm good at</h1>
-				<h2>My Specialty Is Strategic Marketing Management</h2>
+				<h2>I specialize in Strategic Marketing Management</h2>
 				<h3>That's a big fancy handle for making sure marketing does more than look pretty.</h3>	
 			<div class="content__container_row strategy__content">
 				<div class="content__item_col strategy__copy">

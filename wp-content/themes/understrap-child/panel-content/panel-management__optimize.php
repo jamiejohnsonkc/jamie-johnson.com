@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  content__wrappermy-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__optimize" id="optimize">
 	<div class="row">
 		<h1>integration & optimization</h1>

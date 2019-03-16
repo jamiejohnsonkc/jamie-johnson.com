@@ -8,18 +8,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  content__wrapper my-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__advance" id="objectives">
 
 		<h1>outcome driven marketing</h1>
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->
 		<h2>01</h2><!-- COL -->
-		<h3>I pursue <br>business objectives</h3><!-- COL -->
+		<h3>I pursue <br>business outcomes</h3><!-- COL -->
 		<h4>The purpose of marketing is to improve your business &mdash; not just creating "stuff".</h4>
 		</hgroup>
 		<figure class="diagram diagram__objectives" id="objectives__diagram">
-			<div class="diagram-content">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
+			<div class="diagram__content_container">
+				<div class="content__container_icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/></div>
 				<ol>
 					<li>business <span class="br"><br></span>goals</li>
 				</ol>
@@ -38,8 +38,8 @@ exit; // Exit if accessed directly.
 
 
 
-			<div class="diagram-content">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg"/>
+			<div class="diagram__content_container">
+				<div class="content__container_icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg"/></div>
 				<ol start=2>
 					<li>marketing <span class="br"><br></span>solutions</li>
 				</ol>
@@ -54,14 +54,14 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 
-			<div class="diagram-content">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg"/>
+			<div class="diagram__content_container">
+				<div class="content__container_icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg"/></div>
 				<ol start=3>
 					<li>performance <span class="br"><br></span>metrics</li>
 				</ol>
 			</div>
 
-			<div class="objectives-diagram__delta-icon">
+<div class="objectives-diagram__delta-icon">
 				<div class="objectives-diagram__vertical--delta">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
 				</div>
@@ -70,8 +70,10 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 
-			<div class="diagram-content">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg"/>
+
+		
+			<div class="diagram__content_container">
+				<div class="content__container_icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg"/></div>
 				<ol start=4>
 					<li>business <span class="br"><br></span>impact</li>
 				</ol>

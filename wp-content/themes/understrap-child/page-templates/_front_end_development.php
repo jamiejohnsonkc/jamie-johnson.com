@@ -15,9 +15,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
 		<section id="section__hire_me">
-			<?php get_template_part( 'panel-content/panel', 'hire_me__splash' ); ?>
-			d
-			<?php get_template_part( 'panel-content/panel', 'my_value__cta' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'development__splash' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'development__summary' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'development__strategy' ); ?>
+			
+			<?php get_template_part( 'panel-content/panel', 'development__cta' ); ?>
 		</section>
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->

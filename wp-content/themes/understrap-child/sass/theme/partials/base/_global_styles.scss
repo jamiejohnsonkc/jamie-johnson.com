@@ -108,10 +108,10 @@ title{}
 figure{}
 article{}
 
-.article__spacer{
-  height: 25vh;
-  background: $body-bg;
-}
+// .article__spacer{
+//   height: 25vh;
+//   background: $body-bg;
+// }
 
 .fixed-top{
     position: fixed;
@@ -159,6 +159,7 @@ article{}
 .link__advance--chevron{
     width: 3rem;
     height: 3rem;
+    display: block;
     @include mq('phone-wide'){
       position: relative;
     }

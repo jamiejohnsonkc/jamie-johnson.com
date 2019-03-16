@@ -99,7 +99,7 @@ ul#list__strategy_container>li{
     }
 
 .list__header{
-        @include vr($font-size: 1, $line-height: 0, $margin-bottom: 1, $padding-left: 2);
+        @include vr($font-size: 1, $line-height: 1.5, $margin-bottom: 1, $padding-left: 2);
         font-weight: 400;
         text-transform: uppercase;
     }
@@ -126,6 +126,13 @@ ul#list__strategy_container>li{
     }
 }
 
+.footnote{
+    @include vr($font-size: 0);
+    font-style: italic;
+    margin-top: 4em;
+    margin-left: auto;
+    margin-right: 10%;
+}
 
 //container artcile styles
 #article__container--proof{
@@ -438,5 +445,6 @@ p.caption{}
 
 
 .content__container_row{}
+
 
 

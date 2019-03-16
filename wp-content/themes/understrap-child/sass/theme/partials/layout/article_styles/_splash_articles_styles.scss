@@ -30,11 +30,28 @@
     margin-top: unset;
     font-weight: 300;
 }
-  h2{
 
+  > h2{
     @extend %title;
-    font-style: normal;
-         }
+      }
+
+h3{
+  @extend %body-text-lg;
+  font-style: italic;
+}
+}
+
+#development__splash{
+   h1{ 
+    @extend .page__title;
+    margin-top: unset;
+    font-weight: 300;
+}
+
+  > h2{
+    @extend %title;
+      }
+
 h3{
   @extend %body-text-lg;
   font-style: italic;

@@ -9,6 +9,25 @@
 #section__my-expertise{}
 #section__about-me{}
 
+
+
+@include mq('tablet', $type:max){
+    .content__wrapper{
+        margin: 12em auto;
+    }
+    .link{
+        @include vr($margin: 6 auto 2 auto);
+    }
+    .summary h1, .business-value h1{
+        @include vr($margin-bottom: 6);
+    }
+
+    #management__splash h1{
+        margin-bottom: 2em;
+    }
+
+}
+
 //core = homepage  alternate = why - me
 @media (max-width: 48em){
 .core, .my-value, .why-me, .alternate{

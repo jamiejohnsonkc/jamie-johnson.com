@@ -294,16 +294,26 @@ background: rgba(210, 219, 226, .5); */
     	@include mq('tablet-wide'){
 		display: none;
 	}
+	.cls-2{
+		fill: $primary;
+	}
 	}
 
 
 .progression__end-to-end--vertical {
     @include make-col-ready();
     @include make-col(6);
+
 }
-.end-to-end--vert {
-    width: 100%;
-    }
+
+
+g #outlines{
+	.cls-2{
+		fill: $primary;
+	}
+}
+
+
 
  .diagram-content__caption--sticky{
  	@include make-col-ready();

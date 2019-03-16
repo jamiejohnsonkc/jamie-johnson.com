@@ -1,91 +1,91 @@
- .my-expertise{
-  padding-top: 4rem;
-  h1 {
-       
-        @extend .page__title;
-        flex: 0 0 auto;
-        margin-top: auto;
-    }
+/*  .my-expertise{
+ padding-top: 4rem;
+ h1 {
+      
+       @extend .page__title;
+       flex: 0 0 auto;
+       margin-top: auto;
+   }
 
-    h2 {
-              @extend %headline;
-        flex: 0 0 auto;
+   h2 {
+             @extend %headline;
+       flex: 0 0 auto;
 
-    }
+   }
 
-    h3 {
-        flex: 0 0 auto;
-    @extend %subhead;
-    }
+   h3 {
+       flex: 0 0 auto;
+   @extend %subhead;
+   }
 
-    h4{
-     flex: 0 0 auto;
-/*      @extend %display-text-lg; */
-    }
- /*         @extend %display-text-lg;  */
+   h4{
+    flex: 0 0 auto;
+@extend %display-text-lg;
+   }
+@extend %display-text-lg;
 
-    p {
-        @extend %display-text-lg;
-        flex: 0 0 auto;
-        margin-bottom: auto;
+   p {
+       @extend %display-text-lg;
+       flex: 0 0 auto;
+       margin-bottom: auto;
 
-    }
+   }
 
 }
 
 .skills{
-    .link__advance--chevron{
+   .link__advance--chevron{
 position: relative;
 }
 }
 
 
 .my-expertise__main-page{
- position: relative;
+position: relative;
 }
 
 
 
 .my-expertise__container__skills{
-    position: relative;
+   position: relative;
 }
 
 
 .expertise__menu_item{
 display: flex;
 flex-direction: row;
- cursor: pointer;
- width: 100%;
- max-width: 100%;
- justify-content: flex-start;
- align-items: center;
+cursor: pointer;
+width: 100%;
+max-width: 100%;
+justify-content: flex-start;
+align-items: center;
 @include vr($margin-bottom: 2, $margin-top: 2);
 
 }
 
 
 
-/* .expertise__menu_item > .expertise__menu-item--content > h3{ */
+.expertise__menu_item > .expertise__menu-item--content > h3{
 .expertise__menu_item > div > h3{
 @include vr($font-size: 2);
 @include mq('tablet'){
 @include vr($font-size: 5);  
 }
- margin-bottom: 0;
+margin-bottom: 0;
 }
 
-/* p{
+p{
 
- @include vr($margin-top: 0, $font-size: 2);
+@include vr($margin-top: 0, $font-size: 2);
 
-} */
+}
 
 
 .expertise__menu_item > div > p{
-/*  @extend %display-text; */
+@extend %display-text;
 @include vr($line-height: 1.5, $font-size: 1, $margin-top: 0);
 @include mq('tablet'){
-    @include vr($font-size: 4, $line-height: 2, $margin-top: .5, $width: 26 );
+   @include vr($font-size: 4, $line-height: 2, $margin-top: .5, $width: 26 );
 }
 }
 
@@ -93,7 +93,7 @@ flex-direction: row;
 @include vr($padding: .5); 
 }
 
- #gears-icon{
+#gears-icon{
 @include vr($padding: 1); 
 }
 
@@ -106,11 +106,11 @@ flex-direction: row;
 
 
 .expertise__menu_item--content{
- @include cols();
- @include make-col-ready();
- @include make-col(9);
- justify-content: flex-start;
- @include vr($padding-left: 1);
+@include cols();
+@include make-col-ready();
+@include make-col(9);
+justify-content: flex-start;
+@include vr($padding-left: 1);
 }
 
 #expertise__menu_link{
@@ -124,14 +124,14 @@ font-style: italic;
 
 
 .overlay__content--icon {
-      fill: $expertise-overlay-icon-fill-color;
-    .cls-1, .cls-2 {
-        fill: $expertise-overlay-icon-fill-color;
-    }
+     fill: $expertise-overlay-icon-fill-color;
+   .cls-1, .cls-2 {
+       fill: $expertise-overlay-icon-fill-color;
+   }
 }
 
 .expertise__overlay--webdev {
-    margin-bottom: 3rem;
+   margin-bottom: 3rem;
 }
 
 
@@ -148,39 +148,38 @@ font-style: italic;
 // .expt {
 // }
 
-/* #expt-overlay-1, #expt-overlay-2, #expt-overlay-3, #expt-overlay-4, #expt-overlay-5 */ 
+#expt-overlay-1, #expt-overlay-2, #expt-overlay-3, #expt-overlay-4, #expt-overlay-5 
 // [OVERLAY]
 
 
 
 
-// This CSS class will show the overlay */
+// This CSS class will show the overlay
 
 #expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {
-    opacity: 1;
-    visibility: visible;
+   opacity: 1;
+   visibility: visible;
 }
 
-// [OVERLAY CLOSE BUTTON] */
+// [OVERLAY CLOSE BUTTON]
 
 
-/* 
 .exptcontainer {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-} */
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+}
 
 
-/* .expt-intro {
+.expt-intro {
 
-        height: 100vh;
-        order: 5;
-    @include media-breakpoint-up(lg) {
-    @include media-breakpoint-up(md) {
-    }
-    }
-} */
+       height: 100vh;
+       order: 5;
+   @include media-breakpoint-up(lg) {
+   @include media-breakpoint-up(md) {
+   }
+   }
+}
 
 // .expt-overlay {
 //     background: rgba(0, 0, 0, 0.5);
@@ -233,7 +232,7 @@ font-style: italic;
 // }
 
 // .expt-menu-box {
-  
+ 
 //     @include make-col(12);
 //     @include make-col-ready;
 //     background: $tungsten;
@@ -241,7 +240,7 @@ font-style: italic;
 //     color: #111;
 //     cursor: pointer;
 //     text-align: center;
-// /*     padding: $rvr-2 0 */
+// padding: $rvr-2 0
 
 //         @include make-col(5);
 //     //         border: thin solid $tungsten;
@@ -320,7 +319,7 @@ font-style: italic;
 
 // .expt-menu-icon {
 //     .style-svg, .cls-1, .cls-3, .cls-4 {
-//         /* max-width: $ms-8; */
+//         max-width: $ms-8;
 //         fill: #111;
 //     }
 // }
@@ -353,60 +352,60 @@ font-style: italic;
 
 
 
-/* #expt {
-    @include media-breakpoint-up(sm) {}
+#expt {
+   @include media-breakpoint-up(sm) {}
 
 
-    @include media-breakpoint-up(md) {
-        .expt-intro {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding-left: 0;
-            padding-right: 0;
-        }
+   @include media-breakpoint-up(md) {
+       .expt-intro {
+           display: flex;
+           flex-direction: column;
+           justify-content: flex-end;
+           padding-left: 0;
+           padding-right: 0;
+       }
 
-        .expt-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+       .expt-content {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+       }
 
-                .expt-menu-horz {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            flex-basis: auto;
-         @include media-breakpoint-up(md) {
-        flex-basis: $rvr-8;
-        }
-    %display-text-text {
+               .expt-menu-horz {
+                   margin-left: auto;
+                   margin-right: auto;
+               }
+           flex-basis: auto;
+        @include media-breakpoint-up(md) {
+       flex-basis: $rvr-8;
+       }
+   %display-text-text {
 
-        }
-    .menu-icon-text-wrap {
+       }
+   .menu-icon-text-wrap {
 
-                margin-left: auto;
-                margin-right: auto;
-            @include media-breakpoint-up(md) {
-            }
-        }
-    }
+               margin-left: auto;
+               margin-right: auto;
+           @include media-breakpoint-up(md) {
+           }
+       }
+   }
 }
 
 .expt-menu {
-    display: flex;
-    flex-direction: column;
-    padding-left: 0px;
-    text-indent: 0px;
+   display: flex;
+   flex-direction: column;
+   padding-left: 0px;
+   text-indent: 0px;
 }
 
 .expt-controls li {
-    color: $primary;
-    height: unset;
-    line-height: 1.2;
-    list-style: none;
-    padding: 0;
-    padding-left: 0;
+   color: $primary;
+   height: unset;
+   line-height: 1.2;
+   list-style: none;
+   padding: 0;
+   padding-left: 0;
 padding: ms(1) ms(1) ms(1) 0;
 }
 .exptnav-vert li {}
@@ -414,108 +413,108 @@ padding: ms(1) ms(1) ms(1) 0;
 .exptcontent {}
 
 .expt-summary {
-    width: 100%;
+   width: 100%;
 }
 
 .expt-sum-body-text {
-    padding: 0;
+   padding: 0;
 
-    @include make-col(12);
-    @include make-col-ready;
+   @include make-col(12);
+   @include make-col-ready;
 
-    // padding: 0 0 $rvr-1 0;
-    @include media-breakpoint-up(sm) {}
-
-
-    @include media-breakpoint-up(md) {}
+   // padding: 0 0 $rvr-1 0;
+   @include media-breakpoint-up(sm) {}
 
 
-        max-width: $ms-13;
-    @include media-breakpoint-up(lg) {
+   @include media-breakpoint-up(md) {}
 
 
-    }
+       max-width: $ms-13;
+   @include media-breakpoint-up(lg) {
+
+
+   }
 // 
 }
 .expt-vert {
-          height: 100vh;
-        @include make-col(6);
-        @include make-col-ready;
-    // align-items: center;
-    // display: flex;
-    @include make-col(12);
-    @include make-col-ready;
-    @include media-breakpoint-up(md) {
-    }
-    @include media-breakpoint-up(lg) {
-    }
+         height: 100vh;
+       @include make-col(6);
+       @include make-col-ready;
+   // align-items: center;
+   // display: flex;
+   @include make-col(12);
+   @include make-col-ready;
+   @include media-breakpoint-up(md) {
+   }
+   @include media-breakpoint-up(lg) {
+   }
 }
 
 .expt-vert-box {
-        @include make-col(12);
-        @include make-col-ready;
-    @include media-breakpoint-up(md) {
-    }
-        -ms-transform: translateY(-50%);
-        position: sticky;
-        top: 40%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-    @include media-breakpoint-up(lg) {
-    }
+       @include make-col(12);
+       @include make-col-ready;
+   @include media-breakpoint-up(md) {
+   }
+       -ms-transform: translateY(-50%);
+       position: sticky;
+       top: 40%;
+       transform: translateY(-50%);
+       -webkit-transform: translateY(-50%);
+   @include media-breakpoint-up(lg) {
+   }
 }
 
 //     display: none;
 // .expt-skills::-webkit-scrollbar {
 // }
 .expt-head {
-    @include make-col(12);
-    @include make-col-ready;
-
- 
-    padding-left: 0;
+   @include make-col(12);
+   @include make-col-ready;
 
 
-    // border-top: thin solid $primary;
-    // padding-top: $rvr-3;
+   padding-left: 0;
+
+
+   // border-top: thin solid $primary;
+   // padding-top: $rvr-3;
 }
 
 .expt-head h4 {
-    letter-spacing: .05em;
-    text-transform: uppercase;
+   letter-spacing: .05em;
+   text-transform: uppercase;
 }
 
 .expt-box {
-    margin-bottom: $rvr-2;
+   margin-bottom: $rvr-2;
 
-    @include make-col(6);
-    @include make-col-ready;
-    @include media-breakpoint-up(md) {}
+   @include make-col(6);
+   @include make-col-ready;
+   @include media-breakpoint-up(md) {}
 }
 
 .expt-row, .expt-row * {
-        padding: 0 !important;
-        padding-left: 0;
-        padding-right: 0;
-    @include media-breakpoint-up(md) {
-    }
+       padding: 0 !important;
+       padding-left: 0;
+       padding-right: 0;
+   @include media-breakpoint-up(md) {
+   }
 }
 
 .expt-icon {
-    width: $ms-7;
-    margin-left: -.8em;
+   width: $ms-7;
+   margin-left: -.8em;
 
-    // margin-bottom: $rvr-_25;
+   // margin-bottom: $rvr-_25;
 }
 
 .expt-icon .style-svg {
-    .cls-1, .cls-2 {
-        fill: $tungsten;
-    }
+   .cls-1, .cls-2 {
+       fill: $tungsten;
+   }
 }
 
 .expt-icon .style-svg {
-    width: 5rem;
+   width: 5rem;
 }
 
 .expt-body-text {
@@ -523,30 +522,30 @@ max-width: $ms-9;
 }
 
 .expt-body-text h6 {
-    font-weight: 400;
+   font-weight: 400;
 font-size: $h2-font-size;
 margin-bottom: $rvr-_5;
 margin-top: $rvr-_75;
 }
 
 .expt-text ul {
-    list-style: none;
-    padding: 0;
+   list-style: none;
+   padding: 0;
 }
 
 #exptcontainer h2 {
-    // margin-bottom: $rvr-1;
+   // margin-bottom: $rvr-1;
 }
 
 .exptcontent {
-        @include make-col(12);
-        @include make-col-ready;
-    @include media-breakpoint-up(sm) {
-    }
+       @include make-col(12);
+       @include make-col-ready;
+   @include media-breakpoint-up(sm) {
+   }
 
 
-        @include make-col(4);
-        @include make-col-ready;
-    @include media-breakpoint-up(md) {
-    }
+       @include make-col(4);
+       @include make-col-ready;
+   @include media-breakpoint-up(md) {
+   }
 } */

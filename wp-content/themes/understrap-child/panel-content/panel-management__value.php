@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  content__wrapper my-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__grow" id="grow">
 		<h1>value & substance</h1>
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->

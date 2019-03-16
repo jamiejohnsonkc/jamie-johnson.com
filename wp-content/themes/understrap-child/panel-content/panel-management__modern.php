@@ -8,22 +8,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  content__wrapper my-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__modernize" id="modernize">
 
 		<h1>traditional values, modern methods</h1>
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->
 		<h2>03</h2><!-- COL -->
 		<h3>I <span class="br"><br></span>modernize <br>marketing</h3><!-- COL -->
-		<h4>We used to bring products to market. Today you have to bring the market to you.</h4>
+		<h4>We used to bring products to market. Today you have to bring the market to you. And that requires a whole new approach.</h4>
 		</hgroup>
 		<div class="content-container">
 		<figure class="diagram diagram__modern-marketing">
 			<div class="diagram-content">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/post-digital-diagram.svg" alt="modern marketing diagram" class="modern-marketing-diagram"/>
+				<img src="//localhost:3000/wp-content/uploads/2019/03/modern_marketing_6.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram"/>
 			</div>
 		</figure>
-		<div class="my-value__conclusion my-value__conclusion--background" id="value__conclusion_modernize"><p>Today everything about marketing is changing &mdash;for the better. Yes it's different. Yes it's complicated. It's also more capable, economical and equitable than ever before.</p>
+		<div class="my-value__conclusion my-value__conclusion--background" id="value__conclusion_modernize"><p>Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must find ways to ensure they find you, trust you and pick you.</p>
 	</div>
 </div>
 		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">

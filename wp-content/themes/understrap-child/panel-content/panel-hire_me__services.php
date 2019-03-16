@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  my-expertise skills">
+<article class="article__wrapper  content__wrapper my-expertise skills">
 	<div class="container my-expertise my-expertise__container__skills" id="my-skills">
 	<h1>hire me</h1>
 	<h2>Services</h2>

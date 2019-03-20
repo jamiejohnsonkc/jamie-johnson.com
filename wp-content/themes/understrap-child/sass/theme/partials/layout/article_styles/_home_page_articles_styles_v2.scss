@@ -46,11 +46,11 @@ h1{
     p {
     @extend %display-text-lg;
     }
-p.caption{
+
+    p.caption{
     @extend %display-text-sm;
      letter-spacing: .025em;
-     text-align: justify;
-}
+    }
     
     .link{
         position: relative;
@@ -212,6 +212,8 @@ max-width: 100%;
 /* //////////////////////     panel head module  /////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////*/
 
+
+
 .panel__head{
     display: flex;
     flex-direction: row;
@@ -224,23 +226,26 @@ max-width: 100%;
     padding-right: 0px;
     @include vr($margin-right: 1);
 }
-.panel__head_img > div{
-#Layer_1 > g > g > path{    
-    fill: $primary;
-}
-#Layer_1 > g  > path{    
-    fill: $primary;
-}
-}
-
-
-
 
 .panel__head_headers{
     @include make-col-ready();
     @include make-col(9);
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.panel__hero{}
+
+.panel__subtext{
+@include make-row();
+margin-left: 0px;
+margin-right: 0px;
+width: 100%;
+max-width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+@include vr($padding-left: 0);
 }
 
 
@@ -257,32 +262,19 @@ max-width: 100%;
 .content__block{width: 100%; max-width: 100%;flex: 0 0 auto;}
 
 
-
-// #strengths__panel_wrapper{
-
-// h3{
-//     @extend %subhead-lg;
-// }
-
-// %subhead-lg{
-//     @include vr($font-size: 6, $line-height: 3);
-
-// }
-// }
-
-#strengths__panel_wrapper{
+.strengths__panel_wrapper{
 .panel__head_headers{
    &,
    & h3{
-          @include vr($font-size: 3, $line-height: 2.5);
+          @include vr($font-size: 3, $line-height: 2.5, $margin: 0);
           font-weight: 400;
   
     }
 }
 }
 
-.strengths__content{
 
+.strengths__content{
 @include make-row();
 margin-left: 0px;
 margin-right: 0px;
@@ -290,7 +282,10 @@ width: 100%;
 max-width: 100%;
 flex-wrap: wrap;
 > p{
-    @include vr($margin-bottom: 2, $padding: 0 0 0 2, $line-height: 4);
+    @include vr($margin-bottom: 0);
+}
+%display-text-lg{
+    @include vr($line-height: 2.5);
 }
 }
 
@@ -300,14 +295,18 @@ ul#list__strengths_container{
 }
 
 ul#list__strengths_container>li{
-        @include vr($font-size: 1, $line-height: 1.25,);
+        @include vr($font-size: 1, $line-height: 1.5,);
     }
 
 .list__header{
-        @include vr($font-size: 1, $line-height: 1.5, $margin-bottom: .5, $padding-left: 0);
+        @include vr($font-size: 1, $line-height: 1.5, $margin: 0 0 .5 0, $padding: 0);
+        width: 100%;
+        max-width: 100%;
         font-weight: 400;
         text-transform: uppercase;
+        flex: 0 0 auto;
     }
+
 #strengths__caption{
     @include vr($font-size: 1, $padding-left: 2);
     font-style: italic;
@@ -319,31 +318,111 @@ ul#list__strengths_container>li{
     @include make-col(6);
     padding-left: 0px;
     padding-right: 0px;
-    justify-content: center;
-    background: $primary;
-    color: $white;
-    @include vr($padding: 2 0 2 2);
+    // background: $primary;
+    @include vr($padding: 0 0 0 0);
 }
 
 .strengths__img{
     @include make-col-ready();
-    @include make-col(6);
-    @include vr($padding: 2);  
-    background: $primary;
+    @include make-col(5);
+    // @include vr($padding: 2);  
     padding-left: 0px;
     padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.strengths__icon{ 
+    background: $white;
+    width: 50%;
+    justify-content: center;
+    border-radius: 100%;
     .cls-1, .cls-3{
-        fill: $white;
+        fill: $primary;
     }
 }
 
-.footnote{
-    @include vr($font-size: 0, $padding-left: 2);
+
+.strengths__icon{
+    svg#Layer_1{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.panel__footnote{
+    @include vr($font-size: 0, $padding-left: 0);
     font-style: italic;
     margin-top: 4em;
     margin-left: auto;
     margin-right: 10%;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+
+//strengths panel colors
+
+//strategy marketing management - panel 1
+#strengths__panel_wrapper--smm{
+background: $primary;
+h3, p, ul, li, .list__header, .panel__footnote{
+    color: $white;
+}
+}
+.circle-digit__01 path{
+fill: $white;
+}
+
+//design & development - panel 2
+#strengths__panel_wrapper--dad{
+background: $primary;
+h3, p, ul, li, .list__header, .panel__footnote{
+    color: $white;
+}
+}
+.circle-digit__02 path{
+fill: $white;
+}
+
+//design & development - panel 3
+#strengths__panel_wrapper--opi{
+background: $primary;
+h3, p, ul, li, .list__header, .panel__footnote{
+    color: $white;
+}
+}
+.circle-digit__03 path{
+fill: $white;
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+//strengths layout{
+
+
+@include mq('tablet', $type:max){
+.strengths__panel_wrapper{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+@include vr($padding: 2);
+
+.panel__head        {flex: 0 0 auto; @include vr($margin:3 0 0 0);}
+.panel__hero        {flex: 0 0 auto; @include vr($margin:2 0 2 1); max-width: 42em;}
+.panel__subtext     {flex: 0 0 auto; @include vr($margin:1);}
+.panel__footnote    {flex: 0 0 auto; @include vr($margin:1 0 3 1); max-width: 20em;}
+}
+
+#strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi{
+@include vr($margin: 2 0);
+}
+
+}
+
+
 
 
 
@@ -367,12 +446,16 @@ h3{
 .content__block{}
 h4{}
 h5{
-    @include vr($font-size: 2);
+    @include vr($font-size: 2, $margin: 0 0 4 0);
     letter-spacing: 0;
     font-weight: 400;
 }
 p{} 
 .content__item_col{}
+}
+
+.proof__content{
+@include vr($padding:4);
 }
 
 .proof__item_container{
@@ -387,11 +470,12 @@ p{}
 }
 
 .content__item_caption{
-    padding: 1em;
+    @include vr($padding: 3 3 3 3);
+    border: .25em solid $gray-500;
 }
 h2.proof-intro{
             font-family: $font-family-serif;
-        @include vr($font-size: 4);
+        @include vr($font-size: 4, $margin-bottom: 4);
          color: $primary;
 
 }
@@ -400,6 +484,28 @@ h2.proof-intro, .proof__item_container h5{
     text-align: center;
          
 }
+
+.proof__content_text{
+     @include vr($width: 17);
+@include push-auto();
+}
+
+.proof__content_text p{
+     @extend %display-text-sm;
+     letter-spacing: .025em;
+     em{
+        color: $primary;
+        font-weight: 400;
+     }
+}
+
+.proof__content_text em{
+        @include vr($font-size: 1);
+}
+
+
+
+
 
 
 
@@ -433,12 +539,39 @@ h2.proof-intro, .proof__item_container h5{
 
 
 #proof__content_end2end{
+padding: 6em .25em;}
+
+#proof__you{
+    background: $primary;
+    border-radius: 2em;
+    border: none;
 }
+
 #end2end__diagram_container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: $black;
+    .cls-1, .cls-2{
+        fill: $offwhite;
+    }
+    h5{
+        color: $offwhite;
+    }
 }
+
+    .end2end__diagram_caption{
+        @include vr($font-size:1);
+        color: $offwhite;
+        letter-spacing: .075em;
+
+    }
+
+#barchart{
+    margin-right: -1em;
+}
+
+
 .end2end__diagram_img, .end2end__diagram_img--dollar{
     @include make-col-ready();
     @include make-col(4);
@@ -642,9 +775,11 @@ display: block;
 
 
 #proof__service{}
+
+
 #bell__small{
     svg#Layer_1{
-        fill: $primary;
+        fill: $black;
             width: 20%;
     display: block;
     @include vr($margin: 4 auto 0 auto);
@@ -664,4 +799,32 @@ p.caption{}
 .content__container_row{}
 
 
+
+//////////////////////////////////////////////////////////////////////////
+//proof diagram customization
+#idooutcomes{ 
+& h5 {
+@extend %body-text-lg;
+@include vr($margin-bottom: 2);
+text-style: italic;
+}
+& .caption{
+    max-width: 17em;
+
+}
+}
+
+#proof__you{
+    @include vr($padding: 5);
+    p{
+    text-align: center;
+    margin-bottom: 0;   
+        }
+    h5{
+        text-transform: capitalize;
+        @include vr($margin-bottom: 1);
+        font-family: $font-family-serif;
+        font-style: italic;
+    }
+}
 

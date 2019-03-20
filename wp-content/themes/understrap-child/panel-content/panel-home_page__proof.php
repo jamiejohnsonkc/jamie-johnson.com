@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 	<div class="container home-page__howidoit__container"> -->
 		<article class="article__wrapper content__wrapper home-page home-page__article--proof" id="article__wrapper--proof">
 			<div class="container core content__container_col"  id="article__container--proof">
-				<h1>what sets me apart</h1>
+				<!-- <h1>what sets me apart</h1> -->
 				<h2>Why Me</h2>
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
 				<div class="content__container">
@@ -21,31 +21,39 @@ exit; // Exit if accessed directly.
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
 									</div> -->
 							<h2 class="proof-intro">!</h2>
-							<h5>I do outcomes. Not overhead.</h5>
+						
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p class="caption">It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p class="caption">Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p class="caption"><em> I'm a Marketer.</em></p>
+							<div class="proof__content content__item_caption" id="idooutcomes">
+									<h5>I do outcomes. Not overhead.</h5>
+									<div class="proof__content_text"><p>It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p>Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p><em> I'm a Marketer.</em></p></div>
 							<div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div>
 						</div>
 					</div>
 					<div class="content__item_col proof__item_container" id="proof__content_end2end">
 						<h2 class="proof-intro">@</h2>
-						
-						<div class="content__container_col" id="end2end__diagram_container">
+					
+						<div class="proof__content content__container_col" id="end2end__diagram_container">
+								<h5>From Soup To Nuts</h5>
+							<div class="end2end__diagram_caption">inception</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
+							<div class="end2end__diagram_caption">design</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
+							<div class="end2end__diagram_caption">development</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--equal">&#x3d;</div>
-							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt=""></div>
+							<div class="end2end__diagram_caption">execution</div>
+							<div class="end2end__diagram_img" id="barchart"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt=""></div>
 						</div>
-						<h5>From Soup To Nuts</h5>
+						
 						<p class="caption">I can scheme it, design it and execute it. That lowers cost and improves performance which means more cheddar for you.</p>
 					</div>
 					<div class="content__item_col proof__item_container" id="proof__content_vitae">
 						<h2 class="proof-intro">#</h2>
 						
-						<div class="vitae__stats carousel slide" id="stats-slider" data-interval="false">
+						<div class="proof__content vitae__stats carousel slide" id="stats-slider" data-interval="false">
+								<h5>i've been around</h5>
 							<div class="carousel-inner">
 								<!--
 								<div class="carousel-item active">
@@ -220,9 +228,10 @@ exit; // Exit if accessed directly.
 								<span class="carousel-control-next-icon" aria-hidden="false"></span>
 								<span class="sr-only">Next</span>
 							</a>
+					
 						</div>
-						<h5>i've been around</h5>
-						<p class="caption">Ut id culpa minim commodo officia ut non et sed amet magna cupidatat dolor fugiat est ut id enim.</p>
+						
+						<div class="proof__content_text"><p>Ut id culpa minim commodo officia ut non et sed amet magna cupidatat dolor fugiat est ut id enim.</p></div>
 					</div>
 
 <div class="content__item_col proof__item_container" id="proof__service">
@@ -230,9 +239,11 @@ exit; // Exit if accessed directly.
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
 									</div> -->
 							<h2 class="proof-intro">$</h2>
-							<h5>It's You. Not Me.</h5>
+				
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p class="caption">I believe that professional services should be professional when it comes to their service.</p>
+							<div class="proof__content content__item_caption" id="proof__you">
+											<h5>It's You. Not Me.</h5>
+											<div class="proof__content_text"><p>I believe that professional services should be professional when it comes to their service.</p></div>
 							<div class="content__item_img" id="bell__small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="" class="style-svg"></div>
 						</div>
 					</div>

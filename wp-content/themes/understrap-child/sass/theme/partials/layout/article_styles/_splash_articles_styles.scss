@@ -2,14 +2,13 @@
        @include center-middle();
       padding-left: 0;
       padding-right: 0;
-    
-    h2{
-		@extend %display-text-lg;
-                         color: $primary;
+  h3{
+    @extend %display-text-lg;
+              
                          font-weight: 400;
                          @include vr($width: 25);
 
-	}
+  }
     p {
         @extend %body-text-lg;
         font-style: italic;
@@ -22,7 +21,60 @@
   bottom: 6em;
 
     }
+  %subhead{
+    @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
+    font-weight: 300;
 }
+}
+
+
+.splash__label, .splash__label--emph{
+  @extend %subhead;
+  flex: 0 0 auto;
+}
+
+.splash__label_divider{
+    color: $gray-500;
+    @include vr($padding: 0 1);
+  }
+
+.splash__labels{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+@include mq('tablet'){
+ .splash__labels{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ %subhead{
+  @include vr($font-size: 1);
+ }
+ .splash__label_divider{
+ display: flex;
+ @include vr($padding: 0 1);
+ }
+ }   
+}
+
+
+
+
+  
+
+
+
+#splash__label_label--emph{
+  color: $primary;
+  font-weight: 600;
+}
+
+
+   
  
 #management__splash{
    h1{ 

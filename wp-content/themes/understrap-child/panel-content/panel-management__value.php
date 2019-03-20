@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  content__wrapper my-value"> <!-- CONTAINER -->
+<article class="article__wrapper  contentmy-value"> <!-- CONTAINER -->
 <div class="container business-value my-value__container__grow" id="grow">
 		<h1>value & substance</h1>
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->
 		<h2>02</h2><!-- COL -->
 		<h3>I cultivate <span class="br"><br></span>customer value</h3><!-- COL -->
-		<h4>In today's world the only perception that matters is the customer's.</h4>
+		<h4>The defining characterstic of post-digital is not digital itself, but rather the inversion of dominance in the buyer/seller relationship.</h4><h4> What customers value, how they buy and what they expect from sellers are redefining traditional approaches to marketing.</h4>   
 		</hgroup>
 		<div class="content-container">
 		<figure class="diagram diagram__competitive-advantage">

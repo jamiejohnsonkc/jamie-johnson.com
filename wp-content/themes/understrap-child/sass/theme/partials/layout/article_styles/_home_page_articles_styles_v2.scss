@@ -1,4 +1,17 @@
 // SEE SPLASH ARTCILE STYLES FOR HOME SPLASH SETTINGS */
+/* #home__splash{
+h1:nth-of-type(3){
+color: $primary;
+font-weight: 600;
+}
+h1{
+
+    @include vr($font-size:3, $line-height: 3, $margin: 1.5 auto);
+    font-weight: 400;
+
+}
+} */
+
 
 .core{
    @include left-middle();
@@ -21,7 +34,7 @@
 
     h4{
         @extend %display-text-lg;
-        font-weight: 300;
+        font-weight: 400;
         text-transform: uppercase;
     }
 
@@ -63,9 +76,178 @@ p.caption{
 }
 
 
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////           summary        /////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+#article__container--home-page-summary-intro{ 
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+
+    p{
+        @extend %display-text-lg;
+        }
+    }
+
+.content__item_wrapper{
+    width: 100%;
+    padding: 0;
+}
+
+// #intro__content_home-page-summary{
+//     width: 90%;
+//     @include push-auto();
+// }
+
+.content__item_intro--background{
+    background: $black;
+    color: $white;
+        @include vr($padding: 6 5);
+        height: 60em;
+        h3{
+            @include vr($margin:2 0);
+        }
+}
+
+.section__head{
+display: flex;
+flex-direction: row;
+@include make-row();
+margin-left: 0px;
+margin-right: 0px;
+width: 100%;
+max-width: 100%;
+
+}
+
+.section__head_headers{
+    width: 90%;
+    max-width: 90%;
+    flex: 0 0 auto;
+}
+
+
+
+.intro__icons{
+    width: 9%;
+    max-width: 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2em;
+}
+
+
+.content__intro_icon--background{
+   @include make-col-ready();
+   width: 100%;
+   max-width: 100%;
+   padding-left: 0px;
+   padding-right: 0px;
+   border-radius: 100%;
+    background: $gray-500;
+      @include vr($margin: .75 0);
+    }
+
+.intro__icon--rocket, .intro__icon--conversation{
+        .cls-1{
+            fill: black;
+        }
+    }
+
+
+
+   .content__item_intro--content{
+     width: 100%;
+     background: $gray-300;
+     @include vr($padding:0 2);
+}
+    
+
+    .content__item_internal-wrapper{
+        background: $white;
+        @include vr($padding: 3);
+        border-radius: 3em;
+        margin-top: -16em;
+        margin-bottom: -16em;
+        border: thin solid $gray-400;
+
+        // margin-top: -4em;
+    }
+
+
+.content__item_content--para{
+    @include vr($margin: 4 0);
+    h2{
+        letter-spacing: -.2rem;
+    }
+    > h4{
+        @include vr($font-size: 2, $margin-bottom: 1);
+        text-transform: lowercase;
+        font-weight: 400;
+    }
+/*     %subhead{
+    @include vr($font-size: 4, $margin: 4 0 3 0);
+    font-weight: 600;
+    letter-spacing: -.025em;
+    // color: $primary;
+} */
+
+    %display-text-lg{
+        @include vr($margin-bottom:2, $width: 25, $line-height:2.5);
+    }
+}
+    // %display-text-sm{
+    //             @include vr($line-height: 2);
+    // }
+
+#home-page__intro_h3{
+ @include vr($font-size: 3, $line-height: 2.5, $margin: 4 0 4 0);
+ letter-spacing: -.05rem;
+ color: $primary;
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////            proof        /////////////////////////// */
+/* //////////////////////     panel head module  /////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+
+.panel__head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.panel__head_img{
+    @include make-col-ready();
+    @include make-col(2);
+    padding-left: 0px;
+    padding-right: 0px;
+    @include vr($margin-right: 1);
+}
+.panel__head_img > div{
+#Layer_1 > g > g > path{    
+    fill: $primary;
+}
+#Layer_1 > g  > path{    
+    fill: $primary;
+}
+}
+
+
+
+
+.panel__head_headers{
+    @include make-col-ready();
+    @include make-col(9);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////           strengths      /////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////*/
 //container styles
 .content__container_row{display: flex; flex-direction: row;}
@@ -75,66 +257,101 @@ p.caption{
 .content__block{width: 100%; max-width: 100%;flex: 0 0 auto;}
 
 
-#article__container--strategy{
-h3{
-    @extend %subhead-lg;
+
+// #strengths__panel_wrapper{
+
+// h3{
+//     @extend %subhead-lg;
+// }
+
+// %subhead-lg{
+//     @include vr($font-size: 6, $line-height: 3);
+
+// }
+// }
+
+#strengths__panel_wrapper{
+.panel__head_headers{
+   &,
+   & h3{
+          @include vr($font-size: 3, $line-height: 2.5);
+          font-weight: 400;
+  
+    }
 }
 }
-.strategy__content{
+
+.strengths__content{
 
 @include make-row();
 margin-left: 0px;
 margin-right: 0px;
 width: 100%;
 max-width: 100%;
+flex-wrap: wrap;
+> p{
+    @include vr($margin-bottom: 2, $padding: 0 0 0 2, $line-height: 4);
+}
 }
 
-ul#list__strategy_container{
-    @include vr($padding-left: 2, $margin-top: 0);
+ul#list__strengths_container{
+    @include vr($padding-left: 0, $margin-top: 0);
     list-style: none;
 }
 
-ul#list__strategy_container>li{
-        @include vr($font-size: 1, $line-height: 2);
+ul#list__strengths_container>li{
+        @include vr($font-size: 1, $line-height: 1.25,);
     }
 
 .list__header{
-        @include vr($font-size: 1, $line-height: 1.5, $margin-bottom: 1, $padding-left: 2);
+        @include vr($font-size: 1, $line-height: 1.5, $margin-bottom: .5, $padding-left: 0);
         font-weight: 400;
         text-transform: uppercase;
     }
-#strategy__caption{
+#strengths__caption{
     @include vr($font-size: 1, $padding-left: 2);
     font-style: italic;
     font-family: $font-family-serif;
 }
 
-.strategy__copy{
+.strengths__copy{
     @include make-col-ready();
-    @include make-col(5);
+    @include make-col(6);
     padding-left: 0px;
     padding-right: 0px;
     justify-content: center;
+    background: $primary;
+    color: $white;
+    @include vr($padding: 2 0 2 2);
 }
-.strategy__img{
+
+.strengths__img{
     @include make-col-ready();
-    @include make-col(7);
+    @include make-col(6);
+    @include vr($padding: 2);  
+    background: $primary;
     padding-left: 0px;
     padding-right: 0px;
     .cls-1, .cls-3{
-        fill: $primary;
+        fill: $white;
     }
 }
 
 .footnote{
-    @include vr($font-size: 0);
+    @include vr($font-size: 0, $padding-left: 2);
     font-style: italic;
     margin-top: 4em;
     margin-left: auto;
     margin-right: 10%;
 }
 
-//container artcile styles
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////            proof        /////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+
+//container article styles
 #article__container--proof{
 
 h2{

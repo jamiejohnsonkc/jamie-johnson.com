@@ -9,7 +9,6 @@
    height: 100vh;
 
     h1 {
-        margin-top: auto;
         flex: 0 0 auto;
         @extend %title;
     }
@@ -27,7 +26,7 @@
 
     p {
         flex: 0 0 auto;
-        margin-bottom: auto;
+
               @extend %body-text-lg;
 
     }

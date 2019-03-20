@@ -12,8 +12,8 @@ exit; // Exit if accessed directly.
 	<div class="container home-page__howidoit__container"> -->
 		<article class="article__wrapper content__wrapper management" id="article__wrapper--management-intro">
 			<div class="container summary content__container_col"  id="article__container--management-intro">
-				<h1>I suggest you make money, not overhead.</h1>
-				<h2>It's not about what you could do. It's what you need to do.</h2>
+				<h1>I make sure marketing works</h1>
+				<h2>I suggest you make money, not overhead.</h2>
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
 				<div class="content__container">
 						<div class="content__item_col intro" id="intro__content_management">
@@ -21,15 +21,15 @@ exit; // Exit if accessed directly.
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
 									</div> -->
 					<!-- 		<h2 class="proof-intro">!</h2> -->
-							<h3>Effective marketing begins and ends with solid objectives, insight, strategy and measurement.</h3>
+							<h3>I'm all about creativity and technology, but none of it matters if it doesn't make the cash register ring.</h3>
+
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p>I'm all about creativity and technology, but none of it matters if it doesn't create customers.</p>
-								<p>Strategic Marketing Management is the framework that points creativity and technology in the right direction.</p>
+							<div class="content__item_caption"><p>I help brands develop the strategic frameworks, assets and direction high performance marketing programs rely on.</p>
 							<!-- <div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div> -->
 						<div class="intro__list" id="intro__list--management"><h4>My approach to marketing management emphasizes four critical areas:</h4>
 						<ol>
 							<li><a href="/">business outcomes</a></li>
-							<li><a href="/">customer value</a></li>
+							<li><a href="/">superior competitive value</a></li>
 							<li><a href="/">effective methodology</a></li>
 							<li><a href="/">strategic continuity</a></li>
 						</ol>

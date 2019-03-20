@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 <!-- <article class="article__wrapper  basic home-page home-page__howidoit">
 	<div class="container home-page__howidoit__container"> -->
-		<article class="article__wrapper  home-page home-page__article--proof" id="article__wrapper--proof">
+		<article class="article__wrapper content__wrapper home-page home-page__article--proof" id="article__wrapper--proof">
 			<div class="container core content__container_col"  id="article__container--proof">
 				<h1>what sets me apart</h1>
 				<h2>Why Me</h2>

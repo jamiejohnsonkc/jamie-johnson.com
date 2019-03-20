@@ -15,7 +15,7 @@ exit; // Exit if accessed directly.
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->
 		<h2>01</h2><!-- COL -->
 		<h3>I pursue <br>business outcomes</h3><!-- COL -->
-		<h4>The purpose of marketing is to improve your business &mdash; not just creating "stuff".</h4>
+		<h4>The purpose of marketing is to improve your business &mdash; not just to create "stuff". Every marketing investment should tie back to a specific objective. Otherwise you're just spending.</h4>
 		</hgroup>
 		<figure class="diagram diagram__objectives" id="objectives__diagram">
 			<div class="diagram__content_container">

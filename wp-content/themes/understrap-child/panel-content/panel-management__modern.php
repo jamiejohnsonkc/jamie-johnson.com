@@ -23,7 +23,7 @@ exit; // Exit if accessed directly.
 				<img src="//localhost:3000/wp-content/uploads/2019/03/modern_marketing_6.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram"/>
 			</div>
 		</figure>
-		<div class="my-value__conclusion my-value__conclusion--background" id="value__conclusion_modernize"><p>Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must find ways to ensure they find you, trust you and pick you.</p>
+		<div class="my-value__conclusion my-value__conclusion--background" id="value__conclusion_modernize"><p>Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must ensure customers find you, trust you and, most importantly, you deliver as promised after the sale.</p>
 	</div>
 </div>
 		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">

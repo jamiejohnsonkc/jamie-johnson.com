@@ -21,9 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'panel-content/panel', 'management__value' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'management__modern' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'management__optimize' ); ?>
-			
-			
-			<?php get_template_part( 'panel-management__cta' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'management__cta' ); ?>
 		</section>
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->

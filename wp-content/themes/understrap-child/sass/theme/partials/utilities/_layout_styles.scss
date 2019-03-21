@@ -1,0 +1,160 @@
+// ==========================================================================
+// small screen article spacing
+// ==========================================================================
+
+//sections
+#section__my-value{}
+#section__home-page{}
+#section__why-me{}
+#section__my-expertise{}
+#section__about-me{}
+
+
+
+@include mq('tablet', $type:max){
+    .content__wrapper{
+        margin: 12em auto;
+    }
+    .link{
+        @include vr($margin: 6 auto 2 auto);
+    }
+    .summary h1, .business-value h1{
+        @include vr($margin-bottom: 6);
+    }
+
+    #management__splash h1{
+        margin-bottom: 2em;
+    }
+
+}
+
+//core = homepage  alternate = why - me
+@media (max-width: 48em){
+.core, .my-value, .why-me, .alternate{
+}
+}
+
+
+
+//compensation for smaller mobile/tablets when in landscape mode
+@media only screen and (max-height: 25em){
+    .splash{
+        min-height: 600px;
+        height: unset;
+    }
+    .core{
+        height: unset;
+    }
+     .container{
+    width: 90%;
+    }
+    #wrapper__whatido{
+        height: unset;
+    }
+
+    }
+
+@media only screen and (max-width: 40em) and (max-height: 25em){
+    #my-brains{
+        width: 45%;
+        left: 55%;
+    }
+}    
+
+
+
+// ==========================================================================
+// home
+// ==========================================================================
+.core{
+
+
+
+@include mq('phone'){}
+@include mq('phone-wide'){
+ 
+}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+@include mq('tablet'){
+
+}
+@include mq('tablet-wide'){}
+@include mq('desktop'){
+}
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+}
+
+.core{
+ h1{flex: 0 0 auto;}
+ h2{flex: 0 0 auto;}
+ h3{flex: 0 0 auto;}
+ .content-container{flex: 0 0 auto;}
+ .link{flex: 0 0 0;}
+
+}
+
+// ==========================================================================
+// my value
+// ==========================================================================
+
+#objectives{
+@include mq('tablet-wide'){
+    height: 80vh;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+h1{flex: 1 0 auto;}
+.page__header{flex: 0 0 auto;}
+.diagram {flex: 0 0 auto; margin: 4rem auto;}
+.my-value__conclusion{flex: 1 0 auto;} 
+a{flex: 0 0 auto; align-self: center;}
+
+}
+}
+
+
+#grow{
+
+@include mq('tablet-wide'){
+height: 80vh;
+.diagram, .my-value__conclusion{ height: 50vh; }   
+}   
+}
+
+#modernize{
+@include mq('tablet-wide'){
+    height: 80vh;
+}
+}
+
+#optimize{
+@include mq('tablet-wide'){
+    height: 80vh;
+}
+}
+
+#cta__value{
+height: 100vh;
+}
+
+// ==========================================================================
+// expertise
+// ==========================================================================
+
+
+
+// ==========================================================================
+// why me
+// ==========================================================================
+
+.why-me__categories_content{
+    margin-bottom: 2rem;
+}
+// ==========================================================================
+// contact
+// ==========================================================================
+
+

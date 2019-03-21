@@ -45,9 +45,10 @@ exit; // Exit if accessed directly.
 							<div class="end2end__diagram_img--equal">&#x3d;</div>
 							<div class="end2end__diagram_caption">execution</div>
 							<div class="end2end__diagram_img" id="barchart"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt=""></div>
+						<div class="proof__content_text"><p>I can scheme it, design it and execute it. That lowers cost and improves performance which means more cheddar for you.</p></div>
 						</div>
 						
-						<p class="caption">I can scheme it, design it and execute it. That lowers cost and improves performance which means more cheddar for you.</p>
+						
 					</div>
 					<div class="content__item_col proof__item_container" id="proof__content_vitae">
 						<h2 class="proof-intro">#</h2>

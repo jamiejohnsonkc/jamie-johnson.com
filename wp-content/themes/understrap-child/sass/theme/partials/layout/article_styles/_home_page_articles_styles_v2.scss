@@ -555,13 +555,19 @@ padding: 6em .25em;}
     .cls-1, .cls-2{
         fill: $offwhite;
     }
-    h5{
+    h5, p{
         color: $offwhite;
     }
+    .proof__content_text{
+        width: 100%;
+        @include vr($width: 24, $margin-top:2);
+        text-align: center;
+    }
+
 }
 
     .end2end__diagram_caption{
-        @include vr($font-size:1);
+        @include vr($font-size:1, $margin-bottom: 0);
         color: $offwhite;
         letter-spacing: .075em;
 
@@ -576,7 +582,7 @@ padding: 6em .25em;}
     @include make-col-ready();
     @include make-col(4);
     svg#Layer_1{
-        width: 80%;
+        width: 70%;
          display: block;
         @include push-auto();
     }
@@ -728,8 +734,8 @@ display: block;
     .stats-caption h6{
           @include vr($font-size: 1, $margin-bottom: 0, $margin-top: 0, $line-height: 1.25);
           @include push-auto();
-          font-weight: 400;
-           color: $gray-600;
+          font-weight: 300;
+           color: $gray-800;
           letter-spacing: .03em;
     }
 

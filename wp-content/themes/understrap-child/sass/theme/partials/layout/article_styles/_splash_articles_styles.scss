@@ -4,7 +4,7 @@
 
 .splash{
     h1 {
-        @extend %title;
+        @extend %title-lg;
     }
     h2 { 
         @extend %subhead-lg;
@@ -31,13 +31,13 @@
     @extend %display-text-lg;
               
                          font-weight: 400;
-                         @include vr($width: 25);
+                    
 
   }
     p {
         @extend %body-text-lg;
         font-style: italic;
-                    @include vr($width: 23);
+                    @include vr($line-height: 3);
     }
     .link{
        position: absolute;
@@ -48,18 +48,20 @@
     }
   %subhead{
     @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
-    font-weight: 300;
-}
+    font-weight: 300;}
 }
 
 
 .splash__label, .splash__label--emph{
-  @extend %subhead;
+  @extend %sublist-sm;
   flex: 0 0 auto;
 }
 
 .splash__label_divider{
     color: $gray-500;
+    @include mq('phone-wide', $type:max){
+    @include vr($padding: 0 .5);
+    }
     @include vr($padding: 0 1);
   }
 
@@ -86,16 +88,21 @@
  }   
 }
 
-
-
-
-  
-
-
-
 #splash__label_label--emph{
   color: $primary;
-  font-weight: 600;
+}
+
+
+// ==========================================================================
+// services splash
+// ==========================================================================
+
+
+#services__splash{
+h2{ @extend %subhead-sm}  
+%subhead-sm{@include vr($margin-bottom: 0);}
+h3{ @extend %sublist-sm;}
+%sublist-sm{@include vr($margin-top: 0); font-weight: 200;}
 }
 
 

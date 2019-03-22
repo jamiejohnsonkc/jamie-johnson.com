@@ -1,18 +1,66 @@
-%title			       { @include vr( $font-size: 5, $line-height: 5);}       
-%headline		       { @include vr( $font-size: 4,  );}
-%subhead-lg            { @include vr( $font-size: 3,  );}
-%sublist-lg            { @include vr( $font-size: 3,  );}
-%subhead 		       { @include vr( $font-size: 2,  );}
-%sublist 		       { @include vr( $font-size: 2,  );}
-%display-text-lg       { @include vr( $font-size: 2, $line-height: 2);}
-%display-text          { @include vr( $font-size: 1, $line-height: 2);}
-%display-text-sm       { @include vr( $font-size: 1, $line-height: 2);}k
-%body-text-lg          { @include vr( $font-size: 2,  );}
-%body-text             { @include vr( $font-size: 1,  );}
-%para                  { @include vr( $font-size: 0,  );}
-%lead                  { @include vr( $font-size: 1,  );}
-%list-item-lg 		   { @include vr( $font-size: 2,  );}
-%list-item 			   { @include vr( $font-size: 1,  );}
+%title-lg       {@include vr($font-size:60px, $margin: 2 0);}
+%headline-lg    {@include vr($font-size:48px, $margin: 2 0);}
+%subhead-lg     {@include vr($font-size:36px, $margin: 2 0);}
+%sublist-lg     {@include vr($font-size:36px, $margin: 2 0);}
+%display-text-lg{@include vr($font-size:28px, $margin: 2 0);}
+%list-head-lg   {@include vr($font-size:20px);}
+%list-item-lg   {@include vr($font-size:16px, $margin-bottom: 1, $line-height: 1.5);}
+%body-text-lg   {@include vr($font-size:24px, $margin: 1.5 0);}
+%para-head-lg 	{@include vr($font-size:18px, $margin-bottom: .5);}
+%para-lg        {@include vr($font-size:18px, $margin-bottom: 1);}
+%caption-lg     {@include vr($font-size:14px, $line-height:1.25);}
+%legal-lg       {@include vr($font-size:10px);}
+
+%title          {@include vr($font-size:48px, $margin: 2 0);}
+%headline       {@include vr($font-size:38.5px, $margin: 2 0);}
+%subhead        {@include vr($font-size:28.85px, $margin: 2 0);}
+
+%sublist        {@include vr($font-size:28.85px, $margin: 2 0);}
+
+%display-text   {@include vr($font-size:22.5px, $margin: 2 0);}
+
+%list-head      {@include vr($font-size:13px);}
+%list-item      {@include vr($font-size:10px, $margin-bottom: .25, $line-height: 1.5);}  
+%body-text      {@include vr($font-size:14.5px, $margin: 1.5 0);}
+%para-head      {@include vr($font-size:14.5px, $margin-bottom: .5);}  
+%para           {@include vr($font-size:14.5px, $margin-bottom: 1);}  
+%caption        {@include vr($font-size:13px, $line-height:1.25);}   
+%legal          {@include vr($font-size:8px);}
+
+
+%sublist-sm     {@include vr($font-size:10px, $margin: 1 0);}
+%subhead-sm     {@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
+%display-text-sm{@include vr($font-size:16px, $margin: 2 0);}
+%caption-sm        {@include vr($font-size:10px, $line-height:1.25);}  
+
+// %title-sm       {@include vr($font-size:1);}
+// %headline-sm    {@include vr($font-size:1);}
+// %subhead-sm     {@include vr($font-size:1);}
+// %sublist-sm     {@include vr($font-size:1);}
+// %display-text-sm{@include vr($font-size:1);}
+// %list-head-sm   {@include vr($font-size:1);}
+// %list-item-sm   {@include vr($font-size:1);}
+// %body-text-sm   {@include vr($font-size:1);}
+// %para-sm        {@include vr($font-size:1);}
+// %caption-sm     {@include vr($font-size:1);}
+// %legal-sm       {@include vr($font-size:1);}
+
+
+// %title			       { @include vr( $font-size: 5, $line-height: 5);}       
+// %headline		       { @include vr( $font-size: 4,  );}
+// %subhead-lg            { @include vr( $font-size: 3,  );}
+// %sublist-lg            { @include vr( $font-size: 3,  );}
+// %subhead 		       { @include vr( $font-size: 2,  );}
+// %sublist 		       { @include vr( $font-size: 2,  );}
+// %display-text-lg       { @include vr( $font-size: 2, $line-height: 1.5);}
+// %display-text          { @include vr( $font-size: 1, $line-height: 1.5);}
+// %display-text-sm       { @include vr( $font-size: 1, $line-height: 2);}k
+// %body-text-lg          { @include vr( $font-size: 2,  );}
+// %body-text             { @include vr( $font-size: 1,  );}
+// %para                  { @include vr( $font-size: 0,  );}
+// %lead                  { @include vr( $font-size: 1,  );}
+// %list-item-lg 		   { @include vr( $font-size: 2,  );}
+// %list-item 			   { @include vr( $font-size: 1,  );}
 
 /* %figure-head-lg						{ @include vr( $font-size: 1.5, $line-height: 1.5, $margin-bottom: null,);}		
 	%figure-text-lg						{ @include vr( $font-size: 1, $line-height: 1);}	 */	
@@ -39,26 +87,26 @@ a.link__advance--text      		    {}
 a.link__advance--chevron   		    { margin-bottom: 2rem;} */
 
 
-@include mq('phone')            {}	
-@include mq('phone-wide')       {}	
-@include mq('phablet')          {}	
-@include mq('tablet-small')     {}	
-@include mq('tablet')           {}	
-@include mq('tablet-wide')      {
-%headline						{ @include vr( $font-size: 8,); }
-%display-text-lg                { @include vr( $font-size: 4,); }
-}	
-@include mq('desktop'){
+// @include mq('phone')            {}	
+// @include mq('phone-wide')       {}	
+// @include mq('phablet')          {}	
+// @include mq('tablet-small')     {}	
+// @include mq('tablet')           {}	
+// @include mq('tablet-wide')      {
+// %headline						{ @include vr( $font-size: 8,); }
+// %display-text-lg                { @include vr( $font-size: 4,); }
+// }	
+// @include mq('desktop'){
 
-}	
-@include mq('desktop-wide')     {}	
-@include mq('desktop-xl')       {
-%headline						{ @include vr( $font-size: 6,); }
-%subhead						{ @include vr( $font-size: 4,); }	
-%display-text-lg                { @include vr( $font-size: 3,); }
-%body-text-lg                   { @include vr( $font-size: 3,); }
-}	
-@include mq('desktop-xxl')      {
+// }	
+// @include mq('desktop-wide')     {}	
+// @include mq('desktop-xl')       {
+// %headline						{ @include vr( $font-size: 6,); }
+// %subhead						{ @include vr( $font-size: 4,); }	
+// %display-text-lg                { @include vr( $font-size: 3,); }
+// %body-text-lg                   { @include vr( $font-size: 3,); }
+// }	
+// @include mq('desktop-xxl')      {
 
-}	
+// }	
 

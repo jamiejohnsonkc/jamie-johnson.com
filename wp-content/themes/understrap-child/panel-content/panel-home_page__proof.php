@@ -24,7 +24,7 @@ exit; // Exit if accessed directly.
 						
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
 							<div class="proof__content content__item_caption" id="idooutcomes">
-									<h5>I do outcomes. Not overhead.</h5>
+									<h5>I do outcomes. <span class="br"><br></span>Not overhead.</h5>
 									<div class="proof__content_text"><p>It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p>Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p><em> I'm a Marketer.</em></p></div>
 							<div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div>
 						</div>
@@ -34,10 +34,10 @@ exit; // Exit if accessed directly.
 					
 						<div class="proof__content content__container_col" id="end2end__diagram_container">
 								<h5>From Soup To Nuts</h5>
-							<div class="end2end__diagram_caption">inception</div>
+							<div class="end2end__diagram_caption">challenge</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
-							<div class="end2end__diagram_caption">design</div>
+							<div class="end2end__diagram_caption">solution</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
 							<div class="end2end__diagram_caption">development</div>

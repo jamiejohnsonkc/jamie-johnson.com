@@ -8,11 +8,7 @@
 #section__why-me { }
 #section__my-expertise { }
 #section__about-me { }
-@include mq('tablet', $type:max) { .content__wrapper { margin: 12em auto; }
-    .link { @include vr($margin: 6 auto 2 auto); }
-    .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
-    #management__splash h1 { margin-bottom: 2em; }
-}
+
 //core = homepage  alternate = why - me
 @media (max-width:48em) {
     .core, .my-value, .why-me, .alternate { }
@@ -42,7 +38,7 @@
 // ==========================================================================
 // home page articles
 // ==========================================================================
-.core { @include mq('phone') { }
+@include mq('phone') { }
     @include mq('phone-wide') { }
     @include mq('phablet') { }
     @include mq('tablet-small') { }
@@ -52,7 +48,6 @@
     @include mq('desktop-wide') { }
     @include mq('desktop-xl') { }
     @include mq('desktop-xxl') { }
-}
 .core { 
     h1 { flex: 0 0 auto; }
     h2 { flex: 0 0 auto; }
@@ -60,6 +55,40 @@
     .content-container { flex: 0 0 auto; }
     .link { flex: 0 0 0; }
 }
+
+
+#idooutcomes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h5{ flex: 0 0 auto; position: relative; z-index: 2;}
+    .proof__content_text{ flex: 0 0 auto; position: relative; z-index: 2;}
+    .br{
+        display: block;
+    }
+}
+
+#evo2small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+// ==========================================================================
+// services articles
+// ==========================================================================
+
+/////// small screen adjustments
+@include mq('tablet', $type:max) { 
+    .content__wrapper { margin: 12em auto; }
+    .link { @include vr($margin: 6 auto 2 auto); }
+    .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
+}
+
+
 .article__head { 
     h1 { flex: 0 0 auto; }
     h2 { flex: 0 0 auto; }
@@ -67,11 +96,6 @@
     .content-container {flex: 0 0 auto; }
     .link { flex: 0 0 0; }
 }
-// ==========================================================================
-// services articles
-// ==========================================================================
-
-
 
 
 
@@ -85,7 +109,10 @@
 // my value
 // ==========================================================================
 
-#objectives { @include mq('tablet-wide') { height: 80vh; justify-content: space-around; display: flex; flex-direction: column;
+#objectives { 
+@include mq('tablet-wide') { 
+    
+    height: 80vh; justify-content: space-around; display: flex; flex-direction: column;
         h1 { flex: 1 0 auto; }
         .page__header { flex: 0 0 auto; }
         .diagram { flex: 0 0 auto; margin: 4rem auto; }
@@ -93,8 +120,10 @@
         a { flex: 0 0 auto; align-self: center; }
     }
 }
-#grow { @include mq('tablet-wide') { height: 80vh;
-        .diagram, .my-value__conclusion { height: 50vh; }
+#grow { 
+    @include mq('tablet-wide') {
+     height: 80vh;
+    .diagram, .my-value__conclusion { height: 50vh; }
     }
 }
 #modernize { @include mq('tablet-wide') { height: 80vh; }

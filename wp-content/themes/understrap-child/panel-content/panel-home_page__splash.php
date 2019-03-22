@@ -20,13 +20,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="splash__labels">
 
 <div class="splash__label splash__label_label">strategist</div>
-<div class="splash__label splash__label_divider">|</div>
+<div class="splash__label splash__label_divider">&#x000B7</div>
 <div class="splash__label splash__label_label">manager</div>
-<div class="splash__label splash__label_divider">|</div>
+<div class="splash__label splash__label_divider">&#x000B7</div>
 <div class="splash__label splash__label_label">designer</div>
-<div class="splash__label splash__label_divider">| </div>
+<div class="splash__label splash__label_divider">&#x000B7 </div>
 <div class="splash__label splash__label_label">developer</div>
-<div class="splash__label splash__label_divider">| </div>
+<div class="splash__label splash__label_divider">&#x000B7</div>
 <div class="splash__label splash__label_label" id="splash__label_label--emph">marketer</div>
 </div>
 	<p>I fuse strategy, marketing, technology and design to achieve business outcomes.</p>

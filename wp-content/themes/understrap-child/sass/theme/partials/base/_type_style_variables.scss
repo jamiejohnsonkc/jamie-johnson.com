@@ -14,7 +14,7 @@ font-weight:        unset;
 
 }
 
-%title{
+%title, %title-lg, %title-sm{
 
 font-family:        $headline-font-family;
 color:              $headline-color;        
@@ -22,7 +22,7 @@ font-weight:        600;
 
 }
 
-%headline{
+%headline,%headline-lg,%headline-sm{
 
 font-family:        $headline-font-family;
 color:              $headline-color;       
@@ -31,7 +31,7 @@ font-weight:        $headline-font-weight;
 
 }
 
-%subhead, %subhead-lg{
+%subhead,%subhead-lg,%subhead-sm{
 
 font-family:        $subhead-font-family;
 color:              $subhead-color;        
@@ -39,7 +39,7 @@ font-weight:        $subhead-font-weight;
                     
 }
 
-%sublist, %sublist-lg{
+%sublist, %sublist-lg, %sublist-sm{
 
 font-family:        $subhead-font-family;
 color:              $subhead-color;        
@@ -47,7 +47,7 @@ font-weight:        $subhead-font-weight;
 
 }
 
-%display-text, %display-text-lg, %display-text-sm, %figure-head-lg, %figure-text-lg{
+%display-text, %display-text-lg, %display-text-sm, %figure-head,%figure-head-lg,%figure-head-sm, %figure-text, %figure-text-lg, %figure-text-sm{
 
 font-family:        $display-text-font-family;
 color:              $display-text-color;        
@@ -55,7 +55,7 @@ font-weight:        300;
 
 }
 
-%body-text, %body-text-lg {
+%body-text, %body-text-lg, %body-text-sm {
 
 font-family:        $body-text-font-family;
 color:              $body-text-color;        
@@ -63,17 +63,40 @@ font-weight:        $body-text-font-weight;
 
 }
 
+%para-head, %para-head-lg, %para-head-sm{
+font-family:        $font-family-sans-serif;
+font-weight: 		400;
+}
 
-
-%para{
+%para, %para-lg, %para-sm{
 font-family:        $font-family-serif;
 }
 
 
-%caption{
-font-family:        $subhead-font-family;
+
+%list-head, %list-head-lg, %list-head-sm{
+font-family:        $display-text-font-family;
+color:              $display-text-color;        
+font-weight:        300;	
+}
+%list-item, %list-item-lg, %list-item-sm{
+font-family:        $display-text-font-family;
+color:              $display-text-color;        
+font-weight:        300;	
+}
+
+
+%caption, %caption-lg, %caption-sm{
+font-family:        $font-family-monospace;
 color:              $subhead-color;        
-font-weight:        $subhead-font-weight;
+font-weight:        300;
+}
+
+
+%legal, %legal-lg, %legal-sm{
+font-family:        $font-family-monospace;
+color:              $subhead-color;        
+// font-weight:        200;
 }
 
 .nav-link{

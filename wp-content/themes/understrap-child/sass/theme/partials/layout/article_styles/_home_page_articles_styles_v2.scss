@@ -13,6 +13,156 @@ h1{
 } */
 
 
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////           summary        /////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+#article__container--home-page-summary-intro{ 
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+
+    // p{
+    //     @extend %display-text-lg;
+    //     }
+    }
+
+.content__item_wrapper{
+    width: 100%;
+    padding: 0;
+}
+
+// #intro__content_home-page-summary{
+//     width: 90%;
+//     @include push-auto();
+// }
+
+.content__item_intro--background{
+    background: $black;
+    color: $white;
+        @include vr($padding: 8 3);        
+}
+
+.section__head{
+display: flex;
+flex-direction: column;
+@include make-row();
+margin-left: 0px;
+margin-right: 0px;
+width: 100%;
+max-width: 100%;
+
+}
+
+.section__head_headers{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    text-align: center;
+h2{
+    @extend %headline;
+}
+h3{
+    @extend %subhead-sm;
+}
+p{
+    @extend %display-text-sm;
+}
+}
+
+
+
+
+
+.intro__icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // padding-top: 2em;
+}
+
+.intro__icon_wrapper{
+     @include vr($margin: 4 0);
+     width: 20%;
+   max-width: 20%;
+}
+
+.content__intro_icon--background{
+   @include make-col-ready();
+  
+   padding-left: 0px;
+   padding-right: 0px;
+   border-radius: 100%;
+    background: $gray-500;
+      @include vr($margin: .75 0);
+    }
+
+.intro__icon--rocket, .intro__icon--conversation, .intro__icon--fish{
+        .cls-1{
+            fill: black;
+        }
+    }
+
+.intro__icon_caption{
+    @extend %caption;
+}
+
+   .content__item_intro--content{
+     width: 100%;
+     background: $gray-300;
+     @include vr($padding:0 1);
+}
+    
+
+    .content__item_internal-wrapper{
+        background: $white;
+        @include vr($padding: 1 3);
+        border-radius: .25em;
+        margin-top: -10em;
+        margin-bottom: -16em;
+        border: thin solid $gray-400;
+
+        // margin-top: -4em;
+    }
+
+
+.content__item_content--para{
+    @include vr($margin: 2 0);
+    h2{
+    @extend %subhead;
+    }
+    > h4{
+        @include vr($font-size: 2, $margin-bottom: 1);
+        text-transform: lowercase;
+        font-weight: 400;
+    }
+/*     %subhead{
+    @include vr($font-size: 4, $margin: 4 0 3 0);
+    font-weight: 600;
+    letter-spacing: -.025em;
+    // color: $primary;
+} */
+
+    // %display-text-lg{
+    //     @include vr($margin-bottom:2, $line-height:2.5);
+    // }
+}
+    // %display-text-sm{
+    //             @include vr($line-height: 2);
+    // }
+
+// #home-page__intro_h3{
+// @extend %sublist;
+//  letter-spacing: -.05rem;
+//  color: $primary;
+// }
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////     .core / homepage articles  /////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+
+
 .core{
    @include left-middle();
    @include split-rows();
@@ -44,7 +194,7 @@ h1{
         letter-spacing: .05em;
     }
     p {
-    @extend %display-text-lg;
+    @extend %display-text-sm
     }
 
     p.caption{
@@ -74,140 +224,6 @@ h1{
     @include split-cols();
 }
 }
-
-
-/* ////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////           summary        /////////////////////////// */
-/* ///////////////////////////////////////////////////////////////////////////*/
-#article__container--home-page-summary-intro{ 
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-
-    p{
-        @extend %display-text-lg;
-        }
-    }
-
-.content__item_wrapper{
-    width: 100%;
-    padding: 0;
-}
-
-// #intro__content_home-page-summary{
-//     width: 90%;
-//     @include push-auto();
-// }
-
-.content__item_intro--background{
-    background: $black;
-    color: $white;
-        @include vr($padding: 6 5);
-        height: 60em;
-        h3{
-            @include vr($margin:2 0);
-        }
-}
-
-.section__head{
-display: flex;
-flex-direction: row;
-@include make-row();
-margin-left: 0px;
-margin-right: 0px;
-width: 100%;
-max-width: 100%;
-
-}
-
-.section__head_headers{
-    width: 90%;
-    max-width: 90%;
-    flex: 0 0 auto;
-}
-
-
-
-.intro__icons{
-    width: 9%;
-    max-width: 9%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 2em;
-}
-
-
-.content__intro_icon--background{
-   @include make-col-ready();
-   width: 100%;
-   max-width: 100%;
-   padding-left: 0px;
-   padding-right: 0px;
-   border-radius: 100%;
-    background: $gray-500;
-      @include vr($margin: .75 0);
-    }
-
-.intro__icon--rocket, .intro__icon--conversation{
-        .cls-1{
-            fill: black;
-        }
-    }
-
-
-
-   .content__item_intro--content{
-     width: 100%;
-     background: $gray-300;
-     @include vr($padding:0 2);
-}
-    
-
-    .content__item_internal-wrapper{
-        background: $white;
-        @include vr($padding: 3);
-        border-radius: 3em;
-        margin-top: -16em;
-        margin-bottom: -16em;
-        border: thin solid $gray-400;
-
-        // margin-top: -4em;
-    }
-
-
-.content__item_content--para{
-    @include vr($margin: 4 0);
-    h2{
-        letter-spacing: -.2rem;
-    }
-    > h4{
-        @include vr($font-size: 2, $margin-bottom: 1);
-        text-transform: lowercase;
-        font-weight: 400;
-    }
-/*     %subhead{
-    @include vr($font-size: 4, $margin: 4 0 3 0);
-    font-weight: 600;
-    letter-spacing: -.025em;
-    // color: $primary;
-} */
-
-    %display-text-lg{
-        @include vr($margin-bottom:2, $width: 25, $line-height:2.5);
-    }
-}
-    // %display-text-sm{
-    //             @include vr($line-height: 2);
-    // }
-
-#home-page__intro_h3{
- @include vr($font-size: 3, $line-height: 2.5, $margin: 4 0 4 0);
- letter-spacing: -.05rem;
- color: $primary;
-}
-
-
 /* ////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////     panel head module  /////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////*/
@@ -215,23 +231,30 @@ max-width: 100%;
 
 
 .panel__head{
-    display: flex;
+    @include mq('tablet'){
+        display: flex;
     flex-direction: row;
     align-items: center;
 }
+}
 .panel__head_img{
     @include make-col-ready();
-    @include make-col(2);
+    width: 25%;
+    @include mq('tablet'){
+        @include make-col(2);
     padding-left: 0px;
     padding-right: 0px;
     @include vr($margin-right: 1);
 }
+}
 
 .panel__head_headers{
     @include make-col-ready();
-    @include make-col(9);
+    @include mq('tablet'){
+        @include make-col(9);
     padding-left: 0px;
     padding-right: 0px;
+}
 }
 
 .panel__hero{}
@@ -249,8 +272,6 @@ flex-wrap: wrap;
 }
 
 
-
-
 /* ////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////           strengths      /////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////*/
@@ -262,15 +283,13 @@ flex-wrap: wrap;
 .content__block{width: 100%; max-width: 100%;flex: 0 0 auto;}
 
 
-.strengths__panel_wrapper{
-.panel__head_headers{
-   &,
-   & h3{
-          @include vr($font-size: 3, $line-height: 2.5, $margin: 0);
-          font-weight: 400;
-  
-    }
+.core > .strengths__panel_wrapper{
+h3{
+          @extend %subhead;
 }
+    %subhead{
+        margin-bottom: 0;
+    }
 }
 
 
@@ -281,12 +300,6 @@ margin-right: 0px;
 width: 100%;
 max-width: 100%;
 flex-wrap: wrap;
-> p{
-    @include vr($margin-bottom: 0);
-}
-%display-text-lg{
-    @include vr($line-height: 2.5);
-}
 }
 
 ul#list__strengths_container{
@@ -295,11 +308,12 @@ ul#list__strengths_container{
 }
 
 ul#list__strengths_container>li{
-        @include vr($font-size: 1, $line-height: 1.5,);
+       @extend %list-item;
+       // @include vr($font-size: 1, $line-height: 1.5,);
     }
 
 .list__header{
-        @include vr($font-size: 1, $line-height: 1.5, $margin: 0 0 .5 0, $padding: 0);
+        @extend %list-head;
         width: 100%;
         max-width: 100%;
         font-weight: 400;
@@ -315,7 +329,7 @@ ul#list__strengths_container>li{
 
 .strengths__copy{
     @include make-col-ready();
-    @include make-col(6);
+    @include make-col(7);
     padding-left: 0px;
     padding-right: 0px;
     // background: $primary;
@@ -378,7 +392,7 @@ fill: $white;
 
 //design & development - panel 2
 #strengths__panel_wrapper--dad{
-background: $primary;
+background: $gray-800;
 h3, p, ul, li, .list__header, .panel__footnote{
     color: $white;
 }
@@ -410,10 +424,10 @@ flex-direction: column;
 justify-content: space-between;
 @include vr($padding: 2);
 
-.panel__head        {flex: 0 0 auto; @include vr($margin:3 0 0 0);}
-.panel__hero        {flex: 0 0 auto; @include vr($margin:2 0 2 1); max-width: 42em;}
-.panel__subtext     {flex: 0 0 auto; @include vr($margin:1);}
-.panel__footnote    {flex: 0 0 auto; @include vr($margin:1 0 3 1); max-width: 20em;}
+.panel__head        {flex: 0 0 auto; @include vr($margin:2 0 0 0);}
+.panel__hero        {flex: 0 0 auto; @include vr($margin:0 0 2 0);}
+.panel__subtext     {flex: 0 0 auto; @include vr($margin:0 0 0 0);}
+.panel__footnote    {flex: 0 0 auto; @include vr($margin:1 0 3 0);}
 }
 
 #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi{
@@ -432,7 +446,7 @@ justify-content: space-between;
 
 //container article styles
 #article__container--proof{
-
+align-items: center;
 h2{
 align-text: center;
 @include push-auto();
@@ -446,11 +460,13 @@ h3{
 .content__block{}
 h4{}
 h5{
-    @include vr($font-size: 2, $margin: 0 0 4 0);
+   @extend %subhead-sm;
+   font-family: $font-family-serif;
+    // @include vr($font-size: 2, $margin: 0 0 4 0);
     letter-spacing: 0;
     font-weight: 400;
 }
-p{} 
+p{font-family: $font-family-serif;} 
 .content__item_col{}
 }
 
@@ -470,9 +486,16 @@ p{}
 }
 
 #idooutcomes{
-    @include vr($padding: 3 3 3 3);
+    @include vr($padding: 0 3 0 3);
     border: .25em solid $gray-500;
+    position: relative;
+    @include mq('tablet', $type: max){
+    min-height: 600px;
+    }
 }
+
+
+
 h2.proof-intro{
             font-family: $font-family-serif;
         @include vr($font-size: 4, $margin-bottom: 4);
@@ -552,6 +575,7 @@ padding: 6em .25em;}
     flex-direction: column;
     align-items: center;
     background: $black;
+    @include vr($padding: 5 1);
     .cls-1, .cls-2{
         fill: $offwhite;
     }

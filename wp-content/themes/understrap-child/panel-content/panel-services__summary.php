@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 				<h1>Commodo sunt ea ullamco eu.</h1>
 				<h2>Consectetur velit ut esse cupidatat dolor .</h2>
 				<h3>Exercitation eu cupidatat in ut nisi adipisicing aliqua in nulla sed laboris amet</h3>
-				<div class="bshit">Aute ex eiusmod do in eu velit aliquip nostrud laborum ut pariatur.</div>				
+								
 				<div class="content__container">
 						<div class="content__item_col " id="">
 							<!-- 	<div class="mobile__background--image" id="trend-arrow">

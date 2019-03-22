@@ -26,7 +26,7 @@ exit; // Exit if accessed directly.
 								<p>I bring context and simplicity to complex strategic challenges. Then I translate them into operative marketing solutions that not only look good on the surface, but also generate substantive 				business results.</p>
 							</div>
 							<div class="panel__subtext">
-													<div class="list__header">Notable Strengths Include:</div>
+													<div class="list__header">KEY STRENGTHS:</div>
 													<div class="content__item_col strengths__copy">
 														<ul id="list__strengths_container">
 															<li>Competitive Value Design</li>
@@ -59,7 +59,7 @@ exit; // Exit if accessed directly.
 				</div>
 				<div class="panel__subtext">
 					<div class="content__item_col strengths__copy">
-						<div class="list__header">Notable Strengths Include:</div>
+						<div class="list__header">KEY STRENGTHS:</div>
 						<ul id="list__strengths_container">
 							<li>Competitive Value Design</li>
 							<li>Budget Optimization</li>
@@ -92,7 +92,7 @@ exit; // Exit if accessed directly.
 
 				<div class="panel__subtext">
 					<div class="content__item_col strengths__copy">
-									<div class="list__header">Notable Strengths Include:</div>
+									<div class="list__header">KEY STRENGTHS:</div>
 											<ul id="list__strengths_container">
 												<li>Competitive Value Design</li>
 												<li>Budget Optimization</li>

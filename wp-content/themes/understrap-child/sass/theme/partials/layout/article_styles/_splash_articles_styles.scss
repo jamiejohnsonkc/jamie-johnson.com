@@ -1,3 +1,28 @@
+.splash-wrapper{
+  overflow: hidden;
+}
+
+.splash{
+    h1 {
+        @extend %title;
+    }
+    h2 { 
+        @extend %subhead-lg;
+    }
+
+    h3 {
+      
+        @extend %display-text-lg;
+    }
+    p {
+        @extend %body-text-lg;
+
+    }
+    }
+
+
+
+
 #home__splash{
        @include center-middle();
       padding-left: 0;
@@ -76,76 +101,76 @@
 
    
  
-#management__splash{
-   h1{ 
-    @extend .page__title;
-    margin-top: unset;
-    font-weight: 300;
-}
+// #management__splash{
+//    h1{ 
+//     @extend .page__title;
+//     margin-top: unset;
+//     font-weight: 300;
+// }
 
-  > h2{
-    @extend %title;
-      }
+//   > h2{
+//     @extend %title;
+//       }
 
-h3{
-  @extend %body-text-lg;
-  font-style: italic;
-}
-}
+// h3{
+//   @extend %body-text-lg;
+//   font-style: italic;
+// }
+// }
 
-#development__splash{
-   h1{ 
-    @extend .page__title;
-    margin-top: unset;
-    font-weight: 300;
-}
+// #development__splash{
+//    h1{ 
+//     @extend .page__title;
+//     margin-top: unset;
+//     font-weight: 300;
+// }
 
-  > h2{
-    @extend %title;
-      }
+//   > h2{
+//     @extend %title;
+//       }
 
-h3{
-  @extend %body-text-lg;
-  font-style: italic;
-}
-}
-
-
+// h3{
+//   @extend %body-text-lg;
+//   font-style: italic;
+// }
+// }
 
 
-#about-me__splash{
-    h2{
-        margin-bottom: auto;
-    }
-}
 
-#why-me__splash{
-    ul {
-        list-style-type: none;
-        margin-bottom: auto;
-        padding-left: 0;
-    }
 
-    ul li{
-              @include vr($font-size: 2, $line-height: 4);
-    }   
+// #about-me__splash{
+//     h2{
+//         margin-bottom: auto;
+//     }
+// }
 
-       .link{
-        bottom: 10rem;
-        left: 4rem;
+// #why-me__splash{
+//     ul {
+//         list-style-type: none;
+//         margin-bottom: auto;
+//         padding-left: 0;
+//     }
 
-    }
-  }
+//     ul li{
+//               @include vr($font-size: 2, $line-height: 4);
+//     }   
+
+//        .link{
+//         bottom: 10rem;
+//         left: 4rem;
+
+//     }
+//   }
     
-/* ol li:nth-child(4){
-      list-style-type: none;
-      margin-left: -2rem;
-      @extend %body-text;
-      @include vr($font-size: 1, $line-height: 4);
-      &:before{
-        content: '(bonus)';
-        line-height: inherit;
-  } */
+// /* ol li:nth-child(4){
+//       list-style-type: none;
+//       margin-left: -2rem;
+//       @extend %body-text;
+//       @include vr($font-size: 1, $line-height: 4);
+//       &:before{
+//         content: '(bonus)';
+//         line-height: inherit;
+//   } */
 
     
 
@@ -153,51 +178,51 @@ h3{
  
 
 
-#my-expertise__splash{
-        @include center-middle();
-       height:  100vh;
-       h3{
-        margin-bottom: auto;
-    }
-}
+// #my-expertise__splash{
+//         @include center-middle();
+//        height:  100vh;
+//        h3{
+//         margin-bottom: auto;
+//     }
+// }
 
 
-/* @extend %center-center; */
-
-
-
-
-
-/* 
-/////////////////////////////////////////////
-
-@mixin two-rows(){
-.conbox{
-    @extend %row;
-    @extend %center-top;
-
-.content1, .content2{
-    @include make-col-ready();
-    @include make-col(6);
-}
-}
-}
+// /* @extend %center-center; */
 
 
 
 
 
+// /* 
+// /////////////////////////////////////////////
+
+// @mixin two-rows(){
+// .conbox{
+//     @extend %row;
+//     @extend %center-top;
+
+// .content1, .content2{
+//     @include make-col-ready();
+//     @include make-col(6);
+// }
+// }
+// }
 
 
-.whatiam{
-   @include queue();
-       @include center-center()
-   @media (min-width: 90em){
-        @include stack();
 
-}
-}
- */
+
+
+
+
+// .whatiam{
+//    @include queue();
+//        @include center-center()
+//    @media (min-width: 90em){
+//         @include stack();
+
+// }
+// }
+//  */
 
 
 

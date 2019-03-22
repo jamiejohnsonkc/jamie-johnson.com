@@ -1,18 +1,18 @@
 <?php
 /**
 * container Splash Intro.
-*
+* 
 * @package understrap
 */
 if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  content__wrapper my-expertise skills">
+<article class="article__wrapper  my-expertise skills">
 	<div class="container my-expertise my-expertise__container__skills" id="my-skills">
-		<h1>a lar Carte</h1>
+		<h1>I kick ass</h1>
 		<!-- Marketing Leadership SUBcontainer -->
-		<div class="expertise__overlay expertise__overlay--marketing-strategy" id="expt-overlay-1">
+		<!-- <div class="expertise__overlay expertise__overlay--marketing-strategy" id="expt-overlay-1">
 			<div class="expt__close--button" id="expt-close-1">
 				<div>X</div>
 			</div>
@@ -23,7 +23,7 @@ exit; // Exit if accessed directly.
 					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
 				</div>
 				<div class="overlay__content">
-					<!-- <div class="overlay__content"> -->
+		
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" />
 						<h5>Strategic Design</h5>
@@ -66,7 +66,7 @@ exit; // Exit if accessed directly.
 					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="expertise__overlay expertise__overlay--marketing-management" id="expt-overlay-2">
 			<div class="expt__close--button" id="expt-close-2">
 				<div>X</div>
@@ -397,18 +397,18 @@ exit; // Exit if accessed directly.
 		</div>
 		<div class="my-expertise__main-page"> <!-- extend this to container -->
 		<div class="split-container">
-			<h2>Capabilities</h2>
+			<h2>Expertise from End to End</h2>
 			<p>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</p>
 		</div>
 		<nav class="expertise__main-page_menu">  <!--  extend this to row -->
-		<div class="expertise__menu_item" id="open-expt-overlay-1">
+<!-- 		<div class="expertise__menu_item" id="open-expt-overlay-1">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Strategy</h3>
 				<p>Officia cupidatat ut ea consequat quis consequat ullamco officia.</p>
 				<a class="link" id="expertise__menu_link">Learn More</a>
 			</div>
-		</div>
+		</div> -->
 		<div class="expertise__menu_item" id="open-expt-overlay-2">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="expertise__menu_icon expertise__menu_icon--marketing style-svg" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">

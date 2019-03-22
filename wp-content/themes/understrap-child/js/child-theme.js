@@ -3979,24 +3979,24 @@
 // }});
 
 
-3-open-close.js
-window.addEventListener("load", function(){
-  var open = document.getElementById("open-expt-overlay-1"),
-      close = document.getElementById("expt-close-1"),
-      over = document.getElementById("expt-overlay-1");
-      body = document.body;
+// 3-open-close.js
+// window.addEventListener("load", function(){
+//   var open = document.getElementById("open-expt-overlay-1"),
+//       close = document.getElementById("expt-close-1"),
+//       over = document.getElementById("expt-overlay-1");
+//       body = document.body;
     
-  if(open){
-    open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
-});
+//   if(open){
+//     open.addEventListener("click", function(){
+//     over.classList.add("show");
+//    body.classList.add("nope");
+//   });
+//   close.addEventListener("click", function(){
+//     over.classList.remove("show");
+//     body.classList.remove("nope");
+//   });
+// }
+// });
 
 3-open-close.js
 window.addEventListener("load", function(){
@@ -4051,23 +4051,23 @@ window.addEventListener("load", function(){
 }
 });
 
-3-open-close.js
-window.addEventListener("load", function(){
-  var open = document.getElementById("open-expt-overlay-5"),
-      close = document.getElementById("expt-close-5"),
-      over = document.getElementById("expt-overlay-5");
+// 3-open-close.js
+// window.addEventListener("load", function(){
+//   var open = document.getElementById("open-expt-overlay-5"),
+//       close = document.getElementById("expt-close-5"),
+//       over = document.getElementById("expt-overlay-5");
 
- if(open)
-  {  open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
-});
+//  if(open)
+//   {  open.addEventListener("click", function(){
+//     over.classList.add("show");
+//    body.classList.add("nope");
+//   });
+//   close.addEventListener("click", function(){
+//     over.classList.remove("show");
+//     body.classList.remove("nope");
+//   });
+// }
+// });
 
 
 /*var lastTop;

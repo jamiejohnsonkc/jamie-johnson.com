@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper-fluid  about-me splash-wrapper bgshoes">
-		<div class="container splash about-me__container__splash" id="about-me__splash">
+<article class="article__wrapper-fluid  background splash-wrapper bgshoes">
+		<div class="container splash background__container__splash" id="background__splash">
 	<!-- 	<h1>About Me</h1> -->
 		
 		<h1>lorem ispum sino et dolemet</h1>
 		
-		<h2>Excepteur sint occaecat cupidatat non.</h2>
+		<h3>Excepteur sint occaecat cupidatat non.</h3>
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		

@@ -32,13 +32,14 @@
     th{
         font-weight: 100;
         text-align: center;
+               vertical-align: middle;
     }
 
     #capa__row--1 th{
         text-transform: uppercase;
         letter-spacing: .15rem;
         height: 24px;
-        font-size: 1rem;
+        @include vr($font-size: 1);
         padding-top: 0;
         vertical-align: middle;
         border-bottom: thin solid hsl(210, 14%, 50%); 
@@ -47,9 +48,10 @@
      #capa__row--2{
         text-transform: uppercase;
         height: 18px;
-        font-size: .5rem;
+        font-size: 1rem;
         letter-spacing: .15rem;
         background: hsl(210, 14%, 45%);
+
     }
 
     thead{
@@ -77,10 +79,9 @@
         border: thin solid #fff;
         letter-spacing: -.005rem;
         vertical-align: middle;
-        font-size: 1rem;
         text-align: center;
+        @include vr($font-size: 1, $line-height: 1);
     }
-
 
     caption {
         caption-side: bottom;

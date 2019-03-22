@@ -59,7 +59,7 @@ ctrl + alt + a = align
 
 
 
-// ctrl + enter in find/replace to target returns or \n in regex
+
 
 
 //     add line break via peuso class - note: &:: configures psuedo element for sass nesting:
@@ -109,13 +109,16 @@ tbody tr:nth-child(even) {
 
 tbody>tr>:nth-child(1){}
 
-
+\n\s+
 
 //     remove all newlines 
 //     This will remove all newlines (\n+) followed by all whitespace (\s+) in the next line.
 //     enable "Regular Expression" (circled in red)
 //     enter \n\s+ in the search field, clear the replace field
 //     press "Replace all"
+
+
+// ctrl + enter in find/replace to target returns or \n in regex
 
 
 

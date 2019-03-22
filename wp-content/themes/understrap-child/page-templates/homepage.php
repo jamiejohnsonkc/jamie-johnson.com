@@ -1,6 +1,7 @@
 <?php
 /**
-* Template Name: Home Page
+* Template Name: HOMEPAGE
+
 *
 * Template for displaying a page without sidebar even if a sidebar widget is published.
 *

@@ -8,12 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper splash-wrapper bgregister">
-		<div class="container splash my-value" id="management__splash">
-		<h1>my take on</h1>
-		<h2>Strategic Marketing Management</h2>
-		
-		<h3>I do much more than words and pictures</h3>
+<article class="article__wrapper splash-wrapper why-me bgbrains">
+		<div class="container splash why-me__container__splash" id="why-me__splash">
+		<h1>What I Do</h1>
+		<h2>End to End Marketing Services</h2>
+		<h3>design &#x000B7; development &#x000B7; management &#x000B7; operations &#x000B7; strategy</h3>
 		
 		<!-- <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> -->
 		
@@ -24,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</a>
 	
 </div>
-	<div class="container-hero__img--mobile" id="register-small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-small.jpg" alt="cash register" class="register-small"/></div>
+<div class="container-hero__img--mobile" id="my-brains"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains-small.jpg" alt="" class="brains-small"/></div>
 	</article><!-- cover end -->
 	
 	

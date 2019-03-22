@@ -469,7 +469,7 @@ p{}
 }
 }
 
-.content__item_caption{
+#idooutcomes{
     @include vr($padding: 3 3 3 3);
     border: .25em solid $gray-500;
 }

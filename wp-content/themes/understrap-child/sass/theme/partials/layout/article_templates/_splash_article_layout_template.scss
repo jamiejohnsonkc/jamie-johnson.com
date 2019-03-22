@@ -1,41 +1,41 @@
 
-.splash-wrapper{
-  overflow: hidden;
-}
+// .splash-wrapper{
+//   overflow: hidden;
+// }
 
-.splash{
-   @include split-rows();
-   @include left-middle();
-   height: 100vh;
+// .splash{
+//    @include split-rows();
+//    @include left-middle();
+//    height: 100vh;
 
-    h1 {
-        flex: 0 0 auto;
-        @extend %title;
-    }
+//     h1 {
+//         flex: 0 0 auto;
+//         @extend %title;
+//     }
 
-    h2 {
-        flex: 0 0 auto;
-              @extend %subhead-lg;
+//     h2 {
+//         flex: 0 0 auto;
+//               @extend %subhead-lg;
  
-    }
+//     }
 
-    h3 {
-        flex: 0 0 auto;
-              @extend %display-text-lg;
-    }
+//     h3 {
+//         flex: 0 0 auto;
+//               @extend %display-text-lg;
+//     }
 
-    p {
-        flex: 0 0 auto;
+//     p {
+//         flex: 0 0 auto;
 
-              @extend %body-text-lg;
+//               @extend %body-text-lg;
 
-    }
-    .link{
-       position: absolute;
-  flex: 0 0 0;
-  left: 50%;
-  bottom: 6em;
+//     }
+//     .link{
+//        position: absolute;
+//   flex: 0 0 0;
+//   left: 50%;
+//   bottom: 6em;
 
-    }
+//     }
 
-}
+// }

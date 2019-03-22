@@ -172,16 +172,16 @@ $theme-colors: map-merge((
 $body-bg:						                $white;
 
 
-$link-color:                theme-color("primary") !default;
-$link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%) !default;
-$link-hover-decoration:     underline !default;
+$link-color:                        theme-color("primary") !default;
+$link-decoration:                   none !default;
+$link-hover-color:                  darken($link-color, 15%) !default;
+$link-hover-decoration:             underline !default;
 
 //
 // Paragraphs
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:           1rem !default;
 
 $navbar-padding:                    1em;
 

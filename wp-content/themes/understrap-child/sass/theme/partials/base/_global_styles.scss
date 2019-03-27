@@ -182,20 +182,21 @@ svg.chev--dwn{
     stroke-width: .5em;
     width: 3rem;
     height: 3rem;
+    display: block;
 
 }
 
 .scroll-top{
     position: fixed;
-
     /* Fixed/sticky position */
     bottom: 30px;
-
     /* Place the button at the bottom of the page */
     right: 30px;
-
     /* Place the button 30px from the right */
     z-index: 99;
+    padding: 1.25em 1em;
+    border-radius: 1em;
+    background: rgba(73, 80, 87, .8);
    }
 
 

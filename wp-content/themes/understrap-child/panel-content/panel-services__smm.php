@@ -12,8 +12,8 @@ exit; // Exit if accessed directly.
 	<div class="container home-page__howidoit__container"> -->
 		<article class="article__wrapper content__wrapper development" id="article__wrapper--development-intro">
 			<div class="container summary content__container_col"  id="article__container--development-intro">
-				<h1>I create Post-Digital Marketing Communications</h1>
-				<h2>I say make money, not overhead.</h2>
+				<h1>In sed voluptate.</h1>
+				<h2>Deserunt consectetur dolore sit.</h2>
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
 				<div class="content__container">
 						<div class="content__item_col intro" id="intro__content_development">
@@ -23,9 +23,9 @@ exit; // Exit if accessed directly.
 					<!-- 		<h2 class="proof-intro">!</h2> -->
 							<h3></h3>
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p>I'm all about creativity and technology, but none of it matters if it doesn't create customers.</p>
+<!-- 							<div class="content__item_caption"><p>I'm all about creativity and technology, but none of it matters if it doesn't create customers.</p>
 								<p>Strategic Marketing development is the framework that points creativity and technology in the right direction.</p>
-							<!-- <div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div> -->
+							<div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div>
 						<div class="intro__list" id="intro__list--development"><h4>My approach to marketing development emphasizes four critical areas:</h4>
 						<ol>
 							<li><a href="/">planning</a></li>
@@ -34,7 +34,7 @@ exit; // Exit if accessed directly.
 							<li><a href="/">execution</a></li>
 						</ol>
 						</div>
-					</div>
+					</div> -->
 					
 
 				</div>

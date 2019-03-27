@@ -17,10 +17,10 @@
 
 %sublist        {@include vr($font-size:28.85px, $margin: 2 0);}
 
-%display-text   {@include vr($font-size:22.5px, $margin: 2 0);}
+%display-text   {@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}
 
 %list-head      {@include vr($font-size:13px);}
-%list-item      {@include vr($font-size:10px, $margin-bottom: .25, $line-height: 1.5);}  
+%list-item      {@include vr($font-size:10px, $margin-bottom: 0, $line-height: 1.5);}  
 %body-text      {@include vr($font-size:14.5px, $margin: 1.5 0);}
 %para-head      {@include vr($font-size:14.5px, $margin-bottom: .5);}  
 %para           {@include vr($font-size:14.5px, $margin-bottom: 1);}  
@@ -30,7 +30,7 @@
 
 %sublist-sm     {@include vr($font-size:10px, $margin: 1 0);}
 %subhead-sm     {@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
-%display-text-sm{@include vr($font-size:16px, $margin: 2 0);}
+%display-text-sm{@include vr($font-size:16px, $line-height: 2, $margin: 2 0);}
 %caption-sm        {@include vr($font-size:10px, $line-height:1.25);}  
 
 // %title-sm       {@include vr($font-size:1);}

@@ -17,9 +17,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<section id="section__hire_me">
 			<?php get_template_part( 'panel-content/panel', 'services__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'services__summary' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'services__services' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'services__capabilities' ); ?>
-					<?php get_template_part( 'panel-content/panel', 'services__commitment' ); ?>
+				<?php get_template_part( 'panel-content/panel', 'services__capabilities' ); ?>
+		<!-- ?php get_template_part( 'panel-content/panel', 'services__webdev' ); ?> -->
+		<!-- ?php get_template_part( 'panel-content/panel', 'services__marcom' ); ?> -->
+		<!-- ?php get_template_part( 'panel-content/panel', 'services__smm' ); ?> -->
+<!-- 			php get_template_part( 'panel-content/panel', 'services__services' ); ?>
+	
+					php get_template_part( 'panel-content/panel', 'services__commitment' ); ?> -->
 			<?php get_template_part( 'panel-content/panel', 'services__cta' ); ?>
 		</section>
 		</main><!-- #main -->

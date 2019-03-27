@@ -23,6 +23,13 @@ left: 65%;
 }
 }
 
+#bell-small{
+    max-width: 70%;
+display: block;
+@include push-auto();
+    overflow: hidden;
+}
+
 
 #register-small{
     position: absolute;
@@ -160,6 +167,15 @@ width: 80%;
     }
 }
 
+.bgbell{
+    background: none;
+@media(min-width: 78em){
+        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg");
+         background-position: left bottom;
+        background-size: 60%;
+        background-repeat: no-repeat;
+    }
+}
 
 .bgbrainsv2 {
     background: none;
@@ -337,19 +353,20 @@ svg#Layer_1{
 
 
 
-.expertise__menu_icon, .expertise__menu_icon .cls-2, .expertise__menu_icon .cls-1{
+.capabilities__menu_icon, .capabilities__menu_icon .cls-2, .capabilities__menu_icon .cls-1{
     // .style-svg, .cls-1, .cls-3, .cls-4 {
     //     max-width: $ms-10;
-        fill: $tungsten;
+        fill: $capabilities-menu-icon-fill-color;
         width: 50%;
     }
 
 
 .scroll-top svg {
-    width: 4rem;
+    width: 2.5rem;
+    display: block;
     .st0 {
         fill: none;
-        stroke: white;
+        stroke: $primary;
         stroke-width: 5;
     }
 }

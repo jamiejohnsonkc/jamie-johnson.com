@@ -38,16 +38,7 @@
 // ==========================================================================
 // home page articles
 // ==========================================================================
-@include mq('phone') { }
-    @include mq('phone-wide') { }
-    @include mq('phablet') { }
-    @include mq('tablet-small') { }
-    @include mq('tablet') { }
-    @include mq('tablet-wide') { }
-    @include mq('desktop') { }
-    @include mq('desktop-wide') { }
-    @include mq('desktop-xl') { }
-    @include mq('desktop-xxl') { }
+
 .core { 
     h1 { flex: 0 0 auto; }
     h2 { flex: 0 0 auto; }
@@ -55,6 +46,13 @@
     .content-container { flex: 0 0 auto; }
     .link { flex: 0 0 0; }
 }
+
+.intro__icon_wrapper{ display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.content__intro_icon--background{flex: 0 0 auto;}
+.intro__icon_caption{flex: 1 0 auto;}
+
+
+
 
 
 #idooutcomes{
@@ -78,14 +76,14 @@
 
 
 // ==========================================================================
-// services articles
+
 // ==========================================================================
 
 /////// small screen adjustments
 @include mq('tablet', $type:max) { 
     .content__wrapper { margin: 12em auto; }
     .link { @include vr($margin: 6 auto 2 auto); }
-    .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
+    // .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
 }
 
 

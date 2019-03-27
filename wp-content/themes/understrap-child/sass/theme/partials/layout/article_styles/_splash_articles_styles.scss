@@ -1,3 +1,8 @@
+// ==========================================================================
+// splash article template
+// ==========================================================================
+
+
 .splash-wrapper{
   overflow: hidden;
 }
@@ -20,7 +25,9 @@
     }
     }
 
-
+// ==========================================================================
+// homepage splash 
+// ==========================================================================
 
 
 #home__splash{
@@ -42,7 +49,8 @@
     .link{
        position: absolute;
   flex: 0 0 0;
-  left: 50%;
+display: block;
+@include push-auto();
   bottom: 6em;
 
     }
@@ -99,11 +107,16 @@
 
 
 #services__splash{
+align-items: center;
 h2{ @extend %subhead-sm}  
 %subhead-sm{@include vr($margin-bottom: 0);}
 h3{ @extend %sublist-sm;}
 %sublist-sm{@include vr($margin-top: 0); font-weight: 200;}
 }
+
+// ==========================================================================
+// why-me / evidence page
+// ==========================================================================
 
 
    

@@ -15,7 +15,7 @@ exit; // Exit if accessed directly.
 		<hgroup class="page__header" id="val-page-header"><!-- ROW -->
 		<h2>04</h2><!-- COL -->
 		<h3>End to End<span class="br"><br></span>Management & Strategy</h3><!-- COL -->
-		<h4>I bring strategic continuity and clarity to an increasingly fragmented business function</h4>
+		<div class="value__page-header_text"><h4>I bring strategic continuity and clarity to an increasingly fragmented business function</h4></div>
 		</hgroup>
 		<div class="content-container">
 		<figure class="diagram diagram__end-to-end">
@@ -36,9 +36,12 @@ exit; // Exit if accessed directly.
 			</div>
 		</figure>
 
-		<!-- 	<p>Fail to manage your market and the market will manage you</p>
-		-->	<div class="my-value__conclusion " id="value__conclusion_optimize"><p>I can help you decide how and where to invest your marketing to enable optimal returns.</p></div>
+		<!-- 	<p>Fail to manage your market and the market will manage you</p>	-->
+		<a class="button moreless-button__optimize">Read more</a>
+	<div class="read-more__optimize">
+		<div class="my-value__conclusion"><p>I can help you decide how and where to invest your marketing to enable optimal returns.</p></div>
 	</div>
+</div>
 		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>

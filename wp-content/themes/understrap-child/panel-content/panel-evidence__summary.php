@@ -15,6 +15,8 @@ exit; // Exit if accessed directly.
 				<h1>I make sure marketing works</h1>
 				<h2>I suggest you make money, not overhead.</h2>
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
+								
+ 
 				<div class="content__container">
 						<div class="content__item_col intro" id="intro__content_management">
 								<!-- <div class="mobile__background--image" id="trend-arrow">

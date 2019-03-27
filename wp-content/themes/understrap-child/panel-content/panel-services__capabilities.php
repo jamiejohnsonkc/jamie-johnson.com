@@ -8,14 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  content__wrapper my-expertise skills">
-	<div class="container my-expertise my-expertise__container__skills" id="my-skills">
+<article class="article__wrapper  content__wrapper my-capabilities skills">
+	<div class="container my-capabilities my-capabilities__container__skills" id="my-skills">
 		<h1>a la Carte services</h1>
-		<!-- Marketing Leadership SUBcontainer -->
-<!-- 		<div class="expertise__overlay expertise__overlay--marketing-strategy" id="expt-overlay-1">
-			<div class="expt__close--button" id="expt-close-1">
-				<div>X</div>
-			</div>
+		<div class="capabilities__overlay capabilities__overlay--marketing-strategy" id="expt-overlay-1">
+			<button class="circle__button expt__close--button" id="expt-close-1">
+			&times;</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Marketing Strategy</h4>
@@ -23,7 +21,6 @@ exit; // Exit if accessed directly.
 					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
 				</div>
 				<div class="overlay__content">
-	
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" />
 						<h5>Strategic Design</h5>
@@ -66,11 +63,11 @@ exit; // Exit if accessed directly.
 					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
 				</div>
 			</div>
-		</div> -->
-		<div class="expertise__overlay expertise__overlay--marketing-management" id="expt-overlay-2">
-			<div class="expt__close--button" id="expt-close-2">
-				<div>X</div>
-			</div>
+		</div>
+		<div class="capabilities__overlay capabilities__overlay--marketing-management" id="expt-overlay-2">
+			<button class="circle__button expt__close--button" id="expt-close-2">
+			&times;
+			</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Strategic Marketing Management</h4>
@@ -81,11 +78,8 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" />
 						<h5>Function Leadership</h5>
-
 					</div>
-	
 					<ul>
-
 						<li>Operations</li>
 						<li>Financials</li>
 						<li>Contribution</li>
@@ -98,7 +92,7 @@ exit; // Exit if accessed directly.
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" />
 						<h5>Concepts & Frameworks</h5>
 					</div>
-													<hr>
+					<hr>
 					<ul>
 						<li>Outcome-Driven Marketing</li>
 						<li>Competitive Advantage</li>
@@ -111,7 +105,7 @@ exit; // Exit if accessed directly.
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon" />
 						<h5>Strategy</h5>
 					</div>
-													<hr>
+					<hr>
 					<ul>
 						<li>Product/Service Management</li>
 						<li>Value Design</li>
@@ -126,7 +120,7 @@ exit; // Exit if accessed directly.
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon" />
 						<h5>Intelligence & Insights</h5>
 					</div>
-													<hr>
+					<hr>
 					<ul>
 						<li>Performance Auditing</li>
 						<li>Market Research</li>
@@ -141,7 +135,7 @@ exit; // Exit if accessed directly.
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon" />
 						<h5>Cross Pollination</h5>
 					</div>
-													<hr>
+					<hr>
 					<ul>
 						<li>Value Stewardship</li>
 						<li>Customer Centricity</li>
@@ -151,10 +145,10 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 		</div>
-		<div class="expertise__overlay expertise__overlay--marketing-communications" id="expt-overlay-3">
-			<div class="expt__close--button" id="expt-close-3">
-				<div>X</div>
-			</div>
+		<div class="capabilities__overlay capabilities__overlay--marketing-communications" id="expt-overlay-3">
+			<button class="circle__button expt__close--button" id="expt-close-3">
+			&times;
+			</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Customer Engagement</h4>
@@ -238,8 +232,8 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 		</div>
-		<div class="expertise__overlay expertise__overlay--webdev" id="expt-overlay-4">
-			<div class="expt__close--button" id="expt-close-4">x</div>
+		<div class="capabilities__overlay capabilities__overlay--webdev" id="expt-overlay-4">
+			<button class="circle__button expt__close--button" id="expt-close-4">&times;</button>
 			<div class="overlay__container">
 				<div class="overlay-intro"><h4>Mobile + Web</h4>
 					<p>Labore consectetur incididunt aliquip ex voluptate et eiusmod exercitation est duis nisi in laboris amet irure dolor do excepteur dolore aliquip qui veniam est ex dolor.</p>
@@ -322,16 +316,16 @@ exit; // Exit if accessed directly.
 						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
 						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 					</div>
-					<div class="expt__close--button bottom" id="expt-close-1">
-						<div>X</div>
-					</div>
+					<button class="circle__button expt__close--button bottom" id="expt-close-1">
+					&times;
+					</button>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="expertise__overlay expertise__overlay--operations" id="expt-overlay-5">
-			<div class="expt__close--button" id="expt-close-5">
-				<div>X</div>
-			</div>
+		<div class="capabilities__overlay capabilities__overlay--operations" id="expt-overlay-5">
+			<button class="circle__button expt__close--button" id="expt-close-5">
+			&times;
+			</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Operations</h4>
@@ -394,59 +388,56 @@ exit; // Exit if accessed directly.
 					</ul>
 				</div>
 			</div>
-		</div> -->
-		<div class="my-expertise__main-page"> <!-- extend this to container -->
-		<div class="split-container">
-			<h2>Capabilities</h2>
-			<p>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</p>
 		</div>
-		<nav class="expertise__main-page_menu">  <!--  extend this to row -->
-<!-- 		<div class="expertise__menu_item" id="open-expt-overlay-1">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
-			<div class="expertise__menu_item--content">
-				<h3>Strategy</h3>
-				<p>Officia cupidatat ut ea consequat quis consequat ullamco officia.</p>
-				<a class="link" id="expertise__menu_link">Learn More</a>
+		<div class="my-capabilities__main-page">
+			<div class="split-container">
+				<h2>Capabilities</h2>
+				<p>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</p>
 			</div>
-		</div> -->
-				<div class="expertise__menu_item" id="open-expt-overlay-4">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="expertise__menu_icon expertise__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
-			<div class="expertise__menu_item--content">
-				<h3>Mobile + Web Design &amp; Development</h3>
-				<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
-				<a class="link" id="expertise__menu_link">Learn More</a>
-			</div>
+			<nav class="capabilities__main-page_menu">
+				<div class="capabilities__menu_item" id="open-expt-overlay-1">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Strategy</h3>
+						<p>Officia cupidatat ut ea consequat quis consequat ullamco officia.</p>
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+				<div class="capabilities__menu_item" id="open-expt-overlay-4">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Mobile + Web Design &amp; Development</h3>
+						<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+				<div class="capabilities__menu_item" id="open-expt-overlay-3">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Integrated Marketing Communications</h3>
+						<p>Ex aliqua eiusmod sunt pariatur laborum elit enim.</p>
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+				<div class="capabilities__menu_item" id="open-expt-overlay-2">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Strategic Marketing Management</h3>
+						<p>Voluptate ea ut ex ullamco ut ut sint non.</p>
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+				<div class="capabilities__menu_item" id="open-expt-overlay-5">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Operations</h3>
+						<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+			</nav>
 		</div>
-
-		<div class="expertise__menu_item" id="open-expt-overlay-3">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="expertise__menu_icon expertise__menu_icon--communications style-svg" alt="skills_icon"/>
-			<div class="expertise__menu_item--content">
-				<h3>Integrated Marketing Communications</h3>
-				<p>Ex aliqua eiusmod sunt pariatur laborum elit enim.</p>
-				<a class="link" id="expertise__menu_link">Learn More</a>
-			</div>
-		</div>
-		<div class="expertise__menu_item" id="open-expt-overlay-2">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="expertise__menu_icon expertise__menu_icon--marketing style-svg" alt="skills_icon"/>
-			<div class="expertise__menu_item--content">
-				<h3>Strategic Marketing Management</h3>
-				<p>Voluptate ea ut ex ullamco ut ut sint non.</p>
-				<a class="link" id="expertise__menu_link">Learn More</a>
-			</div>
-		</div>
-
-<!-- 		<div class="expertise__menu_item" id="open-expt-overlay-5">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="expertise__menu_icon expertise__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
-			<div class="expertise__menu_item--content">
-				<h3>Operations</h3>
-				<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
-				<a class="link" id="expertise__menu_link">Learn More</a>
-			</div>
-		</div> -->
-	</nav>
-</div>
-<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/></a>
-</div>
-
+		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/></a>
+	</div>
 </article>

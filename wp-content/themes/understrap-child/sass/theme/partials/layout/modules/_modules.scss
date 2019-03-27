@@ -1,0 +1,210 @@
+// ==========================================================================
+// capabilities table
+// ==========================================================================
+
+.table-wrap {
+    position: relative;
+    width: 100%;
+}
+
+// .table.center {
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+// #capabilities_table > thead > tr:nth-child(1) > th{
+//     background: none;
+//     color: #111;
+//     font-weight: 300;
+// }
+
+#capabilities_table {
+    // background: $primary;
+    // padding: 3rem;
+    // color: #111;
+    table-layout: fixed;
+    width: 100%;
+    align-self: baseline;
+    font-family: $font-family-monospace;
+    line-height: 1.5rem;
+
+    .capa__row{
+        vertical-align: middle;
+        height: 36px;
+        line-height: 1.5rem;
+    }
+
+    th{
+        font-weight: 100;
+        text-align: center;
+               vertical-align: middle;
+    }
+
+    #capa__row--1 th{
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        height: 24px;
+        @include vr($font-size: 1);
+        padding-top: 0;
+        vertical-align: middle;
+        border-bottom: thin solid hsl(210, 14%, 50%); 
+    }
+
+     #capa__row--2{
+        text-transform: uppercase;
+        height: 18px;
+        font-size: 1rem;
+        letter-spacing: .15rem;
+        background: hsl(210, 14%, 45%);
+
+    }
+
+    thead{
+        background-color: $slate;
+        color: #fff;
+        letter-spacing: .01rem;
+        font-weight: 300;
+        vertical-align: middle;
+    }
+
+    .capa-table__column--1 {
+        border-bottom: thin solid #fff;
+    }
+
+    // tbody > tr > :nth-child(1) {
+    //     padding-left: $ms-2_25;
+    // }
+
+
+
+    tbody td {
+        padding: 1.25rem 0;
+        color: $gray-900;
+        font-weight: 300;
+        border: thin solid #fff;
+        letter-spacing: -.005rem;
+        vertical-align: middle;
+        text-align: center;
+        @include vr($font-size: 1, $line-height: 1);
+    }
+
+    caption {
+        caption-side: bottom;
+        color: #111;
+        font-weight: 300;
+        padding: 1rem;
+        // margin-bottom: $rvr-_25;
+        // padding-left: $ms-2_25;
+        // max-width: ms(11);
+    }
+}
+
+// #capabilities_table > thead > tr > th.capa-table__column--1{
+// background: $gray-200;
+// }
+
+#capabilities_table > tbody > tr > :nth-child(1) {
+    background: $tungsten;
+}
+
+#capabilities_table > tbody > tr > :nth-child(2) {
+    background: $gray-200;
+}
+
+#capabilities_table > tbody > tr > :nth-child(3) {
+    background: $tungsten;
+}
+
+#capabilities_table > tbody > tr > :nth-child(4) {
+    background: $gray-200;
+}
+
+// #capabilities_table > thead > tr > th.capa-table__column--2 {
+//     // background: $gray-400;
+//     padding-left: $ms-1;
+// }
+
+// #capabilities_table > thead > tr > th.capa-table__column--3 {
+//     padding-left: $ms-1;
+
+//     // background: $gray-200;
+// }
+
+.capa-table__column--1 {
+    // padding-left: $ms-2_25;
+    width: 35%;
+}
+
+.capa-table__column--2 {
+    width: 40%;
+}
+
+.capa-table__column--3 {
+    width: 25%;
+}
+
+
+// ==========================================================================
+// value table
+// ==========================================================================
+
+.value-table {
+    text-align: left;
+    @include vr($font-size: 2);
+
+    font-family: $font-family-monospace;
+    flex: 0 0 auto;
+    margin-bottom: auto;
+/*     @include vr ($margin-left: -1); */
+
+    @include mq('tablet'){
+    }
+    tr{
+        @include vr($height: 3);
+    }
+    td{
+    }
+}
+
+.value-table-left-pad {
+    @include vr($padding-left: 1);
+}
+
+#tr-row-underscore{
+    height: 2.5rem;
+}
+
+#td-row-underscore{
+  /* @include vr($height: -1); */
+  padding: 3rem 0 0 0;
+  height: 2.5rem;
+  hr{
+    border-top: thin solid $primary;
+
+  }
+}
+
+
+#tr-row-sum{
+    height: 2.5rem;
+}
+/* .value-row-underscore {
+    border-bottom: thin solid $primary;
+} */
+
+
+// ==========================================================================
+// custom buttons
+// ==========================================================================
+
+.circle__button{
+    z-index: 1000;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle__button_content{
+    flex: 0 0 auto;
+}

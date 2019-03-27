@@ -1,11 +1,19 @@
-$new-primary: #68ABD8;
-$new-secondary: #111111; 
-$new-palette1: #636ce5;
-$new-palette1: #6794ef;
-$new-palette1: #67dcef;
-$new-palette1: #63e5d3;
+// $new-primary: #68ABD8;
+// $new-secondary: #111111; 
+// $new-palette1: #636ce5;
+// $new-palette1: #6794ef;
+// $new-palette1: #67dcef;
+// $new-palette1: #63e5d3;
 
 
+$new-primary: #2CC0F2;
+$new-secondary:#76D4F4; 
+$new-palette1: #25A1CB;
+$new-palette2: #2397bf;
+$new-palette3: #376473;
+$new-palette4: #ade5f8;
+$new-palette5: #c8eefb;
+$new-palette6: #e4f6fd;
 
 
 $white:    #fff !default;
@@ -172,10 +180,10 @@ $theme-colors: map-merge((
 $body-bg:						                $white;
 
 
-$link-color:                        theme-color("primary") !default;
-$link-decoration:                   none !default;
-$link-hover-color:                  darken($link-color, 15%) !default;
-$link-hover-decoration:             underline !default;
+$link-color:                        $primary;
+$link-decoration:                   none;
+$link-hover-color:                  darken($new-primary, 15%);
+$link-hover-decoration:             underline;
 
 //
 // Paragraphs
@@ -218,8 +226,9 @@ $navbar-light-hamburger-icon:		    unset;
 $navbar-light-toggler-border-color: rgba($black, .1) !default; 
 
 
-$expertise-overlay-icon-fill-color: $tungsten;
-$qualifications-icon-fill-color:    $primary;
+$capabilities-overlay-icon-fill-color: $tungsten;
+$capabilities-menu-icon-fill-color:   $primary;
+$qualifications-icon-fill-color:      $primary;
 
 
 $carousel-control-color:            $slate;

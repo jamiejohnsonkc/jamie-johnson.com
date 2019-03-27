@@ -120,8 +120,15 @@ font-style:         italic;
 }
 
 
-.link{
+.theme-link, a:not([href]):not([tabindex]){
 font-family:        $font-family-sans-serif;
 color:              $link-color;
+text-decoration: 	$link-decoration;
 }
+
+.theme-link:hover{ 		
+color:    			$link-hover-color;
+text-decoration: 	$link-hover-decoration;
+}
+
 

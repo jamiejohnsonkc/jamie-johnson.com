@@ -99,3 +99,8 @@
         &:before { @include prefixed(transform, scaleY(1)); }
     }
 }
+
+
+.read-more__outcomes, .read-more__optimize, .read-more__value, .read-more__modernize, .panel__content_dev-design--read-more,.panel__content_planning-analysis--read-more, .panel__content_ops-management--read-more{
+    display: none;
+}

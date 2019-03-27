@@ -1,43 +1,43 @@
-.value-table {
-    text-align: left;
-    @include vr($font-size: 2);
+// .value-table {
+//     text-align: left;
+//     @include vr($font-size: 2);
 
-    font-family: $font-family-monospace;
-    flex: 0 0 auto;
-    margin-bottom: auto;
-/*     @include vr ($margin-left: -1); */
+//     font-family: $font-family-monospace;
+//     flex: 0 0 auto;
+//     margin-bottom: auto;
+// /*     @include vr ($margin-left: -1); */
 
-    @include mq('tablet'){
-    }
-    tr{
-    	@include vr($height: 3);
-    }
-    td{
-    }
-}
+//     @include mq('tablet'){
+//     }
+//     tr{
+//     	@include vr($height: 3);
+//     }
+//     td{
+//     }
+// }
 
-.value-table-left-pad {
-    @include vr($padding-left: 1);
-}
+// .value-table-left-pad {
+//     @include vr($padding-left: 1);
+// }
 
-#tr-row-underscore{
-    height: 2.5rem;
-}
+// #tr-row-underscore{
+//     height: 2.5rem;
+// }
 
-#td-row-underscore{
-  /* @include vr($height: -1); */
-  padding: 3rem 0 0 0;
-  height: 2.5rem;
-  hr{
-    border-top: thin solid $primary;
+// #td-row-underscore{
+//   /* @include vr($height: -1); */
+//   padding: 3rem 0 0 0;
+//   height: 2.5rem;
+//   hr{
+//     border-top: thin solid $primary;
 
-  }
-}
+//   }
+// }
 
 
-#tr-row-sum{
-    height: 2.5rem;
-}
-/* .value-row-underscore {
-    border-bottom: thin solid $primary;
-} */
+// #tr-row-sum{
+//     height: 2.5rem;
+// }
+// /* .value-row-underscore {
+//     border-bottom: thin solid $primary;
+// } */

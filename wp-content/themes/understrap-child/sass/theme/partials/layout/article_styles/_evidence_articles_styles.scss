@@ -40,10 +40,6 @@
 
 }
 
-// ====================================================================================
-// NOTE - FOR DIAGRAM STYLES & DISPLAY STATES SEE "MY_VALUE_DIAGRAMS" IN MODULES FOLDER
-// ====================================================================================
-
 //
 //CUSTOM CONTENT COLUMN WIDE FOR SMALL SCREENS
 //
@@ -73,12 +69,15 @@
     }
 
     > h3 {
-        @include vr($font-size: 3, $line-height:1.9, $margin:1 0 2 2);
-        font-weight: 400;
+        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
+        font-weight: 300;
     }
 
     h4 {
-        @include vr($font-size: 2, $line-height:2);
+        @extend %display-text-sm;
+    }
+    %display-text-sm{
+        @include vr($margin: 1 0);
     }
 
     @include vr($margin-left: 0);
@@ -93,20 +92,21 @@
     flex-wrap: wrap;
 }
 
+
 // ====================================================================================
-// advance business objectives - majority of changes in my_value_diagrams file
+//  outcome driven marketing
 // ====================================================================================
 .business-value .diagram {
     @include vr($margin: 2 0 4 0);
 }
 
-#objectives p {
+// #objectives p {
 
-    /*        @include vr($font-size: 2, $line-height: 2.5); */
-    @include vr($font-size: 2, $line-height:2.5);
-    font-style: italic;
-    font-weight: 300;
-}
+//     /*        @include vr($font-size: 2, $line-height: 2.5); */
+//     @include vr($font-size: 2, $line-height:2.5);
+//     font-style: italic;
+//     font-weight: 300;
+// }
 
 /*http://colorzilla.com/gradient-editor/#d2dbe2+1,7db9e8+100&1+0,0+53 */
 #objectives {
@@ -117,7 +117,8 @@
 }
 
 .my-value__conclusion {
-    @include vr($padding: 2);
+    @include vr($padding: 1);
+
 }
 
 .my-value__conclusion--background {
@@ -129,15 +130,16 @@
 }
 
 .my-value__conclusion > p {
-    @include vr($font-size: 2, $line-height:2.5);
-    font-style: italic;
+    @extend %display-text-sm;
+    // @include vr($font-size: 2, $line-height:2.5);
+    // font-style: italic;
     font-weight: 300;
 }
 
 .delta--down,
 .delta--right {
     .cls-1 {
-        fill: $slate;
+        fill: $gray-400;
     }
 
 }
@@ -185,6 +187,158 @@
     width: 90%;
 }
 
+//
+// outcomes diagram (vert & horz versions)
+//
+
+
+#objectives__diagram {
+    @include make-row;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+    width: 80%;
+
+    @include mq("tablet-wide") {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    .objectives-diagram__list-item{
+        @include make-row;
+
+        width: 100%;
+        max-width: 100%;
+        @include vr($margin: 1 0 1 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        ol {
+            margin-block-end: 0px;
+            margin-block-start: 0px;
+            list-style-position: inside;
+            padding-inline-start: 0px;
+            -webkit-padding-start: 0px;
+            align-self: center;
+
+            @media (max-width: 25em) {
+                margin-left: 2em;
+            }
+
+            // @include push-auto;
+       
+        }
+
+        li {
+            @extend %list-item-lg;
+            // @include vr($font-size: 2);
+            %list-item-lg{
+                @include vr($margin-bottom: 0);
+            }
+            padding-right: 0;
+
+            @include mq("phone") {
+                margin-left: 4rem;
+            }
+
+
+            @include mq("tablet") {
+                margin-left: 2rem;
+            }
+        }
+
+        .br {
+            display: none;
+        }
+
+        .content__container_icon, .objectives-offset {
+            @include make-col-ready;
+            width: 20%;
+            max-width: 20%;
+            display: block;
+        }
+
+        @include mq("tablet-wide") {
+            /*   display: none; */
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 23%;
+            max-width: 23%;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            align-items: center;
+
+            // align-content: center;
+            flex: 0 0 auto;
+
+            .objectives-offset {
+                display: none;
+            }
+
+            .content__container_icon {
+                width: 80%;
+                max-width: 80%;
+                height: auto;
+                flex: 0 0 auto;
+            }
+
+            li {
+                margin-left: 0;
+
+                @include vr($font-size: 1.5);
+            }
+        }
+    }
+
+    @include mq("tablet-wide") {
+        .my-value__conclusion {
+            @include make-col-ready;
+            @include make-col(12);
+
+            padding-left: 0px;
+            padding-right: 0px;
+            align-items: flex-start;
+        }
+    }
+
+
+text.st4.st6{
+    fill:#111;
+    stroke: none;
+}
+
+text.st3.st4.st5{
+    stroke: none;
+    fill: #111;
+}
+
+
+
+
+
+
+
+#appbar\2e smiley\2e happy-2, #Path_7509, #Path_7510, #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(4), #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(4){
+    fill: $primary;
+}
+
+
 // ====================================================================================
 // cultivate customer value
 // ====================================================================================
@@ -203,14 +357,14 @@
             //
         }
 
-        .diagram,
-        .my-value__conclusion {
-            @include make-col-ready();
-            @include make-col(6);
-            min-height: 100%;    /* p{
-                                    @include vr($font-size: 1, $line-height: 2.5, $width: 20);
-                                } */
-        }
+        // .diagram,
+        // .my-value__conclusion {
+        //     @include make-col-ready();
+        //     @include make-col(6);
+        //     min-height: 100%;    /* p{
+        //                             @include vr($font-size: 1, $line-height: 2.5, $width: 20);
+        //                         } */
+        // }
 
         .row {
             height: 100%;
@@ -231,9 +385,9 @@
                                            font-weight: 300; */
         }
 
-        #value__conclusion_cultivate p {
-            @include vr($padding: 0 4 0 4, $line-height:2.5);
-        }
+        // #value__conclusion_cultivate p {
+        //     @include vr($padding: 0 4 0 4, $line-height:2.5);
+        // }
 
     }
 
@@ -242,7 +396,6 @@
 .competitive-advantage__svg {
     width: 90%;
     display: block;
-    margin-left: -1em;
 
     @include mq('tablet-wide') {
         width: 90%;
@@ -259,11 +412,62 @@ text.st6.st7 {
     //
 }
 
+.diagram__competitive-advantage {
+    .st1, .st2, .st6, .st7 {
+        font-weight: normal;
+        // fill: $primary;
+        stroke: none;
+        font-size: 16px;
+    }
+
+    .st4 {
+        // font-size: $ms-2_5;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        stroke: none;
+}
+    .st7 {
+        // font-size: $ms-2;
+   
+    }
+
+    .st1, .st2, .st4, .st6, .st7 {
+          fill: #111;
+    }
+
+    #Layer_1 {
+       .st8, .st12, .st13 {
+            // stroke: $gray-700;
+            stroke: $primary;
+        }
+    }
+
+    #Layer_2 .st0 {
+        // fill: $tungsten;
+        fill: $primary;
+    }
+    polygon {
+        fill: $gray-500;
+    }
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(3) > g > line{
+        stroke: $gray-500;
+    }
+}
 // ====================================================================================
 // modernize marketing
 // ====================================================================================
+
+.diagram__modern-marketing{
+   #headers text{
+    font-family: roboto;
+   } 
+} 
+
+
 .modern-marketing-diagram {
-    width: 85%;
+    width:100%;
     display: block;
     @include push-auto();
 
@@ -292,15 +496,15 @@ text.st6.st7 {
 
 }
 
-#value__conclusion_modernize {
-    @include mq('tablet-wide') {
-        @include make-col-ready();
-        @include make-col(6);
-        @include vr($padding: 0 4 0 4);/*      order: 2;
-                                background: rgba(210, 219, 226, .5); */
-    }
+// #value__conclusion_modernize {
+//     @include mq('tablet-wide') {
+//         @include make-col-ready();
+//         @include make-col(6);
+//         @include vr($padding: 0 4 0 4);/*      order: 2;
+//                                 background: rgba(210, 219, 226, .5); */
+//     }
 
-}
+// }
 
 // ====================================================================================
 // optimize marketing contribution
@@ -402,7 +606,7 @@ text.st6.st7 {
     align-text: justify;
 }
 
-#value__conclusion_optimize {
+.my-value__conclusion{
     @extend .my-value__conclusion--background;
 }
 
@@ -441,4 +645,8 @@ text.st6.st7 {
 
     }
 
+}
+
+.moreless-button__outcomes{
+    display: block;
 }

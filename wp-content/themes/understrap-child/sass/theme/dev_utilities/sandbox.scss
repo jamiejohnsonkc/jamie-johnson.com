@@ -43,3 +43,17 @@
 .sandbox__list-item{}
 .sandbox__image{@include vr($padding: 1);}
 .sandbox__image--big{}
+
+
+
+#test-parent {
+  margin-top: 20em;
+  width: 500px;
+  height: 400px;
+  word-wrap: break-word;
+  background: blue;
+}
+
+.moretext {
+  display: none;
+}

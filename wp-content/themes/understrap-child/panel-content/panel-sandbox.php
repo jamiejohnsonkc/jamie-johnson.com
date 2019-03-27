@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 	<div class="container home-page__howidoit__container"> -->
 		<article class="article__wrapper">
 			<div class="container" id="canvas">
-				
+
 
 <div style="margin-bottom: 6em">
 <div class="sandbox1">%title-lg</div>
@@ -41,7 +41,6 @@ exit; // Exit if accessed directly.
 <div class="sandbox21">%caption</div>
 <div class="sandbox22">%micro</div>
 </div>
-
 
 
 <div style="margin-bottom: 6em">

@@ -1,40 +1,18 @@
- // alert('Hello, world!');
 
 
 
-
-// jQuery(document).ready(function($) {
-//     if(window.location !== "http://www.jamiejohnsonmev2.test/expertise/"){
-jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-1"),
-      close = document.getElementById("expt-close-1"),
-      over = document.getElementById("expt-overlay-1");
-      body = document.body;
-    
-  open.addEventListener("click touchstart", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click touchstart", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-});
-// }});
 
 
 jQuery(document).ready(function($) {
   var open = document.getElementById("open-expt-overlay-1"),
       close = document.getElementById("expt-close-1"),
       over = document.getElementById("expt-overlay-1");
-      body = document.body;
-    
   if(open){
-    open.addEventListener("click touchstart", function(){
+  open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
-  close.addEventListener("click touchstart", function(){
+  close.addEventListener("click", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
@@ -46,11 +24,11 @@ jQuery(document).ready(function($) {
       close = document.getElementById("expt-close-2"),
       over = document.getElementById("expt-overlay-2");
   if(open){
-  open.addEventListener("click touchstart", function(){
+  open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
-  close.addEventListener("click touchstart", function(){
+  close.addEventListener("click", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
@@ -63,11 +41,11 @@ jQuery(document).ready(function($) {
       over = document.getElementById("expt-overlay-3");
  
  if(open){
-  open.addEventListener("click touchstart", function(){
+  open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
-  close.addEventListener("click touchstart", function(){
+  close.addEventListener("click", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });
@@ -80,11 +58,31 @@ jQuery(document).ready(function($) {
       over = document.getElementById("expt-overlay-4");
  
  if(open){
-  open.addEventListener("click touchstart", function(){
+  open.addEventListener("click", function(){
     over.classList.add("show");
    body.classList.add("nope");
   });
-  close.addEventListener("click touchstart", function(){
+  close.addEventListener("click", function(){
+    over.classList.remove("show");
+    body.classList.remove("nope");
+  });
+}
+});
+
+
+
+jQuery(document).ready(function($) {
+  var open = document.getElementById("open-expt-overlay-5"),
+      close = document.getElementById("expt-close-5"),
+      over = document.getElementById("expt-overlay-5");
+      body = document.body;
+    
+  if(open){
+    open.addEventListener("click", function(){
+    over.classList.add("show");
+   body.classList.add("nope");
+  });
+  close.addEventListener("click", function(){
     over.classList.remove("show");
     body.classList.remove("nope");
   });

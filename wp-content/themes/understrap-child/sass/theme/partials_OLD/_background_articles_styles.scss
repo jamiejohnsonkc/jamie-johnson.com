@@ -1,9 +1,44 @@
 
-// .panel-fluid.alternate.why-me__categories {
-//     h1 {
-//         @extend .page__title;
-//     }
-// }
+#why-me-bg{
+     background: rgba(255,255,255,.8)
+}
+
+ .background{
+    & h1{
+        @extend .page__title;
+    }
+
+    & h2 {
+        @extend %headline;
+    }
+
+    & h3 {
+        // @extend %subhead;
+        letter-spacing: .05rem;
+    }
+}
+
+.container.background h3{
+@extend %display-text;
+font-weight: 400;
+}
+
+    .content1__background{
+    	& p {
+        @extend %display-text-sm;
+     /*      @include vr($font-size: 6, $line-height: 2);    */
+    }
+}
+
+.categories__content_caption{
+	& h3{
+
+	}
+	& p{
+
+	}
+}
+
 
 .categories__content_caption {
     opacity: 0;
@@ -53,43 +88,43 @@ filter: brightness(100%);
     align-items: center;
     justify-content: center;
     text-align: center;
+    @include vr($padding: 3);
     
 
-    h3 {
-        @extend %subhead;
+   & h3 {
+        @extend %subhead-sm;
         font-weight: 300;
-        @include vr($font-size: 2, $line-height: 2, $margin: 0);
+        // @include vr($font-size: 2, $line-height: 2, $margin: 0);
         text-transform: uppercase;
         letter-spacing: .25rem;
     }
  
-    p {
-        @extend %display-text;
-        @include vr($font-size: 2, $line-height: 1, $width: 16);
+   & p {
+        @extend %display-text-sm;
+        // @include vr($font-size: 2, $line-height: 1, $width: 16);
         letter-spacing: .025rem;
         text-transform: capitalize;
 
     }
+    %subhead-sm{
+    	@include vr($margin-bottom: 1);
+    }
+    %display-text-sm{
+    	@include vr($margin: 0 0); font-weight: 200;
+    }
 
 @include mq('desktop') {
-        h3 {
+       // & h3 {
          
-            font-size: 4.5rem;
-        }
+       //      font-size: 4.5rem;
+       //  }
 
-        p {
-            font-size: 3.5rem
-        }
+       //  & p {
+       //      font-size: 3.5rem
+       //  }
     }
      @include mq('desktop-xl') {
-h3{
-    font-size: 3rem;
-    letter-spacing: .075rem;
-}
-p{
-     font-size: 2rem;
-}
+
      }
 
 }
-

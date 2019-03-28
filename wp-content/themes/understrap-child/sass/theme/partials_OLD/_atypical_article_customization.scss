@@ -1,57 +1,7 @@
 
-.why-me__atypical {
-    text-align: left;
-}
 
 
-.why-me__container__atypical {
-   display: flex;
-   flex-direction: column;
-}
- 
-.why-me__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.why-me__content__copy{
-position: relative;
-// border-radius: 1rem;
-// @include vr($padding: 1 2);
-& h4 {
-    @extend %subhead;
-    @include vr($font-size: 3);
-   //  letter-spacing: .05rem;
-   //  text-transform: capitalize;
-   //   border-radius: 1rem;
-   // @include vr($padding: 0 0);
-   //  letter-spacing: .075rem;
-    }
-& h5{
-    @extend %display-text-lg;
-}
-& p {
-        @extend %display-text;
-   font-weight: 200;
-    }
-@include media-breakpoint-up(md) {
-    h4{
-    font-weight: 500;
-    }
-    h5{
-        font-weight: 300;
-    }
-}
-}
-
-.why-me__content__summary{
-@include vr($font-size: 1);
-}
-
-.why-me__content__verbose{
-    display: none;
-}
 /* .atypical__intro{   p{
 
  

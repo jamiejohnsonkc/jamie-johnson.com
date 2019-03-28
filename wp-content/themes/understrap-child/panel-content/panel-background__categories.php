@@ -9,17 +9,17 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper content__wrapper categories">
-	<div class="container alternate why-me__container__categories" id="category-history">
-		<div class="content-container">
+	<div class="container background why-me__container__categories" id="category-history">
+		<div class="content-container content_container__background_categories">
 			<h1>category experience</h1>
 			<h2>Incomparible Breadth</h2>
-			<div class="content1">
+			<div class="content1 content1__background">
 
 				<p>Aliqua incididunt ea deserunt aute exercitation ut incididunt consectetur ut ad pariatur laboris ut fugiat nisi eu esse in sit et in.</p>
 				<p>Qui officia dolor mollit excepteur reprehenderit id velit cillum nostrud consectetur nulla minim.</p>
 				<p>Sunt eiusmod laborum proident.</p>
 			</div>
-			<div class="content2">
+			<div class="content2 content2__background content2__background--categories">
 				<div class="why-me__categories_content why-me__categories_content--industrial">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
 					<div class="categories__content_caption">

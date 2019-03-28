@@ -1,0 +1,1582 @@
+// ==========================================================================
+// splash article - master
+// ==========================================================================
+
+.splash-wrapper {
+  overflow: hidden;
+}
+
+.splash {
+  h1 {
+    @extend %title-lg;
+  }
+
+  h2 {
+    @extend %subhead-lg;
+  }
+
+  h3 {
+    @extend %display-text-lg;
+  }
+
+  p {
+    @extend %body-text-lg;
+  }
+}
+
+// =========================================================================
+// homepage splash
+// =========================================================================
+#home__splash {
+  @include center-middle;
+
+  padding-left: 0;
+  padding-right: 0;
+
+  h3 {
+    @extend %display-text-lg;
+
+    font-weight: 400;
+  }
+
+  p {
+    @extend %body-text-lg;
+
+    font-style: italic;
+
+    @include vr($line-height: 3);
+  }
+
+  .link {
+    position: absolute;
+    display: block;
+
+    @include push-auto;
+
+    bottom: 6em;
+  }
+
+  %subhead {
+    @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
+
+    font-weight: 300;
+  }
+}
+
+.splash__label, .splash__label--emph {
+  @extend %sublist-sm;
+}
+
+.splash__label_divider {
+  color: $gray-500;
+}
+
+@include mq("tablet") {
+  %subhead {
+    @include vr($font-size: 1);
+  }
+}
+
+
+#splash__label_label--emph {
+  color: $primary;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////     .core / homepage articles  //////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////*/
+
+.core {
+  @include left-middle;
+  @include split-rows;
+
+  h1 {
+    @extend .page__title;
+  }
+
+  h2 {
+    @extend %headline;
+  }
+
+  h3 {
+    /*         @extend %display-text-lg;  */
+    @extend %subhead;
+
+    font-weight: 300;
+  }
+
+  h4 {
+    @extend %display-text-lg;
+
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    @extend %display-text;
+
+    font-weight: 400;
+    letter-spacing: .05em;
+  }
+
+  p {
+    @extend %display-text-sm;
+  }
+
+  p.caption {
+    @extend %display-text-sm;
+
+    letter-spacing: .025em;
+  }
+}
+
+//
+// homepage summary
+//
+
+#article__container--home-page-summary-intro {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.content__item_wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.content__item_intro--background {
+  background: $black;
+  color: $white;
+}
+
+.section__head_headers {
+  text-align: center;
+
+  h2 {
+    @extend %headline;
+  }
+
+  h3 {
+    @extend %subhead-sm;
+  }
+
+  p {
+    @extend %display-text-sm;
+  }
+}
+
+.intro__icon_caption {
+  @extend %caption;
+}
+
+.content__item_intro--content {
+  background: $gray-300;
+}
+
+.content__item_internal-wrapper {
+  background: $white;
+  border-radius: .25em;
+  border: thin solid $gray-400;
+}
+
+.content__item_content--para {
+  h2 {
+    @extend %subhead;
+  }
+
+  > h4 {
+    @include vr($font-size: 2, $margin-bottom: 1);
+
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+}
+
+//
+// strengths
+//
+
+.core > .strengths__panel_wrapper {
+  h3 {
+    @extend %subhead;
+  }
+
+  %subhead {
+    margin-bottom: 0;
+  }
+}
+
+ul#list__strengths_container {
+  list-style: none;
+}
+
+ul#list__strengths_container > li {
+  @extend %list-item;
+
+  // @include vr($font-size: 1, $line-height: 1.5,);
+}
+
+.list__header {
+  @extend %list-head;
+
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#strengths__caption {
+  @include vr($font-size: 1, $padding-left: 2);
+
+  font-style: italic;
+  font-family: $font-family-serif;
+}
+
+.strengths__icon {
+  background: $white;
+  border-radius: 100%;
+}
+
+.panel__footnote {
+  @include vr($font-size: 0, $padding-left: 0);
+
+  font-style: italic;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+//strengths panel colors
+
+#strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
+  h3, p, ul, li, .list__header, .panel__footnote {
+    color: $white;
+  }
+}
+
+#strengths__panel_wrapper--dad{
+  background: $blue;
+}
+#strengths__panel_wrapper--smm, #strengths__panel_wrapper--opi {
+background: $primary;
+}
+
+
+//
+// proof boxes
+//
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////            proof article         /////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////*/
+
+//container article styles
+#article__container--proof {
+  h2 {
+    align-text: center;
+
+    @include push-auto;
+  }
+
+  h3 {
+    @include vr($width: 28, $line-height: 3);
+    @include push-auto;
+  }
+
+  .content__container_col {}
+
+  .content__block {}
+
+  h4 {}
+
+  p {
+    font-family: $font-family-serif;
+  }
+
+  .content__item_col {}
+}
+
+h2.proof-intro {
+  font-family: $font-family-serif;
+
+  @include vr($font-size: 4, $margin-bottom: 4);
+
+  color: $primary;
+}
+
+h2.proof-intro, .proof__item_container h5 {
+  text-align: center;
+}
+
+.proof__content_text p {
+  @extend %display-text-sm;
+
+  letter-spacing: .025em;
+
+  em {
+    color: $primary;
+    font-weight: 400;
+  }
+}
+
+.proof__content_text em {
+  @include vr($font-size: 1);
+}
+
+#proof__content_marketer > div > p > em {
+  color: $primary;
+  font-weight: 300;
+}
+
+#proof__you {
+  background: $primary;
+  border-radius: 2em;
+  border: none;
+}
+
+// #trend-arrow{
+//     z-index: -1;
+//     height: 35em;
+//     top: 5em;
+//     left: -2em;
+//     width: 125%;
+//     svg#Layer_1{
+//         width: 90%;
+
+//     }
+//     .st0{
+//        fill:rgba(106, 173, 217, .5);
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////
+// i do outcomes panel
+//////////////////////////////////////////////////////////////////
+#idooutcomes {
+  border: 0.25em solid $gray-300;
+
+  h5 {
+    @extend %subhead-sm;
+
+    font-family: $font-family-serif;
+
+    // @include vr($font-size: 2, $margin: 0 0 4 0);
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+// end to end equation panel
+//////////////////////////////////////////////////////////////////
+
+#end2end__diagram_container {
+  background: $black;
+
+  h5, p {
+    color: $offwhite;
+  }
+
+  h5 {
+    @extend %display-text-sm;
+
+    font-weight: 400;
+  }
+
+  %display-text-sm {
+    @include vr($margin-bottom: 4);
+  }
+}
+
+.proof__content_text {
+  text-align: center;
+}
+
+.end2end__diagram_caption {
+  @include vr($font-size: 1, $margin-bottom: 0);
+
+  color: $offwhite;
+  letter-spacing: .075em;
+}
+
+.end2end__diagram_img--plus, .end2end__diagram_img--equal {
+  color: $primary;
+
+  @include vr($font-size: 3, $margin: 2 auto 2 auto);
+}
+
+.end2end__diagram_img--dollar {
+  text-align: center;
+
+  @include vr($font-size: 4, $margin: 1 0 1 0);
+}
+
+///////////////////////////////////////////////////////////////////
+// I've been around / stats slider panel
+//////////////////////////////////////////////////////////////////
+
+#proof__content_vitae {}
+
+.vitae__stats {}
+
+.stats-caption h6 {
+  @extend %caption;
+
+  // @include vr($font-size: 1, $margin-bottom: 0, $margin-top: 0, $line-height: 1.25);
+  @include push-auto;
+
+  font-weight: 300;
+  color: $gray-900;
+  letter-spacing: .03em;
+}
+
+#proof__content_vitae > div.proof__content_text > p {
+  @include vr($margin-top: 0);
+}
+
+///////////////////////////////////////////////////////////////////
+// Professional About Service panel
+//////////////////////////////////////////////////////////////////
+
+#proof__you {
+  p {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-transform: capitalize;
+
+    @include vr($margin-bottom: 1);
+
+    font-family: $font-family-serif;
+    font-style: italic;
+  }
+}
+
+// ==========================================================================
+// services splash
+// ==========================================================================
+
+#services__splash {
+  h2 {
+    @extend %subhead-sm;
+  }
+
+  %subhead-sm {
+    @include vr($margin-bottom: 0);
+  }
+
+  h3 {
+    @extend %sublist-sm;
+  }
+
+  %sublist-sm {
+    @include vr($margin-top: 0);
+
+    font-weight: 200;
+  }
+}
+
+// ==========================================================================
+// services page/articles
+// ==========================================================================
+.services {
+  h1 {
+    @extend %subhead;
+  }
+
+  h2 {
+    @extend %display-text-sm;
+  }
+
+  h3 {
+    @extend %display-text;
+
+    font-weight: 400;
+  }
+
+  p {
+    @extend %display-text-sm;
+  }
+
+  li {
+    @extend %list-item;
+
+    color: #111;
+  }
+
+  %subhead {
+    @include vr($margin-bottom: 0);
+  }
+
+  %display-text-sm {
+    @include vr($margin: 0 0 2 0);
+  }
+}
+
+.services__list_list-item {
+  @extend %list-item;
+}
+
+.services__panel-head {
+  @extend %subhead-sm;
+}
+
+.panel__head_headers {
+  text-align: center;
+
+  %subhead-sm {
+    @include vr($margin-bottom: 3);
+  }
+}
+
+.panel__head_headers {
+  text-align: center;
+
+  %subhead-sm {
+    @include vr($margin-bottom: 3);
+  }
+}
+
+.panel__content_summary {
+  @extend %display-text-sm;
+
+  font-weight: 400;
+}
+
+.panel__content_list > ul {
+  padding-inline-start: 0;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+// ==========================================================================
+// planning & analysis 
+// ==========================================================================
+
+.planning-analysis__panel {
+  background: $black;
+
+  @extend .blueA-reversed;
+}
+
+.services__panel-head--planning, .panel__content_planning, li.list-item__planning {
+  color: $offwhite;
+}
+
+// ==========================================================================
+// capabilities
+// ==========================================================================
+
+.my-capabilities {
+  h1 {
+    @extend .page__title;
+  }
+
+  h2 {
+    @extend %display-text-lg;
+  }
+
+  h3 {}
+
+  h4 {
+    /*      @extend %display-text-lg; */
+  }
+
+  /*         @extend %display-text-lg;  */
+
+  p {
+    @extend %display-text-sm;
+  }
+}
+
+.capabilities__menu_item {
+  %subhead-sm {
+    @include vr($font-size: 16px);
+  }
+
+  %subhead-sm, %display-text-sm {
+    @include vr($margin: 0);
+
+    %display-text-lg {
+      @include vr($line-height: 1.75, $margin-bottom: 0.25);
+    }
+  }
+}
+
+.capabilities__menu_item--content h3 {
+  @extend %subhead-sm;
+}
+
+.capabilities__menu_item > div > p {
+  @extend %display-text-sm;
+}
+
+#capabilities__menu_link {
+  @extend %body-text;
+
+  font-style: italic;
+}
+
+// ==========================================================================
+// capabilities overlay
+// ==========================================================================
+
+.capabilities__overlay {
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  transition: all 0.5s;
+  color: $tungsten;
+
+  .expt-body-text, .expt-vert {
+    color: $tungsten;
+  }
+
+  hr {
+    width: 90%;
+  }
+}
+
+.overlay__container {
+  h4 {
+    @extend %subhead;
+  }
+
+  h5 {
+    @extend %subhead;
+  }
+}
+
+.overlay__container > .overlay-intro {
+  @include mq("tablet") {
+    p {
+      @include vr($font-size: 2, $line-height: 3);
+    }
+  }
+}
+
+.overlay__content--head h5 {
+  @extend %display-text;
+}
+
+.overlay__content {
+  /*    h3{
+       @include vr($font-size: 1);
+   } */
+
+  p {
+    @extend %display-text-sm;
+  }
+
+  li {
+    @include vr($line-height: 1.75, $font-size: 1);
+  }
+
+  @include mq("tablet") {
+    p {
+      margin-left: 19%;
+
+      @include vr($margin-top: -1, $width: 30);
+    }
+  }
+}
+
+.overlay-intro p {
+  @extend %display-text-sm;
+
+  font-weight: 200;
+}
+
+.overlay__content li {
+  @include mq("tablet") {
+    @include vr($font-size: 1, $line-height: 2);
+  }
+}
+
+.capabilities__overlay--webdev {
+  h5, hr {
+    border: 0;
+
+    /*     max-width: 100%;
+    width: 100%; */
+    flex: 0 0 auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  h5 {
+    letter-spacing: .2rem;
+
+    @include vr($font-size: 1);
+
+    text-transform: uppercase;
+  }
+}
+
+// ==========================================================================
+// call to action page
+// ==========================================================================
+.cta {
+  @include left-middle;
+
+  h1 {
+    @extend %title;
+  }
+
+  h2 {
+    @extend %subhead-lg;
+  }
+
+  h3 {
+    @extend %display-text-lg;
+  }
+
+  p {
+    @extend %body-text-lg;
+  }
+}
+
+// ==========================================================================
+// atypical
+// ==========================================================================
+
+.why-me__atypical {
+  text-align: left;
+}
+
+.why-me__content__copy {
+  & h4 {
+    @extend %subhead;
+
+    @include vr($font-size: 3);
+  }
+
+  & h5 {
+    @extend %display-text-lg;
+  }
+
+  & p {
+    @extend %display-text;
+
+    font-weight: 200;
+  }
+
+  @include media-breakpoint-up(md) {
+    h4 {
+      font-weight: 500;
+    }
+
+    h5 {
+      font-weight: 300;
+    }
+  }
+}
+
+// ==========================================================================
+// background articles (categories, brands, atypical)
+// ==========================================================================
+
+#why-me-bg {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.background {
+  & h1 {
+    @extend .page__title;
+  }
+
+  & h2 {
+    @extend %headline;
+  }
+
+  & h3 {
+    // @extend %subhead;
+    letter-spacing: .05rem;
+  }
+}
+
+.container.background h3 {
+  @extend %display-text;
+
+  font-weight: 400;
+}
+
+.content1__background {
+  & p {
+    @extend %display-text-sm;
+  }
+}
+
+.categories__content_caption {
+  & h3 {}
+
+  & p {}
+}
+
+.categories__content_caption {
+  opacity: 0;
+}
+
+.why-me__categories_content {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: thin $primary solid;
+
+  &,
+  &:hover .categories__content_caption {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+  }
+
+  filter: none;
+}
+
+// .why-me__categories_content:nth-child(odd){
+// img{
+//     filter: brightness(80%);
+
+// }
+// }
+
+.why-me__categories_content:hover > img {
+  filter: blur(1px);
+  filter: contrast(200%);
+  filter: brightness(100%);
+  transition: opacity 0.3s linear;
+}
+
+.categories__content_caption {
+  color: #fff;
+  background: rgba(59, 68, 76, 0.8);
+  text-align: center;
+
+  & h3 {
+    @extend %subhead-sm;
+
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+  }
+
+  & p {
+    @extend %display-text-sm;
+
+    letter-spacing: .025rem;
+    text-transform: capitalize;
+  }
+
+  %subhead-sm {
+    @include vr($margin-bottom: 1);
+  }
+
+  %display-text-sm {
+    @include vr($margin: 0 0);
+
+    font-weight: 200;
+  }
+
+  @include mq("desktop") {}
+
+
+  @include mq("desktop-xl") {}
+}
+
+
+
+
+.categories, .brands{
+    background: #fff;
+}
+
+// ==========================================================================
+// TRASH?
+// ==========================================================================
+
+.bshit {
+  @extend %subhead;
+}
+
+.alternate {
+  & h1 {
+    @extend .page__title;
+  }
+
+  & h2 {
+    @extend %headline;
+  }
+
+  & h3 {
+    // @extend %subhead;
+    letter-spacing: .05rem;
+  }
+
+  & p {
+    @extend %display-text-lg;
+
+    /*      @include vr($font-size: 6, $line-height: 2);    */
+  }
+}
+
+
+
+
+
+
+
+// ==========================================================================
+// everything past here needs combing
+// ==========================================================================
+
+#article__container--management-intro {
+    .intro > h3 {
+        @include vr($margin: 2 auto);
+        // color: $primary;
+    }
+
+    .intro__list {
+        @include make-col-ready();
+        @include make-col(5);
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .intro {
+        & h4 {
+            font-family: $font-family-monospace;
+            @include vr($font-size: 1, $line-height:1.5, $margin-top:4);
+            font-weight: 500;
+        }
+
+        & .content__item_caption {
+            padding: 0;
+            @include vr($line-height: 1.5);
+        }
+
+        & ol {
+            @include vr($padding-left: 2, $margin-top:1);
+
+            & li,
+            li a,
+            li a::before {
+                font-family: $font-family-monospace;
+                @include vr($font-size: 1, $line-height:1.5, $margin:1 0);
+                font-weight: 500;
+            }
+
+        }
+
+    }
+
+}
+
+//
+//CUSTOM CONTENT COLUMN WIDE FOR SMALL SCREENS
+//
+.business-value {
+    h1 {
+        @extend .page__title;
+    }
+
+    @include mq('tablet') {
+        max-width: 50em;
+    }
+
+    @include mq('tablet-wide') {
+        max-width: 99em;
+        width: 100%;
+    }
+
+}
+
+//
+// MY VALUE PAGE HEADER 
+//
+#val-page-header {
+    > h2 {
+        @include vr($font-size: 5, $line-height:4);
+        font-weight: 600;
+    }
+
+    > h3 {
+        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
+        font-weight: 300;
+    }
+
+    h4 {
+        @extend %display-text-sm;
+    }
+    %display-text-sm{
+        @include vr($margin: 1 0);
+    }
+
+    @include vr($margin-left: 0);
+}
+
+.page__header {
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+// ====================================================================================
+//  outcome driven marketing
+// ====================================================================================
+.business-value .diagram {
+    @include vr($margin: 2 0 4 0);
+}
+
+// #objectives p {
+
+//     /*        @include vr($font-size: 2, $line-height: 2.5); */
+//     @include vr($font-size: 2, $line-height:2.5);
+//     font-style: italic;
+//     font-weight: 300;
+// }
+
+/*http://colorzilla.com/gradient-editor/#d2dbe2+1,7db9e8+100&1+0,0+53 */
+#objectives {
+    .my-value__conclusion {
+        @extend .my-value__conclusion--background;
+    }
+
+}
+
+.my-value__conclusion {
+    @include vr($padding: 1);
+
+}
+
+.my-value__conclusion--background {
+    background: rgba(210, 219, 226, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: .5em;
+}
+
+.my-value__conclusion > p {
+    @extend %display-text-sm;
+    // @include vr($font-size: 2, $line-height:2.5);
+    // font-style: italic;
+    font-weight: 300;
+}
+
+.delta--down,
+.delta--right {
+    .cls-1 {
+        fill: $gray-400;
+    }
+
+}
+
+.delta--down {
+    width: 2rem;
+    height: 2rem;
+}
+
+.delta--right {
+    width: 1rem;
+    height: 2rem;
+}
+
+.objectives-diagram__vertical--delta {
+    display: flex;
+
+    @include mq('tablet-wide') {
+        display: none;
+    }
+
+}
+
+.objectives-diagram__horizontal--delta {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: flex;
+    }
+
+}
+
+.diagram__content_container .icon {
+    .cls-1,
+    .cls-2,
+    .cls-3,
+    .cls-4,
+    .cls-5 {
+        fill: $primary;
+    }
+
+}
+
+.content__container_icon .icon {
+    width: 90%;
+}
+
+//
+// outcomes diagram (vert & horz versions)
+//
+
+
+#objectives__diagram {
+    @include make-row;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+    width: 80%;
+
+    @include mq("tablet-wide") {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    .objectives-diagram__list-item{
+        @include make-row;
+
+        width: 100%;
+        max-width: 100%;
+        @include vr($margin: 1 0 1 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        ol {
+            margin-block-end: 0px;
+            margin-block-start: 0px;
+            list-style-position: inside;
+            padding-inline-start: 0px;
+            -webkit-padding-start: 0px;
+            align-self: center;
+
+            @media (max-width: 25em) {
+                margin-left: 2em;
+            }
+
+            // @include push-auto;
+       
+        }
+
+        li {
+            @extend %list-item-lg;
+            // @include vr($font-size: 2);
+            %list-item-lg{
+                @include vr($margin-bottom: 0);
+            }
+            padding-right: 0;
+
+            @include mq("phone") {
+                margin-left: 4rem;
+            }
+
+
+            @include mq("tablet") {
+                margin-left: 2rem;
+            }
+        }
+
+        .br {
+            display: none;
+        }
+
+        .content__container_icon, .objectives-offset {
+            @include make-col-ready;
+            width: 20%;
+            max-width: 20%;
+            display: block;
+        }
+
+        @include mq("tablet-wide") {
+            /*   display: none; */
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 23%;
+            max-width: 23%;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            align-items: center;
+
+            // align-content: center;
+            flex: 0 0 auto;
+
+            .objectives-offset {
+                display: none;
+            }
+
+            .content__container_icon {
+                width: 80%;
+                max-width: 80%;
+                height: auto;
+                flex: 0 0 auto;
+            }
+
+            li {
+                margin-left: 0;
+
+                @include vr($font-size: 1.5);
+            }
+        }
+    }
+
+    @include mq("tablet-wide") {
+        .my-value__conclusion {
+            @include make-col-ready;
+            @include make-col(12);
+
+            padding-left: 0px;
+            padding-right: 0px;
+            align-items: flex-start;
+        }
+    }
+
+
+text.st4.st6{
+    fill:#111;
+    stroke: none;
+}
+
+text.st3.st4.st5{
+    stroke: none;
+    fill: #111;
+}
+
+
+
+
+
+
+
+#appbar\2e smiley\2e happy-2, #Path_7509, #Path_7510, #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(4), #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(4){
+    fill: $primary;
+}
+
+
+// ====================================================================================
+// cultivate customer value
+// ====================================================================================
+
+#grow {
+    @include mq('tablet-wide') {
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        // .competitive-advantage__svg {
+            //     display: block;
+            //     margin-left: -2em;
+            //
+        }
+
+        // .diagram,
+        // .my-value__conclusion {
+        //     @include make-col-ready();
+        //     @include make-col(6);
+        //     min-height: 100%;    /* p{
+        //                             @include vr($font-size: 1, $line-height: 2.5, $width: 20);
+        //                         } */
+        // }
+
+        .row {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .diagram {
+            order: 2;
+            padding-left: 0;
+            padding-right: 0;
+            min-height: 100%;
+        }
+
+        .my-value__conclusion {
+            order: 1;/*      background: rgba(210, 219, 226, .5);
+                                           @include vr($font-size: 2, $line-height: 2.5);
+                                           font-style: italic;
+                                           font-weight: 300; */
+        }
+
+        // #value__conclusion_cultivate p {
+        //     @include vr($padding: 0 4 0 4, $line-height:2.5);
+        // }
+
+    }
+
+
+
+.competitive-advantage__svg {
+    width: 90%;
+    display: block;
+
+    @include mq('tablet-wide') {
+        width: 90%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+}
+
+// text.st3.st4,
+text.st6.st7 {
+    //     fill: $primary;
+    //     stroke: none;
+    //
+}
+
+.diagram__competitive-advantage {
+    .st1, .st2, .st6, .st7 {
+        font-weight: normal;
+        // fill: $primary;
+        stroke: none;
+        font-size: 16px;
+    }
+
+    .st4 {
+        // font-size: $ms-2_5;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        stroke: none;
+}
+    .st7 {
+        // font-size: $ms-2;
+   
+    }
+
+    .st1, .st2, .st4, .st6, .st7 {
+          fill: #111;
+    }
+
+    #Layer_1 {
+       .st8, .st12, .st13 {
+            // stroke: $gray-700;
+            stroke: $primary;
+        }
+    }
+
+    #Layer_2 .st0 {
+        // fill: $tungsten;
+        fill: $primary;
+    }
+    polygon {
+        fill: $gray-500;
+    }
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(3) > g > line{
+        stroke: $gray-500;
+    }
+}
+// ====================================================================================
+// modernize marketing
+// ====================================================================================
+
+.diagram__modern-marketing{
+   #headers text{
+    font-family: roboto;
+   } 
+} 
+
+
+.modern-marketing-diagram {
+    width:100%;
+    display: block;
+    @include push-auto();
+
+    @include mq('tablet-wide') {
+        width: 95%;
+    }
+
+}
+
+#modernize {
+    @include mq('tablet-wide') {
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .diagram {
+            @include make-col-ready();
+            @include make-col(6);
+            order: 1;
+            @include vr($padding: 1);
+        }
+
+    }
+
+}
+
+// #value__conclusion_modernize {
+//     @include mq('tablet-wide') {
+//         @include make-col-ready();
+//         @include make-col(6);
+//         @include vr($padding: 0 4 0 4);/*      order: 2;
+//                                 background: rgba(210, 219, 226, .5); */
+//     }
+
+// }
+
+// ====================================================================================
+// optimize marketing contribution
+// ====================================================================================
+
+
+.diagram__end-to-end {
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.diagram__end-to-end--horizontal {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+/////text in chart is outlined - needs to be bold
+.end-to-end--horz {
+    width: 100%;
+
+    .st0 {
+        fill: #68abd8;
+        stroke: #ffffff;
+        stroke-width: 1px;
+    }
+
+    .st1 {
+        font-family: roboto;
+    }
+
+    .st2 {
+        fill: #111111;
+    }
+
+    .st3 {
+        fill: #ffffff;
+        font-family: roboto;
+        stroke: #fff;
+        stroke-width: .75px;
+    }
+
+}
+
+.diagram__end-to-end--vertical {
+    @include make-row;
+    @include make-col-ready;
+    @include make-col(12);
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+
+    .st3,
+    .st4,
+    .st5 {
+        font-family: roboto;
+    }
+
+    @include mq('tablet-wide') {
+        display: none;
+    }
+
+}
+
+.progression__end-to-end--vertical {
+    @include make-col-ready();
+    @include make-col(6);
+}
+
+.end-to-end--vert {
+    width: 100%;
+}
+
+.diagram-content__caption--sticky {
+    @include make-col-ready();
+    @include make-col(6);
+    padding-left: 0px;
+    padding-right: 0px;
+    @include vr($font-size: 2, $padding-right:3);
+    position: sticky;
+    top: 40%;
+    left: 0;
+    height: 10rem;
+    align-self: flex-start;
+    margin-top: 3em;
+    letter-spacing: -.025em;
+    font-weight: 500;
+    align-text: justify;
+}
+
+.my-value__conclusion{
+    @extend .my-value__conclusion--background;
+}
+
+#optimize {
+    .content-container {
+        @include make-row();
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @include mq('desktop') {
+        .diagram-content__end-to-end--vertical {
+            display: none;
+        }
+
+        .diagram-content__end-to-end--horizontal {
+            display: block;
+
+            .end-to-end--horz {
+                width: 100%;
+            }
+
+            .content-container {
+                @include make-row();
+                margin-left: 0px;
+                margin-right: 0px;
+                flex-direction: row;
+                width: 100%;
+                max-width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+.moreless-button__outcomes{
+    display: block;
+}

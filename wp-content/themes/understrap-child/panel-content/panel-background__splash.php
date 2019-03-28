@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper-fluid  background splash-wrapper bgshoes">
+<article class="article__wrapper-fluid splash-wrapper bgshoes">
 		<div class="container splash background__container__splash" id="background__splash">
 	<!-- 	<h1>About Me</h1> -->
 		

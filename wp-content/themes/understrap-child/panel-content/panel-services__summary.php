@@ -8,11 +8,11 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper content__wrapper services__intro">
-	<div class="container services content__container_col" id="services__head">
-		<h1>My Services</h1>
+	<div class="container services content__container_col" id="services__page">
+		<div class="page__head--services"><h1>My Services</h1>
 		<h2>Core Service Areas</h2>
 
-	<p>Est eu veniam laboris commodo labore magna anim deserunt veniam pariatur aliquip in ad irure ve</p>
+	<p>Est eu veniam laboris commodo labore magna anim deserunt veniam pariatur aliquip in ad irure ve</p></div>
 <div class="panels__container">
 <div class="content__container_col services__panel webdev__panel">
 		<div class="panel__head">

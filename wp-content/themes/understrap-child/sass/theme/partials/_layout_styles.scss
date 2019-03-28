@@ -412,9 +412,10 @@ ul#list__strengths_container {
   @include vr($padding-left: 0, $margin-top: 0);
 }
 
-@extend %list-head;
+
 
 .list__header {
+ @extend %list-head;
   text-transform: uppercase;
   flex: 0 0 auto;
   width: 100%;
@@ -1108,28 +1109,6 @@ ul#list__strengths_container {
 .why-me__categories_content {
   margin-bottom: 2rem;
 }
-
-.why-me__container__brands{
-    @include media-breakpoint-up(md) {
-        
-}
-}
-
-.why-me__brands_content{
-    @include make-row();
-    width: 100%;
-    max-width: 100%;
-    @include rows();
-    flex-wrap: wrap;
-}
-
-.why-me__brands--logo{
-    @include make-col-ready();
-    @include make-col(4);
-    @include vr($padding: .85);
-        height: 15em;
-}
-
 
 // ==========================================================================
 // contact

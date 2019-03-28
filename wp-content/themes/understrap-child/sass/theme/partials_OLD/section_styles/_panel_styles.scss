@@ -5,14 +5,7 @@
 
 // page-template styles  (pages are vertical)
 
-.alternate{
-    h1 {
-        @extend .page__title;
-        text-align: left;
-    }
-    display: flex;
-    flex-direction: column;
-}
+
 
 // business-value panel / subpanels(panels are horizontal)
 

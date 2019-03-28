@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper splash-wrapper services bgbell">
+<article class="article__wrapper splash-wrapper bgbell">
 		<div class="container splash services_container__splash" id="services__splash">
-		<h1>Services & Capabilities</h1>
-		<h2></h2>
+		<h1>Services</h1>
+		<h2>How Can I Help You Grow Your Business?</h2>
 <!-- 		<h3>design &#x000B7; development &#x000B7; management &#x000B7; operations &#x000B7; strategy</h3> -->
 		
 		<!-- <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> -->

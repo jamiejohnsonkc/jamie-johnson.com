@@ -232,6 +232,8 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 		</div>
+
+		
 		<div class="capabilities__overlay capabilities__overlay--webdev" id="expt-overlay-4">
 			<button class="circle__button expt__close--button" id="expt-close-4">&times;</button>
 			<div class="overlay__container">
@@ -243,78 +245,78 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content">
 						<h5>languages & frameworks </h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_47.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_44.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_15.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_16.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_47.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_44.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_15.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_16.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 					</div>
 					<div class="overlay__content">
 						<h5>design & prototyping</h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
 					</div>
 					<div class="overlay__content">
 						<h5>systems & environments</h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_09.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_29.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_30.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_31.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_33.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_35.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_36.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_09.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_29.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_30.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_31.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_33.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_35.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_36.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 					</div>
 					<div class="overlay__content">
 						<h5>task processors</h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_49.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_50.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_51.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_52.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_53.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_68.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_69.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_49.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_50.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_51.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_52.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_53.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_68.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_69.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
 					</div>
 					<div class="overlay__content">
 						<h5>design & production</h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_02.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_18.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_02.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_18.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
 					</div>
 					<div class="overlay__content">
 						<h5>collaboration</h5>
 						<hr>
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_25.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_26.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_27.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
-						<img class="style-svg overlay__content--icon" flex-item" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_25.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_26.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_27.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
+						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 					</div>
 					<button class="circle__button expt__close--button bottom" id="expt-close-1">
 					&times;
@@ -390,7 +392,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="my-capabilities__main-page">
-			<div class="split-container">
+			<div class="split-container my-capabilities__panel-head">
 				<h2>Capabilities</h2>
 				<p>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</p>
 			</div>

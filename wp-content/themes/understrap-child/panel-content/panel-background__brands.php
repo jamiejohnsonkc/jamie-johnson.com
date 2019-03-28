@@ -9,17 +9,14 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper content__wrapper brands">
-	<div class="container alternate why-me__container__brands" id="brand-history">
-		<div class="content-container">
+	<div class="container background why-me__container__brands" id="brand-history">
+		<div class="content-container content_container__background_brands">
 			<h1>brand history</h1>
 		<h2>Exceptional Breadth</h2>
 		<h3>Voluptate fugiat mollit amet dolore excepteur.</h3>
-		<div class="content1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		<p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-		<p>consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-		
+		<div class="content1 content1__background content1__background--brands"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
-		<div class="content2">
+		<div class="content2 content2__background content2__background--brands">
 		<div class="why-me__brands_content">
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
 			<img class="why-me__brands--logo style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />

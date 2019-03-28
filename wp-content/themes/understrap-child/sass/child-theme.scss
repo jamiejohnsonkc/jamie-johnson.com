@@ -17,33 +17,48 @@
 
 
 @import "../src/sass/understrap/understrap/understrap";
-@import "theme/partials/base/navbar";
+@import "theme/partials/navbar";
 @import "../src/sass/understrap/theme/contact-form7";
 @import "assets/font-awesome";  
 @import "assets/underscores";
 
 
-@import "theme/partials/base/type_style_variables"; 
-@import "theme/partials/base/global_styles";
+@import "theme/partials/type_style_variables";
+@import "theme/partials/global_styles";
 
 
 
 
 
+@import "theme/partials/article_styles";
+
+@import "theme/partials/container_styles";
+// @import "theme/partials/base/menu_styles";
+@import "theme/partials/vert_rhythm_settings";
+// @import "theme/partials/layout/layout_styles_import";
+@import "theme/partials/graphics_and_artwork_styles";
+@import "theme/partials/layout_styles";
 
 
-@import "theme/partials/base/container_styles";
-@import "theme/partials/base/menu_styles";
-@import "theme/partials/base/vert_rhythm_styles";
-@import "theme/partials/layout/layout_styles_import";
-@import "theme/partials/utilities/graphics_and_artwork_styles";
-@import "theme/partials/utilities/layout_styles";
-@import "theme/partials/utilities/display_state_styles"; 
+@import "theme/partials/display_state_styles";
+@import "theme/partials/modules";
 
 
 
  @import "theme/dev_utilities/sandbox";
  // @import "theme/atomicmouse";   
+
+
+
+
+@import "theme/partials/contact_article_layout_template";
+
+// @import "theme/partials/custom_variables";
+
+
+
+
+// @import "theme/partials/menu_styles";
 
 
 

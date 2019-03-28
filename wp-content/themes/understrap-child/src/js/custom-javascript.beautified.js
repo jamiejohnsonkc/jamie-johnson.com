@@ -1,4 +1,4 @@
-// alert('Hello, world!');
+alert('Hello, world!');
 // jQuery(document).ready(function($) {
 //     if(window.location !== "http://www.jamiejohnsonmev2.test/expertise/"){
 jQuery(document).ready(function($) {
@@ -6,32 +6,14 @@ jQuery(document).ready(function($) {
         close = document.getElementById("expt-close-1"),
         over = document.getElementById("expt-overlay-1");
     body = document.body;
-    open.addEventListener("click touchstart", function() {
+    open.addEventListener("click", function() {
         over.classList.add("show");
         body.classList.add("nope");
     });
-    close.addEventListener("click touchstart", function() {
+    close.addEventListener("click", function() {
         over.classList.remove("show");
         body.classList.remove("nope");
     });
-});
-
-// }});
-jQuery(document).ready(function($) {
-    var open = document.getElementById("open-expt-overlay-1"),
-        close = document.getElementById("expt-close-1"),
-        over = document.getElementById("expt-overlay-1");
-    body = document.body;
-    if (open) {
-        open.addEventListener("click touchstart", function() {
-            over.classList.add("show");
-            body.classList.add("nope");
-        });
-        close.addEventListener("click touchstart", function() {
-            over.classList.remove("show");
-            body.classList.remove("nope");
-        });
-    }
 });
 
 jQuery(document).ready(function($) {
@@ -39,11 +21,11 @@ jQuery(document).ready(function($) {
         close = document.getElementById("expt-close-2"),
         over = document.getElementById("expt-overlay-2");
     if (open) {
-        open.addEventListener("click touchstart", function() {
+        open.addEventListener("click", function() {
             over.classList.add("show");
             body.classList.add("nope");
         });
-        close.addEventListener("click touchstart", function() {
+        close.addEventListener("click", function() {
             over.classList.remove("show");
             body.classList.remove("nope");
         });
@@ -55,11 +37,11 @@ jQuery(document).ready(function($) {
         close = document.getElementById("expt-close-3"),
         over = document.getElementById("expt-overlay-3");
     if (open) {
-        open.addEventListener("click touchstart", function() {
+        open.addEventListener("click", function() {
             over.classList.add("show");
             body.classList.add("nope");
         });
-        close.addEventListener("click touchstart", function() {
+        close.addEventListener("click", function() {
             over.classList.remove("show");
             body.classList.remove("nope");
         });
@@ -71,27 +53,45 @@ jQuery(document).ready(function($) {
         close = document.getElementById("expt-close-4"),
         over = document.getElementById("expt-overlay-4");
     if (open) {
-        open.addEventListener("click touchstart", function() {
+        open.addEventListener("click", function() {
             over.classList.add("show");
             body.classList.add("nope");
         });
-        close.addEventListener("click touchstart", function() {
+        close.addEventListener("click", function() {
             over.classList.remove("show");
             body.classList.remove("nope");
         });
     }
 });
 
-// jQuery(document).ready(function($) {
-// $('.moreless-button').click(function() {
-//   $('.moretext').slideToggle();
-//   if ($('.moreless-button').text() == "Read more") {
-//     $(this).text("Read less")
-//   } else {
-//     $(this).text("Read more")
-//   }
-// });
-// });
+jQuery(document).ready(function($) {
+  var open = document.getElementById("open-expt-overlay-5"),
+      close = document.getElementById("expt-close-5"),
+      over = document.getElementById("expt-overlay-5");
+ if(open)
+  {  open.addEventListener("click", function(){
+    over.classList.add("show");
+   body.classList.add("nope");
+  });
+  close.addEventListener("click", function(){
+    over.classList.remove("show");
+    body.classList.remove("nope");
+  });
+}
+});
+
+
+
+jQuery(document).ready(function($) {
+$('.moreless-button').click(function() {
+  $('.moretext').slideToggle();
+  if ($('.moreless-button').text() == "Read more") {
+    $(this).text("Read less")
+  } else {
+    $(this).text("Read more")
+  }
+});
+});
 jQuery(document).ready(function($) {
     $(".moreless-button__outcomes").click(function() {
         $(".read-more__outcomes").slideToggle();
@@ -168,31 +168,21 @@ jQuery(document).ready(function($) {
         }
     });
 });
-//  $(".scroll-top").click(function() {
-//     $('html,body').animate({
-//         scrollTop: $(".second").offset().top},
-//         'slow');
-// });
+ $(".scroll-top").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+});
+
+
+
+
+
 // const btn = document.getElementById('button');
 // btn.addEventListener('click', function() {
 //     alert('Hello World!');
 // });
-// 3-open-close.js
-// window.addEventListener("load", function(){
-//   var open = document.getElementById("open-expt-overlay-5"),
-//       close = document.getElementById("expt-close-5"),
-//       over = document.getElementById("expt-overlay-5");
-//  if(open)
-//   {  open.addEventListener("click", function(){
-//     over.classList.add("show");
-//    body.classList.add("nope");
-//   });
-//   close.addEventListener("click", function(){
-//     over.classList.remove("show");
-//     body.classList.remove("nope");
-//   });
-// }
-// });
+
 /*var lastTop;
 
 function stopScrolling() {

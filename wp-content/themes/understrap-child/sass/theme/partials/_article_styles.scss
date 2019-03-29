@@ -1,28 +1,3 @@
-// ==========================================================================
-// splash article - master
-// ==========================================================================
-
-.splash-wrapper {
-  overflow: hidden;
-}
-
-.splash {
-  h1 {
-    @extend %title-lg;
-  }
-
-  h2 {
-    @extend %subhead-lg;
-  }
-
-  h3 {
-    @extend %display-text-lg;
-  }
-
-  p {
-    @extend %body-text-lg;
-  }
-}
 
 
 // ==========================================================================
@@ -88,6 +63,8 @@
     font-weight: 300;
   }
 }
+
+
 
 .splash__label, .splash__label--emph {
   @extend %sublist-sm;
@@ -496,26 +473,60 @@ text-align: justify;
 // services splash
 // ==========================================================================
 
-#services__splash {
-  h2 {
+.services__container_splash{
+
+   h1{
+    @extend %title;
+   }
+   h2{
     @extend %subhead-sm;
+       text-align: center;
   }
-
-  %subhead-sm {
-    @include vr($margin-bottom: 0);
-  }
-
   h3 {
     @extend %sublist-sm;
   }
-
-  %sublist-sm {
-    @include vr($margin-top: 0);
-
-    font-weight: 200;
+ 
+  @include mq('tablet-wide'){
+    text-align: center;
+    background: $primary;
+    color: $offwhite;
   }
 }
 
+.container.services__container_splash{
+h1{
+  @include vr($margin: 0 0 1.5 0);
+}
+h2{
+  @include vr($margin: 0);
+}
+}
+
+.services__splash_list{
+  list-style: none;
+  padding-left: 0;
+}
+
+.services__splash_list-item{
+ @include vr($font-size: 20px, $line-height: 2.5);
+  font-family: $font-family-serif;
+}
+
+.splash__list-item--emph{
+  font-style: italic;
+  font-family: $font-family-serif;
+  @include vr($margin-top: 3);
+}
+
+// .container.splash.services__container_splash %subhead-sm {
+//  @include vr($margin-bottom: 0);
+// }
+
+.container.services__container__splash{
+  %subhead-sm {
+    @include vr($margin-bottom: 0);
+}
+}
 // ==========================================================================
 // services page/articles
 // ==========================================================================
@@ -561,19 +572,19 @@ text-align: justify;
   @extend %subhead-sm;
 }
 
-.panel__head_headers_services{
+.services__panel_headers{
   text-align: center;
   %subhead-sm {
     @include vr($margin-bottom: 3);
   }
 }
 
-.panel__content_summary {
+.services__panel_summary {
   @extend %display-text-sm;
   font-weight: 400;
 }
 
-.panel__content_list > ul {
+.services__list{
   padding-inline-start: 0;
   padding-left: 0;
   list-style-position: inside;
@@ -583,13 +594,12 @@ text-align: justify;
 // planning & analysis 
 // ==========================================================================
 
-.planning-analysis__panel {
+.services__panel--planning{
   background: $black;
-
   @extend .blueA-reversed;
 }
 
-.services__panel-head--planning, .panel__content_planning, li.list-item__planning {
+.services__panel-head--planning, .services__panel_content--planning, li.services__list-item--planning{
   color: $offwhite;
 }
 
@@ -963,5 +973,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     @extend %display-text-lg;
 
     /*      @include vr($font-size: 6, $line-height: 2);    */
+  }
+}
+
+// ==========================================================================
+// splash article - master
+// ==========================================================================
+
+.splash-wrapper {
+  overflow: hidden;
+}
+
+.splash {
+  h1 {
+    @extend %title-lg;
+  }
+
+  h2 {
+    @extend %subhead-lg;
+  }
+
+  h3 {
+    @extend %display-text-lg;
+  }
+
+  p {
+    @extend %body-text-lg;
   }
 }

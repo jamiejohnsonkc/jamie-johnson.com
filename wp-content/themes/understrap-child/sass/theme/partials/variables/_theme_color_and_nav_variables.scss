@@ -124,7 +124,9 @@ $offwhite:                          rgba(250,250,250, 1);
 $ghostwhite:                        #F8F8FF;
 
 
-$dark-bg-trans:                      rgba(17, 17, 17, .7);                      
+$bluea-background-color:            rgba(51, 51, 68, .8);
+$bluea-background-color2:            rgba(94, 94, 94, .3);
+$dark-bg-trans:                     rgba(17, 17, 17, .7);                      
                                  
 $colors: () !default;
 $colors: map-merge((
@@ -239,7 +241,6 @@ $capabilities-menu-icon-fill-color:   $primary;
 $qualifications-icon-fill-color:      $primary;
 
 
-$carousel-control-color:            $slate;
 
 
 

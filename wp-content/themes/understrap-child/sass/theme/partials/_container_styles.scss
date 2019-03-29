@@ -45,21 +45,8 @@
 // misc adjustments
 // ==========================================================================
 
-//
-// homepage content
-//
-
-
-
-
-
-
-//
-// services & capabilities articles & panels
-//
-
 .container.services { width: 100%; max-width: 100%; }
-.page__head--services { width: 90%; max-width: 90%; @include push-auto(); }
+.services__page_head { width: 90%; max-width: 90%; @include push-auto(); }
 .ops-management__panel, .planning-analysis__panel { width: 100%; max-width: 100%; }
 .webdev__panel { width: 90%; max-width: 90%; }
 .ops-management__panel, .planning-analysis__panel, .webdev__panel { @include push-auto(); }

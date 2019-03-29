@@ -15,9 +15,9 @@
 #section__about-me {}
 
 //core = homepage  alternate = why - me
-@media (max-width: 48em) {
-  .core, .my-value, .why-me, .alternate {}
-}
+// @include mq('tablet'){ 
+//   .core, .my-value, .why-me, .alternate {
+// }
 
 //compensation for smaller mobile/tablets when in landscape mode
 @media only screen and (max-height: 25em) {
@@ -480,12 +480,100 @@ ul.strengths__list_container {
 }
 
 // ==========================================================================
-// services/capabilities
+// services
 // ==========================================================================
-
-#services__splash {
-  align-items: center;
+.services__splash-wrapper{
+  height: 100vh;
 }
+
+.services__container_splash{
+  overflow: hidden;
+  @include split-rows;
+height: 100%;
+  @include left-middle;
+align-items: center;
+
+  .link {
+    position: absolute;
+    flex: 0 0 0;
+    left: 50%;
+    bottom: 6em;
+  }
+
+}
+
+
+.services__splash_hero-img_container--arrow{
+position: absolute;
+z-index: 3;
+width: 95vw;
+height: 100vh;
+top: 5em;
+left: 0;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+svg#services__arrow--img{
+  width: 95vw;
+}
+
+
+.services__article_container{
+  @include cols();
+}
+.services__panel {
+  @include vr($padding: 4 0);
+  @include cols();
+  position: relative;
+}
+
+.services__panel_content {
+  max-width: 25em;
+
+  @include push-auto;
+  @include vr($margin-bottom: 1);
+}
+
+.services__panel-img_container--small-screen{
+@include vr($margin-bottom: 2);
+}
+.services__panel_summary {
+  @include vr($margin-bottom: 1);
+}
+
+.services__panel_img--planning {
+  width: 20em;
+  display: block;
+
+  @include push-auto;
+}
+
+//
+// panel images 
+//
+.services__panel_img--webdev {
+  width: 40em;
+  display: block;
+  margin: 0 auto;
+}
+
+#blue_a {
+  width: 20em;
+}
+
+.panel__head_img--services {
+  width: 100%;
+
+  @include vr($margin-bottom: 2);
+}
+
+
+// ==========================================================================
+// capabilities
+// ==========================================================================
 
 .content__wrapper.skills, .content__wrapper.services__intro {
   margin-top: 0;
@@ -739,48 +827,258 @@ ul.strengths__list_container {
 }
 
 // ==========================================================================
-// services
+// services responsive styles (all panels/articles)
 // ==========================================================================
-.services__panel {
-  @include vr($padding: 4 0);
+
+@include mq('phone'){}
+@include mq('phone-wide'){}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+@include mq('tablet'){}
+@include mq('tablet-wide'){
+.services__splash-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.container.services__container_splash{
+  @include make-col-ready();
+  @include make-col(7);
+  align-items: center;
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.panel__content {
-  max-width: 25em;
-
-  @include push-auto;
-  @include vr($margin-bottom: 1);
+.container.services__container_splash h2{
+  margin-bottom: 40%;
 }
 
-.panel__content_summary {
-  @include vr($margin-bottom: 1);
+#bell{
+  @include make-col-ready();
+  @include make-col(5);
+  align-self: flex-end;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-.services__panel_img--marcom {
-  width: 20em;
-  display: block;
-
-  @include push-auto;
-}
-
-//
-// panel images 
-//
-.services__panel_img--webdev {
-  width: 40em;
-  display: block;
+#bell-small{
+  width: 100%;
   margin: 0 auto;
 }
 
-#blue_a {
-  width: 20em;
+
+.services__panel{
+  @include vr($padding: 6 0, $margin-top:3, $margin-bottom: 3);
+  overflow: hidden;
 }
 
-.panel__head_img--services {
+
+.services__panel_flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.services__panel_head{
+  @include make-col-ready();
+  @include make-col(12);
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0;
+}
+
+.services__panel_content{
+  @include make-col-ready();
+@include make-col(6);
+padding-left: 0px;
+padding-right: 0px;
+  margin: 0;
+}
+
+.services__panel-img_container--wide-screen{
+@include make-col-ready();
+@include make-col(6);
+padding-left: 0px;
+padding-right: 0px;
+margin: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+//
+// webdev customizations
+//
+
+
+
+.services__panel_flex-container--webdev{
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+}
+.services__panel_head--webdev{
+  max-width: 33%;
+  flex: 0 0 33%;
+  z-index: 3;
+}
+
+.services__panel_content--webdev{
+  max-width: 33%;
+  flex: 0 0 33%;
+  @include vr($padding: 2 4 4 4);
+  z-index: 3; 
+  background: $black;
+  color: $tungsten;
+}
+
+  li.services__list-item--webdev{
+  color: $tungsten;
+}
+
+
+.services__panel_img--webdev{
   width: 100%;
-
-  @include vr($margin-bottom: 2);
 }
+
+.tungscreens{
+width: 100em;
+max-width: 100em;
+margin-left: 6em;
+}
+.services__panel-img_container--wide-screen---webdev{
+position: absolute;
+display: flex;
+width: 80%;
+max-width: 80%;
+align-self: flex-end;
+}
+
+//
+// planning customizations
+//
+.services__panel--planning{
+  overflow: hidden;
+  background: #3d3d3d;
+  @include vr($margin: 0 2, $padding: 0);
+}
+
+
+.services__panel_flex-container--planning{
+  display: flex;
+  flex-direction: column; 
+  z-index: 3;
+  width: 26%;
+  max-width: 26%;
+  min-height: 600px;
+  margin: 0 10% 0 auto;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.services__panel_head--planning, .services__panel_content--planning{
+  @include make-col-ready();
+ width: 100%;
+ max-width: 100%;
+  background: rgba(51, 51, 51, .5);
+  color: $offwhite;
+  z-index: 3;
+}
+
+
+
+.services__panel_head.services__panel_head--planning{
+  @include vr($padding: 4 2 0 2);
+}
+
+.services__panel_content--planning{
+  @include vr($padding: 0 2 4 2);
+}
+
+.services__panel-headers--planning h3.services__panel-headline{
+text-align: left;
+@include vr($margin: 0 0 2 0);
+}
+
+
+
+.services__panel-bgimg_container-wide-screen--planning{
+    position: absolute;
+    width: 100%;
+    left: -17em;
+    top: -18em;
+    z-index: 0;
+}
+
+
+#blue__a2_bg{
+opacity: .7;
+transform: skewY(26deg);
+width: 104em;
+}
+
+.container.services__panel--management{
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 0;
+  min-height: 550px;
+}
+
+.services__panel_flex-container--management{
+z-index: 3;
+// background:  rgba(59,68,76,.65);
+background: rgba(255,255,255,.8);
+@include vr($padding: 4, $width: 33%, $margin-left: 6%);
+min-height: 550px;
+flex-direction: column;
+justify-content: center;
+
+}
+
+.services__panel_head--management{
+@include make-col-ready();
+@include make-col(12);
+padding-left: 0px;
+padding-right: 0px;
+}
+
+h3.services__panel-headline.services__panel-headline--management{
+  @include vr($margin-bottom: 2);
+  color: $primary;
+}
+
+.services__panel_summary--management, li.services__list-item--management {
+  color: #333;
+}
+
+.services__panel_content--management{
+@include make-col-ready();
+@include make-col(12);
+padding-left: 0px;
+padding-right: 0px;
+}
+
+.services__panel-img_container-wide-screen--management{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+}
+
+@include mq('desktop'){}
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+
+
 
 // ==========================================================================
 // why-me
@@ -1294,7 +1592,6 @@ svg.chev--dwn {
 
 .why-me__categories_content{
   width: 31%;
-  max-width: 31%;
   flex: 0 0 auto;
 @include vr($margin: 1%);
 }

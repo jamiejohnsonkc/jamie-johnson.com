@@ -180,7 +180,7 @@ width: 80%;
 
 .bgbell{
     background: none;
-@media(min-width: 78em){
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg");
          background-position: left bottom;
         background-size: 60%;
@@ -320,6 +320,12 @@ width: 80%;
 }
 
 
+svg#services__arrow--img{
+fill: rgba(119, 221, 255, .2);
+    // fill: rgba(128,128,128,.3);
+display: block;
+}
+
 
 .capabilities__menu_icon, .capabilities__menu_icon .cls-2, .capabilities__menu_icon .cls-1{
     // .style-svg, .cls-1, .cls-3, .cls-4 {
@@ -329,19 +335,15 @@ width: 80%;
 
 
 
-
-
-.blueA{
-      #A_outline{
-      stroke: $primary;
+#blue__a2_bg{
+     #A_outline, #pattern, #grid{
+      stroke: $bluea-background-color2;
     } 
-    #pattern, #grid{
-      stroke: #b3b3b3;
-    }
     #dots, #solid_dots{
-      fill: #b3b3b3;
+      fill: $bluea-background-color2;
     } 
 }
+
 .blueA-reversed{
       #A_outline{
       stroke: $primary;
@@ -349,7 +351,7 @@ width: 80%;
     #pattern, #grid{
       stroke: $tungsten;
     }
-    #dots, #solid_dots{
+   #solid_dots, #dots{
       fill: $tungsten;
     } 
 }
@@ -391,7 +393,7 @@ width: 80%;
 
 
 
-#bell__small{
+#bell__small_svg{
     svg#Layer_1{
         fill: $black;
 

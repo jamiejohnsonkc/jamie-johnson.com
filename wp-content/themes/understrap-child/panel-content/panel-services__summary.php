@@ -8,91 +8,120 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper content__wrapper services__intro">
-	<div class="container services content__container_col" id="services__page">
-		<div class="page__head--services"><h1>My Services</h1>
-		<h2>Core Service Areas</h2>
+	<div class="container services services__article_container" id="services__page">
+		<div class="services__page_head"><h1>My Services</h1>
+			<h2>Core Service Areas</h2>
+			<p>Est eu veniam laboris commodo labore magna anim deserunt veniam pariatur aliquip in ad irure ve</p></div>
+			<div class="service__panels_container">
+				<div class="services__panel services__panel--webdev">
+					<div class="services__panel_flex-container  services__panel_flex-container--webdev">
+						<div class="services__panel_head services__panel_head--webdev">
+							<div class=" services__panel_headers services__panel_headers--webdev">
+								<h3 class="services__panel-headline">Development & Design</h3>
+							</div>
+							<div class="services__panel-img_container--small-screen">
+								<div class="services__panel_img services__panel_img--webdev"><img src="//localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="" alt=""></div>
+							</div>
+						</div>
+						<div class="services__panel_content services__panel_content--webdev ">
+							<h3 class="services__panel_headline--alternate">Development & Design</h3>
+							<div class="services__panel_summary services__panel_summary--webdev">Et nulla esse non magna quis nisi elit commodo anim.</div>
+							<div class="services__list_container services__list_container--webdev">
+								<ul class="services__list services__list--webdev">
+									<li class="services__list-item services__list-item--webdev">Do ea commodo mollit fugiat.</li>
+									<li class="services__list-item services__list-item--webdev">Lorem ipsum et aute.</li>
+									<li class="services__list-item services__list-item--webdev">Lorem ipsum et sed magna.</li>
+									<li class="services__list-item services__list-item--webdev">Nulla exercitation amet dolore ea.</li>
+									<li class="services__list-item services__list-item--webdev">Eu culpa proident.</li>
+								</ul>
+							</div>
+							<a class="button moreless-button__services theme-link">Read more</a>
+							<div class="services__read-more_dev-design"><p>Nostrud laboris cillum id aliquip aute sunt deserunt fugiat.</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p></div>
+						</div>
+						<div class="services__panel-img_container--wide-screen services__panel-img_container--wide-screen---webdev">
+							<div class="services__panel_img services__panel_img--webdev"><img src="//localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens" alt=""></div>
+						</div>
+					</div>
+				</div>
+				<div class="services__panel services__panel--planning">
+					
 
-	<p>Est eu veniam laboris commodo labore magna anim deserunt veniam pariatur aliquip in ad irure ve</p></div>
-<div class="panels__container">
-<div class="content__container_col services__panel webdev__panel">
-		<div class="panel__head">
-			<div class="panel__head_headers panel__head_headers_services">
-				<h3 class="services__panel-headline">Development & Design</h3>
-			</div>
-			<div class="panel__head_img--services panel__head_img--webdev">
-				<div class="services__panel_img services__panel_img--webdev"><img src="//localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="" alt=""></div>
-			</div>
-		</div>
-		<div class="panel__content content__container">
-			<div class="panel__content_summary">Et nulla esse non magna quis nisi elit commodo anim.</div>
-			<div class="panel__content_list">
-				<ul>
-					<li>Do ea commodo mollit fugiat.</li>
-					<li>Lorem ipsum et aute.</li>
-					<li>Lorem ipsum et sed magna.</li>
-					<li>Nulla exercitation amet dolore ea.</li>
-					<li>Eu culpa proident.</li>
-				</ul>
-			</div>
-			<a class="button moreless-button__service theme-link">Read more</a>
-			<div class="panel__content_read-more panel__content_dev-design--read-more"><p>Nostrud laboris cillum id aliquip aute sunt deserunt fugiat.</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p>
-			</div>
-		</div>
-</div>
-<div class="content__container_col services__panel planning-analysis__panel">
-	<div class="panel__head">
-		<div class="panel__head_headers panel__head_headers_services services__panel-head--planning">
-			<h3 class="services__panel-headline">Planning & Analysis</h3>
-		</div>
-		<div class="panel__head_img--services panel__head_img--marcom">
-			<div class="services__panel_img services__panel_img--marcom"><img src="//localhost:3000/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt=""></div>
-		</div>
-	</div>
-	<div class="panel__content content__container panel__content_planning">
-		<div class="panel__content_summary">Et nulla esse non magna quis nisi elit commodo anim.</div>
-		<div class="panel__content_list">
-			<ul>
-				<li class="list-item__planning">Do ea commodo mollit fugiat.</li>
-				<li class="list-item__planning">Lorem ipsum et aute.</li>
-				<li class="list-item__planning">Lorem ipsum et sed magna.</li>
-				<li class="list-item__planning">Nulla exercitation amet dolore ea.</li>
-				<li class="list-item__planning">Eu culpa proident.</li>
-			</ul>
-		</div>
-		<a class="button more-less moreless-button__services theme-link">Read more</a>
-		<div class="panel__content_read-more panel__content_planning-analysis--read-more"><p>Nostrud laboris cillum id aliquip aute sunt deserunt fugiat.</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p>
-		</div>
-	</div>
-</div>
-<div class="container content__container_col services__panel ops-management__panel">
+					<div class="services__panel_flex-container services__panel_flex-container--planning">
 
-		<div class="panel__head_headers panel__head_headers_services">
-			<h3 class="services__panel-headline">Management & Operations</h3>
-		</div>
-		<div class="panel__head_img--services panel__head_img--smm">
-			<div class="services__panel_img services__panel_img--smm"><img src="//localhost:3000/wp-content/uploads/2019/03/conftable.jpg" class=""alt=""></div>
-		</div>
 
-	<div class="panel__content content__container">
-			<div class="panel__content_summary">Et nulla esse non magna quis nisi elit commodo anim.</div>
-			<div class="panel__content_list">
-				<ul>
-					<li>Do ea commodo mollit fugiat.</li>
-					<li>Lorem ipsum et aute.</li>
-					<li>Lorem ipsum et sed magna.</li>
-					<li>Nulla exercitation amet dolore ea.</li>
-					<li>Eu culpa proident.</li>
-				</ul>
-			</div>
-			<a class="button moreless-button__services theme-link">Read more</a>
-			<div class="panel__content_read-more panel__content_ops-management--read-more"><p>Nostrud laboris cillum id aliquip aute sunt deserunt</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>	Excepteur sunt labore esse commodo 	culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit 	reprehenderit in ut dolor sint culpa sunt 	consectetur incididunt esse dolor cupidatat est consectetur ad.</p>
-			</div>
-	</div>
-</div>
+						<div class="services__panel_head services__panel_head--planning">
+							<div class=" services__panel_headers services__panel-headers--planning">
+								<h3 class="services__panel-headline">Planning & Analysis</h3>
+							</div>
+							<div class="services__panel-img_container--small-screen">
+								<div class="services__panel_img services__panel_img--planning"><img src="//localhost:3000/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt=""></div>
+							</div>
+						</div>
 
-<div class="panel__content content__container">
-</div>
-</div>
-</div>
-<!-- 	<a class="">see a full list of my capabilites</a> -->
-</article>
+
+						<div class="services__panel_content services__panel_content--planning">
+							<div class="services__panel_summary">Et nulla esse non magna quis nisi elit commodo anim.</div>
+							<div class="services__list_container">
+								<ul class="services__list">
+									<li class="services__list_item services__list-item--planning">Do ea commodo mollit fugiat.</li>
+									<li class="services__list_item services__list-item--planning">Lorem ipsum et aute.</li>
+									<li class="services__list_item services__list-item--planning">Lorem ipsum et sed magna.</li>
+									<li class="services__list_item services__list-item--planning">Nulla exercitation amet dolore ea.</li>
+									<li class="services__list_item services__list-item--planning">Eu culpa proident.</li>
+								</ul>
+							</div>
+							<a class="button more-less moreless-button__services theme-link">Read more</a>
+							<div class="services__read-more_container services__read-more_planning-analysis"><p>Nostrud laboris cillum id aliquip aute sunt deserunt fugiat.</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p></div>
+						</div>
+
+						<div class="services__panel-img_container--wide-screen---planning">
+							<div class="services__panel_img services__panel_img--planning"><img src="//localhost:3000/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt=""></div>
+						</div>
+
+
+					</div>
+					<div class="services__panel-bgimg_container-wide-screen--planning">
+							<div class="services__panel_img services__panel_bgimg--planning"><img src="//localhost:3000/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue__a2_bg" alt=""></div>
+						</div>
+				</div>
+
+
+
+
+
+				<div class="container services__panel services__panel--management">
+					<div class="services__panel_flex-container services__panel_flex-container--management">
+						<div class="services__panel_head services__panel_head--management">
+							<div class="services__panel_headers services__panel_headers--management">
+								<h3 class="services__panel-headline services__panel-headline--management">Management & Operations</h3>
+							</div>
+							<div class="services__panel-img_container--small-screen">
+								<div class="services__panel_img services__panel_img--smm"><img src="//localhost:3000/wp-content/		uploads/2019/03/conftable.jpg" class=""alt=""></div>
+							</div>
+						</div>
+						<div class="services__panel_content services__panel_content--management">
+							<div class="services__panel_summary services__panel_summary--management">Et nulla esse non magna quis nisi elit commodo anim.</div>
+							<div class="services__list_container">
+								<ul class="services__list services__list--management">
+									<li class="services__list-item services__list-item--management">Do ea commodo mollit fugiat.</li>
+									<li class="services__list-item services__list-item--management">Lorem ipsum et aute.</li>
+									<li class="services__list-item services__list-item--management">Lorem ipsum et sed magna.</li>
+									<li class="services__list-item services__list-item--management">Nulla exercitation amet dolore ea.</li>
+									<li class="services__list-item services__list-item--management">Eu culpa proident.</li>
+								</ul>
+							</div>
+							<a class="button moreless-button__services theme-link">Read more</a>
+							<div class="services__read-more_container services__read-more_ops-management"><p>Nostrud laboris cillum id aliquip aute sunt deserunt</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>	Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p></div>
+						</div>
+					
+					</div>
+						<div class="services__panel-img_container-wide-screen--management">
+							<div class="services__panel_img services__panel_img--smm"><img src="//localhost:3000/wp-content/uploads/2019/03/conftable.jpg" class=""alt=""></div>
+						</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- 	<a class="">see a full list of my capabilites</a> -->
+	</article>

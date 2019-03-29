@@ -155,7 +155,7 @@ width: 80%;
 .bgme {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
         background-position: right bottom;
         background-size: 80%;
@@ -166,7 +166,7 @@ width: 80%;
 .bgshoes {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes.jpg");
         background-position: left bottom;
         background-size: 60%;
@@ -176,7 +176,7 @@ width: 80%;
 
 .bgbell{
     background: none;
-@media(min-width: 78em){
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg");
          background-position: left bottom;
         background-size: 60%;
@@ -187,7 +187,7 @@ width: 80%;
 .bgbrainsv2 {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains.jpg");
         background-position: right bottom;
         background-size: 50%;
@@ -198,7 +198,7 @@ width: 80%;
 .bgevo {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2.jpg");
         background-position: 100% bottom;
         background-size: 65%;
@@ -226,7 +226,7 @@ width: 80%;
 .bgconductor {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
         background-position: 105% bottom;
         background-size: 80%;
@@ -237,7 +237,7 @@ width: 80%;
 .bgregister {
     background: none;
 
-@media (min-width: 78em) {
+@include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
         background-position: right 100%;
         background-size: 40%;
@@ -324,7 +324,9 @@ width: 80%;
     }
 
 
-
+svg#services__arrow--img{
+    width: 80vw;
+}
 
 
 .blueA{
@@ -387,10 +389,9 @@ width: 80%;
 
 
 
-#bell__small{
+#bell__svg{
     svg#Layer_1{
         fill: $black;
-
 }
 }
 

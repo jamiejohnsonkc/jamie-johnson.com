@@ -16,8 +16,8 @@ exit; // Exit if accessed directly.
 <div class="panels__container">
 <div class="content__container_col services__panel webdev__panel">
 		<div class="panel__head">
-			<div class="panel__head_headers">
-				<h3 class="services__panel-head">Development & Design</h3>
+			<div class="panel__head_headers panel__head_headers_services">
+				<h3 class="services__panel-headline">Development & Design</h3>
 			</div>
 			<div class="panel__head_img--services panel__head_img--webdev">
 				<div class="services__panel_img services__panel_img--webdev"><img src="//localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="" alt=""></div>
@@ -41,8 +41,8 @@ exit; // Exit if accessed directly.
 </div>
 <div class="content__container_col services__panel planning-analysis__panel">
 	<div class="panel__head">
-		<div class="panel__head_headers services__panel-head--planning">
-			<h3 class="services__panel-head">Planning & Analysis</h3>
+		<div class="panel__head_headers panel__head_headers_services services__panel-head--planning">
+			<h3 class="services__panel-headline">Planning & Analysis</h3>
 		</div>
 		<div class="panel__head_img--services panel__head_img--marcom">
 			<div class="services__panel_img services__panel_img--marcom"><img src="//localhost:3000/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt=""></div>
@@ -66,8 +66,8 @@ exit; // Exit if accessed directly.
 </div>
 <div class="container content__container_col services__panel ops-management__panel">
 
-		<div class="panel__head_headers">
-			<h3 class="services__panel-head">Management & Operations</h3>
+		<div class="panel__head_headers panel__head_headers_services">
+			<h3 class="services__panel-headline">Management & Operations</h3>
 		</div>
 		<div class="panel__head_img--services panel__head_img--smm">
 			<div class="services__panel_img services__panel_img--smm"><img src="//localhost:3000/wp-content/uploads/2019/03/conftable.jpg" class=""alt=""></div>

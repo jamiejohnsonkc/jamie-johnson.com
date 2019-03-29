@@ -1,3 +1,4 @@
+
 // ==========================================================================
 // small screen article spacing
 // ==========================================================================
@@ -179,7 +180,7 @@
 }
 
 
-#idooutcomes {
+.proof__content_outcomes{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,6 +191,10 @@
     position: relative;
     z-index: 2;
   }
+  .br {
+    display: block;
+  }
+}
 
   .proof__content_text {
     flex: 0 0 auto;
@@ -197,10 +202,6 @@
     z-index: 2;
   }
 
-  .br {
-    display: block;
-  }
-}
 
 // ==========================================================================
 // homepage articles
@@ -253,7 +254,7 @@
   padding-right: 0px;
   border-radius: 100%;
   background: $gray-500;
-
+@include cols();
   @include vr($margin: 0.75 0);
 }
 
@@ -283,8 +284,12 @@
 //
 // panels
 //
+.strengths__article_container{
+  @include cols();
+}
 
-.panel__head {
+
+.strengths__panel_head {
   @include mq("tablet") {
     display: flex;
     flex-direction: row;
@@ -292,7 +297,7 @@
   }
 }
 
-.panel__head_img {
+.strengths__panel_head_img {
   @include make-col-ready;
 
   width: 25%;
@@ -307,7 +312,7 @@
   }
 }
 
-.panel__head_headers {
+.strengths__panel_head_headers {
   @include make-col-ready;
   @include mq("tablet") {
     @include make-col(9);
@@ -317,9 +322,8 @@
   }
 }
 
-.panel__hero {}
 
-.panel__subtext {
+.strengths__panel_subtext {
   @include make-row;
 
   margin-left: 0px;
@@ -340,67 +344,38 @@
     justify-content: space-between;
 
     @include vr($padding: 2);
+  }
 
-    .panel__head {
+    .strengths__panel_head {
       flex: 0 0 auto;
 
       @include vr($margin: 2 0 0 0);
     }
 
-    .panel__hero {
+    .strengths__panel_content {
       flex: 0 0 auto;
-
       @include vr($margin: 0 0 2 0);
+      @include rows();
     }
 
-    .panel__subtext {
+    .strengths__panel_subtext {
       flex: 0 0 auto;
 
       @include vr($margin: 0 0 0 0);
     }
 
-    .panel__footnote {
+    .strengths__panel_footnote {
       flex: 0 0 auto;
-
       @include vr($margin: 1 0 3 0);
     }
-  }
+  
 
   #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
     @include vr($margin: 2 0);
   }
 }
 
-
-.content__container_row {
-  display: flex;
-  flex-direction: row;
-}
-
-.content__container_col {
-  display: flex;
-  flex-direction: column;
-}
-
-.content__item_col {
-  display: flex;
-  flex-direction: column;
-}
-
-.content__item_row {
-  display: flex;
-  flex-direction: row;
-}
-
-.content__block {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 auto;
-}
-
 .strengths__content {
-  @include make-row;
-
   margin-left: 0px;
   margin-right: 0px;
   width: 100%;
@@ -408,21 +383,19 @@
   flex-wrap: wrap;
 }
 
-ul#list__strengths_container {
+ul.strengths__list_container {
   @include vr($padding-left: 0, $margin-top: 0);
 }
 
 
-
-.list__header {
- @extend %list-head;
+.strengths__list_header {
   text-transform: uppercase;
   flex: 0 0 auto;
   width: 100%;
   max-width: 100%;
 }
 
-.strengths__copy {
+.strengths__subtext_content {
   @include make-col-ready;
   @include make-col(7);
 
@@ -433,7 +406,7 @@ ul#list__strengths_container {
   @include vr($padding: 0 0 0 0);
 }
 
-.strengths__img {
+.strengths__icon_container {
   @include make-col-ready;
   @include make-col(5);
 
@@ -456,10 +429,17 @@ ul#list__strengths_container {
   }
 }
 
+
+@include mq('tablet'){
+  .strengths__panel_wrapper{
+    @include vr($margin-bottom: 3);
+  }
+}
+
 // ==========================================================================
 
 /////// small screen adjustments
-@include mq("tablet", $type: max) {
+@include mq("tablet-wide", $type: max) {
   .content__wrapper {
     margin: 12em auto;
   }
@@ -467,9 +447,14 @@ ul#list__strengths_container {
   .link {
     @include vr($margin: 6 auto 2 auto);
   }
-
-  // .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
 }
+  // .article__head h1, .business-value h1 { @include vr($margin-bottom: 6); }
+@include mq('tablet-wide'){
+  .content__wrapper{
+    margin: 20em auto;
+  }
+}
+
 
 
 .article__head {
@@ -862,73 +847,92 @@ ul#list__strengths_container {
 // proof / evidence
 //////////////////////////////////////////////////////////////////
 
-#article__container--proof {
+.proof__article_container {
   align-items: center;
 }
 
-.proof__content {
+.proof__content_carousel, .proof__content_end2end-diagram, .proof__content_service{
   @include vr($padding: 4);
-}
+ }
 
 .proof__item_container {
-  @include make-col-ready;
+ @include make-col-ready;
   @include make-col(12);
-
-  padding: 6em;
 
   @include mq("desktop") {
     @include make-col(4);
 
-    padding: 4em;
+    @include vr($padding: 3)
   }
 }
 
-.proof__content_text {
-  @include vr($width: 17);
-  @include push-auto;
+.proof__marketer_block{
+    @include vr($padding: 3);
+    @include cols();
+    text-align: center;
 }
 
-#proof__content_end2end {
-  padding: 6em .25em;
+.proof__content_text {
+  // @include push-auto;
+}
+
+// .proof__content_text_idooutcomes{
+  .proof__content_text{
+@include push-auto;
+@include mq('tablet-wide', $type:max){
+  max-width:26em;
+}
+}
+
+.proof__end2end_block {
+  @include vr($padding: 4 .25);
+ @include cols();
 }
 
 ///////////////////////////////////////////////////////////////////
 // i do outcomes panel
 //////////////////////////////////////////////////////////////////
 
-#idooutcomes {
+.proof__content_outcomes {
   @include vr($padding: 0 3 0 3);
-
   position: relative;
-
-  @include mq("tablet", $type: max) {
-    min-height: 600px;
+  
+  @include mq("tablet-wide", $type: max) {
+    min-height: 800px;
   }
 }
 
+
+.proof__content_item_img{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  height: 35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 ///////////////////////////////////////////////////////////////////
 // end to end equation panel
 //////////////////////////////////////////////////////////////////
 
-#end2end__diagram_container, #stats-slider {
+.proof__end2end-diagram_container, #stats-slider {
   width: 100%;
   display: block;
 
   @include push-auto;
 }
 
-#end2end__diagram_container {
+.proof__end2end-diagram_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include vr($padding: 5 1);
 }
 
 .proof__content_text {
-  width: 100%;
-
-  @include vr($width: 24, $margin-top: 2);
+  @include vr( $margin-top: 2);
 }
 
 #barchart {
@@ -957,11 +961,15 @@ ul#list__strengths_container {
 // I've been around / stats slider panel
 //////////////////////////////////////////////////////////////////
 
+.proof__stats_block{
+@include cols();
+}
+
 #stats-slider {
   @include vr($margin-bottom: 1);
 }
 
-.quals svg {
+.proof-quals svg {
   width: 30%;
   margin: 0 auto;
   display: block;
@@ -978,7 +986,7 @@ ul#list__strengths_container {
   }
 }
 
-.quals {
+.proof-quals {
   float: left;
   padding-left: 15px;
   padding-right: 15px;
@@ -991,22 +999,23 @@ ul#list__strengths_container {
   }
 }
 
-.vitae__stats {
+.proof__content_carousel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+   @include vr($margin: 0);
 }
 
-.vitae__stats.carousel {
+.proof__content_carousel.carousel {
   overflow: hidden;
   display: block;
 }
 
-.vitae__stats--title {
-  margin-top: 4rem;
-  text-align: center;
-  display: none;
-}
+// .vitae__stats--title {
+//   margin-top: 4rem;
+//   text-align: center;
+//   display: none;
+// }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -1020,10 +1029,6 @@ ul#list__strengths_container {
   display: block;
 
   @include push-auto;
-}
-
-#stats-slider {
-  @include vr($margin: 0);
 }
 
 .carousel-control-next-icon {
@@ -1077,7 +1082,7 @@ ul#list__strengths_container {
 }
 
 @include mq("tablet-wide") {
-  .content-container {
+  .content-container__qualifications {
     @include split-cols;
   }
 
@@ -1098,17 +1103,8 @@ ul#list__strengths_container {
 }
 
 
-// ==========================================================================
-// expertise
-// ==========================================================================
 
-// ==========================================================================
-// why me
-// ==========================================================================
 
-.why-me__categories_content {
-  margin-bottom: 2rem;
-}
 
 // ==========================================================================
 // contact
@@ -1159,9 +1155,7 @@ svg.chev--dwn {
   }
 }
 
-#fam-container {
-  width: 100%;
-}
+
 
 // ==========================================================================
 // call to action
@@ -1236,6 +1230,20 @@ svg.chev--dwn {
 // Background page
 // ==========================================================================
 
+#background__splash{
+  align-items: flex-end;
+}
+
+.splash__content_container--background{
+  @include mq('tablet-wide'){
+    align-items: flex-end;
+    width: 40%;
+  }
+}
+
+// ==========================================================================
+// category history
+// ==========================================================================
 .categories__content_caption {
   @include make-row;
 
@@ -1252,27 +1260,191 @@ svg.chev--dwn {
   @include vr($padding: 3);
 }
 
+@include mq('tablet', $type:max){
+  .why-me__categories_content {
+@include vr($margin-bottom: 1);
+}
+}
+
+
+@include mq('tablet'){
+  .content2__background--categories{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.why-me__categories_content {
+  margin-bottom: 2rem;
+}
+
+.why-me__categories_content{
+  @include make-col-ready();
+  width: 48%;
+  max-width: 48%;
+  flex: 0 0 auto;
+@include vr($margin: 1%);
+}
+
+} 
+
+
+@include mq('tablet-wide'){
+
+.why-me__categories_content{
+  width: 31%;
+  max-width: 31%;
+  flex: 0 0 auto;
+@include vr($margin: 1%);
+}
+img.categories__content_image{
+width: unset;
+height: unset;
+}
+.categories__content_caption{
+@include vr($padding: 0 2 0 2, $margin-top: 0);
+}
+
+
+
 img.categories__content_image {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
 
-  @media (min-width: 300px) {}
+  // @include mq('tablet'){
+  //   width: 150%;
+  //   height: 150%;
+  // }
 
-  @media (min-width: 400px) {}
-
-  @media (min-width: 576px) {}
-
-  @media (min-width: 768px) {
-    width: 150%;
-    height: 150%;
-  }
-
-  @media (min-width: 1900px) {
+@include mq('desktop-xl'){
     width: 100%;
     height: 100%;
   }
 }
+//
+// background-brands
+//
+ .why-me__container__categories{
+margin-bottom: 20em;
+ }
+
+// ==========================================================================
+// brands
+// ==========================================================================
+
+
+
+
+@include mq('tablet-wide'){
+  .content-container__background_brands{
+    flex-direction: column;
+}
+.content1__background--brands{
+  @include make-col(12);
+}
+.why-me__brands--logo{
+@include make-col(3);
+}
+}
+
+
+.why-me__brands_content{
+    @include make-row();
+    width: 100%;
+    max-width: 100%;
+    @include rows();
+    flex-wrap: wrap;
+}
+
+.why-me__brands--logo{
+    @include make-col-ready();
+    @include mq('phone-wide',$type:max){
+ @include make-col(6); 
+}
+    @include make-col(4);
+    @include vr($padding: .85);
+        height: 15em;
+        @include mq('tablet'){
+          @include vr($padding: 0, $margin-bottom: 1);
+        }
+            @include mq('tablet-wide'){
+          @include make-col-ready();
+          @include make-col(3);
+          @include vr($padding: 0, $margin-bottom: 1);
+        }
+}
+
+
+// ==========================================================================
+// personal
+// ==========================================================================
+.container.about-me__container_personal{
+@include vr($width: 100%, $margin: 0, $padding:5 2 8 2);
+max-width: 100%;
+
+@include mq('phablet'){
+.personal__about-me_content{
+  max-width: 60%;
+  @include push-auto();
+}
+
+@include mq('tablet-wide'){
+padding-left: 0;
+}
+
+
+.personal__about-me_content{
+@include vr($width: 30, $padding:6 3);
+margin-left:3%;
+margin-right: auto;
+background: #111;
+height: 100%;
+}
+}
+}
+#fam-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+#fam-img{
+  max-width: 180%;
+  height: auto;
+  display: block;
+  position: relative;
+  left: -40%;
+@include mq('phone-wide'){
+  max-width: 165%;
+  left: -32.5%;
+}
+
+
+@include mq('tablet'){
+max-width: 100%;
+left: 0;
+}
+@include mq('tablet-wide'){
+  max-width:137%;
+  left: 0;
+  top: 28em;
+}
+}
+
+@include mq('tablet-wide'){
+.personal{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+  }
+
+
+}
+
+
 
 // ==========================================================================
 // misc elements

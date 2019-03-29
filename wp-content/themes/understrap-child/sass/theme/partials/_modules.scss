@@ -96,7 +96,7 @@
         // padding-left: $ms-2_25;
         // max-width: ms(11);
     }
-}
+} 
 
 // #capabilities_table > thead > tr > th.capa-table__column--1{
 // background: $gray-200;
@@ -257,16 +257,11 @@ left: 0;
 }
 
 
-svg.chev--dwn{
-      stroke: #111;  
-    stroke-linecap: round;
-    stroke-width: .5em;
-    width: 3rem;
-    height: 3rem;
-    display: block;
 
-}
 
+// ==========================================================================
+// scroll top
+// ==========================================================================
 .scroll-top{
     position: fixed;
     /* Fixed/sticky position */
@@ -290,6 +285,9 @@ svg.chev--dwn{
     }
 }
 
+// ==========================================================================
+// container modules
+// ==========================================================================
 
 .content1, .content2{
   padding-left: 0;

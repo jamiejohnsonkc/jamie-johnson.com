@@ -135,3 +135,17 @@
 .why-me__content__verbose{
     display: none;
 }
+
+.mobile__background--image{
+    
+    @include mq('desktop-xl') {
+        display: none;
+    }
+}
+
+.container-hero__img--mobile {
+
+    @include mq('desktop-wide'){
+         display: none; 
+    }
+}

@@ -23,7 +23,7 @@ $zindex-tooltip:                    1070 !default; */
     //   grid-color: purple
     // ),
     25em: ( // 400px
-      font-size: 14px,
+      font-size: 8px,
       line-height: 1.5,
       modular-scale: perfect-fifth,
       grid-color: purple
@@ -155,6 +155,37 @@ article{}
     padding-right: 0;
     position: relative;
 }
+
+
+
+
+
+.content__container_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__container_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__item_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__item_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__block {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
 /* 
 .container-fluid{
   padding-left: 0;
@@ -172,3 +203,5 @@ article{}
  margin-left: 5rem;
  margin-bottom: 7rem;
 }
+
+

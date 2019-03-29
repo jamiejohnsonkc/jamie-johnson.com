@@ -8,32 +8,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="article__wrapper  basic home-page home-page__howidoit">
-	<div class="container home-page__howidoit__container"> -->
 		<article class="article__wrapper content__wrapper home-page home-page__article--proof" id="article__wrapper--proof">
-			<div class="container core content__container_col"  id="article__container--proof">
-				<!-- <h1>what sets me apart</h1> -->
-				<h2>Why Me</h2>
-	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
-				<div class="content__container">
-						<div class="content__item_col proof__item_container" id="proof__content_marketer">
-								<!-- <div class="mobile__background--image" id="trend-arrow">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
-									</div> -->
+			<div class="container core">
+				<div class="proof__article_container">
+
+						<div class="proof__marketer_block">
+								<h1>why me</h1>
+						<h2>Four Big Reasons To Choose Me</h2>
 							<h2 class="proof-intro">!</h2>
 						
-							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="proof__content content__item_caption" id="idooutcomes">
+							<div class="proof__content_outcomes content__item_caption" id="idooutcomes">
 									<h5>I do outcomes. <span class="br"><br></span>Not overhead.</h5>
-									<div class="proof__content_text"><p>It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p>Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p><em> I'm a Marketer.</em></p></div>
-							<div class="content__item_img" id="evo2small"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt=""></div>
+									<div class="proof__content_text proof__content_text_idooutcomes"><p>It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p>Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p><em> I'm a Marketer.</em></p></div>
+							<div class="proof__content_item_img"><img src="//localhost:3000/wp-content/uploads/2019/01/evolutionv2-small.jpg" id="evo2small" alt=""></div>
 						</div>
 					</div>
-					<div class="content__item_col proof__item_container" id="proof__content_end2end">
+					<div class="proof__end2end_block">
 						<h2 class="proof-intro">@</h2>
 					
-						<div class="proof__content content__container_col" id="end2end__diagram_container">
-								<h5>From Soup To Nuts</h5>
+						<div class="proof__end2end-diagram_container" id="end2end__diagram_container">
+								<h5>End to End Expertise</h5>
+								<h6>From the Board Room to the Keyboard</h6>
 							<div class="end2end__diagram_caption">challenge</div>
 							<div class="end2end__diagram_img"><img src="//localhost:3000/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt=""></div>
 							<div class="end2end__diagram_img--plus">&#x2b;</div>
@@ -50,50 +45,50 @@ exit; // Exit if accessed directly.
 						
 						
 					</div>
-					<div class="content__item_col proof__item_container" id="proof__content_vitae">
+					<div class="proof__stats_block">
 						<h2 class="proof-intro">#</h2>
 						
-						<div class="proof__content vitae__stats carousel slide" id="stats-slider" data-interval="false">
+						<div class="proof__content_carousel carousel slide" id="stats-slider" data-interval="false">
 								<h5>i've been around</h5>
 							<div class="carousel-inner">
 								<!--
 								<div class="carousel-item active">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" 							alt="First slide"/><div class="stats-caption carousel-caption">
 																								<h6>brands supported</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals"					 		alt="Second slide"/><div class="stats-caption carousel-caption">
 																								<h6>categories served</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>years of experience</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>agency</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate"					 		alt=""/><div class="stats-caption carousel-caption">
 																								<h6>corporate</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" 							alt=""/>
 																						<div class="stats-caption carousel-caption">
 																								<h6>largest program</h6>
@@ -101,49 +96,49 @@ exit; // Exit if accessed directly.
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>operations responsibility</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>largest employer</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>tiniest employer</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>matrix reports</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>direct reports</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg"					 id="accessible" 		alt=""/><div class="stats-caption carousel-caption">
 																								<h6>user friendly</h6>
 																						</div>
 																				</div>
 																		</div>
 																		<div class="carousel-item">
-																				<div class="quals">
+																				<div class="proof-quals">
 																													<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" 							alt=""/><div class="stats-caption carousel-caption">
 																								<h6>bullshit</h6>
 																						</div>
@@ -152,34 +147,34 @@ exit; // Exit if accessed directly.
 								-->
 								
 								<div class="carousel-item row no-gutters active">
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide"/><div class="stats-caption carousel-caption">
 											<h6>brands supported</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide"/><div class="stats-caption carousel-caption">
 											<h6>categories served</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt=""/><div class="stats-caption carousel-caption">
 											<h6>years of experience</h6>
 										</div>
 									</div>
 								</div>
 								<div class="carousel-item row no-gutters">
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt=""/><div class="stats-caption carousel-caption">
 											<h6>agency</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt=""/><div class="stats-caption carousel-caption">
 											<h6>corporate</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt=""/>
 										<div class="stats-caption carousel-caption">
 											<h6>largest program</h6>
@@ -187,34 +182,34 @@ exit; // Exit if accessed directly.
 									</div>
 								</div>
 								<div class="carousel-item row no-gutters">
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt=""/><div class="stats-caption carousel-caption">
 											<h6>operations responsibility</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt=""/><div class="stats-caption carousel-caption">
 											<h6>largest employer</h6>
 										</div>
 									</div>
-									<div class="quals">
+									<div class="proof-quals">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt=""/><div class="stats-caption carousel-caption">
 											<h6>tiniest employer</h6>
 										</div>
 									</div>
 								</div>
 								<div class="carousel-item row no-gutters">
-									<div class="quals" id="odd-stats">
+									<div class="proof-quals" id="odd-stats">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt=""/><div class="stats-caption carousel-caption">
 											<h6>largest team</h6>
 										</div>
 									</div>
-									<div class="quals" id="odd-stats">
+									<div class="proof-quals" id="odd-stats">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt=""/><div class="stats-caption carousel-caption">
 											<h6>user friendly</h6>
 										</div>
 									</div>
-									<div class="quals" id="odd-stats">
+									<div class="proof-quals" id="odd-stats">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt=""/><div class="stats-caption carousel-caption">
 											<h6>bullshit</h6>
 										</div>
@@ -242,7 +237,7 @@ exit; // Exit if accessed directly.
 							<h2 class="proof-intro">$</h2>
 				
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="proof__content content__item_caption" id="proof__you">
+							<div class="proof__content_service content__item_caption" id="proof__you">
 											<h5>It's You. Not Me.</h5>
 											<div class="proof__content_text"><p>I believe that professional services should be professional when it comes to their service.</p></div>
 							<div class="content__item_img" id="bell__small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="" class="style-svg"></div>

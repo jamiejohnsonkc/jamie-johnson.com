@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 <article class="article__wrapper content__wrapper brands">
 	<div class="container background why-me__container__brands" id="brand-history">
-		<div class="content-container content_container__background_brands">
+		<div class="content-container content-container__background_brands">
 			<h1>brand history</h1>
 		<h2>Exceptional Breadth</h2>
 		<h3>Voluptate fugiat mollit amet dolore excepteur.</h3>

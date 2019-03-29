@@ -85,8 +85,7 @@ $slate-shades: map-merge((
   "200": $slate-shade-200,
   "300": $slate-shade-300,
   "400": $slate-shade-400,
-  "500": $slate-shade-500,
-  "600": $slate-shade-600,
+  "500": $slate-shade-500, "600": $slate-shade-600,
   "700": $slate-shade-700,
   "800": $slate-shade-800,
   "900": $slate-shade-900
@@ -111,7 +110,7 @@ $grayrgba:                          rgba(128,128,128,1);
 $slate:                             #778899;
 $tungsten:                          #D2DBE2;
 $blue:                              #007bff !default;
-$indigo:                            #6610f2 !default;
+$indigo:                            #6610f2 !default; 
 $purple:                            #6f42c1 !default;
 $pink:                              #e83e8c !default;
 $red:                               #dc3545 !default;
@@ -123,7 +122,9 @@ $cyan:                              #17a2b8 !default;
 $offwhite1:                         rgba(253, 253, 253, 1);
 $offwhite:                          rgba(250,250,250, 1);
 $ghostwhite:                        #F8F8FF;
-                                 
+
+
+$dark-bg-trans:                      rgba(17, 17, 17, .7);                      
                                  
 $colors: () !default;
 $colors: map-merge((
@@ -192,6 +193,9 @@ $link-hover-decoration:             underline;
 //
 // Paragraphs
 // Style p element.
+
+ $carousel-control-color:           $primary;
+ $carousel-control-opacity:         1;
 
 $paragraph-margin-bottom:           1rem !default;
 

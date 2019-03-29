@@ -82,7 +82,10 @@ margin-top: 10em;
 }
 
 
-#evo-small{
+#evo2small{
+flex: 0 0 auto;
+position: relative;
+bottom: 0;
 display: block;
 margin: 0 auto;
 width: 80%;
@@ -96,12 +99,7 @@ width: 80%;
 }
 }
 
-#evo2small{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-}
+
 
 
 
@@ -110,17 +108,23 @@ width: 80%;
     width: 115%;
     overflow: hidden;
     bottom: 1rem;
-
-
-
-/* @include mq('tablet'){
-    margin-left: 12.5%;
-} */
 @include mq('tablet-wide') {
-    width: 60%;
-    max-width: 60%;
-    margin-left: 40%;
+    width: 55%;
+    max-width: 55%;
+    margin-left: -2rem;
+    bottom: 0;
 }
+}
+
+
+@include mq('tablet-wide'){
+    #fam-container{
+        overflow: hidden;
+    }
+    #fam-img{
+        width: 150%;
+        max-width: 150%;
+    }
 }
 
 
@@ -370,6 +374,13 @@ width: 80%;
 }
 
 
+.strengths__icon #Speech_Bubble{
+     .cls-1, .cls-3{
+        fill: $gray-800;
+    }
+}
+
+
 .overlay__content--icon {
       fill: $capabilities-overlay-icon-fill-color;
     .cls-1, .cls-2 {
@@ -409,3 +420,11 @@ svg.chev--dwn{
 .circle-digit__01 path, .circle-digit__02 path, .circle-digit__03 path{
 fill: $white;
 }
+
+    #digits {
+        color: $qualifications-icon-fill-color;
+    }
+
+    .cls-1 {
+        fill: $qualifications-icon-fill-color;
+    }

@@ -24,6 +24,32 @@
   }
 }
 
+
+// ==========================================================================
+// summary - master
+// ==========================================================================
+
+
+
+.summary {
+  h1 {
+    @extend %headline-lg;
+  }
+
+  h2 {
+    @extend %subhead-lg;
+  }
+
+  h3 {
+    @extend %display-text-lg;
+  }
+
+  p {
+    @extend %body-text-lg;
+  }
+}
+
+
 // =========================================================================
 // homepage splash
 // =========================================================================
@@ -96,6 +122,7 @@
 
   h2 {
     @extend %headline;
+        text-align: center;
   }
 
   h3 {
@@ -207,17 +234,17 @@
   }
 }
 
-ul#list__strengths_container {
+ul.strengths__list_container {
   list-style: none;
 }
 
-ul#list__strengths_container > li {
+.strengths__list_container li{
   @extend %list-item;
 
   // @include vr($font-size: 1, $line-height: 1.5,);
 }
 
-.list__header {
+.strengths__list_header {
   @extend %list-head;
 
   font-weight: 400;
@@ -236,8 +263,8 @@ ul#list__strengths_container > li {
   border-radius: 100%;
 }
 
-.panel__footnote {
-  @include vr($font-size: 0, $padding-left: 0);
+.strengths__panel_footnote {
+  @include vr($font-size: 10px, $line-height: 1.5, $padding: 2 0 0 0);
 
   font-style: italic;
   margin-top: 4em;
@@ -248,12 +275,18 @@ ul#list__strengths_container > li {
 //strengths panel colors
 
 #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
-  background: $gray-800;
-
-  h3, p, ul, li, .list__header, .panel__footnote {
+ 
     color: $white;
-  }
+ 
 }
+#strengths__panel_wrapper--smm, #strengths__panel_wrapper--opi{
+  background: $primary;
+}
+
+#strengths__panel_wrapper--dad{
+  background: $gray-800;
+}
+
 
 //
 // proof boxes
@@ -264,7 +297,7 @@ ul#list__strengths_container > li {
 /* ////////////////////////////////////////////////////////////////////////////////////*/
 
 //container article styles
-#article__container--proof {
+.proof__article_container {
   h2 {
     align-text: center;
 
@@ -275,18 +308,17 @@ ul#list__strengths_container > li {
     @include vr($width: 28, $line-height: 3);
     @include push-auto;
   }
-
-  .content__container_col {}
-
-  .content__block {}
-
   h4 {}
 
+h5{
+  @extend %display-text;
+}
+h6{
+  @extend %display-text-sm;
+}
   p {
     font-family: $font-family-serif;
   }
-
-  .content__item_col {}
 }
 
 h2.proof-intro {
@@ -303,20 +335,17 @@ h2.proof-intro, .proof__item_container h5 {
 
 .proof__content_text p {
   @extend %display-text-sm;
-
+text-align: justify;
   letter-spacing: .025em;
-
-  em {
-    color: $primary;
-    font-weight: 400;
-  }
 }
 
 .proof__content_text em {
   @include vr($font-size: 1);
+   color: $primary;
+    font-weight: 400;
 }
 
-#proof__content_marketer > div > p > em {
+.proof__marketer_block > div > p > em {
   color: $primary;
   font-weight: 300;
 }
@@ -345,11 +374,10 @@ h2.proof-intro, .proof__item_container h5 {
 ///////////////////////////////////////////////////////////////////
 // i do outcomes panel
 //////////////////////////////////////////////////////////////////
-#idooutcomes {
+.proof__content_outcomes {
   border: 0.25em solid $gray-300;
 
   h5 {
-    @extend %subhead-sm;
 
     font-family: $font-family-serif;
 
@@ -359,41 +387,49 @@ h2.proof-intro, .proof__item_container h5 {
   }
 }
 
+.proof__content_text_idooutcomes{
+  text-align: left;
+}
 ///////////////////////////////////////////////////////////////////
 // end to end equation panel
 //////////////////////////////////////////////////////////////////
 
-#end2end__diagram_container {
+.proof__end2end-diagram_container {
   background: $black;
-
-  h5, p {
+  @include vr($padding: 5 2);
+  & h6, p {
     color: $offwhite;
-  }
+  } 
 
-  h5 {
-    @extend %display-text-sm;
-
+ & h5 {
     font-weight: 400;
-  }
+    color: $primary;
 
+  }
+%display-text{
+   @include vr($margin-top: 4, $margin-bottom:1);
+}
   %display-text-sm {
-    @include vr($margin-bottom: 4);
+    @include vr($margin:0 0 6 0);
   }
 }
 
-.proof__content_text {
-  text-align: center;
+.proof__end2end-diagram_container>.proof__content_text>%display-text-sm{
+  @include vr($margin-top: 4);
 }
+
+
+
 
 .end2end__diagram_caption {
-  @include vr($font-size: 1, $margin-bottom: 0);
+  @include vr($font-size: 16px, $margin-bottom: 0);
 
-  color: $offwhite;
+  color: $primary;
   letter-spacing: .075em;
 }
 
 .end2end__diagram_img--plus, .end2end__diagram_img--equal {
-  color: $primary;
+  color: $offwhite;
 
   @include vr($font-size: 3, $margin: 2 auto 2 auto);
 }
@@ -408,9 +444,10 @@ h2.proof-intro, .proof__item_container h5 {
 // I've been around / stats slider panel
 //////////////////////////////////////////////////////////////////
 
-#proof__content_vitae {}
+.proof__content_carousel h5{
+  text-align: center;
+}
 
-.vitae__stats {}
 
 .stats-caption h6 {
   @extend %caption;
@@ -423,10 +460,18 @@ h2.proof-intro, .proof__item_container h5 {
   letter-spacing: .03em;
 }
 
-#proof__content_vitae > div.proof__content_text > p {
+.proof__stats_block > div.proof__content_text > p {
   @include vr($margin-top: 0);
 }
 
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232cc0f2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232cc0f2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
 ///////////////////////////////////////////////////////////////////
 // Professional About Service panel
 //////////////////////////////////////////////////////////////////
@@ -512,21 +557,12 @@ h2.proof-intro, .proof__item_container h5 {
   @extend %list-item;
 }
 
-.services__panel-head {
+.services__panel-headline{
   @extend %subhead-sm;
 }
 
-.panel__head_headers {
+.panel__head_headers_services{
   text-align: center;
-
-  %subhead-sm {
-    @include vr($margin-bottom: 3);
-  }
-}
-
-.panel__head_headers {
-  text-align: center;
-
   %subhead-sm {
     @include vr($margin-bottom: 3);
   }
@@ -534,7 +570,6 @@ h2.proof-intro, .proof__item_container h5 {
 
 .panel__content_summary {
   @extend %display-text-sm;
-
   font-weight: 400;
 }
 
@@ -782,17 +817,10 @@ h2.proof-intro, .proof__item_container h5 {
   & h2 {
     @extend %headline;
   }
-
-  & h3 {
-    // @extend %subhead;
-    letter-spacing: .05rem;
-  }
 }
 
 .container.background h3 {
-  @extend %display-text;
 
-  font-weight: 400;
 }
 
 .content1__background {
@@ -802,9 +830,15 @@ h2.proof-intro, .proof__item_container h5 {
 }
 
 .categories__content_caption {
-  & h3 {}
+  & h3 {
+     
+  font-weight: 400;
+    @include vr($margin-bottom: .25, $margin-top: 0);
+  }
 
-  & p {}
+  & p {
+    @include vr($font-size: 16px, $margin-top: .25);
+  }
 }
 
 .categories__content_caption {
@@ -845,29 +879,19 @@ h2.proof-intro, .proof__item_container h5 {
   background: rgba(59, 68, 76, 0.8);
   text-align: center;
 
-  & h3 {
-    @extend %subhead-sm;
-
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: .25rem;
-  }
-
-  & p {
-    @extend %display-text-sm;
-
-    letter-spacing: .025rem;
-    text-transform: capitalize;
-  }
-
   %subhead-sm {
-    @include vr($margin-bottom: 1);
+    @include vr($margin-bottom: 0);
   }
 
   %display-text-sm {
     @include vr($margin: 0 0);
 
     font-weight: 200;
+  }
+  @include mq('tablet-wide'){
+p{
+      @include vr($font-size: 14px);
+    }
   }
 
   @include mq("desktop") {}
@@ -881,6 +905,36 @@ h2.proof-intro, .proof__item_container h5 {
 
 .categories, .brands{
     background: #fff;
+}
+
+.personal h1{
+    @extend .page__title;
+  }
+
+.personal{
+height: 850px;
+        @include mq('phone'){
+
+}
+}
+
+.container.about-me__container_personal{
+// background: $dark-bg-trans;
+background: -moz-linear-gradient(top, rgba(59,68,76,.65) 65%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(top, rgba(59,68,76,.65) 65%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(59,68,76,.65) 65%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+color: $offwhite;
+
+p{
+  @extend %display-text-sm;
+}
+@include mq('tablet-wide'){
+  background: -moz-linear-gradient(left, rgba(59,68,76,.85) 15%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(left, rgba(59,68,76,.85) 15%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to right, rgba(59,68,76,.85) 15%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}
 }
 
 // ==========================================================================

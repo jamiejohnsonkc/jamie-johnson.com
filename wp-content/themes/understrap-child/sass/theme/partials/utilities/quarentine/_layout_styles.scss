@@ -960,7 +960,7 @@ ul#list__strengths_container {
   @include vr($margin-bottom: 1);
 }
 
-.quals svg {
+.proof-quals svg {
   width: 30%;
   margin: 0 auto;
   display: block;
@@ -977,7 +977,7 @@ ul#list__strengths_container {
   }
 }
 
-.quals {
+.proof-quals {
   float: left;
   padding-left: 15px;
   padding-right: 15px;

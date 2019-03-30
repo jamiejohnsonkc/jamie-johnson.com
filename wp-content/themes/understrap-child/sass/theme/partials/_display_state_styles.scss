@@ -20,7 +20,7 @@
     }
 }
 
-.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services__panel-img_container--wide-screen---planning{ display: none;}
+.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_wide-screen--planning{ display: none;}
 @include mq('phone'){}
 @include mq('phone-wide'){}
 @include mq('phablet'){}
@@ -32,10 +32,9 @@
 }
 @include mq('tablet-wide'){
      .br { display: none; }
-     .services__panel_headers--webdev h3.services__panel-headline{display: none;}
-     .services__panel-img_container--small-screen{display: none;}
+     .services__panel-img_container--small-screen, .services-panel__bgimg-container_small-screen--planning{display: none;}
      .services__panel-img_container--wide-screen{display: flex;}
-     .services__panel-img_container-wide-screen--management, .services__panel-img_container-wide-screen--webdev, h3.services__panel_headline--alternate{
+     .services__panel-img_container-wide-screen--management, .services__panel-img_container-wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning{
         display: block;
      }
 

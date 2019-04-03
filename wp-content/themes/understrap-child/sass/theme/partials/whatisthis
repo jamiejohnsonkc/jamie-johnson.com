@@ -1,0 +1,611 @@
+  
+//
+//CUSTOM CONTENT COLUMN WIDE FOR SMALL SCREENS
+//
+.business-value {
+    h1 {
+        @extend .page__title;
+    }
+
+    @include mq('tablet') {
+        max-width: 50em;
+    }
+
+    @include mq('tablet-wide') {
+        max-width: 99em;
+        width: 100%;
+    }
+
+}
+
+//
+// MY VALUE PAGE HEADER 
+//
+#val-page-header {
+    > h2 {
+        @include vr($font-size: 10, $line-height:4);
+        font-weight: 600;
+    }
+
+    > h3 {
+        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
+        font-weight: 300;
+    }
+
+    h4 {
+        @extend %display-text-sm;
+    }
+    %display-text-sm{
+        @include vr($margin: 1 0);
+    }
+
+    @include vr($margin-left: 0);
+}
+
+.page__header {
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+// ====================================================================================
+//  outcome driven marketing
+// ====================================================================================
+.business-value .diagram {
+    @include vr($margin: 2 0 4 0);
+}
+
+// #objectives p {
+
+//     /*        @include vr($font-size: 2, $line-height: 2.5); */
+//     @include vr($font-size: 2, $line-height:2.5);
+//     font-style: italic;
+//     font-weight: 300;
+// }
+
+/*http://colorzilla.com/gradient-editor/#d2dbe2+1,7db9e8+100&1+0,0+53 */
+#objectives {
+    .justification__conclusion {
+        @extend .justification__conclusion--background;
+    }
+
+}
+
+.justification__conclusion {
+    @include vr($padding: 1);
+
+}
+
+.justification__conclusion--background {
+    background: rgba(210, 219, 226, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: .5em;
+}
+
+.justification__conclusion > p {
+    @extend %display-text-sm;
+    // @include vr($font-size: 2, $line-height:2.5);
+    // font-style: italic;
+    font-weight: 300;
+}
+
+.delta--down,
+.delta--right {
+    .cls-1 {
+        fill: $gray-400;
+    }
+
+}
+
+.delta--down {
+    width: 2rem;
+    height: 2rem;
+}
+
+.delta--right {
+    width: 1rem;
+    height: 2rem;
+}
+
+.objectives-diagram__vertical--delta {
+    display: flex;
+
+    @include mq('tablet-wide') {
+        display: none;
+    }
+
+}
+
+.objectives-diagram__horizontal--delta {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: flex;
+    }
+
+}
+
+.diagram__content_container .icon {
+    .cls-1,
+    .cls-2,
+    .cls-3,
+    .cls-4,
+    .cls-5 {
+        fill: $primary;
+    }
+
+}
+
+.content__container_icon .icon {
+    width: 90%;
+}
+
+//
+// outcomes diagram (vert & horz versions)
+//
+
+
+#objectives__diagram {
+    @include make-row;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+    width: 80%;
+
+    @include mq("tablet-wide") {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    .objectives-diagram__list-item{
+        @include make-row;
+
+        width: 100%;
+        max-width: 100%;
+        @include vr($margin: 1 0 1 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        ol {
+            margin-block-end: 0px;
+            margin-block-start: 0px;
+            list-style-position: inside;
+            padding-inline-start: 0px;
+            -webkit-padding-start: 0px;
+            align-self: center;
+
+            @media (max-width: 25em) {
+                margin-left: 2em;
+            }
+
+            // @include push-auto;
+       
+        }
+
+        li {
+            @extend %list-item-lg;
+            // @include vr($font-size: 2);
+            %list-item-lg{
+                @include vr($margin-bottom: 0);
+            }
+            padding-right: 0;
+
+            @include mq("phone") {
+                margin-left: 4rem;
+            }
+
+
+            @include mq("tablet") {
+                margin-left: 2rem;
+            }
+        }
+
+        .br {
+            display: none;
+        }
+
+        .content__container_icon, .objectives-offset {
+            @include make-col-ready;
+            width: 20%;
+            max-width: 20%;
+            display: block;
+        }
+
+        @include mq("tablet-wide") {
+            /*   display: none; */
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 23%;
+            max-width: 23%;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            align-items: center;
+
+            // align-content: center;
+            flex: 0 0 auto;
+
+            .objectives-offset {
+                display: none;
+            }
+
+            .content__container_icon {
+                width: 80%;
+                max-width: 80%;
+                height: auto;
+                flex: 0 0 auto;
+            }
+
+            li {
+                margin-left: 0;
+
+                @include vr($font-size: 1.5);
+            }
+        }
+    }
+
+    @include mq("tablet-wide") {
+        .justification__conclusion {
+            @include make-col-ready;
+            @include make-col(12);
+
+            padding-left: 0px;
+            padding-right: 0px;
+            align-items: flex-start;
+        }
+    }
+
+
+text.st4.st6{
+    fill:#111;
+    stroke: none;
+}
+
+text.st3.st4.st5{
+    stroke: none;
+    fill: #111;
+}
+
+
+
+
+
+
+
+#appbar\2e smiley\2e happy-2, #Path_7509, #Path_7510, #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(4), #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(4){
+    fill: $primary;
+}
+
+
+// ====================================================================================
+// cultivate customer value
+// ====================================================================================
+
+#grow {
+    @include mq('tablet-wide') {
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        // .superior-value__svg {
+            //     display: block;
+            //     margin-left: -2em;
+            //
+        }
+
+        // .diagram,
+        // .justification__conclusion {
+        //     @include make-col-ready();
+        //     @include make-col(6);
+        //     min-height: 100%;    /* p{
+        //                             @include vr($font-size: 1, $line-height: 2.5, $width: 20);
+        //                         } */
+        // }
+
+        .row {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .diagram {
+            order: 2;
+            padding-left: 0;
+            padding-right: 0;
+            min-height: 100%;
+        }
+
+        .justification__conclusion {
+            order: 1;/*      background: rgba(210, 219, 226, .5);
+                                           @include vr($font-size: 2, $line-height: 2.5);
+                                           font-style: italic;
+                                           font-weight: 300; */
+        }
+
+        // #value__conclusion_cultivate p {
+        //     @include vr($padding: 0 4 0 4, $line-height:2.5);
+        // }
+
+    }
+
+
+
+.superior-value__svg {
+    width: 90%;
+    display: block;
+
+    @include mq('tablet-wide') {
+        width: 90%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+}
+
+// text.st3.st4,
+text.st6.st7 {
+    //     fill: $primary;
+    //     stroke: none;
+    //
+}
+
+.diagram__superior-value {
+    .st1, .st2, .st6, .st7 {
+        font-weight: normal;
+        // fill: $primary;
+        stroke: none;
+        font-size: 16px;
+    }
+
+    .st4 {
+        // font-size: $ms-2_5;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        stroke: none;
+}
+    .st7 {
+        // font-size: $ms-2;
+   
+    }
+
+    .st1, .st2, .st4, .st6, .st7 {
+          fill: #111;
+    }
+
+    #Layer_1 {
+       .st8, .st12, .st13 {
+            // stroke: $gray-700;
+            stroke: $primary;
+        }
+    }
+
+    #Layer_2 .st0 {
+        // fill: $tungsten;
+        fill: $primary;
+    }
+    polygon {
+        fill: $gray-500;
+    }
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(3) > g > line{
+        stroke: $gray-500;
+    }
+}
+// ====================================================================================
+// modernize marketing
+// ====================================================================================
+
+.diagram__modern-marketing{
+   #headers text{
+    font-family: roboto;
+   } 
+} 
+
+
+.modern-marketing-diagram {
+    width:100%;
+    display: block;
+    @include push-auto();
+
+    @include mq('tablet-wide') {
+        width: 95%;
+    }
+
+}
+
+#modernize {
+    @include mq('tablet-wide') {
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .diagram {
+            @include make-col-ready();
+            @include make-col(6);
+            order: 1;
+            @include vr($padding: 1);
+        }
+
+    }
+
+}
+
+// #value__conclusion_modernize {
+//     @include mq('tablet-wide') {
+//         @include make-col-ready();
+//         @include make-col(6);
+//         @include vr($padding: 0 4 0 4);/*      order: 2;
+//                                 background: rgba(210, 219, 226, .5); */
+//     }
+
+// }
+
+// ====================================================================================
+// optimize marketing contribution
+// ====================================================================================
+
+
+.diagram__end-to-end {
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.diagram__end-to-end--horizontal {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+/////text in chart is outlined - needs to be bold
+.end-to-end--horz {
+    width: 100%;
+
+    .st0 {
+        fill: #68abd8;
+        stroke: #ffffff;
+        stroke-width: 1px;
+    }
+
+    .st1 {
+        font-family: roboto;
+    }
+
+    .st2 {
+        fill: #111111;
+    }
+
+    .st3 {
+        fill: #ffffff;
+        font-family: roboto;
+        stroke: #fff;
+        stroke-width: .75px;
+    }
+
+}
+
+.diagram__end-to-end--vertical {
+    @include make-row;
+    @include make-col-ready;
+    @include make-col(12);
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+
+    .st3,
+    .st4,
+    .st5 {
+        font-family: roboto;
+    }
+
+    @include mq('tablet-wide') {
+        display: none;
+    }
+
+}
+
+.progression__end-to-end--vertical {
+    @include make-col-ready();
+    @include make-col(6);
+}
+
+.end-to-end--vert {
+    width: 100%;
+}
+
+.diagram-content__caption--sticky {
+    @include make-col-ready();
+    @include make-col(6);
+    padding-left: 0px;
+    padding-right: 0px;
+    @include vr($font-size: 2, $padding-right:3);
+    position: sticky;
+    top: 40%;
+    left: 0;
+    height: 10rem;
+    align-self: flex-start;
+    margin-top: 3em;
+    letter-spacing: -.025em;
+    font-weight: 500;
+    align-text: justify;
+}
+
+.justification__conclusion{
+    @extend .justification__conclusion--background;
+}
+
+#optimize {
+    .content-container {
+        @include make-row();
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @include mq('desktop') {
+        .diagram-content__end-to-end--vertical {
+            display: none;
+        }
+
+        .diagram-content__end-to-end--horizontal {
+            display: block;
+
+            .end-to-end--horz {
+                width: 100%;
+            }
+
+            .content-container {
+                @include make-row();
+                margin-left: 0px;
+                margin-right: 0px;
+                flex-direction: row;
+                width: 100%;
+                max-width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+.moreless-button__outcomes{
+    display: block;
+}

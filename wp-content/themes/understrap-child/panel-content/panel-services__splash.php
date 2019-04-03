@@ -26,14 +26,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		</div>
-	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 		</a>
 
-<div class="services__splash_hero-img_container--arrow" id="services__arrow--container"><img src="//localhost:3000/wp-content/uploads/2019/01/arrow-01.svg" alt="" class="style-svg services__splash_hero-img_svg--arrow" id="services__arrow--img"/></div>
+<div class="services__splash_hero-img_container--arrow" id="services__arrow--container"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrow-01.svg" alt="" class="style-svg services__splash_hero-img_svg--arrow" id="services__arrow--img"/></div>
 	
 
-<div class="container-hero__img--mobile services__splash_hero-img--mobile" id="bell"><img src="//localhost:3000/wp-content/uploads/2019/03/silverbell.jpg" alt="" id="bell-small"/></div>
+<div class="container-hero__img--mobile services__splash_hero-img--mobile" id="bell"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg" alt="" id="bell-small"/></div>
 	</article><!-- cover end -->
 	
 	

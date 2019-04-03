@@ -1,114 +1,252 @@
 //homepage splash sublist dividers
-.hide-1 { }
-.hide-2 { }
-.hide-3 { }
-.hide-4 { }
-.br,
-.br-2,
-.br-3,
-.br-4 { display: none; height: 0; line-height: 0; }
-.br__opt,
-.br { display: none; line-height: 0; }
+.hide-1 {
+}
+
+.hide-2 {
+}
+
+.hide-3 {
+}
+
+.hide-4 {
+}
+
+.br, .br-2, .br-3, .br-4 {
+    display: none;
+    height: 0;
+    line-height: 0;
+}
+
+.br__opt, .br {
+    display: none;
+    line-height: 0;
+}
+
+.diagram__end-to-end--horizontal {
+    display: none;
+}
+
+.splash__label_divider{
+    display: none;
+}
+
 @media (min-width:14em) {
-    .page__header h3 { .br { display: block; }
+    .page__header h3 {
+        .br {
+            display: block;
+        }
+
     }
-    .my-value__container__modernize h3 { .br { display: none; }
+
+    .justification__container_modernize h3 {
+        .br {
+            display: none;
+        }
+
     }
+
 }
+
 @media (min-width:19em) {
-    .my-value__container__optimize h3 { .br__opt { display: block; }
+    .justification__container_optimize h3 {
+        .br__opt {
+            display: block;
+        }
+
     }
-}
-
-.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_wide-screen--planning{ display: none;}
-@include mq('phone'){}
-@include mq('phone-wide'){}
-@include mq('phablet'){}
-@include mq('tablet-small'){}
-@include mq('tablet'){
-     .br__opt { display: block; }
-    #main > section > article:nth-child(3) > div > div > hgroup > h3 { .br { display: block; }
-    }
-}
-@include mq('tablet-wide'){
-     .br { display: none; }
-     .services__panel-img_container--small-screen, .services-panel__bgimg-container_small-screen--planning{display: none;}
-     .services__panel-img_container--wide-screen{display: flex;}
-     .services__panel-img_container-wide-screen--management, .services__panel-img_container-wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning{
-        display: block;
-     }
 
 }
-@include mq('desktop'){}
-@include mq('desktop-wide'){}
-@include mq('desktop-xl'){}
-@include mq('desktop-xxl'){}
 
-
-// @media (min-width:25em) { }
-// @media (min-width:30em) { }
-// @media (min-width:35em) { }
-// @media (min-width:40em) { }
-// @media (min-width:48em) {
-//     .br__opt { display: block; }
-//     #main > section > article:nth-child(3) > div > div > hgroup > h3 { .br { display: block; }
-//     }
-// }
-// @media (min-width:64em) {
-//     .br { display: none; }
-// }
-// @media (min-width:78em) { }
-// @media (min-width:90em) { }
-// @media (min-width:120em) { }
-// @media (min-width:160em) { }
-
-
-
-
-
-
-
-.nope { position: absolute; overflow: hidden; width: 100%; height: 100%; }
-[aria-hidden="true"] { display: none; }
-[aria-hidden="false"] { display: block; }
-
-
-#home__splash p { .br { display: block; }
+.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_wide-screen--planning {
+    display: none;
+}
+.objectives-diagram__horizontal--delta {
+    display: none;
+}
+@include mq('phone') {
 }
 
+@include mq('phone-wide') {
+}
 
-.overlay-intro{
-@media (max-width: 30em){
-    .br{
+@include mq('phablet') {
+}
+
+@include mq('tablet-small') {
+}
+
+@include mq('tablet') {
+    .br__opt {
         display: block;
     }
-}
+
+    #main > section > article:nth-child(3) > div > div > hgroup > h3 {
+        .br {
+            display: block;
+        }
+
+    }
+
 }
 
-.intro__icon_caption{
-    .br{
+@include mq('tablet-wide') {
+    .objectives-diagram__vertical--delta {
+display: none;
+    }
+    .objectives-diagram__horizontal--delta {
+    display: flex;
+}
+
+
+    .br {
+        display: none;
+    }
+
+    .services__panel-img_container--small-screen, .services-panel__bgimg-container_small-screen--planning {
+        display: none;
+    }
+
+    .services__panel-img_container--wide-screen {
+        display: flex;
+    }
+
+    .services__panel-img_container-wide-screen--management, .services__panel-img_container-wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning {
         display: block;
     }
+
+.diagram__end-to-end--horizontal{
+        display: block;
+    }
+
+    .diagram__end-to-end--vertical{
+        display: none;
+    } 
+
+}
+
+@include mq('desktop') {
+    .diagram-content__end-to-end--vertical {
+        display: none;
+    }
+
+}
+
+@include mq('desktop-wide') {
+}
+
+@include mq('desktop-xl') {
+}
+
+@include mq('desktop-xxl') {
 }
 
 
-#expt-overlay-1 {order: 2;@include mq('desktop'){order: 1;}}
-#expt-overlay-2 {order: 3;@include mq('desktop'){order: 2;}}
-#expt-overlay-3 {order: 4;@include mq('desktop'){order: 3;}}
-#expt-overlay-4 {order: 5;@include mq('desktop'){order: 4;}}
-#expt-overlay-5 {order: 6;@include mq('desktop'){order: 5;}}
- 
+
+// ==========================================================================
+// everything beyond here appears to need parsing
+// ==========================================================================
+
+
+
+.nope {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+[aria-hidden="true"] {
+    display: none;
+}
+
+[aria-hidden="false"] {
+    display: block;
+}
+
+#home__splash p {
+    .br {
+        display: block;
+    }
+
+}
+
+.overlay-intro {
+    @media (max-width:30em) {
+        .br {
+            display: block;
+        }
+
+    }
+
+}
+
+.intro__icon_caption {
+    .br {
+        display: block;
+    }
+
+}
+
+#expt-overlay-1 {
+    order: 2;
+
+    @include mq('desktop') {
+        order: 1;
+    }
+
+}
+
+#expt-overlay-2 {
+    order: 3;
+
+    @include mq('desktop') {
+        order: 2;
+    }
+
+}
+
+#expt-overlay-3 {
+    order: 4;
+
+    @include mq('desktop') {
+        order: 3;
+    }
+
+}
+
+#expt-overlay-4 {
+    order: 5;
+
+    @include mq('desktop') {
+        order: 4;
+    }
+
+}
+
+#expt-overlay-5 {
+    order: 6;
+
+    @include mq('desktop') {
+        order: 5;
+    }
+
+}
+
 /* // .scroll-top {
 //     display: none;
 // } */
-.panel.business-value.grow > div > hgroup > h3 > br,
-.panel.business-value.modernize > div > hgroup > h3 > br { display: none; }
-.diagram-content__end-to-end--horizontal { 
+.panel.business-value.grow > div > hgroup > h3 > br, .panel.business-value.modernize > div > hgroup > h3 > br {
     display: none;
-    @include mq('tablet-wide'){
-    display: block; }
 }
 
+.diagram-content__end-to-end--horizontal {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: block;
+    }
+
+}
 
 /*      @include media-breakpoint-up(sm) {
     display: none;
@@ -135,24 +273,73 @@
 @include media-breakpoint-up(xl) {
     } */
 
-.hvr-underline-from-center { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); position: relative; overflow: hidden; }
-.hvr-underline-from-center:before { content: ""; position: absolute; z-index: -1; left: 51%; right: 51%; bottom: 0; background: $navbar-all-text-hover-color; height: 1px; -webkit-transition-property: left, right; transition-property: left, right; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
-.hvr-underline-from-center:hover:before,
-.hvr-underline-from-center:focus:before,
-.hvr-underline-from-center:active:before { left: 0; right: 0; }
-
-/* Sweep To Top */
-.sweep-to-top { @include hacks; position: relative; @include prefixed(transition-property, color); @include prefixed(transition-duration, $mediumDuration);
-    &:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: $activeColor; @include prefixed(transform, scaleY(0)); @include prefixed(transform-origin, 50% 100%); @include prefixed(transition-property, transform); @include prefixed(transition-duration, $mediumDuration); @include prefixed(transition-timing-function, ease-out); }
-    &:hover,
-    &:focus,
-    &:active { color: white;
-        &:before { @include prefixed(transform, scaleY(1)); }
-    }
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
 }
 
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: $navbar-all-text-hover-color;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
 
-.read-more__outcomes, .read-more__optimize, .read-more__value, .read-more__modernize, .services__read-more_dev-design,.services__read-more_planning-analysis, .services__read-more_ops-management{
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/* Sweep To Top */
+.sweep-to-top {
+    @include hacks;
+    position: relative;
+    @include prefixed(transition-property, color);
+    @include prefixed(transition-duration, $mediumDuration);
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $activeColor;
+        @include prefixed(transform, scaleY(0));
+        @include prefixed(transform-origin, 50% 100%);
+        @include prefixed(transition-property, transform);
+        @include prefixed(transition-duration, $mediumDuration);
+        @include prefixed(transition-timing-function, ease-out);
+    }
+
+    &:hover, &:focus, &:active {
+        color: white;
+
+        &:before {
+            @include prefixed(transform, scaleY(1));
+        }
+
+    }
+
+}
+
+.read-more__outcomes, .read-more__optimize, .read-more__value, .read-more__modernize, .services__read-more_dev-design, .services__read-more_planning-analysis, .services__read-more_ops-management {
     display: none;
 }
 
@@ -161,20 +348,20 @@
     visibility: visible;
 }
 
-.why-me__content__verbose{
+.justification__content__verbose {
     display: none;
 }
 
-.mobile__background--image{
-    
+.mobile__background--image {
     @include mq('desktop-xl') {
         display: none;
     }
+
 }
 
 .container-hero__img--mobile {
-
-    @include mq('desktop-wide'){
-         display: none; 
+    @include mq('desktop-wide') {
+        display: none;
     }
+
 }

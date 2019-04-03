@@ -249,7 +249,7 @@ width: 80%;
     }
 }
 
-.why-me.splash {
+.justification.splash {
     .container-hero__img--mobile {
         width: 100%;
         left: 0%;
@@ -307,6 +307,7 @@ width: 80%;
 
 
 //svg tweaks
+
 .stats .style-svg {
     // height: $ms-6;
     // width: $ms-6;
@@ -430,3 +431,15 @@ fill: $white;
     .cls-1 {
         fill: $qualifications-icon-fill-color;
     }
+
+
+//
+// objectives-panel__diagram_svg-tweaks 
+//  
+.delta--down,
+.delta--right {
+    .cls-1 {
+        fill: $gray-400;
+    }
+
+}

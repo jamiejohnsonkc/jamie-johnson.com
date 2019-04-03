@@ -4106,6 +4106,12 @@ $('.moreless-button__optimize').click(function() {
 });
 });
 
+
+
+
+
+
+
 jQuery(document).ready(function($) {
 $('.moreless-button__dev-design').click(function() {
   $('.panel__content_dev-design--read-more').slideToggle();

@@ -4,11 +4,11 @@
 // ==========================================================================
 
 //sections
-#section__my-value {}
+#section__justification {}
 
 #section__home-page {}
 
-#section__why-me {}
+#section__justification {}
 
 #section__my-expertise {}
 
@@ -16,7 +16,7 @@
 
 //core = homepage  alternate = why - me
 // @include mq('tablet'){ 
-//   .core, .my-value, .why-me, .alternate {
+//   .core, .justification, .justification, .alternate {
 // }
 
 //compensation for smaller mobile/tablets when in landscape mode
@@ -45,6 +45,30 @@
     left: 55%;
   }
 }
+
+
+// ==========================================================================
+// page titles / intra-article spacing
+// ==========================================================================
+
+
+.page-title{
+width: 100%;
+max-width: 100%;
+display: block;
+}
+
+.background__page-title--brands,
+.background__page-title--categories{
+  @include vr($margin-bottom: 6);
+}
+
+
+.background__page-title--personal, .background__page-title--cta{}
+
+
+
+
 
 // ==========================================================================
 // splash
@@ -86,6 +110,82 @@
 }
 
 // ==========================================================================
+// home-page__splash_layout
+// ==========================================================================
+.splash__label{
+  flex: 0 0 auto;
+}
+
+.splash__label_divider {
+  
+  color: $gray-500;
+
+  @include mq("phone-wide", $type: max) {
+    @include vr($padding: 0 0.5);
+  }
+
+
+  @include vr($padding: 0 1);
+}
+
+.home-page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.splash.home-page__splash{
+  height: 50%;
+}
+
+#home__splash h1{
+letter-spacing: -.05em;}
+
+.splash__labels {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  letter-spacing: .025em;
+  @include vr($margin-top: 1);
+
+}
+
+.splash__subhead--fancy{
+  flex: 0 0 auto;
+  width: 10em;
+  margin-bottom: auto;
+}
+
+@include mq("tablet") {
+  .splash__labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    %subhead {
+      @include vr($font-size: 1);
+    }
+
+    .splash__label_divider {
+      display: flex;
+
+      @include vr($padding: 0 1);
+    }
+  }
+}
+
+// ==========================================================================
+// homepage__summary_layout
+// ==========================================================================
+.home-page__container_summary{
+  height: 100vh;
+  background: $black;
+}
+
+// ==========================================================================
 // home page articles
 // ==========================================================================
 
@@ -124,113 +224,43 @@
   }
 }
 
-.intro__icon_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content__intro_icon--background {
-  flex: 0 0 auto;
-}
-
-.intro__icon_caption {
-  flex: 1 0 auto;
-}
-
-.splash__label, .splash__label--emph {
-  flex: 0 0 auto;
-}
-
-.splash__label_divider {
-  color: $gray-500;
-
-  @include mq("phone-wide", $type: max) {
-    @include vr($padding: 0 0.5);
-  }
 
 
-  @include vr($padding: 0 1);
-}
-
-.splash__labels {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-@include mq("tablet") {
-  .splash__labels {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    %subhead {
-      @include vr($font-size: 1);
-    }
-
-    .splash__label_divider {
-      display: flex;
-
-      @include vr($padding: 0 1);
-    }
-  }
-}
 
 
-.proof__content_outcomes{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
-  h5 {
-    flex: 0 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-  .br {
-    display: block;
-  }
-}
-
-  .proof__content_text {
-    flex: 0 0 auto;
-    position: relative;
-    z-index: 2;
-  }
 
 
 // ==========================================================================
 // homepage articles
 // ==========================================================================
-.section__head {
-  display: flex;
-  flex-direction: column;
 
-  @include make-row;
 
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  max-width: 100%;
-}
 
-.section__head_headers {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 auto;
-}
+// .section__head {
+//   display: flex;
+//   flex-direction: column;
+
+//   @include make-row;
+
+//   margin-left: 0px;
+//   margin-right: 0px;
+//   width: 100%;
+//   max-width: 100%;
+// }
+
+// .section__head_headers {
+//   width: 100%;
+//   max-width: 100%;
+//   flex: 0 0 auto;
+// }
 
 .intro__icons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  // padding-top: 2em;
 }
+
 
 .intro__icon_wrapper {
   @include vr($margin: 4 0);
@@ -249,12 +279,12 @@
 
 .content__intro_icon--background {
   @include make-col-ready;
-
+  flex: 0 0 auto;
   padding-left: 0px;
   padding-right: 0px;
   border-radius: 100%;
   background: $gray-500;
-@include cols();
+  @include cols();
   @include vr($margin: 0.75 0);
 }
 
@@ -262,6 +292,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+    flex: 1 0 auto;
 }
 
 .content__item_intro--content {
@@ -290,36 +321,17 @@
 
 
 .strengths__panel_head {
-  @include mq("tablet") {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+
 }
 
 .strengths__panel_head_img {
   @include make-col-ready;
-
   width: 25%;
-
-  @include mq("tablet") {
-    @include make-col(2);
-
-    padding-left: 0px;
-    padding-right: 0px;
-
-    @include vr($margin-right: 1);
-  }
+  max-width: 25%;
 }
 
 .strengths__panel_head_headers {
   @include make-col-ready;
-  @include mq("tablet") {
-    @include make-col(9);
-
-    padding-left: 0px;
-    padding-right: 0px;
-  }
 }
 
 
@@ -337,43 +349,7 @@
   @include vr($padding-left: 0);
 }
 
-@include mq("tablet", $type: max) {
-  .strengths__panel_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    @include vr($padding: 2);
-  }
-
-    .strengths__panel_head {
-      flex: 0 0 auto;
-
-      @include vr($margin: 2 0 0 0);
-    }
-
-    .strengths__panel_content {
-      flex: 0 0 auto;
-      @include vr($margin: 0 0 2 0);
-      @include rows();
-    }
-
-    .strengths__panel_subtext {
-      flex: 0 0 auto;
-
-      @include vr($margin: 0 0 0 0);
-    }
-
-    .strengths__panel_footnote {
-      flex: 0 0 auto;
-      @include vr($margin: 1 0 3 0);
-    }
-  
-
-  #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
-    @include vr($margin: 2 0);
-  }
-}
 
 .strengths__content {
   margin-left: 0px;
@@ -430,11 +406,122 @@ ul.strengths__list_container {
 }
 
 
+// ==========================================================================
+// strengths responsive styles (all panels/articles)
+// ==================================================
+
+
+@include mq('phone'){}
+@include mq('phone-wide'){}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+
+
+////////////NOTE $TYPE MAX
+@include mq("tablet", $type: max) {
+  .strengths__panel_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include vr($padding: 2);
+  }
+
+    .strengths__panel_head {
+      flex: 0 0 auto;
+
+      @include vr($margin: 2 0 0 0);
+    }
+
+    .strengths__panel_content {
+      flex: 0 0 auto;
+      @include vr($margin: 0 0 2 0);
+      @include rows();
+    }
+
+    .strengths__panel_subtext {
+      flex: 0 0 auto;
+
+      @include vr($margin: 0 0 0 0);
+    }
+
+    .strengths__panel_footnote {
+      flex: 0 0 auto;
+      @include vr($margin: 1 0 3 0);
+    }
+  
+
+  #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
+    @include vr($margin: 2 0);
+  }
+}
+
+
+
 @include mq('tablet'){
   .strengths__panel_wrapper{
     @include vr($margin-bottom: 3);
   }
+  
+.strengths__panel_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+.strengths__panel_head_img {
+    @include make-col(2);
+    padding-left: 0px;
+    padding-right: 0px;
+    @include vr($margin-right: 1);
+  }
+
+.strengths__panel_head_headers {
+    @include make-col(9);
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+
+
+
+
+
+
 }
+@include mq('tablet-wide'){
+  .strengths__panel_head_img {
+    @include make-col(3);
+  }
+
+
+
+
+
+
+
+}
+@include mq('desktop'){
+.container.strengths__article_container{
+  width: 100%;
+}
+
+
+
+
+
+}
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+
+
+
+
+
+
 
 // ==========================================================================
 
@@ -812,14 +899,7 @@ position: relative;
   flex-wrap: wrap;
 
   @include vr($margin-top: 0);
-  @include mq("tablet") {
-    max-width: 48em;
-    width: 48em;
 
-    @include vr($margin-top: -2);
-
-    margin-left: 19%;
-  }
 
 
   /* margin-left: 3rem; */
@@ -855,7 +935,19 @@ position: relative;
 @include mq('phone-wide'){}
 @include mq('phablet'){}
 @include mq('tablet-small'){}
-@include mq('tablet'){}
+@include mq('tablet'){
+  .overlay__content ul {
+    max-width: 48em;
+    width: 48em;
+    @include vr($margin-top: -2);
+    margin-left: 19%;
+  }
+
+
+
+
+
+}
 @include mq('tablet-wide'){
 .services__splash-wrapper{
   width: 100%;
@@ -890,7 +982,7 @@ position: relative;
 
 
 .services__panel_block {
-  min-height: 50vh;
+  min-height: 35vh;
   @include vr($margin-top:3, $margin-bottom: 3);
   // overflow: hidden;
 }
@@ -905,14 +997,24 @@ position: relative;
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+  background: $black;
+}
+h3.services__panel_headline{
+  @include vr($margin-bottom: 2);
+  color: $primary;
+  text-align: left;
 }
 
+.services__panel_summary, li.services__list-item {
+  color:$offwhite;
+}
 .services__panel_content{
   @include make-col-ready();
   @include make-col(12);
   padding-left: 0px;
   padding-right: 0px;
   margin: 0;
+
 }
 
 .services__panel_copy{
@@ -944,14 +1046,15 @@ align-items: center;
   width: 90%;
   flex-direction: column;
   justify-content: center;
+  background: none;
 }
 .services__panel_content--webdev{
   max-width: 33%;
   flex: 0 0 33%;
   z-index: 3;
-  @include vr($padding: 4 2 4 2);
+  @include vr($padding: 4 3 4 3);
     background: $black;
-  color: $tungsten;
+  // color: $tungsten;
 }
 
 .services__panel-headers--webdev{}
@@ -1005,12 +1108,12 @@ height: 43em;
 
 
 .services__panel_block--planning{
-  background: #3d3d3d;
+  // background: #3d3d3d;
   display: flex;
   flex-direction: row;
   @include vr($margin: 0 2, $padding: 0);
   overflow: hidden;
-  height: 78em;
+  height: 56em;
 
 }
 
@@ -1018,13 +1121,13 @@ height: 43em;
   display: flex;
   flex-direction: column; 
   z-index: 3;
-  width: 26%;
-  max-width: 26%;
+width: 31%;
+max-width: 31%;
   height: 100%;
   margin: 0 10% 0 auto;
   justify-content: center;
   align-items: flex-end;
-    background: rgba(51, 51, 51, .7);
+    // background: rgba(51, 51, 51, .7);
 }
 
 .services__panel_content--planning{
@@ -1035,7 +1138,7 @@ height: 43em;
   color: $offwhite;
   z-index: 3;
   flex: 0 0 auto;
-    @include vr($padding: 4 2 0 2);
+     @include vr($padding: 4 3 4 3);
 }
 
 .services__panel-headers--planning{}
@@ -1083,15 +1186,16 @@ width: 104em;
   width: 100%;
   max-width: 100%;
   padding-bottom: 0;
-  min-height: 550px;
+  // min-height: 550px;
 }
 
 .services__panel_flex-container--management{
 z-index: 3;
 // background:  rgba(59,68,76,.65);
-background: rgba(255,255,255,.8);
-@include vr($padding: 4, $width: 33%, $margin-left: 6%);
-min-height: 550px;
+@include vr($margin-left: 6%);
+// min-height: 550px;
+width: 31%;
+max-width: 31%;
 flex-direction: column;
 justify-content: center;
 
@@ -1102,16 +1206,17 @@ justify-content: center;
 @include make-col(12);
 padding-left: 0px;
 padding-right: 0px;
+   @include vr($padding: 4 3 4 3);
 }
 
-h3.services__panel_headline.services__panel_headline--management{
-  @include vr($margin-bottom: 2);
-  color: $primary;
-}
+// h3.services__panel_headline.services__panel_headline--management{
+//   @include vr($margin-bottom: 2);
+//   color: $primary;
+// }
 
-.services__panel_summary--management, li.services__list-item--management {
-  color: #333;
-}
+// .services__panel_summary--management, li.services__list-item--management {
+//   color: #333;
+// }
 
 .services__panel_copy--management{
 @include make-col-ready();
@@ -1136,66 +1241,7 @@ padding-right: 0px;
 
 
 
-// ==========================================================================
-// why-me
-// ==========================================================================
 
-#objectives {
-  @include mq("tablet-wide") {
-    height: 80vh;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
-
-    h1 {
-      flex: 1 0 auto;
-    }
-
-    .page__header {
-      flex: 0 0 auto;
-    }
-
-    .diagram {
-      flex: 0 0 auto;
-      margin: 4rem auto;
-    }
-
-    .my-value__conclusion {
-      flex: 1 0 auto;
-    }
-
-    a {
-      flex: 0 0 auto;
-      align-self: center;
-    }
-  }
-}
-
-#grow {
-  @include mq("tablet-wide") {
-    height: 80vh;
-
-    .diagram, .my-value__conclusion {
-      height: 50vh;
-    }
-  }
-}
-
-#modernize {
-  @include mq("tablet-wide") {
-    height: 80vh;
-  }
-}
-
-#optimize {
-  @include mq("tablet-wide") {
-    height: 80vh;
-  }
-}
-
-#cta__value {
-  height: 100vh;
-}
 
 ///////////////////////////////////////////////////////////////////
 // proof / evidence
@@ -1205,59 +1251,72 @@ padding-right: 0px;
   align-items: center;
 }
 
-.proof__content_carousel, .proof__content_end2end-diagram, .proof__content_service{
+.proof__panel-content_carousel, .proof__panel-content_end2end-diagram, .proof__panel-content_service{
   @include vr($padding: 4);
  }
 
 .proof__item_container {
  @include make-col-ready;
   @include make-col(12);
-
-  @include mq("desktop") {
-    @include make-col(4);
-
-    @include vr($padding: 3)
-  }
 }
 
-.proof__marketer_block{
+.proof__marketer_panel{
+    position: relative;
     @include vr($padding: 3);
     @include cols();
     text-align: center;
 }
 
-.proof__content_text {
+.proof__panel-content_text {
   // @include push-auto;
 }
 
-// .proof__content_text_idooutcomes{
-  .proof__content_text{
+// .proof__panel-content_text_idooutcomes{
+  .proof__panel-content_text{
 @include push-auto;
-@include mq('tablet-wide', $type:max){
-  max-width:26em;
-}
+
+
 }
 
-.proof__end2end_block {
+
+.proof__end2end_panel {
   @include vr($padding: 4 .25);
  @include cols();
 }
+
+
+
+
+
+
+
+
 
 ///////////////////////////////////////////////////////////////////
 // i do outcomes panel
 //////////////////////////////////////////////////////////////////
 
-.proof__content_outcomes {
+.proof__panel-content_outcomes {
   @include vr($padding: 0 3 0 3);
   position: relative;
-  
-  @include mq("tablet-wide", $type: max) {
-    min-height: 800px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h5 {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .br {
+    display: block;
   }
 }
 
 
-.proof__content_item_img{
+
+.proof__panel-content_img{
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -1268,6 +1327,8 @@ padding-right: 0px;
   flex-direction: column;
   justify-content: flex-end;
 }
+
+
 ///////////////////////////////////////////////////////////////////
 // end to end equation panel
 //////////////////////////////////////////////////////////////////
@@ -1285,9 +1346,6 @@ padding-right: 0px;
   align-items: center;
 }
 
-.proof__content_text {
-  @include vr( $margin-top: 2);
-}
 
 #barchart {
   margin-right: -1em;
@@ -1315,7 +1373,7 @@ padding-right: 0px;
 // I've been around / stats slider panel
 //////////////////////////////////////////////////////////////////
 
-.proof__stats_block{
+.proof__stats_panel{
 @include cols();
 }
 
@@ -1327,17 +1385,6 @@ padding-right: 0px;
   width: 30%;
   margin: 0 auto;
   display: block;
-
-  @include mq("phone") {}
-
-  @include mq("tablet") {
-    /* height: 25em; */
-  }
-
-
-  @include mq("desktop") {
-    /*     height: 8em; */
-  }
 }
 
 .proof-quals {
@@ -1348,19 +1395,16 @@ padding-right: 0px;
   @include vr($margin: 2 0 2 0);
   @include make-col-ready;
   @include make-col(12);
-  @include mq("desktop") {
-    @include make-col(4);
-  }
 }
 
-.proof__content_carousel {
+.proof__panel-content_carousel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
    @include vr($margin: 0);
 }
 
-.proof__content_carousel.carousel {
+.proof__panel-content_carousel.carousel {
   overflow: hidden;
   display: block;
 }
@@ -1435,8 +1479,48 @@ padding-right: 0px;
   @include vr($margin-top: 2);
 }
 
-@include mq("tablet-wide") {
-  .content-container__qualifications {
+
+
+
+
+
+
+
+// ==========================================================================
+// proof (all panels -) responsive styles (all panels/articles)
+// ==================================================
+
+@include mq('tablet-wide', $type:max){
+    .proof__panel-content_text{
+   flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+  @include vr( $margin-top: 2);
+}
+}
+
+
+@include mq('phone'){}
+@include mq('phone-wide'){}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+@include mq('tablet'){}
+@include mq('tablet-wide'){
+.proof__marketer_panel{
+ 
+}
+.proof__panel-content_outcomes {
+    min-height: unset;
+    // flex-direction: row;
+  }
+
+//   .proof__flexitem_a, .proof__flexitem_b{
+// @include make-col-ready();
+// @include make-col(6);
+// padding-left: 0px;
+// padding-right: 0px;
+//   }
+   .content-container__qualifications {
     @include split-cols;
   }
 
@@ -1455,6 +1539,28 @@ padding-right: 0px;
     display: block;
   }
 }
+@include mq('desktop'){
+      .proof-quals {
+      @include make-col(4);
+  }
+  .proof__item_container {
+    @include make-col(4);
+
+    @include vr($padding: 3);
+  }
+}
+
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+
+
+
+
+
+
+
+
 
 
 
@@ -1562,23 +1668,6 @@ svg.chev--dwn {
   }
 }
 
-// ==========================================================================
-// why me
-// ==========================================================================
-.why-me__container__atypical {
-  display: flex;
-  flex-direction: column;
-}
-
-.why-me__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.why-me__content__copy {
-  position: relative;
-}
 
 // ==========================================================================
 // Background page
@@ -1595,9 +1684,15 @@ svg.chev--dwn {
   }
 }
 
+.content1__background{
+  @include vr($margin:4 0);
+}
+
+
 // ==========================================================================
 // category history
 // ==========================================================================
+
 .categories__content_caption {
   @include make-row;
 
@@ -1614,8 +1709,13 @@ svg.chev--dwn {
   @include vr($padding: 3);
 }
 
+.categories__content_image{
+  width: 100%;
+  height: auto;
+}
+
 @include mq('tablet', $type:max){
-  .why-me__categories_content {
+  .background__categories_content {
 @include vr($margin-bottom: 1);
 }
 }
@@ -1629,11 +1729,11 @@ svg.chev--dwn {
 
 
 
-.why-me__categories_content {
+.background__categories_content {
   margin-bottom: 2rem;
 }
 
-.why-me__categories_content{
+.background__categories_content{
   @include make-col-ready();
   width: 48%;
   max-width: 48%;
@@ -1646,7 +1746,7 @@ svg.chev--dwn {
 
 @include mq('tablet-wide'){
 
-.why-me__categories_content{
+.background__categories_content{
   width: 31%;
   flex: 0 0 auto;
 @include vr($margin: 1%);
@@ -1680,7 +1780,7 @@ img.categories__content_image {
 //
 // background-brands
 //
- .why-me__container__categories{
+ .background__container_categories{
 margin-bottom: 20em;
  }
 
@@ -1698,13 +1798,18 @@ margin-bottom: 20em;
 .content1__background--brands{
   @include make-col(12);
 }
-.why-me__brands--logo{
+
+.content2__background--brands{
+  width: 90%;
+}
+
+.background__brands--logo{
 @include make-col(3);
 }
 }
 
 
-.why-me__brands_content{
+.background__brands_content{
     @include make-row();
     width: 100%;
     max-width: 100%;
@@ -1712,7 +1817,7 @@ margin-bottom: 20em;
     flex-wrap: wrap;
 }
 
-.why-me__brands--logo{
+.background__brands--logo{
     @include make-col-ready();
     @include mq('phone-wide',$type:max){
  @include make-col(6); 
@@ -1788,10 +1893,13 @@ left: 0;
 
 @include mq('tablet-wide'){
 .personal{
-    height: 90vh;
+    height: 90em;
     display: flex;
     flex-direction: column;
     overflow:hidden;
+  }
+  .about-me__container_personal{
+    height: 90em;
   }
 
 
@@ -1806,3 +1914,508 @@ left: 0;
 .link {
   flex: 0 0 0;
 }
+
+
+// ==========================================================================
+// justification
+// ==========================================================================
+
+.justification__container { 
+
+ @include mq('tablet') {
+        max-width: 50em;
+    }
+
+    @include mq('tablet-wide') {
+        max-width: 99em;
+        width: 100%;
+        height: 80vh;  
+    }
+  }
+
+
+.justification__conclusion--background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+//
+// justification-panel__layout_splash
+//
+
+
+.container.justification__container{
+  max-width: 90%;
+}
+
+
+//
+// justification-panel__layout_objectives
+//
+ @include mq("tablet-wide") {
+  
+ .container.justification__container_splash{
+  width: 33%;
+  max-width: 33%;
+  margin-right: auto;
+  margin-left: 145px;
+}
+
+.container.justification__container{
+  width: 90em;
+  max-width: 90em;
+}
+  .justification__container_objectives{
+    // height: 80vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .objectives__page-title {
+      flex: 0 0 auto;
+    }
+
+    .justification__page-header--objectives{
+      flex: 0 0 auto;
+    }
+
+    .diagram__objectives {
+      flex: 0 0 auto;
+      margin: 4rem auto;
+    }
+
+    .justification__conclusion {
+      flex: 0 0 auto;
+    }
+
+    a.moreless-button {
+      flex: 0 0 auto;
+      align-self: center;
+    }
+  }
+
+
+
+
+//
+// justification-panel__layout_modernize
+//
+
+
+
+
+
+//
+// justification-panel__layout_value
+//
+
+
+
+//
+// justification-panel__layout_optimize
+//
+
+    .optimize-diagram__container {
+        @include make-row();
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @include mq('desktop') {
+      
+
+        }
+
+//
+// justification-panel__layout_atypical
+//
+.justification__article-container_atypical {
+  display: flex;
+  flex-direction: column;
+}
+
+.atypical__content-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.justification__content__copy {
+  position: relative;
+}
+
+//
+// justification-panel__layout_cta
+//
+
+.justification__cta__container{
+  height: 100vh;
+}
+
+// ==========================================================================
+// justification-panels__page-header-layout_global 
+// ==========================================================================
+
+.page__header{
+  @include make-col-ready();
+  @include make-col(12);
+  margin-left: 0px;
+  margin-right: 0px;
+    padding-left: 0px;
+  padding-right: 0px;
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+}
+
+.page__header_number, .page__header_headline{
+  margin-bottom: 0
+}
+
+.justification__page-header{
+  @include make-col-ready();
+  @include make-col(12);
+  padding-left: 0px;
+  padding-right: 0px;
+      h2, h3{
+      margin-bottom: 0;
+    }
+}
+
+// ==========================================================================
+// justification-panels__diagrams-layout_aggregate
+// ==========================================================================
+
+//
+// objectives diagram (vert & horz aggregate)
+//
+
+
+.diagram__objectives {
+    @include vr($margin: 2 0 4 0);
+     @include make-row;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+    width: 80%;
+}
+
+.content__container_icon .icon {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.delta--down {
+    width: 2rem;
+    height: 2rem;
+}
+
+.delta--right {
+    width: 1rem;
+    height: 2rem;
+}
+
+.objectives-diagram__vertical--delta {
+    display: flex;
+  }
+
+
+.objectives-diagram__ordered-list {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    list-style-position: inside;
+    padding-inline-start: 0px;
+    -webkit-padding-start: 0px;
+    align-self: center;
+    
+    @media (max-width: 25em) {
+      margin-left: 2em;
+    }
+  }
+
+ .objectives-diagram__list-item{
+     @include make-row;
+     width: 100%;
+     max-width: 100%;
+     @include vr($margin: 1 0 1 0);
+     padding-right: 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+  }
+
+ .objectives-list-item__icon-container, .objectives-offset {
+     @include make-col-ready;
+     width: 20%;
+     max-width: 20%;
+     display: block;
+ }
+
+.diagram-content__superior-value_svg{
+    width: 90%;
+    display: block;
+  }
+
+
+
+//
+// end-to-end diagram (vert & horz aggregate)
+//
+
+.diagram__end-to-end {
+    @include make-row();
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.diagram__end-to-end--vertical {
+    @include make-row;
+    @include make-col-ready;
+    @include make-col(12);
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.progression__end-to-end--vertical {
+    @include make-col-ready();
+    @include make-col(6);
+}
+
+.end-to-end--vert {
+    width: 100%;
+}
+
+
+
+.diagram-content__caption--sticky {
+    @include make-col-ready();
+    @include make-col(6);
+    padding-left: 0px;
+    padding-right: 0px;
+    position: sticky;
+    top: 40%;
+    left: 0;
+    height: 10rem;
+    align-self: flex-start;
+    margin-top: 3em;
+}
+
+
+
+
+
+// ==========================================================================
+// justification-panels__layout-queries_aggregate
+// ==========================================================================
+
+
+@include mq('phone'){
+  .objectives-diagram__list-item{
+    margin-left: 4em;
+  }
+}
+@include mq('phone-wide'){}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+@include mq('tablet'){
+    .objectives-diagram__list-item{
+    margin-left: 2em;
+  }
+}
+@include mq('tablet-wide'){
+  
+  //
+// justification panels (see below for diagrams)
+//
+.justification__flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+  .justification__container_objectives, .justification__container_optimize{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+.justification__container_modernize, .justification__container_grow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.page__header-text_container--grow,  .diagram__superior-value, .diagram__modern-marketing, .page__header-text_container--modernize{
+@include make-col-ready();
+@include make-col(6);
+padding-left: 0px;
+padding-right: 0px;
+}
+
+
+.page__header-text_container--grow, .page__header-text_container--modernize{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.page__header-text_container{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.justification__page-header_text{
+   @include vr($margin-top: 0, $margin-bottom: 0);
+}
+
+.justification__page-header_text--square{
+width: 80%;
+text-align: justify;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.read-more__container{
+  @include make-col-ready();
+  @include make-col(12);
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.moreless-button{
+  @include make-col-ready();
+  @include make-col(12);
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+.justification__conclusion {
+  @include make-col-ready;
+  @include make-col(12);
+
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: flex-start;
+}
+
+//
+// justification diagrams tablet-wide
+//
+
+.diagram__objectives {
+ display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include vr($margin-top: 0, $margin-bottom: 0);
+}
+
+  .objectives-diagram__list-item{
+    margin-left: -1em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 24%;
+    max-width: 24%;
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    @include vr($margin-top: 0, $margin-bottom: 0);
+  }
+
+.objectives-list-item__icon-container{
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    flex: 0 0 auto;
+  }
+
+.objectives-offset {
+    display: none;
+  }
+
+.diagram__superior-value{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+svg{
+  width: 40em;
+}
+}
+
+.diagram__modern-marketing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50em;
+}
+.diagram__modern-marketing .diagram-content{
+  display: block;
+  margin-left: -2em;
+}
+
+
+.diagram__modern-marketing{
+  svg{
+    width: 50em;
+  }
+}
+
+
+.diagram-content__superior-value_svg{
+    width: 90%;
+    margin-left: auto;
+    margin-right: 0;
+}
+}
+@include mq('desktop'){
+
+
+  .end-to-end--horz {
+      width: 100%;
+
+  .optimize-diagram__container {
+      @include make-row();
+      margin-left: 0px;
+      margin-right: 0px;
+      flex-direction: row;
+      width: 100%;
+      max-width: 100%;
+  }
+}
+}
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+

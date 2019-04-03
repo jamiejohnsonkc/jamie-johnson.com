@@ -1,40 +1,41 @@
-%title-lg        		{@include vr($font-size:60px, $margin: 2 0);}
-%headline-lg     		{@include vr($font-size:48px, $margin: 2 0);}
-%subhead-lg      		{@include vr($font-size:36px, $margin: 2 0);}
-%sublist-lg      		{@include vr($font-size:36px, $margin: 2 0);}
-%display-text-lg 		{@include vr($font-size:28px, $margin: 2 0);}
-%list-head-lg    		{@include vr($font-size:20px);}
-%list-item-lg    		{@include vr($font-size:16px, $margin-bottom: 1, $line-height: 1.5);}
-%body-text-lg    		{@include vr($font-size:24px, $margin: 1.5 0);}
-%para-head-lg 	 		{@include vr($font-size:18px, $margin-bottom: .5);}
-%para-lg         		{@include vr($font-size:18px, $margin-bottom: 1);}
-%caption-lg      		{@include vr($font-size:14px, $line-height:1.25);}
-%legal-lg        		{@include vr($font-size:10px);}
- 		
-%title           		{@include vr($font-size:48px, $margin: 2 0);}
-%headline        		{@include vr($font-size:38.5px, $margin: 2 0);}
-%subhead         		{@include vr($font-size:28.85px, $margin: 2 0);}
- 		
-%sublist         		{@include vr($font-size:28.85px, $margin: 2 0);}
- 		
-%display-text    		{@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}
- 		
-%list-head       		{@include vr($font-size:13px);}
-%list-item       		{@include vr($font-size:12px, $margin-bottom: 0, $line-height: 1.5);}  
-%body-text       		{@include vr($font-size:14.5px, $margin: 1.5 0);}
-%para-head       		{@include vr($font-size:14.5px, $margin-bottom: .5);}  
-%para            		{@include vr($font-size:14.5px, $margin-bottom: 1);}  
-%caption         		{@include vr($font-size:13px, $line-height:1.25);}   
-%legal           		{@include vr($font-size:8px);}
- 		
- 		
-%sublist-sm      		{@include vr($font-size:10px, $margin: 1 0);}
-%subhead-sm      		{@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
-%display-text-sm 		{@include vr($font-size:16px, $line-height: 2, $margin: 2 0);}
-%caption-sm        		{@include vr($font-size:10px, $line-height:1.25);}  
+%title-lg, .title-lg        				    {@include vr($font-size:60px, $margin: 2 0);}
+%headline-lg, .headline-lg     				    {@include vr($font-size:48px, $margin: 2 0);}
+%subhead-lg, .subhead-lg      				    {@include vr($font-size:36px, $margin: 2 0);}
+%sublist-lg, .sublist-lg      				    {@include vr($font-size:36px, $margin: 2 0);}
+%tldr, .tldr									{@include vr($font-size:32px, $margin: 1 0);}
+%display-text-lg, .display-text-lg				{@include vr($font-size:28px, $margin: 2 0);}
 
+%body__text_lg, .body__text_lg    				{@include vr($font-size:24px, $margin: 1.5 0);}
+%list-head-lg, .list-head-lg    				{@include vr($font-size:20px);}
+%list-item-lg, .list-item-lg    				{@include vr($font-size:16px, $margin-bottom: 1, $line-height: 1.5);}
 
-.page__title            {@include vr( $font-size: 1,  );}
+%para-head-lg, .para-head-lg 	 				{@include vr($font-size:18px, $margin-bottom: .5);}
+%para-lg, .para-lg         				        {@include vr($font-size:18px, $margin-bottom: 1);}
+%caption-lg, .caption-lg      				    {@include vr($font-size:14px, $line-height:1.25);}
+%legal-lg, .legal-lg        				    {@include vr($font-size:10px);}
+		
+%title, .title           				        {@include vr($font-size:48px, $margin: 2 0);}
+%headline, .headline        				    {@include vr($font-size:38.5px, $margin: 2 0);}
+%subhead, .subhead         				        {@include vr($font-size:28.85px, $margin: 2 0);} 				
+%sublist, .sublist         				        {@include vr($font-size:28.85px, $margin: 2 0);}			
+%display-text, .display-text    				{@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}				
+%list-head, .list-head       				    {@include vr($font-size:13px);}
+%list-item, .list-item       				    {@include vr($font-size:12px, $margin-bottom: 0, $line-height: 1.5);}  
+%body-text, .body-text       				    {@include vr($font-size:14.5px, $margin: 1.5 0);}
+%para-head, .para-head       				    {@include vr($font-size:14.5px, $margin-bottom: .5);}  
+%diagram-label, .diagram-label			        {@include vr($font-size:10px);}
+%para, .para            				        {@include vr($font-size:14.5px, $margin-bottom: 1);}  
+%caption, .caption         				        {@include vr($font-size:13px, $line-height:1.25);}   
+%legal, .legal           				        {@include vr($font-size:8px);}
+
+%sublist-sm, .sublist-sm      				    {@include vr($font-size:14.5px, $line-height: 2);}
+%subhead-sm, .subhead-sm      				    {@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
+%display-text-sm, .display-text-sm 				{@include vr($font-size:16px, $line-height: 2, $margin: 2 0);}
+%caption-sm, .caption-sm        				{@include vr($font-size:10px, $line-height:1.25);}  
+		
+		
+.page__title            		                {@include vr( $font-size: 1,  );}
 a.link__advance--text   {}
 .navbar-brand, .navbar, .navbar li, .navbar a   { @include vr( $font-size: 1, $margin-top: 0  );}
+
 

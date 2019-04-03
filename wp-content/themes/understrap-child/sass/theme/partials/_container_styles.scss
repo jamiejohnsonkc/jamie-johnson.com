@@ -2,7 +2,9 @@
 	@include push-auto();
 }
 
-
+// .proof__panel-content_text_idooutcomes{
+// 	max-width: 32em;
+// }
 
 @include mq('phablet', $type:max){
 	.navbar>.container, .navbar>.container-fluid { width: 90%; position: relative; margin: 0 auto; }
@@ -16,7 +18,7 @@
 	.container { padding-left: 0; padding-right: 0; }
 }
 @include mq('phablet') {
-	.strengths__panel_wrapper{@include vr($padding: 5, $width: 100%);
+	.strengths__panel_wrapper, .proof__panel_wrapper{@include vr($padding: 5, $width: 100%);
  }
 }
 @include mq('tablet-small') { }
@@ -26,7 +28,7 @@
 }
 
 @include mq('tablet-wide') { 
-	.strengths__panel_wrapper { max-width: 99em; width: 99em; } 
+	.strengths__panel_wrapper, .proof__panel_wrapper { max-width: 99em; width: 99em; } 
 	.navbar>.container, .navbar>.container-fluid { width: 90%; max-width: 90%; }
 	.section__head_homepage--summary{width: 80%; margin: 0 auto;}
 

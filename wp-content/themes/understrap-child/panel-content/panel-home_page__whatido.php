@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>After 20 years of strategic leadership, marketing management and integrated communications, my primary strength is making sure your marketing does more than just look nice.</p>
 	</div>
 </div>
-		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 		</div>

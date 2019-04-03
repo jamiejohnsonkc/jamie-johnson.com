@@ -6,23 +6,23 @@
 
 
 
-.summary {
-  h1 {
-    @extend %headline-lg;
-  }
+// .summary {
+//   h1 {
+//     @extend %headline-lg;
+//   }
 
-  h2 {
-    @extend %subhead-lg;
-  }
+//   h2 {
+//     @extend %subhead-lg;
+//   }
 
-  h3 {
-    @extend %display-text-lg;
-  }
+//   h3 {
+//     @extend %display-text-lg;
+//   }
 
-  p {
-    @extend %body-text-lg;
-  }
-}
+//   p {
+//     @extend %body-text-lg;
+//   }
+// }
 
 
 // =========================================================================
@@ -40,34 +40,38 @@
     font-weight: 400;
   }
 
-  p {
-    @extend %body-text-lg;
+  // p {
+  //   @extend %body-text-lg;
 
-    font-style: italic;
+  //   font-style: italic;
 
-    @include vr($line-height: 3);
-  }
-
-  .link {
+  //   @include vr($line-height: 3);
+  // }
+ .link {
     position: absolute;
     display: block;
-
     @include push-auto;
-
     bottom: 6em;
   }
 
   %subhead {
     @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
-
     font-weight: 300;
   }
 }
 
+p.splash__subhead--fancy{
+  @extend %body-text;
+  font-style: italic;
+  font-weight: 200;
+}
 
 
-.splash__label, .splash__label--emph {
+.splash__label{
   @extend %sublist-sm;
+  @include mq('desktop'){
+
+  }
 }
 
 .splash__label_divider {
@@ -81,9 +85,14 @@
 }
 
 
-#splash__label_label--emph {
+.splash__label--emph {
   color: $primary;
+  font-weight: 400;
 }
+
+// .splash__label--head{
+//   font-weight: 400;
+// }
 
 /* ////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////     .core / homepage articles  //////////////////// */
@@ -138,68 +147,89 @@
 // homepage summary
 //
 
-#article__container--home-page-summary-intro {
+.container.home-page__container_summary{
   width: 100%;
   max-width: 100%;
-  padding: 0;
+  height: unset;
+ @include vr($padding: 4);
 }
 
-.content__item_wrapper {
-  width: 100%;
-  padding: 0;
+.summary__page_tldr, .summary__page_headline, .summary__page_subhead, .intro__icon_wrapper, .intro__icon_caption, .summary__page_display-text{
+color: $white;
+text-align: center;
 }
 
-.content__item_intro--background {
-  background: $black;
-  color: $white;
+.summary__page_headline{
+  font-weight: 400;
 }
 
-.section__head_headers {
-  text-align: center;
-
-  h2 {
-    @extend %headline;
-  }
-
-  h3 {
-    @extend %subhead-sm;
-  }
-
-  p {
-    @extend %display-text-sm;
-  }
+.summary__page_subhead{
+  font-weight: 200;
 }
+
+
+// .content__item_wrapper {
+//   width: 100%;
+//   padding: 0;
+// }
+
+// .content__item_intro--background {
+//   background: $black;
+//   color: $white;
+// }
+
+// .section__head_headers {
+//   text-align: center;
+
+//   h2 {
+//     @extend %headline;
+//   }
+
+//   h3 {
+//     @extend %subhead-sm;
+//   }
+
+//   p {
+//     @extend %display-text-sm;
+//   }
+// }
 
 .intro__icon_caption {
   @extend %caption;
+  text-align:center;
 }
 
 .content__item_intro--content {
   background: $gray-300;
 }
 
-.content__item_internal-wrapper {
-  background: $white;
-  border-radius: .25em;
-  border: thin solid $gray-400;
-}
+// .content__item_internal-wrapper {
+//   background: $white;
+//   border-radius: .25em;
+//   border: thin solid $gray-400;
+// }
 
-.content__item_content--para {
-  h2 {
-    @extend %subhead;
-  }
+// .content__item_content--para {
+//   h2 {
+//     @extend %subhead;
+//   }
 
-  > h4 {
-    @include vr($font-size: 2, $margin-bottom: 1);
+//   > h4 {
+//     @include vr($font-size: 2, $margin-bottom: 1);
 
-    text-transform: lowercase;
-    font-weight: 400;
-  }
-}
+//     text-transform: lowercase;
+//     font-weight: 400;
+//   }
+// }
 
 //
 // strengths
 //
+
+.strengths__page_headline{
+  text-align: center;
+  align-self: center;
+}
 
 .core > .strengths__panel_wrapper {
   h3 {
@@ -215,7 +245,7 @@ ul.strengths__list_container {
   list-style: none;
 }
 
-.strengths__list_container li{
+.strengths__list-item{
   @extend %list-item;
 
   // @include vr($font-size: 1, $line-height: 1.5,);
@@ -265,6 +295,7 @@ ul.strengths__list_container {
 }
 
 
+
 //
 // proof boxes
 //
@@ -298,25 +329,28 @@ h6{
   }
 }
 
-h2.proof-intro {
-  font-family: $font-family-serif;
-
-  @include vr($font-size: 4, $margin-bottom: 4);
-
-  color: $primary;
-}
-
-h2.proof-intro, .proof__item_container h5 {
+.proof__panel_headline{
   text-align: center;
 }
 
-.proof__content_text p {
+.proof__panel_intro {
+  font-family: $font-family-serif;
+  @include vr($font-size: 4, $margin-bottom: 4);
+  color: $primary;
+  font-weight: bold;
+}
+
+.proof__panel_intro, .proof__item_container h5 {
+  text-align: center;
+}
+
+.proof__panel-content_text p {
   @extend %display-text-sm;
 text-align: justify;
   letter-spacing: .025em;
 }
 
-.proof__content_text em {
+.proof__panel-content_text em {
   @include vr($font-size: 1);
    color: $primary;
     font-weight: 400;
@@ -351,8 +385,16 @@ text-align: justify;
 ///////////////////////////////////////////////////////////////////
 // i do outcomes panel
 //////////////////////////////////////////////////////////////////
-.proof__content_outcomes {
-  border: 0.25em solid $gray-300;
+.proof__panel_wrapper--border{
+  @include mq('tablet-wide'){
+        border: 0.25em solid $gray-300;}
+  }
+
+
+.proof__marketer_panel {
+  @include mq('tablet-wide', $type:max){
+
+    border: 0.25em solid $gray-300;}
 
   h5 {
 
@@ -364,7 +406,7 @@ text-align: justify;
   }
 }
 
-.proof__content_text_idooutcomes{
+.proof__panel-content_text_idooutcomes{
   text-align: left;
 }
 ///////////////////////////////////////////////////////////////////
@@ -391,7 +433,7 @@ text-align: justify;
   }
 }
 
-.proof__end2end-diagram_container>.proof__content_text>%display-text-sm{
+.proof__end2end-diagram_container>.proof__panel-content_text>%display-text-sm{
   @include vr($margin-top: 4);
 }
 
@@ -421,7 +463,7 @@ text-align: justify;
 // I've been around / stats slider panel
 //////////////////////////////////////////////////////////////////
 
-.proof__content_carousel h5{
+.proof__panel-content_carousel h5{
   text-align: center;
 }
 
@@ -437,7 +479,7 @@ text-align: justify;
   letter-spacing: .03em;
 }
 
-.proof__stats_block > div.proof__content_text > p {
+.proof__stats_block > div.proof__panel-content_text > p {
   @include vr($margin-top: 0);
 }
 
@@ -562,6 +604,14 @@ h2{
   %display-text-sm {
     @include vr($margin: 0 0 2 0);
   }
+}
+
+.services__panel_block--planning{
+  background: #daeaf7;
+}
+
+.services__panel_flex-container--planning{
+background: rgba(0, 0, 0, .8);
 }
 
 .services__list_list-item {
@@ -776,46 +826,10 @@ h2{
 }
 
 // ==========================================================================
-// atypical
-// ==========================================================================
-
-.why-me__atypical {
-  text-align: left;
-}
-
-.why-me__content__copy {
-  & h4 {
-    @extend %subhead;
-
-    @include vr($font-size: 3);
-  }
-
-  & h5 {
-    @extend %display-text-lg;
-  }
-
-  & p {
-    @extend %display-text;
-
-    font-weight: 200;
-  }
-
-  @include media-breakpoint-up(md) {
-    h4 {
-      font-weight: 500;
-    }
-
-    h5 {
-      font-weight: 300;
-    }
-  }
-}
-
-// ==========================================================================
 // background articles (categories, brands, atypical)
 // ==========================================================================
 
-#why-me-bg {
+#background-bg {
   background: rgba(255, 255, 255, 0.8);
 }
 
@@ -855,11 +869,10 @@ h2{
   opacity: 0;
 }
 
-.why-me__categories_content {
+.background__categories_content {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
-  border: thin $primary solid;
 
   &,
   &:hover .categories__content_caption {
@@ -870,14 +883,14 @@ h2{
   filter: none;
 }
 
-// .why-me__categories_content:nth-child(odd){
+// .background__categories_content:nth-child(odd){
 // img{
 //     filter: brightness(80%);
 
 // }
 // }
 
-.why-me__categories_content:hover > img {
+.background__categories_content:hover > img {
   filter: blur(1px);
   filter: contrast(200%);
   filter: brightness(100%);
@@ -1001,3 +1014,258 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     @extend %body-text-lg;
   }
 }
+
+
+// ==========================================================================
+// justification-panels__styles_global
+// ==========================================================================
+
+.business-value { 
+  h1 {
+        @extend .page__title;
+    }
+  }
+
+
+
+  .justification__page-header_text{
+  @extend .display-text-sm;
+}
+
+
+
+
+
+.justification__conclusion--background {
+    background: rgba(210, 219, 226,.5);
+    border-radius: .5em;
+}
+
+
+ .justification__conclusion {
+        @extend .justification__conclusion--background;
+        @include vr($padding: 1);
+ }
+
+.justification__conclusion > p {
+    @extend %display-text-sm;
+    font-weight: 300;
+}
+
+
+//
+// justification-panels__style_atypical
+//
+.justification__atypical {
+  text-align: left;
+}
+
+.justification__content__copy {
+  & h4 {
+    @extend %subhead;
+
+    @include vr($font-size: 3);
+  }
+
+  & h5 {
+    @extend %display-text-lg;
+  }
+
+  & p {
+    @extend %display-text;
+
+    font-weight: 200;
+  }
+
+  @include media-breakpoint-up(md) {
+    h4 {
+      font-weight: 500;
+    }
+
+    h5 {
+      font-weight: 300;
+    }
+  }
+}
+
+
+
+
+
+// ==========================================================================
+// page-header 
+// ==========================================================================
+.page__header_number-title{
+ > h2 {
+        @include vr($font-size: 5, $line-height:4);
+        font-weight: 600;
+    }
+
+    > h3 {
+        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
+        font-weight: 300;
+    }
+
+    h4 {
+        @extend %display-text-sm;
+    }
+    %display-text-sm{
+        @include vr($margin: 1 0);
+    }
+
+    @include vr($margin-left: 0);
+}
+
+
+// ==========================================================================
+// justification-panels__diagrams-layout_global 
+// ==========================================================================
+.objectives__diagram_li{
+  @extend .diagram-label;
+}
+
+.end-to-end--horz {
+    width: 100%;
+
+    .st0 {
+        fill: $primary;
+        stroke: #ffffff;
+        stroke-width: 1px;
+    }
+
+    .st1 {
+        font-family: roboto;
+        fill: $primary;
+    }
+
+    .st2 {
+        fill: #111111;
+    }
+
+    .st3 {
+        fill: #ffffff;
+        font-family: roboto;
+        stroke: #fff;
+        stroke-width: .75px;
+    }
+
+}
+
+.diagram__end-to-end--vertical {
+    .st3,
+    .st4,
+    .st5 {
+        font-family: roboto;
+    }
+}
+
+.diagram-content__caption--sticky {
+    letter-spacing: -.025em;
+    font-weight: 500;
+    align-text: justify;
+      @include vr($font-size: 2, $padding-right:3);
+}
+
+.diagram__content_container .icon {
+    .cls-1,
+    .cls-2,
+    .cls-3,
+    .cls-4,
+    .cls-5 {
+        fill: $primary;
+    }
+}
+
+//superior value diagram?
+text.st4.st6{
+    fill:#111;
+    stroke: none;
+}
+
+text.st3.st4.st5{
+    stroke: none;
+    fill: #111;
+}
+
+//
+
+//superior value diagram
+#appbar\2e smiley\2e happy-2, #Path_7509, #Path_7510, #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(4), #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(4){
+    fill: $primary;
+}
+
+
+.diagram__superior-value {
+    .st1, .st2, .st6, .st7 {
+        font-weight: normal;
+        // fill: $primary;
+        stroke: none;
+        font-size: 16px;
+    }
+
+    .st4 {
+        // font-size: $ms-2_5;
+        font-weight: 300;
+        letter-spacing: .05rem;
+        stroke: none;
+}
+    .st7 {
+        // font-size: $ms-2;
+   
+    }
+
+    .st1, .st2, .st4, .st6, .st7 {
+          fill: #111;
+    }
+
+    #Layer_1 {
+       .st8, .st12, .st13 {
+            // stroke: $gray-700;
+            stroke: $primary;
+        }
+    }
+
+    #Layer_2 .st0 {
+        // fill: $tungsten;
+        fill: $primary;
+    }
+    polygon {
+        fill: $gray-500;
+    }
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(2) > g > line,
+    #Layer_1 > g:nth-child(1) > g:nth-child(1) > g:nth-child(3) > g > line{
+        stroke: $gray-500;
+    }
+}
+
+
+// .diagram__modern-marketing{
+//    #headers text{
+//     font-family: roboto;
+//    } 
+// } 
+
+
+// ==========================================================================
+// justification-panels__style-queries_aggregate 
+// ==========================================================================
+
+@include mq('phone'){}
+@include mq('phone-wide'){}
+@include mq('phablet'){}
+@include mq('tablet-small'){}
+@include mq('tablet'){}
+@include mq('tablet-wide'){
+  .page__header-text_container--grow, .page__header-text_container--modernize{
+    background: $pattens;
+  }
+
+}
+@include mq('desktop'){}
+@include mq('desktop-wide'){}
+@include mq('desktop-xl'){}
+@include mq('desktop-xxl'){}
+
+
+

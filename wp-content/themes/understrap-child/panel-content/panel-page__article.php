@@ -17,7 +17,7 @@ exit; // Exit if accessed directly.
 		<div class="panel__wrapper">
 			<div class="panel__head">
 				<div class="panel__head_img">
-					<div class="cicrle-digit__icon  circle-digit__01"><img src="//localhost:3000/wp-content/uploads/2019/03/circledigit-_1.svg" class="style-svg" alt=""></div>
+					<div class="cicrle-digit__icon  circle-digit__01"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_1.svg" class="style-svg" alt=""></div>
 				</div>
 				<div class="panel__head_headers">
 					<h3>Strategic Marketing Management*</h3>
@@ -39,14 +39,14 @@ exit; // Exit if accessed directly.
 				</div>
 				<div class="content__item_col strengths__img">
 					<div class="strengths__icon">
-						<img src="//localhost:3000/wp-content/uploads/2018/12/skills_02.svg" class="style-svg" alt="">
+						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" class="style-svg" alt="">
 					</div>
 				</div>
 			</div>
 			<div class="panel__footnote">*That's a big fancy handle for the business end of marketing (*i.e. making sure it does more than look pretty)</div>
 		</div>
 	</div>
-	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
 	</a>
 </article>

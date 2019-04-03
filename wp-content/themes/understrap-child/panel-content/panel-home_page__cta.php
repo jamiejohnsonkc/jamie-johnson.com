@@ -20,6 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		
 
-	<a class="link link__advance--text" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>		
+	<a class="link link__advance--text" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>		
 		</div><!-- Container end -->
 		</article><!-- cover end -->

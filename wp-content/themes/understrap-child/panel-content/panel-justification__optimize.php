@@ -35,7 +35,7 @@ exit; // Exit if accessed directly.
 
 			<div class="diagram-content diagram__end-to-end--vertical">		
 				<div class="progression__end-to-end--vertical"> 
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="" class="style-svg end-to-end--vert"/>
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="..." class="style-svg end-to-end--vert"/>
 				</div>
 				<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div></div>
 		</figure>
@@ -51,7 +51,7 @@ exit; // Exit if accessed directly.
 </div>
 </div>
 		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 
 </div>

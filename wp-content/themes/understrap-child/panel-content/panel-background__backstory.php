@@ -36,7 +36,7 @@ exit; // Exit if accessed directly.
 		</div>
 			<a href="http://www.jamiejohnsonmev2.test/contact">You Should Hire Me</a>
 			<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="style-svg"/>
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/>
 			</a>
 		</div>
 

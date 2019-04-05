@@ -37,7 +37,7 @@ exit; // Exit if accessed directly.
 
 							<div class="howidoit__disciplines_content" id="disciplines__content_background--box1">
 								<!-- make column --> <!--  flex-col -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--bullseye"/>
+								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="..." class="style-svg disciplines__content-icon disciplines__content-icon--bullseye"/>
 								<div class="howidoit__disciplines_content--description">
 									<h5>strategic<span class="br"><br></span> leadership</h5>
 									<p>identifying paths to augment business performance & growth</p>
@@ -56,7 +56,7 @@ exit; // Exit if accessed directly.
 
 							<div class="howidoit__disciplines_content" id="disciplines__content_background--box2">
 								<!-- make column --> <!--  flex-col -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_21.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--marekting"/>
+								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_21.svg" alt="..." class="style-svg disciplines__content-icon disciplines__content-icon--marekting"/>
 								<div class="howidoit__disciplines_content--description">
 									<h5>marketing<span class="br"><br></span>management</h5>
 									<p>creating and retaining customers</p>
@@ -72,7 +72,7 @@ exit; // Exit if accessed directly.
 
 							<div class="howidoit__disciplines_content" id="disciplines__content_background--box3">
 								<!-- make column --> <!--  flex-col -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--gears"/>
+								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" alt="..." class="style-svg disciplines__content-icon disciplines__content-icon--gears"/>
 								<div class="howidoit__disciplines_content--description">
 										<h5>operations<span class="br"><br></span>& infrastructure</h5>
 									<p>optimizing marketing process, systems and technology</p>
@@ -86,7 +86,7 @@ exit; // Exit if accessed directly.
 
 							<div class="howidoit__disciplines_content" id="disciplines__content_background--box4">
 								<!-- make column --> <!--  flex-col -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" alt=""class="style-svg disciplines__content-icon disciplines__content-icon--devices"/>
+								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" alt="..."class="style-svg disciplines__content-icon disciplines__content-icon--devices"/>
 								<div class="howidoit__disciplines_content--description">
 									<h5>digital design <span class="br"><br></span>& development</h5>
 									<p>engaging and converting prospects</p>
@@ -100,7 +100,7 @@ exit; // Exit if accessed directly.
 
 							<div class="howidoit__disciplines_content" id="disciplines__content_background--box5">
 								<!-- make column --> <!--  flex-col -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_25.svg" alt="" class="style-svg disciplines__content-icon disciplines__content-icon--conversation"/>
+								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_25.svg" alt="..." class="style-svg disciplines__content-icon disciplines__content-icon--conversation"/>
 								<div class="howidoit__disciplines_content--description">
 				<h5>marketing<span class="br"><br></span>communications</h5>
 									<p>earning and maintaining customer trust</p>
@@ -117,7 +117,7 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 				<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 				</a>
 			</div>
 		</article>

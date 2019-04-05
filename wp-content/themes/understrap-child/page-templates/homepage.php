@@ -18,6 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<section id="section__home-page">
 			<?php get_template_part( 'panel-content/panel', 'home_page__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__summary' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'home_page__upto' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__strengths' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__proof' ); ?>
 <?php get_template_part( 'panel-content/panel', 'home_page__cta' ); ?>

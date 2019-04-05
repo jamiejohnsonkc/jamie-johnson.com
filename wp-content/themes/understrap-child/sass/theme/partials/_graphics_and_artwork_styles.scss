@@ -316,9 +316,16 @@ width: 80%;
     }
 }
 
-.link .chev--dwn{
+#link__advance_chev-dwn{
+   width:1.5em;
+  height:1.5em;
+  display: block;
+  @include push-auto();
+    path.st0{
     stroke: $link-color;
 }
+}
+
 
 
 svg#services__arrow--img{
@@ -442,4 +449,8 @@ fill: $white;
         fill: $gray-400;
     }
 
+}
+
+.arrow-up-svg{
+    fill: $pattens;
 }

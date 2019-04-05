@@ -164,7 +164,7 @@ exit; // Exit if accessed directly.
 		</div>
 	</div>
 	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img class="categories__content_image style-svg chev--dwn" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt=""/>
+		<img class="categories__content_image style-svg chev--dwn" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..."/>
 	</a>
 </article>
 

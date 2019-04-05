@@ -28,17 +28,14 @@
 // =========================================================================
 // homepage splash
 // =========================================================================
-#home__splash {
-  @include center-middle;
+.container.home-page__splash {
 
   padding-left: 0;
   padding-right: 0;
+}
 
-  h3 {
-    @extend %display-text-lg;
-
-    font-weight: 400;
-  }
+.home__splash_greeting{font-weight: 600;}
+.home__splash_headline{font-weight: 500;}
 
   // p {
   //   @extend %body-text-lg;
@@ -47,48 +44,54 @@
 
   //   @include vr($line-height: 3);
   // }
- .link {
+.home-page__splash_advance-link{
     position: absolute;
     display: block;
     @include push-auto;
     bottom: 6em;
   }
 
-  %subhead {
-    @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
-    font-weight: 300;
-  }
-}
+  // %subhead {
+  //   @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
+  //   font-weight: 300;
+  // }
 
-p.splash__subhead--fancy{
-  @extend %body-text;
-  font-style: italic;
-  font-weight: 200;
-}
 
+
+
+
+.splash__label--head{
+  @include vr($font-size: 16px);
+}
 
 .splash__label{
-  @extend %sublist-sm;
-  @include mq('desktop'){
-
+  @include vr($font-size: 20px);
+  font-family: $font-family-serif;
+  font-style: italic;
   }
+
+
+.splash__label--head{
+}
+
+.splash__label--item{
+  // text-transform: uppercase;
 }
 
 .splash__label_divider {
   color: $gray-500;
 }
 
-@include mq("tablet") {
-  %subhead {
-    @include vr($font-size: 1);
-  }
-}
-
 
 .splash__label--emph {
   color: $primary;
   font-weight: 400;
+  // text-transform: uppercase;
 }
+
+
+
+
 
 // .splash__label--head{
 //   font-weight: 400;
@@ -98,60 +101,72 @@ p.splash__subhead--fancy{
 /* //////////////////////     .core / homepage articles  //////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////*/
 
-.core {
-  @include left-middle;
-  @include split-rows;
+// .core {
+//   // @include left-middle;
+//   // @include split-rows;
 
-  h1 {
-    @extend .page__title;
-  }
+//   h1 {
+//     @extend .page__title;
+//   }
 
-  h2 {
-    @extend %headline;
-        text-align: center;
-  }
+//   h2 {
+//     @extend %headline;
+//         text-align: center;
+//   }
 
-  h3 {
-    /*         @extend %display-text-lg;  */
-    @extend %subhead;
+//   // h3 {
+//   //   /*         @extend %display-text-lg;  */
+//   //   @extend %subhead;
 
-    font-weight: 300;
-  }
+//   //   font-weight: 300;
+//   // }
 
-  h4 {
-    @extend %display-text-lg;
+//   // h4 {
+//   //   @extend %display-text-lg;
 
-    font-weight: 400;
-    text-transform: uppercase;
-  }
+//   //   font-weight: 400;
+//   //   text-transform: uppercase;
+//   // }
 
-  h5 {
-    @extend %display-text;
+//   h5 {
+//     @extend %display-text;
 
-    font-weight: 400;
-    letter-spacing: .05em;
-  }
+//     font-weight: 400;
+//     letter-spacing: .05em;
+//   }
 
-  p {
-    @extend %display-text-sm;
-  }
+//   p {
+//     @extend %display-text-sm;
+//   }
 
-  p.caption {
-    @extend %display-text-sm;
 
-    letter-spacing: .025em;
-  }
+// }
+
+
+// ==========================================================================
+// home-page__summsary-whatido__subsection
+// ==========================================================================
+.home-page__summary-whatido__subsection{
+  background: $black;
 }
+
+.article__wrapper.home-page__summary_article{
+}
+
+.article__wrapper.home-page__bigger-picture_article{
+}
+
+
 
 //
 // homepage summary
 //
 
 .container.home-page__container_summary{
-  width: 100%;
-  max-width: 100%;
-  height: unset;
- @include vr($padding: 4);
+}
+
+.summary__page-title_container{
+  color: $white;
 }
 
 .summary__page_tldr, .summary__page_headline, .summary__page_subhead, .intro__icon_wrapper, .intro__icon_caption, .summary__page_display-text{
@@ -160,13 +175,26 @@ text-align: center;
 }
 
 .summary__page_headline{
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -.15rem;
+  @include vr($font-size: 32px);
 }
 
-.summary__page_subhead{
-  font-weight: 200;
-}
+// .summary__page_subhead{
+//   font-weight: 200;
+// }
 
+// .summary__page_subhead--strong{
+// font-weight: 600;
+// }
+
+// span.summary__page_subhead--br{
+//     line-height: 0;
+// }
+
+// .display-text.summary__page_subhead span{
+//   @extend %display-text;
+// }
 
 // .content__item_wrapper {
 //   width: 100%;
@@ -175,9 +203,9 @@ text-align: center;
 
 // .content__item_intro--background {
 //   background: $black;
-//   color: $white;
+//   color: $white;c
 // }
-
+    
 // .section__head_headers {
 //   text-align: center;
 
@@ -194,14 +222,67 @@ text-align: center;
 //   }
 // }
 
-.intro__icon_caption {
-  @extend %caption;
+h3.intro__summation_subhead{
+  @extend %intro_caption;
+  text-align:center;
+
+}
+
+.intro__summation_copy{
+  @extend %intro_caption;
   text-align:center;
 }
 
 .content__item_intro--content {
   background: $gray-300;
 }
+
+
+
+//
+//bigger-picture__panel
+//
+
+
+.home-page__bigger-picture_wrapper {
+background: $black;
+}
+
+.container.bigger-picture__container {
+
+}
+
+.bigger-picture__panel-content {
+color: $white;
+}
+
+.bigger-picture__panel_headline {
+}
+
+.bigger-picture__panel_subhead {
+font-weight: 200;
+}
+
+.bigger-picture__panel_subhead--strong{
+font-weight: 500;
+letter-spacing: -.025em;
+}
+
+.bigger-picture__panel_list--list-head {
+}
+
+.bigger-picture__list {
+list-style: none;
+padding-left: 0;
+}
+
+.bigger-picture__list_list-item {
+}
+.bigger-picture__list_list-item--milestone {
+}
+
+
+
 
 // .content__item_internal-wrapper {
 //   background: $white;
@@ -222,6 +303,69 @@ text-align: center;
 //   }
 // }
 
+
+//
+// summary page__claim
+//
+.summary-page__claim_wrapper{
+ background: $pattens;
+
+}
+
+.container.summary-page__container_claim{
+   @include vr($padding: 6 2);
+}
+
+
+.claim__page_title{
+  color: $white;
+  z-index:3;
+}
+
+
+// .summary__page_subhead{
+//   font-weight: 200;
+// }
+
+// .summary__page_subhead--strong{
+// font-weight: 600;
+// }
+
+span.summary__page_subhead--br{
+    line-height: 0;
+}
+
+
+.body1-text.summary-page__subhead_claim{
+    font-weight: 200;
+    margin: 0;
+    z-index:3;
+}
+
+
+.display-text.summary-page__subhead_claim--strong{
+font-weight: 600;
+margin: 0;
+z-index:3;
+
+}
+
+
+.summary-page__subhead_claim--border-top{
+border-top: 1px solid $gray-300;
+@include vr($padding-top: 1);
+
+}
+
+
+p.summary-page__claim--fancy{
+  font-style: italic;
+  font-weight: 200;
+  text-align: center;
+  font-family: $font-family-serif;
+  z-index:3;
+}
+
 //
 // strengths
 //
@@ -229,16 +373,23 @@ text-align: center;
 .strengths__page_headline{
   text-align: center;
   align-self: center;
+  @extend %headline;
 }
 
-.core > .strengths__panel_wrapper {
-  h3 {
+.strengths__panel_headline{
     @extend %subhead;
-  }
-
   %subhead {
     margin-bottom: 0;
   }
+}
+
+.strengths__panel_subhead{
+  @extend %body2-text;
+  font-weight: 400;
+}
+
+.strengths__panel_body-copy{
+  @extend %body1-text;
 }
 
 ul.strengths__list_container {
@@ -279,6 +430,13 @@ ul.strengths__list_container {
   margin-right: 10%;
 }
 
+
+  // .strengths__article_container.caption {
+  //   @extend %display-text-sm;
+
+  //   letter-spacing: .025em;
+  // }
+
 //strengths panel colors
 
 #strengths__panel_wrapper--smm, #strengths__panel_wrapper--dad, #strengths__panel_wrapper--opi {
@@ -308,7 +466,6 @@ ul.strengths__list_container {
 .proof__article_container {
   h2 {
     align-text: center;
-
     @include push-auto;
   }
 
@@ -331,6 +488,7 @@ h6{
 
 .proof__panel_headline{
   text-align: center;
+  @extend %headline;
 }
 
 .proof__panel_intro {
@@ -409,6 +567,15 @@ text-align: justify;
 .proof__panel-content_text_idooutcomes{
   text-align: left;
 }
+
+.proof__panel_body-copy{
+      @extend .body1-text;
+      text-align: justify;
+}
+
+.proof__panel_body-copy em{
+color: $primary;
+  }
 ///////////////////////////////////////////////////////////////////
 // end to end equation panel
 //////////////////////////////////////////////////////////////////
@@ -941,21 +1108,22 @@ height: 850px;
 }
 }
 
+
 .container.about-me__container_personal{
 // background: $dark-bg-trans;
-background: -moz-linear-gradient(top, rgba(59,68,76,.65) 65%, rgba(0,0,0,0) 100%);
-background: -webkit-linear-gradient(top, rgba(59,68,76,.65) 65%,rgba(0,0,0,0) 100%);
-background: linear-gradient(to bottom, rgba(59,68,76,.65) 65%,rgba(0,0,0,0) 100%);
+background: -moz-linear-gradient(top, rgba(221,238,255,.9) 50%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(top, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
-color: $offwhite;
+color: $black;
 
 p{
   @extend %display-text-sm;
 }
 @include mq('tablet-wide'){
-  background: -moz-linear-gradient(left, rgba(59,68,76,.85) 15%, rgba(0,0,0,0) 100%);
-background: -webkit-linear-gradient(left, rgba(59,68,76,.85) 15%,rgba(0,0,0,0) 100%);
-background: linear-gradient(to right, rgba(59,68,76,.85) 15%,rgba(0,0,0,0) 100%);
+  background: -moz-linear-gradient(left, rgba(221,238,255,.9) 15%, rgba(0,0,0,0) 100%);
+background: -webkit-linear-gradient(left, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to right, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
 }
 }

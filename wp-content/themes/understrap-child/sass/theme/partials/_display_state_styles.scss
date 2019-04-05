@@ -22,6 +22,11 @@
     line-height: 0;
 }
 
+.intro__icon_caption--br2{
+    line-height: 0;
+    height: 0;
+}
+
 .diagram__end-to-end--horizontal {
     display: none;
 }
@@ -232,9 +237,10 @@ display: none;
 
 }
 
-/* // .scroll-top {
-//     display: none;
-// } */
+ .scroll-top {
+    display: none;
+} 
+
 .panel.business-value.grow > div > hgroup > h3 > br, .panel.business-value.modernize > div > hgroup > h3 > br {
     display: none;
 }
@@ -246,6 +252,10 @@ display: none;
         display: block;
     }
 
+}
+
+span.summary-page__subhead_claim--br{
+    display: block;
 }
 
 /*      @include media-breakpoint-up(sm) {

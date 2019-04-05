@@ -18,7 +18,9 @@
 %headline, .headline        				    {@include vr($font-size:38.5px, $margin: 2 0);}
 %subhead, .subhead         				        {@include vr($font-size:28.85px, $margin: 2 0);} 				
 %sublist, .sublist         				        {@include vr($font-size:28.85px, $margin: 2 0);}			
-%display-text, .display-text    				{@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}				
+%display-text, .display-text    				{@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}
+%body2-text, .body2-text    					{@include vr($font-size:18px, $line-height: 2, $margin: 1 0);}	
+%body1-text, .body1-text    					{@include vr($font-size:15px, $line-height: 2, $margin: 1 0);}					
 %list-head, .list-head       				    {@include vr($font-size:13px);}
 %list-item, .list-item       				    {@include vr($font-size:12px, $margin-bottom: 0, $line-height: 1.5);}  
 %body-text, .body-text       				    {@include vr($font-size:14.5px, $margin: 1.5 0);}
@@ -32,10 +34,11 @@
 %subhead-sm, .subhead-sm      				    {@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
 %display-text-sm, .display-text-sm 				{@include vr($font-size:16px, $line-height: 2, $margin: 2 0);}
 %caption-sm, .caption-sm        				{@include vr($font-size:10px, $line-height:1.25);}  
-		
-		
-.page__title            		                {@include vr( $font-size: 1,  );}
-a.link__advance--text   {}
-.navbar-brand, .navbar, .navbar li, .navbar a   { @include vr( $font-size: 1, $margin-top: 0  );}
+
+%intro_caption, .intro_caption         			{@include vr($font-size:12px, $line-height: 1.5);}
+
+.page__title            		                {@include vr($font-size: 1,);}
+a.link__advance--text   						{}
+.navbar-brand, .navbar, .navbar li, .navbar a   {@include vr($font-size: 1, $margin-top: 0);}
 
 

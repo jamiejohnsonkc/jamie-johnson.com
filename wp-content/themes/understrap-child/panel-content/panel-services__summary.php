@@ -72,14 +72,14 @@ exit; // Exit if accessed directly.
 							<div class="services__read-more_container services__read-more_planning-analysis"><p>Nostrud laboris cillum id aliquip aute sunt deserunt fugiat.</p><p>Commodo mollit sed minim in laborum quis nostrud id sed duis anim eiusmod magna sint cillum.</p><p>Excepteur sunt labore esse commodo culpa eu aute mollit in velit dolor cupidatat ea laboris dolor in aliquip eiusmod magna elit reprehenderit in ut dolor sint culpa sunt consectetur incididunt esse dolor cupidatat est consectetur ad.</p></div>
 						</div>
 						<div class="services-panel__bgimg-container_small-screen--planning">
-							<div class="services__panel_img services__panel_img--planning"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt=""></div>
+							<div class="services__panel_img services__panel_img--planning"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue_a2" alt="..."></div>
 						</div>
 					</div>
 			
 				</div>
 						<div class="services-panel__bgimg-container_wide-screen--planning">
 						<div class="services__panel_img services-panel__bgimg_widescreen--planning{
-"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue__a2_bg" alt=""></div>
+"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/blue_A2.svg" class="style-svg" id="blue__a2_bg" alt="..."></div>
 					</div>
 			</div>
 				<div class="container services__panel_block services__panel_block--management">
@@ -89,7 +89,7 @@ exit; // Exit if accessed directly.
 								<h3 class="services__panel_headline services__panel_headline--management">Management & Operations</h3>
 							</div>
 							<div class="services__panel-img_container--small-screen">
-								<div class="services__panel_img services__panel_img--smm"><img src="http://jamiejohnsonmev2.test/wp-content/		uploads/2019/03/conftable.jpg" class=""alt=""></div>
+								<div class="services__panel_img services__panel_img--smm"><img src="http://jamiejohnsonmev2.test/wp-content/		uploads/2019/03/conftable.jpg" class=""alt="..."></div>
 							</div>
 					
 						<div class="services__panel_copy services__panel_copy--management">
@@ -109,7 +109,7 @@ exit; // Exit if accessed directly.
 					</div>
 						</div>
 					<div class="services__panel-img_container-wide-screen--management">
-						<div class="services__panel_img services__panel_img--smm"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class=""alt=""></div>
+						<div class="services__panel_img services__panel_img--smm"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class=""alt="..."></div>
 					</div>
 				</div>
 			</div>

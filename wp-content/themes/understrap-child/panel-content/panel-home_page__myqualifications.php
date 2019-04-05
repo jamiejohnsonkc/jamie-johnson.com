@@ -39,24 +39,24 @@ exit; // Exit if accessed directly.
 									</div>
 								</div>
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>years of experience</h6>
 									</div>
 								</div>
 							</div>
 							<div class="carousel-item row no-gutters">
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>agency</h6>
 									</div>
 								</div>
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>corporate</h6>
 									</div>
 								</div>
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt=""/>
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..."/>
 									<div class="stats-caption carousel-caption">
 										<h6>largest program</h6>
 									</div>
@@ -64,39 +64,39 @@ exit; // Exit if accessed directly.
 							</div>
 							<div class="carousel-item row no-gutters">
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>operations responsibility</h6>
 									</div>
 								</div>
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>largest employer</h6>
 									</div>
 								</div>
 								<div class="quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>tiniest employer</h6>
 									</div>
 								</div>
 							</div>
 							<div class="carousel-item row no-gutters">
 								<div class="quals" id="odd-stats">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>matrix reports</h6>
 									</div>
 								</div>
 								<div class="quals" id="odd-stats">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>direct reports</h6>
 									</div>
 								</div>
 								<div class="quals" id="odd-stats">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>user friendly</h6>
 									</div>
 								</div>
 								<div class="quals" id="odd-stats">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt=""/><div class="stats-caption carousel-caption">
+									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..."/><div class="stats-caption carousel-caption">
 										<h6>bullshit</h6>
 									</div>
 								</div>
@@ -115,7 +115,7 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 					<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 		</div>
 

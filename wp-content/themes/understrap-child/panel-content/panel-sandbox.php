@@ -76,7 +76,7 @@ exit; // Exit if accessed directly.
 <div class="sandbox8a"> Parahead Eiusmod cillum.</div>
 <div class="sandbox9">Para officia excepteur in voluptate minim officia anim velit sint ex dolore commodo velit sed ut dolore aute eiusmod officia eu voluptate laborum voluptate exercitation veniam sint dolore duis ut aliqua consequat cillum mollit qui excepteur ut incididunt ut sint do ullamco irure do in adipisicing deserunt eiusmod eiusmod sit mollit anim excepteur ut mollit dolore labore ut occaecat aliqua in nisi velit nostrud.</div><div class="sandbox9"> consectetur aute laborum nostrud deserunt deserunt anim aute enim mollit fugiat esse nostrud anim non minim laboris esse sint sit adipisicing amet enim reprehenderit laboris velit laboris commodo tempor duis tempor veniam consequat dolore aliqua magna esse commodo elit laboris qui dolor fugiat ut aliquip duis dolore fugiat id cupidatat nulla dolor laborum do dolor veniam consequat officia enim labore in proident amet incididunt tempor enim laborum nisi reprehenderit in.</div>
 
-<div class="sandbox__image sandbox__image--big"><img src=https://imgholder.ru/600x300/444444/ECEFF1.jpg&text=big+image&font=arial&fz=18 alt=""></div>
+<div class="sandbox__image sandbox__image--big"><img src=https://imgholder.ru/600x300/444444/ECEFF1.jpg&text=big+image&font=arial&fz=18 alt="..."></div>
 <div class="sandbox10">Caption rure esse in qui in do occaecat sint duis sit culpa magna nostrud sint esse elit anim aute consectetur.</div>
 <div class="sandbox11">Micro ut dolor veniam ut officia elit minim amet nostrud ea culpa sit pariatur minim sit.</div>
 </div>
@@ -99,7 +99,7 @@ exit; // Exit if accessed directly.
 <div class="sandbox19a"> Parahead Eiusmod cillum.</div>
 <div class="sandbox20">Para officia excepteur in voluptate minim officia anim velit sint ex dolore commodo velit sed ut dolore aute eiusmod officia eu voluptate laborum voluptate exercitation veniam sint dolore duis ut aliqua consequat cillum mollit qui excepteur ut incididunt ut sint do ullamco irure do in adipisicing deserunt eiusmod eiusmod sit mollit anim excepteur ut mollit dolore labore ut occaecat aliqua in nisi velit nostrud.</div><div class="sandbox20"> consectetur aute laborum nostrud deserunt deserunt anim aute enim mollit fugiat esse nostrud anim non minim laboris esse sint sit adipisicing amet enim reprehenderit laboris velit laboris commodo tempor duis tempor veniam consequat dolore aliqua magna esse commodo elit laboris qui dolor fugiat ut aliquip duis dolore fugiat id cupidatat nulla dolor laborum do dolor veniam consequat officia enim labore in proident amet incididunt tempor enim laborum nisi reprehenderit in.</div>
 
-<div class="sandbox__image sandbox__image--big"><img src=https://imgholder.ru/600x300/444444/ECEFF1.jpg&text=big+image&font=arial&fz=18 alt=""></div>
+<div class="sandbox__image sandbox__image--big"><img src=https://imgholder.ru/600x300/444444/ECEFF1.jpg&text=big+image&font=arial&fz=18 alt="..."></div>
 <div class="sandbox21">Caption rure esse in qui in do occaecat sint duis sit culpa magna nostrud sint esse elit anim aute consectetur.</div>
 <div class="sandbox22">Micro ut dolor veniam ut officia elit minim amet nostrud ea culpa sit pariatur minim sit.</div>
 </div>
@@ -136,7 +136,7 @@ exit; // Exit if accessed directly.
 </div> -->
 		
 		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 	</div>
 </article>

@@ -193,9 +193,10 @@ article{}
 } */
 
 
-.primary{
+.-color-primary, .-fill-primary, .-stroke-primary{
   color: $primary;
 }
+
 
 .bottom{
  top: unset;

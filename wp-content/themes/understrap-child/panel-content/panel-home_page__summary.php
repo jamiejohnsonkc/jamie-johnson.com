@@ -65,7 +65,7 @@ exit; // Exit if accessed directly.
 
 								<div class="panel-content bigger-picture__panel-content">			
 						<!-- 		<h1 class="display-text bigger-picture__panel_headline">I don't just build websites.</h1> -->
-								<h1 class="body1-text bigger-picture__panel_subhead bigger-picture__panel_subhead"><span class=" bigger-picture__panel_subhead--strong body1-text">I do more than websites.</span> I do everything you need before and after the website to ensure your marketing does what marketing should &mdash; <span class=" bigger-picture__panel_subhead--strong body1-text">I create customers.</span></h1>
+								<h1 class="body1-text bigger-picture__panel_subhead bigger-picture__panel_subhead"><span class=" bigger-picture__panel_subhead--strong body1-text">I do more than websites.</span> I do everything you need before and after the website to ensure your marketing does what marketing should. <span class=" bigger-picture__panel_subhead--strong body1-text">I create customers.</span></h1>
 									<!-- 		<div class="list-head bigger-picture__panel_list--list-head"></div> -->
 											<ul class="list bigger-picture__list">
 <!-- 												<li class="list-item bigger-picture__list_list-item">what's helping/hindering your growth</li>
@@ -125,7 +125,7 @@ exit; // Exit if accessed directly.
 
 					<h1 class="page__title claim__page_title">What I Do</h1>
 
-	<div class="body1-text page__subhead">they make stuff</div>
+	<div class="body1-text page__subhead">THEY MAKE STUFF</div>
 	<div class="display-text summary-page__subhead_claim--strong summary-page__subhead_claim summary-page__subhead_claim--border-top">I GROW BUSINESS</div>
 
 

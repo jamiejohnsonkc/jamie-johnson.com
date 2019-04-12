@@ -31,10 +31,10 @@ exit; // Exit if accessed directly.
 				<div class="strengths__subtext_content">
 					<ul class="strengths__list_container">
 							<li class="strengths__list-item strengths__list-item--smm">Revenue Generation</li>
-						<li class="strengths__list-item strengths__list-item--smm">Competitive Value</li>
+						<li class="strengths__list-item strengths__list-item--smm">Value Design</li>
 						<li class="strengths__list-item strengths__list-item--smm">Customer Engagement</li>
 						<li class="strengths__list-item strengths__list-item--smm">Performance Optimization</li>
-										<li class="strengths__list-item strengths__list-item--smm">Strategic Design</li>
+										<li class="strengths__list-item strengths__list-item--smm">Budgeting & Mgmt.</li>
 					</ul>
 				</div>
 				<div class="strengths__icon_container">
@@ -54,21 +54,22 @@ exit; // Exit if accessed directly.
 				</div>
 				<div class="strengths__panel_head_headers">
 					<h3 class="strengths__panel_headline strengths__panel_headline--imc">Integrated Marketing Communications</h3>
-					<h4 class="strengths__panel_subhead strengths__panel_subhead--imc">Integrated Marketing Communications</h4>
+					<h4 class="strengths__panel_subhead strengths__panel_subhead--imc">Getting found, establishing rapport, earning trust</h4>
 				</div>
 			</div>
 			<div class="strengths__panel_content strengths__content">
-				<p class="body-copy strengths__panel_body-copy">I fuse strategy, marketing, technology and design to achieve business outcomes</p>
+				<p class="body-copy strengths__panel_body-copy">I create digital, physical and strategic assets required to generate and exploit encounters with potential customers in the post-digital marketplace. I help businesses create engagements that demonstrate value and convey the institutional character that play heavily in the purchase decisions of today's empowered customer.</p>
 			</div>
 			<div class="strengths__panel_subtext">
 				<div class="strengths__subtext_content">
 					<div class="strengths__list_header">KEY STRENGTHS:</div>
 					<ul class="strengths__list_container">
-						<li class="strengths__list-item strengths__list-item--imc">Lead-to-Revenue</li>
+	
+						<li class="strengths__list-item strengths__list-item--imc">Mobile/Web Development</li>
+						<li class="strengths__list-item strengths__list-item--imc">Digital Marketing</li>
 						<li class="strengths__list-item strengths__list-item--imc">Branding & Posititoning</li>
-						<li class="strengths__list-item strengths__list-item--imc">Experience Management</li>
-						<li class="strengths__list-item strengths__list-item--imc">Digital Development</li>
-						<li class="strengths__list-item strengths__list-item--imc"></li>
+						<li class="strengths__list-item strengths__list-item--imc">Messaging & Substantiation</li>
+						<li class="strengths__list-item strengths__list-item--imc">Outbound Communications</li>
 					</ul>
 				</div>
 				<div class="strengths__icon_container">
@@ -88,29 +89,29 @@ exit; // Exit if accessed directly.
 				</div>
 				<div class="strengths__panel_head_headers">
 					<h3 class="strengths__panel_headline strengths__panel_headline--ops">Marketing Operations</h3>
-								<h4 class="strengths__panel_subhead strengths__panel_subhead--ops">Integrated Marketing Communications</h4>
+								<h4 class="strengths__panel_subhead strengths__panel_subhead--ops">Melding methods, assets and strategy to optimize returns</h4>
 				</div>
 			</div>
 			<div class="strengths__panel_content  strengths__content">
-				<p class="body-copy strengths__panel_body-copy">I produce marketing to help brands get found, earn trust and create customers.</p>
+				<p class="body-copy strengths__panel_body-copy">I help businesses understand, manage and engage the increasingly complex activity and function of modern marketing*: what it can and can't do, how to do it effectively and how to scale it to your needs.</p>
 			</div>
 			
 			<div class="strengths__panel_subtext">
 				<div class="strengths__subtext_content">
 					<div class="strengths__list_header">KEY STRENGTHS:</div>
 					<ul class="strengths__list_container">
-						<li class="strengths__list-item strengths__list-item--ops">Competitive Value Design</li>
-						<li class="strengths__list-item strengths__list-item--ops">Budget Optimization</li>
-						<li class="strengths__list-item strengths__list-item--ops">Marketing Operations</li>
-						<li class="strengths__list-item strengths__list-item--ops">Function Development</li>
-						<li class="strengths__list-item strengths__list-item--ops">Revenue Generation</li>
+						<li class="strengths__list-item strengths__list-item--ops">Functions, capabilities & methods</li>
+						<li class="strengths__list-item strengths__list-item--ops">Technology & Infrastructure</li>
+						<li class="strengths__list-item strengths__list-item--ops">Requisites & Performance</li>
+						<li class="strengths__list-item strengths__list-item--ops">Process & Management</li>
+							<li class="strengths__list-item strengths__list-item--imc">Roles, dominion & output</li>
 					</ul>
 				</div>
 				<div class="strengths__icon_container">
 					<div class="strengths__icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="style-svg" alt="..."></div>
 				</div>
 			</div>
-			<div class="strengths__panel_footnote">*That's a big fancy handle for the business end of marketing (*i.e. making sure it does more than look pretty)</div>
+<!-- 			<div class="strengths__panel_footnote">*Note that when I say "marketing" I adhere to Alexander Chernev's definition of marketing &mdash; the design, promotion, exchange and delivery of value amongst a company, it's collaborators and customers. Not just "sales".</div> -->
 		</div>
 
 

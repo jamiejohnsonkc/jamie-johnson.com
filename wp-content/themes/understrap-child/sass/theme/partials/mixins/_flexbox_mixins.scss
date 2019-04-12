@@ -1,3 +1,9 @@
+@mixin col-ready(){
+	width: 100%;
+	position: relative;
+}
+
+
 @mixin left-link(){
 	.link{
 	left: 0;

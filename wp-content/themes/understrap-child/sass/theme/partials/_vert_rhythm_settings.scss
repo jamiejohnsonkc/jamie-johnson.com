@@ -21,8 +21,8 @@
 %display-text, .display-text    				{@include vr($font-size:22.5px, $line-height: 2.4, $margin: 2 0);}
 %body2-text, .body2-text    					{@include vr($font-size:18px, $line-height: 2, $margin: 1 0);}	
 %body1-text, .body1-text    					{@include vr($font-size:15px, $line-height: 2, $margin: 1 0);}					
-%list-head, .list-head       				    {@include vr($font-size:13px);}
-%list-item, .list-item       				    {@include vr($font-size:12px, $margin-bottom: 0, $line-height: 1.5);}  
+%list-head, .list-head       				    {@include vr($font-size:13px, $margin-top: 2, $margin-bottom: 1, $line-height: 1.5);}
+%list-item, .list-item       				    {@include vr($font-size:12px, $margin-bottom: .75, $line-height: 1.5);}  
 %body-text, .body-text       				    {@include vr($font-size:14.5px, $margin: 1.5 0);}
 %para-head, .para-head       				    {@include vr($font-size:14.5px, $margin-bottom: .5);}  
 %diagram-label, .diagram-label			        {@include vr($font-size:10px);}

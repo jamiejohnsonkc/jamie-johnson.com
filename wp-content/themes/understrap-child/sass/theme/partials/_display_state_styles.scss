@@ -61,8 +61,8 @@
     }
 
 }
-
-.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_wide-screen--planning {
+.services-panel__bgimg-container_wide-screen--planning,
+.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_small-screen--planning {
     display: none;
 }
 .objectives-diagram__horizontal--delta {

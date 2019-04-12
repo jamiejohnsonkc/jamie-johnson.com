@@ -343,16 +343,19 @@ display: block;
 
 
 
-#blue__a2_bg{
-     #A_outline, #pattern, #grid{
-      stroke: $bluea-background-color2;
+#svg__blue_a2--bg{
+     #A_outline{
+      stroke: $primary;
     } 
     #dots, #solid_dots{
-      fill: $bluea-background-color2;
+      fill: $primary
     } 
+    #grid, #pattern{
+        stroke: #76D4F4;
+    }
 }
 
-.blueA-reversed{
+#svg__blue_a2--small{
       #A_outline{
       stroke: $primary;
     } 

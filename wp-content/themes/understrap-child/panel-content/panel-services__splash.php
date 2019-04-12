@@ -11,14 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article class="article__wrapper splash-wrapper services__splash-wrapper bgbell">
 		
 		<div class="container services__container_splash" id="services__splash">
-		<h1>My Services</h1>
-		<h2>How Can I Help You Grow?</h2>
-		<!-- <ul class="services__splash_list">
-			<li class="services__splash_list-item">Website</li>
-			<li class="services__splash_list-item">Business Strategy</li>
-			<li class="services__splash_list-item">Operations Planning</li>
-			<li class="services__splash_list-item">Guidance & Advice</li>
-			<li class="services__splash_list-item splash__list-item--emph">Or just where to begin</li>
+		<h1 class="services__splash_page-title page__title">My Services</h1>
+		<h2 class="headline services__splash_headline">End to End Possibilities</h2>
+		<h3 class="services__splash_subhead">Committed to service, performance and quality. <br>(in that order)</h3>
+<!-- 		<ul class="services__splash_list">
+			<li class="services__splash_list-item"><a href="">Core Services</a></li>
+			<li class="services__splash_list-item"><a href="">Service Levels</a></li>
+			<li class="services__splash_list-item"><a href="">a La Carte Services</a></li>
+			<li class="services__splash_list-item"><a href="">Approach</a></li>
 		</ul> -->
 <!-- 		<h3>design &#x000B7; development &#x000B7; management &#x000B7; operations &#x000B7; strategy</h3> -->
 		

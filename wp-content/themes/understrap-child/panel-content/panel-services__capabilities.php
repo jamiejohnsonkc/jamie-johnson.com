@@ -17,50 +17,51 @@ exit; // Exit if accessed directly.
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Marketing Strategy</h4>
-					<p>Reprehenderit exercitation tempor dolor adipisicing dolor deserunt aliqua eiusmod sint minim eu id officia velit magna cupidatat occaecat.</p>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
+					<p>Michael Porter of Harvard Business School said it best: "The essence of strategy is choosing what not to do." And no, I didn't go to Harvard.</p>
+					<p>That's what I do.  I help you determine A. What do you want to achieve.  B. what must you overcome or exploit to achieve your goal.  C. What mix of marketing will best execute your strategy.</p>
+					<p>When you stop thinking about what you could do and focus on what you should do, it changes your whole perspective.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" />
 						<h5>Strategic Design</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>Problem solving 101. A combination of creative thinking and strategic analysis applied to business challenges and opportunities.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" alt="skill icon" />
-						<h5>Optimization</h5>
+						<h5>Performance Optimization</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>A comphrensive examination of your existing marketing appartatus to fine tune performance.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_03.svg" alt="skill icon" />
 						<h5>Superior Customer Value</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>The currency of modern marketing. Today's customers don't want sensationalism, they want substance. Its a whole new world.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_04.svg" alt="skill icon" />
 						<h5>Modernization</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>The digital age rewrote the marketing playbook. What was out is now in. Those who led now follow. And ignore disgruntled customers at your own risk.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_05.svg" alt="skill icon" />
 						<h5>Output to Outcomes</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>Emerging paradigms and technologies are transforming the marketing function from an overhead expense to a strategic asset for business leaders.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
 						<img class="style-svg overlay__content--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_06.svg" alt="skill icon" />
 						<h5>Customer Centricity</h5>
 					</div>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est.</p>
+					<p>Customers have more influence than ever on a brand's success. And they have expectations that stem from front to back of the brand experience. Today everyone is customer facing.</p>
 				</div>
 			</div>
 		</div>
@@ -71,8 +72,8 @@ exit; // Exit if accessed directly.
 			<div class="overlay__container">
 				<div class="overlay-intro">
 					<h4>Strategic Marketing Management</h4>
-					<p>Aute aliqua culpa commodo sint fugiat esse irure culpa anim ad mollit eiusmod voluptate quis aliqua sint occaecat fugiat ut in duis irure incididunt enim ullamco ut duis aliqua in veniam aliqua.</p>
-					<p>Pariatur tempor cupidatat et incididunt labore anim aliqua consequat sint.</p>
+					<p>Post-digital introduced us to new business relationships, new customer behaviors and new competitive dynamics. It also made made marketing more effective, more quantifiable and more legitimate than ever before.</p>
+					<p>It's a whole new paradigm that requires new methods and mindsets about what marketing is and, more importantly, raising your expectations about what it can achieve.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
@@ -151,9 +152,11 @@ exit; // Exit if accessed directly.
 			</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
-					<h4>Customer Engagement</h4>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
+					<h4>Integrated Communications</h4>
+					<p>The days of barking sensational and self-serving messages at target audiences through intrusive ads are in their twilight.</p>
+					<p>Sensationalism and spectacle are giving way to substance and value.</p>
+					<p>So today's communications are all about developing relationships, engaging customers on their terms and actually trying to help them. I know. It's crazy.</p>
+
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
@@ -238,8 +241,7 @@ exit; // Exit if accessed directly.
 			<button class="circle__button expt__close--button" id="expt-close-4">&times;</button>
 			<div class="overlay__container">
 				<div class="overlay-intro"><h4>Mobile + Web</h4>
-					<p>Labore consectetur incididunt aliquip ex voluptate et eiusmod exercitation est duis nisi in laboris amet irure dolor do excepteur dolore aliquip qui veniam est ex dolor.</p>
-					<p>Lorem ipsum in veniam aliqua ad proident eiusmod cupidatat consequat aliquip qui magna ad cupidatat amet esse ad aute nisi deserunt sint aute sit velit.</p>
+					<p>Today nearly every brand relationships begins online in one form or another. So if you get on their radar and if you spark their interest and if they visit your page....it better not suck.  Nuff said.</p>
 				</div>
 				<div class="row">
 					<div class="overlay__content">
@@ -330,9 +332,10 @@ exit; // Exit if accessed directly.
 			</button>
 			<div class="overlay__container">
 				<div class="overlay-intro">
-					<h4>Operations</h4>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
-					<p>Fugiat ut sunt consequat sed quis pariatur commodo aliquip consectetur est nostrud quis in magna velit nisi duis sint duis.</p>
+					<h4>Marketing Operations</h4>
+					<p>Websites. Data capture. Automation. Marketing funnels. Customer insights. Value strategy. Specialists. Generalists. Inbound. Outbound. Paid, earned and owned media. Search engines. Apps. We need an app. Everyone says we need an app.</p>
+					<p>There's no avoid that marketing is getting complicated. Its one thing to execute a successful intitiative, but it can be just as challenging to operate an effective marketing function.</p>
+					<p>I can help.</p>
 				</div>
 				<div class="overlay__content">
 					<div class="overlay__content--head">
@@ -392,32 +395,31 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="my-capabilities__main-page">
-			<div class="split-container my-capabilities__panel-head">
-				<h2>Capabilities</h2>
-				<p>Voluptate in commodo ut labore cillum ullamco laborum magna dolore voluptate ea labore dolore fugiat ex magna ea labore nulla non.</p>
-			</div>
+			<div class="my-capabilities__main-page_wrapper">
+			
+		</div>
 			<nav class="capabilities__main-page_menu">
-				<div class="capabilities__menu_item" id="open-expt-overlay-1">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon"/>
-					<div class="capabilities__menu_item--content">
-						<h3>Strategy</h3>
-						<p>Officia cupidatat ut ea consequat quis consequat ullamco officia.</p>
-						<a class="link" id="capabilities__menu_link">Learn More</a>
-					</div>
-				</div>
+				<div class="split-container my-capabilities__panel-head">
+				<h2 class="capabilities__menu_headline">What Can I Do For You?</h2>
+				<div class="capabilities__menu_subhead">Whether you need a coffee mug or a business plan, I can help.</div> 
+				<p></p>
+
+
+			</div>
+				
 				<div class="capabilities__menu_item" id="open-expt-overlay-4">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Mobile + Web Design &amp; Development</h3>
-						<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
+						<h3>Mobile + Web <br>Design & Development</h3>
+						<p>Digital assets and content built from the ground up to advance business.</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 				<div class="capabilities__menu_item" id="open-expt-overlay-3">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Integrated Marketing Communications</h3>
-						<p>Ex aliqua eiusmod sunt pariatur laborum elit enim.</p>
+						<h3>Integrated Communications</h3>
+						<p>Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
@@ -425,15 +427,24 @@ exit; // Exit if accessed directly.
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
 						<h3>Strategic Marketing Management</h3>
-						<p>Voluptate ea ut ex ullamco ut ut sint non.</p>
+						<p>Where business plans transform into marketing strategy</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 				<div class="capabilities__menu_item" id="open-expt-overlay-5">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Operations</h3>
-						<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
+						<h3>Marketing Operations</h3>
+						<p>Optimizing marketing as a function, organization and an activity</p>
+						<!-- <p>Or, how to make strategy, techonology and reality get along.</p> -->
+						<a class="link" id="capabilities__menu_link">Learn More</a>
+					</div>
+				</div>
+				<div class="capabilities__menu_item" id="open-expt-overlay-1">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon"/>
+					<div class="capabilities__menu_item--content">
+						<h3>Strategy & Consultation</h3>
+						<p>Modern marketing concepts, strategies and practices to achieve business outcomes</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>

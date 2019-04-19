@@ -9,19 +9,51 @@ exit; // Exit if accessed directly.
 ?>
 <article class="article__wrapper content__wrapper services__intro">
 	<div class="container services__article_container" id="services__page">
-		<h1 class="services__page-title page__title">Core Services</h1>
+		<h1 class="services__page-title page__title">Areas of Expertise</h1>
 		<div class="services__page_head_wrapper">
 		<div class="services__page_head">
 			<div class="services__page-head_container services__page-head_container--headers">
 			<h2 class="services__page-head_headline">Whatcha Need?</h2>
-			<h3 class="services__page-head_subhead">Modern Marketing Services<br class="services__page-head_subhead--br">Progressive Marketing Strategy<br class="services__page-head_subhead--br">Flexible Service Models </h3>
+			<h3 class="services__page-head_subhead">Modern Marketing Services<br class="services__page-head_subhead--br">Prescriptive Solutions<br class="services__page-head_subhead--br">Flexible Service Models </h3>
 		<p class="services__page-head_description">Occaecat enim magna nulla esse voluptate adipisicing officia fugiat dolor in eiusmod ut voluptate dolore.</p>
+		<p class="services__page-head_description">Dolore pariatur anim culpa do sunt nulla dolor reprehenderit ullamco nostrud proident do est exercitation enim ullamco sed.</p>
+		<p class="services__page-head_description">Occaecat ad qui ut cupidatat elit magna est ea.</p>
+
+<a class="text-link" href="/">This will be a link</a>
+
 
 </div>
 		<div class="services__page-head_container services__page-head_container--lists">
 		<div class="services__list_container services__list_container--core-services">	
-		<div class="list__head services__list-head_core-services">Core Services</div>
-		<div class="services__list-head_sublist"><a href="/">Development & Design</a> &#x22C5; <a href="/">Planning & Analysis</a><a href="/">Operations & Management</a></div>
+		<div class="list__head services__list-head  services__list-head_core-services">Service Areas</div>
+		<div class="services__list-head_sublist">
+			<a class="services__list-head_link" href="/">Digital Development & Design</a> 
+			<span class="services__list-head_dot-divider">&#x000B7;</span>
+			<a class="services__list-head_link" href="/">Strategy, Planning & Analysis</a>
+					<span class="services__list-head_dot-divider">&#x000B7;</span>
+			<a class="services__list-head_link" href="/">Operations & Management</a>
+		</div>
+		<p class="services__list_description services__list_description--core-services">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>	
+<!-- 		<ul class="services__list services-list__page-head_core-services">
+			<li class="services__list-item_link"><a href="/">Development & Design</a></li>
+			<li class="services__list-item_link"><a href="/">Planning & Analysis</a></li>
+			<li class="services__list-item_link"><a href="/">Operations & Management</a></li>
+		</ul> -->
+		</div>
+
+
+
+
+
+<div class="services__list_container services__list_container--service-categories">	
+		<div class="list__head services__list-head  services__list-head_service-categories">Scopes</div>
+		<div class="services__list-head_sublist">
+			<a class="services__list-head_link" href="/">Consultation</a> <!-- definition / resolution -->
+			<span class="services__list-head_dot-divider">&#x000B7;</span>  
+			<a class="services__list-head_link" href="/">Implementation</a>  <!-- objectives / strategy / tactics -->
+					<span class="services__list-head_dot-divider">&#x000B7;</span>
+			<a class="services__list-head_link" href="/">Execution</a>  <!-- development / deployment -->
+		</div>
 		<p class="services__list_description services__list_description--core-services">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>	
 <!-- 		<ul class="services__list services-list__page-head_core-services">
 			<li class="services__list-item_link"><a href="/">Development & Design</a></li>
@@ -31,14 +63,25 @@ exit; // Exit if accessed directly.
 		</div>
 
 		<div class="services__list_container services__list_container--service-models">	
-		<div class="list__head services__list-head_service-models">Service Models</div>
-				<p class="services__list_description services__list_description--service-models">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>		
-		<ul class="services__list services-list__page-head_service-models">
+		<div class="list__head services__list-head  services__list-head_service-models">Roles</div>
+		<div class="services__list-head_sublist">
+			<a class="services__list-head_link" href="/">Advisory</a><!-- definition / resolution --> 
+			<span class="services__list-head_dot-divider">&#x000B7;</span>
+			<a class="services__list-head_link" href="/">Collaborative</a>
+					<span class="services__list-head_dot-divider">&#x000B7;</span>
+			<a class="services__list-head_link" href="/">Turnkey</a>
+		</div>
+		<p class="services__list_description services__list_description--core-services">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>	
+<!-- 		<ul class="services__list services-list__page-head_core-services">
 			<li class="services__list-item_link"><a href="/">Development & Design</a></li>
 			<li class="services__list-item_link"><a href="/">Planning & Analysis</a></li>
 			<li class="services__list-item_link"><a href="/">Operations & Management</a></li>
-		</ul>
+		</ul> -->
 		</div>
+
+
+
+
 </div>
 
 

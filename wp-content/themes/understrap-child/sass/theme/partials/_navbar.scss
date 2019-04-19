@@ -99,8 +99,9 @@ margin-right: $navbar-padding-x; */
   padding-left: 0;
 
   list-style: none;
-       background: $navbar-nav-background;
-margin: $navbar-nav-margin;
+  background: $navbar-nav-background;
+  margin: $navbar-nav-margin;
+  @include vr($padding-top: 1);
 
   .nav-link {
     padding-right: 0;

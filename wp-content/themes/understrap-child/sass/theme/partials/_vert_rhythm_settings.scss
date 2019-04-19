@@ -30,6 +30,7 @@
 %caption, .caption         				        {@include vr($font-size:13px, $line-height:1.25);}   
 %legal, .legal           				        {@include vr($font-size:8px);}
 
+%headline-sm, .headline-sm        				    {@include vr($font-size:28.85px, $margin: 1 0);}
 %sublist-sm, .sublist-sm      				    {@include vr($font-size:14.5px, $line-height: 2);}
 %subhead-sm, .subhead-sm      				    {@include vr($font-size:22.5px, $margin: 2 0, $line-height: 2.4);}
 %display-text-sm, .display-text-sm 				{@include vr($font-size:16px, $line-height: 2, $margin: 2 0);}
@@ -37,7 +38,8 @@
 
 %intro_caption, .intro_caption         			{@include vr($font-size:12px, $line-height: 1.5);}
 
-.page__title            		                {@include vr($font-size: 1,);}
+.page__title            		                {@include vr($font-size: 1);}
+.page__title-lg            		                {@include vr($font-size: 2);}
 a.link__advance--text   						{}
 .navbar-brand, .navbar, .navbar li, .navbar a   {@include vr($font-size: 1, $margin-top: 0);}
 

@@ -443,7 +443,7 @@ exit; // Exit if accessed directly.
 				<div class="capabilities__menu_item" id="open-expt-overlay-1">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Strategy & Consultation</h3>
+						<h3>Strategy & Implementation</h3>
 						<p>Modern marketing concepts, strategies and practices to achieve business outcomes</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>

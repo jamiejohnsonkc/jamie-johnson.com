@@ -13,7 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container services__container_splash" id="services__splash">
 		<h1 class="services__splash_page-title page__title">My Services</h1>
 		<h2 class="headline services__splash_headline">End to End Possibilities</h2>
-		<h3 class="services__splash_subhead">Committed to service, performance and quality. <br>(in that order)</h3>
+		<h3 class="services__splash_subhead">Committed to <br class="services__splash_br">service,<br class="services__splash_br"> performance<br class="services__splash_br"> &<br class="services__splash_br"> quality.</h3>
+		<h4 class="services__splash_quip">(in that order)</h4>
 <!-- 		<ul class="services__splash_list">
 			<li class="services__splash_list-item"><a href="">Core Services</a></li>
 			<li class="services__splash_list-item"><a href="">Service Levels</a></li>
@@ -26,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		</div>
-	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__services_splash link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 

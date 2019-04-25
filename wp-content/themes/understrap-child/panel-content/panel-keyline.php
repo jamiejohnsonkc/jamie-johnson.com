@@ -8,12 +8,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-		<article class="article__wrapper content__wrapper development" id="">
-			<div class="container summary content__container_col"  id="">
+<section class=section>
+		<article class="article">
+		<div class="header">
+			<div class="panel">
+				<h2>In adipisicing dolore nisi eiusmod.</h2>
+				<h3>Lorem ipsum ut labore consectetur et occaecat culpa ut culpa ut anim veniam laboris sunt ad.</h3>
+				<p>Aliquip deserunt aliqua ullamco est occaecat commodo officia et est enim nisi laboris velit veniam.</p>
+				<p>Minim in velit officia ut dolor elit magna cillum eiusmod laborum fugiat incididunt.</p>
+				<p>Ullamco do dolor sint aute nulla labore ad enim non in laboris deserunt.</p>
+				<div class="card">
+					<h4 class="card__headline">Excepteur exercitation.</h4>
+					<div class="container container__image">
+						<img src="/localhost:3000/wp-content/uploads/2019/01/skills_28.svg" alt="">
+					</div> 	
+					<p class="card__body">Lorem ipsum qui est mollit eu esse et culpa esse nostrud ea.</p>
+
+				</div>
+				<div class="card">
+					<h4 class="card__headline">In occaecat.</h4>
+					<div class="container container__image">
+						<img src="/localhost:3000/wp-content/uploads/2019/01/skills_28.svg" alt="">
+					</div> 	
+					<p class="card__body">Sunt in commodo ut nisi aliquip dolor anim minim tempor.</p>
+
+				</div>
+				<div class="card">
+					<h4 class="card__headline">Labore dolore.</h4>
+					<div class="container container__image">
+						<img src="/localhost:3000/wp-content/uploads/2019/01/skills_28.svg" alt="">
+					</div> 	
+					<p class="card__body">Mollit in nisi nostrud aute non nisi nulla in exercitation.</p>
+
+				</div>
+				<div class="card">
+					<h4 class="card__headline">Lorem ipsum quis ut irure fugiat sit.</h4>
+					<div class="container container__image">
+						<img src="/localhost:3000/wp-content/uploads/2019/01/skills_28.svg" alt="">
+					</div> 	<p class="card__body">Veniam est id excepteur commodo veniam adipisicing occaecat duis anim est occaecat 
+					nostrud.</p>
+
+				</div>
+			</div>
+		</div>
+
 				<h1>Commodo sunt ea ullamco eu.</h1>
 				<h2>Consectetur velit ut esse cupidatat dolor in quis reprehenderit eiusmod aliquip..</h2>
 				<h3>Exercitation eu cupidatat in ut nisi adipisicing aliqua in nulla sed laboris amet</h3>				
-				<div class="content__container">
+	
 						<div class="content__item_col intro" id="intro__content_development">
 							<!-- 	<div class="mobile__background--image" id="trend-arrow">
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="..." class="style-svg"/>
@@ -45,4 +87,5 @@ exit; // Exit if accessed directly.
 		</a>
 	</div>
 </article>
+</section>
 <!-- cover end -->

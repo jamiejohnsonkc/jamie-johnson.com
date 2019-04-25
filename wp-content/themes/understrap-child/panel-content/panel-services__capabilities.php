@@ -8,9 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
+
+<section class="section">
 <article class="article__wrapper  content__wrapper my-capabilities skills">
+		<h1 class="pagination">a la Carte services</h1>
 	<div class="container my-capabilities my-capabilities__container__skills" id="my-skills">
-		<h1>a la Carte services</h1>
+
 		<div class="capabilities__overlay capabilities__overlay--marketing-strategy" id="expt-overlay-1">
 			<button class="circle__button expt__close--button" id="expt-close-1">
 			&times;</button>
@@ -410,32 +413,32 @@ exit; // Exit if accessed directly.
 				<div class="capabilities__menu_item" id="open-expt-overlay-4">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Mobile + Web <br>Design & Development</h3>
-						<p>Digital assets and content built from the ground up to advance business.</p>
+						<h3 class="capabilities__menu-content_header">Mobile + Web <br>Design & Development</h3>
+						<p class="capabilities__menu_copy">Digital assets and content built from the ground up to advance business.</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 				<div class="capabilities__menu_item" id="open-expt-overlay-3">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Integrated Communications</h3>
-						<p>Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
+						<h3 class="capabilities__menu-content_header">Integrated Communications</h3>
+						<p class="capabilities__menu_copy">Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 				<div class="capabilities__menu_item" id="open-expt-overlay-2">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Strategic Marketing Management</h3>
-						<p>Where business plans transform into marketing strategy</p>
+						<h3 class="capabilities__menu-content_header">Strategic Marketing Management</h3>
+						<p class="capabilities__menu_copy">Where business plans transform into marketing strategy</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 				<div class="capabilities__menu_item" id="open-expt-overlay-5">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Marketing Operations</h3>
-						<p>Optimizing marketing as a function, organization and an activity</p>
+						<h3 class="capabilities__menu-content_header">Marketing Operations</h3>
+						<p class="capabilities__menu_copy">Optimizing marketing as a function, organization and an activity</p>
 						<!-- <p>Or, how to make strategy, techonology and reality get along.</p> -->
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
@@ -443,14 +446,15 @@ exit; // Exit if accessed directly.
 				<div class="capabilities__menu_item" id="open-expt-overlay-1">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon"/>
 					<div class="capabilities__menu_item--content">
-						<h3>Strategy & Implementation</h3>
-						<p>Modern marketing concepts, strategies and practices to achieve business outcomes</p>
+						<h3 class="capabilities__menu-content_header">Strategy & Implementation</h3>
+						<p class="capabilities__menu_copy">Modern marketing concepts, strategies and practices to achieve business outcomes</p>
 						<a class="link" id="capabilities__menu_link">Learn More</a>
 					</div>
 				</div>
 			</nav>
 		</div>
-		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 	</div>
 </article>
+</section>

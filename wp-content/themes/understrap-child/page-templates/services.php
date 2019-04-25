@@ -14,9 +14,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main" role="main">
-		<section id="section__hire_me">
+		
 			<?php get_template_part( 'panel-content/panel', 'services__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'services__summary' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'services__expertise' ); ?>
 				<?php get_template_part( 'panel-content/panel', 'services__capabilities' ); ?>
 		<!-- ?php get_template_part( 'panel-content/panel', 'services__webdev' ); ?> -->
 		<!-- ?php get_template_part( 'panel-content/panel', 'services__marcom' ); ?> -->
@@ -25,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	
 			<?php get_template_part( 'panel-content/panel', 'services__commitment' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'services__cta' ); ?>
-		</section>
+	
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->
 		<?php get_footer(); ?>

@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 
 <article class="article__wrapper  about-me">
 	<div class="container about-me__container__personal">
-<div class="page-title">
+<div class="pagination">
 				<hr>
 				<span>what i am</span>
 			</div>

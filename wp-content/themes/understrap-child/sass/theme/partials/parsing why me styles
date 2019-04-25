@@ -3,7 +3,7 @@
 
 // .business-value {
 //     h1 {
-//         @extend .page__title;
+//         @extend .pagination;
 //     }
 
 //     @include mq('tablet') {
@@ -80,7 +80,7 @@
 // .justification{
 
 // h1{
-//   @extend .page__title;
+//   @extend .pagination;
 // }
 // h2{
 //   @extend %title;

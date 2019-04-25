@@ -43,7 +43,7 @@ exit; // Exit if accessed directly.
 
 			</div>
 		<div class="footnote">*That's a big fancy handle for the business end of marketing (*i.e. making sure it does more than look pretty)</div>
-		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 	</div>

@@ -4,7 +4,7 @@
 //
 .business-value {
     h1 {
-        @extend .page__title;
+        @extend .pagination;
     }
 
     @include mq('tablet') {

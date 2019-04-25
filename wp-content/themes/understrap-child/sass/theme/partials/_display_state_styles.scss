@@ -23,15 +23,18 @@
 }
 
 
-.intro__summation_subhead--br{
+.intro__summation_graphic-headline--br{
     display: none;
 }
 
 
-.intro__summation_subhead--br2{
+.intro__summation_graphic-headline--br2{
 display: none;
 }
 
+.services-panel__bgimg_widescreen{
+    display: none;
+}
 
 .diagram__end-to-end--horizontal {
     display: none;
@@ -44,9 +47,18 @@ display: none;
 .services__splash_br{
     display: none;
 @include mq('tablet'){
-    display: flex;
+    display: none;
 }
 }
+
+
+.services__splash_br.services__splash_br--service{
+@include mq('phone'){
+display: flex;
+}
+}
+
+
 // ==========================================================================
 // homepage__splash_splash-label variables
 // ==========================================================================
@@ -143,12 +155,6 @@ display: none;
     .home-page-summary__claim_subhead--br{
         display: flex;
     }
-#stats-slider>.carousel-inner.one-up-carousel{
-    display: none;
-}
-#stats-slider>.carousel-inner.three-up-carousel{
-    display: block;
-}
 }
 
 @include mq('tablet-wide') {
@@ -172,7 +178,7 @@ display: none;
         display: flex;
     }
 
-    .services__panel-img_container-wide-screen--management, .services__panel-img_container-wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning {
+    .services-panel__bgimg_widescreen, .services-panel_bgimg_wide-screen--management, .services-panel_bgimg_wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning {
         display: block;
     }
 
@@ -183,6 +189,13 @@ display: none;
     .diagram__end-to-end--vertical{
         display: none;
     } 
+
+#stats-slider>.carousel-inner.one-up-carousel{
+    display: none;
+}
+#stats-slider>.carousel-inner.three-up-carousel{
+    display: block;
+}
 
 }
 

@@ -254,14 +254,14 @@ button{
 // links
 // ==========================================================================
 
-.link__advance--chevron{
-    width: 3rem;
-    height: 3rem;
-    display: block;
-    @include mq('phone-wide'){
-      position: relative;
-    }
-}
+// .link__chevron{
+//     width: 3rem;
+//     height: 3rem;
+//     display: block;
+//     @include mq('phone-wide'){
+//       position: relative;
+//     }
+// }
 
 .link__advance--text{
 bottom: 5rem;

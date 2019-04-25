@@ -11,8 +11,8 @@ exit; // Exit if accessed directly.
 <!-- <div class="subsection__container home-page__summary-whatido_subsection"> -->
 	<article class="article__wrapper home-page-intro__article">
 
-		<div class="container page__title_container home-page-intro__page-title_container">
-			<h1 class="page__title home-page-intro__page-title">What I Do</h1>
+		<div class="container pagination_container home-page-intro__pagination_container">
+			<h1 class="pagination home-page-intro__pagination">What I Do</h1>
 		</div>
 		<div class="container home-page-intro__container">
 			<div class="panel-content panel-content__intro-icons">
@@ -30,7 +30,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					<div class="intro__icon_caption">
-						<h3 class="intro__summation_subhead">1. I'll help you get <br class="intro__summation_subhead--br">
+						<h3 class="intro__summation_graphic-headline">1. I'll help you get <br class="intro__summation_graphic-headline--br">
 			
 						</span>competitive</h3>
 					</div>
@@ -43,7 +43,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					<div class="intro__icon_caption">
-						<h3 class="intro__summation_subhead">2. I'll help you get <br class="intro__summation_subhead--br2">found</h3>
+						<h3 class="intro__summation_graphic-headline">2. I'll help you get <br class="intro__summation_graphic-headline--br2">found</h3>
 					</div>
 				</div>
 
@@ -54,7 +54,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					<div class="intro__icon_caption">
-						<h3 class="intro__summation_subhead">3. I'll help you establish <br class="intro__summation_subhead--br2">rapport</h3>
+						<h3 class="intro__summation_graphic-headline">3. I'll help you get <br class="intro__summation_graphic-headline--br2">business</h3>
 					</div>
 				</div>
 
@@ -65,7 +65,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 					<div class="intro__icon_caption">
-						<h3 class="intro__summation_subhead">4. I'll help you grow your <br class="intro__summation_subhead--br">
+						<h3 class="intro__summation_graphic-headline">4. I'll help you get more <br class="intro__summation_graphic-headline--br">
 
 						</span>business</h3>
 					</div>
@@ -87,7 +87,7 @@ exit; // Exit if accessed directly.
 		<!-- </div> -->
 			
 		</div>
-		<a class="link link__advance--chevron home-page-intro__link_advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__chevron home-page-intro__link_advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 			</a>
 	</article>
@@ -96,7 +96,7 @@ exit; // Exit if accessed directly.
 	<div class="home-page-summary__claim_background--svg">
 		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	</div>
-		<div class="container page__title_container home-page-summary__claim_page-title--container"><h1 class="page__title home-page-summary__claim_page-title">What I Do</h1></div>
+		<div class="container pagination_container home-page-summary__claim_pagination--container"><h1 class="pagination home-page-summary__claim_pagination">What I Do</h1></div>
 	<div class="container home-page-summary__claim_container">
 
 		
@@ -110,7 +110,7 @@ exit; // Exit if accessed directly.
 
 
 	</div>
-			<a class="link link__advance--chevron home-page-summary__claim_link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+			<a class="link link__chevron home-page-summary__claim_link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 </article>

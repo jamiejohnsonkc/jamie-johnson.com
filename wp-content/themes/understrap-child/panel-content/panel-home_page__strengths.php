@@ -13,7 +13,7 @@ exit; // Exit if accessed directly.
 		
 
 		<div class="strengths__page-header_container">
-			<h1 class="page__title strengths__page_title">I Kick Ass</h1>
+			<h1 class="pagination strengths__page_title">I Kick Ass</h1>
 			<h2 class="page__headline strengths__page_headline">My M.O.</h2>
 			<ul class="page__summary strengths__page_summary">
 				<li class="strengths__page_summary--list-item"><span class="strengths__page_summary--digit">1.</span><span class="strengths__page_summary--statement">Advance Business Objectives</span></li>
@@ -45,7 +45,7 @@ exit; // Exit if accessed directly.
 				<div class="strengths__panel_head--title">what i do best</div>
 				<h3 class="strengths__panel_headline strengths__panel_headline--smm">Strategic Marketing Management</h3>
 			</div>
-			<h4 class="strengths__panel_subhead strengths__panel_subhead--smm">Designing, communicating, selling and delivering superior competitive value</h4>
+			<h4 class="strengths__panel_deck strengths__panel_deck--smm">Designing, communicating, selling and delivering superior competitive value</h4>
 		</div>
 
 
@@ -90,12 +90,12 @@ exit; // Exit if accessed directly.
 				<h3 class="strengths__panel_headline strengths__panel_headline--imc">Integrated Marketing Communications</h3>
 				</div>
 
-				<h4 class="strengths__panel_subhead strengths__panel_subhead--imc">Getting found, establishing rapport, earning trust of the modern customer</h4>
+				<h4 class="strengths__panel_deck strengths__panel_deck--imc">Getting found, establishing rapport, earning trust of the modern customer</h4>
 
 			</div>
 	
 		<div class="strengths__panel_content strengths__content">
-			<p class="body-copy strengths__panel_body-copy">I create digital, physical and strategic assets required to generate and exploit encounters with potential customers in the post-digital marketplace. I help businesses create engagements that demonstrate value and convey the institutional character that play heavily in the purchase decisions of today's empowered customer.</p>
+			<p class="body-copy strengths__panel_body-copy">I create digital, physical and strategic assets required to generate and exploit encounters with potential customers in the post-digital marketplace.</p><p class="body-copy strengths__panel_body-copy"> I help businesses create engagements that demonstrate value and convey the institutional character that play heavily in the purchase decisions of today's empowered customer.</p>
 		</div>
 
 		<div class="strengths__panel_subtext">
@@ -137,7 +137,7 @@ exit; // Exit if accessed directly.
 			<div class="strengths__panel_headers strengths__panel_head--headers">
 				<div class="strengths__panel_head--title">what i do best</div>
 				<h3 class="strengths__panel_headline strengths__panel_headline--ops">Marketing Process <br>& Operations</h3></div>
-				<h4 class="strengths__panel_subhead strengths__panel_subhead--ops">Melding methods, assets and strategy to optimize returns</h4>
+				<h4 class="strengths__panel_deck strengths__panel_deck--ops">Melding methods, assets and strategy to optimize returns</h4>
 		</div>
 
 		<div class="strengths__panel_content  strengths__content">
@@ -167,7 +167,7 @@ exit; // Exit if accessed directly.
 
 </div>
 
-<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 </a>
 </article>

@@ -1,10 +1,16 @@
-page / section --wrapper --container
+section --wrapper --container
 		|
 		|--header
 		|--footer
 		|--sidebar
 		|--menu
 		|
+		page
+		|head
+		|panels
+
+
+
 		article --wrapper --container
 				|
 				panel --wrapper --container
@@ -24,7 +30,6 @@ page / section --wrapper --container
 														|--headline
 														|--subhead		
 														|--
-														|--callout
 														|--dialog
 														|--caption
 														|--list

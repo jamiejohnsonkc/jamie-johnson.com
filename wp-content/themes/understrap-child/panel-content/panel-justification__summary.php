@@ -10,11 +10,13 @@ exit; // Exit if accessed directly.
 ?>
 <!-- <article class="article__wrapper  basic home-page home-page__howidoit">
 	<div class="container home-page__howidoit__container"> -->
-		<article class="article__wrapper content__wrapper management" id="article__wrapper--management-intro">
+		<article class="article__wrapper content__wrapper management">
 			<div class="container summary content__container_col"  id="article__container--management-intro">
 				<h1 class="page__title">I make sure marketing works</h1>
 				<h2>I suggest you make money, not overhead.</h2>
 	<!-- 			<h3>Three reasons you should hire me:</h3>			 -->	
+							
+
 								
  
 				<div class="content__container">
@@ -43,7 +45,7 @@ exit; // Exit if accessed directly.
 
 
 		
-		<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 	</div>

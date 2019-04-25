@@ -5,6 +5,8 @@
 //splash page mobile background images
 
 
+
+
 #profile-small {
 width: 50%;
 left: 50%;
@@ -37,8 +39,27 @@ display: block;
 
 #register-small{
     position: absolute;
-    left: 50%;
     overflow: hidden;
+    width: 100%;
+}
+.register-small{
+    margin-left: auto;
+    display: block;
+    width: 38.2%;
+    @include mq('phone'){}
+    @include mq('phone-wide'){}
+    @include mq('phablet'){
+        width: 50%;
+    }
+    @include mq('tablet-small'){}
+    @include mq('tablet'){}
+    @include mq('tablet-wide'){}
+    @include mq('desktop'){}
+    @include mq('desktop-wide'){}
+    @include mq('desktop-xl'){}
+    @include mq('desktop-xxl'){}
+    
+    
 }
 
 #my-conductor {
@@ -108,16 +129,23 @@ width: 80%;
 
 
 #my-shoes{
-    margin-left: -25%;
-    width: 115%;
+    width: 100%;
     overflow: hidden;
-    bottom: 1rem;
-@include mq('tablet-wide') {
-    width: 55%;
-    max-width: 55%;
-    margin-left: -2rem;
     bottom: 0;
+      -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-left: auto;
+@include mq('tablet-wide') {
+    width: 98%;
+    max-width: 98%;
+    right: -1em;
+    bottom: 1em;
 }
+}
+//--reminder--image is flipped so everything is backwards
+#shoes-img{
+    display: block;
+    width: 61%;
 }
 
 
@@ -342,17 +370,17 @@ display: block;
 .capabilities__menu_icon, .capabilities__menu_icon .cls-2, .capabilities__menu_icon .cls-1{
     // .style-svg, .cls-1, .cls-3, .cls-4 {
     //     max-width: $ms-10;
-        fill: $capabilities-menu-icon-fill-color;
+        fill: $primary;
     }
 
 
 
 #svg__blue_a2--bg{
      #A_outline{
-      stroke: $primary;
+      stroke: $pattens;
     } 
     #dots, #solid_dots{
-      fill: $primary
+      fill: $pattens;
     } 
     #grid, #pattern{
         stroke: #76D4F4;
@@ -364,13 +392,21 @@ display: block;
       stroke: $primary;
     } 
     #pattern, #grid{
-      stroke: $tungsten;
+      stroke: $gray-300;
     }
    #solid_dots, #dots{
       fill: $tungsten;
     } 
 }
 
+
+#globe .st0{
+stroke: none;
+}
+
+#accessible{
+    fill: #fff;
+}
 // .intro__icon--rocket, .intro__icon--conversation{
 //         .cls-1{
 //             fill: $black;

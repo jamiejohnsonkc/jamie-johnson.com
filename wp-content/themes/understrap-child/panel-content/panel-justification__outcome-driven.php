@@ -10,8 +10,8 @@ exit; // Exit if accessed directly.
 ?>
 <article class="article__wrapper  content__wrapper justification"> <!-- CONTAINER -->
 <div class="container business-value justification__container justification__container_objectives" id="objectives">
-	<div class="page-title justification__page-title objectives__page-title">
-		<h1 class="page__title">outcome driven marketing</h1>
+	<div class="pagination justification__pagination objectives__pagination">
+		<h1 class="pagination">outcome driven marketing</h1>
 	</div>
 	<div class="justification__flex-container">
 	<hgroup class="justification__page-header page__header page__header_number-title justification__page-header--objectives">
@@ -101,7 +101,7 @@ exit; // Exit if accessed directly.
 		</div>
 	</div>
 </div>
-	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 	</a>
 </div>

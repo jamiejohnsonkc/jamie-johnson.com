@@ -228,7 +228,7 @@
 //   width: 90em;
 //   max-width: 90em;
 // }
-// .page-title{
+// .pagination{
 // width: 100%;
 // max-width: 100%;
 // display: block;

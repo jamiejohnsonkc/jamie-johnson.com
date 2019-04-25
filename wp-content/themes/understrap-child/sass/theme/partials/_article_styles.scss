@@ -16,7 +16,7 @@
 //   }
 
 //   h3 {
-//     @extend %display-text-lg;
+//     @include display-text-lg();
 //   }
 
 //   p {
@@ -25,10 +25,41 @@
 // }
 
 
+.splash__page_title{
+
+}
+.splash__page_headline{
+}      
+
+.splash__page_subhead{
+  // // @include subhead-sm();
+
+  }
+
+
+.link.link__chevron--splash{
+ background: $primary;
+ border-radius: .75em;
+    
+
+
+
+
+> #link__advance_chev-dwn > g > path{
+  stroke: $white;
+
+}
+}
+
+
+
+
+
+
 // =========================================================================
 // homepage splash
 // =========================================================================
-.container.home-page__splash {
+.container.container--splash-home-page {
 
   padding-left: 0;
   padding-right: 0;
@@ -44,7 +75,7 @@
 
   //   @include vr($line-height: 3);
   // }
-.home-page__splash_advance-link{
+.container--splash-home-page_advance-link{
     position: absolute;
     display: block;
     @include push-auto;
@@ -195,57 +226,6 @@
 
 
 
-
-// .splash__label--head{
-//   font-weight: 400;
-// }
-
-/* ////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////     .core / homepage articles  //////////////////// */
-/* ///////////////////////////////////////////////////////////////////////////*/
-
-// .core {
-//   // @include left-middle;
-//   // @include split-rows;
-
-//   h1 {
-//     @extend .page__title;
-//   }
-
-//   h2 {
-//     @extend %headline;
-//         text-align: center;
-//   }
-
-//   // h3 {
-//   //   /*         @extend %display-text-lg;  */
-//   //   @extend %subhead;
-
-//   //   font-weight: 300;
-//   // }
-
-//   // h4 {
-//   //   @extend %display-text-lg;
-
-//   //   font-weight: 400;
-//   //   text-transform: uppercase;
-//   // }
-
-//   h5 {
-//     @extend %display-text;
-
-//     font-weight: 400;
-//     letter-spacing: .05em;
-//   }
-
-//   p {
-//     @extend %display-text-sm;
-//   }
-
-
-// }
-
-
 // ==========================================================================
 // home-page__summsary-whatido__subsection
 // ==========================================================================
@@ -270,7 +250,7 @@ background: $black;
 .container.home-page__container_summary{
 }
 
-.home-page-intro__page-title_container{
+.home-page-intro__pagination_container{
   color: $white;
   background: $black;
 }
@@ -306,12 +286,12 @@ background: rgba(020,020,020,.8);
 }
 
 
-h3.intro__summation_subhead{
+h3.intro__summation_graphic-headline{
   font-weight: 300;
   @include vr($font-size: 1);
   text-align:center;
 @include mq('tablet'){
-  @include vr($font-size: 3);
+  @include vr($font-size: 27px);
 }
 }
 
@@ -380,7 +360,7 @@ padding-left: 0;
 
 // .content__item_content--para {
 //   h2 {
-//     @extend %subhead;
+//   // @include subhead();
 //   }
 
 //   > h4 {
@@ -407,7 +387,7 @@ width: 100%;
    // @include vr($padding: 6 2);
 }
 
-.home-page-summary__claim_page-title{
+.home-page-summary__claim_pagination{
   color: $black;
   z-index:3;
 }
@@ -457,14 +437,19 @@ border-top: 1px solid $gray-300;
 }
 
 p.home-page-summary__claim--fancy{
-  @include body2-text();
+      @include mq('phone',$type: max){
+      text-align: left;
+  
+    }
+  @include body-text-lg();
+      @include vr($line-height: 3);
   font-style: italic;
   font-weight: 200;
       text-align: justify;
   font-family: $font-family-serif;
   z-index:3;
   @include mq('tablet'){
-    @include display-text;
+
 
   }
 }
@@ -493,7 +478,7 @@ p.home-page-summary__claim--fancy{
 .expertise__intro {
 
 }
-.page__title {
+.pagination {
 }
 .expertise__page_title {
 
@@ -503,7 +488,9 @@ p.home-page-summary__claim--fancy{
 text-transform: lowercase;
 font-weight: 200;
 letter-spacing: -.017em;
+@include mq('phone-wide'){
 text-align: justify;
+}
 }
 
 .expertise__intro_headline--border{
@@ -556,14 +543,15 @@ color: $white;
 .page__headline.strengths__page_headline{
   text-align: center;
   font-weight: 400;
-  @include subhead();
+  // @include subhead();
   @include mq('tablet'){
-    @include headline();
+    // @include headline();
   }
 }
 
 .strengths__page_summary--statement{
   @include vr($font-size: 2);
+  text-align: center;
   font-family: $font-family-sans-serif;
   letter-spacing: .025em;
   @include mq('tablet'){
@@ -592,12 +580,11 @@ color: $white;
 
 
 h3.strengths__panel_headline{
-    @include subhead();
+    // @include headline-sm();
         font-weight: 500;
     @include mq('tablet'){
-      @include headline();
+      // @include headline();
     @include vr($line-height: 3.25);
-    letter-spacing: -.025em;
     }
 }
 
@@ -608,26 +595,23 @@ h3.strengths__panel_headline--imc{
 }
 
 
-.strengths__panel_subhead{
-  @include body2-text();
+.strengths__panel_deck{
+  @include display-text-sm();
   font-weight: 400;
   @include mq('tablet'){
-      @include subhead-sm();
+      @include display-text();
       @include vr($line-height:2.75);
       // letter-spacing: -.025em;
     }
-
-
 }
 
 .strengths__panel_body-copy{
-  @include body1-text();
+  font-family: $font-family-serif;
+  @include body-text-md();
   @include mq('tablet'){
-      @include body2-text();
+      @include body-text-lg();
       @include vr($line-height: 2.75);
     }
-
-
 }
 
 ul.strengths__list_container {
@@ -707,7 +691,7 @@ ul.strengths__list_container {
 
 
   // .strengths__article_container.caption {
-  //   @extend %display-text-sm;
+  //   @include display-text-sm();;
 
   //   letter-spacing: .025em;
   // }
@@ -749,10 +733,10 @@ ul.strengths__list_container {
   h4 {}
 
 h5{
-  @extend %display-text;
+ @include display-text();
 }
 h6{
-  @extend %display-text-sm;
+  @include display-text-sm();;
 }
   p {
     font-family: $font-family-serif;
@@ -778,7 +762,7 @@ h6{
 }
 
 // .proof__panel-content_text p {
-//   @extend %display-text-sm;
+//   @include display-text-sm();;
 // text-align: justify;
 //   letter-spacing: .025em;
 // }
@@ -842,7 +826,7 @@ h6{
 }
 
 p.proof__panel_body-copy{
-      @extend .body1-text;
+      @include body-text-md();
       @include vr($margin: 0 auto);
       text-align: justify;
       
@@ -974,7 +958,7 @@ color: $primary;
   }
 
  .proof__panel_headline--centricity {
-    @include subhead();
+    // @include subhead();
     font-weight: 400;
     background: $black;
     color: $white;
@@ -998,27 +982,12 @@ color: $primary;
 
 
 
-.services__splash_page-title{
+.services__splash_pagination{
    
 
  }
 
-   h2.services__splash_headline{
-       font-weight: 500;
-       @include headline-sm();
-       text-align: center;
-       @include mq('tablet'){
-        @include headline();
-       }
-  }
-
-
-
-
-.container.services__container_splash{
-height: 95vh;
-justify-content: center;
- 
+.container.container--splash-services{
   @include mq('tablet-wide'){
     text-align: center;
     background: $primary;
@@ -1027,15 +996,14 @@ justify-content: center;
 }
 
 
-
-// .container.services__container_splash{
-// h1{
-//   @include vr($margin: 0 0 1.5 0);
-// }
-// h2{
-//   @include vr($margin: 0);
-// }
-// }
+   h2.services__splash_headline{
+       font-weight: 500;
+       // @include headline-sm();
+       text-align: center;
+       @include mq('tablet'){
+        // @include headline();
+       }
+  }
 
 .services__splash_subhead{
   font-family: $font-family-serif;
@@ -1065,7 +1033,7 @@ justify-content: center;
   @include vr($margin-top: 3);
 }
 
-// .container.splash.services__container_splash %subhead-sm {
+// .container.splash.container--splash-services %subhead-sm {
 //  @include vr($margin-bottom: 0);
 // }
 
@@ -1074,46 +1042,17 @@ justify-content: center;
     @include vr($margin-bottom: 0);
 }
 }
-// ==========================================================================
-// services page/articles
-// ==========================================================================
-// .services {
-//   h1 {
-//     @extend %subhead;
-//   }
-
-//   h2 {
-//     @extend %display-text-sm;
-//   }
-
-//   h3 {
-//     @extend %display-text;
-
-//     font-weight: 400;
-//   }
-
-//   p {
-//     @extend %display-text-sm;
-//   }
-
-//   li {
-//     @extend %list-item;
-
-//     color: #111;
-//   }
-
-//   %subhead {
-//     @include vr($margin-bottom: 0);
-//   }
-
-//   %display-text-sm {
-//     @include vr($margin: 0 0 2 0);
-//   }
-// }
 
 // ==========================================================================
 // services summary
 // ==========================================================================
+.pagination--services-splash{
+  @include mq('tablet-wide'){
+    color: $white;
+  }
+}
+
+
 
 .container.services__article_container{
   width: 100%;
@@ -1125,47 +1064,48 @@ justify-content: center;
 
 
 
-.services__page-title {
+.services__pagination {
 }
-.page__title {
-}
-.services__page_head {
-  background: $gray-100;
-}
+.pagination {
 
-.services__page-head_container{
 }
+.services__summary-head {
+  @include mq('tablet-wide'){
+    color: $white;
+  }
+  }
 
-.services__page-head_headline {
-@include headline-sm();
-font-weight: 400;
+
+.services__summary-head_container{
 letter-spacing: -.025rem;
-@include mq('tablet'){
-@include headline();
 }
+.services__summary-head_headline {
+
 }
 
-.services__page-head_subhead {
-@include subhead-sm();
-letter-spacing: -.05rem;
-font-weight: 300;
-letter-spacing: -.05rem;
-font-weight: 300;
-@include mq('tablet'){
-@include subhead();
-}
-}
-
-.services__page-head_description{
-  @extend %body2-text;
-}
-
-.services__page-head_container--headers{
-background: #f2f2f2;
+.services__summary-head_subhead {
+// // @include subhead-sm();
+// letter-spacing: -.05rem;
+// font-weight: 300;
+// letter-spacing: -.05rem;
+// font-weight: 300;
+// @include mq('tablet'){
+// // @include subhead();
 }
 
 
-.services__page-head_container--lists{
+.services__summary-head_description{
+  @include body-text-lg();
+}
+
+
+
+.services__summary-head_container--headers{
+// background: #f2f2f2;
+}
+
+
+.services__summary-head_container--lists{
 
 }
 .services__list_container {
@@ -1176,7 +1116,7 @@ background: #f2f2f2;
 }
 .services__list-head {
 @include vr($margin-bottom: 1);
-@include list-head-lg();
+@include list-head();
 font-weight: 400;
 @include mq('tablet'){
   @include list-head();
@@ -1203,9 +1143,9 @@ font-weight: 400;
 }
 
 .services__list_description{
- @include body2-text();
+ @include body-text-lg();
   @include mq('tablet'){
-  @include body1-text();
+  @include body-text-md();
 }
 }
 
@@ -1244,11 +1184,11 @@ font-weight: 400;
 
 
 .services__intro-text_copy{
-  @extend %body1-text;
+  @include body-text-md();;
 }
 
 .services__intro-text_copy--leader{
- @extend %body1-text;
+ @include body-text-md();;
  font-weight: 400;
 }
 
@@ -1275,10 +1215,13 @@ padding-left: 2em;
 }
 
 .services__panel_list-head{
-  color: $offwhite;
-  background: $primary;
-  display: inline-block;
-  @include list-head-lg();
+
+  background: $pattens;
+  padding: .5em;
+  width: 90%;
+  text-align: center;
+  @include body-text-md();
+  @include vr($line-height: 1.25);
   @include mq('tablet'){
   @include list-head();
 }
@@ -1293,20 +1236,22 @@ padding-left: 2em;
 }
 
 .services__panel_headline{
-  @extend %subhead;
+ @include vr($font-size: 22.5px);
+
+
+    font-weight: 400;
+  @include mq('tablet'){
+  // @include subhead-sm();
+}
 }
 
 .services__panel_headers{
   text-align: center;
-  %subhead-sm {
-    @include vr($margin-bottom: 3);
-  }
+
 }
 
-.services__panel_summary {
-  @include vr($font-size: 18px);
-  font-weight: 400;
-}
+
+
 
 
 // ==========================================================================
@@ -1321,20 +1266,19 @@ padding-left: 2em;
 @include mq('tablet-small'){}
 @include mq('tablet'){
 
-.services__page-head_container--headers{
+.services__summary-head_container--headers{
   @include vr($padding: 1);
 
 }
 
-.services__page-head_container--lists{
+.services__summary-head_container--lists{
     @include vr($padding: 1 0 0 2);
 }
 
-h3.services__page-head_subhead{
-  @include display-text();
-  @include vr($line-height: 3);
-}
-
+// h3.services__summary-head_subhead{
+//   @include display-text();
+//   @include vr($line-height: 3);
+// }
 
 
 
@@ -1363,38 +1307,19 @@ h3.services__page-head_subhead{
 // planning & analysis 
 // ==========================================================================
 
+@include mq('tablet-wide', $type: max) {
+  .services__panel_list-head{
+    color: black;
+  }
+}
+
+
 .services__panel--planning{
   background: $black;
 }
 
 .services__panel-head--planning, .services__panel_content--planning, li.services__list-item--planning{
-  color: $offwhite;
-}
-
-// ==========================================================================
-// capabilities menu
-// ==========================================================================
-
-.my-capabilities {
-  h1 {
-    @extend .page__title;
-  }
-
-
-
-  h3 {}
-
-  h4 {
-          @extend %display-text-lg; 
-  }
-
-  /*         @extend %display-text-lg;  */
-
-  p {
-    @extend %display-text-sm;
-  }
-}
-
+  color: $offwhite;}
 
 
 
@@ -1405,18 +1330,21 @@ h3.services__page-head_subhead{
 
 
 .my-capabilities__main-page {
-background: $pattens;
+// background: $pattens;
 }
 
 .my-capabilities__panel-head{
+text-align: center;
 }
 
 h2.capabilities__menu_headline{
-  @extend %headline;
+  
+  // // @include headline-sm();
+font-weight: 400;
 }
 
 .capabilities__menu_subhead{
-  @extend %subhead;
+  @include body-text-lg();
   @include mq('tablet-wide'){
   // @include vr($width: 40);
   margin-left: auto;
@@ -1425,39 +1353,39 @@ h2.capabilities__menu_headline{
 }
 
 .capabilities__menu_text{
-  @extend %display-text;
+ @include display-text();
   // @include vr($width: 29);
 }
 
 
 
 .capabilities__menu_item {
-  %subhead-sm {
-    @include vr($font-size: 16px);
-  }
+ background: lighten($pattens, 5%);
+}
 
-  %subhead-sm, %display-text-sm {
-    @include vr($margin: 0);
 
-    %display-text-lg {
+.capabilities__menu_copy{
+      @include body-text-md();
+      font-weight: 200;
       @include vr($line-height: 1.75, $margin-bottom: 0.25);
     }
-  }
-}
 
-.capabilities__menu_item--content h3 {
-  @extend %subhead-sm;
-}
 
-.capabilities__menu_item > div > p {
-  @extend %display-text-sm;
-}
+
+// .capabilities__menu-content_header{
+//   @extend %subhead-sm;
+// }
+
+
+// .capabilities__menu_item > div > p {
+//   @include display-text-sm();;
+// }
 
 #capabilities__menu_link {
-  @extend %body-text;
+  @include body-text();
 
   font-style: italic;
-  Color: $pattens;
+  Color: $primary;
 }
 
 // ==========================================================================
@@ -1481,11 +1409,11 @@ h2.capabilities__menu_headline{
 
 .overlay__container {
   h4 {
-    @extend %subhead;
+  // @include subhead();
   }
 
   h5 {
-    @extend %subhead;
+  // @include subhead();
   }
 }
 
@@ -1498,7 +1426,7 @@ h2.capabilities__menu_headline{
 }
 
 .overlay__content--head h5 {
-  @extend %display-text;
+ @include display-text();
 }
 
 .overlay__content {
@@ -1507,7 +1435,7 @@ h2.capabilities__menu_headline{
    } */
 
   p {
-    @extend %display-text-sm;
+    @include display-text-sm();;
   }
 
   li {
@@ -1524,7 +1452,7 @@ h2.capabilities__menu_headline{
 }
 
 .overlay-intro p {
-  @extend %display-text-sm;
+  @include display-text-sm();;
 
   font-weight: 200;
 }
@@ -1564,18 +1492,25 @@ h2.capabilities__menu_headline{
 .content__wrapper {
 }
 .commitment__article_wrapper {
+background: $offwhite;
 }
 .container {
 }
 .commitment__article_container {
+background: $white;
 }
-.page__title {
+.pagination {
+}
+
+.pagination_commitment{
 }
 .subhead {
 }
 .commitment__headline {
+// // @include headline-sm();
 font-weight: 500;
 letter-spacing: -.05rem;
+text-align: center;
 }
 
 .commitment__background{
@@ -1589,31 +1524,44 @@ letter-spacing: -.05rem;
 }
 .content__container {
 }
-.commitment_content__container {
+.commitment__content_container {
+
 }
 .commitment__subhead_container {
 }
+
 .commitment__subhead {
+@include body-text-lg();
 font-weight: 500;
 text-transform: lowercase;
 letter-spacing: -.05rem;
 color: $primary;
+font-family: $font-family-serif;
+text-align: center;
+font-style: italic;
+display: inline-block;
 }
 
 
 p.commitment__body_copy {
-@include vr($margin: 2);
-max-width: 24em;
+
+@include body-text-md();
+font-family: $font-family-serif;
+@include mq('tablet-wide'){
+
+}
 }
 
 .commitment__body-copy--leader {
 font-weight: 400;
-
+@include body-text-md();
+font-family: $font-family-sans-serif;
+color: $gray-700;
 }
 
 .link {
 }
-.link__advance--chevron {
+.link__chevron {
 }
 .chev--dwn {
 }
@@ -1626,53 +1574,62 @@ font-weight: 400;
 // ==========================================================================
 // call to action page
 // ==========================================================================
-.cta {
-  @include left-middle;
+// .cta {
+//   @include left-middle;
 
-  h1 {
-    @extend %title;
-  }
+//   h1 {
+//     @extend %title;
+//   }
 
-  h2 {
-    @extend %subhead-lg;
-  }
+//   h2 {
+//     @extend %subhead-lg;
+//   }
 
-  h3 {
-    @extend %display-text-lg;
-  }
+//   h3 {
+//     @include display-text-lg();
+//   }
 
-  p {
-    @extend %body-text-lg;
-  }
-}
+//   p {
+//     @extend %body-text-lg;
+//   }
+// }
 
 // ==========================================================================
 // background articles (categories, brands, atypical)
 // ==========================================================================
 
+
+
+
+
 #background-bg {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.background {
-  & h1 {
-    @extend .page__title;
-  }
 
-  & h2 {
-    @extend %headline;
-  }
-}
+
+
+
+// .background__headline{
+//   @include headline;
+//   font-weight: 500;
+//   letter-spacing: -.025em;
+// }
+
+// .background__subhead{
+//   @include subhead;
+//   font-weight: 300;
+// }
 
 .container.background h3 {
 
 }
 
-.content1__background {
-  & p {
-    @extend %display-text-sm;
-  }
+p.background__text{
+  @include body-text-lg();
 }
+
+
 
 .categories__content_caption {
   & h3 {
@@ -1751,9 +1708,7 @@ p{
     background: #fff;
 }
 
-.personal h1{
-    @extend .page__title;
-  }
+
 
 .personal{
 height: 850px;
@@ -1772,7 +1727,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 color: $black;
 
 p{
-  @extend %display-text-sm;
+  @include display-text-sm();;
 }
 @include mq('tablet-wide'){
   background: -moz-linear-gradient(left, rgba(221,238,255,.9) 15%, rgba(0,0,0,0) 100%);
@@ -1787,16 +1742,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 // ==========================================================================
 
 .bshit {
-  @extend %subhead;
+// @include subhead();
 }
 
 .alternate {
   & h1 {
-    @extend .page__title;
+
   }
 
   & h2 {
-    @extend %headline;
+
   }
 
   & h3 {
@@ -1805,7 +1760,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   }
 
   & p {
-    @extend %display-text-lg;
+
 
     /*      @include vr($font-size: 6, $line-height: 2);    */
   }
@@ -1819,39 +1774,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   overflow: hidden;
 }
 
-.splash {
-  h1 {
-    @extend %title-lg;
-  }
-
-  h2 {
-    @extend %subhead-lg;
-  }
-
-  h3 {
-    @extend %display-text-lg;
-  }
-
-  p {
-    @extend %body-text-lg;
-  }
-}
 
 
 // ==========================================================================
 // justification-panels__styles_global
 // ==========================================================================
 
-.business-value { 
-  h1 {
-        @extend .page__title;
-    }
-  }
 
 
 
   .justification__page-header_text{
-  @extend .display-text-sm;
+  @include display-text-sm();
 }
 
 
@@ -1870,7 +1803,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
  }
 
 .justification__conclusion > p {
-    @extend %display-text-sm;
+    @include display-text-sm();;
     font-weight: 300;
 }
 
@@ -1884,17 +1817,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .justification__content__copy {
   & h4 {
-    @extend %subhead;
+  // @include subhead();
 
     @include vr($font-size: 3);
   }
 
   & h5 {
-    @extend %display-text-lg;
+    @include display-text-lg();
   }
 
   & p {
-    @extend %display-text;
+   @include display-text();
 
     font-weight: 200;
   }
@@ -1929,7 +1862,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     }
 
     h4 {
-        @extend %display-text-sm;
+        @include display-text-sm();;
     }
     %display-text-sm{
         @include vr($margin: 1 0);
@@ -1943,7 +1876,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 // justification-panels__diagrams-layout_global 
 // ==========================================================================
 .objectives__diagram_li{
-  @extend .diagram-label;
+  @include diagram-label();
 }
 
 .end-to-end--horz {
@@ -2089,5 +2022,48 @@ text.st3.st4.st5{
 @include mq('desktop-xl'){}
 @include mq('desktop-xxl'){}
 
+
+
+/// ==========================================================================
+// 
+// ==========================================================================
+/// ==========================================================================
+// 
+// ==========================================================================
+/// ==========================================================================
+// 
+// ==========================================================================
+/// ==========================================================================
+// 
+// ==========================================================================
+/// ==========================================================================
+// 
+// ==========================================================================
+/// ==========================================================================
+// 
+// ==========================================================================
+
+.wrapper--header-services-summary{
+background: #f2f2f2;
+}
+
+.header--services-summary{
+border: 1.5em solid lighten($pattens,5%);
+// background: darken($pattens, 2%);
+background: $pattens;
+}
+
+.container--article-expertise{
+
+ @include mq('tablet'){
+    background: rgba(17,17,17,.7);
+border: .25em solid $black;
+color: $white;
+}
+}
+
+.content--planning.container--article-expertise{
+      background: rgba(17,17,17,.8);
+}
 
 

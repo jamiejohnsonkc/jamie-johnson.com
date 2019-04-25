@@ -11,10 +11,10 @@ exit; // Exit if accessed directly.
 <article class="article__wrapper content__wrapper brands">
 	<div class="container background background__container_brands" id="brand-history">
 		<div class="content-container content-container__background_brands">
-			<h1 class="page__title background__page-title background__page-title--brands">brand history</h1>
-		<h2 class="page__headline">Exceptional Breadth</h2>
-		<h3 class="page__subhead">Voluptate fugiat mollit amet dolore excepteur.</h3>
-		<div class="content1 content1__background content1__background--brands"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<h1 class="pagination background__pagination background__pagination--brands">brand history</h1>
+		<h2 class="page__headline background__page_headline brands__page_headline">Exceptional Breadth</h2>
+		<h3 class="page__subhead background__page_subhead brands__page_subhead">I've worked with global leaders, household names and also rans.</h3>
+		<div class="content1 content1__background content1__background--brands"><p class="background__text content1__background_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		</div>
 		<div class="content2 content2__background content2__background--brands">
 		<div class="background__brands_content">
@@ -55,7 +55,7 @@ exit; // Exit if accessed directly.
 		</div>
 		</div>
 	</div>
-	<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
 </div>

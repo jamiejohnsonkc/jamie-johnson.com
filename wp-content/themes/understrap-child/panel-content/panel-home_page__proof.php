@@ -9,16 +9,16 @@ exit; // Exit if accessed directly.
 }
 ?>
 <article class="article__wrapper content__wrapper home-page__article--proof" id="article__wrapper--proof">
-	<div class="container">
-		<div class="proof__article_container">
+
+		<div class="container proof__article_container">
 			<div class="proof__panel_wrapper">
-				<h1 class="page__title proof__page_title">why me</h1>
+				<h1 class="pagination proof__page_title">why me</h1>
 				<h2 class="page__headline proof__page_headline ">Four Big Reasons To Choose Me</h2>
 				<div class="proof__marketer_panel proof__panel_wrapper--border">
 					<div class="proof__panel_intro">!</div>
 					<div class="proof__content_outcomes" id="idooutcomes">
 						<h5 class="proof__panel_headline">I do outcomes. <span class="br"><br></span>Not overhead.</h5>
-						<div class="proof__content_text proof__content_text_idooutcomes"><p class="proof__panel_body-copy">It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p class="proof__panel_body-copy">Spenders generate rudderless overhead. Marketers find ways to grow revenue.</p><p class="proof__panel_body-copy"><em> I'm a Marketer.</em></p></div>
+						<div class="proof__content_text proof__content_text_idooutcomes"><p class="proof__panel_body-copy">It's been my experience there are two types people in my line of work &mdash; spenders &amp; marketers.</p><p class="proof__panel_body-copy">Spenders generate rudderless overhead. Marketers find ways to achieve strategic business objectives.</p><p class="proof__panel_body-copy"><em> I'm a Marketer.</em></p></div>
 						<div class="proof__content_item_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2-small.jpg" id="evo2small" alt="..."></div>
 					</div>
 				</div>
@@ -254,11 +254,13 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 		</div>
+
 	</div>
-</div>
-<a class="link link__advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 </a>
 </div>
+
+
 </article>
 <!-- cover end -->

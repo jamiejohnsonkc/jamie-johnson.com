@@ -1,135 +1,572 @@
-
-h1, h2, h3, h4, h5, h6{
-	font-family:    unset;
-	color:          unset;        
-	font-weight:    unset;
-	font-size:      unset;
+h1, h2, h3, h4, h5, h6 {
+  font-family: unset;
+  color: unset;
+  font-weight: unset;
+  font-size: unset;
 }
 
-p{
-
-font-family:        unset;
-color:              unset;
-font-weight:        unset;
-
+p {
+  font-family: unset;
+  color: unset;
+  font-weight: unset;
 }
 
-%title, %title-lg, %title-sm{
-
-font-family:        $headline-font-family;
-color:              $headline-color;        
-font-weight:        600;
-
+%title, %title-lg, %title-sm {
+  font-family: $headline-font-family;
+  color: $headline-color;
+  font-weight: 600;
 }
 
-%headline,%headline-lg,%headline-sm{
+%headline, %headline-lg, %headline-sm {
+  font-family: $headline-font-family;
+  color: $headline-color;
 
-font-family:        $headline-font-family;
-color:              $headline-color;       
-/* color:              $accent; */ 
-font-weight:        $headline-font-weight;
-
+  /* color:              $accent; */
+  font-weight: $headline-font-weight;
 }
 
-%subhead,%subhead-lg,%subhead-sm{
-
-font-family:        $subhead-font-family;
-color:              $subhead-color;        
-font-weight:        $subhead-font-weight;  
-                    
+%subhead, %subhead-lg, %subhead-sm {
+  font-family: $subhead-font-family;
+  color: $subhead-color;
+  font-weight: $subhead-font-weight;
 }
 
-%sublist, %sublist-lg, %sublist-sm{
-
-font-family:        $subhead-font-family;
-color:              $subhead-color;        
-
+%sublist, %sublist-lg, %sublist-sm {
+  font-family: $subhead-font-family;
+  color: $subhead-color;
 }
 
-%display-text, %display-text-lg, %display-text-sm, %figure-head,%figure-head-lg,%figure-head-sm, %figure-text, %figure-text-lg, %figure-text-sm,
-.d-text, .d-text-lg, .d-text-sm, .figure-head,.figure-head-lg,.figure-head-sm, .figure-text, .figure-text-lg, .figure-text-sm{
-
-font-family:        $display-text-font-family;
-color:              $display-text-color;        
-font-weight:        300;
-
+%display-text, %display-text-lg, %display-text-sm, %figure-head, %figure-head-lg, %figure-head-sm, %figure-text, %figure-text-lg, %figure-text-sm,
+.d-text, .d-text-lg, .d-text-sm, .figure-head, .figure-head-lg, .figure-head-sm, .figure-text, .figure-text-lg, .figure-text-sm {
+  font-family: $display-text-font-family;
+  color: $display-text-color;
+  font-weight: 300;
 }
 
 %body-text, %body-text-lg, %body-text-sm {
-
-font-family:        $body-text-font-family;
-color:              $body-text-color;        
-font-weight:        $body-text-font-weight;
-
+  font-family: $body-text-font-family;
+  color: $body-text-color;
+  font-weight: $body-text-font-weight;
 }
 
-%para-head, %para-head-lg, %para-head-sm{
-font-family:        $font-family-sans-serif;
-font-weight: 		400;
+%para-head, %para-head-lg, %para-head-sm {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
 }
 
-%para, %para-lg, %para-sm{
-font-family:        $font-family-serif;
+%para, %para-lg, %para-sm {
+  font-family: $font-family-serif;
 }
 
-
-
-%list-head, %list-head-lg, %list-head-sm{
-font-family:        $display-text-font-family;
-color:              $display-text-color;        
-font-weight:        400;
-letter-spacing: 	-.025em;	
-}
-%list-item, %list-item-lg, %list-item-sm{
-font-family:        $display-text-font-family;
-color:              $display-text-color;        
-font-weight:        200;	
+%list-head, %list-head-lg, %list-head-sm {
+  font-family: $display-text-font-family;
+  color: $display-text-color;
+  font-weight: 400;
+  letter-spacing: -.025em;
 }
 
-
-%caption, %caption-lg, %caption-sm{
-font-family:        $font-family-monospace;
-color:              $subhead-color;        
-font-weight:        300;
+%list-item, %list-item-lg, %list-item-sm {
+  font-family: $display-text-font-family;
+  color: $display-text-color;
+  font-weight: 200;
 }
 
-
-%legal, %legal-lg, %legal-sm{
-font-family:        $font-family-monospace;
-color:              $subhead-color;        
-// font-weight:        200;
+%caption, %caption-lg, %caption-sm {
+  font-family: $font-family-monospace;
+  color: $subhead-color;
+  font-weight: 300;
 }
 
-.nav-link{
-text-transform:     lowercase;
-font-family: 		$font-family-monospace;
+%legal, %legal-lg, %legal-sm {
+  font-family: $font-family-monospace;
+  color: $subhead-color;
+
+  // font-weight:        200;
 }
 
-.navbar-brand{
-	font-family: 	$font-family-monospace;
+.nav-link {
+  text-transform: lowercase;
+  font-family: $font-family-monospace;
 }
 
+.navbar-brand {
+  font-family: $font-family-monospace;
+}
 
 .lead {
-font-weight:        $lead-font-weight;
-}
-
-.page__title{
-font-family:        $font-family-serif;
-font-style:         italic;
-
+  font-weight: $lead-font-weight;
 }
 
 
-.theme-link, a:not([href]):not([tabindex]){
-font-family:        $font-family-sans-serif;
-color:              $link-color;
-text-decoration: 	$link-decoration;
+
+
+
+// =========================================================================
+// temp
+// =========================================================================
+
+
+
+
+// .page__headline {
+//   // @include headline-sm;
+//   // @include mq("tablet") {
+//   //   @include headline-lg;
+//   // }
+// @include headline();
+// }
+
+// .headline{
+//   @include headline-sm();
+//   @include mq("tablet") {
+//     @include headline-lg();
+//   }
+// }
+
+
+// =========================================================================
+// typography
+// =========================================================================
+
+.title, .headline{
+	font-weight: 500;
+	letter-spacing: -.025em;
 }
 
-.theme-link:hover{ 		
-color:    			$link-hover-color;
-text-decoration: 	$link-hover-decoration;
+.subhead, .deck{
+	font-weight: 400;
+}
+
+.title-sub, .pagination{
+	font-family: $font-family-serif;
+	 font-style: italic;
 }
 
 
+.legal, .legal-lg, .legal-sm {
+  font-family: $font-family-monospace;
+}
+
+.headline, .deck{
+	position: relative;
+}
+
+.section{
+// &__headline{
+// 	@include headline-sm;
+//   @include mq("tablet") {
+//     @include headline;
+//   }
+//   @include mq("desktop") {
+//     @include headline-lg;
+//   }
+
+// }
+&__subhead{}
+&__sublist{}
+&__deck{
+	&__display-text{}
+	&__body-text{}
+&--lg{}
+&--sm{}
+}
+&__copy{
+	&--short{}
+	&--long{}
+}
+
+&__caption{}
+&__quote
+&__quip{}
+&__footnote{}
+&__legal{}
+&__citation{}
+}
+
+.article{
+// &__headline{
+// 	@include headline-sm;
+//   @include mq("tablet") {
+//     @include headline;
+//   }
+//   @include mq("desktop") {
+//     @include headline-lg;
+//   }
+// }
+&__subhead{}
+&__sublist{}
+&__deck{
+	&__display-text{}
+	&__body-text{}
+&--lg{}
+&--sm{}
+}
+&__byline{}
+&__copy{
+	&--short{}
+	&--long{}
+}
+}
+
+.panel{
+&__headline{}
+&__subhead{}
+&__sublist{}
+&__deck{
+	&__display-text{}
+	&__body-text{}
+&--lg{}
+&--sm{}
+}
+&__copy{
+	&--short{}
+	&--long{}
+}
+}
+
+.image{
+&__caption{}
+&__credit{}
+}
+
+.diagram{
+&__headline{}
+&__subhead{}
+&__sublist{}
+&__deck{
+	&__display-text{}
+	&__body-text{}
+&--lg{}
+&--sm{}
+}
+&__copy{
+	&--short{}
+	&--long{}
+}
+&__caption{}
+&__quote{}
+&__quip{}
+&__footnote{}
+&__legal{}
+&__citation{}
+}
+
+.card{
+&__headline{}
+&__subhead{}
+&__sublist{}
+&__deck
+&__body-lg{}
+&__body-sm{}
+&__caption{}
+&__quote
+&__quip{}
+&__footnote{}
+&__legal{}
+}
+
+
+
+// .page__subhead{
+// 	@include subhead();
+// 		&--serif{
+// 		font-family: $font-family-serif;
+// 	}
+// 	@include mq('tablet'){
+// 	@include subhead-lg();
+// 	}
+
+// }
+
+
+.title {
+  @include title();
+  @include mq("desktop-wide") {
+    @include title-lg();
+}
+  
+
+
+  &--center {
+    text-align: center;
+  }
+}
+
+
+.title-sub {
+  font-family: $font-family-serif;
+  font-style: italic;
+
+  @include title-sub();
+
+  // font-weight: 500;
+  // letter-spacing: -.025em;
+
+  // @include mq("tablet") {
+  //   @include title-sub;
+  // }
+  @include mq("desktop-wide") {
+    @include title-sub-lg();
+  }
+
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.pagination {
+  @include pagination-sm();
+    color: $gray-900;
+
+  @include mq("tablet") {
+    @include pagination();
+  }
+  @include mq("desktop-wide"){
+  	@include pagination-lg();
+  }
+ &--white{
+  color: $white;
+}
+  &--center {
+    text-align: center;
+  }
+}
+
+.headline{
+  // @include headline-sm;
+  // @include mq("tablet") {
+ 
+  // }
+  &__header{
+    @include header__headline(); 
+  @include mq("desktop") {
+    @include header__headline-lg();
+  }
+}
+
+  &__block{
+	@include block__headline();
+	font-weight: 400;
+}
+
+&__item{
+	@include item__headline();
+}
+
+  &--center {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+// .subhead{
+//   // @include subhead-sm;
+//   // @include mq("tablet") {
+ 
+//   // }
+//   &__header{
+//     @include header__subhead(); 
+//   @include mq("desktop") {
+//     @include header__subhead-lg();
+//   }
+//   &--sublist {
+    
+//   }
+//     &--sublist-item {
+    
+//   }
+
+//   &--center {
+//     text-align: center;
+//   }
+// }
+
+//   &__block{
+// 	@include block__subhead();
+//   &--sublist {
+    
+//   }
+//     &--sublist-item {
+    
+//   }
+
+//   &--center {
+//     text-align: center;
+//   }
+// }
+
+// &__item{
+// 	@include item__subhead();
+
+
+//   &--sublist {
+    
+//   }
+//   &--sublist-item {
+    
+//   }
+
+//   &--center {
+//     text-align: center;
+//   }
+// }
+// &--sublist {
+    
+//   }
+//   &--sublist-item {
+    
+//   }
+
+//   &--center {
+//     text-align: center;
+//   }
+
+// }
+
+
+
+.subhead{
+  // @include subhead-sm;
+  // @include mq("tablet") {
+ 
+  // }
+  &__header{
+    @include header__subhead(); 
+  @include mq("desktop") {
+    @include header__subhead-lg();
+  }
+}
+  &__block{
+  		@include block__subhead();
+}
+  &__item{
+  	@include item__subhead();
+  }
+
+  &--sublist {
+    color: yellow;
+  }
+    &--sublist-item {
+    font-weight: 300;
+  }
+  &--sublist-divider {
+    color: $gray-900;
+    @include vr($padding: 0 .25);	
+  }
+
+  &--center {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.deck{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  &__header{
+    @include header__deck(); 
+}
+  &__block{
+  		@include block__deck();
+}
+  &__item{
+  	@include item__deck();
+ } 
+    &--center {
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.copy{
+// @include copy();
+
+&__header{
+	@include header__copy();
+}
+&__block{
+		@include block__copy();
+}
+&__long{
+@include vr($line-height: 2.5);
+
+	
+
+	&--serif{
+		font-family: $font-family-sans-serif;
+	}
+
+}
+&:last-of-type{
+	margin-bottom: 0;
+}
+}
+
+.list{
+margin-top: 0;
+margin-bottom: 0;
+&--no-indent{
+	list-style-position: inside;
+	text-indent: -2em;
+	padding-left: 2em;
+}
+}
+
+
+.list-head{
+  font-weight: 500;
+  letter-spacing: .025em;
+  &__header{
+    @include header__list-head(); 
+}
+  &__block{
+@include block__list-head();
+}
+
+  &__item{
+  	@include item__list-head();
+  }
+
+  &--background{
+  	@include vr($padding: .25 .5, $margin-bottom: 1);
+  }
+  //   &--center {
+  //   text-align: center;
+  //   align-self: center;
+  // }
+}
+
+.list-item{
+  font-weight: 300;
+  // text-indent: 1em;
+  // margin-left: -1em;
+  &__header{
+    @include header__list-item(); 
+}
+  &__block{
+@include block__list-item();
+}
+
+  &__item{
+  	@include item__list-item();
+  }
+  //   &--center {
+  //   text-align: center;
+  //   align-self: center;
+  // }
+}
+
+
+
+.link, a:not([href]):not([tabindex]) {
+  font-family: $font-family-sans-serif;
+  color: $link-color;
+  text-decoration: $link-decoration;
+}
+
+.link:hover {
+  color: $link-hover-color;
+  text-decoration: $link-hover-decoration;
+}

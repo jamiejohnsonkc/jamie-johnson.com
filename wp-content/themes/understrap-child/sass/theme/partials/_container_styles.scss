@@ -1,4 +1,5 @@
 .container{
+	width: 83.82%;
 	@include push-auto();
 }
 
@@ -8,7 +9,7 @@
 
 @include mq('phablet', $type:max){
 	.navbar>.container, .navbar>.container-fluid { width: 90%; position: relative; margin: 0 auto; }
-	.container { width: 90%; padding-left: 0; padding-right: 0; max-width: 90%; }
+	.container { width: 83.82%; padding-left: 0; padding-right: 0; max-width: 90%; }
 }
 @include mq('phablet'){
 	.navbar>.container, .navbar>.container-fluid { position: relative; margin: 0 auto; width: 100%; max-width: 100%; padding: 0 2em; }
@@ -36,7 +37,7 @@
 
 @include mq('desktop') {}
 @include mq('desktop-wide') { 
-	.container { width: 99em; max-width: 99em; }
+	.container { width: 81%; max-width: 81%; }
 }
 
 @include mq('desktop-xl') { }

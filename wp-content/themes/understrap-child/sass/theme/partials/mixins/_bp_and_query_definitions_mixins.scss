@@ -11,18 +11,19 @@
 //     "desktop-uhd":  2560px;px
 // );px */
 
-$breakpoints: (   
-    "phone":        25em, 	/*400px*/
-    "phone-wide":   30em, 	/*480px*/
-    "phablet":      35em, 	/*560px*/
-    "tablet-small": 40em, 	/*640px*/
-    "tablet":       48em, 	/*768px*/
-    "tablet-wide":  64em, 	/*1024px*/
-    "desktop":      78em, 	/*1248px*/
-    "desktop-wide": 90em, 	/*1440x*/
-    "desktop-xl":   118em,	/*1900px //1920px*/
-    "desktop-xxl":  160em	/*2560px*/
-);
+$breakpoints: (
+  "phone":          25em, 
+  "phone-wide":     30em, 
+  "phablet":        35em, 
+  "tablet-small":   40em, 
+  "tablet":         48em, 
+  "tablet-wide":    64em, 
+  "desktop":        78em, 
+  "desktop-wide":   90em, 
+  "desktop-xl":     118em, 
+  "desktop-xxl":    160em
+  );
+
 
 //example
 //@include mq('phone', $type:max){
@@ -42,18 +43,18 @@ $breakpoints: (
 // 2560px */
 
 @mixin mq($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-        @if $type == max {
-            $width: $width - .1em;
-        }
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 0.1em;
     }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
 }
-
-
 
 /* //The example below showing the padding and font-size increasing once the viewport gets over 1024px.
 //
@@ -67,55 +68,259 @@ $breakpoints: (
 //}
 // */
 
+$mq-phone-small: "(max-width: #{bp-phone-small})";
+$mq-phone: "(min-width: #{bp-phone})";
+$mq-phone-wide: "(min-width: #{bp-phone-wide})";
+$mq-phablet: "(min-width: #{bp-phablet})";
+$mq-tablet-small: "(min-width: #{bp-tablet-small})";
+$mq-tablet: "(min-width: #{bp-tablet})";
+$mq-tablet-wide: "(min-width: #{bp-tablet-wide})";
+$mq-desktop: "(min-width: #{bp-desktop})";
+$mq-desktop-wide: "(min-width: #{bp-desktop-wide})";
+$mq-desktop-xl: "(min-width: #{bp-desktop-xl})";
+$mq-desktop-xxl: "(min-width: #{bp-desktop-xxl})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+@mixin pagination-lg {
+  @include vr($font-size: 4);
+
+  font-family: $font-family-serif;
+}
+
+@mixin title-lg {
+  @include vr($font-size: 10, $margin: 2 0);
+}
+
+@mixin title-sub-lg{
+    @include vr($font-size: 7, $margin: 2 0);
+}
+
+@mixin header__headline-lg {
+  @include vr($font-size: 6, $margin: 2 0);
+
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+@mixin header__subhead-lg {
+  @include vr($font-size: 5, $margin: 2 0);
+}
+
+@mixin sublist-lg {
+  @include vr($font-size: 36px, $margin: 2 0);
+}
+
+@mixin deck-lg {
+  @include vr($font-size: 32px, $margin: 1 0);
+}
+
+@mixin display-text-lg {
+  @include vr($font-size: 28px, $margin: 2 0);
+}
+
+@mixin body__text_lg {
+  @include vr($font-size: 24px, $margin: 1.5 0);
+}
+
+@mixin list-head-lg {
+  @include vr($font-size: 20px);
+}
+
+@mixin list-item-lg {
+  @include vr($font-size: 16px, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin para-head-lg {
+  @include vr($font-size: 18px, $margin-bottom: 0.5);
+}
 
 
 
-$mq-phone-small:    "(max-width: #{bp-phone-small})";
-$mq-phone:        	"(min-width: #{bp-phone})";
-$mq-phone-wide:   	"(min-width: #{bp-phone-wide})";
-$mq-phablet:      	"(min-width: #{bp-phablet})";
-$mq-tablet-small: 	"(min-width: #{bp-tablet-small})";
-$mq-tablet:       	"(min-width: #{bp-tablet})";
-$mq-tablet-wide:  	"(min-width: #{bp-tablet-wide})";
-$mq-desktop:      	"(min-width: #{bp-desktop})";
-$mq-desktop-wide: 	"(min-width: #{bp-desktop-wide})";
-$mq-desktop-xl:   	"(min-width: #{bp-desktop-xl})";
-$mq-desktop-xxl:  	"(min-width: #{bp-desktop-xxl})";
-$mq-retina: 		"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+@mixin para-lg {
+  @include vr($font-size: 18px, $margin-bottom: 1);
+}
 
-@mixin title-lg {           @include vr($font-size: 60px, $margin:2 0); }
-@mixin headline-lg {        @include vr($font-size: 48px, $margin:2 0); }
-@mixin subhead-lg {         @include vr($font-size: 36px, $margin:2 0); }
-@mixin sublist-lg {         @include vr($font-size: 36px, $margin:2 0); }
-@mixin tldr {               @include vr($font-size: 32px, $margin:1 0); }
-@mixin display-text-lg {    @include vr($font-size: 28px, $margin:2 0); }
-@mixin body__text_lg {      @include vr($font-size: 24px, $margin:1.5 0); }
-@mixin list-head-lg {       @include vr($font-size: 20px); }
-@mixin list-item-lg {       @include vr($font-size: 16px, $margin-bottom:1, $line-height:1.5); }
-@mixin para-head-lg {       @include vr($font-size: 18px, $margin-bottom:.5); }
-@mixin para-lg {            @include vr($font-size: 18px, $margin-bottom:1); }
-@mixin caption-lg {         @include vr($font-size: 14px, $line-height:1.25); }
-@mixin legal-lg {           @include vr($font-size: 10px); }
+@mixin caption-lg {
+  @include vr($font-size: 14px, $line-height: 1.25);
+}
+
+@mixin legal-lg {
+  @include vr($font-size: 10px);
+}
 
 
-@mixin title {              @include vr($font-size: 48px, $margin:2 0); }
-@mixin headline {           @include vr($font-size: 38.5px, $margin:2 0); }
-@mixin subhead {            @include vr($font-size: 28.85px, $margin:2 0); }
-@mixin sublist {            @include vr($font-size: 28.85px, $margin:2 0); }
-@mixin display-text {       @include vr($font-size: 22.5px, $line-height:2.4, $margin:2 0); }
-@mixin body2-text {         @include vr($font-size: 18px, $line-height:2, $margin:1 0); }
-@mixin body1-text {         @include vr($font-size: 15px, $line-height:2, $margin:1 0); }
-@mixin list-head {          @include vr($font-size: 13px, $margin-top:2, $margin-bottom:1, $line-height:1.5); }
-@mixin list-item {          @include vr($font-size: 12px, $margin-bottom:.75, $line-height:1.5); }
-@mixin body-text {          @include vr($font-size: 14.5px, $margin:1.5 0); }
-@mixin para-head {          @include vr($font-size: 14.5px, $margin-bottom:.5); }
-@mixin diagram-label {      @include vr($font-size: 10px); }
-@mixin para {               @include vr($font-size: 14.5px, $margin-bottom:1); }
-@mixin caption {            @include vr($font-size: 13px, $line-height:1.25); }
-@mixin legal {              @include vr($font-size: 8px); }
 
-@mixin headline-sm {           @include vr($font-size: 28.85px, $margin:1 0); }
-@mixin sublist-sm {         @include vr($font-size: 14.5px, $line-height:2); }
-@mixin subhead-sm {         @include vr($font-size: 22.5px, $margin:2 0, $line-height:2.4); }
-@mixin display-text-sm {    @include vr($font-size: 16px, $line-height:2, $margin:2 0); }
-@mixin caption-sm {         @include vr($font-size: 10px, $line-height:1.25); }
+
+
+@mixin pagination {
+  @include vr($font-size: 4);
+}
+
+@mixin title {
+  @include vr($font-size: 8, $margin: 2 0, $line-height: 4);
+}
+
+@mixin title-sub{
+    @include vr($font-size: 6, $margin: 2 0, $line-height: 3);
+}
+
+@mixin header__headline {
+  @include vr($font-size: 7, $margin: 2 0);
+}
+
+@mixin header__subhead {
+  @include vr($font-size: 5, $margin: 2 0);
+}
+
+@mixin header__copy{
+    @include vr($font-size: 3, $line-height: 2, $margin: 1 0);
+}
+
+@mixin sublist {
+  @include vr($font-size: 28.85px, $margin: 2 0);
+}
+
+
+@mixin header__deck {
+  @include vr($font-size: 3, $margin: 1 0, $line-height: 2);
+}
+
+@mixin display-text {
+  @include vr($font-size: 22.5px, $line-height: 2.4, $margin: 2 0);
+}
+
+// @mixin copy{
+//     @include vr($font-size: 3, $line-height: 1.5, $margin: 1 0);
+// }
+
+@mixin body-text-lg {
+  @include vr($font-size: 22.5px, $line-height: 2, $margin: 1 0);
+}
+
+@mixin body-text-md {
+  @include vr($font-size: 18px, $line-height: 2, $margin: 1 0);
+}
+
+@mixin block__headline {
+  @include vr($font-size: 3, $margin-top: 1, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin block__subhead {
+  @include vr($font-size: 3, $margin-top: 1, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin block__deck {
+  @include vr($font-size: 3, $margin: 1 0, $line-height: 1.5);
+}
+
+@mixin block__copy{
+    @include vr($font-size: 3, $line-height: 1.5, $margin: 1 0);
+}
+
+
+@mixin item__headline {
+  @include vr($font-size: 3, $margin-top: 1, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin item__subhead {
+  @include vr($font-size: 2, $margin-top: 2, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin item__deck {
+  @include vr($font-size: 2, $margin: 2 0, $line-height: 1.5);
+}
+
+@mixin list-head {
+  @include vr($font-size: 2, $margin-top: 2, $margin-bottom: 1, $line-height: 1.5);
+}
+
+@mixin header__list-head {
+  @include vr($font-size: 4, $line-height: 2);
+}
+@mixin block__list-head {
+  @include vr($font-size: 3, $line-height: 1.5);
+}
+@mixin item__list-head {
+  @include vr($font-size: 2, $line-height: 1.5);
+}
+
+
+@mixin list-item {
+  @include vr($font-size: 12px, $margin-bottom: 0.75, $line-height: 1.5);
+}
+
+@mixin header__list-item {
+  @include vr($font-size: 12px, $margin-bottom: 0.75, $line-height: 1.5);
+}
+
+@mixin block__list-item {
+  @include vr($font-size: 12px, $margin-bottom: 0.75, $line-height: 1.5);
+}
+
+@mixin item__list-item {
+  @include vr($font-size: 2, $margin-bottom: 0.75, $line-height: 1.5);
+}
+
+
+@mixin body-text {
+  @include vr($font-size: 14.5px, $margin: 1.5 0);
+}
+
+@mixin para-head {
+  @include vr($font-size: 14.5px, $margin-bottom: 0.5);
+}
+
+@mixin diagram-label {
+  @include vr($font-size: 10px);
+}
+
+@mixin para {
+  @include vr($font-size: 14.5px, $margin-bottom: 1);
+}
+
+@mixin caption {
+  @include vr($font-size: 13px, $line-height: 1.25);
+}
+
+@mixin legal {
+  @include vr($font-size: 8px);
+}
+
+
+// @mixin title-sub-sm{
+//     @include vr($font-size: 6, $margin: 2 0);
+// }
+
+
+
+@mixin pagination-sm {
+  @include vr($font-size: 3);
+}
+
+
+
+@mixin headline-sm {
+  @include vr($font-size: 4, $margin: 1 0);
+}
+
+
+
+@mixin sublist-sm {
+  @include vr($font-size: 14.5px, $line-height: 2);
+}
+
+@mixin header__subhead-sm {
+  @include vr($font-size: 3, $margin: 2 0, $line-height: 2.4);
+}
+
+@mixin deck-sm {
+  @include vr($font-size: 2, $margin: 1 0);
+}
+
+@mixin display-text-sm {
+  @include vr($font-size: 16px, $line-height: 2, $margin: 2 0);
+}
+
+@mixin caption-sm {
+  @include vr($font-size: 10px, $line-height: 1.25);
+}

@@ -19,11 +19,11 @@ exit; // Exit if accessed directly.
 
 
 
-				<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--header">
+				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--header">
 					<h2 class="page__headline home-page-intro__headline">I'm way beyond <span class="home-page-intro__headline--br"><br></span>words and pictures</h2>
 				</div>
 
-				<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--icon intro-icon__flex-item_wrapper--fish">
+				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--fish">
 					<div class="content__intro_icon--background">
 						<div class="intro__icon intro__icon--fish">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/skill-33.svg" class="style-svg intro__icon_svg" alt="...">
@@ -36,7 +36,7 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 
-				<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--icon intro-icon__flex-item_wrapper--magnet">
+				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--magnet">
 					<div class="content__intro_icon--background">
 						<div class="intro__icon intro__icon--conversation">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_24.svg" class="style-svg intro__icon_svg" alt="...">
@@ -47,7 +47,7 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 
-				<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--icon intro-icon__flex-item_wrapper--handshake">
+				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--handshake">
 					<div class="content__intro_icon--background">
 						<div class="intro__icon intro__icon--conversation">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_26.svg" class="style-svg intro__icon_svg" alt="...">
@@ -58,7 +58,7 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 
-				<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--icon intro-icon__flex-item_wrapper--rocket">
+				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--rocket">
 					<div class="content__intro_icon--background">
 						<div class="intro__icon intro__icon--rocket">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" class="style-svg intro__icon_svg" alt="...">
@@ -77,7 +77,7 @@ exit; // Exit if accessed directly.
 
 
 	<article class="article__wrapper home-page-summary__bigger-picture_article"> -->
-						<div class="intro-icon__flex-item_wrapper intro-icon__flex-item_wrapper--copy">
+						<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--copy">
 		<!-- <div class="container home-page-summary__bigger-picture_container"> -->
 	<!-- 		<div class="panel-content home-page-summary__bigger-picture_panel-content"> -->
 				<h1 class="home-page-summary__bigger-picture_panel-subhead">

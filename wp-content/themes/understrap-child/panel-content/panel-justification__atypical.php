@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
+<section class="section">
 <article class="article__wrapper" id="justification-bg">
 	<div class="container alternate justification__article-container_atypical" id="atypical">
 		<div class="content-container">
@@ -81,3 +82,4 @@ exit; // Exit if accessed directly.
 		</div>
 	</div>
 </article>
+</section>

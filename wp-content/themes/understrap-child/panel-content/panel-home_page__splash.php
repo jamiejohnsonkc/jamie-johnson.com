@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 	<section id="section__home-page">
-	<article class="article__wrapper-fluid splash-wrapper home-page bgme">
+	<article class="article__wrapper-fluid article__wrapper--fluid home-page bgme">
 	
 <!-- 
 	<div class=" container splash container--splash-home-page" id="home__splash">

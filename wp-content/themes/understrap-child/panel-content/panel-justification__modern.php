@@ -8,14 +8,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
+<section class="section">
 <article class="article__wrapper  content__wrapper justification"> <!-- CONTAINER -->
 <div class="container business-value justification__container justification__container_modernize" id="modernize">
 	<div class="pagination justification__pagination modernize__pagination"><h1 class="pagination">traditional values, modern methods</h1></div>
 	
-	<hgroup class="justification__page-header page__header page__header_number-title justification__page-header--modernize">
+	<div class="justification__page-header page__header page__header_number-title justification__page-header--modernize">
 	
 	<h2 class="page__header_number">03</h2>
-	<h3 class="page__header_headline">I <span class="br"><br></span>modernize <br>marketing</h3></hgroup>
+	<h3 class="page__header_headline">I <span class="br"><br></span>modernize <br>marketing</h3></div>
 	<div class="page__header-text_container page__header-text_container--modernize"><p class="justification__page-header_text justification__page-header_text--square">We used to bring products to market. Today you have to bring the market to you. And that requires a whole new approach.</p></div>
 	
 	<div class="diagram justification__diagram diagram__modern-marketing">
@@ -34,3 +35,4 @@ exit; // Exit if accessed directly.
 </a>
 </div>
 </article>
+</section>

@@ -8,13 +8,13 @@ exit; // Exit if accessed directly.
 }
 ?>
 <section class="section section__fluid section--services-summary">
-	<article class="article container container__flex--column">
-<!-- 	<div class="container__fluid container__flex--column"> -->
+	<article class="article container container--flex--column">
+<!-- 	<div class="container__fluid container--flex--column"> -->
 		
 <!-- 		<div class="services__summary_head_wrapper"> -->
 		<h1 class="pagination pagination--services-summary ">End-to-End Expertise</h1>	
 
-			<div class="container__flex container--services-summary">
+			<div class="container--flex container--services-summary">
 				<!-- <div class="wrapper wrapper--header-services-summary"> -->
 				<div class="header header--services-summary">
 
@@ -27,7 +27,7 @@ exit; // Exit if accessed directly.
 				<!-- 	</div> -->
 				</div>
 		<!-- 	</div> -->
-				<div class="content content__flex--column content--services-summary">
+				<div class="content content--flex--column content--services-summary">
 					<div class="block block--service-areas">
 						<h4 class="headline headline__block">Service Areas</h4>
 						<div class="subhead subhead--sublist sublist--services-summary">

@@ -255,7 +255,7 @@ background: $black;
   background: $black;
 }
 
-.home-page-intro__page_tldr, .home-page-intro__page_headline, .home-page-intro__page_subhead, .intro-icon__flex-item_wrapper, .intro__icon_caption, .home-page-intro__page_display-text{
+.home-page-intro__page_tldr, .home-page-intro__page_headline, .home-page-intro__page_subhead, .intro-icon--flex-item_wrapper, .intro__icon_caption, .home-page-intro__page_display-text{
 color: $white;
 text-align: center;
 }
@@ -276,7 +276,7 @@ text-align: center;
 fill: $pattens;
 }
 
-.intro-icon__flex-item_wrapper--icon{
+.intro-icon--flex-item_wrapper--icon{
     // border: thin $offwhite solid;
 background: rgba(020,020,020,.8);
 }
@@ -987,7 +987,7 @@ color: $primary;
 
  }
 
-.container.container--splash-services{
+.container.container--services-splash{
   @include mq('tablet-wide'){
     text-align: center;
     background: $primary;
@@ -1033,7 +1033,7 @@ color: $primary;
   @include vr($margin-top: 3);
 }
 
-// .container.splash.container--splash-services %subhead-sm {
+// .container.splash.container--services-splash %subhead-sm {
 //  @include vr($margin-bottom: 0);
 // }
 
@@ -1397,71 +1397,67 @@ font-weight: 400;
   opacity: 0;
   transition: all 0.5s;
   color: $tungsten;
-
-  .expt-body-text, .expt-vert {
-    color: $tungsten;
-  }
-
-  hr {
-    width: 90%;
-  }
 }
+//   .expt-body-text, .expt-vert {
+//     color: $tungsten;
+//   }
 
-.overlay__container {
-  h4 {
-  // @include subhead();
-  }
+//   hr {
+//     width: 90%;
+//   }
+// }
 
-  h5 {
-  // @include subhead();
-  }
-}
+// .overlay__container {
+//   h4 {
+//   // @include subhead();
+//   }
 
-.overlay__container > .overlay-intro {
-  @include mq("tablet") {
-    p {
-      @include vr($font-size: 2, $line-height: 3);
-    }
-  }
-}
+//   h5 {
+//   // @include subhead();
+//   }
+// }
 
-.overlay__content--head h5 {
- @include display-text();
-}
+// .overlay__container > .overlay-intro {
+//   @include mq("tablet") {
+//     p {
+//       @include vr($font-size: 2, $line-height: 3);
+//     }
+//   }
+// }
 
-.overlay__content {
-  /*    h3{
-       @include vr($font-size: 1);
-   } */
+// .overlay__content--head h5 {
+//  @include display-text();
+// }
 
-  p {
-    @include display-text-sm();;
-  }
+// .overlay__content {
+//   /*    h3{
+//        @include vr($font-size: 1);
+//    } */
 
-  li {
-    @include vr($line-height: 1.75, $font-size: 1);
-  }
+//   p {
+//     @include display-text-sm();;
+//   }
 
-  @include mq("tablet") {
-    p {
-      margin-left: 19%;
+//   // li {
+//   //   @include vr($line-height: 1.75, $font-size: 1);
+//   // }
 
-      @include vr($margin-top: -1, $width: 30);
-    }
-  }
-}
+//   @include mq("tablet") {
+//     p {
+//       margin-left: 19%;
 
-.overlay-intro p {
-  @include display-text-sm();;
+//       @include vr($margin-top: -1, $width: 30);
+//     }
+//   }
+// }
 
-  font-weight: 200;
-}
+// .overlay-intro p {
+//   @include display-text-sm();;
 
-.overlay__content li {
-  @include mq("tablet") {
-    @include vr($font-size: 1, $line-height: 2);
-  }
-}
+//   font-weight: 200;
+// }
+
+
 
 .capabilities__overlay--webdev {
   h5, hr {
@@ -1482,6 +1478,8 @@ font-weight: 400;
     text-transform: uppercase;
   }
 }
+
+
 
 // ==========================================================================
 // services__commitment_panel_styles
@@ -1770,7 +1768,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 // splash article - master
 // ==========================================================================
 
-.splash-wrapper {
+.article__wrapper--fluid {
   overflow: hidden;
 }
 
@@ -2041,21 +2039,33 @@ text.st3.st4.st5{
 // ==========================================================================
 /// ==========================================================================
 // 
-// ==========================================================================
+// =========================================================
+
+
 
 .wrapper--header-services-summary{
 background: #f2f2f2;
 }
 
+.container--services-summary{
+    @include mq("phone", $type:max){
+  }
+}
+
 .header--services-summary{
+  @include mq("phone", $type:max){
+border: 1em solid lighten($pattens,5%);
+  }
+
 border: 1.5em solid lighten($pattens,5%);
 // background: darken($pattens, 2%);
 background: $pattens;
+
 }
 
 .container--article-expertise{
-
- @include mq('tablet'){
+height:auto;
+ @include mq('tablet-wide'){
     background: rgba(17,17,17,.7);
 border: .25em solid $black;
 color: $white;
@@ -2063,7 +2073,34 @@ color: $white;
 }
 
 .content--planning.container--article-expertise{
+     background: $black;
+     color: $white;
+     @include mq("tablet-wide"){      
       background: rgba(17,17,17,.8);
 }
+}
 
+.list-head--expertise-item{
+  @include mq("phone-wide", $type:max){
+    font-weight: 400;
+  }
+  
+  color: $gray-800;
+      text-align: center;
+    border-radius: .25em;
+    border: .15em solid darken($pattens, 15%);
+    @include vr($padding: .25);
+}
 
+.headline--expertise{
+@include vr($margin-top: 4, $margin-bottom: 4);
+}
+
+.overlay__content{
+  &--capabilities{
+  background: rgba(000,000,000, .2);
+}
+}
+.overlay-intro{
+   background: rgba(000,000,000, .2);
+}

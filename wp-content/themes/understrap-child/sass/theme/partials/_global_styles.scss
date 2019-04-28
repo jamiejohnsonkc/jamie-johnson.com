@@ -108,7 +108,7 @@ body {
 section{}
 header{}
 title{}
-hgroup{}
+div{}
 title{}
 figure{}
 article{}
@@ -144,8 +144,8 @@ article{}
    margin-right: auto;
    margin-left: auto;
    position: relative;
-   max-width: 100%;
    top: 0;
+   overflow: hidden;
 }
 
 .article__wrapper-fluid{

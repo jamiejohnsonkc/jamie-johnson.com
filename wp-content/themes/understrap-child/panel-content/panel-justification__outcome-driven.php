@@ -13,14 +13,14 @@ exit; // Exit if accessed directly.
 	<div class="pagination justification__pagination objectives__pagination">
 		<h1 class="pagination">outcome driven marketing</h1>
 	</div>
-	<div class="justification__flex-container">
-	<hgroup class="justification__page-header page__header page__header_number-title justification__page-header--objectives">
+	<div class="justification--flex-container">
+	<div class="justification__page-header page__header page__header_number-title justification__page-header--objectives">
 	
 
 	<h2 class="page__header_number">01</h2>
 	<h3 class="page__header_headline">I pursue <br>business outcomes</h3>
 	
-	</hgroup>
+	</div>
 
 
 	<div class="page__header-text_container justification__page-header_text page__header-text_container--objectives">

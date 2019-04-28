@@ -8,15 +8,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
+<section class="section">
 <article class="article__wrapper  content__wrapper justification"> <!-- CONTAINER -->
 <div class="container business-value justification__container justification__container_optimize" id="optimize">
 
 		<div class="pagination justification__pagination optimize__pagination"><h1 class="pagination">integration & optimization</h1></div>
-<div class="justification__flex-container">
-		<hgroup class="justification__page-header justification__page-header--optimize page__header page__header_number-title justification__page-header--optimize">
+<div class="justification--flex-container">
+		<div class="justification__page-header justification__page-header--optimize page__header page__header_number-title justification__page-header--optimize">
 		
 		<h2 class="page__header_number">04</h2>
-		<h3 class="page__header_headline">I optimize<span class="br"><br></span>Marketing Investments</h3></hgroup>
+		<h3 class="page__header_headline">I optimize<span class="br"><br></span>Marketing Investments</h3></div>
 
 		<div class="page__header-text_container page__header-text_container--optimize"><p class="justification__page-header_text justification__page-header_text">I bring strategic continuity and clarity to an increasingly fragmented business function</p></div>
 	
@@ -56,3 +57,4 @@ exit; // Exit if accessed directly.
 
 </div>
 </article>
+</section>

@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
+<section class="section">
 <article class="article__wrapper  justification">
 	<div class="container cta__container justification__cta__container cta" id="justification__cta">
 		
@@ -23,3 +24,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<a class="link link__advance--text" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>		
 		</div><!-- Container end -->
 		</article><!-- cover end -->
+	</section>

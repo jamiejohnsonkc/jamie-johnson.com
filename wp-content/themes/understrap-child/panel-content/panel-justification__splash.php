@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="section section--splash section--justification-splash">
-<article class="article__wrapper splash-wrapper bgregister">
+<article class="article__wrapper article__wrapper--fluid bgregister">
 		<div class="container container--splash container--splash-justification  " id="evidence_splash">
 		
 <h1 class="pagination">why me</h1>
-<h2 class="title">I Know How To Make The Cash Register Ring</h2>          
+<h2 class="title title__splash">I Know How To Make The Cash Register Ring</h2>          
 <h3 class="title-sub title-sub--splash-justification">If it doesn't make you money, it's not marketing. It's just spending</h3>            
 		
 <!-- 		 <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> 

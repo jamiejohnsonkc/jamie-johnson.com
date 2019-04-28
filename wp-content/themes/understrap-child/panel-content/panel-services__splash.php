@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="section section--splash section--justification-splash">
-<article class="article__wrapper splash-wrapper services__splash-wrapper bgbell">
+<article class="article__wrapper--fluid s article--services-splash bgbell">
 		
-		<div class="container container--splash container--splash-services" id="services__splash">
+		<div class="container container--services-splash container--splash">
 		<h1 class="pagination pagination--center pagination--services-splash">how can i help you</h1>
 		<h2 class="title title--center">Modern &amp; Comprehensive <br>Marketing Services</h2>
 		<h3 class="title-sub title-sub--center">Hell bent on <br class="services__splash_br">service,<br class="services__splash_br services__splash_br--service"> performance<br class="services__splash_br"> &<br class="services__splash_br"> quality.</h3>
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="services__splash_hero-img_container--arrow" id="services__arrow--container"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrow-01.svg" alt="..." class="style-svg services__splash_hero-img_svg--arrow" id="services__arrow--img"/></div>
 	
 
-<div class="container-hero__img--mobile services__splash_hero-img--mobile" id="bell"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg" alt="..." id="bell-small"/></div>
+<div class="image__container image__container--services-splash"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg" alt="..." id="bell-small"/></div>
 	</article><!-- cover end -->
 	
 	</section>

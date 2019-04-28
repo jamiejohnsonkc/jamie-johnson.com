@@ -1,7 +1,13 @@
-.container{
-	width: 83.82%;
-	@include push-auto();
+.article.container{
+	@include mq("phone", $type:max){
+width: 100%;
+max-width: 100%;
+	}
 }
+
+
+
+
 
 // .proof__panel-content_text_idooutcomes{
 // 	max-width: 32em;
@@ -9,7 +15,7 @@
 
 @include mq('phablet', $type:max){
 	.navbar>.container, .navbar>.container-fluid { width: 90%; position: relative; margin: 0 auto; }
-	.container { width: 83.82%; padding-left: 0; padding-right: 0; max-width: 90%; }
+	.container { width: 83.82%; padding-left: 0; padding-right: 0; max-width: 83.82%; }
 }
 @include mq('phablet'){
 	.navbar>.container, .navbar>.container-fluid { position: relative; margin: 0 auto; width: 100%; max-width: 100%; padding: 0 2em; }
@@ -24,14 +30,14 @@
 }
 @include mq('tablet-small') { }
 @include mq('tablet') { 
-	.container { max-width: 80%; width: 80%; }
+	.container { max-width: 83.82%; width: 83.82%; }
 
 }
 
 @include mq('tablet-wide') { 
 	.proof__panel_wrapper { max-width: 99em; width: 99em; } 
 	.navbar>.container, .navbar>.container-fluid { width: 90%; max-width: 90%; }
-	.section__head_homepage--summary{width: 80%; margin: 0 auto;}
+	.section__head_homepage--summary{width: 83.82%; margin: 0 auto;}
 
 }
 
@@ -53,3 +59,11 @@
 .ops-management__panel, .planning-analysis__panel { width: 100%; max-width: 100%; }
 .webdev__panel { width: 90%; max-width: 90%; }
 .ops-management__panel, .planning-analysis__panel, .webdev__panel { @include push-auto(); }
+
+
+
+.br-expertise-article__headline{
+	@include mq("tablet"){
+display: none;
+	}
+}

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="section section--splash section--background-splash">
-<article class="article__wrapper-fluid splash-wrapper bgshoes">
+<article class="article__wrapper-fluid article__wrapper--fluid bgshoes">
 		<div class="container container--splash container--splash-background">
 		<h1 class="pagination pagination--splash">about me</h1>
 <h2 class="title">I'm a salty marketing veteran who knows a thing or two.</h2>          

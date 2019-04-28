@@ -146,7 +146,7 @@ display: none;
         display: block;
     }
 
-    #main > section > article:nth-child(3) > div > div > hgroup > h3 {
+    #main > section > article:nth-child(3) > div > div > div > h3 {
         .br {
             display: block;
         }
@@ -311,7 +311,7 @@ display: none;
     display: none;
 } 
 
-.panel.business-value.grow > div > hgroup > h3 > br, .panel.business-value.modernize > div > hgroup > h3 > br {
+.panel.business-value.grow > div > div > h3 > br, .panel.business-value.modernize > div > div > h3 > br {
     display: none;
 }
 

@@ -284,6 +284,9 @@ p {
   @include mq("desktop-wide") {
     @include title-lg();
 }
+&__splash{
+	flex: 0 0 auto;
+}
   
 
 
@@ -343,6 +346,9 @@ p {
   @include mq("desktop") {
     @include header__headline-lg();
   }
+&--white{
+	color: $white;
+}
 }
 
   &__block{
@@ -359,6 +365,8 @@ p {
     align-self: center;
   }
 }
+
+
 
 // .subhead{
 //   // @include subhead-sm;
@@ -427,10 +435,9 @@ p {
 
 
 .subhead{
-  // @include subhead-sm;
-  // @include mq("tablet") {
- 
-  // }
+  @include mq("tablet"){
+  	max-width: 61%;
+  }
   &__header{
     @include header__subhead(); 
   @include mq("desktop") {
@@ -507,11 +514,28 @@ p {
 .list{
 margin-top: 0;
 margin-bottom: 0;
-&--no-indent{
+&__vertical{
+   display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: auto; 
+}
+&__inline{
+  display: flex;
+  flex-wrap: wrap;
+}
+&--inset{
 	list-style-position: inside;
 	text-indent: -2em;
 	padding-left: 2em;
+	width: 81%;
+	@include push-auto();
+	@include vr($padding-bottom: 2);
 }
+&--no-bullets{
+	list-style: none;
+}
+
 }
 
 
@@ -529,8 +553,11 @@ margin-bottom: 0;
   	@include item__list-head();
   }
 
-  &--background{
+  &__background{
   	@include vr($padding: .25 .5, $margin-bottom: 1);
+	&--pattens{
+  	background: $pattens;
+  }
   }
   //   &--center {
   //   text-align: center;
@@ -548,15 +575,28 @@ margin-bottom: 0;
   &__block{
 @include block__list-item();
 }
-
   &__item{
   	@include item__list-item();
   }
-  //   &--center {
-  //   text-align: center;
-  //   align-self: center;
-  // }
+  &__spacer{
+      @include vr($padding: 0 .5);
+              &--primary-color{
+  color:$primary;
+  }
 }
+  &--expertise-item{
+  }
+  &--flex-auto{
+    flex: 0 0 auto;
+  }
+}
+
+// .list-item__spacer{
+//   // @include vr($padding: 0 .5);
+  
+
+// }
+
 
 
 
@@ -570,3 +610,4 @@ margin-bottom: 0;
   color: $link-hover-color;
   text-decoration: $link-hover-decoration;
 }
+

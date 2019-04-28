@@ -211,7 +211,7 @@ width: 80%;
 }
 
 .bgbell{
-    background: none;
+    background-size: 0;
 @include mq('desktop'){
         background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg");
          background-position: left bottom;
@@ -434,10 +434,12 @@ stroke: none;
 // }
 
 
-.overlay__content--icon {
-      fill: $capabilities-overlay-icon-fill-color;
+.image__svg-icon--skills {
+      // fill: $capabilities-overlay-icon-fill-color;
+      fill: $primary;
     .cls-1, .cls-2 {
-        fill: $capabilities-overlay-icon-fill-color;
+        // fill: $capabilities-overlay-icon-fill-color;
+        fill: $primary;
     }
 }
 

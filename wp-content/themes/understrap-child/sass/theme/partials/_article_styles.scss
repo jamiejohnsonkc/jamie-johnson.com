@@ -748,7 +748,9 @@ h6{
 .proof__page_headline{
   text-align: center;
   @extend %headline;
-}
+  @include vr($margin: 3 auto);
+  }
+
 
 .proof__panel_intro {
   font-family: $font-family-serif;

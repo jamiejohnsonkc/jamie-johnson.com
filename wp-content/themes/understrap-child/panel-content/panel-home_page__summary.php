@@ -92,7 +92,9 @@ exit; // Exit if accessed directly.
 			</a>
 	</article>
 
-<article class="article__wrapper home-page-summary__claim_wrapper">
+
+<article class="article__wrapper article__wrapper--overlap home-page-summary__claim_wrapper">
+	<div class="hackfix"></div>
 	<div class="home-page-summary__claim_background--svg">
 		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	</div>
@@ -113,6 +115,7 @@ exit; // Exit if accessed directly.
 			<a class="link link__chevron home-page-summary__claim_link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a>
+			<div class="hackfix hackfix--bottom"></div>
 </article>
 <!-- </div> -->
 <!-- cover end -->

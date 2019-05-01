@@ -18,10 +18,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 			<?php get_template_part( 'panel-content/panel', 'justification__splash' ); ?>
 				<?php get_template_part( 'panel-content/panel', 'justification__summary' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'justification__outcome-driven' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'justification__value' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'justification__modern' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'justification__optimize' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'justification__reasons' ); ?>
+			
 			<?php get_template_part( 'panel-content/panel', 'justification__endorsements' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'justification__atypical' ); ?>
 			

@@ -11,14 +11,15 @@ exit; // Exit if accessed directly.
 <article class="article__wrapper  content__wrapper justification"> <!-- CONTAINER -->
 <div class="container business-value justification__container justification__container_objectives" id="objectives">
 	<div class="pagination justification__pagination objectives__pagination">
-		<h1 class="pagination">outcome driven marketing</h1>
+		<h1 class="pagination">I pursue marketing outcomes</h1>
 	</div>
 	<div class="justification--flex-container">
-	<div class="justification__page-header page__header page__header_number-title justification__page-header--objectives">
+	<!-- <div class="justification__page-header page__header page__header_number-title justification__page-header--objectives"> -->
 	
+	<div class="header-25x75row__container">	
 
-	<h2 class="page__header_number">01</h2>
-	<h3 class="page__header_headline">I pursue <br>business outcomes</h3>
+	<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit">01</h2>
+	<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">Outcomes<br>not overhead</h3>
 	
 	</div>
 
@@ -30,7 +31,7 @@ exit; // Exit if accessed directly.
 	<div class="diagram justification__diagram diagram__objectives" id="objectives__diagram">
 		
 		<div class="diagram__content_container objectives-diagram__list-item">
-			<div class="objectives-list-item__icon-container">
+			<div class="diagram-item__container--77row">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
 			</div>
 			<ol class="objectives-diagram__ordered-list">
@@ -50,7 +51,7 @@ exit; // Exit if accessed directly.
 
 
 		<div class="diagram__content_container objectives-diagram__list-item" >
-			<div class="objectives-list-item__icon-container">
+			<div class="diagram-item__container--77row">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg"/>
 			</div>
 			<ol start=2 class="objectives-diagram__ordered-list">
@@ -70,7 +71,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="diagram__content_container objectives-diagram__list-item">
-			<div class="objectives-list-item__icon-container">
+			<div class="diagram-item__container--77row">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg"/>
 			</div>
 			<ol start=3 class="objectives-diagram__ordered-list">
@@ -86,7 +87,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="diagram__content_container objectives-diagram__list-item">
-			<div class="objectives-list-item__icon-container">
+			<div class="diagram-item__container--77row">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg"/>
 			</div>
 			<ol start=4 class="objectives-diagram__ordered-list">

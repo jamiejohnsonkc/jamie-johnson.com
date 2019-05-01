@@ -8,12 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  content__wrapper home-page__article--strengths" id="article__wrapper--strengths">
-	<div class="container strengths__article_container">
-		
+<section> 
+	<article class="article__wrapper article__fluid  content__wrapper home-page__article--strengths" id="article__wrapper--strengths">
+	
 
-		<div class="strengths__page-header_container">
-			<h1 class="pagination strengths__page_title">I Kick Ass</h1>
+	<div class="container strengths__article_container">
+			<div class="strengths__page-header_container">
+			<h1 class="pagination pagination--strengths">I Kick Ass</h1>
 			<h2 class="page__headline strengths__page_headline">My M.O.</h2>
 			<ul class="page__summary strengths__page_summary">
 				<li class="strengths__page_summary--list-item"><span class="strengths__page_summary--digit">1.</span><span class="strengths__page_summary--statement">Advance Business Objectives</span></li>
@@ -28,32 +29,33 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 		</div>
+</div>
+</article>
 
 
 
-
-
+<article>
 	<div class="strengths__panel_wrapper strengths__panel_wrapper--smm">
 						<div class="strengths__icon_background-image strengths__icon_background-image--smm">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" class="style-svg" alt="...">
 				</div>
-		<div class="strengths__panel_head">
+		<div class="header__container header__container--strengths">
 			<div class="strengths__panel_head_img">
 				<div class="circle-digit__icon circle-digit__01"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_1.svg" class="style-svg" alt="..."></div>
 			</div>
 			<div class="strengths__panel_headers strengths__panel_head--headers">
-				<div class="strengths__panel_head--title">what i do best</div>
-				<h3 class="strengths__panel_headline strengths__panel_headline--smm">Strategic Marketing Management</h3>
+				<div class="pagination pagination--white pagination--strengths">what i do best</div>
+				<h3 class="headline headline__header headline__header--strengths headline__header--smm">Strategic Marketing Management</h3>
 			</div>
-			<h4 class="strengths__panel_deck strengths__panel_deck--smm">Designing, communicating, selling and delivering superior competitive value</h4>
+			<h4 class="deck deck__header deck__header--strengths deck__header--smm">Designing, communicating, selling and delivering superior competitive value</h4>
 		</div>
 
 
-		<div class="strengths__panel_content  strengths__content">
-			<p class="body-copy strengths__panel_body-copy">I bring context and simplicity to complex business challenges. Then I translate them into operative marketing solutions that not only look good on the surface, but also generate substantive results.</p>
+		<div class="copy__container--strengths">
+			<p class="copy__header ">I bring context and simplicity to complex business challenges. Then I translate them into operative marketing solutions that not only look good on the surface, but also generate substantive results.</p>
 		</div>
 
-		<div class="strengths__panel_subtext">
+		<div class="header__list--strengths">
 			<div class="strengths__list_header">strengths</div>
 			<div class="strengths__subtext_content">
 				<ul class="strengths__list_container">
@@ -79,26 +81,26 @@ exit; // Exit if accessed directly.
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_25.svg" class="style-svg" alt="...">
 				</div>
 
-		<div class="strengths__panel_head">
+		<div class="header__container--strengths">
 
 			<div class="strengths__panel_head_img">
 				<div class="circle-digit__icon  circle-digit__02"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_2.svg" class="style-svg" alt="..."></div>
 			</div>
 
 			<div class="strengths__panel_headers strengths__panel_head--headers">
-				<div class="strengths__panel_head--title">what i do best</div>
-				<h3 class="strengths__panel_headline strengths__panel_headline--imc">Integrated Marketing Communications</h3>
+				<div class="pagination--strengths">what i do best</div>
+				<h3 class="headline headline__header headline__header--strengths headline__header--imc">Integrated Marketing Communications</h3>
 				</div>
 
-				<h4 class="strengths__panel_deck strengths__panel_deck--imc">Getting found, establishing rapport, earning trust of the modern customer</h4>
+				<h4 class="deck deck__header deck__header--strengths deck__header--imc">Getting found, establishing rapport, earning trust of the modern customer</h4>
 
 			</div>
 	
-		<div class="strengths__panel_content strengths__content">
-			<p class="body-copy strengths__panel_body-copy">I create digital, physical and strategic assets required to generate and exploit encounters with potential customers in the post-digital marketplace.</p><p class="body-copy strengths__panel_body-copy"> I help businesses create engagements that demonstrate value and convey the institutional character that play heavily in the purchase decisions of today's empowered customer.</p>
+		<div class="copy__container--strengths">
+			<p class="copy__header ">I create digital, physical and strategic assets required to generate and exploit encounters with potential customers in the post-digital marketplace.</p><p class="copy__header "> I help businesses create engagements that demonstrate value and convey the institutional character that play heavily in the purchase decisions of today's empowered customer.</p>
 		</div>
 
-		<div class="strengths__panel_subtext">
+		<div class="header__list--strengths">
 				<div class="strengths__list_header">strengths</div>
 			<div class="strengths__subtext_content">
 			
@@ -129,22 +131,22 @@ exit; // Exit if accessed directly.
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="style-svg" alt="...">
 				</div>
 
-		<div class="strengths__panel_head">
+		<div class="header__container--strengths">
 			<div class="strengths__panel_head_img">
 				<div class="circle-digit__icon  circle-digit__03"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_3.svg" class="style-svg" alt="..."></div>
 			</div>
 
 			<div class="strengths__panel_headers strengths__panel_head--headers">
-				<div class="strengths__panel_head--title">what i do best</div>
-				<h3 class="strengths__panel_headline strengths__panel_headline--ops">Marketing Process <br>& Operations</h3></div>
-				<h4 class="strengths__panel_deck strengths__panel_deck--ops">Melding methods, assets and strategy to optimize returns</h4>
+				<div class="pagination--strengths">what i do best</div>
+				<h3 class="headline headline__header headline__header--strengths headline__header--ops">Marketing Process <br>& Operations</h3></div>
+				<h4 class="deck deck__header deck__header--strengths deck__header--ops">Melding methods, assets and strategy to optimize returns</h4>
 		</div>
 
-		<div class="strengths__panel_content  strengths__content">
-			<p class="body-copy strengths__panel_body-copy">I help businesses understand, manage and engage the increasingly complex activity and function of modern marketing &mdash; what it can and can't do, how to do it effectively and how to scale it to your needs.</p>
+		<div class="copy__container--strengths">
+			<p class="copy__header ">I help businesses understand, manage and engage the increasingly complex activity and function of modern marketing &mdash; what it can and can't do, how to do it effectively and how to scale it to your needs.</p>
 		</div>
 
-		<div class="strengths__panel_subtext">
+		<div class="header__list--strengths">
 				<div class="strengths__list_header">strengths</div>
 			<div class="strengths__subtext_content">
 				<ul class="strengths__list_container">
@@ -171,3 +173,4 @@ exit; // Exit if accessed directly.
 	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 </a>
 </article>
+</section>

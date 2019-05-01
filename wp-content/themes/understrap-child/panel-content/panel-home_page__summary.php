@@ -98,7 +98,7 @@ exit; // Exit if accessed directly.
 	<div class="home-page-summary__claim_background--svg">
 		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	</div>
-		<div class="container pagination_container home-page-summary__claim_pagination--container"><h1 class="pagination home-page-summary__claim_pagination">What I Do</h1></div>
+		<div class="container pagination--overlay pagination_container home-page-summary__claim_pagination--container"><h1 class="pagination home-page-summary__claim_pagination">What I Do</h1></div>
 	<div class="container home-page-summary__claim_container">
 
 		

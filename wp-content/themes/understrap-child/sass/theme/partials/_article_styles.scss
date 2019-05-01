@@ -571,7 +571,7 @@ color: $white;
 
 
 
-.strengths__panel_head--title{
+.pagination--strengths{
   @include vr($font-size: 2);
   font-family: $font-family-serif;
   font-style: italic; 
@@ -579,27 +579,25 @@ color: $white;
 }
 
 
-h3.strengths__panel_headline{
-    // @include headline-sm();
-        font-weight: 500;
-    @include mq('tablet'){
-      // @include headline();
-    @include vr($line-height: 3.25);
-    }
-}
+// h3.headline__header  {
+//     // @include headline-sm();
+//         font-weight: 500;
+//     @include mq('tablet'){
+//       // @include headline();
+//     @include vr($line-height: 3.25);
+//     }
+// }
 
-@include mq('tablet'){
-h3.strengths__panel_headline--imc{
-  @include vr($font-size: 35px);
-}
-}
+// @include mq('tablet'){
+// h3.headline__header--imc{
+//   @include vr($font-size: 35px);
+// }
+// }
 
 
-.strengths__panel_deck{
-  @include display-text-sm();
+.deck deck__header{
   font-weight: 400;
   @include mq('tablet'){
-      @include display-text();
       @include vr($line-height:2.75);
       // letter-spacing: -.025em;
     }
@@ -687,6 +685,8 @@ ul.strengths__list_container {
   margin-top: 4em;
   margin-left: auto;
   margin-right: 10%;
+  display: flex;
+  flex: 0 0 auto;
 }
 
 
@@ -747,6 +747,7 @@ h6{
 
 .proof__page_headline{
   text-align: center;
+  max-width: 61%;
   @extend %headline;
   @include vr($margin: 3 auto);
   }
@@ -1845,38 +1846,64 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 
 
-
-
 // ==========================================================================
 // page-header 
 // ==========================================================================
+.header-1colx2rows{
+  &__container{
+  &--1col-2row{
+    width: 100%;
+  }
+  &__single-column{
+
+  }
+ 
+  &__two-rows{
+  &--top-row{}
+  &--bottom-row{}
+}
+
+  &__page-title{ 
+  }
+  &__headline{
+  }
+
+}
+}
+
+
+
+
+
+
+
 .page__header_number-title{
- > h2 {
-        @include vr($font-size: 5, $line-height:4);
-        font-weight: 600;
-    }
+ // > h2 {
+ //        @include vr($font-size: 5, $line-height:4);
+ //        font-weight: 600;
+ //    }
 
-    > h3 {
-        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
-        font-weight: 300;
-    }
+ //    > h3 {
+ //        @include vr($font-size: 24px, $line-height:2, $margin:1 0 2 2);
+ //        font-weight: 300;
+ //    }
 
-    h4 {
-        @include display-text-sm();;
-    }
-    %display-text-sm{
-        @include vr($margin: 1 0);
-    }
+    // h4 {
+    //     @include display-text-sm();;
+    // }
+    // %display-text-sm{
+    //     @include vr($margin: 1 0);
+    // }
 
-    @include vr($margin-left: 0);
+    // @include vr($margin-left: 0);
 }
 
 
 // ==========================================================================
 // justification-panels__diagrams-layout_global 
 // ==========================================================================
-.objectives__diagram_li{
-  @include diagram-label();
+.headline__diagram{
+
 }
 
 .end-to-end--horz {
@@ -1950,12 +1977,14 @@ text.st3.st4.st5{
 }
 
 
-.diagram__superior-value {
+.diagram--superior-value {
+
     .st1, .st2, .st6, .st7 {
         font-weight: normal;
         // fill: $primary;
         stroke: none;
         font-size: 16px;
+        font-family: arial;
     }
 
     .st4 {
@@ -1971,6 +2000,10 @@ text.st3.st4.st5{
 
     .st1, .st2, .st4, .st6, .st7 {
           fill: #111;
+    }
+
+    .st1, .st2{
+      // stroke: #111;
     }
 
     #Layer_1 {

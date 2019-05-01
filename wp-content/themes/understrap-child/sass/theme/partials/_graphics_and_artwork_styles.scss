@@ -44,12 +44,13 @@ display: block;
 }
 .register-small{
     margin-left: auto;
+    margin-right: 3em;
     display: block;
     width: 38.2%;
     @include mq('phone'){}
     @include mq('phone-wide'){}
     @include mq('phablet'){
-        width: 50%;
+margin-right: 10%;
     }
     @include mq('tablet-small'){}
     @include mq('tablet'){}

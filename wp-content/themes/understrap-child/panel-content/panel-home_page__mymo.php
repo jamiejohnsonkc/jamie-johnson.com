@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="article__wrapper  basic home-page home-page__my-mo">
-	<div class="container home-page__my-mo__container"> -->
-		<article class="article__wrapper  home-page bgevo my-mo">
-			<div class="container home-page__my-mo__container core" id="my-mo">
+<!-- <article class="article__wrapper  basic homepage homepage__my-mo">
+	<div class="container homepage__my-mo__container"> -->
+		<article class="article__wrapper  homepage bgevo my-mo">
+			<div class="container homepage__my-mo__container core" id="my-mo">
 				<h1>my m.o.</h1>
 				<h2>I Do Much More <span class="br"><br></span>Than Words and Pictures</h2>
 				<div class="content-container">

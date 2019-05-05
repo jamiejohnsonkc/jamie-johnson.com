@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="article__wrapper  basic home-page home-page__howidoit">
-	<div class="container home-page__howidoit__container"> -->
-		<article class="article__wrapper  home-page home-page__howidoit" id="wrapper__howidoit">
-			<div class="container home-page__howidoit__container core"  id="howidoit">
+<!-- <article class="article__wrapper  basic homepage homepage__howidoit">
+	<div class="container homepage__howidoit__container"> -->
+		<article class="article__wrapper  homepage homepage__howidoit" id="wrapper__howidoit">
+			<div class="container homepage__howidoit__container core"  id="howidoit">
 				<h1>thanks for stopping by!</h1>
 				<div class="page-head__howidoit"><h2>I'm an End to End Marketer</h2>
 					<h3>From the corner office to the keyboard </h3>

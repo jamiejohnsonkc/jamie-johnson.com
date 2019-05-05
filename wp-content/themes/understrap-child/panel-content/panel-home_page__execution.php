@@ -1,4 +1,4 @@
-<article class="article__wrapper content__wrapper  home-page home-page__article--strategy" id="article__wrapper--strategy">
+<article class="article__wrapper content__wrapper  homepage homepage__article--strategy" id="article__wrapper--strategy">
 			<div class="container core content__container_col"  id="article__container--strategy">
 				<h1>I'm also really good at</h1>
 				<h2>Design & Development is my bread and butter.</h2>

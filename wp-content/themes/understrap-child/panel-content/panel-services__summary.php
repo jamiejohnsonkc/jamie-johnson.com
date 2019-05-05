@@ -20,7 +20,7 @@ exit; // Exit if accessed directly.
 
 					<!-- <div class="services__summary-head_container services__summary-head_container--headers"> -->
 						<h2 class="headline headline__header">Whatcha Need?</h2>
-						<h3 class="deck">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
+						<h3 class="deck header__deck">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
 						<p class="copy copy__header">Dolore pariatur anim culpa do sunt nulla dolor reprehenderit ullamco nostrud proident do est exercitation enim ullamco sed.</p>
 						<p class="copy copy__header">Occaecat ad qui ut cupidatat elit magna est ea.</p>
 						<a class="copy" href="/">This will be a link</a>
@@ -28,39 +28,39 @@ exit; // Exit if accessed directly.
 				</div>
 		<!-- 	</div> -->
 				<div class="content content--flex--column content--services-summary">
-					<div class="block block--service-areas">
-						<h4 class="headline headline__block">Service Areas</h4>
+					<div class="item item--service-areas">
+						<h4 class="headline headline__item">Service Areas</h4>
 						<div class="subhead subhead--sublist sublist--services-summary">
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Digital Development & Design</a>
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Strategy, Planning & Analysis</a>
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Operations & Management</a>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Digital Development & Design</a>
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Strategy, Planning & Analysis</a>
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Operations & Management</a>
 						</div>
-						<p class="copy copy__block copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
-						<p class="copy copy__block copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
+						<p class="copy copy__item copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
+						<p class="copy copy__item copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
 					</div>
-					<div class="block block--service-areas">
-						<h4 class="headline headline__block">Scopes</h4>
+					<div class="item item--service-areas">
+						<h4 class="headline headline__item">Scopes</h4>
 						<div class="subhead subhead--sublist sublist--services-summary">
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Consultation</a> <!-- definition / resolution -->
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Implementation</a>  <!-- objectives / strategy / tactics -->
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Execution</a>  <!-- development / deployment -->
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Consultation</a> <!-- definition / resolution -->
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Implementation</a>  <!-- objectives / strategy / tactics -->
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Execution</a>  <!-- development / deployment -->
 						</div>
-						<p class="copy copy__block copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
+						<p class="copy copy__item copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
 					</div>
 					<div class="">
-						<h4 class="headline headline__block">Roles</h4>
+						<h4 class="headline headline__item">Roles</h4>
 						<div class="subhead subhead--sublist sublist--services-summary">
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Advisory</a><!-- definition / resolution -->
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Collaborative</a>
-							<span class="subhead subhead__block subhead--sublist-divider">&#x000B7;</span>
-							<a class="subhead subhead__block subhead--sublist-item" href="/">Turnkey</a>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Advisory</a><!-- definition / resolution -->
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Collaborative</a>
+							<span class="subhead subhead__item subhead--sublist-divider">&#x000B7;</span>
+							<a class="subhead subhead__item subhead--sublist-item" href="/">Turnkey</a>
 						</div>
-						<p class="copy copy__block copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
+						<p class="copy copy__item copy--services-summary-sublist">Lorem ipsum commodo velit aute dolor in non enim deserunt esse dolore laboris ex ut do officia.</p>
 					</div>
 				</div>
 			</div>

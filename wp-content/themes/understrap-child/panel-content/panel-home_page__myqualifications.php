@@ -10,8 +10,8 @@ exit; // Exit if accessed directly.
 ?>
 <!-- <article class="article__wrapper  basic home_page home_page__my-qualifications">
 	<div class="container home_page__my-qualifications__container"> -->
-		<article class="article__wrapper  home-page" id="wrapper__my-qualifications">
-			<div class="container home-page__my-qualifications__container core" id="my-qualifications">
+		<article class="article__wrapper  homepage" id="wrapper__my-qualifications">
+			<div class="container homepage__my-qualifications__container core" id="my-qualifications">
 				<h1>bona fides</h1>
 				<h2>I've Been Around</h2>
 				<h3>20 Years of professional, service-oriented marketing leadership</h3>

@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <article class="article__wrapper  basic home-page home-page__howidoit">
-	<div class="container home-page__howidoit__container"> -->
+<!-- <article class="article__wrapper  basic homepage homepage__howidoit">
+	<div class="container homepage__howidoit__container"> -->
 		<article class="article__wrapper content__wrapper management">
 			<div class="container summary content__container_col article__container--management-intro">
 				<h1 class="pagination pagination_background">Magna excepteur.</h1>

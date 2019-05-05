@@ -15,26 +15,26 @@ exit; // Exit if accessed directly.
 			<div class="content1">
 				<div class="atypical__intro">
 					<div class="pagination justification__pagination"><h1 class="pagination">atypical</h1></div>
-					<h2>Five Ways I'm Different Than Most Marketers</h2>
-					<h3>lDolore fugiat elit in.</h3>
-					<p>Dolore magna dolor commodo amet anim veniam aliquip sit eiusmod quis veniam aliqua.</p>
+					<h2 class="headline headline__header">Five Ways I'm Different Than Most Marketers</h2>
+					<h3 class="deck deck__header">lDolore fugiat elit in.</h3>
+					<p class="copy copy__header">Dolore magna dolor commodo amet anim veniam aliquip sit eiusmod quis veniam aliqua.</p>
 				</div>
 			</div>
 			<div class="content2">
 				<div class="content-container atypical__content-container">
 					<div class="justification__content__copy" id="justification__content__copy--1">
-						<h4>1. I'm a hybrid</h4>
-						<h5>strategy + creativity + technology</h5>
-						<div class="justification__content__summary">Don't hire five people. Hire me.</div>
+						<h4 class="headline headline__block">1. I'm a hybrid</h4>
+						<h5 class="subhead subhead__block subhead__block--atypical">strategy + creativity + technology</h5>
+						<div class="justification__content__summary copy copy__block copy__block--atypical">Don't hire five people. Hire me.</div>
 						<div class="justification__content__verbose">
-							<div class="justification__content__verbose"><p>I bring the capabilities to plan, develop and execute all of your marketing needs from end to end.</p>
+							<div class="justification__content__verbose"><p class="copy copy__item">I bring the capabilities to plan, develop and execute all of your marketing needs from end to end.</p>
 							<p>First hand knowledge of executional disciplines enhances my abilities as a marketing leader and manager.</p></div>
 						</div>
 					</div>
 					<div class="content-container atypical__content-container">
 						<div class="justification__content__copy" id="justification__content__copy--2">
-							<h4>2. I solve problems</h4>
-							<h5>objective > strategy > tactic</h5>
+							<h4 class="headline headline__block">2. I solve problems</h4>
+							<h5 class="subhead subhead__block subhead__block--atypical">objective > strategy > tactic</h5>
 							<div class="justification__content__summary">In ex nisi enim ut.</div>
 							<div class="justification__content__summary">Don't hire five people. Hire me.</div>
 							<div class="justification__content__verbose">
@@ -44,8 +44,8 @@ exit; // Exit if accessed directly.
 						</div>
 						<div class="content-container atypical__content-container">
 							<div class="justification__content__copy" id="justification__content__copy--3">
-								<h4>3. Outcomes Not Output</h4>
-								<h5>Sint sint in id veniam.</h5>
+								<h4 class="headline headline__block">3. Outcomes Not Output</h4>
+								<h5 class="subhead subhead__block subhead__block--atypical">Sint sint in id veniam.</h5>
 								<div class="justification__content__summary">Lorem ipsum in sint laborum sit.</div>
 								<div class="justification__content__verbose">
 									<p>You can't be an effective marketer if you can't see the world through from your customer's perspective.</p>
@@ -56,8 +56,8 @@ exit; // Exit if accessed directly.
 						</div>
 						<div class="content-container atypical__content-container">
 							<div class="justification__content__copy" id="justification__content__copy--4">
-								<h4>4. I'm down with sales</h4>
-								<h5>Occaecat ut cillum nulla sint.</h5>
+								<h4 class="headline headline__block">4. I'm down with sales</h4>
+								<h5 class="subhead subhead__block subhead__block--atypical">Occaecat ut cillum nulla sint.</h5>
 								<div class="justification__content__summary">Aliquip deserunt est.</div>
 								<div class="justification__content__verbose">
 									<p>I don't just speak tech; I write my own code. I've built my own PC.</p>
@@ -67,13 +67,13 @@ exit; // Exit if accessed directly.
 						</div>
 						<div class="content-container atypical__content-container">
 							<div class="justification__content__copy" id="justification__content__copy--5">
-								<h4>5. Business First</h4>
-								<h5>Elit laborum commodo eu.</h5>
+								<h4 class="headline headline__block">5. Business First</h4>
+								<h5 class="subhead subhead__block subhead__block--atypical">Elit laborum commodo eu.</h5>
 								<div class="justification__content__summary">Lorem ipsum ex duis enim sed sunt.</div>
 								<div class="justification__content__verbose">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-								</div>
-								<p>magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+								
+								<p>magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p></div>
 							</div>
 						</div>
 					</div>

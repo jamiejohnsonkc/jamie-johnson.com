@@ -13,8 +13,7 @@ exit; // Exit if accessed directly.
 		<h1 class="pagination">a la Carte services</h1>
 		<div class="container my-capabilities my-capabilities__container__skills" id="my-skills">
 			<div class="capabilities__overlay capabilities__overlay--marketing-strategy" id="expt-overlay-1">
-				<button class="circle__button expt__close--button" id="expt-close-1">
-				&times;</button>
+				<button class="circle__button expt__close--button" id="expt-close-1"><div class="button__content">&times;</div></button>
 				<div class="overlay__container">
 					<div class="overlay-intro">
 						<h4 class="headline headline__header">Marketing Strategy</h4>
@@ -22,54 +21,52 @@ exit; // Exit if accessed directly.
 						<p class="copy__header">That's what I do.  I help you determine A. What do you want to achieve.  B. what must you overcome or exploit to achieve your goal.  C. What mix of marketing will best execute your strategy.</p>
 						<p class="copy__header">When you stop thinking about what you could do and focus on what you should do, it changes your whole perspective.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Strategic Design</h5>
+							<h5 class="headline headline__block headline--capabilites-overlay">Strategic Design</h5>
 						</div>
-						<p class="copy__block">Problem solving 101. A combination of creative thinking and strategic analysis applied to business challenges and opportunities.</p>
+						<p class="copy__block copy__block--capabilities-overlay">Problem solving 101. A combination of creative thinking and strategic analysis applied to business challenges and opportunities.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Performance Optimization</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Performance Optimization</h5>
 						</div>
-						<p class="copy__block">A comphrensive examination of your existing marketing appartatus to fine tune performance.</p>
+						<p class="copy__block copy__block--capabilities-overlay">A comphrensive examination of your existing marketing appartatus to fine tune performance.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_03.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Superior Customer Value</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Superior Customer Value</h5>
 						</div>
-						<p class="copy__block">The currency of modern marketing. Today's customers don't want sensationalism, they want substance. Its a whole new world.</p>
+						<p class="copy__block copy__block--capabilities-overlay">The currency of modern marketing. Today's customers don't want sensationalism, they want substance. Its a whole new world.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_04.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Modernization</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Modernization</h5>
 						</div>
-						<p class="copy__block">The digital age rewrote the marketing playbook. What was out is now in. Those who led now follow. And ignore disgruntled customers at your own risk.</p>
+						<p class="copy__block copy__block--capabilities-overlay">The digital age rewrote the marketing playbook. What was out is now in. Those who led now follow. And ignore disgruntled customers at your own risk.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_05.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Output to Outcomes</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Output to Outcomes</h5>
 						</div>
-						<p class="copy__block">Emerging paradigms and technologies are transforming the marketing function from an overhead expense to a strategic asset for business leaders.</p>
+						<p class="copy__block copy__block--capabilities-overlay">Emerging paradigms and technologies are transforming the marketing function from an overhead expense to a strategic asset for business leaders.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_06.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Customer Centricity</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Customer Centricity</h5>
 						</div>
-						<p class="copy__block">Customers have more influence than ever on a brand's success. And they have expectations that stem from front to back of the brand experience. Today everyone is customer facing.</p>
+						<p class="copy__block copy__block--capabilities-overlay">Customers have more influence than ever on a brand's success. And they have expectations that stem from front to back of the brand experience. Today everyone is customer facing.</p>
 					</div>
 				</div>
 			</div>
 			<div class="capabilities__overlay capabilities__overlay--marketing-management" id="expt-overlay-2">
-				<button class="circle__button expt__close--button" id="expt-close-2">
-				&times;
-				</button>
+				<button class="circle__button expt__close--button" id="expt-close-2"><div class="button__content">&times;</div></button>
 				<div class="overlay__container">
 					<div class="overlay-intro">
 						<h4 class="headline headline__header">Strategic Marketing Management</h4>
@@ -79,7 +76,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block headline__block--capabilities-overlay">Function Leadership</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Function Leadership</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Operations</li>
@@ -96,10 +93,10 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Concepts & Frameworks</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Concepts & Frameworks</h5>
 						</div>
-						<hr>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+<!-- 						<hr>
+ -->						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Outcome-Driven Marketing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Competitive Advantage</li>
@@ -112,10 +109,10 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Strategy</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Strategy</h5>
 						</div>
-						<hr>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+<!-- 						<hr>
+ -->						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Product/Service Management</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Value Design</li>
@@ -132,10 +129,10 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Intelligence & Insights</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Intelligence & Insights</h5>
 						</div>
-						<hr>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+<!-- 						<hr>
+ -->						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Performance Auditing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Market Research</li>
@@ -152,10 +149,10 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Cross Pollination</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Cross Pollination</h5>
 						</div>
-						<hr>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+<!-- 						<hr>
+ -->						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Value Stewardship</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Customer Centricity</li>
@@ -168,9 +165,7 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 			<div class="capabilities__overlay capabilities__overlay--marketing-communications" id="expt-overlay-3">
-				<button class="circle__button expt__close--button" id="expt-close-3">
-				&times;
-				</button>
+				<button class="circle__button expt__close--button" id="expt-close-3"><div class="button__content">&times;</div></button>
 				<div class="overlay__container">
 					<div class="overlay-intro">
 						<h4 class="headline headline__header">Integrated Communications</h4>
@@ -178,10 +173,10 @@ exit; // Exit if accessed directly.
 						<p class="copy__header">Sensationalism and spectacle are giving way to substance and value.</p>
 						<p class="copy__header">So today's communications are all about developing relationships, engaging customers on their terms and actually trying to help them. I know. It's crazy.</p>
 					</div>
-					<div class="overlay__content overlay__content--capabilities">
+					<div class="overlay__content overlay__content--capabilities row+col__container">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Strategy & Planning</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Strategy & Planning</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Branding & Positioning</li>
@@ -198,7 +193,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_15.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Digital Marketing</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Digital Marketing</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Responsive Web Development</li>
@@ -215,7 +210,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_16.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Lead-to-Revenue</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Lead-to-Revenue</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Marketing/Sales Funnel</li>
@@ -230,7 +225,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_18.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Content Development</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Content Development</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Social Media</li>
@@ -245,7 +240,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_17.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Outbound</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Outbound</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Press Relations & Publicity</li>
@@ -262,7 +257,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Graphic Design</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Graphic Design</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Brand Identity</li>
@@ -277,15 +272,15 @@ exit; // Exit if accessed directly.
 				</div>
 			</div>
 			<div class="capabilities__overlay capabilities__overlay--webdev" id="expt-overlay-4">
-				<button class="circle__button expt__close--button" id="expt-close-4">&times;</button>
+				<button class="circle__button expt__close--button" id="expt-close-4"><div class="button__content">&times;</div></button>
 				<div class="overlay__container">
 					<div class="overlay-intro"><h4 class="headline headline__header">Mobile + Web</h4>
 						<p class="copy__header">Today nearly every brand relationships begins online in one form or another. So if you get on their radar and if you spark their interest and if they visit your page....it better not suck.  Nuff said.</p>
 					</div>
-					<div class="row">
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">languages & frameworks </h5>
-							<hr>
+					<div class="row row__capabilities-overlay">
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">languages & frameworks </h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
@@ -296,9 +291,9 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 						</div>
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">design & prototyping</h5>
-							<hr>
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">design & prototyping</h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
@@ -306,9 +301,9 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
 						</div>
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">systems & environments</h5>
-							<hr>
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">systems & environments</h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
@@ -322,9 +317,9 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 						</div>
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">task processors</h5>
-							<hr>
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">task processors</h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
@@ -337,9 +332,9 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_69.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
 						</div>
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">design & production</h5>
-							<hr>
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">design & production</h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
@@ -347,9 +342,9 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_18.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
 						</div>
-						<div class="overlay__content overlay__content--capabilities">
-							<h5 class="headline headline__block">collaboration</h5>
-							<hr>
+						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
+							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">collaboration</h5>
+							<hr class="overlay__hr--capabilities-webdev">
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
@@ -359,16 +354,12 @@ exit; // Exit if accessed directly.
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 						</div>
-						<button class="circle__button expt__close--button bottom" id="expt-close-1">
-						&times;
-						</button>
+						<!-- 						<button class="circle__button expt__close--button bottom" id="expt-close-4">&times;</button> -->
 					</div>
 				</div>
 			</div>
 			<div class="capabilities__overlay capabilities__overlay--operations" id="expt-overlay-5">
-				<button class="circle__button expt__close--button" id="expt-close-5">
-				&times;
-				</button>
+				<button class="circle__button expt__close--button" id="expt-close-5"><div class="button__content">&times;</div></button>
 				<div class="overlay__container">
 					<div class="overlay-intro">
 						<h4 class="headline headline__header">Marketing Operations</h4>
@@ -379,7 +370,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_30.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Marketing I.T.</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Marketing I.T.</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Automation Platforms</li>
@@ -396,7 +387,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_09.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Workflow/Process</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Workflow/Process</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Strategic planning</li>
@@ -413,7 +404,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_28.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Asset Management</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Asset Management</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Budgets & Expenses</li>
@@ -434,7 +425,7 @@ exit; // Exit if accessed directly.
 					<div class="overlay__content overlay__content--capabilities">
 						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon"  src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_32.svg" alt="skill icon"/></div>
 						<div class="overlay__content--head">
-							<h5 class="headline headline__block">Performance Management</h5>
+							<h5 class="headline headline__block headline__block--capabilites-overlay">Performance Management</h5>
 						</div>
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Analytics & Reporting</li>
@@ -458,7 +449,7 @@ exit; // Exit if accessed directly.
 				<nav class="capabilities__main-page_menu">
 					<div class="split-container my-capabilities__panel-head">
 						<h2 class="headline headline__header headline">What Can I Do For You?</h2>
-						<div class="subhead subhead__header">Whether you need a coffee mug or a business plan, I can help.</div>
+						<div class="subhead subhead__header subhead__header--capabilities">Whether you need a coffee mug or a business plan, I can help.</div>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-4">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>

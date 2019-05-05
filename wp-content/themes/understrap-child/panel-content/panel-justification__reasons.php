@@ -152,7 +152,7 @@ exit; // Exit if accessed directly.
 <div class="justification--flex-container">
 <div class="header-25x75row__container">
 	<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit jumbo-digit--snuggie">04</h2>
-	<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">I optimize<span class="br"><br></span>Marketing Investments</h3></div>
+	<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">I optimize <span class="br"><br></span>Marketing Investments</h3></div>
 	<div class="page__header-text_container page__header-text_container--optimize"><p class="justification__page-header_text justification__page-header_text">I bring strategic continuity and clarity to an increasingly fragmented business function</p>
 </div>
 <div class="diagram__container diagram__content_container optimize-diagram__container">

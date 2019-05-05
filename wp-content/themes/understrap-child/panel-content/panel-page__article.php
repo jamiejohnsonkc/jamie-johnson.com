@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  content__wrapper home-page home-page__article--strengths" id="article__wrapper--strengths">
+<article class="article__wrapper  content__wrapper homepage homepage__article--strengths" id="article__wrapper--strengths">
 	<div class="container core content__container_col"  id="article__container--strengths">
 		<h1>page title/breadcrumb</h1>
 		<h2>Headline</h2>

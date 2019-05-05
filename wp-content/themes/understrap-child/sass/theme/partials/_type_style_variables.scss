@@ -183,30 +183,6 @@ p {
 &__citation{}
 }
 
-.article{
-// &__headline{
-// 	@include headline-sm;
-//   @include mq("tablet") {
-//     @include headline;
-//   }
-//   @include mq("desktop") {
-//     @include headline-lg;
-//   }
-// }
-&__subhead{}
-&__sublist{}
-&__deck{
-	&__display-text{}
-	&__body-text{}
-&--lg{}
-&--sm{}
-}
-&__byline{}
-&__copy{
-	&--short{}
-	&--long{}
-}
-}
 
 .panel{
 &__headline{}
@@ -232,6 +208,24 @@ p {
 
 
 .diagram{
+&__container{
+  &--intro-diagram{
+    width: 83%;
+    max-width: 83%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    @include mq("tablet-wide"){
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
 &__header-headline{
   @include diagram__header-headline();
   font-weight: 400;
@@ -339,6 +333,19 @@ display: flex;
 min-height: 0;
 text-align: left;
 }
+}
+&--intro-diagram{
+  color: $white;
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    padding-top: 1.50001rem;
+    width: 61%;
+    @include mq("tablet-wide"){
+      width: 100%;
+    }
 }
 }
 }
@@ -461,6 +468,9 @@ text-align: left;
   position: relative;
   overflow: hidden;
 @include vr($padding-top: 3, $padding-bottom: 3);
+  &__container{
+    @extend .container;
+  }
   &--fluid {
     width: 100%;
   }
@@ -497,6 +507,22 @@ text-align: left;
   &--placed {
     position: absolute;
   }
+&--strengths{
+  min-height: 100em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+&--smm{
+background: $primary;
+}
+&--imc{
+  background: #343a40}
+&--opi{
+  background: $primary;
+}
+
 }
 
 .container{
@@ -586,6 +612,14 @@ text-align: left;
   position: relative;
   &__container{
 &--strengths{
+    @include mq("tablet", $type:max){
+    flex: 0 0 auto;
+  flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 0;
+  }
   flex-wrap: wrap;
       display: flex;
 
@@ -596,7 +630,7 @@ text-align: left;
     padding-left: 0px;
     padding-right: 0px;
     min-height: 0;
-    flex: 1;
+    justify-content: center;
     @include mq("tablet"){
     display: flex;
     min-height: 0;
@@ -609,21 +643,11 @@ text-align: left;
 
     }
 }
-
+&--brands{
+  width: 81%;
 }
-  &__list{
-    &--strengths{
-        position: relative;
-  z-index: 3;
-  @include mq("tablet"){
-      flex: 0 0 auto;
-  max-width: 61%;
-  display: flex;
-  min-height: 0;
-  flex-direction: column;
-  }
-    }
-  }
+}
+
 
   &__fluid {
     width: 100%;
@@ -795,7 +819,7 @@ text-align: left;
   margin-top: auto;
   @include mq("tablet") {
     margin-bottom: auto;
-  }
+  }  
 &--overlay{
   position: relative;
   z-index: 3;
@@ -803,12 +827,38 @@ text-align: left;
 &--reasons{
   @include vr($margin: 4 0);
 }
-&--strengths{
+&--homepage{
+    @include vr($margin-top: 4, $margin-bottom: 4);
   @include mq("tablet"){
-    padding-bottom: .25em;
+    align-self: flex-start;
+ 
+
   }
 }
+&--white{
+  color: $white;
 }
+}
+
+.pagination {
+  @include pagination-sm();
+    color: $gray-900;
+
+  @include mq("tablet") {
+    @include pagination();
+  }
+  @include mq("desktop-wide"){
+    @include pagination-lg();
+  }
+ &--white{
+  color: $white;
+}
+  &--center {
+    text-align: center;
+  }
+}
+
+
 
 
 .link{
@@ -868,23 +918,7 @@ text-align: left;
   }
 }
 
-.pagination {
-  @include pagination-sm();
-    color: $gray-900;
 
-  @include mq("tablet") {
-    @include pagination();
-  }
-  @include mq("desktop-wide"){
-  	@include pagination-lg();
-  }
- &--white{
-  color: $white;
-}
-  &--center {
-    text-align: center;
-  }
-}
 
 .headline{
   // @include headline-sm;
@@ -896,24 +930,46 @@ text-align: left;
     @include mq("desktop") {
       @include header__headline-lg();
     }
-
-&--white{
-	color: $white;
-}
 &--strengths{
-  @include vr($font-size: 6);
+  @include vr($font-size: 6, $line-height: 2.25);
   @include mq("tablet"){
     @include vr($font-size: 8);
   }
 }
 }
+  &--intro{
+    text-align: center;
+  }
+
+&--end2end{
+  color: $white;
+}
+
 
 
   &__block{
 	@include block__headline();
 	font-weight: 400;
+&--webdev{
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+}
+&--capabilities-overlay{
+display: flex;
+min-height: 1.2em;
+text-align: center;
+flex: 0 0 100%;
+align-self: center;
+@include mq("tablet"){
+  text-align: left;
+}
 }
 
+&--leadingx2{
+  @include vr($line-height: 3);
+}
+}
 &__item{
 	@include item__headline();
 }
@@ -923,73 +979,33 @@ text-align: left;
     text-align: center;
     align-self: center;
   }
+&--white{
+  color: $white;
+}
+&--weak{
+  font-weight: 200;
 }
 
 
+&--proof{
+  flex: 0 0 auto;
+  display: flex;
+  z-index: 2;
+  text-align: center;
+  width: 61%;
+  justify-content: center;
+  margin: 0 auto;
+  @include mq("phone-wide", $type:max){
+    width: 81%;
+  }
+}
 
-// .subhead{
-//   // @include subhead-sm;
-//   // @include mq("tablet") {
- 
-//   // }
-//   &__header{
-//     @include header__subhead(); 
-//   @include mq("desktop") {
-//     @include header__subhead-lg();
-//   }
-//   &--sublist {
-    
-//   }
-//     &--sublist-item {
-    
-//   }
+&--stats{
+  @include vr($margin-bottom:2);
 
-//   &--center {
-//     text-align: center;
-//   }
-// }
+}
 
-//   &__block{
-// 	@include block__subhead();
-//   &--sublist {
-    
-//   }
-//     &--sublist-item {
-    
-//   }
-
-//   &--center {
-//     text-align: center;
-//   }
-// }
-
-// &__item{
-// 	@include item__subhead();
-
-
-//   &--sublist {
-    
-//   }
-//   &--sublist-item {
-    
-//   }
-
-//   &--center {
-//     text-align: center;
-//   }
-// }
-// &--sublist {
-    
-//   }
-//   &--sublist-item {
-    
-//   }
-
-//   &--center {
-//     text-align: center;
-//   }
-
-// }
+}
 
 
 
@@ -998,20 +1014,32 @@ text-align: left;
   	max-width: 61%;
   }
   &__header{
+    
     @include header__subhead(); 
   @include mq("desktop") {
     @include header__subhead-lg();
   }
+  &--capabilities{
+ margin-left: auto;
+ margin-right: auto;
+  }
 }
   &__block{
   		@include block__subhead();
+&--homepage-intro{
+  width: 68.89%;
+  max-width: 68.89%;
+  @include vr($margin-top: 3, $margin-bottom: 3);
+  justify-content: center;
+  text-align: justify;
+}
 }
   &__item{
   	@include item__subhead();
   }
 
   &--sublist {
-    color: yellow;
+
   }
     &--sublist-item {
     font-weight: 300;
@@ -1025,6 +1053,18 @@ text-align: left;
     text-align: center;
     align-self: center;
   }
+  &--leadingx2{
+  @include vr($line-height: 3);
+}
+&--white{
+  color: $white;
+}
+&--weak{
+  font-weight: 200;
+}
+&--intro{
+
+}
 }
 
 .deck{
@@ -1050,9 +1090,21 @@ text-align: left;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 0 0 83%;
+  align-self: center;
 
   @include vr($padding-left: 0);
     } 
+
+    &--end2end{
+      color: $white;
+      width: 61%;
+      @include vr($margin-top: 0, $margin-bottom: 4);
+      text-align:center;
+    }
+        &--stats{
+      color: $white;
+    }
 }
   &__block{
   		@include block__deck();
@@ -1063,6 +1115,9 @@ text-align: left;
     &--center {
     text-align: center;
     align-self: center;
+  }
+  &--intro{
+    text-align: center;
   }
 }
 
@@ -1079,6 +1134,12 @@ text-align: left;
   position: relative;
   z-index: 3;
   display: flex;
+  @include mq("tablet", $type:max){
+    flex: 0 0 auto;
+    max-width: 83%;
+    min-height: 0;
+  }
+  flex: 0 0 83%;
   @include mq("tablet"){
       flex: 0 0 auto;
       max-width: 61%;
@@ -1092,56 +1153,80 @@ text-align: left;
 &__header{
 	@include header__copy();
 
+&--proof{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+display: flex;
+flex: 1 1 30%;
+min-height: 5em;
+position: relative;
+// color: $offwhite;
+>em{
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex: 1;
+}
+}
+&--end2end{
+  color: $offwhite;
+  width: 61%;
+}
+&--outcomes{
+  text-align: justify;
+@include mq("tablet"){
+  width: 81%;
+}
+}
+
+}
+&--stats{
+    text-align: justify;
+    width: 61%;
+    color: $white;
+@include mq("tablet"){
+  width: 83%;
   }
-
-
+}
 
 &__block{
 		@include block__copy();
-    
+    &--capabilities-overlay{
+      flex: 0 0 auto;
+      display: flex;
+      max-width: 83%;
+      // padding-left: 3%;
+      @include vr($line-height:2);
+      @include mq("tablet"){
+        max-width: 61%;
+      }
+    }
   }
 
 &__long{
 @include vr($line-height: 2.5);
-
+}
 	&--serif{
 		font-family: $font-family-sans-serif;
 	}
 
+&__item{
+  @include item__copy();
 }
 
 &:last-of-type{
 	margin-bottom: 0;
 }
+&--serif{
+  font-family: $font-family-serif;
+}
 }
 
 
-.list{
-margin-top: 0;
-margin-bottom: 0;
-&__vertical{
-   display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  height: auto; 
-}
-&__inline{
-  display: flex;
-  flex-wrap: wrap;
-}
-&--inset{
-	list-style-position: inside;
-	text-indent: -2em;
-	padding-left: 2em;
-	width: 81%;
-	@include push-auto();
-	@include vr($padding-bottom: 2);
-}
-&--no-bullets{
-	list-style: none;
-}
 
-}
+
 
 
 .list-head{
@@ -1163,12 +1248,102 @@ margin-bottom: 0;
 	&--pattens{
   	background: $pattens;
   }
+}
+  &--strengths{
+     @include mq("tablet", $type:max){
+    flex: 0 0 auto;
+    max-width: 83%;
+    display: flex;
+    min-height: 0;
+  }
+      font-weight: 300;
+  text-transform: uppercase;
+    letter-spacing: .025em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex: 0 0 83%;
+  }
+  &--white{
+    color: $white;
+  }
   }
   //   &--center {
   //   text-align: center;
   //   align-self: center;
   // }
+
+.list{
+margin-top: 0;
+margin-bottom: 0;
+&__container--intro{
+  list-style: none;
+  padding-left: 0;
 }
+&__vertical{
+   display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: auto; 
+}
+&__inline{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+&--inset{
+  list-style-position: inside;
+  text-indent: -2em;
+  padding-left: 2em;
+  width: 81%;
+  @include push-auto();
+  @include vr($padding-bottom: 2);
+}
+&--no-bullets{
+  list-style: none;
+}
+&--intro{
+  padding-left: 0;
+  @include vr($margin-top: 4, $margin-bottom: 4);
+}
+
+    &--strengths{
+    @include mq("tablet", $type:max){
+    flex: 0 0 auto;
+    max-width: 83%;
+    display: flex;
+    flex-direction: row;
+  }
+  list-style: none;
+      font-weight: 400;
+  // text-transform: uppercase;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex: 0 0 83%;
+    padding-left: 0;
+  @include mq("tablet"){
+      flex: 0 0 auto;
+  max-width: 61%;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  }
+    }
+  &--capabilities-overlay{
+    @include vr($margin-top: 1);
+  }
+  }
 
 .list-item{
   font-weight: 300;
@@ -1176,20 +1351,52 @@ margin-bottom: 0;
   // margin-left: -1em;
   &__header{
     @include header__list-item(); 
+    font-weight: 200;
 }
   &__block{
 @include block__list-item();
 }
   &__item{
   	@include item__list-item();
+    font-weight: 200;
   }
   &__spacer{
-      @include vr($padding: 0 .5);
-              &--primary-color{
+      @include mq("phone", $type:max){ 
+      padding: 0 .5rem;
+    }
+      @include mq("phone"){
+        @include vr($padding: 0 .5);
+        }      
+        &--primary-color{
   color:$primary;
   }
 }
+&__divider{
+  @include vr($padding-left: .25, $padding-right: .25);
+}
   &--expertise-item{
+  }
+  &--intro{
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mq("tablet") {
+  }
+  @include mq("tablet-wide") {
+    flex-direction: row;
+  }
+  }
+  &--intro-digit{
+     @include vr($font-size: 6);
+  font-weight: 400;
+    font-family: $font-family-serif;
+    color: $primary;
+  @include mq('tablet'){
+    @include vr($font-size: 6);
+  }
+  }
+  &--strengths{
+    flex: 0 0 100%;
   }
   &--flex-auto{
     flex: 0 0 auto;
@@ -1201,6 +1408,8 @@ margin-bottom: 0;
   
 
 // }
+
+
 
 
 

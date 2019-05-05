@@ -85,7 +85,7 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin block__copy {                 @include vr($font-size: 3,        $line-height:1.5, $margin:1 0); }
 @mixin block__deck {                 @include vr($font-size: 4,        $margin:1 0, $line-height:1.5); }
 @mixin block__headline {             @include vr($font-size: 5,        $margin-top:1, $margin-bottom:1, $line-height:1.5); }
-@mixin block__list-head {            @include vr($font-size: 3,        $line-height:1.5); }
+@mixin block__list-head {            @include vr($font-size: 3,        $line-height:1.5, $margin-bottom: 1, $margin-top: 2); }
 @mixin block__list-item {            @include vr($font-size: 3,        $margin-bottom:0.75, $line-height:1.5); }
 @mixin block__subhead {              @include vr($font-size: 4,        $margin-top:1, $margin-bottom:1, $line-height:1.5); }
 
@@ -106,8 +106,8 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin display-text-lg {             @include vr($font-size: 28px,     $margin:2 0); }
 @mixin display-text-sm {             @include vr($font-size: 16px,     $line-height:2, $margin:2 0); }
 
-@mixin header__copy {                @include vr($font-size: 4,        $line-height:3, $margin:1 0); }
-@mixin header__deck {                @include vr($font-size: 5,        $margin:1 0, $line-height:3); 
+@mixin header__copy {                @include vr($font-size: 4,        $line-height:2.5, $margin:1 0); }
+@mixin header__deck {                @include vr($font-size: 5,        $margin:1 0, $line-height:2); 
                                      @include mq("tablet"){
                                      @include vr($margin: 2 0);}}
 
@@ -116,7 +116,7 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin header__headline {            @include vr($font-size: 7,        $margin:2 0); }
 @mixin header__headline-lg {         @include vr($font-size: 6,        $margin:2 0); font-weight: 500; letter-spacing: -.025em; }
 @mixin header__list-head {           @include vr($font-size: 4,        $line-height:2); }
-@mixin header__list-item {           @include vr($font-size: 12px,     $margin-bottom:0.75, $line-height:1.5); }
+@mixin header__list-item {           @include vr($font-size: 2,     $margin-bottom:0.5, $line-height:1.5); }
 @mixin header__subhead {             @include vr($font-size: 5,        $margin:2 0); }
 @mixin header__subhead-lg {          @include vr($font-size: 5,        $margin:2 0); }
 @mixin header__subhead-sm {          @include vr($font-size: 3,        $margin:2 0, $line-height:2.4); }
@@ -126,7 +126,8 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin item__headline {              @include vr($font-size: 3,        $margin-top:1, $margin-bottom:1, $line-height:1.5); }
 @mixin item__list-head {             @include vr($font-size: 2,        $line-height:1.5); }
 @mixin item__list-item {             @include vr($font-size: 2,        $margin-bottom:0.75, $line-height:1.5); }
-@mixin item__subhead {               @include vr($font-size: 2,        $margin-top:2, $margin-bottom:1, $line-height:1.5); }
+@mixin item__subhead {               @include vr($font-size: 2,        $margin-top:2, $margin-bottom:0, $line-height:1.5); }
+@mixin item__copy {                  @include vr($font-size: 2,        $margin-top:1, $margin-bottom:1, $line-height:1.5); }
 
 @mixin diagram__header-headline {    @include vr($font-size: 4,        $margin-top:1, $margin-bottom:1, $line-height:1.5); }
 @mixin diagram__header-copy {        @include vr($font-size: 4,        $line-height:2, $margin:1 0); }
@@ -158,3 +159,13 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin title-lg {                    @include vr($font-size: 10,       $margin:2 0); }
 @mixin title-sub {                   @include vr($font-size: 6,        $margin:2 0, $line-height:3); }
 @mixin title-sub-lg {                @include vr($font-size: 7,        $margin:2 0); }
+
+@mixin text-shadow{
+// text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+text-shadow: rgb(51, 51, 51) 3px 0px 0px, rgb(51, 51, 51) 0.540302px 0.841473px 0px, rgb(51, 51, 51) -0.416147px 0.909297px 0px, rgb(51, 51, 51) -0.989992px 0.14112px 0px, rgb(51, 51, 51) -0.653644px -0.756802px 0px, rgb(51, 51, 51) 0.283662px -0.958924px 0px, rgb(51, 51, 51) 0.96017px -0.279415px 0px;
+}
+
+@mixin text-shadow-primary{
+// text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+text-shadow: rgb(34, 204, 255) 3px 0px 0px, rgb(34, 204, 255) 0.540302px 0.841473px 0px, rgb(34, 204, 255) -0.416147px 0.909297px 0px, rgb(34, 204, 255) -0.989992px 0.14112px 0px, rgb(34, 204, 255) -0.653644px -0.756802px 0px, rgb(34, 204, 255) 0.283662px -0.958924px 0px, rgb(34, 204, 255) 0.96017px -0.279415px 0px;
+}

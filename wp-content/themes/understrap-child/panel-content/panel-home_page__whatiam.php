@@ -9,8 +9,8 @@ exit; // Exit if accessed directly.
 }
 ?>
 
-<article class="article__wrapper  home-page whatiam"> <!-- CONTAINER -->
-<div class="container home-page__whatiam__container core" id="whatiam">
+<article class="article__wrapper  homepage whatiam"> <!-- CONTAINER -->
+<div class="container homepage__whatiam__container core" id="whatiam">
 	<h1>what i am</h1>
 	<h2>I Am An End to End Marketer</h2>
 	<h3>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br-2"><br></span>+ Development</h3>	

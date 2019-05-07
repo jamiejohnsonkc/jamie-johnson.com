@@ -269,10 +269,11 @@ text-align: center;
 
 .content__intro_icon--background{
   // background: $pattens;
-  border: .5em solid $pattens;
-  @include mq("tablet-wide"){
-    border: .25em solid $pattens;
-  }
+  // border: .5em solid $pattens;
+  // @include mq("tablet-wide"){
+  //   border: .25em solid $pattens;
+  background: #000;
+  
 }
 
 
@@ -280,20 +281,20 @@ text-align: center;
 fill: $pattens;
 }
 
-.intro-icon--flex-item_wrapper--icon{
-    // border: thin $offwhite solid;
-background: rgba(020,020,020,.8);
-}
+// .intro-icon--flex-item_wrapper--icon{
+//     // border: thin $offwhite solid;
+// background: rgba(020,020,020,.8);
+// }
 
-.content__item_intro--content {
-  background: green;
-}
+// .content__item_intro--content {
+//   background: green;
+// }
 
 
-.intro__summation_copy{
-  @extend %intro_caption;
-  text-align:center;
-}
+// .intro__summation_copy{
+//   @extend %intro_caption;
+//   text-align:center;
+// }
 
 
 
@@ -370,84 +371,26 @@ background: rgba(020,020,020,.8);
 //
 // homepage-summary__claim
 //
-.homepage-summary__claim_wrapper{
- background: $pattens;
+// .homepage-claim__wrapper{
+//  background: $pattens;
+// width: 100%;
 
-// overflow-y: visible;
-width: 100%;
-
-}
-
-.container.homepage-summary__claim_container{
-   // @include vr($padding: 6 2);
-}
-
-.homepage-summary__claim_pagination{
-  color: $black;
-  z-index:3;
-}
-
-.homepage-summary__claim_subhead{
-@include display-text;    
-    font-weight: 300;
-    z-index:3;
-    margin: 0;
-}
+// }
 
 
-.homepage-summary__claim_subhead--strong{
-font-weight: 600;
-margin: 0;
-z-index:3;
-}
+
+
 
 .homepage-summary__claim_content-wrapper{
 // background: rgba(020,020,020,.2);
 
 }
 
-@include mq('tablet'){
-.homepage-summary__claim_content-wrapper{
-  > .homepage-summary__claim_subhead--strong{
-    @include vr($font-size:6);
-    @include vr($padding: 2 0);
-    letter-spacing: -.05em;
-}
- > .homepage-summary__claim_subhead--weak{
-  @include vr($font-size: 4);
- }
-}
-}
 
 
 
-.homepage-summary__claim_subhead--border{
-border-top: 1px solid $gray-300;
-// @include vr($padding-top: 1);
-@include mq('tablet'){
-  border-bottom: .05em solid $gray-300;
-  border-top: .05em solid $gray-300;
-}
-
-}
-
-p.homepage-summary__claim--fancy{
-      @include mq('phone',$type: max){
-      text-align: left;
-  
-    }
-  @include body-text-lg();
-      @include vr($line-height: 3);
-  font-style: italic;
-  font-weight: 200;
-      text-align: justify;
-  font-family: $font-family-serif;
-  z-index:3;
-  @include mq('tablet'){
 
 
-  }
-}
 
 
 // .summary__page_subhead{
@@ -529,7 +472,7 @@ font-style: italic;
 
 
 .strengths__page-header_container{
-  border: 1.5em solid $pattens;
+  // border: 1.5em solid $pattens;
   background: $black;
 color: $white;
 

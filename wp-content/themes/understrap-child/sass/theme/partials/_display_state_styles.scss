@@ -449,3 +449,9 @@ span.summary-page__subhead_claim--br{
 .br__proof--me{
     
 }
+
+.br__diagram-intro--copy, .br__diagram-intro--copy2{
+    @include mq("tablet-wide"){
+        display: none;
+    }
+}

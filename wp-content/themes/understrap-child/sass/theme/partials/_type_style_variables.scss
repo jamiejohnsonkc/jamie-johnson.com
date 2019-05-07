@@ -97,16 +97,9 @@ p {
   font-weight: $lead-font-weight;
 }
 
-
-
-
-
 // =========================================================================
 // temp
 // =========================================================================
-
-
-
 
 // .page__headline {
 //   // @include headline-sm;
@@ -123,301 +116,142 @@ p {
 //   }
 // }
 
-
 // =========================================================================
 // typography
 // =========================================================================
 
-.title, .headline{
-	font-weight: 500;
-	letter-spacing: -.025em;
+.title, .headline {
+  font-weight: 500;
+  letter-spacing: -.025em;
 }
 
-.subhead, .deck{
-	font-weight: 400;
+.subhead, .deck {
+  font-weight: 400;
 }
 
-.title-sub, .pagination{
-	font-family: $font-family-serif;
-	 font-style: italic;
+.title-sub, .pagination {
+  font-family: $font-family-serif;
+  font-style: italic;
 }
-
 
 .legal, .legal-lg, .legal-sm {
   font-family: $font-family-monospace;
 }
 
-.headline, .deck{
-	position: relative;
+.headline, .deck {
+  position: relative;
 }
 
-.section{
-// &__headline{
-// 	@include headline-sm;
-//   @include mq("tablet") {
-//     @include headline;
-//   }
-//   @include mq("desktop") {
-//     @include headline-lg;
-//   }
+.section {
+  // &__headline{
+  //  @include headline-sm;
+  //   @include mq("tablet") {
+  //     @include headline;
+  //   }
+  //   @include mq("desktop") {
+  //     @include headline-lg;
+  //   }
 
-// }
-&__subhead{}
-&__sublist{}
-&__deck{
-	&__display-text{}
-	&__body-text{}
-&--lg{}
-&--sm{}
-}
-&__copy{
-	&--short{}
-	&--long{}
-}
+  // }
+  &__subhead {}
 
-&__caption{}
-&__quote
-&__quip{}
-&__footnote{}
-&__legal{}
-&__citation{}
-}
+  &__sublist {}
 
+  &__deck {
+    &__display-text {}
 
-.panel{
-&__headline{}
-&__subhead{}
-&__sublist{}
-&__deck{
-	&__display-text{}
-	&__body-text{}
-&--lg{}
-&--sm{}
-}
-&__copy{
-	&--short{}
-	&--long{}
-}
-}
+    &__body-text {}
 
-.image{
-&__caption{}
-&__credit{}
-}
+    &--lg {}
 
-
-
-.diagram{
-&__container{
-  &--intro-diagram{
-    width: 83%;
-    max-width: 83%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    @include mq("tablet-wide"){
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      width: 100%;
-      max-width: 100%;
-    }
+    &--sm {}
   }
+
+  &__copy {
+    &--short {}
+
+    &--long {}
+  }
+
+  &__caption {}
+
+  &__quote
+  &__quip {}
+
+  &__footnote {}
+
+  &__legal {}
+
+  &__citation {}
 }
-&__header-headline{
-  @include diagram__header-headline();
-  font-weight: 400;
-  flex: 1 0 100%;
-&--f-align-start{
-  align-self: flex-start;
-}
-@include mq("tablet"){
-  flex: 0 0 81%;
-}
-}
-&__header-copy{
-  @include diagram__header-copy();
-  display: flex;
-  @include mq("tablet"){ 
-    flex: 0 0 81%;
-}
-}
-&__content{
-  &--objectives-icon{
-    >svg{
-      width: 100%;
-      @include mq("tablet"){
-        width: 83%;
-      }
-    }
+
+.panel {
+  &__headline {}
+
+  &__subhead {}
+
+  &__sublist {}
+
+  &__deck {
+    &__display-text {}
+
+    &__body-text {}
+
+    &--lg {}
+
+    &--sm {}
+  }
+
+  &__copy {
+    &--short {}
+
+    &--long {}
   }
 }
 
+.image {
+  &__caption {}
+
+  &__credit {}
 }
 
-.diagram-item{
-  &__container{
-   width: 100%;
-   max-width: 100%;
-   position: relative;
-   flex: 0 0 auto;
- 
-    &--23x77row{
-    display: flex;
-    justify-content: center;
-     @include mq("tablet"){ 
-    align-items: center;
-    flex-direction: row;
-    }
-  }
-    &--23row{
-           display: flex;
-           flex: 0 0 0;
-           min-height: 10em;
-           width: 38%;
-      @include mq("tablet"){ 
-        flex: 0 0 23%;
-      max-width: 23%;
-      display: flex;
-      min-height: 0;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-    &--23row-offset{
-      display: none;
-      @include mq("tablet"){
-      display: none;
-      flex: 0 0 23%;
-      max-width: 23%;
-      min-height: 0;
-    }
-  }
-    &--77row{
-      margin-block-end: 0px;
-  margin-block-start: 0px;
-  list-style-position: inside;
-  padding-inline-start: 0px;
-  -webkit-padding-start: 0px;
-      flex: 0 0 73%;
-      width: 73%;
-      text-align: center;
-    @include mq("tablet"){
-text-align: left;
-display: flex;
-flex-wrap: wrap;
-      flex: 0 0 73%;
-      max-width: 73%;
-      min-height: 0;
-    }
-    }
-  }
-  &__headline{
-font-weight: 300;
-@include diagram__item-headline();
+.card {
+  &__headline {}
+
+  &__subhead {}
+
+  &__sublist {}
+
+  &__deck
+  &__body-lg {}
+
+  &__body-sm {}
+
+  &__caption {}
+
+  &__quote
+  &__quip {}
+
+  &__footnote {}
+
+  &__legal {}
 }
-  &__copy{
-font-weight: 200;
-@include diagram__item-copy();
-
-
-&--objectives-diagram{
-text-align: justify;
-width: 100%;
-@include mq("tablet"){
-max-width: 73%;
-flex: 0 0 73%;
-display: flex;
-min-height: 0;
-text-align: left;
-}
-}
-&--intro-diagram{
-  color: $white;
-  text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1 0 auto;
-    padding-top: 1.50001rem;
-    width: 61%;
-    @include mq("tablet-wide"){
-      width: 100%;
-    }
-}
-}
-}
-
-
-
-
-
-// .diagram__objectives{
-// .diagram__content--objectives-icon{order: 1;}
-// .diagram-item__headline{order: 2;}
-// .diagram-item__copy{order: 3;}
-// @include mq("tablet"){
-//   .diagram__content--objectives-icon{order: 2;}
-// .diagram-item__headline{order: 1;}
-// .diagram-item__copy{order: 3;}
-// }
-// }
-
-
-
-
-// &__subhead{}
-// &__sublist{}
-// &__deck{
-// 	&__display-text{}
-// 	&__body-text{}
-// &--lg{}
-// &--sm{}
-// }
-// &__copy{
-// 	&--short{}
-// 	&--long{}
-// }
-// &__caption{}
-// &__quote{}
-// &__quip{}
-// &__footnote{}
-// &__legal{}
-// &__citation{}
-
-
-.card{
-&__headline{}
-&__subhead{}
-&__sublist{}
-&__deck
-&__body-lg{}
-&__body-sm{}
-&__caption{}
-&__quote
-&__quip{}
-&__footnote{}
-&__legal{}
-}
-
-
 
 // .page__subhead{
-// 	@include subhead();
-// 		&--serif{
-// 		font-family: $font-family-serif;
-// 	}
-// 	@include mq('tablet'){
-// 	@include subhead-lg();
-// 	}
+//  @include subhead();
+//    &--serif{
+//    font-family: $font-family-serif;
+//  }
+//  @include mq('tablet'){
+//  @include subhead-lg();
+//  }
 
 // }
-.section{
+.section {
   display: block;
   position: relative;
   overflow: hidden;
+
   &__fluid {
     width: 100%;
   }
@@ -438,9 +272,10 @@ text-align: left;
   // }
   // }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -463,14 +298,17 @@ text-align: left;
   }
 }
 
-.article{
+.article {
   display: block;
   position: relative;
   overflow: hidden;
-@include vr($padding-top: 3, $padding-bottom: 3);
-  &__container{
+
+  @include vr($padding-top: 3, $padding-bottom: 3);
+
+  &__container {
     @extend .container;
   }
+
   &--fluid {
     width: 100%;
   }
@@ -484,9 +322,10 @@ text-align: left;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -507,27 +346,32 @@ text-align: left;
   &--placed {
     position: absolute;
   }
-&--strengths{
-  min-height: 100em;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+
+  &--strengths {
+    min-height: 100em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 0;
+  }
+
+  &--smm {
+    background: $primary;
+  }
+
+  &--imc {
+    background: #343a40;
+  }
+
+  &--opi {
+    background: $primary;
+  }
 }
 
-&--smm{
-background: $primary;
-}
-&--imc{
-  background: #343a40}
-&--opi{
-  background: $primary;
-}
-
-}
-
-.container{
+.container {
   display: block;
   position: relative;
+
   &__fluid {
     width: 100%;
   }
@@ -541,9 +385,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -566,9 +411,10 @@ background: $primary;
   }
 }
 
-.wrapper{
+.wrapper {
   display: block;
   position: relative;
+
   &__fluid {
     width: 100%;
   }
@@ -582,9 +428,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -607,47 +454,55 @@ background: $primary;
   }
 }
 
-.header{
+.header {
   display: block;
   position: relative;
-  &__container{
-&--strengths{
-    @include mq("tablet", $type:max){
-    flex: 0 0 auto;
-  flex: 0 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    min-height: 0;
-  }
-  flex-wrap: wrap;
+
+  &__container {
+    &--strengths {
+      @include mq("tablet", $type: max) {
+        flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        min-height: 0;
+      }
+
+
+      flex-wrap: wrap;
       display: flex;
 
-    // display: block;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding-left: 0px;
-    padding-right: 0px;
-    min-height: 0;
-    justify-content: center;
-    @include mq("tablet"){
-    display: flex;
-    min-height: 0;
-    flex: 0 0 auto;
-    max-width: 61%;
-    min-height: 0;
-    @include mq("tablet-wide"){
-    z-index: 3;
-  }
+      // display: block;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-left: 0px;
+      padding-right: 0px;
+      min-height: 0;
+      justify-content: center;
 
+      @include mq("tablet") {
+        display: flex;
+        min-height: 0;
+        flex: 0 0 auto;
+        max-width: 61%;
+        min-height: 0;
+
+        @include mq("tablet-wide") {
+          z-index: 3;
+          width: 83%;
+          max-width: 83%;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+      }
     }
-}
-&--brands{
-  width: 81%;
-}
-}
 
+    &--brands {
+      width: 81%;
+    }
+  }
 
   &__fluid {
     width: 100%;
@@ -662,9 +517,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -686,9 +542,11 @@ background: $primary;
     position: absolute;
   }
 }
-.content{
+
+.content {
   display: block;
   position: relative;
+
   &__fluid {
     width: 100%;
   }
@@ -702,9 +560,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -726,9 +585,11 @@ background: $primary;
     position: absolute;
   }
 }
-.block{
+
+.block {
   display: block;
   position: relative;
+
   &__fluid {
     width: 100%;
   }
@@ -742,9 +603,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -766,9 +628,11 @@ background: $primary;
     position: absolute;
   }
 }
+
 .item {
   display: block;
   position: relative;
+
   &__fluid {
     width: 100%;
   }
@@ -782,9 +646,10 @@ background: $primary;
     display: flex;
   }
 
-&--container{
-  @extend .container;
-}
+  &--container {
+    @extend .container;
+  }
+
   &--overlay {
     z-index: 3;
   }
@@ -794,7 +659,7 @@ background: $primary;
     z-index: 0;
   }
 
-  &--border{
+  &--border {
     border: thin solid $pattens;
   }
 
@@ -811,58 +676,77 @@ background: $primary;
   }
 }
 
-
-
 .pagination {
   display: flex;
   flex: 0 0 auto;
   margin-top: auto;
+  min-height: 0;
+
   @include mq("tablet") {
     margin-bottom: auto;
-  }  
-&--overlay{
-  position: relative;
-  z-index: 3;
-}
-&--reasons{
-  @include vr($margin: 4 0);
-}
-&--homepage{
-    @include vr($margin-top: 4, $margin-bottom: 4);
-  @include mq("tablet"){
-    align-self: flex-start;
- 
-
   }
-}
-&--white{
-  color: $white;
-}
+
+
+  &--overlay {
+    position: relative;
+    z-index: 3;
+  }
+
+  &--reasons {
+    @include vr($margin: 4 0);
+  }
+
+  &--strengths{
+    @include mq("tablet-wide"){
+      display: none;
+    }
+  }
+
+  &--homepage {
+    @include vr($margin-top: 4, $margin-bottom: 4);
+    @include mq("tablet") {
+      align-self: flex-start;
+      @include vr($padding-left: 4);
+    }
+    @include mq("tablet-wide"){
+      align-self: center;
+    }
+  }
+  &--strengths-intro{
+    padding-left: 0;
+  }
+
+  &--white {
+    color: $white;
+  }
 }
 
 .pagination {
-  @include pagination-sm();
-    color: $gray-900;
+  @include pagination-sm;
+
+  color: $gray-900;
 
   @include mq("tablet") {
-    @include pagination();
+    @include pagination;
   }
-  @include mq("desktop-wide"){
-    @include pagination-lg();
+
+
+  @include mq("desktop-wide") {
+    @include pagination-lg;
   }
- &--white{
-  color: $white;
-}
+
+
+  &--white {
+    color: $white;
+  }
+
   &--center {
     text-align: center;
   }
 }
 
-
-
-
-.link{
-  &__chevron{
+.link {
+  &__chevron {
     height: 3rem;
     width: 3rem;
     border-radius: .75em;
@@ -870,37 +754,31 @@ background: $primary;
     align-items: center;
     min-height: 0;
   }
-  &__text{}
 
+  &__text {}
 }
-
-
-
-
-
 
 .title {
-  @include title();
+  @include title;
   @include mq("desktop-wide") {
-    @include title-lg();
-}
-&__splash{
-	flex: 0 0 auto;
-}
-  
+    @include title-lg;
+  }
 
+
+  &__splash {
+    flex: 0 0 auto;
+  }
 
   &--center {
     text-align: center;
   }
 }
 
-
 .title-sub {
   font-family: $font-family-serif;
   font-style: italic;
 
-  @include title-sub();
+  @include title-sub;
 
   // font-weight: 500;
   // letter-spacing: -.025em;
@@ -909,7 +787,7 @@ background: $primary;
   //   @include title-sub;
   // }
   @include mq("desktop-wide") {
-    @include title-sub-lg();
+    @include title-sub-lg;
   }
 
 
@@ -918,346 +796,412 @@ background: $primary;
   }
 }
 
-
-
-.headline{
+.headline {
   // @include headline-sm;
   // @include mq("tablet") {
- 
+
   // }
-  &__header{
-    @include header__headline(); 
+  &__header {
+    @include header__headline;
     @include mq("desktop") {
-      @include header__headline-lg();
+      @include header__headline-lg;
     }
-&--strengths{
-  @include vr($font-size: 6, $line-height: 2.25);
-  @include mq("tablet"){
-    @include vr($font-size: 8);
+
+
+    &--strengths {
+      @include vr($font-size: 6, $line-height: 2.25);
+      @include mq("tablet") {
+        @include vr($font-size: 8);
+      }
+      @include mq("tablet-wide"){
+        @include block__headline();
+        @include vr($margin: 2 auto 2 auto, $line-height: 2); 
+        min-height: 1em;
+        flex: 0 0 auto;
+        display: flex;
+    }
   }
-}
-}
-  &--intro{
+  
+
+  &--intro {
     text-align: center;
+    flex: 0 0 auto;
+    min-height: 1.5em;
+    display: flex;
+    position: relative;
+    @include mq("tablet-wide"){
+      min-height: 0;
+    }
   }
 
-&--end2end{
-  color: $white;
+  &--end2end {
+    color: $white;
+  }
 }
+  &__block {
+    @include block__headline;
 
+    font-weight: 400;
 
+    &--webdev {
+      flex: 0 0 auto;
+      display: flex;
+      position: relative;
+    }
 
-  &__block{
-	@include block__headline();
-	font-weight: 400;
-&--webdev{
-  flex: 0 0 auto;
-  display: flex;
-  position: relative;
-}
-&--capabilities-overlay{
-display: flex;
-min-height: 1.2em;
-text-align: center;
-flex: 0 0 100%;
-align-self: center;
-@include mq("tablet"){
-  text-align: left;
-}
-}
+    &--capabilities-overlay {
+      display: flex;
+      min-height: 1.2em;
+      text-align: center;
+      flex: 0 0 100%;
+      align-self: center;
 
-&--leadingx2{
-  @include vr($line-height: 3);
-}
-}
-&__item{
-	@include item__headline();
-}
+      @include mq("tablet") {
+        text-align: left;
+      }
+    }
 
+    &--leadingx2 {
+      @include vr($line-height: 3);
+    }
+  }
+
+  &__item {
+    @include item__headline;
+  }
 
   &--center {
     text-align: center;
     align-self: center;
   }
-&--white{
-  color: $white;
-}
-&--weak{
-  font-weight: 200;
-}
 
+  &--white {
+    color: $white;
+  }
 
-&--proof{
-  flex: 0 0 auto;
-  display: flex;
-  z-index: 2;
-  text-align: center;
-  width: 61%;
-  justify-content: center;
-  margin: 0 auto;
-  @include mq("phone-wide", $type:max){
-    width: 81%;
+  &--weak {
+    font-weight: 200;
+  }
+
+  &--proof {
+    flex: 0 0 auto;
+    display: flex;
+    z-index: 2;
+    text-align: center;
+    width: 61%;
+    justify-content: center;
+    margin: 0 auto;
+
+    @include mq("phone-wide", $type: max) {
+      width: 81%;
+    }
+  }
+
+  &--stats {
+    @include vr($margin-bottom: 2);
   }
 }
 
-&--stats{
-  @include vr($margin-bottom:2);
-
-}
-
-}
-
-
-
-.subhead{
-  @include mq("tablet"){
-  	max-width: 61%;
-  }
-  &__header{
-    
-    @include header__subhead(); 
-  @include mq("desktop") {
-    @include header__subhead-lg();
-  }
-  &--capabilities{
- margin-left: auto;
- margin-right: auto;
-  }
-}
-  &__block{
-  		@include block__subhead();
-&--homepage-intro{
-  width: 68.89%;
-  max-width: 68.89%;
-  @include vr($margin-top: 3, $margin-bottom: 3);
-  justify-content: center;
-  text-align: justify;
-}
-}
-  &__item{
-  	@include item__subhead();
+.subhead {
+  @include mq("tablet") {
+    max-width: 61%;
   }
 
-  &--sublist {
 
+  &__header {
+    @include header__subhead;
+    @include mq("desktop") {
+      @include header__subhead-lg;
+    }
+
+
+    &--capabilities {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-    &--sublist-item {
+
+  &__block {
+    @include block__subhead;
+
+    &--homepage-intro {
+      max-width: 68.89%;
+      @include vr($margin-top: 3, $margin-bottom: 3);
+      justify-content: center;
+      text-align: justify;
+      @include mq("desktop") {
+      flex: 0 23%;
+      max-width: 23%;
+    }
+  }
+}
+
+  &__item {
+    @include item__subhead;
+  }
+
+  &--sublist {}
+
+  &--sublist-item {
     font-weight: 300;
   }
+
   &--sublist-divider {
     color: $gray-900;
-    @include vr($padding: 0 .25);	
+
+    @include vr($padding: 0 0.25);
   }
 
   &--center {
     text-align: center;
     align-self: center;
   }
-  &--leadingx2{
-  @include vr($line-height: 3);
-}
-&--white{
-  color: $white;
-}
-&--weak{
-  font-weight: 200;
-}
-&--intro{
 
-}
+  &--leadingx2 {
+    @include vr($line-height: 3);
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--weak {
+    font-weight: 200;
+  }
+
+  &--intro {}
 }
 
-.deck{
+.deck {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .03em;
-  @include mq("tablet"){
+
+  @include mq("tablet") {
     letter-spacing: .05em;
   }
-  &__header{
-    @include header__deck();
-    @include mq("tablet"){
+
+
+  &__header {
+    @include header__deck;
+    @include mq("tablet") {
       width: 81%;
       max-width: 81%;
     }
-    &--strengths{
-        @include make-row;
 
-  margin-left: 0px;
-  margin-right: 0px;
+
+    &--strengths {
+      @include make-row;
+
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex: 0 0 83%;
+      align-self: center;
+
+      @include vr($padding-left: 0);
+    flex: 0 0 auto;
+@include mq("tablet-wide"){
   width: 100%;
   max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 0 0 83%;
-  align-self: center;
+  min-height: 6em;
+  flex: 0 0 auto;
+}
+    }
 
-  @include vr($padding-left: 0);
-    } 
-
-    &--end2end{
+    &--end2end {
       color: $white;
       width: 61%;
+
       @include vr($margin-top: 0, $margin-bottom: 4);
-      text-align:center;
+
+      text-align: center;
     }
-        &--stats{
+
+    &--stats {
       color: $white;
     }
-}
-  &__block{
-  		@include block__deck();
-}
-  &__item{
-  	@include item__deck();
- } 
-    &--center {
+  }
+
+  &__block {
+    @include block__deck;
+  }
+
+  &__item {
+    @include item__deck;
+  }
+
+  &--center {
     text-align: center;
     align-self: center;
   }
-  &--intro{
+
+  &--intro {
     text-align: center;
   }
 }
 
-.copy{
-// @include copy();
+.copy {
+  // @include copy();
 
-&__container{
-&--strengths{
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  max-width: 100%;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 3;
-  display: flex;
-  @include mq("tablet", $type:max){
-    flex: 0 0 auto;
-    max-width: 83%;
-    min-height: 0;
-  }
-  flex: 0 0 83%;
-  @include mq("tablet"){
-      flex: 0 0 auto;
-      max-width: 61%;
-      min-height: 0;
+  &__container {
+    &--strengths {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+      max-width: 100%;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 3;
       display: flex;
 
-    } 
+      @include mq("tablet", $type: max) {
+        flex: 0 0 auto;
+        max-width: 83%;
+        min-height: 0;
+      }
+
+
+      flex: 0 0 83%;
+
+      @include mq("tablet") {
+        flex: 0 0 auto;
+        max-width: 61%;
+        min-height: 0;
+        display: flex;
+      }
+      @include mq("tablet-wide"){
+        width: 83%;
+        max-width: 83%;
+        flex: 0 0 25%;
+        min-height: 30em;
+        @include vr($margin: 0 0 1 0);
+      }
     }
   }
 
-&__header{
-	@include header__copy();
+  &__header {
+    @include header__copy;
 
-&--proof{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-display: flex;
-flex: 1 1 30%;
-min-height: 5em;
-position: relative;
-// color: $offwhite;
->em{
-justify-content: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-flex: 1;
-}
-}
-&--end2end{
-  color: $offwhite;
-  width: 61%;
-}
-&--outcomes{
-  text-align: justify;
-@include mq("tablet"){
-  width: 81%;
-}
-}
+    &--proof {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+      display: flex;
+      flex: 1 1 30%;
+      min-height: 5em;
+      position: relative;
 
-}
-&--stats{
+      // color: $offwhite;
+      > em {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+      }
+    }
+
+    &--end2end {
+      color: $offwhite;
+      width: 61%;
+    }
+
+    &--outcomes {
+      text-align: justify;
+
+      @include mq("tablet") {
+        width: 81%;
+      }
+    }
+  }
+
+  &--stats {
     text-align: justify;
     width: 61%;
     color: $white;
-@include mq("tablet"){
-  width: 83%;
-  }
-}
 
-&__block{
-		@include block__copy();
-    &--capabilities-overlay{
+    @include mq("tablet") {
+      width: 83%;
+    }
+  }
+
+  &__block {
+    @include block__copy;
+
+    &--capabilities-overlay {
       flex: 0 0 auto;
       display: flex;
       max-width: 83%;
+
       // padding-left: 3%;
-      @include vr($line-height:2);
-      @include mq("tablet"){
+      @include vr($line-height: 2);
+      @include mq("tablet") {
         max-width: 61%;
       }
     }
   }
 
-&__long{
-@include vr($line-height: 2.5);
+  &__long {
+    @include vr($line-height: 2.5);
+  }
+
+  &--serif {
+    font-family: $font-family-sans-serif;
+  }
+
+  &__item {
+    @include item__copy;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--serif {
+    font-family: $font-family-serif;
+  }
 }
-	&--serif{
-		font-family: $font-family-sans-serif;
-	}
 
-&__item{
-  @include item__copy();
-}
-
-&:last-of-type{
-	margin-bottom: 0;
-}
-&--serif{
-  font-family: $font-family-serif;
-}
-}
-
-
-
-
-
-
-.list-head{
+.list-head {
   font-weight: 500;
   letter-spacing: .025em;
-  &__header{
-    @include header__list-head(); 
-}
-  &__block{
-@include block__list-head();
-}
 
-  &__item{
-  	@include item__list-head();
+  &__header {
+    @include header__list-head;
   }
 
-  &__background{
-  	@include vr($padding: .25 .5, $margin-bottom: 1);
-	&--pattens{
-  	background: $pattens;
+  &__block {
+    @include block__list-head;
   }
-}
-  &--strengths{
-     @include mq("tablet", $type:max){
-    flex: 0 0 auto;
-    max-width: 83%;
-    display: flex;
-    min-height: 0;
+
+  &__item {
+    @include item__list-head;
   }
-      font-weight: 300;
-  text-transform: uppercase;
+
+  &__background {
+    @include vr($padding: 0.25 0.5, $margin-bottom: 1);
+
+    &--pattens {
+      background: $pattens;
+    }
+  }
+
+  &--strengths {
+    @include mq("tablet", $type: max) {
+      flex: 0 0 auto;
+      max-width: 83%;
+      display: flex;
+      min-height: 0;
+    }
+
+
+    font-weight: 300;
+    text-transform: uppercase;
     letter-spacing: .025em;
     margin-left: 0;
     margin-right: 0;
@@ -1268,60 +1212,80 @@ flex: 1;
     z-index: 3;
     display: flex;
     flex: 0 0 83%;
+  @include mq("tablet-wide"){
+    flex: 0 0 2%;
+    max-width: 83%;
+    min-height: 1em;
+
+
   }
-  &--white{
+
+  }
+
+  &--white {
     color: $white;
   }
+}
+
+//   &--center {
+//   text-align: center;
+//   align-self: center;
+// }
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &__container--intro {
+    list-style: none;
+    padding-left: 0;
   }
-  //   &--center {
-  //   text-align: center;
-  //   align-self: center;
-  // }
 
-.list{
-margin-top: 0;
-margin-bottom: 0;
-&__container--intro{
-  list-style: none;
-  padding-left: 0;
-}
-&__vertical{
-   display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  height: auto; 
-}
-&__inline{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-&--inset{
-  list-style-position: inside;
-  text-indent: -2em;
-  padding-left: 2em;
-  width: 81%;
-  @include push-auto();
-  @include vr($padding-bottom: 2);
-}
-&--no-bullets{
-  list-style: none;
-}
-&--intro{
-  padding-left: 0;
-  @include vr($margin-top: 4, $margin-bottom: 4);
-}
-
-    &--strengths{
-    @include mq("tablet", $type:max){
-    flex: 0 0 auto;
-    max-width: 83%;
+  &__vertical {
     display: flex;
-    flex-direction: row;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: auto;
   }
-  list-style: none;
-      font-weight: 400;
-  // text-transform: uppercase;
+
+  &__inline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--inset {
+    list-style-position: inside;
+    text-indent: -2em;
+    padding-left: 2em;
+    width: 81%;
+
+    @include push-auto;
+    @include vr($padding-bottom: 2);
+  }
+
+  &--no-bullets {
+    list-style: none;
+  }
+
+  &--intro {
+    padding-left: 0;
+
+    @include vr($margin-top: 4, $margin-bottom: 4);
+  }
+
+  &--strengths {
+    @include mq("tablet", $type: max) {
+      flex: 0 0 auto;
+      max-width: 83%;
+      display: flex;
+      flex-direction: row;
+    }
+
+
+    list-style: none;
+    font-weight: 400;
+
+    // text-transform: uppercase;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
@@ -1332,87 +1296,124 @@ margin-bottom: 0;
     display: flex;
     flex: 0 0 83%;
     padding-left: 0;
-  @include mq("tablet"){
+
+    @include mq("tablet") {
       flex: 0 0 auto;
-  max-width: 61%;
-  display: flex;
-  min-height: 0;
-  flex-direction: column;
-  }
+      max-width: 61%;
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
     }
-  &--capabilities-overlay{
-    @include vr($margin-top: 1);
-  }
+    @include mq("tablet-wide"){
+      max-width: 83%;
+      min-height: 0;
+      flex: 0 0 2%;
+      display: flex;
+      flex-direction: row;
+
+    }
   }
 
-.list-item{
+  &--capabilities-overlay {
+    @include vr($margin-top: 1);
+  }
+}
+
+.list-item {
   font-weight: 300;
+
   // text-indent: 1em;
   // margin-left: -1em;
-  &__header{
-    @include header__list-item(); 
-    font-weight: 200;
-}
-  &__block{
-@include block__list-item();
-}
-  &__item{
-  	@include item__list-item();
+  &__header {
+    @include header__list-item;
+
     font-weight: 200;
   }
-  &__spacer{
-      @include mq("phone", $type:max){ 
+
+  &__block {
+    @include block__list-item;
+  }
+
+  &__item {
+    @include item__list-item;
+
+    font-weight: 200;
+  }
+
+  &__spacer {
+    @include mq("phone", $type: max) {
       padding: 0 .5rem;
     }
-      @include mq("phone"){
-        @include vr($padding: 0 .5);
-        }      
-        &--primary-color{
-  color:$primary;
+
+
+    @include mq("phone") {
+      @include vr($padding: 0 0.5);
+    }
+
+
+    &--primary-color {
+      color: $primary;
+    }
   }
-}
-&__divider{
-  @include vr($padding-left: .25, $padding-right: .25);
-}
-  &--expertise-item{
+
+  &__divider {
+    @include vr($padding-left: 0.25, $padding-right: 0.25);
   }
-  &--intro{
+
+  &--expertise-item {}
+
+  &--intro {
     display: flex;
-  align-items: center;
-  flex-direction: column;
-  @include mq("tablet") {
+    align-items: center;
+    flex-direction: column;
+
+    @include mq("tablet") {
+       @include vr($font-size: 6, $line-height: 3);
+    }
+
+
+    @include mq("tablet-wide") {
+      flex-direction: row;
+      align-items: center;
+             @include vr($font-size: 6, $line-height: 4);
+         
+    }
   }
-  @include mq("tablet-wide") {
-    flex-direction: row;
-  }
-  }
-  &--intro-digit{
-     @include vr($font-size: 6);
-  font-weight: 400;
+
+  &--intro-digit {
+ 
+@include vr($padding-right: 1);
+    font-weight: 400;
     font-family: $font-family-serif;
     color: $primary;
-  @include mq('tablet'){
-    @include vr($font-size: 6);
+
+    @include mq("tablet") {
+       @include vr($font-size: 9, $line-height: 3);
+    }
+    @include mq("tablet-wide"){
+@include vr($font-size: 10, $line-height: 4);
+    }
   }
-  }
-  &--strengths{
+
+  &--strengths {
     flex: 0 0 100%;
+    @include mq("tablet-wide"){
+      flex: 0 0 auto;
+      min-height: 1em;
+      display: block;
+
+    }
   }
-  &--flex-auto{
+
+  &--flex-auto {
     flex: 0 0 auto;
   }
 }
 
 // .list-item__spacer{
 //   // @include vr($padding: 0 .5);
-  
 
 // }
-
-
-
-
-
 
 .link, a:not([href]):not([tabindex]) {
   font-family: $font-family-sans-serif;
@@ -1425,3 +1426,243 @@ margin-bottom: 0;
   text-decoration: $link-hover-decoration;
 }
 
+.diagram {
+  &__container {
+    &--intro-diagram {
+      width: 83%;
+      max-width: 83%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      flex-direction: column;
+      align-items: stretch;
+      flex: 0 0 auto;
+      min-height: 175em;
+      @include mq("tablet"){
+        width: 50%;
+        max-width: 50%;
+      }
+      @include mq("tablet-wide") {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex: 0 0 auto;
+        max-width: 90%;
+        width: 90%;
+        min-height: 18em;
+      }
+
+
+      @include mq("desktop") {
+        flex: 0 0 61%;
+        max-width: 61%;
+      }
+      }
+  }
+
+  &__header-headline {
+    @include diagram__header-headline;
+
+    font-weight: 400;
+    flex: 1 0 100%;
+
+    &--f-align-start {
+      align-self: flex-start;
+    }
+
+    @include mq("tablet") {
+      flex: 0 0 83%;
+    }
+    }
+
+  &__header-copy {
+    @include diagram__header-copy;
+
+    display: flex;
+
+    @include mq("tablet") {
+      flex: 0 0 81%;
+    }
+    }
+
+  &__content {
+    &--objectives-icon {
+      > svg {
+        width: 100%;
+
+        @include mq("tablet") {
+          width: 83%;
+        }
+      }
+      }
+      }
+  }
+
+.diagram-item {
+  &__container {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    flex: 0 0 auto;
+
+//flex row/col muck
+    &--23x77row {
+      display: flex;
+      justify-content: center;
+
+      @include mq("tablet") {
+        align-items: center;
+        flex-direction: row;
+      }
+      }
+
+      &--23row {
+        display: flex;
+        flex: 0 0 0;
+        min-height: 10em;
+        width: 38%;
+  
+        @include mq("tablet") {
+          flex: 0 0 23%;
+          max-width: 23%;
+          display: flex;
+          min-height: 0;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+  
+      &--23row-offset {
+        display: none;
+  
+        @include mq("tablet") {
+          display: none;
+          flex: 0 0 23%;
+          max-width: 23%;
+          min-height: 0;
+        }
+      }
+  
+      &--77row {
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        list-style-position: inside;
+        padding-inline-start: 0px;
+        -webkit-padding-start: 0px;
+        flex: 0 0 73%;
+        width: 73%;
+        text-align: center;
+  
+        @include mq("tablet") {
+          text-align: left;
+          display: flex;
+          flex-wrap: wrap;
+          flex: 0 0 73%;
+          max-width: 73%;
+          min-height: 0;
+        }
+      }
+  
+    &--intro{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 24%;
+      min-width: 24%;
+      align-items: center;
+      background: rgba(020,020,020,.8);
+      min-height: 40em;
+      // border: .5em solid $pattens;
+        @include vr($padding: 2 2, $margin-top: 1, $margin-bottom: 1);
+      @include mq("tablet"){
+
+      }
+      @include mq("tablet-wide"){
+        // border: .25em solid $pattens;
+        // }
+              min-height: 0;
+      @include mq("desktopxl"){
+        flex: 0 0 25%;
+        max-width: 100%;
+        }
+    }
+  }
+    &--fish{order: 2;}
+    }
+  
+
+  &__headline {
+    font-weight: 300;
+
+    @include diagram__item-headline;
+  }
+
+  &__copy {
+    font-weight: 200;
+
+    @include diagram__item-copy;
+
+    &--objectives-diagram {
+      text-align: justify;
+      width: 100%;
+
+      @include mq("tablet") {
+        max-width: 73%;
+        flex: 0 0 73%;
+        display: flex;
+        min-height: 0;
+        text-align: left;
+      }
+      }
+
+    &--intro-diagram {
+      
+
+      color: $white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1 0 auto;
+      padding-top: 1.50001rem;
+      @include mq("tablet"){
+      width: 61%;
+    }
+
+      @include mq("tablet-wide") {
+        width: 100%;
+      }
+      }
+  }
+}
+
+
+// .diagram__objectives{
+// .diagram__content--objectives-icon{order: 1;}
+// .diagram-item__headline{order: 2;}
+// .diagram-item__copy{order: 3;}
+// @include mq("tablet"){
+//   .diagram__content--objectives-icon{order: 2;}
+// .diagram-item__headline{order: 1;}
+// .diagram-item__copy{order: 3;}
+// }
+// }
+
+// &__subhead{}
+// &__sublist{}
+// &__deck{
+//  &__display-text{}
+//  &__body-text{}
+// &--lg{}
+// &--sm{}
+// }
+// &__copy{
+//  &--short{}
+//  &--long{}
+// }
+// &__caption{}
+// &__quote{}
+// &__quip{}
+// &__footnote{}
+// &__legal{}
+// &__citation{}

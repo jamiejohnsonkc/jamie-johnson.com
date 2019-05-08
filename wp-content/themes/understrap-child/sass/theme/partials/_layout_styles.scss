@@ -1218,7 +1218,7 @@ ul.strengths__list_container {
     min-height: 7em;
     flex: 0 0 auto;
     padding-left: 0;
-    @include vr($margin: 2 auto);
+    // @include vr($margin: 0 auto);
     text-align: center;
   }
   }
@@ -1755,11 +1755,17 @@ svg#services__arrow--img {
     background: $offwhite;
     align-items: stretch;
     border-radius: 2em 2em 0 0;
-    margin-top: -20em;
+//     margin-top: -20em;
     margin-left: auto;
     margin-right: auto;
     border: thin solid $gray-300;
   }
+  @include mq("desktop"){
+    width: 83%;
+    max-width: 83%;
+  }
+  @include mq("desktop-hd"){}
+  @include mq("desktop-uhd"){}
 }
 
 .capabilities__menu_item {
@@ -1913,6 +1919,14 @@ svg#services__arrow--img {
     // width: 100%;
     // max-width: 100%;
   }
+  @include mq("desktop"){
+    max-width: 61%;
+    width: 61%;
+  }
+    @include mq("desktop-hd"){
+    max-width: 50%;
+    width: 50%;
+  }
 }
 
 
@@ -1929,6 +1943,17 @@ svg#services__arrow--img {
 
   @include mq("tablet") {
     @include vr($margin-top: 3, $margin-bottom: 3);
+  width: 61%;
+  max-width: 61%;
+  padding: 8%;
+  }
+  @include mq("desktop"){
+    max-width: 61%;
+    width: 61%;
+  }
+    @include mq("desktop-hd"){
+    max-width: 50%;
+    width: 50%;
   }
 }
 
@@ -1944,7 +1969,18 @@ position: relative;
 width: 81%;
 flex: 0 0 auto;
 justify-content: center;
+  @include mq("desktop"){
+    max-width: 61%;
+    width: 61%;
+  }
+    @include mq("desktop-hd"){
+    max-width: 50.1%;
+    width: 50.1%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
+
 
 .overlay__content.overlay__content--marketing-strategy{
 }
@@ -2015,7 +2051,7 @@ text-align: left;
     width: 81%;
    
     flex: 0 0 5.5em;
-    padding-left: 3%;
+//     padding-left: 3%;
     min-height: 5.5em;
     position: relative;
 }
@@ -2150,6 +2186,12 @@ max-width: 100%;
   }
 @include mq("tablet-wide"){
   width: 61%;
+}
+@include mq("desktop"){
+  width: 61%;
+}
+@include mq("desktop-hd"){
+  width: 50%;
 }
 
   @include vr($margin: 0 auto);
@@ -2856,7 +2898,7 @@ display: flex;
   text-align: center;
 }
 
-.proof__end2end-diagram_container, #stats-slider {
+.proof__end2end-diagram_container{
   width: 100%;
   display: block;
 
@@ -2909,9 +2951,9 @@ display: flex;
   @include cols;
 }
 
-#stats-slider {
-  @include vr($margin-bottom: 1);
-}
+// #stats-slider {
+//   @include vr($margin-bottom: 1);
+// }
 
 .proof-quals svg {
   width: 61%;
@@ -2953,13 +2995,34 @@ display: flex;
   z-index: 3;
 }
 
-@include mq("tablet") {
+
   .carousel-control-next {
+    @include mq("tablet") {
     @include vr($padding-right: 6);
   }
+    @include mq("tablet-wide") {
+    @include vr($padding-right: 6);
+  }
+    @include mq("desktop") {
+    right: 1%;
+  }
+      @include mq("desktop-hd"){
+right: 15%;
+  }
+}
 
   .carousel-control-prev {
+    @include mq("tablet") {
     @include vr($padding-left: 6);
+  }
+  @include mq("tablet-wide") {
+    @include vr($padding-left: 6);
+  }
+  @include mq("desktop") {
+left: 1%;
+  }
+    @include mq("desktop-hd"){
+left: 15%;
   }
 }
 
@@ -2975,9 +3038,9 @@ display: flex;
   }
 }
 
-#stats-slider > .carousel-inner {
+.carousel-inner {
   width: 90%;
-  min-height: 10em;
+  min-height: 30em;
   display: block;
 
   @include push-auto;
@@ -3159,6 +3222,9 @@ display: flex;
   @include mq("tablet") {
     margin-left: 0%;
   }
+  @include mq("desktop"){
+      display: none;
+}
 }
 
 // ==========================================================================
@@ -3441,6 +3507,9 @@ display: flex;
   width: 100%;
   overflow: hidden;
   top: 54em;
+  @include mq("tablet-wide"){
+    top: 10em;
+  }
 }
 
 #fam-img {
@@ -3471,7 +3540,7 @@ display: flex;
 
 @include mq("tablet-wide") {
   .personal {
-    height: 90em;
+    height: 110em;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -3513,6 +3582,14 @@ display: flex;
    width: 61%;
     max-width: 61%;
   @include push-auto();
+ }
+  @include mq("desktop"){
+   width: 50%;
+    max-width: 50%;
+ }
+   @include mq("desktop-hd"){
+   width: 38%;
+    max-width: 38%;
  }
   }
 //
@@ -3663,6 +3740,10 @@ display: flex;
     flex-wrap: wrap;
     @include mq("tablet"){
       align-items: center;
+    }
+    @include mq("tablet-wide"){
+      width: 30%;
+      max-width: 30%;
     }
   }
 &__row1{
@@ -3868,6 +3949,9 @@ stroke: #ADB5BD;
 
   margin-left: 0px;
   margin-right: 0px;
+@include mq("tablet-wide"){
+  width: 100%;
+}
 }
 
 .diagram__end-to-end--vertical {
@@ -4134,8 +4218,4 @@ stroke: #ADB5BD;
 }
 
 
-@include mq("desktop-wide") {}
 
-@include mq("desktop-xl") {}
-
-@include mq("desktop-xxl") {}

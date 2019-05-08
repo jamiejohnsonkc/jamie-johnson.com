@@ -728,7 +728,10 @@ margin-left: -2em;
   @include mq("tablet"){
     line-height: .7em;
     padding: 19%;
-    width: 80%;
+    width: 100%;
+        text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   }
     &--line1 {
@@ -973,6 +976,7 @@ color: $primary;
 .proof__end2end-diagram_container {
   background: $black;
   @include vr($padding: 5 2);
+  
 //   & h6, p {
 //     color: $offwhite;
 //   } 
@@ -2228,17 +2232,16 @@ background: $pattens;
 .container--article-expertise{
 height:auto;
  @include mq('tablet-wide'){
-    background: rgba(17,17,17,.7);
-border: .25em solid $black;
-color: $white;
+//     background: rgba(17,17,17,.7);
+// border: .25em solid $black;
+// color: $white;
 }
 }
 
 .content--planning.container--article-expertise{
-     background: $black;
+
+     @include mq("desktop"){      
      color: $white;
-     @include mq("tablet-wide"){      
-      background: rgba(17,17,17,.8);
 }
 }
 

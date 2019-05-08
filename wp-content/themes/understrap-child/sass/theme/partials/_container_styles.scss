@@ -35,7 +35,7 @@ max-width: 100%;
 }
 
 @include mq('tablet-wide') { 
-	.proof__panel_wrapper { max-width: 99em; width: 99em; } 
+// 	.proof__panel_wrapper { max-width: 99em; width: 99em; } 
 	.navbar>.container, .navbar>.container-fluid { width: 90%; max-width: 90%; }
 	.section__head_homepage--summary{width: 83.82%; margin: 0 auto;}
 
@@ -46,8 +46,8 @@ max-width: 100%;
 	.container { width: 81%; max-width: 81%; }
 }
 
-@include mq('desktop-xl') { }
-@include mq('desktop-xxl') { 
+@include mq('desktop-hd') { }
+@include mq('desktop-uhd') { 
 	.navbar>.container, .navbar>.container-fluid { width: 99em; max-width: 99em; }
 }
 // ==========================================================================

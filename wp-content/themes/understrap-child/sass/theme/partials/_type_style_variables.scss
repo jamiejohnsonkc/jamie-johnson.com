@@ -296,6 +296,11 @@ p {
   &--placed {
     position: absolute;
   }
+  &--specialties{
+    @include mq("tablet-wide"){
+      display: flex;
+    }
+  }
 }
 
 .article {
@@ -348,12 +353,22 @@ p {
   }
 
   &--strengths {
+ display: flex;
+ flex: 0 0 auto;
+ min-height: 100em;
+ flex-direction: row;
+ padding-top: 0;
+ justify-content: center;
+ align-items: center;
+
+    @include mq("tablet-wide"){
     min-height: 100em;
     display: flex;
     flex-direction: column;
     flex: 1;
     padding-top: 0;
   }
+}
 
   &--smm {
     background: $primary;
@@ -486,15 +501,23 @@ p {
         display: flex;
         min-height: 0;
         flex: 0 0 auto;
-        max-width: 61%;
+//         max-width: 61%;
         min-height: 0;
 
         @include mq("tablet-wide") {
           z-index: 3;
-          width: 83%;
-          max-width: 83%;
+//           width: 90%;
+//           max-width: 90%;
           flex-direction: column;
-          justify-content: flex-start;
+          justify-content: space-between;
+          align-items: center;
+          min-height: 45em;
+        }
+        @include mq("desktop"){
+          min-height: 54em;
+        }
+        @include mq("desktop-hd"){
+          min-height: 56em;
         }
       }
     }
@@ -803,22 +826,27 @@ p {
   // }
   &__header {
     @include header__headline;
-    @include mq("desktop") {
-      @include header__headline-lg;
+    @include mq("tablet-wide") {
+
     }
 
 
     &--strengths {
       @include vr($font-size: 6, $line-height: 2.25);
       @include mq("tablet") {
-        @include vr($font-size: 8);
+        @include vr($font-size: 7);
       }
       @include mq("tablet-wide"){
-        @include block__headline();
-        @include vr($margin: 2 auto 2 auto, $line-height: 2); 
+        font-size: 3.18318rem;
+        // @include vr($margin: 2 auto 2 auto, $line-height: 2.5); 
+        @include vr($margin: 0 auto 0 auto, $line-height: 2.5); 
         min-height: 1em;
         flex: 0 0 auto;
         display: flex;
+        align-self: center;
+    }
+    @include mq("desktop"){
+      @include header__headline();
     }
   }
   
@@ -892,13 +920,18 @@ p {
     justify-content: center;
     margin: 0 auto;
 
+
     @include mq("phone-wide", $type: max) {
       width: 81%;
     }
+
   }
 
   &--stats {
     @include vr($margin-bottom: 2);
+      @include mq("tablet-wide"){
+      @include vr($margin-bottom: 4);
+    }
   }
 }
 
@@ -992,7 +1025,6 @@ p {
 
     &--strengths {
       @include make-row;
-
       margin-left: 0px;
       margin-right: 0px;
       width: 100%;
@@ -1002,20 +1034,22 @@ p {
       flex-wrap: wrap;
       flex: 0 0 83%;
       align-self: center;
-
       @include vr($padding-left: 0);
-    flex: 0 0 auto;
-@include mq("tablet-wide"){
-  width: 100%;
-  max-width: 100%;
-  min-height: 6em;
-  flex: 0 0 auto;
-}
-    }
+      flex: 0 0 auto;
+
+    @include mq("tablet-wide"){
+      width: 100%;
+      max-width: 100%;
+      min-height: 6em;
+      flex: 0 0 auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      }
+      }
 
     &--end2end {
       color: $white;
-      width: 61%;
+      width: 38%;
 
       @include vr($margin-top: 0, $margin-bottom: 4);
 
@@ -1024,6 +1058,10 @@ p {
 
     &--stats {
       color: $white;
+      @include mq("tablet-wide"){
+        max-width: 61%;
+        text-align: center;
+      }
     }
   }
 
@@ -1041,8 +1079,9 @@ p {
   }
 
   &--intro {
-    text-align: center;
+    @include mq("tablet"){ text-align: center;
   }
+}
 }
 
 .copy {
@@ -1061,25 +1100,31 @@ p {
 
       @include mq("tablet", $type: max) {
         flex: 0 0 auto;
-        max-width: 83%;
+        max-width: 100%;
         min-height: 0;
       }
 
 
-      flex: 0 0 83%;
+//       flex: 0 0 83%;
 
       @include mq("tablet") {
         flex: 0 0 auto;
-        max-width: 61%;
+//         max-width: 61%;
         min-height: 0;
         display: flex;
       }
       @include mq("tablet-wide"){
-        width: 83%;
-        max-width: 83%;
+//         width: 83%;
+//         max-width: 83%;
         flex: 0 0 25%;
         min-height: 30em;
         @include vr($margin: 0 0 1 0);
+      }
+      @include mq("desktop"){
+
+        flex: 0 0 20%;
+        min-height: 20em;
+
       }
     }
   }
@@ -1108,7 +1153,7 @@ p {
 
     &--end2end {
       color: $offwhite;
-      width: 61%;
+      width: 50%;
     }
 
     &--outcomes {
@@ -1128,6 +1173,12 @@ p {
     @include mq("tablet") {
       width: 83%;
     }
+    @include mq("tablet-wide"){
+      width: 50%;
+      text-align: center;
+      align-self: center;
+      @include vr($margin-top: 4);
+    }
   }
 
   &__block {
@@ -1137,11 +1188,12 @@ p {
       flex: 0 0 auto;
       display: flex;
       max-width: 83%;
-
+        text-align: center;
       // padding-left: 3%;
       @include vr($line-height: 2);
       @include mq("tablet") {
         max-width: 61%;
+        text-align: left;
       }
     }
   }
@@ -1192,9 +1244,9 @@ p {
   }
 
   &--strengths {
-    @include mq("tablet", $type: max) {
+    @include mq("phone-wide", $type: max) {
       flex: 0 0 auto;
-      max-width: 83%;
+      max-width: 100%;
       display: flex;
       min-height: 0;
     }
@@ -1206,18 +1258,16 @@ p {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    max-width: 100%;
+//     max-width: 61%;
     flex-wrap: wrap;
     position: relative;
     z-index: 3;
     display: flex;
     flex: 0 0 83%;
+        min-height: 1em;
   @include mq("tablet-wide"){
     flex: 0 0 2%;
-    max-width: 83%;
-    min-height: 1em;
-
-
+//     max-width: 83%;
   }
 
   }
@@ -1274,22 +1324,22 @@ p {
   }
 
   &--strengths {
-    @include mq("tablet", $type: max) {
+    @include mq("phone-wide", $type: max) {
       flex: 0 0 auto;
-      max-width: 83%;
+      max-width: 100%;
       display: flex;
       flex-direction: row;
     }
-
+  
 
     list-style: none;
     font-weight: 400;
-
+    min-height: 0;
     // text-transform: uppercase;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    max-width: 100%;
+//     max-width: 83%;
     flex-wrap: wrap;
     position: relative;
     z-index: 3;
@@ -1299,13 +1349,13 @@ p {
 
     @include mq("tablet") {
       flex: 0 0 auto;
-      max-width: 61%;
+//       max-width: 61%;
       display: flex;
       min-height: 0;
       flex-direction: column;
     }
     @include mq("tablet-wide"){
-      max-width: 83%;
+//       max-width: 83%;
       min-height: 0;
       flex: 0 0 2%;
       display: flex;
@@ -1365,8 +1415,8 @@ p {
   &--intro {
     display: flex;
     align-items: center;
-    flex-direction: column;
-
+    flex-direction: row;
+@include vr($font-size: 4, $line-height: 3);
     @include mq("tablet") {
        @include vr($font-size: 6, $line-height: 3);
     }
@@ -1386,7 +1436,7 @@ p {
     font-weight: 400;
     font-family: $font-family-serif;
     color: $primary;
-
+@include vr($font-size: 8, $line-height: 3);
     @include mq("tablet") {
        @include vr($font-size: 9, $line-height: 3);
     }
@@ -1397,6 +1447,7 @@ p {
 
   &--strengths {
     flex: 0 0 100%;
+    min-height: 1em;
     @include mq("tablet-wide"){
       flex: 0 0 auto;
       min-height: 1em;

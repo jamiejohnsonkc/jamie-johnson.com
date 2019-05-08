@@ -80,8 +80,8 @@ $mq-tablet: "(min-width: #{bp-tablet})";
 $mq-tablet-wide: "(min-width: #{bp-tablet-wide})";
 $mq-desktop: "(min-width: #{bp-desktop})";
 $mq-desktop-wide: "(min-width: #{bp-desktop-wide})";
-$mq-desktop-xl: "(min-width: #{bp-desktop-xl})";
-$mq-desktop-xxl: "(min-width: #{bp-desktop-xxl})";
+$mq-desktop-hd: "(min-width: #{bp-desktop-hd})";
+$mq-desktop-uhd: "(min-width: #{bp-desktop-uhd})";
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 // @mixin copy { //             @include vr($font-size: 3, $line-height:1.5, $margin:1 0); // }
 // @mixin title-sub-sm { //     @include vr($font-size: 6, $margin:2 0); // }

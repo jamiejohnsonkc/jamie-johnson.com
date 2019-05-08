@@ -34,7 +34,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</article>
 	</section>
-	<section class="section__fluid section--flex section--specialties">
+	<section class="section__fluid section--specialties">
 		<article class="article article--strengths article--smm">
 			<div class="strengths__panel_wrapper strengths__panel_wrapper--smm">
 				<div class="strengths__icon_background-image strengths__icon_background-image--smm">

@@ -150,6 +150,7 @@ exit; // Exit if accessed directly.
 			<a class="link link__text link--item-expertise" href="/">Review A Full List of My strategic capabilities</a>
 		</div>
 		<div class="services-panel__bgimg_widescreen services-panel__bgimg_widescreen--management">
+			<div class="image__filter"></div>
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="services__img_conference-table" alt="...">
 		</div>
 </article>

@@ -38,13 +38,13 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 			</div>
-			<div class="proof__panel_wrapper">
-				<div class="proof__end2end_panel">
-
-					<div class="proof__end2end-diagram_container" id="end2end__diagram_container">
-											<div class="proof__panel_intro">#2</div>
+			<div class="proof__panel_wrapper proof__panel_wrapper--end2end">
+							<div class="proof__panel_intro proof__panel_intro--end2end">#2</div>
 						<h5 class="headline headline__header headline--white headline--proof">End to End Expertise</h5>
 						<h6 class="deck deck__header deck__header--end2end proof__panel_subhead proof__panel_subhead--end2end"> I Bring Value From the Board Room to the Keyboard</h6>
+						
+
+					<div class="diagram diagram__end2end diagram__end2end--vert diagram__container--end2end">
 						<div class="end2end__diagram_caption">challenge</div>
 						<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div>
 						<div class="end2end__diagram_img--plus">&#x2b;</div>
@@ -56,111 +56,139 @@ exit; // Exit if accessed directly.
 						<div class="end2end__diagram_img--equal">&#x3d;</div>
 						<div class="end2end__diagram_caption">execution</div>
 						<div class="end2end__diagram_img" id="barchart"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div>
+					
+					</div>
+
+				<div class="diagram diagram__end2end diagram__end2end--horz diagram__container--end2end">
+						
+						<div class="diagram-item diagram-item__end2end--horz"><div class="end2end__diagram_caption">challenge</div>
+						<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div></div>
+
+						<div class="end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
+
+						<div class="diagram-item diagram-item__end2end--horz"><div class="end2end__diagram_caption">solution</div>
+						<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt="..."></div></div>
+
+						<div class=" end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
+
+						<div class="diagram-item diagram-item__end2end--horz"><div class="end2end__diagram_caption">development</div>
+						<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="..."></div></div>
+
+						<div class="end2end__diagram--operator end2end__diagram_img--equal">&#x3d;</div>
+
+						<div class="diagram-item diagram-item__end2end--horz"><div class="end2end__diagram_caption">execution</div>
+						<div class="end2end__diagram_img" id="barchart"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div></div>
+					
+					</div>
+
+
 						<div class="proof__content_text proof__content_text--end2end"><p class="copy__header copy__header--serif proof__panel_body-copy copy__header--proof copy__header--end2end">I can scheme it, design it and execute it. That lowers cost and improves performance which means more cheddar for you.</p></div>
 					</div>
 				</div>
 			</div>
 			<div class="proof__panel_wrapper proof__panel_wrapper--stats">
 				<div class="proof__stats_panel">
-					<div class="headline headline__header  proof__panel_intro proof__panel_intro--stats">#3</div>
-									<h5 class="headline headline__header headline--stats headline--white headline--proof">i've been around</h5>
+					<div class="headline headline__header proof__panel_intro proof__panel_intro--stats">#3</div>
+									<h2 class="headline headline__header headline--stats headline--white headline--proof">i've been around</h2>
+									<!-- <h3 class="deck deck__header deck__header--stats deck--white">Laborum laboris excepteur officia ut nulla.</h3> -->
+
 					<div class="proof__content_carousel carousel slide" id="stats-slider" data-interval="false">
 		
 						
 
 						<div class="carousel-inner one-up-carousel">
-							<div class="carousel-item one-up active">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide"/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">brands supported</h6>
+								<div class="carousel-item one-up active">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" 	class="style-svg" id="brands" alt="First slide"/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">brands supported</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide"/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">categories served</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" 	class="style-svg" id="verticals" alt="Second slide"/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">categories served</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">years of experience</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" 	class="style-svg" id="calendar" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">years of experience</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">agency</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" 	class="style-svg" id="agency" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">agency</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">corporate</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" 	class="style-svg" id="corporate" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">corporate</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..."/>
-									<div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">largest program</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" 	class="style-svg" id="purse" alt="..."/>
+										<div class="stats-caption carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">largest program</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">operations responsibility</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" 	class="style-svg" id="p&l" alt="..."/><div class="stats-caption <carousel-caption>	</carousel-caption>">
+											<h6 class="deck deck__header deck__header--stats">operations responsibility</<h6>	</h6>>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">largest employer</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" 	class="style-svg" id="globe" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">largest employer</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">p
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">tiniest employer</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">p
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" 	class="style-svg" id="atom" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">tiniest employer</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">matrix reports</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" 	class="style-svg" id="matrix" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">matrix reports</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">direct reports</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" 	class="style-svg" id="direct" alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">direct reports</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg"					 id="accessible" 		alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">user friendly</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" 	class="style-svg"					 id="accessible" 		alt="..."/><div class="stats-caption 	carousel-caption">
+											<h6 class="deck deck__header deck__header--stats">user friendly</h6>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="carousel-item one-up">
-								<div class="proof-quals">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..."/><div class="stats-caption carousel-caption">
-										<h6 class="deck deck__header deck__header--stats">bullshit</h6>
+								<div class="carousel-item one-up">
+									<div class="proof-quals">
+										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" 	class="style-svg" id="bs" alt="..."/><div class="stats-caption carousel-caption"	>
+											<h6 class="deck deck__header deck__header--stats">bullshit</h6>
+										</div>
 									</div>
 								</div>
-							</div>
 						</div>
 
 

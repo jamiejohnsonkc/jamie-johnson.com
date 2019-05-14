@@ -8,139 +8,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper content__wrapper homepage__article--proof" id="article__wrapper--proof">
+<!-- <div class="subsection__container homepage__summary-whatido_subsection"> -->
+	<article class="article__wrapper article__wrapper--blue article__wrapper--fluid">
 
-	<div class="container proof__article_container">
+<!-- 		<div class="container pagination_container homepage-combination__pagination_container"> -->
+			<h1 class="pagination pagination--revprimary pagination--homepage pagination--combination">My Background</h1>
+<!-- 		</div> -->
+<!-- <div class="container homepage-combination__container">	 -->
+<h2 class="title title--combination title--white">I'm an outcome-driven marketer with +2 decades in agency and corporate environments.</h2>						
+<!-- <h2 class="title title--white">I am an end-to-end marketer with +2 decades in agency and corporate environments.</h2> -->
+						<h3 class="deck header__deck deck--white"></h3>
 
-		<!-- 				<h2 class="proof__page_headline">Four Big Reasons You Should Hire <br class="br__proof--me">Me</h2> -->
-		<!-- <div class="wrapper__fluid proof__page_headline--wrapper">
-			<h1 class="pagination pagination--white">why me</h1>
-			<div class="proof__page_headline--alternate">
-				<div class="proof__page_headline--line1">FOUR</div>
-				<div class="proof__page_headline--line2">BIG</div>
-				<div class="proof__page_headline--line3">REASONS</div>
-				<div class="proof__page_headline--line4">YOU</div>
-				<div class="proof__page_headline--line5">SHOULD</div>
-				<div class="proof__page_headline--line6">HIRE</div>
-				<div class="proof__page_headline--line7">ME</div>
-				<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg"
-					class="style-svg arrow-dwn-svg" alt="...">
-			</div>
-
-		</div> -->
-
-
-		<div class="proof__panel_wrapper">
-
-			<div class="proof__marketer_panel proof__panel_wrapper--border">
-			<h2 class="headline headline__header headline__header--proof">Here's Three Outstanding Reasons to Hire Me</h2>
-				<div class="proof__panel_intro">#1</div>
-				<div class="proof__content_outcomes" id="idooutcomes">
-					<h5 class="headline headline__header headline--proof proof__panel_headline">I do outcomes. <span
-							class="br"><br></span>Not overhead.</h5>
-					<div class="proof__content_text proof__content_text_idooutcomes">
-						<p class="copy__header copy__header--serif copy__header--proof proof__panel_body-copy">It's been
-							my experience there are two types people in my line of work &mdash; spenders &amp;
-							marketers.</p>
-						<p class="copy__header copy__header--serif copy__header--proof proof__panel_body-copy">Spenders
-							generate rudderless overhead. Marketers find ways to achieve strategic business objectives.
-						</p>
-						<p class="copy__header copy__header--serif copy__header--proof proof__panel_body-copy"><em> I'm
-								a Marketer.</em></p>
-					</div>
-					<div class="proof__content_item_img"><img
-							src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2-small.jpg"
-							id="evo2small" alt="..."></div>
-				</div>
-				<a class="link link__text link__text--white link__text--center link__text--martop">Learn more about my POV</a>	
-			</div>
-		</div>
-		<div class="proof__panel_wrapper proof__panel_wrapper--end2end">
-			<div class="proof__panel_intro proof__panel_intro--end2end">#2</div>
-			<h5 class="headline headline__header headline--white headline--proof">End to End Expertise</h5>
-			<h6 class="deck deck__header deck__header--end2end proof__panel_subhead proof__panel_subhead--end2end"> I
-				Bring Value From the Board Room to the Keyboard</h6>
-
-
-			<div class="diagram diagram__end2end diagram__end2end--vert diagram__container--end2end">
-				<div class="end2end__diagram_caption">challenge</div>
-				<div class="end2end__diagram_img"><img
-						src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" class="style-svg"
-						alt="..."></div>
-				<div class="end2end__diagram_img--plus">&#x2b;</div>
-				<div class="end2end__diagram_caption">solution</div>
-				<div class="end2end__diagram_img"><img
-						src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" class="style-svg"
-						alt="..."></div>
-				<div class="end2end__diagram_img--plus">&#x2b;</div>
-				<div class="end2end__diagram_caption">development</div>
-				<div class="end2end__diagram_img"><img
-						src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="style-svg"
-						alt="..."></div>
-				<div class="end2end__diagram_img--equal">&#x3d;</div>
-				<div class="end2end__diagram_caption">execution</div>
-				<div class="end2end__diagram_img" id="barchart"><img
-						src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" class="style-svg"
-						alt="..."></div>
-
-			</div>
-
-			<div class="diagram diagram__end2end diagram__end2end--horz diagram__container--end2end">
-
-				<div class="diagram-item diagram-item__end2end--horz">
-					<div class="end2end__diagram_caption">challenge</div>
-					<div class="end2end__diagram_img"><img
-							src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg"
-							class="style-svg" alt="..."></div>
-				</div>
-
-				<div class="end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
-
-				<div class="diagram-item diagram-item__end2end--horz">
-					<div class="end2end__diagram_caption">solution</div>
-					<div class="end2end__diagram_img"><img
-							src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg"
-							class="style-svg" alt="..."></div>
-				</div>
-
-				<div class=" end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
-
-				<div class="diagram-item diagram-item__end2end--horz">
-					<div class="end2end__diagram_caption">development</div>
-					<div class="end2end__diagram_img"><img
-							src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg"
-							class="style-svg" alt="..."></div>
-				</div>
-
-				<div class="end2end__diagram--operator end2end__diagram_img--equal">&#x3d;</div>
-
-				<div class="diagram-item diagram-item__end2end--horz">
-					<div class="end2end__diagram_caption">execution</div>
-					<div class="end2end__diagram_img" id="barchart"><img
-							src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg"
-							class="style-svg" alt="..."></div>
-				</div>
-
-			</div>
-
-
-			<div class="proof__content_text proof__content_text--end2end">
-				<p
-					class="copy__header copy__header--serif proof__panel_body-copy copy__header--proof copy__header--end2end">
-					I can scheme it, design it and execute it. That lowers cost and improves performance which means
-					more cheddar for you.</p>
-			</div>
-			<a class="link link__text link__text--white link__text--center link__text--marbottom  link__text--primary">See a complete list of my capabilities</a>	
-		</div>
-	</div>
-	<!-- </div> -->
-<!-- 	<div class="proof__panel_wrapper proof__panel_wrapper--stats">
+						<div class="combination__panel_wrapper proof__panel_wrapper--stats">
 		<div class="proof__stats_panel">
-			<div class="headline headline__header proof__panel_intro proof__panel_intro--stats">#3</div>
-			<h2 class="headline headline__header headline--stats headline--white headline--proof">i've been around</h2>
-			<h3 class="deck deck__header deck__header--stats deck--white">Laborum laboris excepteur officia ut nulla.</h3> -->
+<!-- 			<div class="headline headline__header proof__panel_intro proof__panel_intro--stats">#3</div>
+			<h2 class="headline headline__header headline--stats headline--white headline--proof">i've been around</h2> -->
+			<!-- <h3 class="deck deck__header deck__header--stats deck--white">Laborum laboris excepteur officia ut nulla.</h3> -->
 
-			<!-- <div class="proof__content_carousel carousel slide" id="stats-slider" data-interval="false">
+			<div class="proof__content_carousel carousel slide" id="stats-slider" data-interval="false">
 
 
 
@@ -375,48 +260,20 @@ exit; // Exit if accessed directly.
 				<span class="sr-only">Next</span>
 			</a>
 
-			<div class="copy__header proof__panel_body-copy copy__header--proof copy--stats">Ut id culpa minim commodo
+			<!-- <div class="copy__header proof__panel_body-copy copy__header--proof copy--stats">Ut id culpa minim commodo
 				officia ut non et sed amet magna cupidatat dolor fugiat est ut id enim.</p>
-			</div>
+			</div> -->
 		</div>
 
-	</div> -->
-	
-
-</div>
-	<div class="wrapper">
-		<div class="content__item_col proof__item_container proof__item_container--centricity">
-		
-			<!-- <div class="mobile__background--image" id="trend-arrow">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="..." class="style-svg"/>
-				</div> -->
-
-			<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-			<div class="proof__content_centricity content__item_caption" id="proof__you">
-				<h1 class="pagination pagination--marbottom pagination--alignself">Why me: #3</h1>
-				<h2
-					class="headline headline__header proof__panel_headline headline headline__header proof__panel_headline--centricity">
-					I think a professional service should be professional about service</h2>
-					<div class="content__item_img" id="bell__small"><img
-						src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="..."
-						class="style-svg"></div>
-				<div class="proof__content_text proof__content_text--centricity">
-					<p class="copy__header proof__panel_body-copy copy__header proof__panel_body-copy--centricity">I spent the better part of my career managing professional service teams and the other half working with them. </p>
-				</div>
-				<a class="link link__text link__text--primary link__text--selfcenter link__text--center link__text--martop">Review my service offerings</a>
-			</div>
-		</div>
-	
 	</div>
 
-	</div>
-	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives"
-		title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..."
-			class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-	</a>
-	</div>
+		<a class="link link__text link__text--white link__text--center link__text--martop">See where I've been</a>	
+		<a class="link link__chevron homepage-combination__link_advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
+			</a>
+	</article>
 
 
-</article>
+<!-- </div> -->
 <!-- cover end -->
+

@@ -26,8 +26,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 					<div class="row">
-<div class="footer-content"></div>
-</div>
+						<div class="footer-content"></div>
+					</div>
 					<div class="container-fluid">
 
 						<div class="site-info">&copy; 2018. AtomicMouse Web Co. All Rights Reserved.</div>
@@ -36,15 +36,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				</footer><!-- #colophon -->
 
-			</div><!--col end -->
+			</div>
+			<!--col end -->
 
 		</div><!-- row end -->
 
 	</div><!-- container end -->
 
-</div>   <!-- wrapper end -->
+</div> <!-- wrapper end -->
 
-</div>   <!-- #page we need this extra closing tag here -->
+</div> <!-- #page we need this extra closing tag here -->
 
 
 <?php wp_footer(); ?>
@@ -52,4 +53,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </body>
 
 </html>
-

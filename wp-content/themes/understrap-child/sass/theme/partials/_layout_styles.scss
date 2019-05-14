@@ -1392,7 +1392,7 @@ ul.strengths__list_container {
   }
 
   .link {
-    @include vr($margin: 6 0 2 2);
+    @include vr($margin: 6 0 2 0);
   }
 }
 

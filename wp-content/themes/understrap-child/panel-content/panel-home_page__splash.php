@@ -55,4 +55,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container-hero__img--mobile" id="profile-small"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic"></div>
 	
 	</article>
-</section>

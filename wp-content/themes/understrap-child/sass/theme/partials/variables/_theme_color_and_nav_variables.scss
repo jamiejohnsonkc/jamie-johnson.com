@@ -16,6 +16,8 @@ $new-palette5: #c8eefb;
 $new-palette6: #e4f6fd;
 
 
+
+
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -371,3 +373,7 @@ $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 
+@mixin black-gradient{
+background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #414141 85%);
+}

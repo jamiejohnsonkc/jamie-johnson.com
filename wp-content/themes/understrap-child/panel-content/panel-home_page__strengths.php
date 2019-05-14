@@ -8,32 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section>
-	<article class="article__wrapper article__fluid  content__wrapper homepage__article--strengths" id="article__wrapper--strengths">
-		<div class="container strengths__article_container">
-			<div class="strengths__page-header_container">
-				<h1 class="pagination pagination--homepage  pagination--strengths-intro pagination--white">I Kick Ass</h1>
-				<!-- 			<h2 class="page__headline strengths__page_headline">
-				-->				<h2 class="headline headline__header headline--white headline--intro">My M.O.</h2>
-				<h3 class="deck header__deck header__deck--white deck--intro">Consectetur commodo labore dolore minim voluptate velit sint anim do nostrud qui.</h3>
-				<!-- 			<ul class="page__summary strengths__page_summary">
-					-->
-					<ul class="list list--intro">
-						<li class="list-item list-item__header list-item--intro"><span class="list-item list-item__header list-item--intro-digit">1.</span>Advance Business Objectives</li>
-						<li class="list-item list-item__header list-item--intro"><span class="list-item list-item__header list-item--intro-digit">2.</span>Create Customers</li>
-						<li class="list-item list-item__header list-item--intro"><span class="list-item list-item__header list-item--intro-digit">3.</span>Optimize Performance</li>
-					</ul>
-					<div class="expertise__intro">
-						<div class="expertise__intro_headline expertise__intro_headline--border">
-							<div class="expertise__intro_headline expertise__intro_headline--primary">I grew up on the business side of marketing, but I've always secretly loathed khakis
-							</div>
-							<div class="expertise__intro_headline expertise__intro_headline--quip">&mdash; The fetish for 1's and 0's came later</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</article>
-	</section>
+
 	<section class="section__fluid section--specialties">
 		<article class="article article--strengths article--smm">
 			<div class="strengths__panel_wrapper strengths__panel_wrapper--smm">

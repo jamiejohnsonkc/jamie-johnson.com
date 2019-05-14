@@ -8,112 +8,160 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<!-- <div class="subsection__container homepage__summary-whatido_subsection"> -->
-	<article class="article__wrapper article--homepage-intro">
+<article class="article__wrapper article--homepage-intro">
 
-<!-- 		<div class="container pagination_container homepage-intro__pagination_container"> -->
-			<h1 class="pagination pagination--homepage pagination--white homepage-intro__pagination">What I Do</h1>
-<!-- 		</div> -->
-<!-- <div class="container homepage-intro__container">	 -->
-						<h2 class="headline headline__header headline__header--intro headline--white">I'm way beyond <br class="homepage-intro__headline--br">words and pictures</h2>
-		<div class="diagram__container--intro-diagram">
+	<!-- <h2 class="title title--white headline__header--intro">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
+	<h1 class="pagination pagination--overlay ">How I do it</h1>
+	<h2 class="title title--primary headline__header--intro">I'm a marketing hybrid.</h2>
 
-<!-- 			<div class="panel-content panel-content__intro-icons"> -->
+	<h3 class="subhead subhead__header subhead__header--intro">I combine strategic design, orgnanizational management and web development skills to achieve strategic outcomes.</h3>
 
 
 
-<!-- 				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--header"> -->
-<!-- 					<h2 class="page__headline homepage-intro__headline"> -->
 
 
-				<!-- </div> -->
+<div class="block__content--intro">
+<h4 class="headline headline__block headline__block--intro">I'll devise it.</h4>	
+<!-- <h5 class="subhead subhead__block subhead__block--intro">Strategic Design</h5> -->
+<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Strategic design</span> and critical thinking are my greatest strengths. uis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
-<!-- 				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--fish"> -->
-	<div class="diagram-item__container--intro">
-					<div class="content__intro_icon--background">
-						<div class="intro__icon intro__icon--fish">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/skill-33.svg" class="style-svg intro__icon_svg" alt="...">
-						</div>
-					</div>
-					
-						<h3 class="diagram-item__copy diagram-item__copy--intro-diagram">1. I'll help you get <br class="diagram-item--intro-diagram--br">competitive</h3>
+<div class="image__container--intro">
+			<img src="http://localhost:3000/wp-content/uploads/2019/03/conftable.jpg" class="tungscreens" alt="...">
+			<div class="image__caption"></div>
+	</div>
+</div>
+
+<div class="block__content--intro">
+<h4 class="headline headline__block headline__block--intro">I'll create it.</h4>	
+<!-- <h5 class="subhead subhead__block subhead__block--intro">Mobile/Web Development</h5> -->
+<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">I write my own code.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
+
+<div class="image__container--intro">
+			<img src="http://localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens" alt="...">
+			<div class="image__caption"></div>
+	</div>
+</div>
+
+<div class="block__content--intro">
+<h4 class="headline headline__block headline__block--intro">I'll implement it.</h4>	
+<!-- <h5 class="subhead subhead__block subhead__block--intro">Marketing Operations</h5> -->
+<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Process and operations = bread and butter.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
+
+<div class="image__container--intro">
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg" class="conductor" alt="...">
+			<div class="image__caption"></div>
+	</div>
+</div>
+
+
+
+
+
+
+	<h3 class="subhead subhead__header subhead__header--intro subhead--offwhite">I engage 20+ years of leadership,
+		strategic design and organizational management to help you grow your business.</h3>
+	<div class="diagram__container--intro-diagram">
+
+
+		<div class="diagram-item__container--intro">
+
+			<h3 class="diagram-item__headline diagram-item__headline--intro">MARKETING MANAGEMENT</h3>
+			<h4 class="diagram-item__subhead diagram-item--offwhite">get competitive</h4>
+
+			<div class="content__intro_icon--background">
+
+				<div class="intro__icon intro__icon--fish">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/skill-33.svg"
+						class="style-svg intro__icon_svg" alt="...">
 				</div>
-
-			<!-- 	<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--magnet"> -->
-				<div class="diagram-item__container--intro">
-					<div class="content__intro_icon--background">
-						<div class="intro__icon intro__icon--conversation">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_24.svg" class="style-svg intro__icon_svg" alt="...">
-						</div>
-					</div>
-					
-						<h3 class="diagram-item__copy diagram-item__copy--intro-diagram">2. I'll help you get <br class="diagram-item--intro-diagram--br2">found</h3>
-				</div>
-
-<!-- 				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--handshake"> -->
-	<div class="diagram-item__container--intro">
-					<div class="content__intro_icon--background">
-						<div class="intro__icon intro__icon--conversation">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_26.svg" class="style-svg intro__icon_svg" alt="...">
-						</div>
-					</div>
-					
-						<h3 class="diagram-item__copy diagram-item__copy--intro-diagram">3. I'll help you get <br class="diagram-item--intro-diagram--br2">business</h3>
-				</div>
-
-<!-- 				<div class="intro-icon--flex-item_wrapper intro-icon--flex-item_wrapper--icon intro-icon--flex-item_wrapper--rocket"> -->
-						<div class="diagram-item__container--intro">
-					<div class="content__intro_icon--background">
-						<div class="intro__icon intro__icon--rocket">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg" class="style-svg intro__icon_svg" alt="...">
-						</div>
-					</div>
-					
-						<h3 class="diagram-item__copy diagram-item__copy--intro-diagram">4. I'll help you get more <br class="diagram-item--intro-diagram--br">business</h3>
-				</div>
-
 			</div>
-	<!-- </article>
-
-
-	<article class="article__wrapper homepage-summary__bigger-picture_article"> -->
-						
-		<!-- <div class="container homepage-summary__bigger-picture_container"> -->
-	<!-- 		<div class="panel-content homepage-summary__bigger-picture_panel-content"> -->
-				<h4 class="subhead subhead__block subhead--white subhead--leadingx2 subhead__block--homepage-intro">I do more than websites. <br class=br__diagram-intro--copy><span class="subhead__block subhead--weak subhead--leadingx2 subhead__block--homepage-intro">I do everything you need before and after the website to ensure your marketing does what marketing should.</span><br class=br__diagram-intro--copy2>I create customers.</h4>
-			<!-- </div> -->
-		<!-- </div> -->
+			<p class="diagram-item__copy diagram-item__copy--intro-diagram diagram-item--offwhite">Identifying critical paths for business growth</p>
+	
+				<ul class="diagram-item__list--intro">
+					<li class="list-item__block list-item__block--intro">value design</li>
+					<li class="list-item__block list-item__block--intro">product/service development</li>
+					<li class="list-item__block list-item__block--intro">customer engagement</li>
+					<li class="list-item__block list-item__block--intro">budget management</li>
+					<li class="list-item__block list-item__block--intro">metrics & roi</li>
+				</ul>
+		
 			
-		<a class="link link__chevron homepage-intro__link_advance--chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
-			</a>
-	</article>
+			<a class="link link__text--intro">more</a>	
+		</div>
+
+		<div class="diagram-item__container--intro">
+
+			<h3 class="diagram-item__headline diagram-item__headline--intro">DIGITAL COMMUNICATIONS</h3>
+			<h4 class="diagram-item__subhead diagram-item--offwhite">get found</h4>
+			<div class="content__intro_icon--background">
+				<div class="intro__icon intro__icon--conversation">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_24.svg"
+						class="style-svg intro__icon_svg" alt="...">
+				</div>
+			</div>
+			<p class="diagram-item__copy diagram-item__copy--intro-diagram diagram-item--offwhite">Cultivating rapport and generating trust with prospects</p>
+	
+				<ul class="diagram-item__list--intro">
+					<li class="list-item__block list-item__block--intro">mobile/web development & design</li>
+					<li class="list-item__block list-item__block--intro">branding & positioning</li>
+					<li class="list-item__block list-item__block--intro">marketing content</li>
+					<li class="list-item__block list-item__block--intro">SEO/SEM</li>
+				</ul>
+				<a class="link link__text--intro">more</a>	
+
+		</div>
+
+		<div class="diagram-item__container--intro">
+			<h3 class="diagram-item__headline diagram-item__headline--intro">REVENUE GENERATION</h3>
+			<h4 class="diagram-item__subhead diagram-item--offwhite">get sold</h4>
+			<div class="content__intro_icon--background">
+				<div class="intro__icon intro__icon--conversation">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_26.svg"
+						class="style-svg intro__icon_svg" alt="...">
+				</div>
+			</div>
 
 
-<article class="article__wrapper article__wrapper--overlap homepage-claim__wrapper">
-	<div class="homepage-claim__hackfix homepage-claim__hackfix--upper"></div>
-	<div class="homepage-claim__background-image--container">
-		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
+			<p class="diagram-item__copy diagram-item__copy--intro-diagram diagram-item--offwhite">Converting prospects into customers</p>
+	
+				<ul class="diagram-item__list--intro">
+					<li class="list-item__block list-item__block--intro">substantiating value</li>
+					<li class="list-item__block list-item__block--intro">lead-to-revenue</li>
+					<li class="list-item__block list-item__block--intro">marketing/sales collaboration</li>
+					<li class="list-item__block list-item__block--intro">funnel creation & management</li>
+				</ul>	
+				<a class="link link__text--intro">more</a>	
+
+		</div>
+
+		<div class="diagram-item__container--intro">
+			<h3 class="diagram-item__headline diagram-item__headline--intro">VALUE DELIVERY</h3>
+			<h4 class="diagram-item__subhead diagram-item--offwhite">get more business</h4>
+			<div class="content__intro_icon--background">
+				<div class="intro__icon intro__icon--rocket">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg"
+						class="style-svg intro__icon_svg" alt="...">
+				</div>
+			</div>
+
+
+			<p class="diagram-item__copy diagram-item__copy--intro-diagram diagram-item--offwhite">Ensuring promises made are met</p>
+	
+				<ul class="diagram-item__list--intro">
+					<li class="list-item__block list-item__block--intro">customer engagement</li>
+					<li class="list-item__block list-item__block--intro">experience management</li>
+					<li class="list-item__block list-item__block--intro">account based marketing</li>
+				</ul>
+				<a class="link link__text--intro">more</a>	
+
+		</div>
+
 	</div>
-<!-- 		<div class="pagination--overlay pagination_container homepage-summary__claim_pagination--container"></div> -->
-	<div class="homepage-claim__container homepage-claim__container--content-wrapper">
-			<h1 class="pagination pagination--homepage pagination--claim ">What I Do</h1>
-		
-		<div class="homepage-claim__container homepage-claim__container--content">
 
-		<div class="homepage-summary__claim_subhead homepage-summary__claim_subhead--weak">THEY MAKE "STUFF"</div>
-		<div class="homepage-summary__claim_subhead homepage-summary__claim_subhead--strong  homepage-summary__claim_subhead--border">I GROW BUSINESS</div>
-		<p class="homepage-summary__claim--fancy">I fuse strategy, marketing, technology and design to achieve strategic outcomes.</p>
-	</div>
-		
-
-
-
-	</div>
-			<a class="link link__chevron homepage-claim__link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
-		</a>
-			<div class="homepage-claim__hackfix homepage-claim__hackfix--lower"></div>
+	<a class="link link__chevron homepage-intro__link_advance--chevron"
+		href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..."
+			class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+	</a>
 </article>
-<!-- </div> -->
-<!-- cover end -->
+</section>

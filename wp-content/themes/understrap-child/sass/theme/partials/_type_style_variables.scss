@@ -223,6 +223,7 @@ p {
   &__sublist {}
 
   &__deck
+
   &__body-lg {}
 
   &__body-sm {}
@@ -381,7 +382,21 @@ p {
   &--opi {
     background: $primary;
   }
+  &__wrapper{
+    &--blue{
+      background: $primary;
+    }
+    &--fluidpad{
+      width: 100%;
+      max-width: 100%;
+      padding: 8%;
+      @include mq('tablet'){
+        padding: unset;
+      }
+    }
+  }
 }
+
 
 .container {
   display: block;
@@ -725,11 +740,20 @@ p {
     }
   }
 
+  &--alignself{
+  align-self: center;
+    }
+
+    &--marbottom{
+      @include vr($margin-bottom: 3);
+    }
+  
+
   &--homepage {
     @include vr($margin-top: 4, $margin-bottom: 4);
     @include mq("tablet") {
       align-self: flex-start;
-      @include vr($padding-left: 4);
+      // @include vr($padding-left: 4);
     }
     @include mq("tablet-wide"){
       align-self: center;
@@ -739,15 +763,49 @@ p {
     padding-left: 0;
   }
 
-  &--white {
+&--combination{
+margin-left: 4%;
+  max-width: 8em;
+}
+
+&--white{
+  color: $offwhite;
+}
+
+  &--revwhite {
+    // border: 2px solid #fafafa;
+    color: $black;
+    background: $offwhite;
+    border-radius: 50px;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+  @include vr($padding: .25 1);  }
+  
+  &--revblack {
+    // border: 2px solid #fafafa;
     color: $white;
-  }
+    background: $black;
+    border-radius: 50px;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+  @include vr($padding: .15 .85);  }
+
+  &--revprimary {
+    // border: 2px solid #fafafa;
+    color: $primary;
+    background: $white;
+    border-radius: 50px;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+  @include vr($padding: .15 .85);  }
+
 }
 
 .pagination {
   @include pagination-sm;
-
-  color: $gray-900;
 
   @include mq("tablet") {
     @include pagination;
@@ -759,26 +817,14 @@ p {
   }
 
 
-  &--white {
-    color: $white;
-  }
+
 
   &--center {
     text-align: center;
   }
-}
-
-.link {
-  &__chevron {
-    height: 3rem;
-    width: 3rem;
-    border-radius: .75em;
-    display: flex;
-    align-items: center;
-    min-height: 0;
+  &--help{
+    transform: translate(50%, 10%);
   }
-
-  &__text {}
 }
 
 .title {
@@ -794,6 +840,15 @@ p {
 
   &--center {
     text-align: center;
+  }
+  &--white{
+    color:$white;
+  }
+  &--overlay{
+    z-index: 3;
+  }
+  &--combination{
+    padding-left: 4%;
   }
 }
 
@@ -857,6 +912,7 @@ p {
     min-height: 1.5em;
     display: flex;
     position: relative;
+    color: $primary;
     @include mq("tablet-wide"){
       min-height: 0;
     }
@@ -918,7 +974,7 @@ p {
     text-align: center;
     width: 61%;
     justify-content: center;
-    margin: 0 auto;
+    @include vr($margin: 0 auto 2 auto);
 
 
     @include mq("phone-wide", $type: max) {
@@ -936,13 +992,14 @@ p {
 }
 
 .subhead {
+  font-weight: 200;
   @include mq("tablet") {
     max-width: 61%;
   }
 
 
   &__header {
-    @include header__subhead;
+    @include header__subhead-sm;
     @include mq("desktop") {
       @include header__subhead-lg;
     }
@@ -952,22 +1009,15 @@ p {
       margin-left: auto;
       margin-right: auto;
     }
-  }
-
-  &__block {
-    @include block__subhead;
-
-    &--homepage-intro {
-      max-width: 68.89%;
-      @include vr($margin-top: 3, $margin-bottom: 3);
-      justify-content: center;
-      text-align: justify;
-      @include mq("desktop") {
-      flex: 0 23%;
-      max-width: 23%;
-    }
+  &--intro {
+    width: 83%;
+    margin-top: 0;
+    @include vr($margin-bottom: 2);
+    @include mq("tablet") {
+      width: unset;
   }
 }
+  
 
   &__item {
     @include item__subhead;
@@ -998,11 +1048,35 @@ p {
     color: $white;
   }
 
+  &--offwhite {
+    color: $offwhite;
+  }
+
   &--weak {
     font-weight: 200;
   }
 
   &--intro {}
+}
+
+&__block {
+  @include block__subhead();
+
+  &--homepage-intro {
+    max-width: 68.89%;
+    @include vr($margin-top: 3, $margin-bottom: 3);
+    justify-content: center;
+    text-align: justify;
+    @include mq("desktop") {
+    flex: 0 23%;
+    max-width: 23%;
+  }
+}
+}
+
+&--offwhite {
+  color: $offwhite;
+}
 }
 
 .deck {
@@ -1049,12 +1123,15 @@ p {
 
     &--end2end {
       color: $white;
-      width: 38%;
+
 
       @include vr($margin-top: 0, $margin-bottom: 4);
 
       text-align: center;
+      @include mq("tablet-wide"){
+      width: 38%;
     }
+  }
 
     &--stats {
       color: $white;
@@ -1062,6 +1139,9 @@ p {
         max-width: 61%;
         text-align: center;
       }
+    }
+    &--reasons{
+      @include vr($margin-top: 2, $margin-bottom: 3);
     }
   }
 
@@ -1153,7 +1233,11 @@ p {
 
     &--end2end {
       color: $offwhite;
+      width: 67%;
+      margin-bottom: 4em;
+     @include mq("tablet-wide"){
       width: 50%;
+     }
     }
 
     &--outcomes {
@@ -1251,6 +1335,8 @@ p {
       min-height: 0;
     }
 
+   
+
 
     font-weight: 300;
     text-transform: uppercase;
@@ -1274,6 +1360,10 @@ p {
 
   &--white {
     color: $white;
+  }
+  &--mo{
+    @include vr($margin: 4 0 .5 0, $line-height: 2);
+  max-width: 61%;
   }
 }
 
@@ -1320,7 +1410,7 @@ p {
   &--intro {
     padding-left: 0;
 
-    @include vr($margin-top: 4, $margin-bottom: 4);
+    @include vr($margin-top: .25, $margin-bottom: 4);
   }
 
   &--strengths {
@@ -1382,6 +1472,13 @@ p {
 
   &__block {
     @include block__list-item;
+  &--intro{
+    color: $offwhite;
+    font-weight: 200;
+    margin-left: -1em;
+    text-indent: -1.25em;
+    padding-left: 1em;
+  }
   }
 
   &__item {
@@ -1466,11 +1563,11 @@ p {
 
 // }
 
-.link, a:not([href]):not([tabindex]) {
-  font-family: $font-family-sans-serif;
-  color: $link-color;
-  text-decoration: $link-decoration;
-}
+// .link, a:not([href]):not([tabindex]) {
+//   font-family: $font-family-sans-serif;
+//   color: $link-color;
+//   text-decoration: $link-decoration;
+// }
 
 .link:hover {
   color: $link-hover-color;
@@ -1488,6 +1585,7 @@ p {
       flex-direction: column;
       align-items: stretch;
       flex: 0 0 auto;
+
       min-height: 175em;
       @include mq("tablet"){
         width: 50%;
@@ -1641,12 +1739,36 @@ p {
     &--fish{order: 2;}
     }
   
+&__list--intro{
+  list-style-position: inside;
+  padding-left: 0;
+  width: 85%;
+}
+
 
   &__headline {
     font-weight: 300;
 
     @include diagram__item-headline;
+  &--intro{
+    color: $primary;
+    font-weight: 400;
+    letter-spacing: .025em;
+    text-align: center;
+    @include vr($line-height: 2);
+    
   }
+  }
+
+&__subhead{
+  font-weight: 200;
+  @include diagram__item-subhead;
+  font-style: italic;
+  @include vr($margin-bottom: 1);
+&--intro{
+  
+}
+}
 
   &__copy {
     font-weight: 200;
@@ -1656,6 +1778,8 @@ p {
     &--objectives-diagram {
       text-align: justify;
       width: 100%;
+      flex: 1 0 100%;
+     
 
       @include mq("tablet") {
         max-width: 73%;
@@ -1667,15 +1791,14 @@ p {
       }
 
     &--intro-diagram {
-      
-
-      color: $white;
-      text-align: center;
+      text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex: 1 0 auto;
-      padding-top: 1.50001rem;
+      @include vr($margin-top: 2, $margin-bottom: 1);
+      // padding-top: 1.50001rem;
+      width: 100%;
       @include mq("tablet"){
       width: 61%;
     }
@@ -1685,7 +1808,53 @@ p {
       }
       }
   }
+&--white{
+  color: $white;
 }
+&--offwhite{
+  color: $offwhite;
+}
+}
+
+
+a.link {
+  &.link__chevron {
+    height: 3rem;
+    width: 3rem;
+    border-radius: .75em;
+    display: flex;
+    align-items: center;
+    min-height: 0;
+  }
+
+  &.link__text {
+   flex: 1 0 auto;
+  
+  &--white{
+    color: $white;
+  }
+  &--primary{
+    color: $primary;
+  }
+  &--intro{
+  margin: 0 auto;
+  }
+  &--center{
+    margin-left: auto;
+    margin-right: auto;
+    }
+    &--selfcenter{
+      align-self: center;
+      }
+    &--martop{
+      @include vr($margin-top: 2);
+    }
+    &--marbottom{
+      @include vr($margin-bottom: 2);
+    }
+}
+}
+
 
 
 // .diagram__objectives{

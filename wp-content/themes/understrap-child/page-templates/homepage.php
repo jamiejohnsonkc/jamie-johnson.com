@@ -17,9 +17,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<main class="site-main" id="main" role="main">
 	
 			<?php get_template_part( 'panel-content/panel', 'home_page__splash' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'home_page__grow-business' ); ?>
+	
 			<?php get_template_part( 'panel-content/panel', 'home_page__summary' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'home_page__upto' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'home_page__strengths' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'home_page__combination' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'home_page__mymo' ); ?>
+			<!-- php get_template_part( 'panel-content/panel', 'home_page__strengths' );  -->
 			<?php get_template_part( 'panel-content/panel', 'home_page__proof' ); ?>
 <?php get_template_part( 'panel-content/panel', 'home_page__cta' ); ?>
 

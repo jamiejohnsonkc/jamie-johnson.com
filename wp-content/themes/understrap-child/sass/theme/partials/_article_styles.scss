@@ -1071,8 +1071,15 @@ color: $primary;
   color: $gray-400;
 }
 .proof__content_centricity{
-  border: 3px dashed $gray-400;
-}
+  // border: 3px dashed $gray-400;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+
+  }
 
 #bell__small{
   svg#Layer_1{
@@ -1083,16 +1090,19 @@ color: $primary;
 .proof__panel_body-copy--centricity{
 
     text-align: center;
-    margin-bottom: 0;
+    font-family: $font-family-serif;
+    max-width: 61%;
+    @include vr($margin: 2 auto 2 auto);
+    
   }
 
  .proof__panel_headline--centricity {
     // @include subhead();
-    font-weight: 400;
-    background: $black;
-    color: $white;
-    border-radius: 5px;
-
+    // font-weight: 400;
+    // background: $black;
+    // color: $white;
+    // border-radius: 5px;
+font-family: $font-family-serif;
     @include vr($margin-bottom: 1);
 
     // font-family: $font-family-serif;

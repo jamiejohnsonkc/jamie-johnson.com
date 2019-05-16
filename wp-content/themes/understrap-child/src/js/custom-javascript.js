@@ -102,6 +102,23 @@ jQuery(document).ready(function($) {
 // });
 
 jQuery(document).ready(function($) {
+  $('.expand-button--webdev').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    
+  //   if ($(id).is(":visible")) {
+  //     $(this).text("Read More");
+  // } else {
+  //     $(this).text("Read Less");
+  // }
+
+  $(id).slideToggle(500);
+})
+});
+  
+
+
+jQuery(document).ready(function($) {
 $('.moreless-button__outcomes').click(function() {
   $('.read-more__outcomes').slideToggle();
   if ($('.moreless-button__outcomes').text() == "Read more") {

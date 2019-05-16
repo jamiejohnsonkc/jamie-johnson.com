@@ -43,13 +43,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="splash__label splash__label_divider">&#x000B7</div>
 <div class="splash__label splash__label--emph">marketer</div>
 </div>
-	<!-- <p class="splash__subhead--fancy">I fuse strategy, marketing, technology and design to achieve business outcomes.</p> -->
-	<!-- <p>I help smaller and emerging businesses engage effective marketing.</p> -->
-<!-- 	<p>I'm available for contract, consulting or freelance engagements <span class="br"><br></span>(and maybe the perfect long-term gig)</p> -->
+
 	
-<a class="link link__chevron link__chevron--splash link-chevron--splash-homepage" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
-	</a>
+<a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><?php get_template_part( 'buttons/button', 'jump' ); ?></a>
+
+
 </div>
 	
 	<div class="container-hero__img--mobile" id="profile-small"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic"></div>

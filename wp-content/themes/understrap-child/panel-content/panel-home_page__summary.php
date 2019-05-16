@@ -11,25 +11,66 @@ exit; // Exit if accessed directly.
 <article class="article__wrapper article--homepage-intro">
 
 	<!-- <h2 class="title title--white headline__header--intro">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
+
 	<h1 class="pagination pagination--overlay ">How I do it</h1>
-	<h2 class="title title--primary headline__header--intro">I'm a marketing hybrid.</h2>
 
-	<h3 class="subhead subhead__header subhead__header--intro">I combine strategic design, orgnanizational management and web development skills to achieve strategic outcomes.</h3>
+	<div class="header__container header__container--home-hybrid">	
+		<h2 class="title headline__header--intro">I'm what they call a hybrid marketer</h2>
+		<hr class="hr__title-headline">
+		<h3 class="deck deck__header deck__header--intro">I don't just code. I do the whole enchilada.</h3>
+<div class="graphic__container graphic__container--home-hybrid">
+
+	<div class="graphic__element graphic__element--home-hybrid">
+				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..." class="hybrid-icon style-svg"/>
+	</div>
+
+		<div class="graphic__element graphic__element--home-hybrid">
+			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg"/>
+		</div>
+		
+		<div class="graphic__element graphic__element--home-hybrid">
+		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg"/>
+		</div>
+
+
+
+</div>
+	</div>
+
+
+<div class="body__container body__container--combination">
+<p class="copy copy__block copy__block--intro copy--bold">I combine business savvy, strategic design and technology to achieve outcomes.</p>
+<p class="copy copy__block copy__block--intro">I'll help you diagnose your challenge, help you find a solution or bring it to fruition. Or all of the above &mdash; up to you.</p>
+</div>
+<div class="link link__text link--hybrid">> See how I can help you grow your business</div>
 
 
 
 
+<!-- <h5 class="deck deck__block deck__block--intro">Strategy &plus; Creativity &plus; Technology I'll devise it, develop it and deploy it.</h5> -->
+<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
+<div class="container__more" id="more--strategy">
 
-<div class="block__content--intro">
-<h4 class="headline headline__block headline__block--intro">I'll devise it.</h4>	
-<!-- <h5 class="subhead subhead__block subhead__block--intro">Strategic Design</h5> -->
-<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Strategic design</span> and critical thinking are my greatest strengths. uis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
+<p class="copy copy__block">Labore enim non do sit non ad anim sint in. Nostrud ex anim qui non et laborum eu deserunt irure elit incididunt. Incididunt pariatur ex nulla in cupidatat anim Lorem. Elit reprehenderit reprehenderit anim elit mollit esse excepteur. Deserunt dolore consequat veniam ullamco quis.</p>
+
+<h6 class="list-head list-head__item">Amet do ut incididunt tempor.</h6>
+<ul list class="list list__no-junk">
+	<li class="list-item list-item__item">Aute aute anim esse deserunt quis</li>
+	<li class="list-item list-item__item">Occaecat culpa ea minim aute do</li>
+	<li class="list-item list-item__item">Dolor consequat veniam anim ipsum fugiat in in.</li>
+	<li class="list-item list-item__item">Irure eu eiusmod sunt conse</li>
+	<li class="list-item list-item__item">Reprehenderit Lorem reprehenderit aliqua</li>
+</ul>
+</div>
+
+<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Strategic design and critical thinking are my greatest strengths.</span> uis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
 <div class="image__container--intro">
 			<img src="http://localhost:3000/wp-content/uploads/2019/03/conftable.jpg" class="tungscreens" alt="...">
 			<div class="image__caption"></div>
 	</div>
 </div>
+
 
 <div class="block__content--intro">
 <h4 class="headline headline__block headline__block--intro">I'll create it.</h4>	
@@ -41,6 +82,7 @@ exit; // Exit if accessed directly.
 			<div class="image__caption"></div>
 	</div>
 </div>
+
 
 <div class="block__content--intro">
 <h4 class="headline headline__block headline__block--intro">I'll implement it.</h4>	
@@ -58,7 +100,7 @@ exit; // Exit if accessed directly.
 
 
 
-	<h3 class="subhead subhead__header subhead__header--intro subhead--offwhite">I engage 20+ years of leadership,
+	<!-- <h3 class="subhead subhead__header subhead__header--intro subhead--offwhite">I engage 20+ years of leadership,
 		strategic design and organizational management to help you grow your business.</h3>
 	<div class="diagram__container--intro-diagram">
 
@@ -86,7 +128,8 @@ exit; // Exit if accessed directly.
 				</ul>
 		
 			
-			<a class="link link__text--intro">more</a>	
+
+			<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
 		</div>
 
 		<div class="diagram-item__container--intro">
@@ -107,7 +150,7 @@ exit; // Exit if accessed directly.
 					<li class="list-item__block list-item__block--intro">marketing content</li>
 					<li class="list-item__block list-item__block--intro">SEO/SEM</li>
 				</ul>
-				<a class="link link__text--intro">more</a>	
+							<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
 
 		</div>
 
@@ -130,7 +173,7 @@ exit; // Exit if accessed directly.
 					<li class="list-item__block list-item__block--intro">marketing/sales collaboration</li>
 					<li class="list-item__block list-item__block--intro">funnel creation & management</li>
 				</ul>	
-				<a class="link link__text--intro">more</a>	
+							<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
 
 		</div>
 
@@ -152,16 +195,14 @@ exit; // Exit if accessed directly.
 					<li class="list-item__block list-item__block--intro">experience management</li>
 					<li class="list-item__block list-item__block--intro">account based marketing</li>
 				</ul>
-				<a class="link link__text--intro">more</a>	
+							<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
 
 		</div>
 
-	</div>
+	</div> -->
 
-	<a class="link link__chevron homepage-intro__link_advance--chevron"
-		href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..."
-			class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-	</a>
+<a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/page#div" title="go to next"><?php get_template_part( 'buttons/button', 'jump' ); ?></a>
+
 </article>
 </section>
+

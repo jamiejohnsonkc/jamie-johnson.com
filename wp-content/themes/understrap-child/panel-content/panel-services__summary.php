@@ -20,7 +20,7 @@ exit; // Exit if accessed directly.
 
 					<!-- <div class="services__summary-head_container services__summary-head_container--headers"> -->
 						<h2 class="headline headline__header">Whatcha Need?</h2>
-						<h3 class="deck header__deck">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
+						<h3 class="deck deck__header--services-summary">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
 						<p class="copy copy__header">Dolore pariatur anim culpa do sunt nulla dolor reprehenderit ullamco nostrud proident do est exercitation enim ullamco sed.</p>
 						<p class="copy copy__header">Occaecat ad qui ut cupidatat elit magna est ea.</p>
 						<a class="copy" href="/">This will be a link</a>

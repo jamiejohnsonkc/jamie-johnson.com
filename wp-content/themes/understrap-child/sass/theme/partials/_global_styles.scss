@@ -100,18 +100,11 @@ html [type=button] {
 body {
     height: 100%;
     // padding-top: $navbar-height;
- // @include vr-grid(); 
+//  @include vr-grid(); 
 /*      flex-direction: column; */
 }
 
 
-section{}
-header{}
-title{}
-div{}
-title{}
-figure{}
-article{}
 
 // .article__spacer{
 //   height: 25vh;
@@ -122,10 +115,6 @@ article{}
     position: fixed;
     top: 0;
     z-index: 1000;
-}
-
-.container{
-  position: relative;
 }
 
 %row, .row{
@@ -211,4 +200,8 @@ article{}
 
 .italic{
   font-style: italic;
+}
+
+.primary{
+  color: $primary;
 }

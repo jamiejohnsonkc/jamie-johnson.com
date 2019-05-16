@@ -34,22 +34,10 @@ b
 .splash__page_subhead{
   // // @include subhead-sm();
 
-  }
-
-
-.link.link__chevron--splash{
- background: $primary;
- border-radius: 100%;
- z-index: 3;
-    
+  
 
 
 
-
-> #link__advance_chev-dwn > g > path{
-  stroke: $white;
-
-}
 }
 
 
@@ -76,12 +64,7 @@ b
 
   //   @include vr($line-height: 3);
   // }
-.container--splash-homepage_advance-link{
-    position: absolute;
-    display: block;
-    @include push-auto;
-    bottom: 6em;
-  }
+
 
   // %subhead {
   //   @include vr($font-size: 1, $margin: 0 0, $line-height: 2.5);
@@ -1520,12 +1503,6 @@ font-weight: 400;
 //   @include display-text-sm();;
 // }
 
-#capabilities__menu_link {
-  @include body-text();
-
-  font-style: italic;
-  Color: $primary;
-}
 
 // ==========================================================================
 // capabilities overlay
@@ -1689,20 +1666,7 @@ font-family: $font-family-sans-serif;
 color: $gray-700;
 }
 
-.link {
-  &__chevron {
-    &--splash {
-    }
-  }
-}
-.link-chevron {
-  &--splash-services {
-@media (min-width: 48em) and (max-width: 64em){
-  transform: translateY(-14em);
-}
 
-  }
-  }
 
 
 .chev--dwn {

@@ -355,15 +355,7 @@ min-height: 32em;
     }
 }
 
-#link__advance_chev-dwn{
-   width:1.5em;
-  height:1.5em;
-  display: block;
-  @include push-auto();
-    path.st0{
-    stroke: $link-color;
-}
-}
+
 
 
 

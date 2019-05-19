@@ -42,13 +42,13 @@ exit; // Exit if accessed directly.
 <p class="copy copy__block copy__block--intro copy--bold">I combine business savvy, strategic design and technology to achieve outcomes.</p>
 <p class="copy copy__block copy__block--intro">I'll help you diagnose your challenge, help you find a solution or bring it to fruition. Or all of the above &mdash; up to you.</p>
 </div>
-<div class="link link__text link--hybrid">> See how I can help you grow your business</div>
+<div class="link link__text link--hybrid">> see a list of my consulting, development and execution services</div>
 
 
 
 
 <!-- <h5 class="deck deck__block deck__block--intro">Strategy &plus; Creativity &plus; Technology I'll devise it, develop it and deploy it.</h5> -->
-<a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><?php get_template_part( 'buttons/button', 'expand' ); ?></a>
+<!-- <a class="ui-button ui-button__expand ui-button__expand--primary-white" href="http://jamiejohnsonmev2.test/page#div" title="read more"><php get_template_part( 'buttons/button', 'expand' ); ?></a>
 <div class="container__more" id="more--strategy">
 
 <p class="copy copy__block">Labore enim non do sit non ad anim sint in. Nostrud ex anim qui non et laborum eu deserunt irure elit incididunt. Incididunt pariatur ex nulla in cupidatat anim Lorem. Elit reprehenderit reprehenderit anim elit mollit esse excepteur. Deserunt dolore consequat veniam ullamco quis.</p>
@@ -61,8 +61,8 @@ exit; // Exit if accessed directly.
 	<li class="list-item list-item__item">Irure eu eiusmod sunt conse</li>
 	<li class="list-item list-item__item">Reprehenderit Lorem reprehenderit aliqua</li>
 </ul>
-</div>
-
+</div> -->
+<!-- 
 <p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Strategic design and critical thinking are my greatest strengths.</span> uis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
 <div class="image__container--intro">
@@ -74,26 +74,26 @@ exit; // Exit if accessed directly.
 
 <div class="block__content--intro">
 <h4 class="headline headline__block headline__block--intro">I'll create it.</h4>	
-<!-- <h5 class="subhead subhead__block subhead__block--intro">Mobile/Web Development</h5> -->
-<p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">I write my own code.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
+<h5 class="subhead subhead__block subhead__block--intro">Mobile/Web Development</h5> -->
+<!-- <p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">I write my own code.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
 <div class="image__container--intro">
 			<img src="http://localhost:3000/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens" alt="...">
 			<div class="image__caption"></div>
 	</div>
-</div>
+</div> -->
 
 
-<div class="block__content--intro">
+<!-- <div class="block__content--intro">
 <h4 class="headline headline__block headline__block--intro">I'll implement it.</h4>	
-<!-- <h5 class="subhead subhead__block subhead__block--intro">Marketing Operations</h5> -->
+<h5 class="subhead subhead__block subhead__block--intro">Marketing Operations</h5>
 <p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Process and operations = bread and butter.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
 <div class="image__container--intro">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg" class="conductor" alt="...">
 			<div class="image__caption"></div>
 	</div>
-</div>
+</div> -->
 
 
 
@@ -200,8 +200,8 @@ exit; // Exit if accessed directly.
 		</div>
 
 	</div> -->
-
-<a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/page#div" title="go to next"><?php get_template_part( 'buttons/button', 'jump' ); ?></a>
+<!-- 
+<a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/page#div" title="go to next">php get_template_part( 'buttons/button', 'jump' ); ?></a> -->
 
 </article>
 </section>

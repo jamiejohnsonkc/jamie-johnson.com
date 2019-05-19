@@ -9,8 +9,7 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="section section--services-expertise">
 	<article class="article">
-
-		<div class="header__container">
+		<div class="header__container header__container--push-center">
 			<div class="masthead">
 				<h1 class="pagination pagination--expertise">End to End Expertise</h1>
 				<div class="graphic__container graphic__container--services-masthead">
@@ -27,55 +26,164 @@ if (!defined('ABSPATH')) {
 					</div>
 				</div>
 			</div>
-			<h2 class="headline headline__header">From The Boardroom To The Keyboard</h2>
-			<h2 class="deck deck__header">Strategic Design<span class="deck deck__header primary">&plus;</span>Organizational Management<span class="deck deck__header primary">&plus;</span> Integrated Marketing</h2>
+			<h2 class="headline__header">From The Boardroom To The Keyboard</h2>
+			<h2 class="deck deck__header">Strategic Design<span class="deck deck__header primary"> &plus; </span>Organizational Management<span class="deck deck__header primary"> &plus; </span> Integrated Marketing</h2>
 
 			<!-- <h2 class="title title__header title--center">Strategy &plus; Creativity &plus; Technology</h2> -->
-			<h3 class="subhead subhead__header subhead__header">I don't just build websites. I also do everything you need before, during and after the website to grow your business.</h3>
+			<h3 class="subhead__header subhead__header--hybrid">I don't just build websites. I also do everything you need before, during and after the website to grow your business.</h3>
 			<p class="copy copy__block">Tempor nostrud occaecat mollit quis aliquip minim occaecat Lorem occaecat eu est laboris veniam nostrud.</p>
 		</div>
-		<div class="body__container">
 
 
 
 
-			<div class="body-component body-component__expertise">
-				<hr class="hr__expertise-divider">
-				<div class="graphic__element graphic__element--integrated-marketing">
+
+		<div class="body__container f-container__column--center s-expertise__body-container">
+
+			<div class="body__item f-item--selfcenter f-container__column--center expertise__flex-item">
+				<!-- <hr class="hr__expertise-divider"> -->
+
+				<!-- //! so this header is just a header, it should be modularized // -->
+				<div class="item__header f-item split-row f-container--center-middle s-expertise__header">
+
+
+					<div class="graphic__element f-item s-expertise__graphic-element">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 					</div>
-				<h2 class="subhead__container subhead subhead__block subhead--center ">Integrated Marketing</h2>
-				<p class="copy__container copy copy__block">Et ad est cillum do.Cillum ea labore quis do eiusmod nulla consequat duis.</p>
+
+					<h2 class="headline__block f-item s-expertise__subhead">Integrated Marketing</h2>
+				</div>
+
+				<div class="content__container--pad f-container__column--center item__content">
+					<h3 class="deck__block">Dolor elit ex aliqua mollit anim eu consequat</h3>
+					<p class="copy__block">Et ad est cillum do.Cillum ea labore quis do eiusmod nulla consequat duis.</p>
+		
+				<ul class="container__fluid list list__no-junk--no-head s-expertise__body-list">
+					<li class="list-item list-item__block">mobile+web development</li>
+					<li class="list-item list-item__block">digital marketing</li>
+					<li class="list-item list-item__block">analog/traditional Marcom</li>
+				</ul>
 				<div class="image__container--expertise">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="...">
 				</div>
 
+
 				<div class="content__container content__container--expertise">
-					<h3 class="list-head list-head__block list-head__background--pattens list-head--expertise-item">Mobile + Web Development</h3>
+					<!-- <h3 class="list-head list-head__block list-head__background--pattens list-head--expertise-item">Mobile + Web Development</h3> -->
+					<h3 class="headline__item f-item f-container--center-middle s-expertise__headline-item ">Mobile + Web Development</h3>
 
-					<p class="copy__container copy copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna.</p><p class="copy__container copy copy__block">Occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p>
-					
-
-<a href="#webdev-expertise" class="button ui-button ui-button__expand ui-button__expand--primary-white expand-button__expertise expand-button--webdev" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
-					<div class="container__accordion--webdev" id="webdev-expertise">
-
-					<h4 class="list-head list-head__item list-head__item--self-left list-head__item--no-top-margin container">Consequat dolore ad dolore</h4>
+					<h4 class="subhead__item--vmar-1-1">Ex veniam aute enim anim duis aliqua ad occaecat tempor</h4>
+					<p class="copy copy__container--vmar-1-1 copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna.</p>
+					<h4 class="list-head list-head__item list-head__item--self-left">Consequat dolore ad dolore</h4>
 					<ul class="list list--inset ">
 						<li class="list-item list-item__item list-item--expertise">Mobile/Web responsive functionality</li>
 						<li class="list-item list-item__item list-item--expertise">Custom builds, Wordpress and custom theme development</li>
 						<li class="list-item list-item__item list-item--expertise">Site Design, protyping and build out</li>
 						<li class="list-item list-item__item list-item--expertise">UX, site architecture and supporting graphics</li>
 					</ul>
-				</div>
-				
+
+
+					<a href="#webdev-expertise" class="button ui-button ui-button__expand ui-button__expand--primary-white expand-button__expertise expand-button--webdev" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
+					<div class="container__accordion container__accordion--expertise" id="webdev-expertise">
+						<h4 class="headline__item">Eiusmod ex dolore sint laboris nulla.</h4>
+						<p class="copy__container copy copy__block">Occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p>
+
+
+					</div>
+
 					<!-- <h5 class="headline headline__item headline__container">Dolore proident non. Deserunt nostrud ad dolore proident non.Deserunt nostrud.</h5> 	
 					<p class="copy copy__container copy__container--center copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p> -->
-					</div>
-	</div>
+				</div>
+			</div>
+			</div>
 
-			<div class="body__component body__component--2"></div>
-			<div class="body__component body__component--3"></div>
-		</div>
+
+			<div class="body__item f-item--selfcenter f-container__column--center expertise__flex-item">
+				<hr class="hr__expertise-divider">
+
+				<!-- //! so this header is just a header, it should be modularized // -->
+				<div class="item__header f-item split-row f-container--center-middle s-expertise__header">
+
+
+					<div class="graphic__element f-item s-expertise__graphic-element">
+						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
+					</div>
+
+					<h2 class="subhead__block f-item s-expertise__subhead">Strategic Marketing Management</h2>
+				</div>
+				<p class="copy__container--83 copy__block">Et ad est cillum do.Cillum ea labore quis do eiusmod nulla consequat duis.</p>
+				<div class="image__container--expertise">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
+				</div>
+
+
+				<div class="content__container content__container--expertise">
+					<h3 class="list-head list-head__block list-head__background--pattens list-head--expertise-item">Mobile + Web Development</h3>
+
+					<p class="copy__container copy copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna.</p>
+
+
+
+					<a href="#webdev-expertise" class="button ui-button ui-button__expand ui-button__expand--primary-white expand-button__expertise expand-button--webdev" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
+					<div class="container__accordion container__accordion--expertise" id="webdev-expertise">
+
+						<p class="copy__container copy copy__block">Occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p>
+						<h4 class="list-head list-head__item list-head__item--self-left list-head__item--no-top-margin container">Consequat dolore ad dolore</h4>
+						<ul class="list list--inset ">
+							<li class="list-item list-item__item list-item--expertise">Mobile/Web responsive functionality</li>
+							<li class="list-item list-item__item list-item--expertise">Custom builds, Wordpress and custom theme development</li>
+							<li class="list-item list-item__item list-item--expertise">Site Design, protyping and build out</li>
+							<li class="list-item list-item__item list-item--expertise">UX, site architecture and supporting graphics</li>
+						</ul>
+					</div>
+
+					<!-- <h5 class="headline headline__item headline__container">Dolore proident non. Deserunt nostrud ad dolore proident non.Deserunt nostrud.</h5> 	
+					<p class="copy copy__container copy__container--center copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p> -->
+				</div>
+			</div>
+
+
+
+			<div class="body-component body-component__expertise">
+				<hr class="hr__expertise-divider">
+				<div class="graphic__element graphic__element--integrated-marketing">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
+				</div>
+				<h2 class="subhead__container subhead subhead__block subhead--center ">Strategic Marketing Management</h2>
+				<p class="copy__container copy copy__block">Et ad est cillum do.Cillum ea labore quis do eiusmod nulla consequat duis.</p>
+				<div class="image__container--expertise">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
+				</div>
+
+				<div class="content__container content__container--expertise">
+					<h3 class="list-head list-head__block list-head__background--pattens list-head--expertise-item">Customer Engagement</h3>
+
+					<p class="copy__container copy copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna.</p>
+					<p class="copy__container copy copy__block">Occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p>
+
+
+					<a href="#webdev-expertise" class="button ui-button ui-button__expand ui-button__expand--primary-white expand-button__expertise expand-button--webdev" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
+					<div class="container__accordion--expertise" id="webdev-expertise">
+
+						<h4 class="list-head list-head__item list-head__item--self-left list-head__item--no-top-margin container">C-Level Strategy</h4>
+						<ul class="list list--inset ">
+							<li class="list-item list-item__item list-item--expertise">Mobile/Web responsive functionality</li>
+							<li class="list-item list-item__item list-item--expertise">Custom builds, Wordpress and custom theme development</li>
+							<li class="list-item list-item__item list-item--expertise">Site Design, protyping and build out</li>
+							<li class="list-item list-item__item list-item--expertise">UX, site architecture and supporting graphics</li>
+						</ul>
+					</div>
+
+					<!-- <h5 class="headline headline__item headline__container">Dolore proident non. Deserunt nostrud ad dolore proident non.Deserunt nostrud.</h5> 	
+					<p class="copy copy__container copy__container--center copy__block">Consequat dolore ad dolore proident non.Deserunt nostrud in mollit labore duis deserunt magna occaecat.Reprehenderit nostrud cupidatat proident anim esse adipisicing eu ex nisi irure aute velit esse.</p> -->
+				</div>
+			</div>
+
+
+
+
+
+
 
 
 

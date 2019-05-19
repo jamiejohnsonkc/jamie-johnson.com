@@ -28,7 +28,7 @@ exit; // Exit if accessed directly.
 							<h3 class="deck deck__header">I'm all about creativity and technology, but none of it matters if it doesn't make the cash register ring.</h3>
 
 							<!-- <h5>I'm Way Beyond Words & Pictures</h5> -->
-							<div class="content__item_caption"><p class="copy">I help brands develop the strategic frameworks, assets and direction high performance marketing programs rely on.</p>
+							<div class="content__item_caption"><p class="copy__item">I help brands develop the strategic frameworks, assets and direction high performance marketing programs rely on.</p>
 							<!-- <div class="content__item_img" id="evo2small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="..."></div> -->
 						<div class="intro__list" id="intro__list--management"><h4 class="list-head">My approach to marketing management emphasizes four critical areas:</h4>
 						<ol class="list">

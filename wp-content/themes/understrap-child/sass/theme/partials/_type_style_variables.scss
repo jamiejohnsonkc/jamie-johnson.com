@@ -165,13 +165,7 @@ p {
 
 .title,
 .headline {
-  font-weight: 500;
-  letter-spacing: -.025em;
-}
 
-.subhead,
-.deck {
-  font-weight: 400;
 }
 
 .title-sub,
@@ -313,7 +307,7 @@ p {
   // }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -352,7 +346,7 @@ p {
   @include vr($padding-top: 3, $padding-bottom: 3);
 
   &__container {
-    @extend .container;
+    @include container();
   }
 
   &--fluid {
@@ -369,7 +363,7 @@ p {
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -427,6 +421,10 @@ p {
     &--blue {
       background: $primary;
     }
+    &--black {
+      background: $black;
+    }
+
 
     &--fluidpad {
       width: 100%;
@@ -457,7 +455,7 @@ p {
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -500,7 +498,7 @@ p {
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -530,7 +528,11 @@ p {
   position: relative;
 
   &__container {
-    @extend .container;
+    @include container();
+    &--push-center{
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &--strengths {
       @include mq("tablet", $type: max) {
@@ -597,8 +599,6 @@ p {
     }
   }
 
-
-
   &__fluid {
     width: 100%;
   }
@@ -608,12 +608,8 @@ p {
     width: 100%;
   }
 
-  &--flex {
-    display: flex;
-  }
-
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -656,6 +652,8 @@ p {
   }
 
   &__container {
+  @include container();
+
     &--expertise {
       width: 90%;
       max-width: 90%;
@@ -666,15 +664,22 @@ p {
       display: flex;
       align-items: center;
       flex-direction: column;
+      @include vr($padding: 0 2);
     }
+  &--pad{
+    @include container();
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
+
+}
 
   &--flex {
     display: flex;
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -717,7 +722,7 @@ p {
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -746,6 +751,10 @@ p {
   display: block;
   position: relative;
 
+  &__header{
+    @include vmar-2-2();
+  }
+
   &__fluid {
     width: 100%;
   }
@@ -760,7 +769,7 @@ p {
   }
 
   &--container {
-    @extend .container;
+    @include container();
   }
 
   &--overlay {
@@ -792,7 +801,6 @@ p {
 .pagination {
   display: flex;
   flex: 0 0 auto;
-  margin-top: auto;
   min-height: 0;
 
   @include mq("tablet") {
@@ -916,6 +924,9 @@ p {
 
 .title {
   @include title;
+  font-weight: 600;
+      letter-spacing: -.035em;
+
 
   @include mq("desktop-wide") {
     @include title-lg;
@@ -924,18 +935,30 @@ p {
 
   &__splash {
     flex: 0 0 auto;
+      font-weight: 600;
+          letter-spacing: -.035em;
+
   }
 
   &__header {
     @include header__title();
+      font-weight: 600;
+          letter-spacing: -.035em;
+
   }
 
   &__block {
     @include block__title();
+      font-weight: 600;
+          letter-spacing: -.035em;
+
   }
 
   &__item {
     @include item__title();
+      font-weight: 600;
+          letter-spacing: -.035em;
+
   }
 
   &--center {
@@ -984,7 +1007,8 @@ p {
   // }
   &__header {
     @include header__headline;
-
+    font-weight: 500;
+    letter-spacing: -.025em;
     @include mq("tablet-wide") {}
 
 
@@ -1029,8 +1053,8 @@ p {
 
   &__block {
     @include block__headline;
-
     font-weight: 400;
+    letter-spacing: -.025em;
 
     &--webdev {
       flex: 0 0 auto;
@@ -1058,10 +1082,11 @@ p {
   &__item {
     @include item__headline;
     font-weight: 400;
+    letter-spacing: -.025em;
   }
 
   &__container {
-    @extend .container;
+    @include container();
   }
 
   &--center {
@@ -1115,6 +1140,7 @@ p {
 
     @include mq("desktop") {
       @include header__subhead-lg;
+        font-weight: 400;
     }
 
 
@@ -1134,9 +1160,7 @@ p {
     }
 
 
-    &__item {
-      @include item__subhead;
-    }
+
 
     &--sublist {}
 
@@ -1176,7 +1200,7 @@ p {
 
   &__block {
     @include block__subhead();
-
+    font-weight: 400;
     &--homepage-intro {
       max-width: 68.89%;
       @include vr($margin-top: 3, $margin-bottom: 3);
@@ -1190,6 +1214,22 @@ p {
     }
   }
 
+  &__item {
+    @include item__subhead;
+      font-weight: 400;
+  }
+
+  &__item--vmar-1-1 {
+    @include item__subhead;
+    @include vmar-1-1();
+      font-weight: 400;
+  }
+@include vmar-0-2();
+
+&__container{
+  @include container();
+}
+
   &--offwhite {
     color: $offwhite;
   }
@@ -1198,12 +1238,13 @@ p {
     text-align: center;
     align-self: center;
   }
+  &--vmar-0-2 {
+    @include vmar-0-2();
+  }
 }
 
 .deck {
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: .03em;
+
 
   @include mq("tablet") {
     letter-spacing: .05em;
@@ -1212,7 +1253,9 @@ p {
 
   &__header {
     @include header__deck;
-
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .03em;
     @include mq("tablet") {
       width: 81%;
       max-width: 81%;
@@ -1286,10 +1329,16 @@ p {
 
   &__block {
     @include block__deck;
+    font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .03em;
   }
 
   &__item {
     @include item__deck;
+    font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .03em;
   }
 
   &--center {
@@ -1308,7 +1357,7 @@ p {
   // @include copy();
 
   &__container {
-    @extend .container;
+    @include container();
 
     &--strengths {
       margin-left: 0px;
@@ -1352,6 +1401,10 @@ p {
       }
     }
   }
+
+&__container--83{
+  @include container--83();
+}
 
   &__header {
     @include header__copy;
@@ -1402,23 +1455,6 @@ p {
     }
   }
 
-  &--stats {
-    text-align: justify;
-    width: 61%;
-    color: $white;
-
-    @include mq("tablet") {
-      width: 83%;
-    }
-
-    @include mq("tablet-wide") {
-      width: 50%;
-      text-align: center;
-      align-self: center;
-      @include vr($margin-top: 4);
-    }
-  }
-
   &__block {
     @include block__copy;
 
@@ -1453,14 +1489,6 @@ p {
     }
   }
 
-  &__long {
-    @include vr($line-height: 2.5);
-  }
-
-  &--serif {
-    font-family: $font-family-sans-serif;
-  }
-
   &__item {
     @include item__copy;
 
@@ -1472,9 +1500,13 @@ p {
       margin-top: 0;
     }
   }
-
-
-
+ 
+  &__long {
+    @include vr($line-height: 2.5);
+  }
+  &--serif {
+    font-family: $font-family-sans-serif;
+  }
   &--serif {
     font-family: $font-family-serif;
   }
@@ -1482,10 +1514,38 @@ p {
   &--bold {
     font-weight: 400;
   }
+
+  //todo modularize
+  &--stats {
+    text-align: justify;
+    width: 61%;
+    color: $white;
+
+    @include mq("tablet") {
+      width: 83%;
+    }
+
+    @include mq("tablet-wide") {
+      width: 50%;
+      text-align: center;
+      align-self: center;
+      @include vr($margin-top: 4);
+    }
+  }
+
+
 }
 
 .copy.copy__container {
-  @include vr($margin-top: 0, $margin-bottom: 2);
+  @include vr($margin-top: 2, $margin-bottom: 0);
+
+  &--center {
+    @include vr($margin-left: auto, $margin-right: auto);
+  }
+}
+
+.copy.copy__container--vmar-1-1 {
+  @include vmar-1-1();
 
   &--center {
     @include vr($margin-left: auto, $margin-right: auto);
@@ -1582,6 +1642,11 @@ p {
     padding-left: 0;
   }
 
+  &__no-junk--no-head{
+    list-style: none;
+    padding-left: 0;
+  }
+
   &__vertical {
     display: flex;
     flex: 0 0 auto;
@@ -1598,7 +1663,6 @@ p {
     list-style-position: inside;
     text-indent: -2em;
     padding-left: 2em;
-    width: 81%;
 
     @include push-auto;
     // @include vr($padding-bottom: 2);
@@ -2045,11 +2109,11 @@ p {
 
 }
 
-.body-component {
+.body__component {
   &__expertise {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
   }
 }
 

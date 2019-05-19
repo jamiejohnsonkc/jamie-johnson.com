@@ -17,12 +17,12 @@ exit; // Exit if accessed directly.
 				<span>what i am</span>
 			</div>
 
-<div class="headline"><h2>I'm Available</h2></div>
+<div class="headline__cta"><h2>I'm Available</h2></div>
 
 
 
 
-<!-- <div class="subhead"><h3>Seeking Opportunities To Serve, Earn and Learn as I search for the right long-term engagement.</h3></div> -->
+<!-- <div class="subhead__header"><h3>Seeking Opportunities To Serve, Earn and Learn as I search for the right long-term engagement.</h3></div> -->
 <!-- 		<div class="sub-list2">available for consulting &#x2219; contract &#x2219; freelance</div> -->
 
 

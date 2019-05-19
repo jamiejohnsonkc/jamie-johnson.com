@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="section section__fluid section--services-summary">
+<section class="section section__fluid section--services-summary" id="services-summary">
 	<article class="article container container--flex--column">
 <!-- 	<div class="container__fluid container--flex--column"> -->
 		
@@ -23,11 +23,11 @@ exit; // Exit if accessed directly.
 						<h3 class="deck deck__header--services-summary">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
 						<p class="copy copy__header">Dolore pariatur anim culpa do sunt nulla dolor reprehenderit ullamco nostrud proident do est exercitation enim ullamco sed.</p>
 						<p class="copy copy__header">Occaecat ad qui ut cupidatat elit magna est ea.</p>
-						<a class="copy" href="/">This will be a link</a>
+						<a href="#service-areas" class="button ui-button ui-button__jump ui-button__jump--primary-white" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				<!-- 	</div> -->
 				</div>
 		<!-- 	</div> -->
-				<div class="content content--flex--column content--services-summary">
+				<div class="content content--flex--column content--services-summary" id="service-areas">
 					<div class="item item--service-areas">
 						<h4 class="headline headline__item">Service Areas</h4>
 						<div class="subhead subhead--sublist sublist--services-summary">

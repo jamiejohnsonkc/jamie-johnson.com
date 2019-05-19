@@ -345,15 +345,7 @@
   position: relative;
 }
 
-.list-head--expertise-item {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-top: -1em;
-  height: auto;
-  max-width: 95%;
-  @include vr($margin-bottom: 1, $padding-left: 1, $padding-right: 1);
-}
+
 
 // .list{
 //   display: flex;
@@ -400,7 +392,7 @@
 
 .image__container--expertise {
   @include vr($margin: 4 auto);
-width: 81%;
+  width: 81%;
 }
 
 .image__container--absolute {
@@ -2214,60 +2206,64 @@ p.homepage-summary__claim--fancy {
       align-items: flex-start;
       max-width: 25%;
     }
-    &--home-hybrid{
-    flex: 0 0 83%;
-    max-width: 83%;
-    @include vr($margin-bottom: 2);
-  }
+
+    &--home-hybrid {
+      flex: 0 0 83%;
+      max-width: 83%;
+      @include vr($margin-bottom: 2);
+    }
   }
 
   &__element {
+    
     &--services {
       flex: 0 0 50%;
       max-width: 4em;
       height: 4em;
       display: flex;
-    >svg{
-      width: 4em;
-      height: 4em;
-      display: block;
-    }
+      
+
+      >svg {
+        width: 4em;
+        height: 4em;
+        display: block;
+      }
     }
 
-    &--integrated-marketing{
+    &--integrated-marketing {
       flex: 0 0 25%;
       max-width: 4em;
       height: 4em;
       display: flex;
       align-content: center;
-      @include vr($margin-bottom: 2);
-    
-      >svg{
-      width: 4em;
-      height: 4em;
-      display: block;
-      background: $pattens;
-      fill: darken($pattens, 20%);
-      border-radius: 1em;
-      border: 1px solid darken($pattens, 10%);
+      @include vr($margin-bottom: 1);
+
+      >svg {
+        width: 4em;
+        height: 4em;
+        display: block;
+        background: $black;
+        fill: $white;
+        border: 1px solid lighten($black, 20%);
+      }
     }
-  }
 
     &--services-offset {}
-  
-  &--home-hybrid{
-flex:0 0 8em;
-max-width: 8em;
-height: 8em;
-display: flex;
->svg{
-  width: 8em;
-  height: 8em;
-  display: block;
-}
 
+    &--home-hybrid {
+      flex: 0 0 8em;
+      max-width: 8em;
+      height: 8em;
+      display: flex;
+
+      >svg {
+        width: 8em;
+        height: 8em;
+        display: block;
+      }
+
+    }
   }
-}
 }
 
 .hybrid-icon {
@@ -2276,13 +2272,38 @@ display: flex;
   border: 1px solid $white;
 }
 
-.header--services-summary{
-  @include mq('phone-wide', $type:max){
+.header--services-summary {
+  @include mq('phone-wide', $type:max) {
     letter-spacing: 0;
   }
 }
 
 
-.container__accordion--webdev{
+.container__accordion {
   display: none;
+  @include vr($padding-bottom: 4);
+
+  &--expertise {}
+
+  &--mymo {}
+}
+
+.text--white {
+  color: $white;
+}
+
+.expertise--header{
+  
+}
+
+
+// .ui-button__expand:active {
+//   transform: rotate(90deg);
+//   -webkit-transform: rotate(90deg);
+//   -ms-transform: rotate(90deg);
+
+.rotate{
+  transform: rotate(90deg);
+  transition: all .3s ease-in-out;
+
 }

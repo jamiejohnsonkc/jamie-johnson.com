@@ -4311,3 +4311,19 @@ function topFunction() {
 //     deactivators[j].disabled = true;
 //   }
 // }
+
+// jQuery(document).ready(function($) {
+// $( ".ui-button__expand" ).click(function() {
+//   if (  $( this ).css( "transform" ) == 'none' ){
+//       $(this).css("transform","rotate90deg)");
+//   } else {
+//       $(this).css("transform","" );
+//   }
+// })
+// });
+
+jQuery(document).ready(function($) {
+  $( ".ui-button__expand" ).on("click", function() {
+ $(this).toggleClass("rotate");
+  })
+});

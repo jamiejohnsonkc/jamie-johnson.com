@@ -22,7 +22,7 @@ exit; // Exit if accessed directly.
 				<li>Then the recesision and some major life events put my career on hold</li><li>While away I became a front-end designer/developer</li>
 				<li>Now I want to put my new (and old) skills to use however I can</li></ul>
 			</div>
-			<!-- 	<div class="subhead"><h3>Short Term Gigs Or The Right Long-Term Fit</h3></div> -->
+			<!-- 	<div class="subhead__header"><h3>Short Term Gigs Or The Right Long-Term Fit</h3></div> -->
 <!-- 			After 20 years in corporate and agency environments I'm just as comfortable leading C-Level initiatives as I am coding websites.</div> -->
 		
 			<p>I started in agency account management because I couldn't decide which discipline appealed to me the most. Over a decade of leading client initiatives I developed an expertise in strategic planning and project management while sponging up a blah from some of the best minds in creative, media, research, PR and digital.</p>

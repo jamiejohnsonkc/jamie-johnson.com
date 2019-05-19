@@ -401,7 +401,16 @@ exit; // Exit if accessed directly.
 						src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="..."
 						class="style-svg"></div>
 				<div class="proof__content_text proof__content_text--centricity">
-					<p class="copy__header proof__panel_body-copy copy__header proof__panel_body-copy--centricity">I spent the better part of my career managing professional service teams and the other half working with them. </p>
+					<p class="copy__header proof__panel_body-copy copy__header proof__panel_body-copy--centricity">I spent the better part of my career managing professional service teams and the other half working with them.</p>
+				<div class="list-head">I serve the way I'd expect to be served</div>
+				<ul>
+					<li>I do what I say</li>
+					<li>I say what I mean</li>
+					<li>No surprises*</li>
+					<li>heavy on the communication</li>
+					<li>light on the jargin</li>
+				</ul>
+				<p>Oh. And I prefer phone calls or vidchats to texts and email.</p>
 				</div>
 				<a class="link link__text link__text--primary link__text--selfcenter link__text--center link__text--martop">Review my service offerings</a>
 			</div>

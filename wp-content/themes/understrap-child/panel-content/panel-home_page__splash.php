@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-	<section id="section__homepage">
+	<section id="section__placeholder">
 	<article class="article__wrapper-fluid article__wrapper--fluid homepage bgme">
 	
 <!-- 
@@ -53,3 +53,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="container-hero__img--mobile" id="profile-small"><img src="/wp-content/uploads/2019/01/me-small.jpg" alt="profile pic"></div>
 	
 	</article>
+</section>

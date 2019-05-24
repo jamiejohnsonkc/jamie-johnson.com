@@ -185,6 +185,7 @@ p {
   position: relative;
 }
 
+
 .section {
   // &__headline{
   //  @include headline-sm;
@@ -655,8 +656,8 @@ p {
   @include container();
 
     &--expertise {
-      width: 90%;
-      max-width: 90%;
+      width: 100%;
+      max-width: 100%;
       border: 1px $gray-500 solid;
       border-radius: 1em;
       flex: 0 0 auto;
@@ -802,6 +803,7 @@ p {
   display: flex;
   flex: 0 0 auto;
   min-height: 0;
+  text-transform: lowercase;
 
   @include mq("tablet") {
     margin-bottom: auto;
@@ -1169,7 +1171,7 @@ p {
     }
 
     &--sublist-divider {
-      color: $gray-900;
+      color: $gray-100;
 
       @include vr($padding: 0 0.25);
     }
@@ -1259,6 +1261,10 @@ p {
     @include mq("tablet") {
       width: 81%;
       max-width: 81%;
+    }
+    @include mq('tablet-wide'){
+      width: 50%;
+      max-width: 50%;
     }
 
 
@@ -1537,7 +1543,7 @@ p {
 }
 
 .copy.copy__container {
-  @include vr($margin-top: 2, $margin-bottom: 0);
+  @include vr($margin-top: 1, $margin-bottom: 0);
 
   &--center {
     @include vr($margin-left: auto, $margin-right: auto);
@@ -1645,7 +1651,17 @@ p {
   &__no-junk--no-head{
     list-style: none;
     padding-left: 0;
+    @include vr($margin-top: 1, $margin-bottom: 1);
   }
+
+&__jump{
+  list-style-type: none;
+}
+&__jump--no-head{
+  list-style-type: none;
+  padding-left: 0;
+  @include vr($margin-top: 1, $margin-bottom: 1);
+}
 
   &__vertical {
     display: flex;
@@ -1672,15 +1688,15 @@ p {
     list-style: none;
   }
 
-  &--big-digits {
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    justify-content: center;
+  // &--big-digits {
+  //   padding-left: 0;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   max-width: 100%;
+  //   justify-content: center;
 
-    @include vr($margin-top: .25, $margin-bottom: 4);
-  }
+  //   @include vr($margin-top: .25, $margin-bottom: 4);
+  // }
 
   &--strengths {
     @include mq("phone-wide", $type: max) {
@@ -1736,7 +1752,6 @@ p {
   // margin-left: -1em;
   &__header {
     @include header__list-item;
-
     font-weight: 200;
   }
 
@@ -1744,13 +1759,33 @@ p {
     @include block__list-item;
   }
 
-  &--intro {
-    color: $offwhite;
-    font-weight: 200;
-    margin-left: -1em;
-    text-indent: -1.25em;
+  &__block--jump {
+    @include block__list-item;
+    // text-indent: -2em;
+    // margin-left: 2em;
     padding-left: 1em;
+    display: flex;
+    flex: 0 0 auto;
+    max-width: 90%;
+      >.ui-button__mini-jump--wp{
+         display: flex;
+         align-items: center;
+         flex: 0 0 auto;
+         max-width: 3em; 
+      }   
   }
+    
+  
+
+  // &--intro {
+  //   color: $offwhite;
+  //   font-weight: 200;
+  //   margin-left: -1em;
+  //   flex: 0 1 80%;
+  //   max-width: 86%;
+  //   // text-indent: -1.25em;
+  //   // padding-left: 1em;
+  // }
 
   &__item {
     @include item__list-item;
@@ -1807,7 +1842,8 @@ p {
     font-family: $font-family-serif;
     color: $primary;
     @include vr($font-size: 8, $line-height: 3);
-
+max-width: 12%;
+display: flex;
     @include mq("tablet") {
       @include vr($font-size: 9, $line-height: 3);
     }
@@ -2117,6 +2153,9 @@ p {
   }
 }
 
+.visual-title{
+  @include visual-title();
+}
 
 // .diagram__objectives{
 // .diagram__content--objectives-icon{order: 1;}

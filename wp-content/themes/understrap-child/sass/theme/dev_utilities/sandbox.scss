@@ -1,59 +1,63 @@
-#canvas{
-	margin-top: 10em;
-}
+// #canvas{
+// 	margin-top: 10em;
+// }
 
-.sandbox1 {@extend %title-lg;}
-.sandbox2 {@extend %headline-lg;}
-.sandbox3 {@extend %subhead-lg;}
-.sandbox4 {@extend %sublist-lg;}
-.sandbox5 {@extend %display-text-lg;}
-.sandbox6 {@extend %list-head-lg;}
-.sandbox7 {@extend %list-item-lg;}
-.sandbox8 {@extend %body-text-lg;}
-.sandbox8a{@extend %para-head-lg;}
-.sandbox9 {@extend %para-lg;}
-.sandbox10{@extend %caption-lg;}
-.sandbox11{@extend %legal-lg;}
-.sandbox12{@extend %title;}
-.sandbox13{@extend %headline;}
-.sandbox14{@extend %subhead;}
-.sandbox15{@extend %sublist;}
-.sandbox16{@extend %display-text;}
-.sandbox17{@extend %list-head;}
-.sandbox18{@extend %list-item;}
-.sandbox19{@extend %body-text;}
-.sandbox19a{@extend %para-head;}
-.sandbox20{@extend %para;}
-.sandbox21{@extend %caption;}
-.sandbox22{@extend %legal;}
-.sandbox23{@extend %title-sm;}
-.sandbox24{@extend %headline-sm;}
-.sandbox25{@extend %subhead-sm;}
-.sandbox26{@extend %sublist-sm;}
-.sandbox27{@extend %display-text-sm;}
-.sandbox28{@extend %list-head-sm;}
-.sandbox29{@extend %list-item-sm;}
-.sandbox30{@extend %body-text-sm;}
-.sandbox31{@extend %para-sm;}
-.sandbox32{@extend %caption-sm;}
-.sandbox33{@extend %legal-sm;}
+// .sandbox1 {@extend %title-lg;}
+// .sandbox2 {@extend %headline-lg;}
+// .sandbox3 {@extend %subhead-lg;}
+// .sandbox4 {@extend %sublist-lg;}
+// .sandbox5 {@extend %display-text-lg;}
+// .sandbox6 {@extend %list-head-lg;}
+// .sandbox7 {@extend %list-item-lg;}
+// .sandbox8 {@extend %body-text-lg;}
+// .sandbox8a{@extend %para-head-lg;}
+// .sandbox9 {@extend %para-lg;}
+// .sandbox10{@extend %caption-lg;}
+// .sandbox11{@extend %legal-lg;}
+// .sandbox12{@extend %title;}
+// .sandbox13{@extend %headline;}
+// .sandbox14{@extend %subhead;}
+// .sandbox15{@extend %sublist;}
+// .sandbox16{@extend %display-text;}
+// .sandbox17{@extend %list-head;}
+// .sandbox18{@extend %list-item;}
+// .sandbox19{@extend %body-text;}
+// .sandbox19a{@extend %para-head;}
+// .sandbox20{@extend %para;}
+// .sandbox21{@extend %caption;}
+// .sandbox22{@extend %legal;}
+// .sandbox23{@extend %title-sm;}
+// .sandbox24{@extend %headline-sm;}
+// .sandbox25{@extend %subhead-sm;}
+// .sandbox26{@extend %sublist-sm;}
+// .sandbox27{@extend %display-text-sm;}
+// .sandbox28{@extend %list-head-sm;}
+// .sandbox29{@extend %list-item-sm;}
+// .sandbox30{@extend %body-text-sm;}
+// .sandbox31{@extend %para-sm;}
+// .sandbox32{@extend %caption-sm;}
+// .sandbox33{@extend %legal-sm;}
 
-.sandbox__list{
-}
-.sandbox__list-item{}
-.sandbox__image{@include vr($padding: 1);}
-.sandbox__image--big{}
+// .sandbox__list{
+// }
+// .sandbox__list-item{}
+// .sandbox__image{@include vr($padding: 1);}
+// .sandbox__image--big{}
 
 
 
-#test-parent {
-  margin-top: 20em;
-  width: 500px;
-  height: 400px;
-  word-wrap: break-word;
-  background: blue;
-}
+// #test-parent {
+//   margin-top: 20em;
+//   width: 500px;
+//   height: 400px;
+//   word-wrap: break-word;
+//   background: blue;
+// }
 
-.moretext {
-  display: none;
+// .moretext {
+//   display: none;
+// }
+
+.homepage{
+// @include spectrum();
 }

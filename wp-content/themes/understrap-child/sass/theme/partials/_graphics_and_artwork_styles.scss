@@ -141,11 +141,12 @@ min-height: 32em;
       -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   margin-left: auto;
+  z-index: 4;
 @include mq('tablet-wide') {
-    width: 98%;
-    max-width: 98%;
-    right: -1em;
-    bottom: 1em;
+    width: 83%;
+    max-width: 83%;
+    right: -0em;
+    bottom: 1.25em;
 }
 }
 //--reminder--image is flipped so everything is backwards

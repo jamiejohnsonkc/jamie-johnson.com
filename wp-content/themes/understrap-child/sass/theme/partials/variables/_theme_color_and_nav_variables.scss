@@ -1,23 +1,3 @@
-// $new-primary: #68ABD8;
-// $new-secondary: #111111; 
-// $new-palette1: #636ce5;
-// $new-palette1: #6794ef;
-// $new-palette1: #67dcef;
-// $new-palette1: #63e5d3;
-
-
-$new-primary: #2CC0F2;
-$new-secondary:#76D4F4; 
-$new-palette1: #25A1CB;
-$new-palette2: #2397bf;
-$new-palette3: #376473;
-$new-palette4: #ade5f8;
-$new-palette5: #c8eefb;
-$new-palette6: #e4f6fd;
-
-
-
-
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -28,7 +8,9 @@ $gray-600: #6c757d !default;
 $gray-700: rgba(73, 80, 87, .8) !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #071013 !default;
+
+ 
 
 $grays: () !default;
 $grays: map-merge((
@@ -70,28 +52,28 @@ $slate-tints: map-merge((
 ), $slate-tints);
 
 
-$slate-shades: () !default;
-$slate-shade-100: #6b7a89;
-$slate-shade-200: #5f6c7a;
-$slate-shade-300: #535f6b;
-$slate-shade-400: #47515b;
-$slate-shade-500: #3b444c;
-$slate-shade-600: #2f363d;
-$slate-shade-700: #23282d;
-$slate-shade-800: #171b1e;
-$slate-shade-900: #0b0d0f;
+// $slate-shades: () !default;
+// $slate-shade-100: #6b7a89;
+// $slate-shade-200: #5f6c7a;
+// $slate-shade-300: #535f6b;
+// $slate-shade-400: #47515b;
+// $slate-shade-500: #3b444c;
+// $slate-shade-600: #2f363d;
+// $slate-shade-700: #23282d;
+// $slate-shade-800: #171b1e;
+// $slate-shade-900: #0b0d0f;
 
-$slate-shades: () !default;
-$slate-shades: map-merge((
-  "100": $slate-shade-100,
-  "200": $slate-shade-200,
-  "300": $slate-shade-300,
-  "400": $slate-shade-400,
-  "500": $slate-shade-500, "600": $slate-shade-600,
-  "700": $slate-shade-700,
-  "800": $slate-shade-800,
-  "900": $slate-shade-900
-), $slate-shades);
+// $slate-shades: () !default;
+// $slate-shades: map-merge((
+//   "100": $slate-shade-100,
+//   "200": $slate-shade-200,
+//   "300": $slate-shade-300,
+//   "400": $slate-shade-400,
+//   "500": $slate-shade-500, "600": $slate-shade-600,
+//   "700": $slate-shade-700,
+//   "800": $slate-shade-800,
+//   "900": $slate-shade-900
+// ), $slate-shades);
 
 
 
@@ -127,10 +109,12 @@ $ghostwhite:                        #F8F8FF;
 $pattens:                           #DAEAF7;            
 
 
-$bluea-background-color:            rgba(51, 51, 68, .8);
+$bluea-background-color:             rgba(51, 51, 68, .8);
 $bluea-background-color2:            rgba(94, 94, 94, .3);
-$dark-bg-trans:                     rgba(17, 17, 17, .7);                      
-                                 
+$dark-bg-trans:                      rgba(17, 17, 17, .7);                      
+$dkgray-bg-trans:                    rgba(34, 33, 33, 0.3);
+
+
 $colors: () !default;
 $colors: map-merge((
   "slate":                          $slate,
@@ -152,15 +136,18 @@ $colors: map-merge((
 
 
 
-$primary:                           $new-primary;
-$secondary:                         $new-secondary;
-$accent:                            darken($new-primary, 20%);
+$primary:                           #6ccff6;   
+$secondary:                         $pattens;
+$accent:                            darken($primary, 20%);
 $title-color:					              inherit;
 $headline-color:				            inherit;
 $subhead-color:					            inherit;
 $display-text-color:			          inherit;
 $body-text-color:                   inherit;
 $para-color: 					              inherit;
+
+//*rgba
+
 
 $link-color:                        $primary;
 $link-decoration:                   $orange;
@@ -192,8 +179,11 @@ $body-bg:						                $white;
 
 $link-color:                        $primary;
 $link-decoration:                   none;
-$link-hover-color:                  darken($new-primary, 15%);
+$link-hover-color:                  darken($primary, 15%);
 $link-hover-decoration:             underline;
+
+
+
 
 //
 // Paragraphs
@@ -373,7 +363,3 @@ $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 
-@mixin black-gradient{
-background-color: #000000;
-background-image: linear-gradient(315deg, #000000 0%, #414141 85%);
-}

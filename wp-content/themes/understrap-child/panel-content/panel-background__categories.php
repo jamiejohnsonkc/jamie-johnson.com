@@ -8,20 +8,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article article__wrapper content__wrapper categories">
-	<div class="article article__container article__container--categories">
-		<div class="header header__container header__container--categories">
-			<h1 class="pagination background__pagination background__pagination--categories">category experience</h1>
-			<h2 class="headline header__headline header__headline--categories">Incomparible Breadth</h2>
-			<h3 class="deck header__deck header__deck--categories">Voluptate fugiat mollit amet dolore excepteur.</h3>
+<section class="section categories__section">
+<article class="article__wrapper categories categories__article-wrapper">
+	<div class="article__container article__container--categories categories__article-container">
+		<div class="header header__container header__container--categories categories__header">
+			<h1 class="pagination background__pagination background__pagination--categories categories__pagination">category experience</h1>
+			<h2 class="headline headline__header header__headline--categories categories__section-headline">Incomparible Breadth</h2>
+			<h3 class="deck deck__header header__deck--categories categories__section-deck">Voluptate fugiat mollit amet dolore excepteur.</h3>
 </div>
-			<div class="content1 content1__background content1__background--categories copy__container--categories">
+			<div class="copy copy__container categories__copy-container">
 
 				<p class="copy copy__header">Aliqua incididunt ea deserunt aute exercitation ut incididunt consectetur ut ad pariatur laboris ut fugiat nisi eu esse in sit et in.</p>
 				<p class="copy copy__header">Qui officia dolor mollit excepteur reprehenderit id velit cillum nostrud consectetur nulla minim.</p>
-				<p class="copy copy__header">Sunt eiusmod laborum proident.</p>
+				<p class="copy copy__header">Sunt eiusmod laborum proident reprehend id velit cillum nostrud.</p>
 			</div>
-			<div class="content2 content2__background background__text content2__background--categories">
+			<div class="visual-title categories__visual-title">I have extensive experience in the following areas (click on each image for more information)</div>
+			<div class="content2 content2__background background__text content2__background--categories categories__content--grid">
 				<div class="background__categories_content background__categories_content--industrial">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
 					<div class="categories__content_caption">
@@ -163,9 +165,8 @@ exit; // Exit if accessed directly.
 			</div>
 	
 	</div>
-	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img class="categories__content_image style-svg chev--dwn" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..."/>
-	</a>
-</article>
+	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-categories--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
+</article>
+</section>
 

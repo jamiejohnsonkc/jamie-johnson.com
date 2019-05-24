@@ -3005,11 +3005,16 @@ left: 15%;
 }
 
 .carousel-control-next-icon {
-  @include vr($margin-left: auto, $margin-right: 1);
+  margin-left: auto;
+@include mq('phone'){  
+ @include vr($margin-left: auto, $margin-right: .5);
 }
-
+}
 .carousel-control-prev-icon {
-  @include vr($margin-left: 1, $margin-right: auto);
+margin-right: auto;
+  @include mq('phone'){   
+ @include vr($margin-left: .5, $margin-right: auto);
+}
 }
 
 .stats-caption {
@@ -3242,7 +3247,9 @@ left: 15%;
 
 .container.container--splash-background {
   @include mq("phablet") {
-    width: 61.8%;
+    width: 83%;
+    max-width: 83%;
+    padding-left: 7%;
   }
 }
 

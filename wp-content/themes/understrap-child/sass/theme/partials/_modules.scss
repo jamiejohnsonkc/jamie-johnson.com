@@ -261,7 +261,7 @@ button {
   @include vr($margin-top:2);
 }
 
-
+            
 
 
 
@@ -275,8 +275,9 @@ button {
     font-weight: 400;
     // text-transform: uppercase;
     font-variant-caps: all-small-caps;
-    padding-left: 1em;
-    text-indent: -.5em;
+    // padding-left: 1em;
+    // text-indent: -.5em;
+    letter-spacing: .05em;
 
     &--serif {
       font-family: font-family-serif;
@@ -378,6 +379,43 @@ button {
     }
   }
 
+  &__mini-jump--pw{
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //chev-dwn 
+      background: $primary;
+        stroke: $white;
+    }
+
+  &__mini-jump--wp{
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    min-height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      background: $white;
+      border: 1px solid $primary;
+      display: inline-flex;
+      @include vr($margin-right: 1);
+      > .button-image__chev--right path{
+        stroke-width: .5em;
+        stroke: $primary;
+      }
+      >.button-image__chev{
+        height: .5em;
+        width: .5em;
+      }
+      
+    }
+  
+
   &__expand {
     //chev-right
     @include vr($margin:2 0 2 0);
@@ -439,8 +477,7 @@ button {
 .expand-button {
   &__expertise {
     align-self: flex-start;
-    margin-left: 8%;
-    //       @include vr($margin-top: 2);
+       margin-left: -3.25%;
   }
 
   &--webdev {}
@@ -459,7 +496,6 @@ button {
   height: 1.5em;
   display: block;
   @include push-auto();
-
 }
 
 a.link {
@@ -649,6 +685,8 @@ a.link.services__services-to-capabilities_link {
   Color: $primary;
 }
 
+
+
 //* SCROLL-TOP STYLES //
 .scroll-top {
   position: fixed;
@@ -708,7 +746,7 @@ a.link.services__services-to-capabilities_link {
 
     &::after {
       top: 25%;
-      height: .25em;
+      height: .5em;
       background: $primary;
     }
   }
@@ -721,7 +759,10 @@ a.link.services__services-to-capabilities_link {
     &::after {
       top: 50%;
       height: .25em;
+      border-radiius: .25em;
       background: $primary;
     }
   }
 }
+
+

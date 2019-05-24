@@ -9,9 +9,9 @@ exit; // Exit if accessed directly.
 }
 ?>
 	
+ 
 
-
-<article class="article__wrapper article__wrapper--overlap homepage-claim__wrapper">
+<article class="article__wrapper homepage-claim__wrapper">
 	<!-- <div class="homepage-claim__hackfix homepage-claim__hackfix--upper"></div> -->
 	<div class="homepage-claim__background-image--container">
 		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">

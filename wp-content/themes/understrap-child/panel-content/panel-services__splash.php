@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a> -->
 
-		<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+		<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__services-splash--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 
 		</div>

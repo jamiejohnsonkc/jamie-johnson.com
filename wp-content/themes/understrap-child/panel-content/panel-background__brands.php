@@ -8,17 +8,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<article class="article article__wrapper content__wrapper brands">
-	<div class="article article__container article__container--brands">
-		<div class="header header__container header__container--brands">
-			<h1 class="pagination background__pagination background__pagination--brands">brand history</h1>
-		<h2 class="headline header__headline">Exceptional Breadth</h2>
-		<h3 class="deck header__deck header__deck--brands">I've worked with global leaders, household names and also rans.</h3>
-		<p class="copy copy__header">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<section class="section brands__section">
+<article class="article article__wrapper brands__article-wrapper">
+	<div class="article article__container article__container--brands brands__article-container">
+		<div class="header header__container header__container--brands brands__section-header">
+			<h1 class="pagination background__pagination background__pagination--brands brands__pagination">brand history</h1>
+		<h2 class="headline headline__header brands__headline">Exceptional Breadth</h2>
+		<h3 class="deck deck__header deck__header--brands brands__deck-header">I've worked with global leaders, household names and non-starters.</h3>
+		<!-- <p class="copy copy__container copy__header brands__copy-header">B2B</p> -->
 		</div>
 
-		<div class="wrapper wrapper__grid--brands">
-		<div class="flexbox-grid flexbox-grid__container--brands container--brands-history background__brands_content">
+		<div class="wrapper wrapper__grid--brands brands__grid-wrapper">
+		<div class="flexbox-grid flexbox-grid__container--brands container--brands-history background__brands_content brands__grid-container">
+		<div class="flexbox-grid__cell--image flexbox-grid__first-cell"><p class="copy copy__container copy__header brands__copy-header">Every one of them taught me something about marketing, the nature of business and how to get the most (and in some cases the least) from every marketing dollar.</p></div>
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />
@@ -53,12 +55,14 @@ exit; // Exit if accessed directly.
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
+			<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text">Exercitation sunt adipisicing reprehendert</a></div>
+		
 		</div>
 		</div>
 	</div>
-	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
-		</a>
+	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-brands--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 </div>
 
 </article>
+</section>

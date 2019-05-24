@@ -1,12 +1,14 @@
 
-@import "theme/partials/3rd_party/fontface_import"; 
-@import "node_modules/mathsass/dist/math";
+@import "theme/partials/3rd_party/_fontface_import"; 
+@import "node_modules/mathsass/dist/_math";
 @import "node_modules/vertical-rhythm-reset/dist/vertical-rhythm-reset";
 
 @import "theme/partials/mixins/bootstrap_mixins_override";
-@import "theme/partials/variables/theme_font_variables";
+@import "theme/partials/variables/_theme_font_variables";
 // @import "theme/partials/navigation/navigation_import";
-@import "theme/partials/variables/theme_color_and_nav_variables";
+@import "theme/partials/variables/_style_assets";
+@import "theme/partials/variables/_theme_color_and_nav_variables";
+
  // @import "theme/partials/variables/bootstrap_customized_variables"; 
 
 /* @import "theme/partials/variables/navbar_variables"; */
@@ -44,6 +46,9 @@
 @import "theme/partials/responsive_styles";
 @import "theme/partials/modules";
 @import "theme/partials/modules_styles";
+@import "theme/partials/homepage_styles";
+@import "theme/partials/background_styles";
+@import "theme/partials/services_styles";
 @import "theme/partials/style_tweaks";
 
 @import "theme/partials/display_state_styles";
@@ -53,7 +58,7 @@
  @import "theme/dev_utilities/sandbox";
  // @import "theme/atomicmouse";   
 
-
+//  @import "theme/dev_utilities/palette";
 
 
 @import "theme/partials/contact_article_layout_template";

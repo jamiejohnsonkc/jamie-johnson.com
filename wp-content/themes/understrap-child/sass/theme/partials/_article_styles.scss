@@ -645,6 +645,7 @@ ul.strengths__list_container {
   h2 {
     align-text: center;
     @include push-auto;
+    @include vmar-2-2;
   }
 
   h3 {
@@ -1169,6 +1170,7 @@ font-family: $font-family-serif;
 // services summary
 // ==========================================================================
 .pagination--services-splash{
+  margin-top: auto;
   @include mq('tablet-wide'){
     color: $white;
   }

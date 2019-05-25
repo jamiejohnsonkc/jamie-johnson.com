@@ -1,9 +1,14 @@
-//  .section__placeholder{
-//    overflow: hidden;
-//    position: relative;
-//    display: block;
-//  }
-.article--homepage-placeholder {
+
+
+
+/*=============================================
+=            //*home pag article styles      =
+=============================================*/
+
+
+
+
+.article__homepage-placeholder {
   position: relative;
   background: $black;
   color: $white;
@@ -99,14 +104,17 @@
   flex-direction: row;
   min-height: 48em;
   height: 48em;
-
-  @include mq('tablet') {
-    min-height: 50em;
-    height: 50em;
-  }
+  position: relative;
 
   @include mq('phone') {
     min-height: 63em;
+  }
+
+  @include mq('tablet') {
+    min-height: 90em;
+    height: 90em;
+    width: 100%;
+    max-width: 100%;
   }
 
   @include mq('desktop') {
@@ -146,8 +154,16 @@
   }
 
   @include mq('tablet') {
-    margin-top: -18em;
-    min-height: 140em;
+    margin-top: 0em;
+    min-height: 100em;
+    height: 100em;
+    width: 100%;
+    max-width: 100%;
+    >svg#Layer_1 {
+      min-height: 100em;
+      height: 100em;
+      margin-top: -10em;
+    }
   }
 }
 
@@ -172,8 +188,10 @@
   }
 
   @include mq('tablet') {
-    min-height: 115em;
-    margin-bottom: -10em;
+    min-height: 100em;
+    height: 100em;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   @include mq('tablet-wide') {
@@ -194,19 +212,39 @@
   }
 }
 
+.claim__pagination {
+  top: -15%;
+  left: 49%;
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+
+@include mq('tablet'){
+  top: 15%;
+  // display: flex;
+  //   flex: 0 0 0;
+  //   position: relative;
+  //   top: unset;
+  //   left: unset;
+  //   transform: unset;
+  //   right: .25em;
+
+}
+}
+
 .claim__content-container {
   min-height: 100%;
+@include mq('tablet'){
+position: relative;
+width: 100%;
+max-width: 100%;
 
+}
   @include mq('tablet-wide') {
     max-width: 100%;
     width: 100%;
   }
-
-  @include mq('desktop') {}
-}
-
-.claim__pagination {
-  top: -15%;
 
   @include mq('desktop') {
     display: flex;
@@ -242,6 +280,7 @@
   @include mq('tablet') {
     width: 44%;
     max-width: 44%;
+    margin: 0;
 
   }
 
@@ -301,10 +340,10 @@
 
 
 .claim__link--jump {
-  display: none;
+  display: flex;
   position: absolute;
-  transform: unset;
-  left: unset;
+  transform: translateY(50%);
+  left: 50%;
   bottom: 0;
   z-index: 3;
 }
@@ -322,7 +361,7 @@
   @include vr($padding-bottom: 6);
 
   @include mq('tablet') {
-    min-height: 125vh;
+    min-height: 125em;
   }
 
   @include mq('desktop') {
@@ -332,7 +371,7 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    min-height: 83vh;
+    // min-height: 83vh;
   }
 }
 
@@ -393,8 +432,9 @@
 
 .hybrid__header-container {
   @include mq('tablet') {
-    flex: 0 0 61%;
+    // flex: 0 0 61%;
     max-width: 61%;
+    flex: 0 1 auto;
     text-align: center;
   }
 
@@ -420,16 +460,27 @@
 }
 
 .hybrid__deck--header {
+  display: flex;
+min-height: 0;
+  flex: 0 1 auto;
+
+  @include mq('tablet'){
+    min-height: 2em;
+  }
   @include mq('desktop') {
     max-width: 61%;
   }
 }
 
 .hybrid__graphic-container {
+  min-height: 8em;
+  flex: 0 1 auto;
+  display: flex;
   @include mq('tablet') {
     width: 100%;
     max-width: 100%;
     @include vr($margin: 2 0 3 0);
+
   }
 
   @include mq('desktop') {}
@@ -497,6 +548,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: $gray-800;
   @include vr($padding-bottom: 6);
 
   @include mq('tablet') {
@@ -510,8 +562,11 @@
 }
 
 .pagination.stats__pagination {
-  align-self: flex-start;
-
+  align-self: center;
+  flex: 0 0 auto;
+  display: flex;
+  max-width: 8em;
+  color: $gray-800;
   @include mq('tablet') {
     @include vr($margin-top: 8);
 
@@ -522,10 +577,14 @@
 
 .stats__title {
   padding-left: 0;
+  flex: 0 1 auto;
+  max-width: 100%;
+  display: flex;
+
 
   @include mq('tablet') {
-    width: 61%;
-    max-width: 61%;
+    // width: 61%;
+    // max-width: 61%;
     padding-left: 0;
   }
 
@@ -533,14 +592,16 @@
 }
 
 .stats__header-container {
-  background: rgba(42.4%, 81.2%, 96.5%, .8);
+  // background: rgba(42.4%, 81.2%, 96.5%, .8);
   @include vr($margin-bottom: 2);
   padding: 0;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 0 0 90%;
+  align-items: center;
+  flex: 0 1 90%;
+  min-height: 20em;
 
   // position: relative;
   // z-index: 2;
@@ -551,12 +612,16 @@
 
   @include mq('tablet') {
     width: 83%;
+@include vr($margin-bottom: 4);
   }
 
 }
 
 .stats__deck-header {
   color: $white;
+  flex: 0 1 auto;
+  display: flex;
+  text-align: center;
 
   @include mq('desktop') {}
 }
@@ -565,7 +630,9 @@
   position: relative;
   width: 90%;
   max-width: 90%;
-
+flex: 0 1 auto;
+min-height: 48em;
+background: $gray-800;
   // margin-top: -7em;
   @include mq('phone') {
     width: 100%;
@@ -584,11 +651,14 @@
   padding: 0;
   width: 83%;
   max-width: 83%;
-
+  border-color: lighten($gray-800, $amount: 5%);
+  justify-content: center;
+  
   @include mq('phone') {}
 
   @include mq('tablet') {
     width: 83%;
+    min-height: 68em;
   }
 }
 
@@ -677,6 +747,7 @@
 .mo__psst {
   font-family: $font-family-serif;
   font-style: italic;
+ @include vr($font-size: 1.75, $margin-bottom: 1);
   @include vr($margin-bottom: 1);
 }
 
@@ -693,15 +764,16 @@
 }
 
 .mo__diagram-container {
-  width: 90%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 100%;
   flex-direction: column;
   display: flex;
   position: relative;
   // align-content: center;
-  min-height: 60em;
+  min-height:109em;
   flex: 0 1 auto;
- @include black-gradient();
+  // background: green;
+  justify-content: space-between;
   @include vr($margin: 2 auto);
     @include mq('phone') {
       width: 100%;
@@ -712,44 +784,133 @@
 
   @include mq('tablet') {
     max-width: 100%;
+    min-height: 80em;
+    align-items: center;
   }
 }
 
 .mo__diagram-box{
 display: flex;
-position: relative;
+// position: relative;
 flex-direction: column;
+flex-wrap:wrap;
 justify-content: center;
 align-items: center;
 width: 100%;
 flex: 0 1 auto;
 max-width: 100%;
-min-height: 18em;
-height: 18em;
+min-height: 24em;
+@include vr($height: 24);
+// background: red;
+// border: darkred 2px solid;
+// flex-wrap: wrap;
+@include mq('tablet'){
+  // flex-direction: row;
+  // // flex-wrap: wrap;
+  // align-items: flex-start;
+  // justify-content: flex-start;
+  min-width: 48em;
+  min-height: 24em;
+  height: 25em;
+
+}
 }
 
-.mo__diagram-copy {
-  position: absolute;
-  letter-spacing: .075rem;
-  align-items: center;
-  color: $offwhite;
-  font-weight: 200;
-  flex: 0 1 0;
+.mo__head--flex-wrap{
+  @include mq('tablet'){
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+  }
+}
+
+.mo__circle-digit{
+  display: flex;
+@include vr($width: 4);
 max-width: 100%;
-z-index: 3;
-display: flex;
-text-align: center;
-// height: 3em;
-min-height: 3rem;
-  @include vr($font-size: 3);
+  flex: 0 0 auto;
+ path{
+  fill: $white;
+}
+@include mq('tablet'){
+  @include vr($width: 4);
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+}
+
+
+.mo__diagram-big-digit {
+  
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  color: $gray-800;
+  font-family: $font-family-serif;
+flex: 0 1 auto;
+align-items: center;
+// width: 9rem;
+font-size: 10em;// @include vr($font-size: 9);
+@include vr($margin-bottom: 1, $height: 7);
+
+  // height: 18em;
+ 
 
   @include mq("tablet") {
-        // @include vr($font-size: 6, $line-height: 3);
-      }
+   margin-bottom: unset;
+    max-width: 11rem;
+min-height: 10rem;
+height: 10rem;
+font-size: 20em;// @include vr($font-size: 9);
+// background: purple;
+flex: 1 0 20%;
+  }
+
+  @include mq("tablet-wide") {
+    // @include vr($font-size: 10, $line-height: 4);
+  }
+}
+
+// .circle-digit__icon{
+//   min-height: 30rem;
+//   display: flex;
+//   flex: 0 1 auto;
+
+// }
+
+
+.mo__diagram-head {
+  // position: absolute;
+  // flex: 0 1 auto;
+  letter-spacing: .2rem;
+  // align-items: center;
+  text-transform: uppercase;
+  color: $offwhite;
+  font-weight: 200;
+  align-self: center;
+  // background: blue;
+
+// max-width: 100%;
+
+display: flex;
+flex: 0 1 auto;
+text-align: center;
+// height: 3em;
+@include vr($font-size: 2, $margin-bottom: 1);
+
 
   @include mq('tablet') {
-    // width: 100%;
-    // max-width: 100%;
+    flex: 1 0 80%;
+    min-height: 10rem;
+    max-width: 100%;
+   align-items: center;
+
+@include vr($font-size: 3, $margin-bottom: 0);
+    text-align: center;
+
   }
 
   @include mq("tablet-wide") {
@@ -760,34 +921,18 @@ min-height: 3rem;
   }
 }
 
-.mo__diagram-big-digit {
-  // @include vr($margin-right: 1);
-  // @include vr($margin-top: .25, $margin-bottom: 4);
-  // @include vr($padding-right: 1);
-  @include vr($font-size: 7);
-  padding-left: 0;
-  padding-right: 0;
+.mo__diagram-copy{
+@include vr($font-size: 2);
+font-weight: 200;
+max-width: 90%;
+@include mq('tablet'){
+  align-self: unset;
+  max-width: 83%;
+  min-height: 3em;
+  // background: yellow;
+  flex: 0 1 auto;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-  width: 100%;
-  font-weight: 400;
-  justify-content: center;
-  color: $primary;
-  font-family: $font-family-serif;
-  min-height: 18rem;
-  flex: 1;
-
-  // height: 18em;
- 
-
-  @include mq("tablet") {
-    @include vr($font-size: 9);
-  }
-
-  @include mq("tablet-wide") {
-    @include vr($font-size: 10, $line-height: 4);
-  }
+}
 }
 
 .mo__expand-button{
@@ -805,3 +950,116 @@ min-height: 3rem;
     align-self: center;
   }
 }
+
+
+
+
+
+.proof__article{
+@include vr($padding: 5 0 5 0);
+}
+
+
+
+.proof__headline-header{
+  @include mq('tablet'){
+    max-width: 58%;
+    @include vr($margin: 6 auto 2 auto);
+  }
+}
+
+.proof__deck-header{
+  max-width: 50%;
+}
+
+.proof__article--end2end{
+  background: #000;
+}
+
+.bell__image-container{
+display: flex;
+min-height:10em;
+  height: 8em;
+  flex: 0 1 auto;
+  > svg#Layer_1{
+    height: 12em;
+  }
+@include mq('tablet'){
+min-height: 12em;
+}
+@include mq('tablet-wide'){
+  height: 12em;
+}
+}
+
+
+/*=============================================
+=//*homepage multi-article flexbox settings  =
+=============================================*/
+
+
+.section__placeholder{
+  @include mq('desktop'){
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+   }
+  
+   .article__homepage-placeholder, .claim__article-wrapper, .stats__article-wrapper, .mo__section{
+     @include mq('desktop'){
+       flex: 0 1 auto;
+       width: 50%;
+       max-width: 50%;
+       display: flex;
+       height: 100vh;
+     }
+   }
+  
+   .proof__section{
+    @include mq('desktop'){
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      flex-wrap: wrap;
+      flex:0 1 auto;
+    }
+     }
+
+     .article__wrapper.proof__article--header{
+    display: flex;
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 100%; 
+    height: 25vh;
+    }
+
+    .proof__article{
+      @include mq('desktop'){
+        flex: 0 1 auto;
+        width: 33%;
+        max-width: 33%;
+        display: flex;
+        height: 100vh;
+        position: relative;
+      }
+     }
+
+
+   
+   //*----------  home page article reorder for larger formats   ----------*/
+   @include mq('desktop'){
+  // .article__homepage-placeholder{order: 1;}
+  // .claim__article-wrapper       {order: 2;}
+  // .hybrid__article-wrapper      {order: 3;}
+  // .stats__article-wrapper       {order: 4;}
+  // .mo__article-wrapper          {order: 5;}
+  // .proof__section               {order: 6;}
+   }
+   
+

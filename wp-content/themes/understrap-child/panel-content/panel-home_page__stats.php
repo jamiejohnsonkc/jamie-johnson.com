@@ -8,8 +8,8 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper article__wrapper--blue article__wrapper--fluid stats__article-wrapper">
-	<h1 class="pagination pagination--revprimary pagination--homepage pagination--combination stats__pagination">My Background</h1>
+<article class="article__wrapper article__wrapper--fluid stats__article-wrapper">
+	<h1 class="pagination pagination--revprimary pagination--homepage stats__pagination">My Background</h1>
 	
 	
 	<div class="header__container stats__header-container">

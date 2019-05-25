@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="overflow-hidden">
-<article class="article__wrapper article--homepage-placeholder">
+<section class="section__placeholder">
+<article class="article__wrapper article__homepage-placeholder">
 
 	<!-- <h2 class="title title--white headline__header--placeholder">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
 

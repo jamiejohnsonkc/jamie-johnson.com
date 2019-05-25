@@ -641,12 +641,8 @@ ul.strengths__list_container {
 /* ////////////////////////////////////////////////////////////////////////////////////*/
 
 //container article styles
-.proof__article_container {
-  h2 {
-    align-text: center;
-    @include push-auto;
-    @include vmar-2-2;
-  }
+.proof__article-container {
+
 
   h3 {
     @include vr($width: 28, $line-height: 3);

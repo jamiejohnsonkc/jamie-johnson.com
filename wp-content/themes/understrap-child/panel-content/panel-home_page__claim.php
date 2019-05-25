@@ -18,5 +18,5 @@ if (!defined('ABSPATH')) {
 			<div class="headline headline__header title title--overlay claim__title">I <span class="headline headline__header title title--overlay claim__title--emph">help</span> young and emerging businesses <span class="headline headline__header title title--overlay claim__title--emph">optimize marketing</span> strategy, operations and activities <span class="headline headline__header title title--overlay claim__title--emph">for performance</span> and <span class="headline headline__header title title--overlay claim__title--emph">growth</span></div>
 		</div>
 	</div>
-	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--white-primary claim__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white claim__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>

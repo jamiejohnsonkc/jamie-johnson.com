@@ -1,3 +1,4 @@
+//colors
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -50,7 +51,7 @@ $slate-tints: map-merge((
   "800": $slate-tint-800,
   "900": $slate-tint-900
 ), $slate-tints);
-
+//end colors
 
 // $slate-shades: () !default;
 // $slate-shade-100: #6b7a89;

@@ -20,3 +20,5 @@ if (!defined('ABSPATH')) {
 	</div>
 	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white claim__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
+
+</section>

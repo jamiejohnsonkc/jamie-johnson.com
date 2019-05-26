@@ -159,7 +159,7 @@ display: none;
 
 @include mq('tablet-wide') {
    .three-up-carousel{
-display: flex;
+// display: flex;
    }
    .objectives-diagram__vertical--delta {
 display: none;
@@ -194,7 +194,7 @@ display: none;
     } 
 
 #stats-slider>.carousel-inner.one-up-carousel{
-    display: none;
+    // display: none;
 }
 // .three-up-carousel{
 //     display: block;

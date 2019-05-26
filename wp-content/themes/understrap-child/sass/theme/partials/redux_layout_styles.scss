@@ -613,7 +613,7 @@
 
 .carousel-inner.three-up-carousel {
   @include mq("tablet-wide") {
-    display: flex;
+    // display: flex;
     min-height: 30em;
     flex: 0 auto;
   }

@@ -221,4 +221,4 @@ exit; // Exit if accessed directly.
 <a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/page#div" title="go to next">php get_template_part( 'buttons/button', 'jump' ); ?></a> -->
 
 </article>
-</section>
+

@@ -10,7 +10,6 @@ if (!defined('ABSPATH')) {
 ?>
 <!-- <article class="article__wrapper  basic homepage homepage__my-mo">
 	<div class="container homepage__my-mo__container"> -->
-<section class="mo__section">
 	<article class="article__wrapper article__wrapper--fluid article__wrapper--black mo__article-wrapper">
 		<div class="container container--mymo text--white mo__container">
 

@@ -2,7 +2,7 @@
 /**
 * container Splash template.
 *
-* @package understrap
+* @package understrap 
 */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.

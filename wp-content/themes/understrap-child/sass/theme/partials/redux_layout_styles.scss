@@ -824,6 +824,9 @@
   @include mq("tablet-wide") {
     display: none;
   }
+      @include mq("desktop") {
+        display: flex;
+      }
 }
 
 .diagram__end2end--horz {}
@@ -843,14 +846,12 @@
 
 
       @include mq("desktop") {
-        width: 61%;
-        max-width: 61%;
+        display: none;
       }
 
 
       @include mq("desktop-hd") {
-        width: 50%;
-        max-width: 50%;
+        display: none;
       }
     }
 
@@ -2120,10 +2121,7 @@ p.homepage-summary__claim--fancy {
   }
 }
 
-.footer__wrapper {
-  background: $black;
-  height: 40em;
-}
+
 
 .container--mymo {
   width: 83%;

@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 			<h1 class="header pagination pagination--homepage  pagination--strengths-intro pagination--black mo__pagination">
 				My M.O.</h1>
-				<div class="mo__header">
+	<div class="mo__header">
 			<div class="mo__psst">&mdash;pssst!</div>
 			<h2 class="headline headline__header headline--intro">Don't tell anyone, but I've always loathed khakis</h2>
 			<h3 class="deck deck__header header__deck--white deck--intro mo__deck">I grew up on the business-side, but

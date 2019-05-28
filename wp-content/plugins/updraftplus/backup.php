@@ -77,7 +77,7 @@ class UpdraftPlus_Backup {
 	
 	// The absolute upper limit that will be considered for a zip batch (in bytes)
 	private $zip_batch_ceiling;
-
+	
 	/**
 	 * Class constructor
 	 *
@@ -1548,15 +1548,10 @@ class UpdraftPlus_Backup {
 						if (empty($this->skipped_tables)) $this->skipped_tables = array();
 
 						// whichdb could be an int in which case to get the name of the database and the array key use the name from dbinfo
-						if ('wp' !== $whichdb) {
-							$key = $dbinfo['name'];
-						} else {
-							$key = $whichdb;
-						}
+						$key = ('wp' === $whichdb) ? 'wp' : $dbinfo['name'];
 
-						if (empty($this->skipped_tables[$key])) $this->skipped_tables[$key] = '';
-						if ('' != $this->skipped_tables[$key]) $this->skipped_tables[$key] .= ',';
-						$this->skipped_tables[$key] .= $table;
+						if (empty($this->skipped_tables[$key])) $this->skipped_tables[$key] = array();
+						$this->skipped_tables[$key][] = $table;
 
 						$total_tables--;
 					} else {
@@ -1691,6 +1686,32 @@ class UpdraftPlus_Backup {
 			$sind++;
 			// Came across a database with 7600 tables... adding them all took over 500 seconds; and so when the resumption started up, no activity was detected
 			if (0 == $sind % 100) UpdraftPlus_Job_Scheduler::something_useful_happened();
+		}
+
+		// DB triggers
+		if ($this->wpdb_obj->get_results("SHOW TRIGGERS")) {
+			foreach ($all_tables as $ti) {
+				$table = $ti['name'];
+				if (!empty($this->skipped_tables)) {
+					if ('wp' == $this->whichdb) {
+						if (in_array($table, $this->skipped_tables[$this->whichdb])) continue;
+					} elseif (isset($this->skipped_tables[$this->dbinfo['name']])) {
+						if (in_array($table, $this->skipped_tables[$this->dbinfo['name']])) continue;
+					}
+				}
+				$table_triggers = $this->wpdb_obj->get_results($wpdb->prepare("SHOW TRIGGERS LIKE %s", $table), ARRAY_A);
+				if ($table_triggers) {
+					$this->stow("\n\n# Triggers of $description ".UpdraftPlus_Manipulation_Functions::backquote($table)."\n\n");
+					foreach ($table_triggers as $trigger) {
+						$trigger_name = UpdraftPlus_Manipulation_Functions::backquote($trigger['Trigger']);
+						$trigger_time = $trigger['Timing'];
+						$trigger_event = $trigger['Event'];
+						$trigger_statement = $trigger['Statement'];
+						$trigger_query = "CREATE TRIGGER $trigger_name $trigger_time $trigger_event ON ".UpdraftPlus_Manipulation_Functions::backquote($table)." FOR EACH ROW $trigger_statement";
+						$this->stow("$trigger_query;\n\n");
+					}
+				}
+			}
 		}
 
 		$this->stow("/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;\n/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;\n/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;\n");
@@ -1854,7 +1875,7 @@ class UpdraftPlus_Backup {
 				$err_msg = sprintf("Error getting $description structure of %s", $table);
 				$this->stow("#\n# $err_msg\n#\n");
 			}
-		
+
 			// Comment in SQL-file
 			$this->stow("\n\n# ".sprintf("Data contents of $description %s", UpdraftPlus_Manipulation_Functions::backquote($table))."\n\n");
 
@@ -2076,11 +2097,11 @@ class UpdraftPlus_Backup {
 		$this->stow("# Hostname: ".$this->dbinfo['host']."\n");
 		$this->stow("# Database: ".UpdraftPlus_Manipulation_Functions::backquote($this->dbinfo['name'])."\n");
 
-		if (!empty($this->skipped_tables)) {
+		if (!empty($this->skipped_tables[$this->whichdb])) {
 			if ('wp' == $this->whichdb) {
-				$this->stow("# Skipped tables: " . $this->skipped_tables[$this->whichdb]."\n");
+				$this->stow("# Skipped tables: " . implode(', ', $this->skipped_tables['wp'])."\n");
 			} elseif (isset($this->skipped_tables[$this->dbinfo['name']])) {
-				$this->stow("# Skipped tables: " . $this->skipped_tables[$this->dbinfo['name']]."\n");
+				$this->stow("# Skipped tables: " . implode(', ', $this->skipped_tables[$this->dbinfo['name']])."\n");
 			}
 		}
 		

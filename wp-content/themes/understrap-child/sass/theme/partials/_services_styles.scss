@@ -211,7 +211,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 0;
+    min-height: 35em;
     flex: 0 0 auto;
     position: relative;
     justify-content: center;
@@ -223,7 +223,7 @@
   
   }
   &__grid-item-container-link{
-  position: absolute;
+//   position: absolute;
   bottom: 0;
   }
   &__content-container{

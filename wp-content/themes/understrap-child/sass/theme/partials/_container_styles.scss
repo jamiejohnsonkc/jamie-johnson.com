@@ -127,9 +127,8 @@
 	@include container--23();
 }
 
-//!
 .navbar>.container,
-.navbar>.container-fluid {
+.navbar>.container-fluid{
 	@include mq('phablet', $type:max) {
 		width: 90%;
 		position: relative;

@@ -12,6 +12,8 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 	
 	private $remotesend_chunked_wp_error;
 	
+	private $try_format_upgrade = false;
+	
 	/**
 	 * Class constructor
 	 */
@@ -52,8 +54,8 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 			if (!is_object($storage)) throw new Exception("RPC service error");
 		} catch (Exception $e) {
 			$message = $e->getMessage().' ('.get_class($e).') (line: '.$e->getLine().', file: '.$e->getFile().')';
-			$updraftplus->log("RPC service error: ".$message);
-			$updraftplus->log($message, 'error');
+			$this->log("RPC service error: ".$message);
+			$this->log($message, 'error');
 			return false;
 		}
 		
@@ -87,11 +89,11 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 			$remote_status = $get_remote_size['data']['status'];
 		}
 
-		$updraftplus->log("$file: existing size: ".$remote_size);
+		$this->log("$file: existing size: ".$remote_size);
 		
 		// Perhaps it already exists? (if we didn't get the final confirmation)
 		if ($remote_size >= $filesize && $remote_status) {
-			$updraftplus->log("$file: already uploaded");
+			$this->log("$file: already uploaded");
 			return true;
 		}
 
@@ -122,7 +124,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 
 		if (0 == $remote_size && $this->remotesend_use_chunk_size == $this->default_chunk_size && $updraftplus->current_resumption - max($updraftplus->jobdata_get('uploaded_lastreset'), 1) > 1) {
 			$new_chunk_size = floor($this->remotesend_use_chunk_size / 2);
-			$updraftplus->log("No uploading activity has been detected for a while; reducing chunk size in case a timeout was occurring. New chunk size: ".$new_chunk_size);
+			$this->log("No uploading activity has been detected for a while; reducing chunk size in case a timeout was occurring. New chunk size: ".$new_chunk_size);
 			$this->remotesend_set_new_chunk_size($new_chunk_size);
 		}
 
@@ -139,9 +141,9 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 				throw new Exception("Failed to open file for reading: $from");
 			}
 		} catch (Exception $e) {
-			$updraftplus->log($this->description." upload: error (".get_class($e)."): ($file) (".$e->getMessage().") (line: ".$e->getLine().', file: '.$e->getFile().')');
+			$this->log("upload: error (".get_class($e)."): ($file) (".$e->getMessage().") (line: ".$e->getLine().', file: '.$e->getFile().')');
 			if (!empty($this->remotesend_chunked_wp_error) && is_wp_error($this->remotesend_chunked_wp_error)) {
-				$updraftplus->log("Exception data: ".base64_encode(serialize($this->remotesend_chunked_wp_error->get_error_data())));
+				$this->log("Exception data: ".base64_encode(serialize($this->remotesend_chunked_wp_error->get_error_data())));
 			}
 			return false;
 		}
@@ -174,7 +176,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 		$chunk = fread($fp, $upload_size);
 
 		if (false === $chunk) {
-			$updraftplus->log($this->description." upload: $file: fread failure ($upload_start)");
+			$this->log("upload: $file: fread failure ($upload_start)");
 			return false;
 		}
 
@@ -217,7 +219,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 						$log_msg = "Returned WP_Error: code=".$put_chunk->get_error_code();
 						if ('unexpected_http_code' == $put_chunk->get_error_code()) $log_msg .= ' ('.$error_data.')';
 						$log_msg .= " - reducing chunk size to: ".$new_chunk_size;
-						$updraftplus->log($log_msg);
+						$this->log($log_msg);
 						return new WP_Error('reduce_chunk_size', 'HTTP 413 or possibly equivalent condition on first chunk - should reduce chunk size', $new_chunk_size);
 					} elseif ($this->remotesend_use_chunk_size >= 131072 && $is_413) {
 						// In this limited case, where we got a 413 but the chunk is not number 1, our algorithm/architecture doesn't allow us to just resume immediately with a new chunk size. However, we can just have UD reduce the chunk size on its next resumption.
@@ -225,7 +227,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 						$this->remotesend_set_new_chunk_size($new_chunk_size);
 						$log_msg = "Returned WP_Error: code=".$put_chunk->get_error_code().", message=".$put_chunk->get_error_message();
 						$log_msg .= " - reducing chunk size to: ".$new_chunk_size." and then scheduling resumption/aborting";
-						$updraftplus->log($log_msg);
+						$this->log($log_msg);
 						UpdraftPlus_Job_Scheduler::reschedule(50);
 						UpdraftPlus_Job_Scheduler::record_still_alive();
 						die;
@@ -263,7 +265,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 
 		// Possible statuses: 0=temporary file (or not present), 1=file
 		if (empty($put_chunk['data']) || !is_array($put_chunk['data'])) {
-			$updraftplus->log("Unexpected response when putting chunk $chunk_index: ".serialize($put_chunk));
+			$this->log("Unexpected response when putting chunk $chunk_index: ".serialize($put_chunk));
 			return false;
 		} else {
 			$remote_size = (int) $put_chunk['data']['size'];
@@ -277,30 +279,28 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 
 	/**
 	 * This function is called via an action and will send a message to the remote site to inform it that the backup has finished sending
-	 *
-	 * @return void
 	 */
 	public function upload_complete() {
 		global $updraftplus;
 
 		$service = $updraftplus->jobdata_get('service');
-		$remote_sent = (!empty($service) && ((is_array($service) && in_array('remotesend', $service)) || 'remotesend' === $service)) ? true : false;
+		$remote_sent = (!empty($service) && ((is_array($service) && in_array('remotesend', $service)) || 'remotesend' === $service));
 
 		if (!$remote_sent) return;
 		
-		$this->options = $this->get_options();
-
-		if (!$this->options_exist($this->options)) {
-			$updraftplus->log('No '.$this->method.' settings were found');
-			$updraftplus->log(sprintf(__('No %s settings were found', 'updraftplus'), $this->description), 'error');
+		try {
+			$storage = $this->bootstrap();
+			if (is_wp_error($storage)) throw new Exception($storage->get_error_message());
+			if (!is_object($storage)) throw new Exception("RPC service error");
+		} catch (Exception $e) {
+			$message = $e->getMessage().' ('.get_class($e).') (line: '.$e->getLine().', file: '.$e->getFile().')';
+			$this->log("RPC service error: ".$message);
+			$this->log($message, 'error');
 			return false;
 		}
-
-		$storage = $this->bootstrap();
+		
 		if (is_wp_error($storage)) return $updraftplus->log_wp_error($storage, false, true);
 
-		$this->set_storage($storage);
-		
 		$response = $this->send_message('upload_complete', array('job_id' => $updraftplus->nonce), 30);
 
 		if (is_wp_error($response)) {
@@ -316,6 +316,11 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 		}
 	}
 
+	/**
+	 * Change the chunk size
+	 *
+	 * @param Integer $new_chunk_size - in bytes
+	 */
 	private function remotesend_set_new_chunk_size($new_chunk_size) {
 		global $updraftplus;
 		$this->remotesend_use_chunk_size = $new_chunk_size;
@@ -326,14 +331,42 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 
 	private function send_message($message, $data = null, $timeout = 30) {
 		$storage = $this->get_storage();
-		$response = $storage->send_message($message, $data, $timeout);
-		if (is_array($response) && !empty($response['data']) && is_array($response['data']) && !empty($response['data']['php_events']) && !empty($response['data']['previous_data'])) {
-			global $updraftplus;
-			foreach ($response['data']['php_events'] as $logline) {
-				$updraftplus->log("From remote side: ".$logline);
-			}
-			$response['data'] = $response['data']['previous_data'];
+		
+		if (is_array($this->try_format_upgrade) && is_array($data)) {
+			$data['sender_public'] = $this->try_format_upgrade['local_public'];
 		}
+		
+		$response = $storage->send_message($message, $data, $timeout);
+		
+		if (is_array($response) && !empty($response['data']) && is_array($response['data'])) {
+		
+			if (!empty($response['data']['php_events']) && !empty($response['data']['previous_data'])) {
+				foreach ($response['data']['php_events'] as $logline) {
+					$this->log("From remote side: ".$logline);
+				}
+				$response['data'] = $response['data']['previous_data'];
+			}
+			
+			if (is_array($response) && is_array($response['data']) && !empty($response['data']['got_public'])) {
+				$name_indicator = $this->try_format_upgrade['name_indicator'];
+
+				$remotesites = UpdraftPlus_Options::get_updraft_option('updraft_remotesites');
+				
+				foreach ($remotesites as $key => $site) {
+					if (!is_array($site) || empty($site['name_indicator']) || $site['name_indicator'] != $name_indicator) continue;
+					// This means 'format 2'
+					$this->try_format_upgrade = true;
+					$remotesites[$key]['remote_got_public'] = 1;
+					// If this DB save fails, they'll have to recreate the key
+					UpdraftPlus_Options::update_updraft_option('updraft_remotesites', $remotesites);
+					// Now we need to get a fresh storage object, because the remote end will no longer accept messages with format=1
+					$this->set_storage(null);
+					$this->do_bootstrap(null);
+					break;
+				}
+			}
+		}
+		
 		return $response;
 	}
 
@@ -347,9 +380,18 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 
 		try {
 			$ud_rpc = new UpdraftPlus_Remote_Communications($opts['name_indicator']);
-			// Enforce the legacy communications protocol (which is only suitable for when only one side only sends, and the other only receives - which is what we happen to do)
-			$ud_rpc->set_message_format(1);
-			$ud_rpc->set_key_local($opts['key']);
+			if (!empty($opts['format_support']) && 2 == $opts['format_support'] && !empty($opts['local_private']) && !empty($opts['local_public']) && !empty($opts['remote_got_public'])) {
+				$ud_rpc->set_message_format(2);
+				$ud_rpc->set_key_remote($opts['key']);
+				$ud_rpc->set_key_local($opts['local_private']);
+			} else {
+				// Enforce the legacy communications protocol (which is only suitable for when only one side only sends, and the other only receives - which is what we happen to do)
+				$ud_rpc->set_message_format(1);
+				$ud_rpc->set_key_local($opts['key']);
+				if (!empty($opts['format_support']) && 2 == $opts['format_support'] && !empty($opts['local_public']) && !empty($opts['local_private'])) {
+					$this->try_format_upgrade = array('name_indicator' => $opts['name_indicator'], 'local_public' => $opts['local_public']);
+				}
+			}
 			$ud_rpc->set_destination_url($opts['url']);
 			$ud_rpc->activate_replay_protection();
 		} catch (Exception $e) {
@@ -372,6 +414,7 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 		global $updraftplus;
 		$opts = $updraftplus->jobdata_get('remotesend_info');
 		$opts = apply_filters('updraftplus_clone_remotesend_options', $opts);
+		if (true === $this->try_format_upgrade && is_array($opts)) $opts['remote_got_public'] = 1;
 		return is_array($opts) ? $opts : array();
 	}
 
@@ -383,6 +426,9 @@ class UpdraftPlus_Addons_RemoteStorage_remotesend extends UpdraftPlus_RemoteStor
 	 * @return Array - an array of options
 	 */
 	public function updraftplus_clone_remotesend_options($opts) {
+	
+		// Don't call self::log() - this then requests options (to get the label), causing an infinite loop.
+	
 		global $updraftplus;
 		if (empty($updraftplus_admin)) include_once(UPDRAFTPLUS_DIR.'/admin.php');
 		

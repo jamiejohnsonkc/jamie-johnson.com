@@ -8,18 +8,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper content__wrapper homepage">
-	<div class="container cta__container homepage__cta__container cta" id="homepage__cta">
+<article class="article__wrapper cta__home-page">
+	<div class="container-single-box-center cta__container az-subtle">
 		
 		
 		
-		<h1>I'm Available</h1>
+		<h1 class="title title__header cta__title">I'm Available</h1>
+		<h2 class="subhead subhead__header cta__copy">Know What I think?</h2>
+		<h3 class="cta__link">I think You Should Hire Me</h3>
 		
-		<h2>Hire Me</h2>
 		
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-		
-
-	<a class="link link__advance--text" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>		
 		</div><!-- Container end -->
 		</article><!-- cover end -->

@@ -1898,56 +1898,233 @@ background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/a
 // background-repeat: repeat;
 }
 
-//* Expertise Carousels *//
+//* Expertise Carousels - move to services or as appropriate*//
+
+.expertise__section-head{
+  @include vr($padding-bottom: 6);
+
+}
+
+.body-item__container{
+width: 100%;
+max-width: 100%;
+overflow: hidden;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+@include vr($padding-top: 6, $padding-bottom: 6);
+border-bottom: thin solid $gray-300;
+}
+
+.expertise__content-container{
+  margin-top: 0;
+    margin-bottom: 4.50003rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0em;
+    flex: 0 0 auto;
+    position: relative;
+    justify-content: center;
+}
+.content__container--pad {
+    position: relative;
+    width: 90%;
+    max-width: 90%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.expertise__header-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.expertise__header-container{
+  // background: $pattens;
+  @include container();
+  @include vr($height: 8);
+  color: $black;
+  justify-content: center;
+  align-content: center;
+}
+
+.expertise__split-row-wrapper {
+  flex: 1 0 auto;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 100%;
+}
+.expertise__graphic-element{
+  margin-right: 1.50001rem;
+  flex: 0 0 25%;
+  max-width: 7em;
+  height: 7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  min-height: 0;
+>svg{
+fill: $black;
+  width: 7em;
+    height: 7em;
+    display: block;
+}
+.hybrid-icon{
+  background: $pattens;
+  border-radius: 100%;
+}
+}
+
+.expertise__headline{}
+.expertise__deck{
+  display: flex;
+  flex: 0 0 auto;
+max-width: 83%;
+font-weight: 500;
+text-align: center;
+  @include vmar-2-0();
+}
+.expertise__image-container{
+  @include vmar-6-2();
+  max-width: 83%;
+}
+
+.expertise__image-container--conductor{
+  overflow: hidden;
+}
+
+.expertise__content-container{
+  width: 74.7%;
+  max-width: 74.7%;
+}
+
+//* expertise carousel base styles*//
 
 .expertise-carousel{
-  height: 70em;
-  max-width: 100%;
-  width: 100%;
+  min-height: 71em;
+  max-width: 90%;
+  width: 90%;
   display: flex;
 }
 
 .expertise-carousel__inner{
-  height: 70em;
   display: flex;
   align-items: center;
   width: 100%;
-
+  max-width: 100%;
+  @include mq('phone-wide'){
+  width: 90%;
+  max-width: 90%;
+  }
+  @include mq('tablet'){
+    width: 83%;
+  max-width: 83%;
+  }
 }
 
 .content__container.expertise-carousel-item{
   width: 100%;
   max-width: 100%;
-  @include vr($padding: 1 2);
+  @include vr($padding: 3 2);
+  border: none;
   margin: 0;
+  margin-top: 0;
+  margin-bottom: 4.50003rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0em;
+  flex: 0 0 auto;
+  position: relative;
+  justify-content: center;
+  // background: $gray-100;
+  // background: lighten($color: $primary, $amount: 30%)
+    background: lighten($color: $pattens, $amount: 5%)
 }
 
-.controls{
+.expertise__carousel-controls{
   display: flex;
-  min-height: 10em;
+  min-height: 0em;
+  max-width: 83%;
+  flex: 1 1 43%;
+  @include vr($margin-top: 2);
   
 }
 
 ol.expertise-carousel__indicators{
-display: flex;
-position: relative;
-right: unset;
-bottom: unset;
-max-width: 100%;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  right: unset;
+  bottom: unset;
+  max-width: 100%;
+  flex: 1 0 60%;
+  margin: 0;
+  height: 4em;
+  flex-wrap: wrap;
 }
 
 
 li.expertise-carousel__list-item{
-  @include vr($font-size: 1);
-  color: black;
+  @include vr($font-size: 2, $line-height: 2);
+  color: $gray-700;
   font-family: $font-family-sans-serif;
   display: flex;
-  max-width: 100%;
+  max-width: 47%;
   font-variant-caps: all-small-caps;
   font-weight: 400;
   letter-spacing: .05rem;
-  height: 6em;
+  min-height: 0;
   text-indent: 0;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
+width: unset;
+height: unset;
 }
 
+li.expertise-carousel__list-item--divider{
+  color: $primary;
+  @include vr($font-size: 4, $line-height: 1.5);
+  display: flex;
+  max-width: 3%;
+  font-variant-caps: all-small-caps;
+  font-weight: 400;
+  letter-spacing: .05rem;
+  min-height: 0;
+  text-indent: 0;
+  flex: 0 1 auto;
+  justify-content: center;
+  margin: 0;
+  height: unset;
+&:before, &:after{
+  display: none;
+}
+}
+
+.expertise__headline-item{
+background: $black;
+color: $white;
+@include vr($padding: .25 1.5);
+border-radius: .5rem;
+font-weight: 500;
+letter-spacing: -.025rem;
+}

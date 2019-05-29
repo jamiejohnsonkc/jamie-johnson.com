@@ -240,3 +240,67 @@
   }
   }
   
+  //! following are duplicate styles from layout_styles.scss FIX!!!
+  .capabilities__menu_item{
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid $white;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+.capabilities__menu_icon{
+  flex: 0 0 61%;
+  max-width: 61%;
+  margin-top: 0;
+}
+
+.capabilities__menu-content_header{
+  @include vr($font-size: 1, $line-height: 1.25);
+  margin-top: -2em;
+  margin-bottom: 0;
+}
+
+  .capabilities__menu_copy{
+    display: none;
+  }
+
+.capabilities__main-page_menu{
+display: flex;
+flex-wrap: wrap;
+align-items: stretch;
+}
+
+  #capabilities__menu_link{
+    font-style: normal;
+    font-variant-caps: all-small-caps;
+    font-weight: 400;
+    letter-spacing: .15rem;
+  }
+
+.commitment__article_wrapper{
+  background: none;
+}
+
+  .commitment__headline{
+    max-width: 83%;
+    align-self: center;
+    @include vr($padding: 3 0);
+@include push-auto();
+  }
+
+.commitment__subhead{
+  color: $gray-700;
+  @include vr($font-size: 3);
+}
+
+  .commitment__body-copy--leader{
+    font-variant-caps: all-small-caps;
+    color: $primary;
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    letter-spacing: .25rem;
+  }

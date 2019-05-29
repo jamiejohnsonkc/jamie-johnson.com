@@ -1,3 +1,7 @@
+@mixin vmar-6-2 {@include vr($margin-top: 6, $margin-bottom: 2);   }
+@mixin vmar-5-2 {@include vr($margin-top: 5, $margin-bottom: 2);   }
+@mixin vmar-4-2 {@include vr($margin-top: 4, $margin-bottom: 2);   }
+@mixin vmar-3-2 {@include vr($margin-top: 3, $margin-bottom: 2);   }
 @mixin vmar-2-2 {@include vr($margin-top: 2, $margin-bottom: 2);   }
 @mixin vmar-1-2 {@include vr($margin-top: 1, $margin-bottom: 2);   }
 @mixin vmar-1-1 {@include vr($margin-top: 1, $margin-bottom: 1);   }

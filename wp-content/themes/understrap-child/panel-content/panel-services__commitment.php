@@ -14,7 +14,7 @@ exit; // Exit if accessed directly.
 		<article class="article__wrapper content__wrapper commitment__article_wrapper" id="article__wrapper--services-exit">
 			<div class="container commitment__article_container"  id="article__container--services-exit">
 				<h1 class="pagination pagination_commitment">Working With Me</h1>
-				<h2 class="commitment__headline">A Few Points About How I Conduct Business</h2>
+				<h2 class="commitment__headline">What You Can Expect From Me</h2>
 				<!-- 			<h3>Three reasons you should hire me:</h3>			 -->
 				<div class="commitment__background"></div>
 				<div class="content__container commitment__content_container">

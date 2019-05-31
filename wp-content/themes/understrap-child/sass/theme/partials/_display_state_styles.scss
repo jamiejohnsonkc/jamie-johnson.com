@@ -37,7 +37,7 @@ display: none;
 }
 
 .diagram__end-to-end--horizontal {
-    display: none;
+
 }
 
  .homepage-summary__claim_subhead--br{
@@ -453,6 +453,12 @@ span.summary-page__subhead_claim--br{
         display: none;
     }
 
+}
+
+.container-hero__img-mobile_shoes{
+        @include mq('desktop') {
+        display: block;
+    }
 }
 
 .br__proof--me{

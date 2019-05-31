@@ -7,8 +7,8 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="section section--serviceexpertise">
-	<div class="wrapper expertise__article-wrapper az-subtle">
+<section class="section section--service expertise__section">
+	<div class="wrapper expertise__article-wrapper">
 		<article class="article article--service expertise__intro">
 			<div class="header__container header__container--push-center expertise__section-head">
 				<div class="masthead">
@@ -28,16 +28,17 @@ if (!defined('ABSPATH')) {
 					</div>
 				</div>
 				<h2 class="headline__header">From The Boardroom To The Keyboard</h2>
-				<h2 class="deck deck__header">Strategic Design<span class="deck deck__header primary"> &plus; </span>Organizational Management<span class="deck deck__header primary"> &plus;</span> Integrated Marketing</h2>
 				<h3 class="subhead__header subhead__header--hybrid">I don't just build websites. I also do everything you need before, during and after the website to grow your business.</h3>
+				<div class="deck deck__header">Strategic Design<span class="deck deck__header primary"> &plus; </span>Organizational Management<span class="deck deck__header primary"> &plus;</span> Integrated Marketing</div>
+
 				<p class="copy copy__block">Tempor nostrud occaecat mollit quis aliquip minim occaecat Lorem occaecat eu est laboris veniam nostrud.</p>
 			</div>
-		</article>
-	</div>
+</article>
+<article class="expertise__content">
 	<!-- integrated section -->
 	<div class="body__container expertise__body-container">
 
-
+	<div class="body-item__container--wrapper">
 		<div class="body-item__container">
 			<div class="header__wrapper expertise__header-wrapper">
 				<div class="header__container split-row expertise__header-container">
@@ -51,17 +52,7 @@ if (!defined('ABSPATH')) {
 				</div>
 				<h3 class="deck deck__block expertise__deck">Irure sit enim deserunt eiusmod quis aliqua pariatur minim reprehenderit enim</h3>
 			</div>
-			<!-- <div class="content__container expertise__content-container">
-				<h3 class="deck__block expertise__deck-block">Dolor elit ex aliqua mollit anim eu consequat</h3>
-				<p class="copy__block expertise__copy-block">Et ad est cillum do.Cillum ea labore quis do eiusmod nulla consequat duis.</p>
 
-				<ul class="container__fluid list list__jump--no-head list-group-flushexpertise__body-list">
-					<li class="list-item__block--jump"><span class="ui-button__mini-jump--wp"><php get_template_part('buttons/button', 'list-jump'); ></span>mobile+web development</li>
-					<li class="list-item__block--jump"><span class="ui-button__mini-jump--wp"><php get_template_part('buttons/button', 'list-jump'); ?></span>IMC strategy</li>
-					<li class="list-item__block--jump"><span class="ui-button__mini-jump--wp"><php get_template_part('buttons/button', 'list-jump'); ?></span>Digital & traditional production</li>
-				</ul>
-				<a class="link link__text link__text--primary expertise__grid-item-container-link">> do i need a link here</a>
-			</div> -->
 
 			<div class="carousel-controls expertise__carousel-controls ">
 				<ol class="carousel-indicators integrated-carousel-indicators expertise-carousel__indicators">
@@ -73,7 +64,7 @@ if (!defined('ABSPATH')) {
 				</ol>
 			</div>
 
-			<div class="image__container--expertise expertise__image-container">
+			<div class="image__container--expertise expertise__image-container expertise__image-container--screens">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="...">
 			</div>
 			<!-- integrated carousel -->
@@ -151,9 +142,10 @@ if (!defined('ABSPATH')) {
 			</div>
 
 		</div>
-
+</div>
 
 		<!-- marketing section -->
+		<div class="body-item__container--wrapper">
 		<div class="body-item__container body-item__container--marketing">
 			<div class="header__wrapper expertise__header-wrapper">
 				<div class="header__container split-row expertise__header-container">
@@ -190,7 +182,7 @@ if (!defined('ABSPATH')) {
 					<li data-target="#integrated-carousel" data-slide-to="2" class="expertise-carousel__list-item list-item">Messaging & Strategy</li>
 				</ol>
 			</div>
-			<div class="image__container--expertise expertise__image-container">
+			<div class="image__container--expertise expertise__image-container expertise__image-container--table">
 				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
 			</div>
 			<!-- marketing carousel -->
@@ -280,14 +272,13 @@ if (!defined('ABSPATH')) {
 			</div>
 
 		</div>
-
-
+</div>
 
 
 
 
 		<!-- operations section -->
-
+		<div class="body-item__container--wrapper">
 		<div class="body-item__container body-item__container--marketing">
 			<div class="header__wrapper expertise__header-wrapper">
 				<div class="header__container split-row expertise__header-container">
@@ -311,7 +302,7 @@ if (!defined('ABSPATH')) {
 					</ol>
 				</div>
 				<div class="image__container--expertise expertise__image-container expertise__image-container--conductor">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg" class="conductor" alt="...">
+					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="...">
 				</div>
 
 				<!-- <div class="content__container expertise__content-container">
@@ -420,6 +411,8 @@ if (!defined('ABSPATH')) {
 			</div>
 
 		</div>
-
-		</article>
+</div>
+</article>
+</div>
+	
 </section>

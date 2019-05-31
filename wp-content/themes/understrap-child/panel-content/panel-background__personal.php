@@ -10,7 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 <section class="section personal__section">
 <article class="article__wrapper content__wrapper about-me personal">
-	<div class="container-hero__img--mobile" id="fam-container"><img src="/wp-content/uploads/2019/05/famv3.jpg" alt="profile pic" id="fam-img"></div>
+	<div class="image__container--fam" id="fam-container"><img src="/wp-content/uploads/2019/05/famv3.jpg" alt="profile pic" id="fam-img"></div>
 		
 	<div class="container background about-me__container_personal">
 		<div class="personal__about-me_content personal__content-container-wrapper">

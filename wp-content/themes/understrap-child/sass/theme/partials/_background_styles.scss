@@ -3,10 +3,26 @@
   margin-bottom: 3em;
 }
 
+.container.background-splash__container{
+  @include mq('desktop'){
+    width: 61%;
+    max-width: 61%;
+    padding-right: 10%;
+  }
+  @include mq('desktop-wide'){
+    width: 83%;
+    max-width: 83%;
+  }
+}
+
 .background__splash--title{
   @include mq('tablet-wide'){
     width: 61%;
     max-width: 61%;
+  }
+    @include mq('desktop-wide'){
+    width: 50%;
+    max-width: 50%;
   }
 }
 
@@ -344,3 +360,114 @@ justify-content: center;
 
 //   @include vr($margin-top: 1, $margin-bottom: 1);
 // }
+
+
+/*=============================================
+=            //*  Personal section styles            =
+=============================================*/
+
+.container.about-me__container_personal {
+  @include vr($width: 100%, $margin: 0, $padding: 5 0 0 0);
+
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include mq("phablet") {}
+
+
+  @include mq("tablet") {}
+
+
+  @include mq("tablet-wide") {
+    padding-left: 0;
+  }
+}
+
+.personal__about-me_content {
+  @include vr($width: 90%, $padding: 6 2);
+
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+
+  @include mq("phablet") {
+    max-width: 61%;
+
+    @include push-auto;
+  }
+
+
+  @include mq("tablet") {
+    max-width: 83.82%;
+    width: 83.82%;
+  }
+}
+
+.image__container--fam{
+  width: 100%;
+  overflow: hidden;
+  top: 54em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+
+  @include mq("tablet-wide"){
+    top: 10em;
+  }
+  @include mq('desktop'){
+    top: -6em;
+  }
+}
+
+#fam-img {
+  max-width: 183.82%;
+  height: auto;
+  display: block;
+  position: relative;
+  left: -40%;
+
+  @include mq("phone-wide") {
+    max-width: 165%;
+    left: -32.5%;
+  }
+
+
+  @include mq("tablet") {
+    max-width: 100%;
+    left: 0;
+  }
+
+
+  @include mq("tablet-wide") {
+    max-width: 137%;
+    left: 0;
+    top: 28em;
+  }
+  @include mq('desktop'){
+    max-width: 125%;
+    left: 8%;
+    top: 23em;
+  }
+}
+
+@include mq("tablet-wide") {
+  .personal {
+    height: 110em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .about-me__container_personal {
+    height: 90em;
+  }
+}
+
+
+

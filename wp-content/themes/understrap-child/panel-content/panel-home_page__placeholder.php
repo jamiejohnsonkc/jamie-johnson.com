@@ -15,8 +15,8 @@ exit; // Exit if accessed directly.
 
 
 	<div class="header__container header__container--placeholder">
-	<h1 class="pagination pagination__placeholder">How I placehold</h1>	
-	<h2 class="title headline__header--placeholder">Quis cupidatat nostrud amet</h2>
+	<h1 class="pagination pagination__placeholder">What I'm About</h1>	
+	<h2 class="title headline__header--placeholder">Premium & Accessible Marketing</h2>
 		<h3 class="deck deck__header deck__header--placeholder">Velit deserunt officia tempor sint adipisicing anim id ullamco. Ullamco eu irure minim veniam reprehenderit voluptate adipisicing.</h3>
 	</div>
 

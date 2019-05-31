@@ -8,7 +8,7 @@ exit; // Exit if accessed directly.
 }
 ?>
 <section class="section section__fluid section--services-summary" id="services-summary">
-	<article class="article container container--flex--column">
+	<article class="article container container--flex--column services-summary__article">
 <!-- 	<div class="container__fluid container--flex--column"> -->
 		
 <!-- 		<div class="services__summary_head_wrapper"> -->

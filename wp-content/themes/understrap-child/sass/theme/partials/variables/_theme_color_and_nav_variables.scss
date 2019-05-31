@@ -9,8 +9,8 @@ $gray-600: #6c757d !default;
 $gray-700: rgba(73, 80, 87, .8) !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #071013 !default;
-
+// $black:    #071013 !default;
+$black: #000;
  
 
 $grays: () !default;
@@ -78,7 +78,7 @@ $slate-tints: map-merge((
 
 
 
-$primaryrgba:                       rgba(153, 165, 177, 1);
+$primaryrgba:                       rgba(42.4%, 81.2%, 96.5%, .5);
 $tungstenrgba:                      rgba(210, 219, 226, 1);
 $slatergba:                         rgba(119,136,153, 1);
 $slate-dark:                        #3b444c;

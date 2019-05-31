@@ -199,28 +199,30 @@ min-height: 32em;
     background: none;
 
 @media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
+        // background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/me.jpg");
+        background-image: url(/wp-content/uploads/2018/12/me.jpg);
         background-position: right bottom;
         background-size: 80%;
         background-repeat: no-repeat;
     }
 }
 
-.bgshoes {
-    background: none;
 
-@media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/shoes.jpg");
-        background-position: left bottom;
-        background-size: 60%;
-        background-repeat: no-repeat;
-    }
-}
+// .bgshoes {
+//     background: none;
+
+// @media (min-width: 78em) {
+//         background-image: url(/wp-content/uploads/2019/01/shoes.jpg);
+//         background-position: left bottom;
+//         background-size: 60%;
+//         background-repeat: no-repeat;
+//     }
+// }
 
 .bgbell{
     background-size: 0;
 @include mq('desktop'){
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/silverbell.jpg");
+        background-image: url(/wp-content/uploads/2019/03/silverbell.jpg);
          background-position: left bottom;
         background-size: 60%;
         background-repeat: no-repeat;
@@ -231,7 +233,7 @@ min-height: 32em;
     background: none;
 
 @media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/brains.jpg");
+        background-image: url(/wp-content/uploads/2019/01/brains.jpg);
         background-position: right bottom;
         background-size: 50%;
         background-repeat: no-repeat;
@@ -242,7 +244,7 @@ min-height: 32em;
     background: none;
 
 @media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2.jpg");
+        background-image: url(/wp-content/uploads/2019/01/evolutionv2.jpg);
         background-position: 100% bottom;
         background-size: 65%;
         background-repeat: no-repeat;
@@ -258,7 +260,7 @@ min-height: 32em;
 .bgarrow {
     background: none;
 @include mq('desktop-hd'){
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg");
+        background-image: url(/wp-content/uploads/2019/01/arrowbg.svg);
         background-position: 72% 37%;
         background-size: 93%;
         background-repeat: no-repeat;
@@ -270,7 +272,7 @@ min-height: 32em;
     background: none;
 
 @media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg");
+        background-image: url(/wp-content/uploads/2019/01/conductor-light-1.jpg);
         background-position: 105% bottom;
         background-size: 80%;
         background-repeat: no-repeat;
@@ -281,7 +283,7 @@ min-height: 32em;
     background: none;
 
 @media (min-width: 78em) {
-        background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-light.jpg");
+        background-image: url(/wp-content/uploads/2019/01/register-light.jpg);
         background-position: right 100%;
         background-size: 40%;
         background-repeat: no-repeat;

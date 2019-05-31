@@ -1460,8 +1460,11 @@ ul.strengths__list_container {
   @include mq("tablet-wide") {
     z-index: 0;
   }
-}
 
+  @include mq("desktop"){
+      hieght: 133%;
+}
+}
 svg#services__arrow--img {
   width: 95vw;
   flex: 1;
@@ -3425,96 +3428,6 @@ margin-right: auto;
   }
 }
 
-// ==========================================================================
-// personal
-// ==========================================================================
-.container.about-me__container_personal {
-  @include vr($width: 100%, $margin: 0, $padding: 5 0 8 0);
-
-  max-width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  @include mq("phablet") {}
-
-
-  @include mq("tablet") {}
-
-
-  @include mq("tablet-wide") {
-    padding-left: 0;
-  }
-}
-
-.personal__about-me_content {
-  @include vr($width: 90%, $padding: 6 2);
-
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-
-  @include mq("phablet") {
-    max-width: 61%;
-
-    @include push-auto;
-  }
-
-
-  @include mq("tablet") {
-    max-width: 83.82%;
-    width: 83.82%;
-  }
-}
-
-#fam-container {
-  width: 100%;
-  overflow: hidden;
-  top: 54em;
-  @include mq("tablet-wide"){
-    top: 10em;
-  }
-}
-
-#fam-img {
-  max-width: 183.82%;
-  height: auto;
-  display: block;
-  position: relative;
-  left: -40%;
-
-  @include mq("phone-wide") {
-    max-width: 165%;
-    left: -32.5%;
-  }
-
-
-  @include mq("tablet") {
-    max-width: 100%;
-    left: 0;
-  }
-
-
-  @include mq("tablet-wide") {
-    max-width: 137%;
-    left: 0;
-    top: 28em;
-  }
-}
-
-@include mq("tablet-wide") {
-  .personal {
-    height: 110em;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  .about-me__container_personal {
-    height: 90em;
-  }
-}
 
 
 // ==========================================================================

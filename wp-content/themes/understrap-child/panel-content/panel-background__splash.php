@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <section class="section section--splash section--background-splash">
 <article class="article__wrapper-fluid article__wrapper--fluid bgshoes">
-		<div class="container container--splash container--splash-background">
+		<div class="container container--splash container--splash-background background-splash__container">
 		<h1 class="pagination pagination--splash background__splash-pagination">about me</h1>
-<h2 class="title__header background__splash--title">I'm a salty marketing veteran who knows a thing or two.</h2>          
+<h2 class="title__header background__splash--title ">I'm a salty marketing veteran who knows a thing or two.</h2>          
 <h3 class="title-sub">I'm not out to change the world.<br>Just grow your business.</h3>            
 	
 		

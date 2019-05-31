@@ -36,14 +36,14 @@ if (!defined('ABSPATH')) {
 					
 					<div class="mo__diagram-head">The right solutions</div>
 					</div>
-					<div class="mo__diagram-copy">Sunt aliquip aliqua magna in. Minim deserunt velit aliqua quis labore dolor exercitation.</div>
+					<div class="mo__diagram-copy">It doesn't matter if it's stunning or cutting-edge if it doesn't solve your problem. I begin every project with four simple words &mdash;what is your objective. And then I relentless pursue that end and only that end.</div>
 				</div>
 				<div class="mo__diagram-box">
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_2.svg" class="mo__circle-digit style-svg" alt="..."></div>
 				
 					<div class="mo__diagram-head">The right execution</div></div>
-					<p class="mo__diagram-copy">Sunt aliquip aliqua magna in. Sint sit nisi cillum exercitation ex deserunt enim non ea id ea fugiat laboris.</p>
+					<p class="mo__diagram-copy">Look. Its almost 2020. Nobody wants to be interupted and they certainly don't want to be sold. I can help you understand how to appeal and connect with modern customers to generate meaningful relationships.</p>
 
 				</div>
 				<div class="mo__diagram-box">
@@ -51,7 +51,7 @@ if (!defined('ABSPATH')) {
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_3.svg" class="mo__circle-digit style-svg" alt="..."></div>
 				
 					<div class="mo__diagram-head">The right scale</div></div>
-					<p class="mo__diagram-copy">Sunt aliquip aliqua magna in. Voluptate ut sint do dolore ut veniam nostrud nostrud voluptate irure enim irure.</p>
+					<p class="mo__diagram-copy">I'm not and you're probably not Apple, Starbucks or Disney. That doesn't mean you have to market yourself like Crazy Larry's House of Mattresses. I can help you achieve efficacy without an exorberant budget.</p>
 
 				</div>
 			</div>

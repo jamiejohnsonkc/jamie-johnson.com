@@ -1109,7 +1109,7 @@ font-family: $font-family-serif;
 .container.container--services-splash{
   @include mq('tablet-wide'){
     text-align: center;
-    background: $primary;
+    background: $black;
     color: $offwhite;
   }
 }
@@ -1608,6 +1608,7 @@ background: $white;
 }
 
 .pagination_commitment{
+text-align: left;
 }
 .subhead {
 }

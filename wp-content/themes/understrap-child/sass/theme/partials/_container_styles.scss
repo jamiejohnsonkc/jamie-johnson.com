@@ -44,7 +44,10 @@
 
 	}
 
-	@include mq('desktop-hd') {}
+	@include mq('desktop-hd') {
+	    max-width: 61%;
+		width: 61%;
+	}
 
 	@include mq('desktop-uhd') {}
 

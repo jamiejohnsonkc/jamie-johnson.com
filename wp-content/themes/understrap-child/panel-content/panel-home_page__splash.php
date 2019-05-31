@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-	<section id="section__placeholder">
+	<section>
 	<article class="article__wrapper-fluid article__wrapper--fluid homepage bgme">
 	
 <!-- 

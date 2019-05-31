@@ -19,9 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- 		 <h3>What's going to work. What's worth spending money on. And, more importantly, what's going to waste your time.<br><br><em>That's my bread and butter.</em></h3> 
 		
 <p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
-		<a class="link link__chevron link__chevron--splash link-chevron--splash-justification" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
-	</a>
+<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-brands--jump  justification-splash__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 
 

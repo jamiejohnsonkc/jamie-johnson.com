@@ -1,15 +1,17 @@
-/* // $breakpoints: (
-//     "phone":        400px,
-//     "phone-wide":   480px,
-//     "phablet":      560px,
-//     "tablet-small": 640px,
-//     "tablet":       768px,
-//     "tablet-wide":  1024px,
-//     "desktop":      1248px,
-//     "desktop-wide": 1440px,
-//     "desktop-hd":   1920px,
-//     "desktop-uhd":  2560px;px
-// );px */
+/* 
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px,
+    "desktop-hd":   1920px,
+    "desktop-uhd":  2560px;px
+);px 
+*/
 
 $breakpoints: (
   "phone":          25em, 
@@ -98,7 +100,7 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 @mixin      display-text-sm {             @include vr($font-size: 16px,     $line-height:2, $margin:2 0); }
 
 @mixin      header__copy {                @include vr($font-size: 4,        $line-height:2.5, $margin:1 0); }
-@mixin      header__deck {                @include vr($font-size: 5,         $margin:1 0, $line-height:2.5);}
+@mixin      header__deck {                @include vr($font-size: 5,        $margin:1 0, $line-height:2.5);}
 @mixin      header__headline {            @include vr($font-size: 7,        $margin:2 0); }
 @mixin      header__headline-lg {         @include vr($font-size: 6,        $margin:2 0); font-weight: 500; letter-spacing: -.025em; }
 @mixin      header__subhead {             @include vr($font-size: 5,        $margin:2 0); }

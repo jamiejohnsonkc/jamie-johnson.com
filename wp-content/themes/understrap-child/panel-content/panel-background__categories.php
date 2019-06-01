@@ -14,13 +14,13 @@ exit; // Exit if accessed directly.
 		<div class="header header__container header__container--categories categories__header">
 			<h1 class="pagination background__pagination background__pagination--categories categories__pagination">category experience</h1>
 			<h2 class="headline headline__header header__headline--categories categories__section-headline">Incomparible Breadth</h2>
-			<h3 class="deck deck__header header__deck--categories categories__section-deck">Voluptate fugiat mollit amet dolore excepteur.</h3>
+			<h3 class="deck deck__header header__deck--categories categories__section-deck">B2B, B2C, Agriculture, CPG, to name a few.</h3>
 </div>
 			<div class="copy copy__container categories__copy-container">
 
-				<p class="copy copy__header">Aliqua incididunt ea deserunt aute exercitation ut incididunt consectetur ut ad pariatur laboris ut fugiat nisi eu esse in sit et in.</p>
-				<p class="copy copy__header">Qui officia dolor mollit excepteur reprehenderit id velit cillum nostrud consectetur nulla minim.</p>
-				<p class="copy copy__header">Sunt eiusmod laborum proident reprehend id velit cillum nostrud.</p>
+				<p class="copy copy__header">Its been my good fortunate to work in varying and disparate sectors and categories of industry and business throughout my career.</p>
+				<p class="copy copy__header">If I haven't done it before, there's a pretty good chance I can relate to it.</p>
+				<p class="copy copy__header">My ability to draw upon my experiences and the insights they've yielded helps me bring value to any situation on day 1.</p>
 			</div>
 			<div class="visual-title categories__visual-title">I have extensive experience in the following areas (click on each image for more information)</div>
 			<div class="content2 content2__background background__text content2__background--categories categories__content--grid">

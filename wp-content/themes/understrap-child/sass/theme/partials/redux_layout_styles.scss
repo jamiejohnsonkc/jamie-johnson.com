@@ -1808,6 +1808,7 @@ p.homepage-summary__claim--fancy {
 }
 
 .container.commitment__article_container {
+ background: $offwhite;
   @include mq("desktop") {
     width: 61%;
     max-width: 61%;

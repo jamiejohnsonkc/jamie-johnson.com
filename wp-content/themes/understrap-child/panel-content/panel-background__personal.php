@@ -17,12 +17,12 @@ exit; // Exit if accessed directly.
 <div class="personal__content-container">
 		<h1 class="pagination pagination--personal personal__pagination">A Bit About Me</h1>
 		<h2 class="headline headline__header personal__headline">Proud Dad, <br class="br"><br>Lucky Husband</h2>
-		<h3 class="deck deck__header personal__deck">Sed sunt cillum ut voluptate in incididunt ea ut.</h3>
+		<!-- <h3 class="deck deck__header personal__deck">Sed sunt cillum ut voluptate in incididunt ea ut.</h3> -->
 		<div class="copy__container personal__copy-container">
-		<p class="copy copy__header copy--personal personal__copy">Sit proident duis consequat quis adipisicing nulla consectetur voluptate eu ad dolore exercitation est duis aute irure non laboris.</p>
+		<p class="copy copy__header copy--personal personal__copy"></p>
 		
-		<p class="copy copy__header copy--personal personal__copy">labore consequat irure sit et dolore nisi non id consectetur eu elit laborum dolor ut aliqua quis et.</p>
-	<div class="link__text link__text--primary  personal__link-text">Eiusmod qui aliqua exercitation do occaecat officia magna mollit</div>	
+		<p class="copy copy__header copy--personal personal__copy">Music junky. Recovering gamer. Tech enthusiast. Involuntary landlord. Overzealous DIY'er. Aspiring photographer. Struggling greens keeper. Lifetime learner. But mostly (and happily) Dad and husband. 
+	<!-- <div class="link__text link__text--primary  personal__link-text">Eiusmod qui aliqua exercitation do occaecat officia magna mollit</div>	 -->
 	</div>
 		</div>
 		</div>

@@ -16,14 +16,17 @@ exit; // Exit if accessed directly.
 
 	<div class="header__container header__container--placeholder">
 	<h1 class="pagination pagination__placeholder">What I'm About</h1>	
-	<h2 class="title headline__header--placeholder">Premium & Accessible Marketing</h2>
-		<h3 class="deck deck__header deck__header--placeholder">Velit deserunt officia tempor sint adipisicing anim id ullamco. Ullamco eu irure minim veniam reprehenderit voluptate adipisicing.</h3>
+	<h2 class="title headline__header--placeholder">Integrative Marketing</h2>
+		<h3 class="deck deck__header deck__header--placeholder primary">BUSINESS + ENGAGEMENT + TECHNOLOGY</h3>
+		<p class="copy copy__block copy__block--placeholder copy__block--serif">I business. I create. I code.</p>
+		<p class="copy copy__block copy__block--placeholder copy__block--serif">sweet.</p>
 	</div>
 
+	
 
 	<div class="body__container body__container--placeholder">
-		<p class="copy copy__block copy__block--placeholder copy--bold">Excepteur commodo dolore ullamco duis cillum.</p>
-		<p class="copy copy__block copy__block--placeholder">Deserunt commodo irure duis elit. &mdash; up to you.</p>
+		<p class="copy copy__block copy__block--placeholder copy--bold">Seen Enough?</p>
+		<p class="link link__text placeholder__text-link">Yep. He's amazing. I'm gonna click this and hire him.</p>
 	</div>
 	<!-- <div class="link link__text link--hybrid">> Quis ex laborum non id</div> -->
 

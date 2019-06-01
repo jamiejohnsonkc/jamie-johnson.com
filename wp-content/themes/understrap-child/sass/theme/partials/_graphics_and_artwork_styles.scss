@@ -363,8 +363,13 @@ min-height: 32em;
 
 
 svg#services__arrow--img{
-fill: rgba(119, 221, 255, .2);
+// fill: rgba(119, 221, 255, .2);
     // fill: rgba(128,128,128,.3);
+fill: rgba(50, 50, 50, .5);
+stroke-linecap: round; 
+stroke-miterlimit:10;
+//     stroke: $black;
+//     stroke-width: 1px;
 display: block;
 }
 

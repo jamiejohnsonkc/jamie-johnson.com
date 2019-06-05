@@ -3963,6 +3963,11 @@
 
 
 
+//*=============================================
+//*=            overlay open/close buttons      =
+//*=============================================*/
+
+
 jQuery(document).ready(function($) {
   var open = document.getElementById("open-expt-overlay-1"),
       close = document.getElementById("expt-close-1"),
@@ -4050,32 +4055,12 @@ jQuery(document).ready(function($) {
 });
 
 
-// jQuery(document).ready(function($) {
-// $('.moreless-button').click(function() {
-//   $('.moretext').slideToggle();
-//   if ($('.moreless-button').text() == "Read more") {
-//     $(this).text("Read less")
-//   } else {
-//     $(this).text("Read more")
-//   }
-// });
-// });
+//*=====  End of overlay open/close buttons  ======*/
 
-jQuery(document).ready(function($) {
-  $('.expand-button--webdev').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-    
-  //   if ($(id).is(":visible")) {
-  //     $(this).text("Read More");
-  // } else {
-  //     $(this).text("Read Less");
-  // }
 
-  $(id).slideToggle(500);
-})
-});
-  
+
+//*----------  are these expand buttons still in use?  ----------*/
+
 
 
 jQuery(document).ready(function($) {
@@ -4126,6 +4111,40 @@ $('.moreless-button__optimize').click(function() {
 
 
 
+//*----------  my mo expand buttons  ----------*/
+
+
+jQuery(document).ready(function($) {
+  $('#expand-mo-solutions').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+
+jQuery(document).ready(function($) {
+  $('#expand-mo-execution').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+
+jQuery(document).ready(function($) {
+  $('#expand-mo-scale').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+
+
+
+//*----------  expertise expand buttons  ----------*/
+
 
 
 
@@ -4162,11 +4181,55 @@ $('.moreless-button__ops-management').click(function() {
 });
 });
 
+
+//*=====  End of expand buttons section  ======*/
+
+
+
+
+
+//*=============================================
+//*=            animations            =
+//*=============================================*/
+
+jQuery(document).ready(function($) {
+  $( ".ui-button__expand" ).on("click", function() {
+ $(this).toggleClass("rotate");
+  })
+});
+
+
+
+
+//*=====  End of animations  ======*/
+
+
+
+
+
+
+//*=============================================
+//*=            Misc.           =
+//*=============================================*/
+
+
+
+//*----------  scroll top  ----------*/
+
+
 //  $(".scroll-top").click(function() {
 //     $('html,body').animate({
 //         scrollTop: $(".second").offset().top},
 //         'slow');
 // });
+
+
+
+
+
+
+
+
 
 // const btn = document.getElementById('button');
 // btn.addEventListener('click', function() {
@@ -4321,9 +4384,3 @@ function topFunction() {
 //   }
 // })
 // });
-
-jQuery(document).ready(function($) {
-  $( ".ui-button__expand" ).on("click", function() {
- $(this).toggleClass("rotate");
-  })
-});

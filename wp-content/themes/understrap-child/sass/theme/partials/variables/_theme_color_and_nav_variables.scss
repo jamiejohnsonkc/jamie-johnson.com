@@ -1,238 +1,210 @@
+//*   custom color patlette
+$int-orange:                           hsla(6%, 100%, 36%, 1);
+$azureish-white:                       hsla(207%, 64%, 91%, 1);
+$dark-sea-green:                       hsla(143%, 30%, 60%, 1);
+$babe-blue-eyes:                       hsla(203%, 75%, 78%, 1);
+$gunmetal:                             hsla(180%, 13%, 20%, 1);
+
+
+$azureish-white:                       #daeaf7;
+$dark-sea-green:                       #79b791;
+$babe-blue-eyes:                       #9dd1f1;
+
+
+$spiro-disco-ball:                     #23C9FF;
+$magic-mint:                           #A9FFCB;
+
+
+$ash-gray:                             #B3BFBF;
+$gunmetal-gray:                        #708787;
+$gunmetal:                             rgba(45, 58, 58, 1);
+
+
+$int-orange:                           #ba1200;
+
+
+// $aero-blue: #caffd0;
+
+
+
+
 //colors
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: rgba(73, 80, 87, .8) !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-// $black:    #071013 !default;
-$black: #000;
+$white:                                #fff !default;
+$gray-100:                             #f8f9fa !default;
+$gray-200:                             #e9ecef !default;
+$gray-300:                             #dee2e6 !default;
+$gray-400:                             #ced4da !default;
+$gray-500:                             #adb5bd !default;
+$gray-600:                             #6c757d !default;
+$gray-700:                             #495057 !default;
+$gray-800:                             #343a40 !default;
+$gray-900:                             #212529 !default;
+$off-black:                            #071013 !default;
+$black:                                #000;
  
 
 $grays: () !default;
 $grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
+ "100": $gray-100,
+ "200": $gray-200,
+ "300": $gray-300,
+ "400": $gray-400,
+ "500": $gray-500,
+ "600": $gray-600,
+ "700": $gray-700,
+ "800": $gray-800,
+ "900": $gray-900
 ), $grays);
 
- 
-$slate-tints: () !default;
-$slate-tint-100: #f1f3f4;
-$slate-tint-200: #e3e7ea;
-$slate-tint-300: #d6dbe0;
-$slate-tint-400: #c8cfd6;
-$slate-tint-500: #bbc3cc;
-$slate-tint-600: #adb7c1;
-$slate-tint-700: #9fabb7;
-$slate-tint-800: #929fad;
-$slate-tint-900: #8493a3;
 
 
-$slate-tints: () !default;
-$slate-tints: map-merge((
-  "100": $slate-tint-100,
-  "200": $slate-tint-200,
-  "300": $slate-tint-300,
-  "400": $slate-tint-400,
-  "500": $slate-tint-500,
-  "600": $slate-tint-600,
-  "700": $slate-tint-700,
-  "800": $slate-tint-800,
-  "900": $slate-tint-900
-), $slate-tints);
-//end colors
-
-// $slate-shades: () !default;
-// $slate-shade-100: #6b7a89;
-// $slate-shade-200: #5f6c7a;
-// $slate-shade-300: #535f6b;
-// $slate-shade-400: #47515b;
-// $slate-shade-500: #3b444c;
-// $slate-shade-600: #2f363d;
-// $slate-shade-700: #23282d;
-// $slate-shade-800: #171b1e;
-// $slate-shade-900: #0b0d0f;
-
-// $slate-shades: () !default;
-// $slate-shades: map-merge((
-//   "100": $slate-shade-100,
-//   "200": $slate-shade-200,
-//   "300": $slate-shade-300,
-//   "400": $slate-shade-400,
-//   "500": $slate-shade-500, "600": $slate-shade-600,
-//   "700": $slate-shade-700,
-//   "800": $slate-shade-800,
-//   "900": $slate-shade-900
-// ), $slate-shades);
-
-
-
-$primaryrgba:                       rgba(42.4%, 81.2%, 96.5%, .5);
-$tungstenrgba:                      rgba(210, 219, 226, 1);
-$slatergba:                         rgba(119,136,153, 1);
-$slate-dark:                        #3b444c;
-$slate-dark-rgba:                   rgba(59,68,76, 1);
-$offwhite1:                         rgba(253, 253, 253, 1);
-$offwhite:                          rgba(250,250,250, 1);
-$ghostwhite:                        #F8F8FF;
-$lightgray:                         #d3d3d3;
-$silver:                            #c0c0c0;
-$darkgray:                          #a9a9a9;
-$gray:                              #808080;
-$grayrgba:                          rgba(128,128,128,1);
+//* default bootstrap colors
+$offwhite1:                            rgba(253, 253, 253, 1);
+$offwhite:                             rgba(250,250,250, 1);
+$ghostwhite:                           #F8F8FF;
+$lightgray:                            #d3d3d3;
+$silver:                               #c0c0c0;
+$darkgray:                             #a9a9a9;
+$gray:                                 #808080;
+$grayrgba:                             rgba(128,128,128,1);
                                       
-$slate:                             #778899;
-$tungsten:                          #D2DBE2;
-$blue:                              #007bff !default;
-$indigo:                            #6610f2 !default; 
-$purple:                            #6f42c1 !default;
-$pink:                              #e83e8c !default;
-$red:                               #dc3545 !default;
-$orange:                            #fd7e14 !default;
-$yellow:                            #ffc107 !default;
-$green:                             #28a745 !default;
-$teal:                              #20c997 !default;
-$cyan:                              #17a2b8 !default;
-$offwhite1:                         rgba(253, 253, 253, 1);
-$offwhite:                          rgba(250,250,250, 1);
-$ghostwhite:                        #F8F8FF;
-$pattens:                           #DAEAF7;            
+$blue:                                 #007bff !default;
+$indigo:                               #6610f2 !default; 
+$purple:                               #6f42c1 !default;
+$pink:                                 #e83e8c !default;
+$red:                                  #dc3545 !default;
+$orange:                               #fd7e14 !default;
+$yellow:                               #ffc107 !default;
+$green:                                #28a745 !default;
+$teal:                                 #20c997 !default;
+$cyan:                                 #17a2b8 !default;
+
+$offwhite1:                            rgba(253, 253, 253, 1);
+$offwhite:                             rgba(250,250,250, 1);
+$ghostwhite:                           #F8F8FF;
+         
 
 
-$bluea-background-color:             rgba(51, 51, 68, .8);
-$bluea-background-color2:            rgba(94, 94, 94, .3);
-$dark-bg-trans:                      rgba(17, 17, 17, .7);                      
-$dkgray-bg-trans:                    rgba(34, 33, 33, 0.3);
+$bluea-background-color:               rgba(51, 51, 68, .8);
+$bluea-background-color2:              rgba(94, 94, 94, .3);
+$dark-bg-trans:                        rgba(17, 17, 17, .7);                      
+$dkgray-bg-trans:                      rgba(34, 33, 33, 0.3);
 
 
-$colors: () !default;
-$colors: map-merge((
-  "slate":                          $slate,
-  "tungsten":                       $tungsten,
-  "blue":                           $blue,
-  "indigo":                         $indigo,
-  "purple":                         $purple,
-  "pink":                           $pink,
-  "red":                            $red,
-  "orange":                         $orange,
-  "yellow":                         $yellow,
-  "green":                          $green,
-  "teal":                           $teal,
-  "cyan":                           $cyan,
-  "white":                          $white,
-  "gray":                           $gray-600,
-  "gray-dark":                      $gray-800
-), $colors);
+$colors:                               () !default;
+$colors:                               map-merge((
+"blue":                                $blue,
+"indigo":                              $indigo,
+"purple":                              $purple,
+"pink":                                $pink,
+"red":                                 $red,
+"orange":                              $orange,
+"yellow":                              $yellow,
+"green":                               $green,
+"teal":                                $teal,
+"cyan":                                $cyan,
+"white":                               $white,
+"gray":                                $gray-600,
+"gray-dark":                           $gray-800
+),                 $colors);
 
 
 
-$primary:                           #6ccff6;   
-$secondary:                         $pattens;
-$accent:                            darken($primary, 20%);
-$title-color:					              inherit;
-$headline-color:				            inherit;
-$subhead-color:					            inherit;
-$display-text-color:			          inherit;
-$body-text-color:                   inherit;
-$para-color: 					              inherit;
+$primary:                              $azureish-white;   
+$secondary:                            $babe-blue-eyes;
+$accent:                               $spiro-disco-ball;
+$accent2:                              $dark-sea-green;
+$title-color:					                 $off-black;
+$headline-color:				               $off-black;
+$subhead-color:					               inherit;
+$display-text-color:			             inherit;
+$body-text-color:                      inherit;
+$para-color: 					                 inherit;
 
 //*rgba
 
 
-$link-color:                        $primary;
-$link-decoration:                   $orange;
-$link-hover-color:                  $accent;
-$link-hover-decoration:             none;
+$link-color:                           $primary;
+$link-decoration:                      $orange;
+$link-hover-color:                     $accent;
+$link-hover-decoration:                none;
 
-$success:                  		      $green;
-$info:                     		      $cyan;
-$warning:                  		      $yellow;
-$danger:                   		      $red;
-$light:                    		      $gray-100;
-$dark:                     		      $gray-800; 
+$success:                  		         $green;
+$info:                     		         $cyan;
+$warning:                  		         $yellow;
+$danger:                   		         $red;
+$light:                    		         $gray-100;
+$dark:                     		         $gray-800; 
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary":    				            $primary,
-  "secondary":  				            $secondary,
-  "accent":     				            $accent,
-  "success":    				            $success,
-  "info":       				            $info,
-  "warning":    				            $warning,
-  "danger":     				            $danger,
-  "light":      				            $light,
-  "dark":       				            $dark
-), $theme-colors);
+$theme-colors:                         () !default;
+$theme-colors:                         map-merge((
+"primary":    				                 $primary,
+"secondary":  				                 $secondary,
+"accent":     				                 $accent,
+"success":    				                 $success,
+"info":       				                 $info,
+"warning":    				                 $warning,
+"danger":     				                 $danger,
+"light":      				                 $light,
+"dark":       				                 $dark
+),                                     $theme-colors);
 
-$body-bg:						                $white;
-
-
-$link-color:                        $primary;
-$link-decoration:                   none;
-$link-hover-color:                  darken($primary, 15%);
-$link-hover-decoration:             underline;
+$body-bg:						                   $white;
+$link-color:                           $primary;
+$link-decoration:                      none;
+$link-hover-color:                     darken($primary, 15%);
+$link-hover-decoration:                underline;
 
 
 
 
 //
-// Paragraphs
-// Style p element.
+//Paragraphs
+//Style p element.
 
- $carousel-control-color:           $primary;
- $carousel-control-opacity:         1;
+$carousel-control-color:               $primary;
+$carousel-control-opacity:             1;
 
-$paragraph-margin-bottom:           1rem !default;
+$paragraph-margin-bottom:              1rem !default;
 
-$navbar-padding:                    1em;
-
-
-//condensed menu nav-links
-$nav-link-padding-y:                2rem;
-$nav-link-padding-x:                2rem;
+$navbar-padding:                       1em;
 
 
-//expanded menu nav-links
-$navbar-nav-link-padding-y:			    unset;	
-$navbar-nav-link-padding-x:			    2rem;
-$navbar-brand-hover-text-decor:		  none;
-$navbar-nav-margin:                 0;
-$navbar-nav-background:				      rgba($black, .6);
-
-$navbar-background-color: 			    $black;
-$toggler-background-color:			    $primary;
-
-$navbar-all-text-hover-color:		    $accent;
-$navbar-brand-hover-color:			    $navbar-all-text-hover-color;
-$navbar-dark-hover-color:           $navbar-all-text-hover-color;
-$navbar-dark-color:                 $tungsten;          
-$navbar-dark-active-color:          $tungsten;
-$navbar-dark-disabled-color:        red;
-$navbar-dark-hamburger-icon:		    rgba($white, .5);
-$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
-
-$navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
-$navbar-light-disabled-color:       rgba($black, .3) !default;
-$navbar-light-hamburger-icon:		    unset;
-$navbar-light-toggler-border-color: rgba($black, .1) !default; 
+//condensed                            menu nav-links
+$nav-link-padding-y:                   2rem;
+$nav-link-padding-x:                   2rem;
 
 
-$capabilities-overlay-icon-fill-color: $tungsten;
-$capabilities-menu-icon-fill-color:   $primary;
-$qualifications-icon-fill-color:      $primary;
+//expanded                             menu nav-links
+$navbar-nav-link-padding-y:			       unset;	
+$navbar-nav-link-padding-x:			       2rem;
+$navbar-brand-hover-text-decor:		     none;
+$navbar-nav-margin:                    0;
+$navbar-nav-background:				         rgba($black, .6);
+
+$navbar-background-color: 			       $black;
+$toggler-background-color:			       $primary;
+
+$navbar-all-text-hover-color:		       $secondary;
+$navbar-brand-hover-color:			       $navbar-all-text-hover-color;
+$navbar-dark-hover-color:              $navbar-all-text-hover-color;
+$navbar-dark-color:                    $primary;          
+$navbar-dark-active-color:             darken($primary, 25%);
+$navbar-dark-disabled-color:           red;
+$navbar-dark-hamburger-icon:		       rgba($gray-600, .5);
+$navbar-dark-toggler-border-color:     rgba($white, .1) !default;
+
+$navbar-light-color:                   rgba($black, .5) !default;
+$navbar-light-hover-color:             rgba($black, .7) !default;
+$navbar-light-active-color:            rgba($black, .9) !default;
+$navbar-light-disabled-color:          rgba($black, .3) !default;
+$navbar-light-hamburger-icon:		       unset;
+$navbar-light-toggler-border-color:    rgba($black, .1) !default; 
+
+
+$capabilities-overlay-icon-fill-color: $secondary;
+$capabilities-menu-icon-fill-color:    $primary;
+$qualifications-icon-fill-color:       $primary;
 
 
 
@@ -266,7 +238,6 @@ $border-radius-sm:            .2rem !default;
 
 
 // Dropdowns
-//
 // Dropdown menu container and contents.
 
 $dropdown-menu-a-color:             $white;
@@ -281,36 +252,12 @@ $dropdown-link-color:               $gray-900 !default;
 $dropdown-link-hover-color:         darken($gray-900, 5%) !default;
 $dropdown-link-hover-bg:            $gray-100 !default;
 
-
-
 $dropdown-link-disabled-color:      $gray-600 !default;
 
 $dropdown-item-padding-y:           .25rem !default;
 $dropdown-item-padding-x:           1.5rem !default;
-
 $dropdown-header-color:             $gray-600 !default;
 
-
-
-
-/* 
-
- $nav-link-disabled-color:           $gray-600 !default;
-
-$nav-tabs-border-color:             $gray-300 !default;
-
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $body-bg  !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
-
-$navbar-toggler-padding-y:          .25rem    !default;
-$navbar-toggler-padding-x:          .75rem    !default; */
-
-// $navbar-height:                     4em; 
-
-
-// Navs
 
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
@@ -319,10 +266,12 @@ $nav-link-disabled-color:           $gray-600 !default;
 $nav-tabs-border-color:             $gray-300 !default;
 // $nav-tabs-border-width:             $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
+$nav-tabs-link-hover-border-color:  $gray-200; 
+$nav-tabs-border-color:             none !default;
 $nav-tabs-link-active-color:        $gray-700 !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: $gray-300; 
+$nav-tabs-link-active-bg:           $body-bg !default;
 
 $nav-pills-border-radius:           $border-radius !default;
 /* $nav-pills-link-active-color:       $component-active-color !default;
@@ -349,6 +298,8 @@ $navbar-toggler-padding-x:          .75rem !default;
 // $navbar-toggler-font-size:          $font-size-lg !default;
 // $navbar-toggler-border-radius:      $btn-border-radius !default;
 
+
+//* default bootstrap navbar styles
 $navbar-dark-color:                 rgba($white, .5) !default;
 $navbar-dark-hover-color:           rgba($white, .75) !default;
 $navbar-dark-active-color:          $white !default;
@@ -364,3 +315,22 @@ $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 
+
+//*=============================================
+//*=            custom button colors            =
+//*=============================================*/
+
+//* Jump link Buttons
+$button-light-foreground:           darken($primary, 15%);
+$button-light-background:           $primary;
+$button-light-border:               darken($primary, 15%);
+
+$button-dark-foreground:            $gray-600;
+$button-dark-background:            $gray-800;
+$button-dark-border:                $primary;
+
+$button-nuetral-foreground:         rgba($gray-600,.5);
+$button-nuetral-background:         $gray-700;
+$button-nuetral-border:             $gray-700;
+
+//* Expand/Contract

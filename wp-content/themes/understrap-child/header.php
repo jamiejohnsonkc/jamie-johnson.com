@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="container" >
 			
-				<a href="http://localhost:3000/" class="custom-logo-link" rel="home" itemprop="url">	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
+				<a href="/" class="custom-logo-link" rel="home" itemprop="url">	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
 
 
 				<div class="navbar-brand mb-0">

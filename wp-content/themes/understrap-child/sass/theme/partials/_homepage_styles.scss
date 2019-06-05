@@ -1,9 +1,37 @@
+.splash__label_divider {
+  color: $accent;
+}
 
+.splash__label--emph{
+  color: $accent;
+}
 
+.homepage__jump{
+ align-self: center;
+}
+
+.splash__container{
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
 /*=============================================
-=            //*home pag article styles      =
+=            //*home page article styles      =
 =============================================*/
+.splash__article--wrapper{
+    @media only screen and (max-height:500px){
+  height: 89vh;
+    }
+  }
+
+//  .article__wrapper--fluid{
+//     @media only screen and (max-height:500px){
+//   height: 89vh;
+//     }
+//   }
+
 
 .homepage{
   @include mq('desktop'){
@@ -86,8 +114,35 @@
 .body__container--placeholder {
   @include container();
   flex: 0 0 auto;
-  max-width: 100%;
-  width: 100%;
+}
+
+.placeholder__body-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.copy.placeholder__link--volley{
+min-height: 0;
+flex: 1 1 auto;
+display: flex;
+@include vr($margin: 2 0);
+}
+
+.placeholder__text-link{
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.overview__link--jump{
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  @include vr($margin:4 0 2 0);
 }
 
 .copy.copy__block--placeholder {
@@ -235,6 +290,7 @@ a.home-splash__jump{
   display: flex;
   width: 130%;
   height: 66em;
+  margin-left: 6%;
 //   >svg#Layer_1{
 //   min-height: 65em;
 //   flex: auto;
@@ -268,7 +324,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 top: 0;
-left: 6%;
+left: 20%;
   >h1{
   min-height: 4em;
   }
@@ -278,6 +334,7 @@ left: 6%;
   flex: 0 0 auto;
   display: flex;
   z-index: 8;
+  max-width: 83%;
 }
 @include mq('phone'){
   left: 8.5%;
@@ -460,7 +517,7 @@ max-width: 100%;
 .claim__title--emph {
   font-size: 3rem;
   @include vr($line-height:3.25);
-  color: $primary;
+  color: $accent;
   font-weight: 400;
 
   @include mq('phone') {
@@ -493,10 +550,17 @@ max-width: 100%;
 .claim__link--jump {
   display: flex;
   position: absolute;
-  transform: translateY(50%);
-  left: 50%;
+  transform: translateY(95%);
+  left: 64%;
   bottom: 0;
   z-index: 3;
+  @media only screen and (min-height:501px){
+   left: 67%;
+}
+@include mq('phablet'){
+  left: 45%;
+  bottom: 5%;
+}
 }
 
 
@@ -646,8 +710,8 @@ min-height: 0;
 }
 
 .hybrid__body-container {
-  @include vr($padding:0 .75);
-
+  @include vr($padding:0);
+max-width: 83%;
   @include mq('tablet') {
     flex: 0 0 61%;
     max-width: 61%;
@@ -669,7 +733,10 @@ min-height: 0;
 }
 
 .hybrid__copy-block {
-
+letter-spacing: .05em;
+@media only screen and (min-height:501px){
+  letter-spacing: .15em;
+}
   @include mq('phone') {}
 
   @include mq('tablet') {
@@ -682,10 +749,11 @@ min-height: 0;
 }
 
 .hybrid__link {
-  max-width: 100%;
-  width: 100%;
+
 
   @include mq('tablet') {
+    max-width: 100%;
+    width: 100%;
     @include vr($margin: 3 auto 1 auto);
 
   }
@@ -814,7 +882,7 @@ margin: unset;
   position: relative;
   width: 90%;
   max-width: 90%;
-flex: 0 1 auto;
+flex: 0 1 38em;
 min-height: 48em;
 background: $gray-800;
   // margin-top: -7em;
@@ -969,6 +1037,7 @@ justify-content: center;
 // }
 
 .stats__text-link {
+  text-align: center;
   @include mq('tablet') {
     @include vr($margin-top: 6);
   }
@@ -1045,9 +1114,11 @@ min-height: 0;
   // align-content: center;
   min-height:109em;
   flex: 0 1 auto;
+  border: .05em solid $gray-600;
+  padding: 8% 4%;
   // background: green;
   justify-content: space-between;
-  @include vr($margin: 2 auto);
+  @include vr($margin: 5 auto 3 auto);
     @include mq('phone') {
       width: 100%;
       max-width: 100%;
@@ -1070,7 +1141,7 @@ min-height: 0;
 display: flex;
 // position: relative;
 flex-direction: column;
-flex-wrap:wrap;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 width: 100%;
@@ -1176,7 +1247,7 @@ flex: 1 0 20%;
   // align-items: center;
   text-transform: uppercase;
   color: $offwhite;
-  font-weight: 300;
+  font-weight: 400;
   align-self: center;
   // background: blue;
 
@@ -1212,22 +1283,26 @@ margin: 0 auto 0 auto;
   }
 }
 
+.mo__accordian{
+  max-width: 90%;
+  @include mq('tablet'){
+    align-self: unset;
+    max-width: 83%;
+    min-height: 3em;
+    // background: yellow;
+    flex: 0 1 auto;
+    display: flex;
+}
+}
+
 .mo__diagram-copy{
-@include vr($font-size: 2);
-font-weight: 200;
-max-width: 90%;
-@include mq('tablet'){
-  align-self: unset;
-  max-width: 83%;
-  min-height: 3em;
-  // background: yellow;
-  flex: 0 1 auto;
-  display: flex;
-}
-@include mq('desktop'){
+  @include vr($font-size: 2, $line-height: 2.5);
+  font-weight: 200  ;
+
+  @include mq('desktop'){
   @include vr($font-size: 1, $line-height: 2);
-}
-}
+    }
+  }
 
 .mo__expand-button{
   align-self: center;
@@ -1261,7 +1336,7 @@ min-height: 32vh;
 text-align: center;
 justify-content: center;
 align-items: center;
-background: $pattens;
+background: $primary;
 border-top: 6em solid $white;
 // align-content: center;
 // background: $primary;
@@ -1280,7 +1355,6 @@ text-align: center;
   border: 2px solid $white;
   padding: 4%;
   // color: $white;
-  @extend .title;
   color: $gray-600;
   text-transform: uppercase;
   font-weight: 600;
@@ -2038,7 +2112,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-min-height: 50vh;
+min-height: 60em;
 text-align: center;
 }
 
@@ -2147,7 +2221,8 @@ height: 140em;
       flex: 0 1 auto;
       position: relative;
       max-width: 100%;
-      height: 85em;
+      width: 100%;
+      height: 83em;
       overflow: hidden;
       border: 2px solid $white;
       @include mq('phone'){}
@@ -2310,12 +2385,14 @@ height: 140em;
           flex-direction: column;
           flex: 0 1 auto;
           align-items: center;
-          justify-content: center;
+          justify-content: space-around;
           height: 42em;
           // &:hover{
           // color:$primary;
           // }
-
+        //   @media only screen and (min-height:501px){
+        //     height: 50em;
+        // }
         @include mq('tablet'){
           width: 50%;
           max-width: 50%;
@@ -2541,12 +2618,12 @@ height: 140em;
       }
       .img-hell-yes{
        width: auto;
-       max-width: 310%;
+       max-width: 332%;
        margin-left: -120%;
        }
       .img-engage{
        width: auto;
-       max-width: 303%;
+       max-width: 367%;
        margin-left: -111%;
         }
 
@@ -2761,6 +2838,7 @@ height: 100%;
       
      flex-direction: row;
      flex-wrap: wrap;
+     margin: 0 auto;
      @include mq('tablet'){
       width: 83%;
       max-width: 83%;
@@ -2805,30 +2883,39 @@ height: 100%;
 .services-list__content-item{
   display: flex;
   // min-height: 20em;
-  flex: 0 1 47%;
+flex: 0 1 45%;
   align-items: center;
   justify-content: center;
   // border: thin solid #999;
   @include vr($margin: .5);
-  background: $pattens;
+  background: $primary;
   color: $black;
   border-radius: 5px;
   @include light-shadow();
-
+@include mq('tablet-wide'){
+  flex: 0 1 47%;
+}
 }
 
 .services-list__deck-header{
   width: unset;
   max-width: unset;
   display: flex;
+
+  @include vr($padding: 4%, $font-size: 1, $line-height: 1.25);
+  @include mq('tablet-wide'){
   @include vr($padding: 8%, $font-size: 1, $line-height: 1.5);
 letter-spacing: .15em;
+  }
 }
 
 .services-list__text-link{
 z-index: 3;
 position: relative;
-display: block;
+display: flex;
+align-items: center;
 width: 100%;
-@include vr($margin-top: 2);
+color: $accent;
+@include vr($margin-top: 4, $padding: .25 1);
+background: rgba(255,255,255, .8);
 }

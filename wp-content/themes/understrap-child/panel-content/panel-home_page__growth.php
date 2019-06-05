@@ -27,6 +27,7 @@ if (!defined('ABSPATH')) {
 				<div class="growth__headline-header">GET COMPETITIVE</div>
 				<div class="copy__header growth__copy-header">Design and deliver superior competitive value.</div>
 				<div class="button overlay__button growth__overlay-button">maximize advantage</div>
+				<a href="/" class="button ui-button__jump get-competitive__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
 		</div>
 		<div class="content__item growth__content-item">
@@ -37,8 +38,10 @@ if (!defined('ABSPATH')) {
 				<div class="copy__header growth__copy-header">Don't go to the market. Bring the market to you.</div>
 				<div class="button overlay__button growth__overlay-button">start conversations</div>
 			</div>
+			<a href="/" class="button ui-button__jump get-found__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 		</div>
-		<div class="content__item growth__content-item growth__content-item--last">
+		<!-- <div class="content__item growth__content-item">
 			<div class="image__container growth__image-container"><img src="/wp-content/uploads/2019/05/growth-3.jpg" class="img-engage" alt="..."></div>
 			<div class="growth__image--overlay"></div>
 			<div class="growth__content-item--container">
@@ -46,6 +49,18 @@ if (!defined('ABSPATH')) {
 				<div class="copy__header growth__copy-header">But don't sell. Help.</div>
 				<div class="button overlay__button growth__overlay-button">generate trust</div>
 			</div>
+			<a href="/" class="button ui-button__jump get-sold__link--jump" title="read more">?php get_template_part('buttons/button', 'jump'); ?></a>
+		</div> -->
+		<div class="content__item growth__content-item">
+		<div class="image__container growth__image-container"><img src="/wp-content/uploads/2019/05/growth-3.jpg" class="img-engage" alt="..."></div>
+			<div class="growth__image--overlay"></div>
+			<div class="growth__content-item--container">
+				<div class="growth__headline-header">GET SOLD</div>
+				<div class="copy__header growth__copy-header">But don't just sell. Help.</div>
+				<div class="button overlay__button growth__overlay-button">earn trust</div>
+			</div>
+			<a href="/" class="button ui-button__jump get-more__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 		</div>
 		<div class="content__item growth__content-item">
 			<div class="image__container growth__image-container"><img src="/wp-content/uploads/2019/05/growth.jpg" class="img-hell-yes" alt="..."></div>
@@ -55,6 +70,8 @@ if (!defined('ABSPATH')) {
 				<div class="copy__header growth__copy-header">More business. More ROI. You know. More.</div>
 				<div class="button overlay__button growth__overlay-button">optimize performance</div>
 			</div>
+			<a href="/" class="button ui-button__jump get-more__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 		</div>
 	</div>
 </article>

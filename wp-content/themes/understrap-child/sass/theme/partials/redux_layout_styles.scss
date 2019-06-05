@@ -1237,7 +1237,7 @@ p.homepage-summary__claim--fancy {
     flex-direction: column;
     justify-content: center;
     min-height: 75em;
-    background: $pattens;
+    background: $primary;
     width: 100%;
     overflow: visible;
 
@@ -1414,7 +1414,7 @@ p.homepage-summary__claim--fancy {
 
   .st0 {
     fill: $offwhite;
-    stroke: darken($pattens, 10%);
+    stroke: darken($primary, 10%);
     stroke-width: 12px;
     stroke-linecap: round;
   }
@@ -2026,7 +2026,7 @@ p.homepage-summary__claim--fancy {
     align-items: center;
     flex: 0 0 auto;
     padding: 4%;
-    background: lighten($pattens, 5%);
+    background: lighten($primary, 5%);
     @include vr($margin-top: 1);
   }
 }
@@ -2227,7 +2227,7 @@ p.homepage-summary__claim--fancy {
 }
 
 .hybrid-icon {
-  fill: $white;
+  fill: $black;
   background: $primary;
 //   border: 1px solid $white;
 }
@@ -2239,14 +2239,6 @@ p.homepage-summary__claim--fancy {
 }
 
 
-.container__accordion {
-  display: none;
-  @include vr($padding-bottom: 4);
-
-  &--expertise {}
-
-  &--mymo {}
-}
 
 .text--white {
   color: $white;
@@ -2262,8 +2254,4 @@ p.homepage-summary__claim--fancy {
 //   -webkit-transform: rotate(90deg);
 //   -ms-transform: rotate(90deg);
 
-.rotate{
-  transform: rotate(90deg);
-  transition: all .3s ease-in-out;
 
-}

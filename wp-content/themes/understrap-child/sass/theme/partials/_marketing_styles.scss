@@ -1,0 +1,133 @@
+
+
+.marketing__intro-overlap{
+  overflow: hidden;
+  height: unset;
+}
+
+
+.marketing-splash__article{
+  overflow: visible;
+  position: relative;
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  @media only screen and (max-height: 500px) {
+  justify-content: center;
+  align-items: center;
+  }
+}
+
+.marketing-splash__header-wrapper{
+  height: 95vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.marketing-splash__header{
+  z-index: 2;
+  display: flex;
+  max-width: 90%;
+  min-height: 10em;
+  width: 90%;
+flex: 1 1 auto;
+align-items: center;
+  @media only screen and (max-height: 500px) {
+
+}
+
+@media only screen and (min-height: 501px) {
+  flex: 0 1 55%;
+}
+}
+
+
+
+
+
+.marketing-splash__intro-background-img{
+z-index: 1;
+overflow: visible;
+}
+
+
+.marketing__splash-img{
+  height: auto;
+  display: block;
+  overflow: visible;
+  @media only screen and (max-height: 500px) {
+    width: 200%;
+    margin-left: -58%;
+    margin-top: -31%;
+  }
+  width: 239%;
+  margin-left: -55%;
+  margin-top: 22%;
+  .cls-1{
+    fill: $ash-gray;
+  }
+  z-index: 1;
+}
+
+
+.better-intro__article{
+ @include az-subtle();
+ min-height: 60em;
+}
+
+.image__container--carousel-item{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+//* CTA
+
+.marketing-cta__content-container{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.cta__container--marketing{
+  height: 45em;
+  display: flex;
+  max-width: 83%;
+@include mq('tablet-wide'){
+  height: 100%;
+  max-width: 100%;
+
+}
+}
+
+.marketing-cta__image-container{
+  overflow: hidden;
+}
+
+.hire-img{
+  height: 60em;
+  width: auto;
+  max-width: 200%;
+  display: block;
+  margin-left: -25%;
+  overflow: hidden;
+  @include mq('tablet-wide'){
+    height: auto;
+    width: 150%;
+  }
+}
+
+//! controls to reorder images in carousel-items on small screens
+// .expertise__carousel-item.carousel-item{
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .expertise-carousel-item__header{order: 1}
+// .expertise-carousel-item__list  {order: 3}
+// .image__container--carousel-item{order: 2}
+

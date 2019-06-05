@@ -37,8 +37,9 @@ if (!defined('ABSPATH')) {
 		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">> capabilities planning &amp; development</h3></div>
 
 	</div>
-	<p class="link link__text services-list__text-link">See A Complete List of My Capabilities</p>
+	<p class="link link__text--positioned services-list__text-link">See A Complete List of My Capabilities</p>
+	
 	</div>
-
+			<a href="/" class="button ui-button__jump--positioned intro-services__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
 </section>

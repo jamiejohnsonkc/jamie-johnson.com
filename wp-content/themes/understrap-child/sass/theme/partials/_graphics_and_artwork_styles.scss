@@ -365,7 +365,7 @@ min-height: 32em;
 svg#services__arrow--img{
 // fill: rgba(119, 221, 255, .2);
     // fill: rgba(128,128,128,.3);
-fill: rgba(50, 50, 50, .5);
+fill: $primary;
 stroke-linecap: round; 
 stroke-miterlimit:10;
 //     stroke: $black;
@@ -391,10 +391,10 @@ display: block;
 
 #svg__blue_a2--bg{
      #A_outline{
-      stroke: $pattens;
+      stroke: $primary;
     } 
     #dots, #solid_dots{
-      fill: $pattens;
+      fill: $primary;
     } 
     #grid, #pattern{
         stroke: #76D4F4;
@@ -409,7 +409,7 @@ display: block;
       stroke: $gray-300;
     }
    #solid_dots, #dots{
-      fill: $tungsten;
+      fill: $dark-sea-green;
     } 
 }
 
@@ -515,5 +515,5 @@ fill: $offwhite;
 }
 
 // .arrow-up-svg{
-//     fill: $pattens;
+//     fill: $primary;
 // }

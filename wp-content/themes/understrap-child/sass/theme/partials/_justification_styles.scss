@@ -3,6 +3,52 @@ a.justification-splash__jump{
 margin-left: 0;
 }
 
+
+.section--justification-splash{
+height: unset;
+min-height: 95vh;
+@media only screen and (min-height: 500px) {  
+  // min-height: 100vh;
+  }
+  @include mq('tablet-wide'){
+    height: 95vh;
+  }
+}
+.justification-splash__article-wrapper{
+  @media only screen and (max-height:500px){
+    height: 88vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (min-height:500px){
+  height: 95vh;  
+  justify-content: center;
+  
+  }
+  @include mq('tablet-wide'){}
+  
+}
+
+.container--services-splash{
+  @me  dia only screen and (min-height: 500px) {  
+  justify-content: center;  
+  } 
+}
+// .justification-splash__section{
+//   min-height: 200vh;
+//   @media only screen and (min-height: 500px) {  
+//   min-height: 100vh;
+//   }
+// }
+
+.justification-splash__container{
+height: 100%;
+}
+
+
 .container.business-value.justification__container{
   @include mq('desktop'){
     width: 83%;
@@ -81,7 +127,7 @@ width: 300%;
 }
 
 .justification__container_optimize{
-  // background: lighten($color: $pattens, $amount: 5%);
+  // background: lighten($color: $primary, $amount: 5%);
   width: 100%;
   padding: 16% 5%;
   background: $offwhite;
@@ -103,7 +149,7 @@ background: $offwhite;
 }
 
 .diagram__list-item-container--objectives {
-  background: lighten($color: $pattens, $amount: 5%);
+  background: lighten($color: $primary, $amount: 5%);
   border: none;
   padding: 12% 0;
   @include light-shadow();

@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <section class="section section--splash section--justification-splash">
-<article class="article__wrapper--fluid s article--services-splash bgbell">
+<article class="article__wrapper--fluid splash__article--wrapper article--services-splash bgbell">
 		
-		<div class="container container--services-splash container--splash">
+		<div class="container container--services-splash container--splash  splash__container">
 		<h1 class="pagination pagination--center pagination--services-splash">how can i help you</h1>
 		<h2 class="title title--center">Modern &amp; Comprehensive <br>Marketing Services</h2>
 		<h3 class="title-sub title-sub--center">Hell bent on <br class="services__splash_br">service,<br class="services__splash_br services__splash_br--service"> performance<br class="services__splash_br"> &<br class="services__splash_br"> quality.</h3>
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 		</a> -->
 
-		<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__services-splash--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+		<a href="#services-summary" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 
 		</div>

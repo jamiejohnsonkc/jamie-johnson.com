@@ -19,8 +19,11 @@ if (!defined('ABSPATH')) {
 	</div>
 	<div class="combination__panel_wrapper proof__panel_wrapper--stats stats__carousel-wrapper">
 		<div class="proof__stats_panel stats__carousel-container">
+
+
 			<div class="proof__content_carousel carousel slide stats__carousel--inner-wrapper" id="stats-slider" data-interval="false">
 				<div class="carousel-inner one-up-carousel stats__one-up-carousel--inner-content">
+					
 					<div class="carousel-item one-up stats__carousel-item--one-up active">
 						<div class="proof-quals stats__carousel-content">
 							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
@@ -220,8 +223,9 @@ if (!defined('ABSPATH')) {
 			</a>
 		</div>
 	</div>
-	<div class="link__text--container stats__text-link--container"><a href="/" class="link link__text stats__text-link">See where I've been</a></div>
-	<div class="link__jump--container stats__jump-link--container"><a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--white-primary stats__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+<a href="/" class="link link__text--flex stats__text-link">See where I've been</a>
+
+	<a href="/" class="button ui-button__jump--positioned stats__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
 <!-- </div> -->
 <!-- cover end --> 

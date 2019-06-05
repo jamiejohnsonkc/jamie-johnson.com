@@ -24,9 +24,10 @@ exit; // Exit if accessed directly.
 
 	
 
-	<div class="body__container body__container--placeholder">
-		<p class="copy copy__block copy__block--placeholder copy--bold">Seen Enough?</p>
-		<p class="link link__text placeholder__text-link">Yep. He's amazing. I'm gonna click this and hire him.</p>
+	<div class="body__container--flex body__container--placeholder placeholder__body-container">
+		<p class="copy copy__block copy__block--placeholder placeholder__link--volley copy--bold">Seen Enough?</p>
+		<a class="link link__text placeholder__text-link">Yep. He's amazing. I'm gonna click this and hire him.</a>
+		<a href="#services-summary" class="button ui-button__jump overview__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 	</div>
 	<!-- <div class="link link__text link--hybrid">> Quis ex laborum non id</div> -->
 

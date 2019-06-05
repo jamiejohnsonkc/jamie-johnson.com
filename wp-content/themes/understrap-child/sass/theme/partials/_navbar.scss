@@ -362,7 +362,7 @@ fill: $navbar-dark-hamburger-icon;
 }
 
 .navbar-dark .navbar-brand a {
-    color: $navbar-dark-active-color;
+    color: $primary;
 
     @include hover-focus {
       color: $navbar-brand-hover-color;

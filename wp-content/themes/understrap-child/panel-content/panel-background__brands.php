@@ -55,12 +55,12 @@ exit; // Exit if accessed directly.
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
-			<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text">Exercitation sunt adipisicing reprehendert</a></div>
+			<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text--flex brands__link--text">Exercitation sunt adipisicing reprehendert</a></div>
 		
 		</div>
 		</div>
 	</div>
-	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-brands--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#services-summary" class="button ui-button__jump brands__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 </div>
 

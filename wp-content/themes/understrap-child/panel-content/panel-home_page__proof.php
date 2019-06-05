@@ -32,7 +32,10 @@ if (!defined('ABSPATH')) {
 					class="evo2small" alt="..."></div>
 		
 		<a class="link link__text proof__link-text outcomes__link-text">Learn more about my POV</a>
-</div>
+		<a href="/" class="button ui-button__jump proof-outcomes__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
+
+	</div>
+
 	</article>
 
 	<article class="proof__article--wrapper end2end__article-wrapper"> 
@@ -81,6 +84,8 @@ if (!defined('ABSPATH')) {
 			</div>
 			<a class="link link__text link__text--primary proof__link-text">See a complete list of my capabilities</a>
 	</div>
+	<a href="/" class="button ui-button__jump proof-end2end__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
+
 </article>
 
 	<article class="proof__article--wrapper centricity__article-wrapper"> 
@@ -96,6 +101,7 @@ if (!defined('ABSPATH')) {
 			</div>
 			<a class="link link__text link__text--primary proof__link-text">Review my service offerings</a>
 </div>
+<a href="/" class="button ui-button__jump proof-professional__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
 	</div></article>
 
 	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>

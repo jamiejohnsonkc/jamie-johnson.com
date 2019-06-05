@@ -390,7 +390,7 @@
 //     }
 
 //     #Layer_2 .st0 {
-//         // fill: $tungsten;
+//         // fill: $dark-sea-green;
 //         fill: $primary;
 //     }
 //     polygon {

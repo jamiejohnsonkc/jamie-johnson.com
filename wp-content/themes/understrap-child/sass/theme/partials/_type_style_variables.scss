@@ -348,7 +348,21 @@ p {
 
   &__container {
     @include container();
+  
+    &--compensated{
+    display: flex;
+    flex: 0 1 auto;
+    @media only screen and (max-height:500px){
+      height: 97%;
   }
+  @media only screen and (min-height:501px){
+   flex: 1;
+}
+@include mq('tablet'){
+  min-height: 100%;
+}
+} 
+}
 
   &--fluid {
     width: 100%;
@@ -783,7 +797,7 @@ p {
   }
 
   &--border {
-    border: thin solid $pattens;
+    border: thin solid $primary;
   }
 
   &--sticky {
@@ -977,6 +991,12 @@ p {
 
   &--combination {
     padding-left: 4%;
+  }
+  &__jumbo {
+    font-weight: 600;
+    letter-spacing: -.035em;
+    @include title__jumbo();
+
   }
 }
 
@@ -1247,17 +1267,16 @@ p {
 
 .deck {
 
-
   @include mq("tablet") {
     letter-spacing: .05em;
   }
-
 
   &__header {
     @include header__deck;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: .03em;
+    color: inherit;
     @include mq("tablet") {
       width: 81%;
       max-width: 81%;
@@ -1339,6 +1358,19 @@ p {
   text-transform: uppercase;
   letter-spacing: .03em;
   }
+  &__block--flex{
+    @include block__deck;
+    font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  max-width: 83%;
+  min-height: 0;
+display: flex; 
+  @include mq("tablet") {
+    letter-spacing: .05em;
+  }
+  flex: 0 1 auto;
+  }
 
   &__item {
     @include item__deck;
@@ -1406,10 +1438,18 @@ p {
 
       }
     }
-  }
+    }
 
-&__container--83{
+  &__container--83{
   @include container--83();
+    }
+
+&__container--flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
 }
 
   &__header {
@@ -1472,6 +1512,7 @@ p {
       margin-top: 0;
     }
 
+
     &--capabilities-overlay {
       flex: 0 0 auto;
       display: flex;
@@ -1493,6 +1534,15 @@ p {
       margin-right: auto;
       // letter-spacing: .025rem;
     }
+  }
+
+  &__block--flex{
+    @include block__copy;
+    display: flex;
+    flex: 0 1 auto;
+    min-height: 0;
+    @include vr($margin-top: 1, $margin-bottom: 1);
+max-width: 83%;
   }
 
   &__item {
@@ -1542,6 +1592,12 @@ p {
 
 }
 
+.copy__container--flex-item{
+display:flex;
+flex: 0 1 auto;
+min-height: 0;
+}
+
 .copy.copy__container {
   @include vr($margin-top: 1, $margin-bottom: 0);
 
@@ -1564,14 +1620,20 @@ p {
 
   &__header {
     @include header__list-head;
+    font-weight: 400;
+    letter-spacing: .025em;
   }
 
   &__block {
     @include block__list-head;
+    font-weight: 400;
+    letter-spacing: .025em;
   }
 
   &__item {
     @include item__list-head;
+    font-weight: 400;
+    letter-spacing: .025em;
 
     &--self-left {
       align-self: flex-start;
@@ -1586,7 +1648,7 @@ p {
     @include vr($padding: 0.25 0.5, $margin-bottom: 1);
 
     &--pattens {
-      background: $pattens;
+      background: $primary;
     }
   }
 
@@ -2031,13 +2093,13 @@ display: flex;
       align-items: center;
       background: rgba(020, 020, 020, .8);
       min-height: 40em;
-      // border: .5em solid $pattens;
+      // border: .5em solid $primary;
       @include vr($padding: 2 2, $margin-top: 1, $margin-bottom: 1);
 
       @include mq("tablet") {}
 
       @include mq("tablet-wide") {
-        // border: .25em solid $pattens;
+        // border: .25em solid $primary;
         // }
         min-height: 0;
 
@@ -2141,8 +2203,16 @@ display: flex;
   }
 
   &--expertise {}
-
-}
+  &--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    }
+  }
 
 .body__component {
   &__expertise {

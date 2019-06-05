@@ -402,7 +402,7 @@ text.st6.st7 {
     }
 
     #Layer_2 .st0 {
-        // fill: $tungsten;
+        // fill: $dark-sea-green;
         fill: $primary;
     }
     polygon {

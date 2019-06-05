@@ -99,6 +99,7 @@ html [type=button] {
 
 body {
     height: 100%;
+    padding-top: 6.75em;
     // padding-top: $navbar-height;
 //  @include vr-grid(); 
 /*      flex-direction: column; */
@@ -206,9 +207,19 @@ body {
   color: $primary;
 }
 
+.secondary{
+  color: $secondary;
+}
+
+.accent{
+  color: $accent;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
+
+
 
 //*  safari / ios global fixes *//@mixin 
 

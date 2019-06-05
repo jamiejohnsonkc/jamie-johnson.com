@@ -1,3 +1,17 @@
+.background-splash__article-wrapper{
+  @media only screen and (min-height:500px){
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+
+
 .background__splash-pagination{
   margin-top: auto;
   margin-bottom: 3em;
@@ -72,7 +86,7 @@ overflow: visible;
   align-items: center;
   flex: 0 0 auto;
 
-  background: $pattens;
+  background: $primary;
   @include mq('tablet'){
     margin-top: -20em;
     z-index: 3;
@@ -146,8 +160,8 @@ max-width: 100%;
     // flex: 0 0 24%;
     // max-width: 24%;
     height: 24em;
-    background: lighten($color: $pattens, $amount: 5%);
-    border: 1px $pattens solid;
+    background: lighten($color: $primary, $amount: 5%);
+    border: 1px $primary solid;
   }
 }
 

@@ -23,7 +23,7 @@ exit; // Exit if accessed directly.
 						<h3 class="deck deck__header--services-summary">Modern Marketing Services<br class="services__summary-head_subhead--br">Prescriptive Solutions<br class="services__summary-head_subhead--br">Customer Centricity</h3>
 						<p class="copy copy__header">Dolore pariatur anim culpa do sunt nulla dolor reprehenderit ullamco nostrud proident do est exercitation enim ullamco sed.</p>
 						<p class="copy copy__header">Occaecat ad qui ut cupidatat elit magna est ea.</p>
-						<a href="#service-areas" class="button ui-button ui-button__jump ui-button__jump--primary-white" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<a href="#service-areas" class="button ui-button__jump services-summary__link-jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				<!-- 	</div> -->
 				</div>
 		<!-- 	</div> -->
@@ -64,6 +64,8 @@ exit; // Exit if accessed directly.
 					</div>
 				</div>
 			</div>
+									<a href="#service-areas" class="button ui-button__jump services-summary__link-jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 			<a class="link link__chevron services__link_advance-chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 <!-- 		</div> -->

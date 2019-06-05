@@ -10,7 +10,12 @@ exit; // Exit if accessed directly.
 ?>
 <!-- <article class="article__wrapper  basic homepage homepage__howidoit">
 	<div class="container homepage__howidoit__container"> -->
-		<article class="article__wrapper">
+
+	
+	
+	
+	
+	<article class="article__wrapper">
 			<div class="container" id="canvas">
 
 

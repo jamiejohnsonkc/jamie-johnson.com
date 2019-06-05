@@ -165,7 +165,7 @@ exit; // Exit if accessed directly.
 			</div>
 	
 	</div>
-	<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-categories--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#services-summary" class="button ui-button__jump categories__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 </article>
 </section>

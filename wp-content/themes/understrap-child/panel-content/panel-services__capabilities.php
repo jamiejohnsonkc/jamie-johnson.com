@@ -510,8 +510,7 @@ if (!defined('ABSPATH')) {
 					</div>
 				</nav>
 			</div>
-			<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" /></a>
+			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 	</article>
 </section>

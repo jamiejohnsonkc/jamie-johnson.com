@@ -60,16 +60,17 @@ exit; // Exit if accessed directly.
 	</div>
 
 
-	<div class="body__container body__container--combination hybrid__body-container">
-	<div class="hybrid__copy-container--background">	
-	<p class="deck deck__block copy__block--intro copy--bold hybrid__copy-block">I combine business savvy, strategic design and
-			technology to achieve outcomes.</p>
-		<p class="copy copy__block copy__block--intro hybrid__copy-block">Be it strategic, operational or tactical, I can help you diagnose your challenge, help you find a solution
-			and then  I'll help you bring it to fruition. Or mix and match &mdash; up to you.</p>
-			<div class="link link__text link--hybrid hybrid__link">> see a list of my consulting, development and execution services</div>
-	</div>
-	</div>
+	<div class="body__container--flex hybrid__body-container">
+	<div class="copy__container--flex hybrid__copy-container--background">	
+	<p class="deck__block--flex copy--bold hybrid__copy-block">I combine business savvy, strategic design and technology to achieve outcomes.</p>
+		<p class="copy__block--flex copy__block--intro hybrid__copy-block">Be it strategic, operational or tactical, I can help you diagnose your challenge, help you find a solution	and then  I'll help you bring it to fruition. Or mix and match &mdash; up to you.</p>
+		
+		<div class="link__text--flex link__text link--hybrid hybrid__link">> see a list of my consulting, development and execution services</div>
 
+	</div>
+	<a href="/" class="ui-button__jump--positioned hybrid__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	</div>
+	
 
 
 	<!-- <h5 class="deck deck__block deck__block--intro">Strategy &plus; Creativity &plus; Technology I'll devise it, develop it and deploy it.</h5> -->
@@ -223,6 +224,7 @@ exit; // Exit if accessed directly.
 	</div> -->
 	<!-- 
 <a class="ui-button ui-button__jump ui-button__jump--white-primary" href="http://jamiejohnsonmev2.test/page#div" title="go to next">php get_template_part( 'buttons/button', 'jump' ); ?></a> -->
+
 
 </article>
 

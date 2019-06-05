@@ -48,6 +48,12 @@ b
 // =========================================================================
 // homepage splash
 // =========================================================================
+.homepage-article__container{
+ position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    height: 100%;
+}
 .container.container--splash-homepage {
 
   padding-left: 0;
@@ -152,7 +158,7 @@ b
 @include mq('tablet-wide'){
 
 .home__splash-header_container{
-  background: $pattens;
+  background: $primary;
 }
 
 .home__splash_greeting{
@@ -202,7 +208,7 @@ b
 
 
 .splash__label--emph {
-  color: $primary;
+  color: $accent;
   font-weight: 400;
   // text-transform: uppercase;
 }
@@ -251,17 +257,17 @@ text-align: center;
 }
 
 .content__intro_icon--background{
-  // background: $pattens;
-  // border: .5em solid $pattens;
+  // background: $primary;
+  // border: .5em solid $primary;
   // @include mq("tablet-wide"){
-  //   border: .25em solid $pattens;
+  //   border: .25em solid $primary;
   background: #000;
   
 }
 
 
 .intro__icon svg, .intro__icon--rocket #Performance>.cls-1{
-fill: $pattens;
+fill: $primary;
 }
 
 // .intro-icon--flex-item_wrapper--icon{
@@ -355,7 +361,7 @@ fill: $pattens;
 // homepage-summary__claim
 //
 // .homepage-claim__wrapper{
-//  background: $pattens;
+//  background: $primary;
 // width: 100%;
 
 // }
@@ -415,8 +421,8 @@ text-align: justify;
 }
 
 .expertise__intro_headline--border{
-border-top: 1px solid $pattens;
-border-bottom: 1px solid $pattens;
+border-top: 1px solid $primary;
+border-bottom: 1px solid $primary;
 @include vr($padding: 2 0);
 }
 
@@ -455,7 +461,7 @@ font-style: italic;
 
 
 .strengths__page-header_container{
-  // border: 1.5em solid $pattens;
+  // border: 1.5em solid $primary;
   background: $black;
 color: $white;
 
@@ -1166,7 +1172,6 @@ font-family: $font-family-serif;
 // services summary
 // ==========================================================================
 .pagination--services-splash{
-  margin-top: auto;
   @include mq('tablet-wide'){
     color: $white;
   }
@@ -1336,7 +1341,7 @@ padding-left: 2em;
 
 .services__panel_list-head{
 
-  background: $pattens;
+  background: $primary;
   padding: .5em;
   width: 90%;
   text-align: center;
@@ -1450,7 +1455,7 @@ padding-left: 2em;
 
 
 .my-capabilities__main-page {
-// background: $pattens;
+// background: $primary;
 }
 
 .my-capabilities__panel-head{
@@ -1480,7 +1485,7 @@ font-weight: 400;
 
 
 .capabilities__menu_item {
- background: lighten($pattens, 5%);
+ background: lighten($primary, 5%);
 }
 
 
@@ -1513,7 +1518,7 @@ font-weight: 400;
   color: $offwhite;
 }
 //   .expt-body-text, .expt-vert {
-//     color: $tungsten;
+//     color: $dark-sea-green;
 //   }
 
 //   hr {
@@ -1623,7 +1628,7 @@ text-align: center;
   // height: 100%;
   // position: absolute;
   // width: 25%;
-  // background: $pattens;
+  // background: $primary;
   // z-index: -1;
   // left: -2em;
   // top: -2em;
@@ -2118,7 +2123,7 @@ text.st3.st4.st5{
     }
 
     #Layer_2 .st0 {
-        // fill: $tungsten;
+        // fill: $dark-sea-green;
         fill: $primary;
     }
     polygon {
@@ -2150,7 +2155,7 @@ text.st3.st4.st5{
 @include mq('tablet'){}
 @include mq('tablet-wide'){
   .page__header-text_container--grow, .page__header-text_container--modernize{
-    background: $pattens;
+    background: $primary;
   }
 
 }
@@ -2193,12 +2198,12 @@ background: #f2f2f2;
 
 .header--services-summary{
   @include mq("phone", $type:max){
-border: 1em solid lighten($pattens,5%);
+border: 1em solid lighten($primary,5%);
   }
 
-border: 1.5em solid lighten($pattens,5%);
-// background: darken($pattens, 2%);
-background: $pattens;
+border: 1.5em solid lighten($primary,5%);
+// background: darken($primary, 2%);
+background: $primary;
 
 }
 
@@ -2226,7 +2231,7 @@ height:auto;
   color: $gray-800;
       text-align: center;
     border-radius: .25em;
-    border: .15em solid darken($pattens, 15%);
+    border: .15em solid darken($primary, 15%);
     @include vr($padding: .25);
 }
 

@@ -103,7 +103,10 @@
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 					</a>
 				</div>
+			
+			
 			</div>
+			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
 
 		</article>
 
@@ -117,9 +120,12 @@
 					<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">Forget the smoke &amp; mirrors</h3>
 				</div>
 
+
+
 				<div class="diagram__header diagram__header--reasons">
 					<p class="deck deck__header deck__header--reasons deck__header--value">The defining characterstic of post-digital is not digital technology.</p>
 					<p class="justification__page-header_text deck__header--value">It's the inversion of buyer &amp; seller relationship dynamics.</p>
+					<p class="justification__page-header_text deck__header--value">The essential ingredient for successful marketing is the effective management of value. The value your business offers, the value customers desire and the exercise of bringing the two into alignment.</p>  
 					<p class="justification__page-header_text deck__header--value"> What customers value, how they buy and what they expect from sellers are redefining traditional approaches to marketing.</p>
 				</div>
 				<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">

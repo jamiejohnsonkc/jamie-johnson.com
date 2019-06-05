@@ -41,7 +41,7 @@ exit; // Exit if accessed directly.
 					<p class="commitment__body_copy"><span class=" commitment__body-copy--leader">I know my limits.</span> I'm good at what I do, but no one is good at everything. If I'm not right for the job, I'll tell you. Then I'll help you find someone who is.</p>
 					<p class="commitment__body_copy"><span class=" commitment__body-copy--leader">I try to stick to plain English.</span> I do my best to keep all the technical and mystical marketing mumbo-jumbo to a minimum.</p>
 				</div>
-		<a href="#services-summary" class="button ui-button ui-button__jump ui-button__jump--primary-white link__background-brands--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+		<a href="#services-summary" class="button ui-button__jump committment__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
 		</article>
 	</section>

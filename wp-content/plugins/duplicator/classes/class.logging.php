@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 // Exit if accessed directly
 if (!defined('DUPLICATOR_VERSION')) exit;
 
@@ -108,7 +109,7 @@ class DUP_Log
 			$unique_id = sprintf("%08x", abs(crc32($_SERVER['REMOTE_ADDR'].$_SERVER['REQUEST_TIME'].$_SERVER['REMOTE_PORT'])));
 
 			if ($calling_function_override == null) {
-				$calling_function = SnapLibUtil::getCallingFunctionName();
+				$calling_function = DupLiteSnapLibUtil::getCallingFunctionName();
 			} else {
 				$calling_function = $calling_function_override;
 			}

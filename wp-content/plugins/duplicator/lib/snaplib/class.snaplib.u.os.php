@@ -1,22 +1,30 @@
 <?php
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Snap OS utils
+ *
+ * Standard: PSR-2
+ * @link http://www.php-fig.org/psr/psr-2
+ *
+ * @package DupLiteSnapLib
+ * @copyright (c) 2017, Snapcreek LLC
+ * @license	https://opensource.org/licenses/GPL-3.0 GNU Public License
+ *
  */
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-if(!class_exists('SnapLibOSU')) {
-class SnapLibOSU
-{
-    const WindowsMaxPathLength = 259;
-    public static $isWindows;
+if (!class_exists('DupLiteSnapLibOSU', false)) {
 
-    public static function init() {
+    class DupLiteSnapLibOSU
+    {
+        const WindowsMaxPathLength = 259;
 
-        self::$isWindows = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
+        public static $isWindows;
+
+        public static function init()
+        {
+
+            self::$isWindows = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
+        }
     }
+    DupLiteSnapLibOSU::init();
 }
-
-SnapLibOSU::init();
-}
-

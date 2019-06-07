@@ -1063,6 +1063,7 @@ margin: unset;
 flex: 0 1 auto;
 display: flex;
 min-height: 0;
+margin-bottom: 6rem;
 }
 }
 
@@ -1132,7 +1133,7 @@ min-height: 0;
     align-items: center;
   }
   @include mq('desktop'){
-    margin: 0 auto 0 auto;
+    margin: 2 auto 0 auto;
     min-height: 55em;
   }
 }
@@ -1164,6 +1165,8 @@ min-height: 24em;
 }
 @include mq('desktop'){
   min-height: 15em;
+  height: 30em;
+  justify-content: start;
 //   height: 19em;
 }
 }
@@ -1177,7 +1180,8 @@ min-height: 24em;
     flex: 0 0 auto;
   }
   @include mq('desktop'){
-    height: 8em;
+    height: 6em;
+    width: 74%;
   }
 }
 
@@ -1291,7 +1295,7 @@ margin: 0 auto 0 auto;
     min-height: 3em;
     // background: yellow;
     flex: 0 1 auto;
-    display: flex;
+display: none;
 }
 }
 
@@ -1760,7 +1764,7 @@ min-height: 12em;
       width: 50%;
       max-width: 50%;
       display: flex;
-      height: 150vh;
+      min-height: 175vh;
     }
   }
 
@@ -1881,6 +1885,7 @@ min-height: 12em;
   max-width: 100%;
   justify-content: center;
   background: $black;
+  padding-top: 1.5em;
 }
 
 .footer-container{

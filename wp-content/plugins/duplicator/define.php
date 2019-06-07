@@ -1,9 +1,11 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
+
 //Prevent directly browsing to the file
 if (function_exists('plugin_dir_url')) 
 {		
-    define('DUPLICATOR_VERSION',        '1.3.8');
-	define('DUPLICATOR_VERSION_BUILD',  '2019-02-22_12:20');
+    define('DUPLICATOR_VERSION',        '1.3.14');
+	define('DUPLICATOR_VERSION_BUILD',  '2019-05-20_15:40');
     define('DUPLICATOR_PLUGIN_URL',     plugin_dir_url(__FILE__));
 	define('DUPLICATOR_SITE_URL',		get_site_url());
 	
@@ -54,7 +56,7 @@ if (function_exists('plugin_dir_url'))
 	define('DUPLICATOR_WEBCONFIG_ORIG_FILENAME', 'web.config.orig');
 	define("DUPLICATOR_INSTALLER_DIRECTORY", DUPLICATOR_WPROOTPATH . 'dup-installer');
     define('DUPLICATOR_MAX_LOG_SIZE', 400000);    // The higher this is the more overhead
-	
+
     $GLOBALS['DUPLICATOR_SERVER_LIST'] = array('Apache','LiteSpeed', 'Nginx', 'Lighttpd', 'IIS', 'WebServerX', 'uWSGI');
 	$GLOBALS['DUPLICATOR_OPTS_DELETE'] = array('duplicator_ui_view_state', 'duplicator_package_active', 'duplicator_settings');
 	$GLOBALS['DUPLICATOR_GLOBAL_FILE_FILTERS_ON'] = true;

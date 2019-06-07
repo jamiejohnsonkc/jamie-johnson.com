@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 /**
  * Utility class for working with JSON data
  *
@@ -34,11 +35,7 @@ class DUP_JSON
 	public static function customEncode($value, $iteration = 1)
 	{
 		if (DUP_Util::$on_php_53_plus) {
-			if (function_exists('wp_json_encode')) {
-				$encoded = wp_json_encode($value);
-			} else {
-				$encoded = json_encode($value);
-			}
+            $encoded = DupLiteSnapLibUtil::wp_json_encode_pprint($value);
 
 			switch (json_last_error()) {
 				case JSON_ERROR_NONE:
@@ -66,49 +63,23 @@ class DUP_JSON
 		}
 	}
 
-	/**
-	 * Attempts to only call the json_encode method directly
-	 *
-	 * Returns a string containing the JSON representation of the supplied value
-	 *
-	 * @return string
-	 */
-	public static function encode($value, $options = 0)
-	{
-		$result = json_encode($value, $options);
+    public static function safeEncode($data, $options = 0, $depth = 512)
+    {
+        try {
+            $jsonString = DupLiteSnapLibUtil::wp_json_encode($data, $options, $depth);
+        } catch (Exception $e) {
+            $jsonString = false;
+        }
 
-		if ($result !== FALSE) {
-			return $result;
-		}
+        if (($jsonString === false) || trim($jsonString) == '') {
+            $jsonString = self::customEncode($value);
 
-		if (function_exists('json_last_error')) {
-			$message = self::$_messages[json_last_error()];
-		} else {
-			$message = esc_html__("One or more filenames isn't compatible with JSON encoding", 'duplicator');
-		}
-
-		throw new RuntimeException($message);
-	}
-
-	/**
-	 * Attempts to call json_encode upon error DUP_JSON::customEncode is called
-	 *
-	 * Returns a string containing the JSON representation of the supplied value
-	 *
-	 * @return string
-	 */
-	public static function safeEncode($value)
-	{
-		$jsonString = json_encode($value);
-		if (($jsonString === false) || trim($jsonString) == '') {
-			$jsonString = self::customEncode($value);
-
-			if (($jsonString === false) || trim($jsonString) == '') {
-				throw new Exception('Unable to generate JSON from object');
-			}
-		}
-		return $jsonString;
-	}
+            if (($jsonString === false) || trim($jsonString) == '') {
+                throw new Exception('Unable to generate JSON from object');
+            }
+        }
+        return $jsonString;
+    }
 
 	/**
 	 * Attempts to only call the json_decode method directly

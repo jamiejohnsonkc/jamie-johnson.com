@@ -1,5 +1,5 @@
 <?php
-defined("ABSPATH") or die("");
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 //-- START OF ACTION STEP 2
 /** IDE HELPERS */
 /* @var $GLOBALS['DUPX_AC'] DUPX_ArchiveConfig */
@@ -57,6 +57,8 @@ $root_path		 = $GLOBALS['DUPX_ROOT'];
 $JSON			 = array();
 $JSON['pass']	 = 0;
 
+$nManager = DUPX_NOTICE_MANAGER::getInstance();
+
 /**
 JSON RESPONSE: Most sites have warnings turned off by default, but if they're turned on the warnings
 cause errors in the JSON data Here we hide the status so warning level is reset at it at the end */
@@ -74,7 +76,7 @@ $dbTestIn->mode		 = DUPX_U::sanitize_text_field($_POST['view_mode']);
 $dbTestIn->dbaction	 = DUPX_U::sanitize_text_field($_POST['dbaction']);
 $dbTestIn->dbhost	 = DUPX_U::sanitize_text_field($_POST['dbhost']);
 $dbTestIn->dbuser	 = DUPX_U::sanitize_text_field($_POST['dbuser']);
-$dbTestIn->dbpass	 = trim($_POST['dbpass']);
+$dbTestIn->dbpass    = trim($_POST['dbpass']);
 $dbTestIn->dbname	 = DUPX_U::sanitize_text_field($_POST['dbname']);
 $dbTestIn->dbport	 = DUPX_U::sanitize_text_field($_POST['dbport']);
 $dbTestIn->dbcollatefb = DUPX_U::sanitize_text_field($_POST['dbcollatefb']);
@@ -117,7 +119,6 @@ if($not_yet_logged){
 $dbinstall = new DUPX_DBInstall($_POST, $ajax2_start);
 if ($_POST['dbaction'] != 'manual') {
     if(!isset($_POST['continue_chunking'])){
-        // $dbinstall->prepareSQL();
         $dbinstall->prepareDB();
     } else if($_POST['first_chunk'] == 1) {
         $dbinstall->prepareDB();
@@ -150,19 +151,20 @@ if ($_POST['dbaction'] == 'manual') {
 	DUPX_Log::info("\n** SQL EXECUTION IS IN MANUAL MODE **");
 	DUPX_Log::info("- No SQL script has been executed -");
 	$JSON['pass'] = 1;
-} /*elseif(isset($_POST['continue_chunking']) && $_POST['continue_chunking'] === 'true') {
-    print_r(json_encode($dbinstall->writeInChunks()));
-    die();
-} */ elseif(isset($_POST['continue_chunking']) && ($_POST['continue_chunking'] === 'false' && $_POST['pass'] == 1)) {
-    $JSON['pass'] = 1;
 } elseif(!isset($_POST['continue_chunking'])) {
-	$dbinstall->writeInDB();
+    $dbinstall->writeInDB();
+    $rowCountMisMatchTables = $dbinstall->getRowCountMisMatchTables();
     $JSON['pass'] = 1;
+    if (!empty($rowCountMisMatchTables)) {
+		$errMsg = 'ERROR: Database Table row count verification was failed for table(s): '.implode(', ', $rowCountMisMatchTables);
+		DUPX_Log::info($errMsg);		
+	}
 }
 
 $dbinstall->profile_end = DUPX_U::getMicrotime();
 $dbinstall->writeLog();
 $JSON = $dbinstall->getJSON($JSON);
+$nManager->saveNotices();
 
 //FINAL RESULTS
 $ajax1_sum	 = DUPX_U::elapsedTime(DUPX_U::getMicrotime(), $dbinstall->start_microtime);
@@ -170,4 +172,4 @@ DUPX_Log::info("\nINSERT DATA RUNTIME: " . DUPX_U::elapsedTime($dbinstall->profi
 DUPX_Log::info('STEP-2 COMPLETE @ '.@date('h:i:s')." - RUNTIME: {$ajax1_sum}");
 
 error_reporting($ajax2_error_level);
-die(json_encode($JSON));
+die(DupLiteSnapLibUtil::wp_json_encode($JSON));

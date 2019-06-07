@@ -1,6 +1,5 @@
 <?php
-
-defined("ABSPATH") or die("");
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
 global $wp_version;
 global $wpdb;
@@ -23,6 +22,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'save') {
 
 	DUP_Settings::Set('wpfront_integrate', isset($_POST['wpfront_integrate']) ? "1" : "0");
 	DUP_Settings::Set('package_debug', isset($_POST['package_debug']) ? "1" : "0");
+    
+    $skip_archive_scan = filter_input(INPUT_POST, 'skip_archive_scan' , FILTER_VALIDATE_BOOLEAN);
+    DUP_Settings::Set('skip_archive_scan', $skip_archive_scan);
 
     if(isset($_REQUEST['trace_log_enabled'])) {
 
@@ -47,16 +49,15 @@ if (isset($_POST['action']) && $_POST['action'] == 'save') {
 	DUP_Util::initSnapshotDirectory();
 }
 
-$trace_log_enabled = DUP_Settings::Get('trace_log_enabled');
-$uninstall_settings = DUP_Settings::Get('uninstall_settings');
-$uninstall_files = DUP_Settings::Get('uninstall_files');
-$uninstall_tables = DUP_Settings::Get('uninstall_tables');
+$trace_log_enabled    = DUP_Settings::Get('trace_log_enabled');
+$uninstall_settings   = DUP_Settings::Get('uninstall_settings');
+$uninstall_files      = DUP_Settings::Get('uninstall_files');
+$uninstall_tables     = DUP_Settings::Get('uninstall_tables');
 $storage_htaccess_off = DUP_Settings::Get('storage_htaccess_off');
-
-$wpfront_integrate = DUP_Settings::Get('wpfront_integrate');
-$wpfront_ready = apply_filters('wpfront_user_role_editor_duplicator_integration_ready', false);
-$package_debug = DUP_Settings::Get('package_debug');
-
+$wpfront_integrate    = DUP_Settings::Get('wpfront_integrate');
+$wpfront_ready        = apply_filters('wpfront_user_role_editor_duplicator_integration_ready', false);
+$package_debug        = DUP_Settings::Get('package_debug');
+$skip_archive_scan    = DUP_Settings::Get('skip_archive_scan');
 ?>
 
 <style>
@@ -170,17 +171,28 @@ $package_debug = DUP_Settings::Get('package_debug');
             <th scope="row"><label><?php esc_html_e("Settings", 'duplicator'); ?></label></th>
             <td>
                 <button class="button"  onclick="Duplicator.Pack.ConfirmResetAll(); return false;">
-                    <i class="fa fa-repeat"></i> <?php esc_html_e('Reset Packages', 'duplicator'); ?>
+                    <i class="fas fa-redo fa-sm"></i> <?php esc_html_e('Reset Packages', 'duplicator'); ?>
                 </button>
                 <p class="description" style="width:700px">
                     <?php esc_html_e("This process will reset all packages by deleting those without a completed status, reset the active package id and perform a "
 						. "cleanup of the build tmp file.", 'duplicator'); ?>
-                    <i class="fa fa-question-circle"
+                    <i class="fas fa-question-circle fa-sm"
                         data-tooltip-title="<?php esc_attr_e("Reset Settings", 'duplicator'); ?>"
                         data-tooltip="<?php esc_attr_e('This action should only be used if the packages screen is having issues or a build is stuck.', 'duplicator'); ?>"></i>
                 </p>
             </td>
         </tr>
+        <tr valign="top">
+		<th scope="row"><label><?php esc_html_e('Archive scan', 'duplicator'); ?></label></th>
+		<td>
+			<input type="checkbox" name="skip_archive_scan" id="_skip_archive_scan" <?php checked( $skip_archive_scan , true ); ?> value="1" />
+			<label for="_skip_archive_scan"><?php esc_html_e("Skip", 'duplicator') ?> </label><br/>
+			 <p class="description" style="width:700px">
+				<?php esc_html_e('If enabled all files check on scan will be skipped before package creation.  '
+					. 'In some cases, this option can be beneficial if the scan process is having issues running or returning errors.', 'duplicator'); ?>
+			</p>
+		</td>
+    </tr>
     </table>
 
     <p class="submit" style="margin: 20px 0px 0xp 5px;">

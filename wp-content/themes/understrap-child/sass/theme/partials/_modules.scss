@@ -578,6 +578,37 @@ button {
   path.st0 {  stroke:   $button-neutral-foreground;}
 }
 
+@mixin jump-button-white-black() {
+  border-color:         $button-neutral-border;
+  background:           $button-neutral-background;
+  path.st0 {  stroke:   $button-neutral-foreground;}
+}
+
+@mixin jump-button-black-white() {
+  border-color:         $white;
+  background:           $black;
+  path.st0 {  stroke:   $white;}
+}
+
+@mixin jump-button-white-outline() {
+  border-color:         $white;
+  path.st0 { stroke:    $white;
+  }
+}
+
+@mixin jump-button-black-outline() {
+  border-color:         $black ;
+  path.st0 {  stroke:   $black ;}
+}
+@mixin absolute-center-bottom(){
+  display: flex;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 5%;
+}
+
+
 //* jump-link style customizations
 
 
@@ -591,8 +622,8 @@ button {
 .get-more__link--jump                       { @include jump-button-light(); @include self-center(); z-index: 6; margin-top: 9rem;  }  
 .intro-services__link--jump                 { @include jump-button-light(); @include self-center(); z-index: 6; position: relative; }
 .hybrid__link--jump                         { @include jump-button-light(); @include self-center(); }
-.stats__link--jump                          { @include jump-button-light(); @include self-center(); }
-.mymo__link--jump                           { @include jump-button-light(); @include self-center(); z-index: 6;}
+.stats__link--jump                          { @include jump-button-light(); @include self-center(); margin-bottom: 6rem;}
+.mymo__link--jump                           { @include jump-button-light(); @include self-center(); z-index: 6; margin-bottom: 6rem; margin-top: auto;}
 
 //* services page links
 .services-splash__link--jump                { @include jump-button-light(); margin-top: 3rem;}
@@ -614,6 +645,11 @@ button {
 
 //* better
 .better__link--jump{ @include jump-button-light(); margin-top: 6em;   }  
+
+.better-large-format__link--jump{
+  display: none; @include mq('tablet-wide'){ @include absolute-center-bottom();}}
+.jump__link--black-white {@include jump-button-black-white();}
+.jump__link--white-outline {@include jump-button-white-outline();}
 
 
 // .services-summary__link-jump            { @include jump-button-light();}

@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 // Exit if accessed directly
 if (!defined('DUPLICATOR_VERSION')) exit;
 
@@ -131,10 +132,22 @@ class DUP_Settings
 		// Initial archive build mode
 		$default['archive_build_mode'] = isset(self::$Data['archive_build_mode']) ? self::$Data['archive_build_mode'] : DUP_Archive_Build_Mode::ZipArchive;
 
+        //Skip scan archive
+		$default['skip_archive_scan']		 = isset(self::$Data['skip_archive_scan']) ? self::$Data['skip_archive_scan'] : false;
+
 		$default['active_package_id'] = -1;
 
 		return $default;
 	}
+
+    public static function get_create_date_format()
+    {
+        static $ui_create_frmt = null;
+        if (is_null($ui_create_frmt)) {
+            $ui_create_frmt = is_numeric(self::Get('package_ui_created')) ? self::Get('package_ui_created') : 1;
+        }
+        return $ui_create_frmt;
+    }
 }
 //Init Class
 DUP_Settings::init();

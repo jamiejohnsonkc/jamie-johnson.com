@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 /**
  * Lightweight abstraction layer for common simple database routines
  *
@@ -98,7 +99,20 @@ class DUP_DB extends wpdb
 		return false;
 	}
 
-	/**
+    /**
+     * Returns the correct database build mode PHP, MYSQLDUMP, PHPCHUNKING
+     *
+     * @return string	Returns a string with one of theses three values PHP, MYSQLDUMP, PHPCHUNKING
+     */
+    public static function getBuildMode()
+    {
+        $package_mysqldump = DUP_Settings::Get('package_mysqldump');
+        $mysqlDumpPath     = DUP_DB::getMySqlDumpPath();
+
+        return ($mysqlDumpPath && $package_mysqldump) ? 'MYSQLDUMP' : 'PHP';
+    }
+
+    /**
 	 * Returns the mysqldump path if the server is enabled to execute it otherwise false
 	 *
 	 * @return boolean|string

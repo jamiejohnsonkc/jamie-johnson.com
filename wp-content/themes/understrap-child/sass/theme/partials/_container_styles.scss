@@ -36,7 +36,10 @@
 		width: 83.82%;
 	}
 
-	@include mq('tablet-wide') {}
+	@include mq('tablet-wide') {
+	    		max-width: 98%;
+		width: 98%;
+	}
 
 	@include mq('desktop') {}
 

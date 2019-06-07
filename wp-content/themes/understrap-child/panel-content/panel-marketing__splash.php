@@ -27,8 +27,8 @@ if (!defined('ABSPATH')) {
 	<article class="article article--better better-intro__article">
 		<div class="wrapper better-intro__container-wrapper">
 			<div class="header__container header__container--push-center better-intro__section-head">
-				<h1 class="pagination pagination--better-intro">better marketing</h1>
-				<h2 class="headline__header">Marketing That Moves the Needle</h2>
+				<!-- <h1 class="pagination pagination--better-intro">what is better marketing</h1> -->
+				<h1 class="headline__header">Its about what you should do. Not what you could do.</h1>
 				<div class="copy copy__header">And I don't mean cleverer, cooler or edgier creative. I mean marketing that peforms better. Marketing that makes you more money. Makes things easier to sell. Makes your life a little easier.</div>
 			</div>
 		</div>

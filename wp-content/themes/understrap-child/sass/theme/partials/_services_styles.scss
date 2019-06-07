@@ -49,7 +49,7 @@
 }
 
 .pagination--services-splash{
-  @include mq('tablet-wide'){
+  @include mq('tablet'){
     margin-bottom: unset;
   }
 }
@@ -281,8 +281,8 @@
   @include vr($padding-bottom: 6);
   background: $offwhite;
   @include mq('desktop'){
-    margin-top: -15em;
-    margin-bottom: -5em;
+    margin-top: 0;
+    margin-bottom: 0;
     background: $offwhite;
     padding: 16% 16% 0 16%;
     width: 100%;
@@ -371,9 +371,9 @@ padding: 8% 8% 0 8%;
   background: white;
 
   @include mq('desktop'){
-  width: 90%;
-  margin: 0 auto;
-  max-width: 90%;  // background: $primary;
+//   width: 90%;
+//   margin: 0 auto;
+//   max-width: 90%;  // background: $primary;
 
 
   }
@@ -437,6 +437,10 @@ border-bottom: thin solid $gray-300;
   min-height: 0;
   width: 100%;
   max-width: 100%;
+  @include mq('tablet'){
+    width: 83%;
+    @include vr($margin: 0 auto);
+  }
   @include mq('desktop'){
     // width: 38%;
     // max-width: 38%;
@@ -642,6 +646,9 @@ li.expertise__carousel-indicator-list-item{
  border-right: .025em solid $gray-300;
  font-variant-caps: all-small-caps;
  letter-spacing: .05rem;
+ @include mq('tablet'){
+  @include vr($font-size: 2, $line-height: 1.5);
+ }
 
 }
 
@@ -676,6 +683,7 @@ height: unset;
   // border: thin solid $accent;
   background: $accent;
   color: $white;
+  font-weight: 500;
 }
 
 // .expertise__carousel--item-divider{
@@ -740,6 +748,7 @@ li.expertise__carousel--list-divider{
   @include mq('tablet'){
     width: 83%;
   max-width: 83%;
+  height: 82em;
   }
 }
 
@@ -758,10 +767,12 @@ width: 83%;
 @include vr($margin: 3 auto 2 auto);
 }
 .expertise-carousel-item__headline {
-  @include list-head();    
+  @include list-head();   
+  text-transform: uppercase;
+  letter-spacing: .25rem; 
 }
 .expertise-carousel-item__subhead  {
-  @include list__subhead();
+  @include list-head();
   padding-left: 1.5rem;  
 }
 .expertise-carousel-item__list     {
@@ -818,10 +829,15 @@ width: 77%;
   // min-height: 13em;
   // max-width: 100%;
   // flex: 1 1 90%;
+  @include mq('tablet'){
+    max-width: 83%;
+    @include vr($margin: 2 auto);
+    
+  }
   @include mq('tablet-wide'){
   max-width: 83%;
   flex: 1 1 43%;
-  @include vr($margin-top: 2);
+
   }
   @include mq('desktop'){
     // width: 38%;
@@ -1020,28 +1036,28 @@ text-align: left;
   @include mq('desktop'){
 
 
-    .body-item__container{
-      flex-direction: column;
+//     .body-item__container{
+//       flex-direction: column;
     
-    }
-.body-item__container--marketing{
+//     }
+// .body-item__container--marketing{
 
-}
+// }
 
-    .expertise__carousel--controls {
-align-self: center;
-    }
+//     .expertise__carousel--controls {
+// align-self: center;
+//     }
 
-    .expertise__carousel{
-      width: 38%;
-      max-width: 38%;
-    }
+//     .expertise__carousel{
+//       width: 38%;
+//       max-width: 38%;
+//     }
 
-    .expertise__image-container--screens{
-      top: 35%;
-      left: 27%;
-      max-width: 78%;
-    }
+//     .expertise__image-container--screens{
+//       top: 35%;
+//       left: 27%;
+//       max-width: 78%;
+//     }
 
 
 

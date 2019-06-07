@@ -1,4 +1,4 @@
-<?php defined("ABSPATH") or die(""); ?>
+<?php defined('ABSPATH') || defined('DUPXABSPATH') || exit; ?>
 <script>
 	//Unique namespace
 	DUPX = new Object();
@@ -118,7 +118,7 @@
 			(icon.length)
 				? $(icon).addClass(style[src].open )
 				: $(this).html("- " + text );
-			target.show();
+			target.show().removeClass('no-display');
 		} else {
 			(icon.length)
 				? $(icon).addClass(style[src].close)
@@ -179,3 +179,5 @@
 	});
 
 </script>
+<?php
+DUPX_U_Html::js();

@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 <article class="article__wrapper cta__home-page">
 
 	<div class="row">
-		<div class="col-md-6 marketing-cta__content-container">
+		<div class="col-lg-6 marketing-cta__content-container">
 			<div class="container-single-box-center cta__container cta__container--marketing">
 				<h1 class="title title__header cta__title">I'm Available</h1>
 				<h2 class="subhead subhead__header cta__copy">Know What I think?</h2>
@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 			</div>
 		</div>
 
-		<div class="col-md-6 marketing-cta__image-container">
+		<div class="col-lg-6 marketing-cta__image-container">
 <img src="/wp-content/uploads/2019/06/hero-9.jpg" class="hire-img" alt="...">
 		</div>
 

@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 // Exit if accessed directly
 if (! defined('DUPLICATOR_VERSION')) exit;
 
@@ -18,11 +19,7 @@ require_once(DUPLICATOR_PLUGIN_PATH.'/classes/package/duparchive/class.pack.arch
  */
 function duplicator_package_scan()
 {
-    $nonce = sanitize_text_field($_REQUEST['nonce']);
-	if (!wp_verify_nonce($nonce, 'duplicator_package_scan')) {
-		die('An unathorized security request was made to this page. Please try again!');
-	}
-
+    check_ajax_referer('duplicator_package_scan', 'nonce');
     DUP_Util::hasCapability('export');
 
     header('Content-Type: application/json;');
@@ -52,9 +49,9 @@ function duplicator_package_scan()
  */
 function duplicator_package_build()
 {
+    check_ajax_referer('duplicator_package_build', 'nonce');
     DUP_Util::hasCapability('export');
 
-    check_ajax_referer('duplicator_package_build', 'nonce');
     header('Content-Type: application/json');
 
     @set_time_limit(0);
@@ -82,7 +79,7 @@ function duplicator_package_build()
     $json['runtime'] = $Package->Runtime;
     $json['exeSize'] = $Package->ExeSize;
     $json['archiveSize'] = $Package->ZipSize;
-    $json_response   = json_encode($json);
+    $json_response   = DupLiteSnapLibUtil::wp_json_encode($json);
 
     //Simulate a Host Build Interrupt
 	//die(0);
@@ -100,8 +97,8 @@ function duplicator_duparchive_package_build()
 {
     DUP_LOG::Trace("call to duplicator_duparchive_package_build");
 
-    DUP_Util::hasCapability('export');
     check_ajax_referer('duplicator_duparchive_package_build', 'nonce');
+    DUP_Util::hasCapability('export');
     header('Content-Type: application/json');
 
     @set_time_limit(0);
@@ -186,7 +183,7 @@ function duplicator_duparchive_package_build()
         $json['status'] = 4;
     }
 
-    $json_response = json_encode($json);
+    $json_response = DupLiteSnapLibUtil::wp_json_encode($json);
 
     Dup_Log::TraceObject('json response', $json_response);
     error_reporting($errLevel);
@@ -202,8 +199,8 @@ function duplicator_duparchive_package_build()
  */
 function duplicator_package_delete()
 {
-    DUP_Util::hasCapability('export');
-    check_ajax_referer('package_list', 'nonce');
+    check_ajax_referer('duplicator_package_delete', 'nonce');
+    DUP_Util::hasCapability('export');    
 
 	function _unlinkFile($file) {
 		if (! file_exists($file)) {
@@ -249,7 +246,8 @@ function duplicator_package_delete()
                         _unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}_database.sql"));
                         _unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}_installer.php"));
                         _unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}_scan.json"));
-						_unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}.log"));
+                        _unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}_wp-config.txt"));
+                        _unlinkFile(DUP_Util::safePath(DUPLICATOR_SSDIR_PATH."/{$nameHash}.log"));
 
                         //Unfinished Zip files
                         $tmpZip = DUPLICATOR_SSDIR_PATH_TMP."/{$nameHash}_archive.zip.*";
@@ -263,12 +261,12 @@ function duplicator_package_delete()
         }
     } catch (Exception $e) {
         $json['error'] = "{$e}";
-        die(json_encode($json));
+        die(DupLiteSnapLibUtil::wp_json_encode($json));
     }
 
     $json['ids']     = "{$postIDs}";
     $json['removed'] = $delCount;
-    echo json_encode($json);
+    echo DupLiteSnapLibUtil::wp_json_encode($json);
     die();
 }
 
@@ -282,7 +280,12 @@ function duplicator_package_delete()
 function duplicator_active_package_info()
 {
     ob_start();
+    DUP_Util::hasCapability('export');
     try {
+        if (!check_ajax_referer('duplicator_active_package_info', 'nonce', false)) {
+            throw new Exception(__('An unathorized security request was made to this page. Please try again!','duplicator'));
+        }
+
         global $wpdb;
 
         $error  = false;
@@ -295,11 +298,6 @@ function duplicator_active_package_info()
             'html' => '',
             'message' => ''
         );
-
-        $nonce = sanitize_text_field($_POST['nonce']);
-        if (!wp_verify_nonce($nonce, 'duplicator_active_package_info')) {
-             throw new Exception(__('An unathorized security request was made to this page. Please try again!','duplicator'));
-        }
 
         $result['active_package']['present'] = DUP_Package::is_active_package_present();
 
@@ -352,9 +350,9 @@ class DUP_CTRL_Package extends DUP_CTRL_Base
      */
     public function addQuickFilters($post)
     {
+        check_ajax_referer('DUP_CTRL_Package_addQuickFilters', 'nonce');
+        DUP_Util::hasCapability('export');
         $post   = $this->postParamMerge($post);
-        $action = sanitize_text_field($post['action']);
-        check_ajax_referer($action, 'nonce');
         $result = new DUP_CTRL_Result($this);
 
         try {
@@ -406,19 +404,15 @@ class DUP_CTRL_Package extends DUP_CTRL_Base
      */
     function getPackageFile($post)
     {
+        check_ajax_referer('DUP_CTRL_Package_getPackageFile', 'nonce' );
+        DUP_Util::hasCapability('export');
         $params = $this->postParamMerge($post);
-        $nonce = sanitize_text_field($_GET['nonce']);
-        if (!wp_verify_nonce($nonce, 'DUP_CTRL_Package_getPackageFile')) {
-            die('An unathorized security request was made to this page. Please try again!');
-        }
 
         $params = $this->getParamMerge($params);
         $result = new DUP_CTRL_Result($this);
 
         try {
             //CONTROLLER LOGIC
-            DUP_Util::hasCapability('export');
-
             $request   = stripslashes_deep($_REQUEST);
             $which     = (int) $request['which'];
             $packageId = (int) $request['package_id'];
@@ -507,11 +501,10 @@ class DUP_CTRL_Package extends DUP_CTRL_Base
      */
 	public function getActivePackageStatus($post)
 	{
-        $post = $this->postParamMerge($post);
-        $nonce = sanitize_text_field($post['nonce']);
-        if (!wp_verify_nonce($nonce, 'DUP_CTRL_Package_getActivePackageStatus')) {
-            die('An unathorized security request was made to this page. Please try again!');
-        }
+        check_ajax_referer('DUP_CTRL_Package_getActivePackageStatus', 'nonce');
+        DUP_Util::hasCapability('export');
+
+        $post = $this->postParamMerge($post);        
 		$result = new DUP_CTRL_Result($this);
 
 		try

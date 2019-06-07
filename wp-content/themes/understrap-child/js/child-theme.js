@@ -3961,6 +3961,70 @@
 
   //alert('Hello World!');
 
+  // function myFunction() { // Declare a function
+  //   document.getElementById("demo").innerHTML = "Hello World!";
+  // }
+   
+  // myFunction(); // Call the function 
+
+  
+  // function checkWidth() { // Declare a function
+  //   document.getElementById("demo").innerHTML = "Hello World!";
+  // }
+   
+  // myFunction(); // Call the function 
+
+
+//   jQuery(document).ready(function ($) {
+//     if($(window).width() > 800) {
+//        $("#advantage").removeClass("carousel");
+//     }    
+// });
+
+
+//! original code
+// function checkWidth() {
+//   if ($(window).width() < 1024) {
+//       $('#advantage-carousel').addClass('carousel');
+//   } else {
+//       $('#advantage-carousel').removeClass('carousel');
+//   }
+// };
+
+// $(window).resize(checkWidth);
+
+
+// function checkWidth (Jquery) {
+//   if ($(window).width() < 800) {
+//     $('#advantage').addClass('carousel');
+// } else {
+//     $('#advantage').removeClass('carousel');
+// }
+// }
+
+// jQuery(document).ready(function($) {
+// $(window).resize(checkWidth);
+// });
+
+jQuery(document).ready(function ($) {
+  if($(window).width() < 768) {
+     $("#advantage").addClass("carousel");
+  }    
+});
+
+
+// function checkWidth() {
+//   if ($(window).width() < 1024) {
+//       $('#advantage-carousel').addClass('carousel');
+//   } else {
+//       $('#advantage-carousel').removeClass('carousel');
+//   }
+// };
+
+// jQuery(document).ready(function($) {
+// $(window).resize(checkWidth);
+// });
+
 
 
 //*=============================================
@@ -4033,8 +4097,6 @@ jQuery(document).ready(function($) {
   });
 }
 });
-
-
 
 jQuery(document).ready(function($) {
   var open = document.getElementById("open-expt-overlay-5"),
@@ -4203,6 +4265,22 @@ jQuery(document).ready(function($) {
 
 //*=====  End of animations  ======*/
 
+
+// jQuery(document).ready(function($) {
+
+//   if (matchMedia) {
+//     const mq = window.matchMedia("(min-width: 1024px)");
+//     mq.addListener(WidthChange);
+//     WidthChange(mq);
+//   }
+
+//   // function WidthChange(mq) {
+//     jQuery(document).ready(function(_mq) {
+//     $('.expertise-carousel-item__header').classList.remove("carousel");  
+//   }
+// )
+// });
+// jQuery(document).ready(function($) {
 
 
 

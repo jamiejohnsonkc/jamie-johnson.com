@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 // Exit if accessed directly
 if (! defined('DUPLICATOR_VERSION')) exit;
 
@@ -12,9 +13,19 @@ if (! defined('DUPLICATOR_VERSION')) exit;
 class DUP_DatabaseInfo
 {
     /**
+     * The SQL file was built with mysqldump or PHP
+     */
+    public $buildMode;
+
+    /**
      * A unique list of all the collation table types used in the database
      */
     public $collationList;
+
+    /**
+     * Does any filtered table have an upper case character in it
+     */
+    public $isTablesUpperCase;
 
     /**
      * Does the database name have any filtered characters in it
@@ -26,10 +37,69 @@ class DUP_DatabaseInfo
      */
     public $name;
 
+    /**
+     * The full count of all tables in the database
+     */
+    public $tablesBaseCount;
+
+    /**
+     * The count of tables after the tables filter has been applied
+     */
+    public $tablesFinalCount;
+
+    /**
+     * The number of rows from all filtered tables in the database
+     */
+    public $tablesRowCount;
+
+    /**
+     * The estimated data size on disk from all filtered tables in the database
+     */
+    public $tablesSizeOnDisk;
+
+    /**
+     * Gets the server variable lower_case_table_names
+     *
+     * 0 store=lowercase;	compare=sensitive	(works only on case sensitive file systems )
+     * 1 store=lowercase;	compare=insensitive
+     * 2 store=exact;		compare=insensitive	(works only on case INsensitive file systems )
+     * default is 0/Linux ; 1/Windows
+     */
+    public $varLowerCaseTables;
+
+    /**
+     * The simple numeric version number of the database server
+     * @exmaple: 5.5
+     */
+    public $version;
+
+    /**
+     * The full text version number of the database server
+     * @exmaple: 10.2 mariadb.org binary distribution
+     */
+    public $versionComment;
+
+    /**
+     * table wise row counts array, Key as table name and value as row count
+     *  table name => row count
+     */
+    public $tableWiseRowCounts;
+
+    /**
+     * Integer field file structure of table, table name as key
+     */
+    private $intFieldsStruct = array();
+
+    /**
+     * $currentIndex => processedSchemaSize
+     */
+    private $indexProcessedSchemaSize = array();
+
     //CONSTRUCTOR
     function __construct()
     {
         $this->collationList = array();
+        $this->tableWiseRowCounts = array();
     }
 }
 
@@ -45,6 +115,12 @@ class DUP_Database
     public $Name;
     public $Compatible;
     public $Comments;
+    
+    /**
+     *
+     * @var DUP_DatabaseInfo 
+     */
+    public $info = null;
     //PROTECTED
     protected $Package;
     //PRIVATE
@@ -62,6 +138,7 @@ class DUP_Database
         $package_zip_flush  = DUP_Settings::Get('package_zip_flush');
         $this->networkFlush = empty($package_zip_flush) ? false : $package_zip_flush;
         $this->info = new DUP_DatabaseInfo();
+        $this->info->varLowerCaseTables	 = DUP_Util::isWindows() ? 1 : 0;
     }
 
     /**
@@ -86,7 +163,7 @@ class DUP_Database
             $package_phpdump_qrylimit = DUP_Settings::Get('package_phpdump_qrylimit');
 
             $mysqlDumpPath        = DUP_DB::getMySqlDumpPath();
-            $mode                 = ($mysqlDumpPath && $package_mysqldump) ? 'MYSQLDUMP' : 'PHP';
+            $mode                 = DUP_DB::getBuildMode();
             $reserved_db_filepath = DUPLICATOR_WPROOTPATH.'database.sql';
 
             $log = "\n********************************************************************************\n";
@@ -119,7 +196,7 @@ class DUP_Database
                     $this->mysqlDump($mysqlDumpPath);
                     break;
                 case 'PHP' :
-                    $this->phpDump();
+                    $this->phpDump($package);
                     break;
             }
 
@@ -148,7 +225,7 @@ class DUP_Database
             DUP_Log::Info("SQL RUNTIME: {$time_sum}");
 
             $this->Size = @filesize($this->dbStorePath);
-
+         
             $this->Package->setStatus(DUP_PackageStatus::DBDONE);
         } catch (Exception $e) {
             do_action('duplicator_lite_build_database_fail' , $package);
@@ -165,7 +242,8 @@ class DUP_Database
     {
         global $wpdb;
 
-        $filterTables = isset($this->FilterTables) ? explode(',', $this->FilterTables) : null;
+        $filterTables = isset($this->FilterTables) ? explode(',', $this->FilterTables) : array();
+        $tblBaseCount	 = 0;
         $tblCount     = 0;
 
         $tables                     = $wpdb->get_results("SHOW TABLE STATUS", ARRAY_A);
@@ -189,6 +267,7 @@ class DUP_Database
 
         //Grab Table Stats
         foreach ($tables as $table) {
+            $tblBaseCount++;
             $name = $table["Name"];
             if ($this->FilterOn && is_array($filterTables)) {
                 if (in_array($name, $filterTables)) {
@@ -233,7 +312,6 @@ class DUP_Database
         $info['Status']['DB_Rows'] = ($info['Rows'] > DUPLICATOR_SCAN_DB_ALL_ROWS) ? 'Warn' : 'Good';
         $info['Status']['DB_Size'] = ($info['Size'] > DUPLICATOR_SCAN_DB_ALL_SIZE) ? 'Warn' : 'Good';
 
-
         $info['Status']['TBL_Case'] = ($tblCaseFound) ? 'Warn' : 'Good';
         $info['Status']['TBL_Rows'] = ($tblRowsFound) ? 'Warn' : 'Good';
         $info['Status']['TBL_Size'] = ($tblSizeFound) ? 'Warn' : 'Good';
@@ -244,12 +322,24 @@ class DUP_Database
         $info['TableList']  = $info['TableList'] or "unknown";
         $info['TableCount'] = $tblCount;
 
+        $this->setInfoObj();
+        $this->info->isTablesUpperCase	 = $tblCaseFound;
+        $this->info->tablesBaseCount	 = $tblBaseCount;
+        $this->info->tablesFinalCount	 = $tblCount;
+        $this->info->tablesRowCount		 = $info['Rows'];
+        $this->info->tablesSizeOnDisk	 = $info['Size'];
+
         return $info;
     }
 
     public function setInfoObj() {
         global $wpdb;
+        $filterTables = isset($this->FilterTables) ? explode(',', $this->FilterTables) : array();
 
+        $this->info->buildMode           = DUP_DB::getBuildMode();
+        $this->info->version			 = DUP_DB::getVersion();
+        $this->info->versionComment		 = DUP_DB::getVariable('version_comment');
+        $this->info->varLowerCaseTables	 = DUP_DB::getVariable('lower_case_table_names');
         $this->info->name				 = $wpdb->dbname;
         $this->info->isNameUpperCase	 = preg_match('/[A-Z]/', $wpdb->dbname) ? 1 : 0;
         $this->info->collationList		 = DUP_DB::getTableCollationList($filterTables);
@@ -290,7 +380,15 @@ class DUP_Database
         }
 
         //Filter tables
-        $tables       = $wpdb->get_col('SHOW TABLES');
+        $res = $wpdb->get_results('SHOW FULL TABLES', ARRAY_N);
+        $tables = array();
+        $baseTables = array();
+        foreach ($res as $row) {
+            $tables[] = $row[0];
+            if ('BASE TABLE' == $row[1]) {
+                $baseTables[] = $row[0];
+            }
+        }
         $filterTables = isset($this->FilterTables) ? explode(',', $this->FilterTables) : null;
         $tblAllCount  = count($tables);
         //$tblFilterOn  = ($this->FilterOn) ? 'ON' : 'OFF';
@@ -416,7 +514,13 @@ class DUP_Database
         $sql_footer = "\n\n/* Duplicator WordPress Timestamp: ".date("Y-m-d H:i:s")."*/\n";
         $sql_footer .= "/* ".DUPLICATOR_DB_EOF_MARKER." */\n";
         file_put_contents($this->dbStorePath, $sql_footer, FILE_APPEND);
-
+        foreach ($tables as $table) {
+            if (in_array($table, $baseTables)) {
+                $row_count = $GLOBALS['wpdb']->get_var("SELECT Count(*) FROM `{$table}`");
+                $rewrite_table_as = $this->rewriteTableNameAs($table);
+                $this->Package->Database->info->tableWiseRowCounts[$rewrite_table_as] = $row_count;
+            }
+        }
         return ($output) ? false : true;
     }
 
@@ -425,7 +529,7 @@ class DUP_Database
      *
      *  @return bool  Returns true if the sql script was successfully created
      */
-    private function phpDump()
+    private function phpDump($package)
     {
         global $wpdb;
     
@@ -495,11 +599,13 @@ class DUP_Database
     
             $table_number++;
             if($table_number % 2 == 0) {
-                $this->Package->Status = SnapLibUtil::getWorkPercent(DUP_PackageStatus::DBSTART, DUP_PackageStatus::DBDONE, $table_count, $table_number);
+                $this->Package->Status = DupLiteSnapLibUtil::getWorkPercent(DUP_PackageStatus::DBSTART, DUP_PackageStatus::DBDONE, $table_count, $table_number);
                 $this->Package->update();
             }
     
             $row_count = $wpdb->get_var("SELECT Count(*) FROM `{$table}`");
+            $rewrite_table_as = $this->rewriteTableNameAs($table);
+            $this->Package->Database->info->tableWiseRowCounts[$rewrite_table_as] = $row_count;
     
             if ($row_count > $qryLimit) {
                 $row_count = ceil($row_count / $qryLimit);
@@ -511,13 +617,42 @@ class DUP_Database
                 fwrite($handle, "\n/* INSERT TABLE DATA: {$table} */\n");
             }
     
-            $rewrite_table_as = $this->rewriteTableNameAs($table);
-    
             for ($i = 0; $i < $row_count; $i++) {
                 $sql   = "";
                 $limit = $i * $qryLimit;
                 $query = "SELECT * FROM `{$table}` LIMIT {$limit}, {$qryLimit}";
                 $rows  = $wpdb->get_results($query, ARRAY_A);
+
+                $select_last_error = $wpdb->last_error;
+                if ('' !== $select_last_error) {
+                    $is_select_error = true;
+                    DUP_LOG::trace($select_last_error);
+                    if (false !== stripos($wpdb->last_error, 'is marked as crashed and should be repaired')) {
+                        $ret_repair = $wpdb->query("repair table `{$table}`");
+                        $ret_repair = false;
+                        if ($ret_repair) {
+                            DUP_LOG::trace("Successfully repaired the {$table}"); 
+                            $rows = $wpdb->get_results($query, ARRAY_A);
+                            if ('' !== $wpdb->last_error) {
+                                $is_select_error = false;
+                            }
+                        }
+                    }
+
+                    if ($is_select_error) {
+                        $fix = esc_html__('Please constact your DataBase administrator to fix the error.', 'duplicator');
+                        $errorMessage = $select_last_error.' '.$fix.'.';
+                        $package->BuildProgress->set_failed($errorMessage);
+                        $package->BuildProgress->failed = true;
+                        $package->failed = true;
+                        $package->BuildProgress->Status = DUP_PackageStatus::ERROR;
+                        $package->Status = DUP_PackageStatus::ERROR;
+                        $package->Update();  
+                        DUP_Log::error($select_last_error, $fix, Dup_ErrorBehavior::Quit);                                              
+                        return;
+                    }
+                }
+
                 if (is_array($rows)) {
                     foreach ($rows as $row) {
                         $sql .= "INSERT INTO `{$rewrite_table_as}` VALUES(";

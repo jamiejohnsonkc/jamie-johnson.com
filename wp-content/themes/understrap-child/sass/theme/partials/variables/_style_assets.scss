@@ -1,241 +1,288 @@
+//*============================================
+//* =            //* gradients           =
+//*=============================================*/
 
-/*=============================================
-=            //* gradients           =
-=============================================*/
+
+
+
 @mixin spectrum {
-background:
-        linear-gradient(red, transparent),
-        linear-gradient(to top left, lime, transparent),
-        linear-gradient(to top right, blue, transparent);
-    background-blend-mode: screen;
+  background:
+    linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
 }
 
 
-@mixin black-gradient{
+@mixin black-gradient {
   background-color: #000000;
   background-image: linear-gradient(315deg, #000000 0%, #414141 85%);
   background-blend-mode: multiply;
 }
-  
-  @mixin test-bg{
+
+@mixin test-bg {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0f0f0f+0,5b5b5b+100&0.75+0,0.75+100 */
-    background: -moz-linear-gradient(left,  rgba(15,15,15,.3) 0%, rgba(91,91,91,.3) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  rgba(15,15,15,.3) 0%,rgba(91,91,91,.3) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(15,15,15,.3) 0%,rgba(91,91,91,.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf0f0f0f', endColorstr='#bf5b5b5b',GradientType=1 ); /* IE6-9 */
-  }
+  background: -moz-linear-gradient(left, rgba(15, 15, 15, .3) 0%, rgba(91, 91, 91, .3) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(15, 15, 15, .3) 0%, rgba(91, 91, 91, .3) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(15, 15, 15, .3) 0%, rgba(91, 91, 91, .3) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bf0f0f0f', endColorstr='#bf5b5b5b', GradientType=1);
+  /* IE6-9 */
+}
 
-    @mixin deep-space{
-   background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@mixin deep-space {
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    }
-    
+}
 
-@mixin az-subtle{
-      background-color: #f1f1f1;
-      background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/az-subtle.png");
-      // background-size: cover;
-      // background-repeat: repeat;
-      }
- 
- 
- /*=============================================
- =            //* textures            =
- =============================================*/
- 
-  @mixin carbon{
-    background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
-  }
 
-  @mixin carbon-fiber {
-    background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#282828;
-background-size:16px 16px;
-  }
 
-  @mixin zig-zag{
-    background:
+
+
+
+
+//*============================================
+//* =            //* background textures      =
+//*=============================================*/
+
+
+
+
+@mixin az-subtle {
+  background-color: #f1f1f1;
+  background-image: url("http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/az-subtle.png");
+  // background-size: cover;
+  // background-repeat: repeat;
+}
+
+@mixin carbon {
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+}
+
+@mixin carbon-fiber {
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+
+@mixin zig-zag {
+  background:
     linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
     linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
     linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
     linear-gradient(45deg, #ECEDDC 25%, transparent 25%);
-    background-size: 100px 100px;
-    background-color: #EC173A;
-  }
+  background-size: 100px 100px;
+  background-color: #EC173A;
+}
 
-  @mixin weave {
-    background:
-linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-background-color:#708090;
-background-size: 64px 128px;
-  }
+@mixin weave {
+  background:
+    linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color: #708090;
+  background-size: 64px 128px;
+}
 
-  @mixin half-rombes {
-    background: #36c;
-background:
-linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
-linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
-linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
-linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
-#36c;
-background-size: 15px 30px;
-  }
+@mixin half-rombes {
+  background: #36c;
+  background:
+    linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 7px -15px,
+    #36c;
+  background-size: 15px 30px;
+}
 
-  @mixin upholstery {
-    background:
-radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
-radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
-radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
-radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
-radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
-radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
-radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
-radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
-linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
-linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
-background-color: #300;
-background-size: 100px 100px;
-  }
+@mixin upholstery {
+  background:
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+  background-color: #300;
+  background-size: 100px 100px;
+}
 
-  @mixin argyle {
-    background-color: #6d695c;
-background-image:
-repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
-linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
-linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-background-size: 70px 120px;
-  }
+@mixin argyle {
+  background-color: #6d695c;
+  background-image:
+    repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1)),
+    linear-gradient(120deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1));
+  background-size: 70px 120px;
+}
 
-  @mixin seigaiha {
-    background-color:silver;
-background-image:
-radial-gradient(circle at 100% 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-radial-gradient(circle at 0    150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
-radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
-radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
-radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
-background-size: 100px 50px;
-  }
+@mixin seigaiha {
+  background-color: silver;
+  background-image:
+    radial-gradient(circle at 100% 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+    radial-gradient(circle at 0 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+  background-size: 100px 50px;
+}
 
-  @mixin polka-dot {
-    background-color:#001;
-background-image: radial-gradient(white 15%, transparent 16%),
-radial-gradient(white 15%, transparent 16%);
-background-size: 60px 60px;
-background-position: 0 0, 30px 30px;
-  }
+@mixin polka-dot {
+  background-color: #001;
+  background-image: radial-gradient(white 15%, transparent 16%),
+    radial-gradient(white 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
 
-  @mixin houndstooth {
-    background:
-linear-gradient(-45deg, white 25%, transparent 25%, transparent 75%, black 75%, black) 0 0,
-linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, white 75%, white) 1em 1em,
-linear-gradient(45deg, black 17%, transparent 17%, transparent 25%, black 25%, black 36%, transparent 36%, transparent 64%, black 64%, black 75%, transparent 75%, transparent 83%, black 83%) 1em 1em;
-background-color: white;
-background-size: 2em 2em;
-  }
+@mixin houndstooth {
+  background:
+    linear-gradient(-45deg, white 25%, transparent 25%, transparent 75%, black 75%, black) 0 0,
+    linear-gradient(-45deg, black 25%, transparent 25%, transparent 75%, white 75%, white) 1em 1em,
+    linear-gradient(45deg, black 17%, transparent 17%, transparent 25%, black 25%, black 36%, transparent 36%, transparent 64%, black 64%, black 75%, transparent 75%, transparent 83%, black 83%) 1em 1em;
+  background-color: white;
+  background-size: 2em 2em;
+}
 
-  @mixin checkerboard {
-    background-color: #eee;
-background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-background-size: 60px 60px;
-background-position: 0 0, 30px 30px;
-  }
+@mixin checkerboard {
+  background-color: #eee;
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
 
-  @mixin tartan {
-    background-color: hsl(2, 57%, 40%);
-background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
-  }
+@mixin tartan {
+  background-color: hsl(2, 57%, 40%);
+  background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0, 0, 0, .2) 2px, rgba(0, 0, 0, .2) 3px, transparent 3px, transparent 5px, rgba(0, 0, 0, .2) 5px);
+}
 
-  @mixin madras {
-    background-color: hsl(34, 53%, 82%);
-background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
-  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
-  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
-  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
-  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
-  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
-  ),
-repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
-  hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
-  hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
-  hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
-  hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
-  hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
-);
-  }
+@mixin madras {
+  background-color: hsl(34, 53%, 82%);
+  background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px),
+    repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px);
+}
 
-  @mixin blueprint {
-    background-color:#269;
-background-image: linear-gradient(white 2px, transparent 2px),
-linear-gradient(90deg, white 2px, transparent 2px),
-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
-  }
+@mixin blueprint {
+  background-color: #269;
+  background-image: linear-gradient(white 2px, transparent 2px),
+    linear-gradient(90deg, white 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
 
 @mixin chocolate-weave {
   background: linear-gradient(45deg, black 12%, transparent 0, transparent 88%, black 0),
     linear-gradient(135deg, transparent 37%, darkgray 0, darkgray 63%, transparent 0),
     linear-gradient(45deg, transparent 37%, #111 0, #111 63%, transparent 0) #777;
-    background-size: 25px 25px;
-}  
+  background-size: 25px 25px;
+}
 
 @mixin circada-stripes {
   background-color: #026873;
-background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
-linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
-linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
-linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
-background-size: 13px, 29px, 37px, 53px;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, .07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 255, 255, .13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
 }
 
 @mixin vertical-stripes {
   background-color: gray;
-background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);
-background-size: 50px 50px;
-}
-
-
-/*=============================================
-=            //*box shdadows            =
-=============================================*/
-
-@mixin light-shadow{
-  -webkit-box-shadow: 12px 10px 19px -14px rgba(0,0,0,0.5);
--moz-box-shadow: 12px 10px 19px -14px rgba(0,0,0,0.5);
-box-shadow: 12px 10px 19px -14px rgba(0,0,0,0.5);
+  background-image: linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, .5) 50%);
+  background-size: 50px 50px;
 }
 
 
 
-/*=============================================
-=            //*buttons            =
-=============================================*/
+
+//*============================================
+//* =            //*box shdadows            =
+//*=============================================*/
+
+@mixin light-shadow {
+  -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
+  box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
+}
 
 
-@mixin pill{
-@include vr($padding: .25 2);
-font-variant-caps: all-small-caps;
-letter-spacing: .15rem;
-border-radius: 25px;
+
+
+
+
+//*============================================
+//* =            //*buttons            =
+//*=============================================*/
+
+
+@mixin pill {
+  @include vr($padding: .25 2);
+  font-variant-caps: all-small-caps;
+  letter-spacing: .15rem;
+  border-radius: 25px;
+}
+
+
+
+
+//*============================================
+//* =            //* text shadows            =
+//*=============================================*/
+
+
+
+@mixin text-shadow{
+  // text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  text-shadow: rgb(51, 51, 51) 3px 0px 0px, rgb(51, 51, 51) 0.540302px 0.841473px 0px, rgb(51, 51, 51) -0.416147px 0.909297px 0px, rgb(51, 51, 51) -0.989992px 0.14112px 0px, rgb(51, 51, 51) -0.653644px -0.756802px 0px, rgb(51, 51, 51) 0.283662px -0.958924px 0px, rgb(51, 51, 51) 0.96017px -0.279415px 0px;
+  }
+  
+  @mixin text-shadow-primary{
+  // text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+  text-shadow: rgb(34, 204, 255) 3px 0px 0px, rgb(34, 204, 255) 0.540302px 0.841473px 0px, rgb(34, 204, 255) -0.416147px 0.909297px 0px, rgb(34, 204, 255) -0.989992px 0.14112px 0px, rgb(34, 204, 255) -0.653644px -0.756802px 0px, rgb(34, 204, 255) 0.283662px -0.958924px 0px, rgb(34, 204, 255) 0.96017px -0.279415px 0px;
+  }
+
+@mixin black-trans-overlay{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+99&1+0,1+14,0+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 14%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 14%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 14%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }

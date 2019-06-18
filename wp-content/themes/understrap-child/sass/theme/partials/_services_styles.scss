@@ -367,17 +367,17 @@ padding: 8% 8% 0 8%;
 
 
 
-.expertise__body-container{
-  background: white;
+// .expertise__body-container{
+//   background: white;
 
-  @include mq('desktop'){
-//   width: 90%;
-//   margin: 0 auto;
-//   max-width: 90%;  // background: $primary;
+//   @include mq('desktop'){
+// //   width: 90%;
+// //   margin: 0 auto;
+// //   max-width: 90%;  // background: $primary;
 
 
-  }
-}
+//   }
+// }
 .body-item__container--wrapper{
   @include mq('desktop'){
     position: relative;
@@ -386,26 +386,7 @@ padding: 8% 8% 0 8%;
   }
 }
 
-.expertise-body-item--container{
-width: 100%;
-max-width: 100%;
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-@include vr($padding-top: 6, $padding-bottom: 6);
-border-bottom: thin solid $gray-300;
-@include mq('desktop'){
-  // flex-direction: column;
-  // flex-wrap: nowrap;
-  // width: 38%;
-  // margin-left: 12%;
-  // margin-right: auto;
-  // align-items: center;
-}
-}
+
 
 .expertise__content-container{
   margin-top: 0;
@@ -530,9 +511,7 @@ margin-left: -9%;
  }
 }
 
-.expertise__carousel{
-width: 100%;
-}
+
 
 .expertise__carousel--item-header{
   display: none;
@@ -615,15 +594,16 @@ justify-content: unset;
 //! alldkjasdf a akfjasdf a;sdflkj 
 
 .expertise__carousel--indicators{
-  flex-direction: row;
-  display: flex;
-  position: relative;
-  // right: unset;
-  // bottom: unset;
-  max-width: 100%;
-  flex: 1;
-  margin: 0;
-  min-height: 10em;
+//   flex-direction: row;
+//   display: flex;
+//   position: relative;
+//   // right: unset;
+//   // bottom: unset;
+//   max-width: 100%;
+//   flex: 1;
+//   margin: 0;
+//   min-height: 6em;
+//   align-items: center;
 
   // min-height: 10em;
   // height: 4em;
@@ -632,13 +612,13 @@ justify-content: unset;
 
 
 li.expertise__carousel-indicator-list-item{
-  color: $black;
+  // color: $black;
   display: flex;
   flex: 0 1 32%;
-  min-height: 8em;
+  // min-height: 6em;
   max-width: 33%;
   width: unset;
-  @include vr($font-size: 1, $line-height: 1.5);
+  @include vr($font-size: 1, $line-height: 1.25, $padding: 2.5 0);
   justify-content: center;
  align-items:center;
  text-align: center;
@@ -646,9 +626,14 @@ li.expertise__carousel-indicator-list-item{
  border-right: .025em solid $gray-300;
  font-variant-caps: all-small-caps;
  letter-spacing: .05rem;
+ margin-left: 0;
+ margin-right: 0;
+ border: none;
  @include mq('tablet'){
   @include vr($font-size: 2, $line-height: 1.5);
  }
+ background: $black;
+ color: $white;
 
 }
 
@@ -676,15 +661,17 @@ height: unset;
 @include pointer();
 }
 
-.expertise__carousel--indicators .active{
-//  text-decoration: underline;
-//  text-decoration-color: $accent;
-  // @include vr($padding-top: 1, $padding-bottom: 1);
-  // border: thin solid $accent;
-  background: $accent;
-  color: $white;
-  font-weight: 500;
-}
+// .expertise__carousel--indicators .active{
+// //  text-decoration: underline;
+// //  text-decoration-color: $accent;
+//   // @include vr($padding-top: 1, $padding-bottom: 1);
+//   // border: thin solid $accent;
+//   background: $accent;
+//   border: thick solid $accent;
+//   color: $white;
+//   font-weight: 500;
+//   @include vr($padding: 3 0);
+// }
 
 // .expertise__carousel--item-divider{
 //   color: $accent;
@@ -734,37 +721,21 @@ li.expertise__carousel--list-divider{
 
 
 
-.expertise__carousel--inner{
-  height:65em;
-  display:block;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  @include mq('phone-wide'){
-  width: 90%;
-  max-width: 90%;
-  }
-  @include mq('tablet'){
-    width: 83%;
-  max-width: 83%;
-  height: 82em;
-  }
-}
+
 
 
 
 .expertise__carousel-item{
-  height: 100%;
   width:100%;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
+  position: relative;
+//   justify-content: center;
 }
 
 .expertise-carousel-item__header   {
 width: 83%;
-@include vr($margin: 3 auto 2 auto);
+@include vr($margin: 6 auto 2 auto);
 }
 .expertise-carousel-item__headline {
   @include list-head();   
@@ -773,11 +744,11 @@ width: 83%;
 }
 .expertise-carousel-item__subhead  {
   @include list-head();
-  padding-left: 1.5rem;  
+  // padding-left: 1.5rem;  
 }
 .expertise-carousel-item__list     {
-width: 77%;
-@include vr($margin: 3 auto);
+// width: 77%;
+
 }
 .expertise-carousel-item__list-item{
 // display: flex;
@@ -820,8 +791,8 @@ width: 77%;
 //   }
 
 .expertise__carousel--controls{
-  border-top: .025em solid $gray-300;
-  border-bottom: .025em solid $gray-300;
+  // border-top: .025em solid $gray-300;
+  // border-bottom: .025em solid $gray-300;
   @include mq('phone', $type: max){
     @include vr($margin-top: 2);
   }

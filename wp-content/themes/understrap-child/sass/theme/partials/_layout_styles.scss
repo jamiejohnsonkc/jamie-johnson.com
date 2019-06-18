@@ -3000,13 +3000,13 @@ left: 15%;
   }
 }
 
-.carousel-inner {
-  width: 90%;
-  min-height: 30em;
-  display: block;
+// .carousel-inner {
+//   width: 90%;
+//   min-height: 30em;
+//   display: block;
 
-  @include push-auto;
-}
+//   @include push-auto;
+// }
 
 .carousel-control-next-icon {
   margin-left: auto;

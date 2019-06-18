@@ -18,17 +18,22 @@ if (!defined('ABSPATH')) {
 
 	<div class="content__container growth__content-container">
 		<div class="container__headline--overlay growth__container-headline">
-			<h2 class="title growth__title">Four Ways I Can Grow Your Business</h2>
+			<h2 class="title growth__title">How I Grow Business</h2>
 		</div>
 		<div class="content__item growth__content-item growth__content-item--first">
 			<div class="image__container growth__image-container"><img src="/wp-content/uploads/2019/05/growth-2.jpg" class="img-window" alt="..."></div>
 			<div class="growth__image--overlay"></div>
-			<div class="growth__content-item--container  growth__content-item-container--first">
-				<div class="growth__headline-header">GET COMPETITIVE</div>
-				<div class="copy__header growth__copy-header">Design and deliver superior competitive value.</div>
-				<div class="button overlay__button growth__overlay-button">maximize advantage</div>
-				<a href="/" class="button ui-button__jump get-competitive__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+			<div class="growth__content-item--container growth__content-item-container--first">
+			<div class="growth__header-container">
+			<div class="growth__headline--prehead">I can help you</div>	
+			<div class="growth__headline-header">GET COMPETITIVE</div>
 			</div>
+	<div class="copy__header growth__copy-header">Design and deliver superior competitive value.</div>
+			<div class="copy__header growth__copy-header">Design and deliver superior competitive value.</div>
+				<div class="button overlay__button growth__overlay-button">maximize advantage</div>
+			</div>
+			<a href="/" class="button ui-button__jump get-competitive__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 		</div>
 		<div class="content__item growth__content-item">
 			<div class="image__container growth__image-container"><img src="/wp-content/uploads/2019/05/growth-4.jpg" class="img-welder" alt="..."></div>
@@ -36,7 +41,7 @@ if (!defined('ABSPATH')) {
 			<div class="growth__content-item--container">
 				<div class="growth__headline-header">GET FOUND</div>
 				<div class="copy__header growth__copy-header">Don't go to the market. Bring the market to you.</div>
-				<div class="button overlay__button growth__overlay-button">start conversations</div>
+				<div class="button overlay__button growth__overlay-button">get found</div>
 			</div>
 			<a href="/" class="button ui-button__jump get-found__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 

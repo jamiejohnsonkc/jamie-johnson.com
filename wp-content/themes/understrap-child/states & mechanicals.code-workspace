@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "page-templates"
+			"path": "src\\js"
 		},
 		{
-			"path": "src\\js"
+			"path": "."
 		}
 	]
 }

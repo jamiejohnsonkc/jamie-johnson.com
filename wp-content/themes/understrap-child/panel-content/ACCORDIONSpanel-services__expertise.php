@@ -123,7 +123,7 @@ if (!defined('ABSPATH')) {
 										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
-									<h2 class="headline__block expertise__headline">Start Conversations</h2>
+									<h2 class="headline__block expertise__headline">Get Found</h2>
 								</div>
 							</div>
 							<h3 class="deck deck__block expertise__deck">Irure sit enim deserunt eiusmod quis aliqua pariatur minim reprehenderit enim</h3>

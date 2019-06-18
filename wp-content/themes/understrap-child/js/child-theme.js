@@ -4007,10 +4007,25 @@
 // });
 
 jQuery(document).ready(function ($) {
-  if($(window).width() < 768) {
+  if($(window).width() < 769) {
      $("#advantage").addClass("carousel");
   }    
 });
+
+
+jQuery(document).ready(function ($) {
+  if($(window).width() > 768) {
+     $(".expertise__carousel-item").removeClass("active");
+     $("#advantage").removeClass("carousel-fade", "carousel");
+  }    
+});
+
+// jQuery(document).ready(function ($) {
+//   if($(window).width() > 768) {
+//      $(".expertise__carousel-item").removeClass("carousel-fade");
+//   }    
+// });
+
 
 
 // function checkWidth() {

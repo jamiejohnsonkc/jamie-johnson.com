@@ -62,8 +62,8 @@ exit; // Exit if accessed directly.
 
 	<div class="body__container--flex hybrid__body-container">
 	<div class="copy__container--flex hybrid__copy-container--background">	
-	<p class="deck__block--flex copy--bold hybrid__copy-block">I combine business savvy, strategic design and technology to achieve outcomes.</p>
-		<p class="copy__block--flex copy__block--intro hybrid__copy-block">Be it strategic, operational or tactical, I can help you diagnose your challenge, help you find a solution	and then  I'll help you bring it to fruition. Or mix and match &mdash; up to you.</p>
+	<p class="deck__block--flex copy--bold hybrid__copy-block hybridcopy-block--smallcaps">I combine business savvy, strategic design and technology to achieve outcomes.</p>
+		<p class="copy__block--flex copy__block--intro hybrid__copy-block">Be it strategic, operational or tactical, I can help you diagnose your challenge, help you find a solution and then I'll help you bring it to fruition. Or mix and match &mdash; up to you.</p>
 		
 		<div class="link__text--flex link__text link--hybrid hybrid__link">> see a list of my consulting, development and execution services</div>
 

@@ -28,8 +28,10 @@ if (!defined('ABSPATH')) {
 		<div class="wrapper better-intro__container-wrapper">
 			<div class="header__container header__container--push-center better-intro__section-head">
 				<!-- <h1 class="pagination pagination--better-intro">what is better marketing</h1> -->
-				<h1 class="headline__header">Its about what you should do. Not what you could do.</h1>
-				<div class="copy copy__header">And I don't mean cleverer, cooler or edgier creative. I mean marketing that peforms better. Marketing that makes you more money. Makes things easier to sell. Makes your life a little easier.</div>
+				<h1 class="headline__header">&ldquo;Its about what you should do. Not what you could do.&rdquo;</h1>
+				<div class="copy copy__header">And I don't mean cleverer creative or uber-cool UX design. I mean marketing that does what marketing is supposed to do.</div>
+				<div class="copy copy__header">Better marketing creates customers by the most efficient means possible. </div>
+
 			</div>
 		</div>
 	</article>
@@ -43,4 +45,4 @@ if (!defined('ABSPATH')) {
 											<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
 <!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/screensv5.jpg" class="tungscreens--large" alt="...">
 								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="..."> --> -->
+							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="..."> -->

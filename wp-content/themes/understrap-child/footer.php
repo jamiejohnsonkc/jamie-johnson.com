@@ -32,7 +32,7 @@ $container = get_theme_mod('understrap_container_type');
 							<!-- <div class="footer__contact--tag">lorem ipsum dolemite</div> -->
 						</div>
 					</div>
-					<div class="footer__contact--tag">Kansas City &mdash;(Lenexa)</div>
+					<div class="footer__contact--tag">Kansas City (Lenexa, KS)</div>
 					<div class="footer__contact--phone">913-207-6966</div>
 					<div class="button footer__contact--button">Drop Me A Note</div>
 				</div>

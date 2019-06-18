@@ -35,11 +35,11 @@ if (!defined('ABSPATH')) {
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
 						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_1.svg" class="mo__circle-digit style-svg" alt="..."></div>
 					
-					<div class="mo__diagram-head">The right solutions</div>
+					<div class="mo__diagram-subhead">The right solutions</div>
 					</div>
 					<a href="#mo-solutions" class="ui-button__expand ui-button__expand--black-white mo__expand-button" id="expand-mo-solutions" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
 							<div class="container__accordion mo__accordian" id="mo-solutions">
-							<div class="mo__diagram-copy">I begin every project with four simple words &mdash;what is your objective.It doesn't matter if it's stunning or cutting-edge if it doesn't solve your problem.</div>
+							<div class="mo__diagram-copy">I begin every project with four simple words &mdash;what is your objective. It doesn't matter if it's stunning or cutting-edge if it doesn't solve your problem.</div>
 							</div>
 					
 				</div>
@@ -47,7 +47,7 @@ if (!defined('ABSPATH')) {
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
 					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_2.svg" class="mo__circle-digit style-svg" alt="..."></div>
 				
-					<div class="mo__diagram-head">The right execution</div></div>
+					<div class="mo__diagram-subhead">The right execution</div></div>
 					<a href="#mo-execution" class="ui-button__expand ui-button__expand--black-white mo__expand-button" id="expand-mo-execution" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
 							<div class="container__accordion mo__accordian" id="mo-execution">
 							<p class="mo__diagram-copy">Look. Its almost 2020. Nobody wants to be interupted and they certainly don't want to be sold. I can help you understand how to appeal and connect with modern customers to generate meaningful relationships.</p>
@@ -59,10 +59,10 @@ if (!defined('ABSPATH')) {
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
 			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/circledigit-_3.svg" class="mo__circle-digit style-svg" alt="..."></div>
 				
-					<div class="mo__diagram-head">The right scale</div></div>
+					<div class="mo__diagram-subhead">The right scale</div></div>
 					<a href="#mo-scale" class="ui-button__expand ui-button__expand--black-white mo__expand-button" id="expand-mo-scale" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
 							<div class="container__accordion mo__accordian" id="mo-scale">
-							<p class="mo__diagram-copy">I'm not and you're probably not Apple, Starbucks or Disney. That doesn't mean you have to market yourself like Crazy Larry's House of Mattresses. I can help you achieve efficacy without an exorberant budget.</p>
+							<p class="mo__diagram-copy">I'm not Lee Clow and you're probably not Apple, Starbucks or Disney. That doesn't mean you have to market yourself like Crazy Larry's House of Mattresses. I can help you achieve efficacy without an exorberant budget.</p>
 							</div>
 		
 				</div>

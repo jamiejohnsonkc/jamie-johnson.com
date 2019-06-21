@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) {
 					
 					<div class="carousel-item one-up stats__carousel-item--one-up active">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
+							<img src="/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">brands supported</h6>
 							</div>
@@ -34,7 +34,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide" />
+							<img src="/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide" />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">categories served</h6>
 							</div>
@@ -42,7 +42,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">years of experience</h6>
 							</div>
@@ -50,7 +50,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">agency</h6>
 							</div>
@@ -58,7 +58,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">corporate</h6>
 							</div>
@@ -66,7 +66,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">largest program</h6>
 							</div>
@@ -74,7 +74,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container>">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">operations responsibility</<h6>
 								</h6>>
@@ -83,7 +83,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">largest employer</h6>
 							</div>
@@ -91,7 +91,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">p
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">tiniest employer</h6>
 							</div>
@@ -99,7 +99,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">matrix reports</h6>
 							</div>
@@ -107,7 +107,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_02.svg" class="style-svg" id="direct" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">direct reports</h6>
 							</div>
@@ -115,7 +115,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">user friendly</h6>
 							</div>
@@ -123,7 +123,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item one-up stats__carousel-item--one-up">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">bullshit</h6>
 							</div>
@@ -133,19 +133,19 @@ if (!defined('ABSPATH')) {
 				<div class="carousel-inner three-up-carousel  stats__three-up-carousel-inner">
 					<div class="carousel-item row no-gutters three-up active stats__carousel-threeup-item">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
+							<img src="/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">brands supported</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide" />
+							<img src="/wp-content/uploads/2019/03/stats_09.svg" class="style-svg" id="verticals" alt="Second slide" />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">categories served</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_13.svg" class="style-svg" id="calendar" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">years of experience</h6>
 							</div>
@@ -153,19 +153,19 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item row no-gutters three-up stats__carousel-threeup-item">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_12.svg" class="style-svg" id="agency" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">agency</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_14.svg" class="style-svg" id="corporate" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">corporate</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_06.svg" class="style-svg" id="purse" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">largest program</h6>
 							</div>
@@ -173,19 +173,19 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item row no-gutters three-up stats__carousel-threeup-item">
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">operations responsibility</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_04.svg" class="style-svg" id="globe" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">largest employer</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_05.svg" class="style-svg" id="atom" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">tiniest employer</h6>
 							</div>
@@ -193,19 +193,19 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="carousel-item row no-gutters three-up stats__carousel-threeup-item">
 						<div class="proof-quals stats__carousel-content" id="odd-stats">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_01.svg" class="style-svg" id="matrix" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">largest team</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content" id="odd-stats">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_03.svg" class="style-svg" id="accessible" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">user friendly</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content" id="odd-stats">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..." />
+							<img src="/wp-content/uploads/2019/03/stats_08.svg" class="style-svg" id="bs" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">bullshit</h6>
 							</div>

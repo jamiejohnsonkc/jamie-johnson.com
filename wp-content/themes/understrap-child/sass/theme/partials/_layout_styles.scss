@@ -3686,111 +3686,111 @@ padding-left: .5em;
 // objectives diagram (vert & horz aggregate)
 //
 
-.diagram__objectives {
-  @include vr($margin: 2 0 4 0);
-  @include make-row;
-   flex: 0 0 auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  max-width: 100%;
-  width: 100%;
-  border: thin solid $gray-500;
-  padding: 8%;
-  flex-wrap: wrap;
-
-}
-
-
-
-// .diagram__content--objectives-icon{
-//  >svg {
+// .diagram__objectives {
+//   @include vr($margin: 2 0 4 0);
+//   @include make-row;
+//    flex: 0 0 auto;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: inline-flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: space-around;
+//   max-width: 100%;
 //   width: 100%;
-//   @include mq("tablet"){ 
-//     width: 83%;
+//   border: thin solid $gray-500;
+//   padding: 8%;
+//   flex-wrap: wrap;
+
 // }
-// }
-// }
 
-.objectives-diagram__delta-icon{
-@include mq("tablet"){
-  display: flex;
-    flex: 0 0 100%;
-    justify-content: center;
-}
-}
 
-.content__container_icon .icon {
-  width: 70%;
-  margin: 0 auto;
-  display: block;
-}
 
-.delta--down {
-  width: 2rem;
-  height: 2rem;
-}
+// // .diagram__content--objectives-icon{
+// //  >svg {
+// //   width: 100%;
+// //   @include mq("tablet"){ 
+// //     width: 83%;
+// // }
+// // }
+// // }
 
-.delta--right {
-  width: 1rem;
-  height: 2rem;
-}
-
-.objectives-diagram__vertical--delta {
-  display: flex;
-}
-
-// .diagram-item__container--77row{
-//   margin-block-end: 0px;
-//   margin-block-start: 0px;
-//   list-style-position: inside;
-//   padding-inline-start: 0px;
-//   -webkit-padding-start: 0px;
-//   align-self: center;
+// .objectives-diagram__delta-icon{
 // @include mq("tablet"){
-
+//   display: flex;
+//     flex: 0 0 100%;
+//     justify-content: center;
 // }
-  // @media (max-width: 25em) {
-  //   margin-left: 2em;
-  // }
-// }
-
-// #objectives__diagram > div:nth-child(3) > p{
-//   margin-left: 1em;
 // }
 
-.objectives-diagram__list-item {
-  // @include make-row;
+// .content__container_icon .icon {
+//   width: 70%;
+//   margin: 0 auto;
+//   display: block;
+// }
 
-  width: 100%;
-  max-width: 100%;
+// .delta--down {
+//   width: 2rem;
+//   height: 2rem;
+// }
 
-  @include vr($margin: 2 0 2 0);
+// .delta--right {
+//   width: 1rem;
+//   height: 2rem;
+// }
 
-  padding-right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include mq("tablet"){
-      // @include make-row;
+// .objectives-diagram__vertical--delta {
+//   display: flex;
+// }
 
-  // width: 100%;
-  // max-width: 100%;
+// // .diagram-item__container--77row{
+// //   margin-block-end: 0px;
+// //   margin-block-start: 0px;
+// //   list-style-position: inside;
+// //   padding-inline-start: 0px;
+// //   -webkit-padding-start: 0px;
+// //   align-self: center;
+// // @include mq("tablet"){
 
-  // @include vr($margin: 1 0 1 0);
+// // }
+//   // @media (max-width: 25em) {
+//   //   margin-left: 2em;
+//   // }
+// // }
 
-  // padding-right: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  flex: 0 0 81%;
-  justify-content: center;
-  }
-}
+// // #objectives__diagram > div:nth-child(3) > p{
+// //   margin-left: 1em;
+// // }
+
+// .objectives-diagram__list-item {
+//   // @include make-row;
+
+//   width: 100%;
+//   max-width: 100%;
+
+//   @include vr($margin: 2 0 2 0);
+
+//   padding-right: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   @include mq("tablet"){
+//       // @include make-row;
+
+//   // width: 100%;
+//   // max-width: 100%;
+
+//   // @include vr($margin: 1 0 1 0);
+
+//   // padding-right: 0;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: flex-start;
+//   flex-wrap: wrap;
+//   flex: 0 0 81%;
+//   justify-content: center;
+//   }
+// }
 
 .diagram-item__container--23x37row{
   @include make-col-ready;

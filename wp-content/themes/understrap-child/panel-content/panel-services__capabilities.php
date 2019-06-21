@@ -469,7 +469,7 @@ if (!defined('ABSPATH')) {
 						<p class="link__text">click below to see a list of my capabilities by disipline</p>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-4">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon" />
+						<img src="/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
 							<h3 class="capabilities__menu-content_header">Mobile + Web Design & Development</h3>
 							<p class="capabilities__menu_copy">Digital assets and content built from the ground up to advance business.</p>
@@ -477,7 +477,7 @@ if (!defined('ABSPATH')) {
 						</div>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-3">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon" />
+						<img src="/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
 							<h3 class="capabilities__menu-content_header">Integrated Communications</h3>
 							<p class="capabilities__menu_copy">Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
@@ -485,7 +485,7 @@ if (!defined('ABSPATH')) {
 						</div>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-2">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon" />
+						<img src="/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
 							<h3 class="capabilities__menu-content_header">Strategic Marketing Management</h3>
 							<p class="capabilities__menu_copy">Where business plans transform into marketing strategy</p>
@@ -493,7 +493,7 @@ if (!defined('ABSPATH')) {
 						</div>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-5">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon" />
+						<img src="/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
 							<h3 class="capabilities__menu-content_header">Marketing Operations</h3>
 							<p class="capabilities__menu_copy">Optimizing marketing as a function, organization and an activity</p>
@@ -501,7 +501,7 @@ if (!defined('ABSPATH')) {
 						</div>
 					</div>
 					<div class="capabilities__menu_item" id="open-expt-overlay-1">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon" />
+						<img src="/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
 							<h3 class="capabilities__menu-content_header">Strategy & Implementation</h3>
 							<p class="capabilities__menu_copy">Modern marketing concepts, strategies and practices to achieve business outcomes</p>

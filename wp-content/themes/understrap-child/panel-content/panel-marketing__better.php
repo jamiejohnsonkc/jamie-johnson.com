@@ -8,10 +8,10 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<!-- <div class="better-carousel-item__image-container    better__image-container--table">    <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--conference-table" alt="..."></div>
-<div class="better-carousel-item__image-container    better__image-container--smoke">    <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-14.jpg" class="image--smoke" alt="..."></div>
-<div class="better-carousel-item__image-container    better__image-container--signature"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-4-1.jpg" class="image--signature" alt="..."></div>
-<div class="better-carousel-item__image-container    better__image-container--hellya">   <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--awesome" alt="..."></div> -->
+<!-- <div class="better-carousel-item__image-container    better__image-container--table">    <img src="/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--conference-table" alt="..."></div>
+<div class="better-carousel-item__image-container    better__image-container--smoke">    <img src="/wp-content/uploads/2019/06/hero-14.jpg" class="image--smoke" alt="..."></div>
+<div class="better-carousel-item__image-container    better__image-container--signature"><img src="/wp-content/uploads/2019/06/hero-4-1.jpg" class="image--signature" alt="..."></div>
+<div class="better-carousel-item__image-container    better__image-container--hellya">   <img src="/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--awesome" alt="..."></div> -->
 
 
 <section>
@@ -44,12 +44,12 @@ if (!defined('ABSPATH')) {
 
 
 						<div class="carousel-inner expertise__carousel--inner advantage-carousel__inner">
-							<div class="expertise__carousel-item carousel-item active">
+							<div class="expertise__carousel-item carousel-item carousel-item--conference-table active">
 							<div class="carousel-item-wrap carousel-item-wrap-conference-table">
 								<div class="carousel-item__header expertise-carousel-item__header header__maximize-advantage">
 									<h3 class="headline__item expertise-carousel-item__headline">Maximize Advantage</h3>	
 									<div class="better-carousel-item-overlay better-carousel-item-overlay__one"></div>
-									<div class="better-carousel-item__image-container better__image-container--table"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="..."></div>
+									<div class="better-carousel-item__image-container better__image-container--table"><img src="/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="..."></div>
 
 									<h4 class="subhead__item--vmar-1-1 expertise-carousel-item__subhead maximize-advantage-subhead">Designing, communicating, selling and delivering superior competitive value.</h4>
 								</div>
@@ -69,7 +69,7 @@ if (!defined('ABSPATH')) {
 								<div class="carousel-item__header expertise-carousel-item__header header__start-conversations">
 									<h3 class="headline__item expertise-carousel-item__headline">Get Found</h3>
 									<div class="better-carousel-item-overlay better-carousel-item-overlay__two"></div>
-									<div class="better-carousel-item__image-container better__image-container--smoke"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-14.jpg" class="image--smoke" alt="..."></div>
+									<div class="better-carousel-item__image-container better__image-container--smoke"><img src="/wp-content/uploads/2019/06/hero-21.jpg" class="image--smoke" alt="..."></div>
 									<h4 class="subhead__item--vmar-1-1 expertise-carousel-item__subhead">Get found then build rapport.</h4>
 								</div>
 								<ul class="list list--inset expertise-carousel-item__list">
@@ -88,7 +88,7 @@ if (!defined('ABSPATH')) {
 							<div class="better-carousel-item-overlay better-carousel-item-overlay__three"></div>
 								<div class="carousel-item__header expertise-carousel-item__header header__earn-trust">
 									<h3 class="headline__item expertise-carousel-item__headline">Earn Trust</h3>
-									<div class="better-carousel-item__image-container better__image-container--signature"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-4-1.jpg" class="image--signature" alt="..."></div>
+									<div class="better-carousel-item__image-container better__image-container--signature"><img src="/wp-content/uploads/2019/06/hero-18.jpg" class="image--signature" alt="..."></div>
 									<h4 class="subhead__item--vmar-1-1 expertise-carousel-item__subhead">Don't just position yourself. Demonstrate your value.</h4>
 								</div>
 								<ul class="list list--inset expertise-carousel-item__list">
@@ -106,7 +106,7 @@ if (!defined('ABSPATH')) {
 								<div class="better-carousel-item-overlay better-carousel-item-overlay__four"></div>
 								<div class="carousel-item__header expertise-carousel-item__header header__optimize-performance">
 									<h3 class="headline__item expertise-carousel-item__headline">Optimize Performance</h3>
-									<div class="better-carousel-item__image-container better__image-container--awesome"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--awesome" alt="..."></div>
+									<div class="better-carousel-item__image-container better__image-container--awesome"><img src="/wp-content/uploads/2019/06/hero-2-1.jpg" class="image--awesome" alt="..."></div>
 									<h4 class="subhead__item--vmar-1-1 expertise-carousel-item__subhead">Implementing best practices of marketing management, strategy and engagement into your operations.</h4>
 								</div>
 								<ul class="list list--inset expertise-carousel-item__list">

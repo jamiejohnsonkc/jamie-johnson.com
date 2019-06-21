@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "D:\\Local Github Repos\\devtools"
 		}
 	],
 	"settings": {

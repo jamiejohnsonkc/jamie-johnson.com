@@ -41,8 +41,8 @@ if (!defined('ABSPATH')) {
 </section>
 
 
-<!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-2.jpg" class="img-client" alt="...">
-											<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
-<!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/screensv5.jpg" class="tungscreens--large" alt="...">
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="..."> -->
+<!-- <img src="/wp-content/uploads/2019/06/hero-2.jpg" class="img-client" alt="...">
+											<img src="/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
+<!-- <img src="/wp-content/uploads/2019/06/screensv5.jpg" class="tungscreens--large" alt="...">
+								<img src="/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
+							<img src="/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="..."> -->

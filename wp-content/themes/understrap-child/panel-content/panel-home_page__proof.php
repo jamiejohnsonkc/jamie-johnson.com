@@ -28,7 +28,7 @@ if (!defined('ABSPATH')) {
 				<p class="copy__header outcomes__copy-header">Spenders generate rudderless overhead. Marketers find ways to achieve strategic business objectives.</p>
 				<p class="copy__header outcomes__copy-header"><em> I'm a Marketer.</em></p>
 			</div>
-			<div class="proof__content_item_img outcomes__image"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2-small.jpg"
+			<div class="proof__content_item_img outcomes__image"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg"
 					class="evo2small" alt="..."></div>
 		
 		<a class="link link__text proof__link-text outcomes__link-text">Learn more about my POV</a>
@@ -47,36 +47,36 @@ if (!defined('ABSPATH')) {
 			<h6	class="deck deck__header proof__deck-header end2end__deck-header">I Bring Value From the Board Room to the Keyboard</h6>
 			<div class="diagram diagram__end2end diagram__end2end--vert diagram__container--end2end">
 				<div class="end2end__diagram_caption">challenge</div>
-				<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div>
+				<div class="end2end__diagram_img"><img src="/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div>
 				<div class="end2end__diagram_img--plus">&#x2b;</div>
 				<div class="end2end__diagram_caption">solution</div>
-				<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt="..."></div>
+				<div class="end2end__diagram_img"><img src="/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt="..."></div>
 				<div class="end2end__diagram_img--plus">&#x2b;</div>
 				<div class="end2end__diagram_caption">development</div>
-				<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="..."></div>
+				<div class="end2end__diagram_img"><img src="/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="..."></div>
 				<div class="end2end__diagram_img--equal">&#x3d;</div>
 				<div class="end2end__diagram_caption">execution</div>
-				<div class="end2end__diagram_img" id="barchart"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div>
+				<div class="end2end__diagram_img" id="barchart"><img src="/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div>
 			</div>
 			<div class="diagram diagram__end2end diagram__end2end--horz diagram__container--end2end">
 				<div class="diagram-item diagram-item__end2end--horz">
 					<div class="end2end__diagram_caption">challenge</div>
-					<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div>
+					<div class="end2end__diagram_img"><img src="/wp-content/uploads/2018/12/skills_01.svg" class="style-svg" alt="..."></div>
 				</div>
 				<div class="end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
 				<div class="diagram-item diagram-item__end2end--horz">
 					<div class="end2end__diagram_caption">solution</div>
-					<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt="..."></div>
+					<div class="end2end__diagram_img"><img src="/wp-content/uploads/2018/12/skills_19.svg" class="style-svg" alt="..."></div>
 				</div>
 				<div class=" end2end__diagram--operator end2end__diagram_img--plus">&#x2b;</div>
 				<div class="diagram-item diagram-item__end2end--horz">
 					<div class="end2end__diagram_caption">development</div>
-					<div class="end2end__diagram_img"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="..."></div>
+					<div class="end2end__diagram_img"><img src="/wp-content/uploads/2019/01/skills_20.svg" class="style-svg" alt="..."></div>
 				</div>
 				<div class="end2end__diagram--operator end2end__diagram_img--equal">&#x3d;</div>
 				<div class="diagram-item diagram-item__end2end--horz">
 					<div class="end2end__diagram_caption">execution</div>
-					<div class="end2end__diagram_img" id="barchart"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div>
+					<div class="end2end__diagram_img" id="barchart"><img src="/wp-content/uploads/2018/12/skills_11.svg" class="style-svg" alt="..."></div>
 				</div>
 			</div>
 			<div class="proof__copy--container proof__content_text end2end__copy-container">
@@ -93,7 +93,7 @@ if (!defined('ABSPATH')) {
 	<div class="proof__content-container centricity__content-container"> 
 		
 				<h5	class="headline headline__header proof__panel_headline headline headline__header centricity__headline-header">I think a professional service should be professional about service</h5>
-				<div class="content__item_img image__container bell__image-container"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/bell.svg" alt="..." class="style-svg silo-bell"></div>
+				<div class="content__item_img image__container bell__image-container"><img src="/wp-content/uploads/2019/03/bell.svg" alt="..." class="style-svg silo-bell"></div>
 				<div class="proof__content_text proof__content_text--centricity">
 					<p class="copy__header proof__panel_body-copy copy__header proof__panel_body-copy--centricity">I spent the better part of my career managing professional service teams and the other half working with them.</p>
 				</div>
@@ -104,5 +104,5 @@ if (!defined('ABSPATH')) {
 <a href="/" class="button ui-button__jump proof-professional__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
 	</div></article>
 
-	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
+	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 </section>

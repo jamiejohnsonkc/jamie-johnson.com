@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="container" >
 			
-				<a href="/" class="custom-logo-link" rel="home" itemprop="url">	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
+				<a href="/" class="custom-logo-link" rel="home" itemprop="url">	<img src="/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
 
 
 				<div class="navbar-brand mb-0">
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/hamburger-icon.svg" alt="hamburger-icon" class="style-svg hamburger-icon-svg"></span>
+					<span class="navbar-toggler-icon"><img src="/wp-content/uploads/2019/03/hamburger-icon.svg" alt="hamburger-icon" class="style-svg hamburger-icon-svg"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->

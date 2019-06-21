@@ -14,17 +14,17 @@ exit; // Exit if accessed directly.
 <div class="graphic__container graphic__container--home-hybrid  hybrid__background-graphic-container">
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">
-	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
 		class="hybrid-icon style-svg" />
 </div>							
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">						
-	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
 		class="hybrid-icon style-svg" />
 </div>
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">
-	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
 		class="hybrid-icon style-svg" />
 </div>
 
@@ -32,7 +32,7 @@ exit; // Exit if accessed directly.
 </div>
 	<!-- <h2 class="title title--white headline__header--intro">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
 
-	<h1 class="pagination pagination--overlay hybrid__pagination">How I do it</h1>
+	<h1 class="pagination pagination--overlay hybrid__pagination">what makes me different</h1>
 
 	<div class="header__container header__container--home-hybrid hybrid__header-container">
 		<h2 class="title headline__header--intro hybrid__headline-header">I'm what you'd call a 'hybrid' marketer</h2>
@@ -41,17 +41,17 @@ exit; // Exit if accessed directly.
 		<div class="graphic__container graphic__container--home-hybrid  hybrid__graphic-container">
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
 					class="hybrid-icon style-svg" />
 			</div>							
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">						
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
 					class="hybrid-icon style-svg" />
 			</div>
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
 					class="hybrid-icon style-svg" />
 			</div>
 
@@ -116,7 +116,7 @@ exit; // Exit if accessed directly.
 <p class="copy__block copy copy__block--intro"><span class="leader copy copy__block copy__block--strong">Process and operations = bread and butter.</span>Duis non ullamco quis elit adipisicing incididunt consectetur id sint ipsum reprehenderit ullamco qui id.</p>
 
 <div class="image__container--intro">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/conductor-light-1.jpg" class="conductor" alt="...">
+			<img src="/wp-content/uploads/2019/01/conductor-light-1.jpg" class="conductor" alt="...">
 			<div class="image__caption"></div>
 	</div>
 </div> -->
@@ -135,7 +135,7 @@ exit; // Exit if accessed directly.
 			<div class="content__intro_icon--background">
 
 				<div class="intro__icon intro__icon--fish">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/skill-33.svg"
+					<img src="/wp-content/uploads/2019/03/skill-33.svg"
 						class="style-svg intro__icon_svg" alt="...">
 				</div>
 			</div>
@@ -160,7 +160,7 @@ exit; // Exit if accessed directly.
 			<h4 class="diagram-item__subhead diagram-item--offwhite">get found</h4>
 			<div class="content__intro_icon--background">
 				<div class="intro__icon intro__icon--conversation">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_24.svg"
+					<img src="/wp-content/uploads/2019/01/skills_24.svg"
 						class="style-svg intro__icon_svg" alt="...">
 				</div>
 			</div>
@@ -181,7 +181,7 @@ exit; // Exit if accessed directly.
 			<h4 class="diagram-item__subhead diagram-item--offwhite">get sold</h4>
 			<div class="content__intro_icon--background">
 				<div class="intro__icon intro__icon--conversation">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_26.svg"
+					<img src="/wp-content/uploads/2019/01/skills_26.svg"
 						class="style-svg intro__icon_svg" alt="...">
 				</div>
 			</div>
@@ -204,7 +204,7 @@ exit; // Exit if accessed directly.
 			<h4 class="diagram-item__subhead diagram-item--offwhite">get more business</h4>
 			<div class="content__intro_icon--background">
 				<div class="intro__icon intro__icon--rocket">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_02.svg"
+					<img src="/wp-content/uploads/2018/12/skills_02.svg"
 						class="style-svg intro__icon_svg" alt="...">
 				</div>
 			</div>

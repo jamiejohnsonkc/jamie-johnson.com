@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 ?>
 <!-- <article class="article__wrapper article__wrapper--overlap homepage-claim__wrapper claim__article-wrapper  claim__article--wrapper"></article>
 	<div class="homepage-claim__background-image--container claim__background-image-container  arrow__container">
-		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
+		<img src="/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	</div>
 	<div class="content__block--claim">
 		<h1 class="pagination pagination--homepage pagination--claim pagination--overlay claim__pagination ">What I Do</h1>
@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 
 <article class="claim__article--wrapper">
 	<div class="arrow__container">
-		<img src="//jamiejohnsonmev2.test/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
+		<img src="/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	
 	<div class="content__block--claim">
 		<h1 class="pagination claim__pagination">What I Do</h1>

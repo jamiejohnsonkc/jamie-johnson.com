@@ -32,7 +32,7 @@ exit; // Exit if accessed directly.
 		
 		<div class="diagram__content_container objectives-diagram__list-item">
 			<div class="diagram-item__container--77row">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
+				<img src="/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg"/>
 			</div>
 			<ol class="objectives-diagram__ordered-list">
 				<li class="objectives__diagram_li">business <span class="br"><br></span>goals</li>
@@ -42,17 +42,17 @@ exit; // Exit if accessed directly.
 
 		<div class="objectives-diagram__delta-icon">
 			<div class="objectives-diagram__vertical--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
+				<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
 			</div>
 			<div class="objectives-diagram__horizontal--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
+				<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
 			</div>
 		</div>
 
 
 		<div class="diagram__content_container objectives-diagram__list-item" >
 			<div class="diagram-item__container--77row">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg"/>
+				<img src="/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg"/>
 			</div>
 			<ol start=2 class="objectives-diagram__ordered-list">
 				<li class="objectives__diagram_li">marketing <span class="br"><br></span>solutions</li>
@@ -64,15 +64,15 @@ exit; // Exit if accessed directly.
 
 		<div class="objectives-diagram__delta-icon">
 			<div class="objectives-diagram__vertical--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
+				<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
 			</div>
 			<div class="objectives-diagram__horizontal--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
+				<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
 			</div>
 		</div>
 		<div class="diagram__content_container objectives-diagram__list-item">
 			<div class="diagram-item__container--77row">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg"/>
+				<img src="/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg"/>
 			</div>
 			<ol start=3 class="objectives-diagram__ordered-list">
 				<li class="objectives__diagram_li">performance <span class="br"><br></span>metrics</li>
@@ -80,15 +80,15 @@ exit; // Exit if accessed directly.
 		</div>
 		<div class="objectives-diagram__delta-icon">
 			<div class="objectives-diagram__vertical--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
+				<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down"/>
 			</div>
 			<div class="objectives-diagram__horizontal--delta">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
+				<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right"/>
 			</div>
 		</div>
 		<div class="diagram__content_container objectives-diagram__list-item">
 			<div class="diagram-item__container--77row">
-				<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg"/>
+				<img src="/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg"/>
 			</div>
 			<ol start=4 class="objectives-diagram__ordered-list">
 				<li class="objectives__diagram_li">business <span class="br"><br></span>impact</li>
@@ -103,7 +103,7 @@ exit; // Exit if accessed directly.
 	</div>
 </div>
 	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
+		<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 	</a>
 </div>
 </article>

@@ -224,7 +224,11 @@ display: none;
 @include mq('desktop-uhd') {
 }
 
-
+.ui-button__jump, .ui-button__jump--positioned{
+    @include mq('tablet-wide'){
+        display: none;
+    }
+}
 
 // ==========================================================================
 // everything beyond here appears to need parsing

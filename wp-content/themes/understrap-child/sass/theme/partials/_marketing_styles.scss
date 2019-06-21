@@ -140,6 +140,9 @@ overflow: visible;
 .expertise__body-container{
   background: #fff;
   padding-bottom: 3em;
+@include mq('tablet-wide'){
+padding-bottom: 0;
+}
 }
 
 //* small screen carousel image dimensions
@@ -446,7 +449,7 @@ display: none;
   display: block;
   overflow: hidden;
   position: relative;
-  margin: 1.5em 0;
+  // margin: 1.5em 0;
 } 
 
 
@@ -546,6 +549,8 @@ display: inline-block;
   text-indent: -3em;
 }
 
+.carousel-item--start-conversations, .carousel-item--signature, .carousel-item--awesome
+
 .carousel-item--start-conversations, .carousel-item--signature, .carousel-item--awesome{
 display: flex;
 align-items: center;
@@ -598,7 +603,7 @@ background: $black;
 .header__start-conversations{ 
   width: 100%;
   >.headline__item{ @include vr($font-size:3, $margin: 0, $padding: .5 1); text-align: left; border: none; background: $black; color: $white;}
-  >.expertise-carousel-item__subhead{@include vr($font-size: 2, $margin: 3 0 0 0, $line-height: 2.5, $padding: 0 1); color: $white; text-align: left;}
+  >.expertise-carousel-item__subhead{@include vr($font-size: 2, $margin: 3 0 0 0, $line-height: 2.5, $padding: 0 1); color: $white; text-align: left; text-align: left; width: 100%; max-width: 100%;}
   +.expertise-carousel-item__list{color: $white;
     >.expertise-carousel-item__list-item{
       width: 90%; max-width: 90%;
@@ -611,8 +616,8 @@ background: $black;
 .header__earn-trust{          
   width: 100%;
   >.headline__item{ @include vr($font-size:3, $margin: 0, $padding: .5 1); text-align: left; border: none; background: #333; color: $white;}
-  >.expertise-carousel-item__subhead{@include vr($font-size: 2, $margin: 3 0 0 0, $line-height: 2.5, $padding: 0 1); color: $white; text-align: left; width: 100%; max-width: 100%;}
-  +.expertise-carousel-item__list{color: $white;
+  >.expertise-carousel-item__subhead{@include vr($font-size: 2, $margin: 3 0 0 0, $line-height: 2.5, $padding: 0 1); color: $black; text-align: left; width: 100%; max-width: 100%;}
+  +.expertise-carousel-item__list{color: $black;
     >.expertise-carousel-item__list-item{
       width: 90%; max-width: 90%;
     }  
@@ -697,7 +702,7 @@ background: $black;
       height: auto;
       display: block;
       max-width: 300%;
-      width: 101%;
+      width: 127%;
       margin-bottom: -4%;
       margin-left: 0%;
       }

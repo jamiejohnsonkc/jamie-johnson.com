@@ -28,11 +28,11 @@ exit; // Exit if accessed directly.
 		</div>
 		<!-- <a class="learn" href="http://jamiejohnsonmev2.test/modus-operandi" title="learn more link">Cillum pariatur ad in ullamco.</a>
 		<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-modance-business-objectives" title="go to next">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/>
+			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/>
 		</a> -->
 		
 		
 	</div>
-	<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/></a>
+	<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/></a>
 	</article>
 	</section><!-- Container end -->

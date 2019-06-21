@@ -31,7 +31,7 @@
 						<div class="diagram__list-item-container diagram__list-item-container--objectives">
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-bullseye">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg" />
+									<img src="/wp-content/uploads/2019/01/skills_22.svg" alt="bullseye" class="icon bullseye style-svg" />
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">business <span class="br"><br></span>goals</h5>
@@ -40,15 +40,15 @@
 							</div>
 							<div class="objectives-diagram__delta-icon">
 								<div class="objectives-diagram__vertical--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
+									<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
 								</div>
 								<div class="objectives-diagram__horizontal--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
+									<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
 								</div>
 							</div>
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-architecture">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg" />
+									<img src="/wp-content/uploads/2019/01/skills_23.svg" alt="architecture" class="icon architecture style-svg" />
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">marketing <span class="br"><br></span>solutions</h5>
@@ -57,15 +57,15 @@
 							</div>
 							<div class="objectives-diagram__delta-icon">
 								<div class="objectives-diagram__vertical--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
+									<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
 								</div>
 								<div class="objectives-diagram__horizontal--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
+									<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
 								</div>
 							</div>
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-instruments">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg" />
+									<img src="/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg" />
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">performance <span class="br"><br></span>metrics</h5>
@@ -74,15 +74,15 @@
 							</div>
 							<div class="objectives-diagram__delta-icon">
 								<div class="objectives-diagram__vertical--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
+									<img src="/wp-content/uploads/2019/01/delta-down.svg" alt="delta down" class="style-svg delta--down" />
 								</div>
 								<div class="objectives-diagram__horizontal--delta">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
+									<img src="/wp-content/uploads/2019/01/delta-right.svg" alt="delta right" class="style-svg delta--right" />
 								</div>
 							</div>
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-bargraph">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg" />
+									<img src="/wp-content/uploads/2018/12/skills_11.svg" alt="business impact" class="icon impact style-svg" />
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">business <span class="br"><br></span>impact</h5>
@@ -100,7 +100,7 @@
 						</div>
 					</div>
 					<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+						<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 					</a>
 				</div>
 			
@@ -129,7 +129,7 @@
 					<p class="justification__page-header_text deck__header--value"> What customers value, how they buy and what they expect from sellers are redefining traditional approaches to marketing.</p>
 				</div>
 				<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/scv5-01.svg" alt="..." class="style-svg diagram-content__superior-value_svg" />
+					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="..." class="style-svg diagram-content__superior-value_svg" />
 				</div>
 				<a class="button moreless-button moreless-button__value">Read more</a>
 				<div class="read-more__container read-more__value">
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 				</a>
 			</div>
 
@@ -162,7 +162,7 @@
 					</div>
 					<div class="diagram justification__diagram diagram__modern-marketing">
 						<div class="diagram-content">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/modern_marketing_redux-v2a.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram" />
+							<img src="/wp-content/uploads/2019/03/modern_marketing_redux-v2a.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram" />
 						</div>
 					</div>
 				</div>
@@ -173,7 +173,7 @@
 					</div>
 				</div>
 				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 				</a>
 			</div>
 
@@ -195,11 +195,11 @@
 					<div class="diagram__container diagram__content_container optimize-diagram__container">
 						<div class="diagram justification__diagram diagram__end-to-end">
 							<div class="diagram-content diagram__end-to-end--horizontal">
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/end_horz.svg" alt="..." class="style-svg end-to-end--horz" />
+								<img src="/wp-content/uploads/2019/03/end_horz.svg" alt="..." class="style-svg end-to-end--horz" />
 							</div>
 							<div class="diagram-content diagram__end-to-end--vertical">
 								<div class="progression__end-to-end--vertical">
-									<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="..." class="style-svg end-to-end--vert" />
+									<img src="/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="..." class="style-svg end-to-end--vert" />
 								</div>
 								<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div>
 							</div>
@@ -213,7 +213,7 @@
 					</div>
 				</div>
 				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 				</a>
 			</div>
 

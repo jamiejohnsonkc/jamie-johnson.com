@@ -31,7 +31,7 @@ $breakpoints: (
 
 
 //example
-//                                  @include mq('phone', $type:max){
+// @include mq('phone', $type:max){
 //min-height: 600px;
 //}
 
@@ -51,17 +51,6 @@ $breakpoints: (
   }
 }
 
-/* //The example below showing the padding and font-size increasing once the viewport gets over 1024px.
-//
-//.site-header {
-//    padding: 2rem;
-//    font-size: 1.8rem;
-//                              @include mq('tablet-wide') {
-//        padding-top: 4rem;
-//        font-size: 2.4rem;
-//    }
-//}
-// */
 
 $mq-phone-small: "(max-width: #{bp-phone-small})";
 $mq-phone: "(min-width: #{bp-phone})";
@@ -75,6 +64,3 @@ $mq-desktop-wide: "(min-width: #{bp-desktop-wide})";
 $mq-desktop-hd: "(min-width: #{bp-desktop-hd})";
 $mq-desktop-uhd: "(min-width: #{bp-desktop-uhd})";
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
-// @mixin copy { //             @include vr($font-size: 3, $margin:1 0); // }
-// @mixin title-sub-sm { //     @include vr($font-size: 6, $margin:2 0); // }
-

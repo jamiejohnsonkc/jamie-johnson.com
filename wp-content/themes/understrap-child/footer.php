@@ -26,7 +26,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="footer-content col-lg-3 col-md-6 col-sm-12">
 				<div class="footer__content-container--contact">
 					<div class="footer__contact--bug">
-						<div class="footer__contact--logo-container"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></div>
+						<div class="footer__contact--logo-container"><img src="/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></div>
 						<div class="footer__contact--moniker">
 							<div class="footer__contact--name">jamie johnson</div>
 							<!-- <div class="footer__contact--tag">lorem ipsum dolemite</div> -->
@@ -63,9 +63,9 @@ $container = get_theme_mod('understrap_container_type');
 						
 					<div class="footer-contact-icon-container">
 					<div class="footer__subhead">write</div>
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/contact-07.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/contact-01.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/contact-02.svg" class="style-svg footer-contact-icon" alt="...">		
+					<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg footer-contact-icon" alt="...">
+							<img src="/wp-content/uploads/2019/05/contact-01.svg" class="style-svg footer-contact-icon" alt="...">
+							<img src="/wp-content/uploads/2019/05/contact-02.svg" class="style-svg footer-contact-icon" alt="...">		
 
 					</div>		
 				
@@ -73,8 +73,8 @@ $container = get_theme_mod('understrap_container_type');
 				
 						<div class="footer-contact-icon-container">
 						<div class="footer__subhead">follow</div>	
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/contact-04.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/contact-03.svg" class="style-svg footer-contact-icon" alt="...">
+							<img src="/wp-content/uploads/2019/05/contact-04.svg" class="style-svg footer-contact-icon" alt="...">
+							<img src="/wp-content/uploads/2019/05/contact-03.svg" class="style-svg footer-contact-icon" alt="...">
 						</div>
 									
 						<div class="footer-contact-icon-container">

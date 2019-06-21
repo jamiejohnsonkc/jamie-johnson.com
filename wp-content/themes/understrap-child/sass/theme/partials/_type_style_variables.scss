@@ -1158,7 +1158,7 @@ p {
 
 
   &__header {
-    @include header__subhead-sm;
+    @include header__subhead;
 
     @include mq("desktop") {
       @include header__subhead-lg;

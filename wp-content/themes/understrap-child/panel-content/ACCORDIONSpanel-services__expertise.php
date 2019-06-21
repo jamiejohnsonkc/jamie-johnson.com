@@ -15,15 +15,15 @@ if (!defined('ABSPATH')) {
 					<h1 class="pagination pagination--expertise">End to End Expertise</h1>
 					<div class="graphic__container graphic__container--services-masthead">
 						<div class="graphic__element graphic__element--services">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..." class="hybrid-icon style-svg" />
+							<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..." class="hybrid-icon style-svg" />
 						</div>
 
 						<div class="graphic__element graphic__element--services">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
+							<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
 						</div>
 						<div class="graphic__element graphic__element--services graphic__element--services-offset"></div>
 						<div class="graphic__element graphic__element--services">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
+							<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 						</div>
 					</div>
 				</div>
@@ -47,7 +47,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
 									<h2 class="headline__block expertise__headline">Maximize Advantage</h2>
@@ -67,7 +67,7 @@ if (!defined('ABSPATH')) {
 								</ol>
 							</div>
 							<div class="image__container--expertise expertise__image-container expertise__image-container--table">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
+							<img src="/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
 						</div> -->
 
 							<div class="carousel-inner expertise__carousel--inner advantage-carousel__inner">
@@ -120,7 +120,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
 									<h2 class="headline__block expertise__headline">Get Found</h2>
@@ -140,8 +140,8 @@ if (!defined('ABSPATH')) {
 								</ol>
 							</div>
 							<div class="image__container--expertise expertise__image-container expertise__image-container--screens">
-								<!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/screensv5.jpg" class="tungscreens--large" alt="...">
+								<!-- <img src="/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
+								<img src="/wp-content/uploads/2019/06/screensv5.jpg" class="tungscreens--large" alt="...">
 
 							</div>
 
@@ -195,7 +195,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
 									<h2 class="headline__block expertise__headline">Generate Trust</h2>
@@ -215,8 +215,8 @@ if (!defined('ABSPATH')) {
 								</ol>
 							</div>
 							<div class="image__container--expertise expertise__image-container expertise__image-container--screens">
-								<!-- <img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
-								<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/06/hero-2.jpg" class="img-client" alt="...">
+								<!-- <img src="/wp-content/uploads/2019/03/tungscreens.jpg" class="tungscreens--small" alt="..."> -->
+								<img src="/wp-content/uploads/2019/06/hero-2.jpg" class="img-client" alt="...">
 
 							</div>
 
@@ -270,7 +270,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
 									<h2 class="headline__block expertise__headline">Optimize Performance</h2>
@@ -290,7 +290,7 @@ if (!defined('ABSPATH')) {
 								</ol>
 							</div>
 							<div class="image__container--expertise expertise__image-container expertise__image-container--conductor">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="...">
+							<img src="/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="...">
 						</div>
 
 							<div class="carousel-inner expertise__carousel--inner integrated-carousel__inner">
@@ -344,7 +344,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 
 									<h2 class="headline__block expertise__headline">Strategic Marketing Management</h2>
@@ -362,7 +362,7 @@ if (!defined('ABSPATH')) {
 							</ol>
 						</div>
 						<div class="image__container--expertise expertise__image-container expertise__image-container--table">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
+							<img src="/wp-content/uploads/2019/03/conftable.jpg" class="image--conference-table" alt="...">
 						</div> -->
 				<!-- marketing carousel -->
 				<!-- <div id="marketing-carousel" class="carousel slide expertise__carousel" data-interval="false">
@@ -456,7 +456,7 @@ if (!defined('ABSPATH')) {
 							<div class="header__container split-row expertise__header-container">
 								<div class="split-row__wrapper expertise__split-row-wrapper">
 									<div class="graphic__element expertise__graphic-element">
-										<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..." class="hybrid-icon style-svg" />
+										<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..." class="hybrid-icon style-svg" />
 									</div>
 									<h2 class="headline__block expertise__headline">Marketing Operations</h2>
 								</div>
@@ -474,7 +474,7 @@ if (!defined('ABSPATH')) {
 							</ol>
 						</div>
 						<div class="image__container--expertise expertise__image-container expertise__image-container--conductor">
-							<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="...">
+							<img src="/wp-content/uploads/2019/05/conductor-hued.png" class="conductor" alt="...">
 						</div>
 
 

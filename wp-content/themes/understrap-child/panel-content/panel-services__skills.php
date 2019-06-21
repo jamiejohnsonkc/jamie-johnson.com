@@ -402,7 +402,7 @@ exit; // Exit if accessed directly.
 		</div>
 		<nav class="expertise__main-page_menu">  <!--  extend this to row -->
 <!-- 		<div class="expertise__menu_item" id="open-expt-overlay-1">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
+			<img src="/wp-content/uploads/2018/12/skills_22.svg" class="expertise__menu_icon expertise__menu_icon--leadership style-svg" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Strategy</h3>
 				<p>Officia cupidatat ut ea consequat quis consequat ullamco officia.</p>
@@ -410,7 +410,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div> -->
 		<div class="expertise__menu_item" id="open-expt-overlay-2">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_21.svg" class="expertise__menu_icon expertise__menu_icon--marketing style-svg" alt="skills_icon"/>
+			<img src="/wp-content/uploads/2018/12/skills_21.svg" class="expertise__menu_icon expertise__menu_icon--marketing style-svg" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Management</h3>
 				<p>Voluptate ea ut ex ullamco ut ut sint non.</p>
@@ -418,7 +418,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="expertise__menu_item" id="open-expt-overlay-3">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/skills_25.svg" class="expertise__menu_icon expertise__menu_icon--communications style-svg" alt="skills_icon"/>
+			<img src="/wp-content/uploads/2018/12/skills_25.svg" class="expertise__menu_icon expertise__menu_icon--communications style-svg" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Engagement</h3>
 				<p>Ex aliqua eiusmod sunt pariatur laborum elit enim.</p>
@@ -426,7 +426,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="expertise__menu_item" id="open-expt-overlay-4">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_20.svg" class="expertise__menu_icon expertise__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
+			<img src="/wp-content/uploads/2019/01/skills_20.svg" class="expertise__menu_icon expertise__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Mobile + Web</h3>
 				<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
@@ -434,7 +434,7 @@ exit; // Exit if accessed directly.
 			</div>
 		</div>
 		<div class="expertise__menu_item" id="open-expt-overlay-5">
-			<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/skills_31.svg" class="expertise__menu_icon expertise__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
+			<img src="/wp-content/uploads/2019/01/skills_31.svg" class="expertise__menu_icon expertise__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon"/>
 			<div class="expertise__menu_item--content">
 				<h3>Operations</h3>
 				<p>Incididunt amet esse magna dolor ut voluptate voluptate nisi laboris dolore.</p>
@@ -444,7 +444,7 @@ exit; // Exit if accessed directly.
 	</nav>
 </div>
 <a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
+<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 </div>
 
 </article>

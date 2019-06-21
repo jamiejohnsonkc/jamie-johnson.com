@@ -20,7 +20,7 @@ exit; // Exit if accessed directly.
 					<div class="content__item_col intro" id="intro__content_management">
 
 						<div class="content__item_caption"><p>Ut velit non ea labore in amet dolore laborum fugiat dolor labore sunt.</p><p>Lorem ipsum deserunt quis enim sed culpa quis dolor nostrud cillum consectetur anim sed.</p></div>
-						<!-- <div class="content__item_img" id="evo2small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="..."></div> -->
+						<!-- <div class="content__item_img" id="evo2small"><img src="/wp-content/uploads/2019/01/evolutionv2-small.jpg" alt="..."></div> -->
 						<div class="intro__list" id="intro__list--management"><h4>Eu commodo ut sed nostrud et minim dolor in elit veniam.</h4>
 							<ol>
 								<li><a href="/">Nostrud voluptate.</a></li>
@@ -33,7 +33,7 @@ exit; // Exit if accessed directly.
 					
 				</div>
 				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-						<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
+						<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 					</a>
 			</div>
 			</article>

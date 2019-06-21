@@ -25,7 +25,7 @@ exit; // Exit if accessed directly.
 			<div class="visual-title categories__visual-title">I have extensive experience in the following areas (click on each image for more information)</div>
 			<div class="content2 content2__background background__text content2__background--categories categories__content--grid">
 				<div class="background__categories_content background__categories_content--industrial">
-					<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
+					<img src="/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
 					<div class="categories__content_caption">
 						<h3 class="categories__overlay_headline">Industrial Process</h3>
 						<p class="categories__overlay_subtext">Pnuematic & Mechanical Conveyance Systems</p>

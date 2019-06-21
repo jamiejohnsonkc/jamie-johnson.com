@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 
 
-	<div class="container-hero__img--mobile" id="register-small"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/register-small.jpg" alt="cash register" class="register-small"/></div>
+	<div class="container-hero__img--mobile" id="register-small"><img src="/wp-content/uploads/2019/01/register-small.jpg" alt="cash register" class="register-small"/></div>
 	</article><!-- cover end -->
 	</section>
 	

@@ -54,6 +54,33 @@
   }
 }
 
+.services-splash__title-sub{
+  color: $white;
+}
+
+.services-splash__image-container{
+  background-color: rgba($color: #000000, $alpha: .8);
+  overflow: hidden;
+  width: 100%;
+
+  img{
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform: translate(50%, 50%);
+    max-width: 300%;
+        width: 194%;
+
+    @include mq('desktop'){
+      width: 138%;
+      left: -98%;
+      transform: translate(11%, 2%);
+    }
+
+  }
+}
+
 //   .s-expertise{e
 //   &__section-head{
 //   @include mq('tablet-wide'){
@@ -299,10 +326,11 @@
 .services-summary__article{
 }
 
-.image__container--services-splash {
-  bottom: 8px;
-z-index: -1;
-}
+// .image__container--services-splash {
+//   bottom: 8px;
+// z-index: -1;
+// }
+
 
 
 .section--services-summary{
@@ -930,7 +958,7 @@ letter-spacing: -.025rem;
   margin-right: auto;
   margin-left: 0;
 
-  >h2, .subhead__header--capabilities{
+  >h2, .subhead__header capabilities{
     width:61%;
     max-width:61%;
     margin-left: 0;

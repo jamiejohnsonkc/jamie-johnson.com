@@ -20,42 +20,42 @@ exit; // Exit if accessed directly.
 
 		<div class="wrapper wrapper__grid--brands brands__grid-wrapper">
 		<div class="flexbox-grid flexbox-grid__container--brands container--brands-history background__brands_content brands__grid-container">
-		<div class="flexbox-grid__cell--image flexbox-grid__first-cell"><p class="copy copy__container copy__header brands__copy-header">Every one of them taught me something about marketing, the nature of business and how to get the most (and in some cases the least) from every marketing dollar.</p></div>
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_04.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_05.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_06.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_07.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_08.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_09.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_10.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_11.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_12.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_13.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_14.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_15.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_16.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_17.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_18.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_19.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_20.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_21.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_22.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_23.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_24.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_25.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_26.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_27.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_28.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_29.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_30.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_31.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
-			<img class="flexbox-grid__cell--image style-svg" src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
-			<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text--flex brands__link--text">Exercitation sunt adipisicing reprehendert</a></div>
+		<div class="flexbox-grid__cell--image flexbox-grid__first-cell"><p class="copy copy__container copy__header brands__copy-header">Every experience taught me something about marketing, the nature of business and how to get the most (and in some cases the least) from every marketing dollar.</p></div>
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_04.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_05.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_06.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_07.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_08.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_09.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_10.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_11.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_12.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_13.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_14.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_15.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_16.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_17.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_18.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_19.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_20.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_21.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_22.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_23.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_24.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_25.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_26.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_27.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_28.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_29.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_30.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_31.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
+			<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text--flex brands__link--text">Smiles are free.</a></div>
 		
 		</div>
 		</div>

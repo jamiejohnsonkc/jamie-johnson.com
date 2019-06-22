@@ -160,7 +160,9 @@ max-width: 100%;
     // flex: 0 0 24%;
     // max-width: 24%;
     height: 24em;
-    background: lighten($color: $primary, $amount: 5%);
+    // background: lighten($color: $primary, $amount: 5%);
+    background: lighten($color: green, $amount: 5%);
+
     border: 1px $primary solid;
   }
 }

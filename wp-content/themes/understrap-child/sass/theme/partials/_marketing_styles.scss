@@ -119,6 +119,11 @@ overflow: visible;
 
 }
 
+.marketing-intro__headline{
+  font-family: $font-family-serif;
+  font-style: italic;
+}
+
 .better-intro__article{
  @include az-subtle();
  min-height: 60em;

@@ -103,9 +103,9 @@
 
 
 
-.title-sub {
-  flex: 0 0 auto;
-}
+// .title-sub {
+//   flex: 0 0 auto;
+// }
 
 
 
@@ -2354,18 +2354,18 @@ display: flex;
     transform: translate(-50%, -50%);
   }
 
-  .container.container--services-splash {
-    @include make-col-ready;
-    @include make-col(7);
+//   .container.container--services-splash {
+//     @include make-col-ready;
+//     @include make-col(7);
 
-    align-items: center;
-    margin-left: 0;
-    margin-right: auto;
-  }
+//     align-items: center;
+//     margin-left: 0;
+//     margin-right: auto;
+//   }
 
-  .container h2.container--services-splash {
-    @include vr($margin-bottom: 1);
-  }
+//   .container h2.container--services-splash {
+//     @include vr($margin-bottom: 1);
+//   }
 
 
 

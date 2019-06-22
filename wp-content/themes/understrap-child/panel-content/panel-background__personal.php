@@ -21,7 +21,7 @@ exit; // Exit if accessed directly.
 		<div class="copy__container personal__copy-container">
 		<p class="copy copy__header copy--personal personal__copy"></p>
 		
-		<p class="copy copy__header copy--personal personal__copy">Music junky. Recovering gamer. Tech enthusiast. Involuntary landlord. Overzealous DIY'er. Aspiring photographer. Struggling greens keeper. Lifetime learner. But mostly (and happily) Dad and husband. 
+		<p class="copy copy__header copy--personal personal__copy">Music junky. Recovering gamer. Tech enthusiast. Involuntary landlord. Overzealous DIY'er. Aspiring photographer. Struggling greens keeper. Lifetime learner. But mostly (and thankfully) Dad and husband. 
 	<!-- <div class="link__text link__text--primary  personal__link-text">Eiusmod qui aliqua exercitation do occaecat officia magna mollit</div>	 -->
 	</div>
 		</div>

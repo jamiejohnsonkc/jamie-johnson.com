@@ -1641,36 +1641,6 @@ text-align: center;
 .commitment__subhead_container {
 }
 
-.commitment__subhead {
-@include body-text-lg();
-font-weight: 500;
-text-transform: lowercase;
-letter-spacing: -.05rem;
-color: $primary;
-font-family: $font-family-serif;
-text-align: center;
-font-style: italic;
-display: inline-block;
-}
-
-
-p.commitment__body_copy {
-
-@include body-text-md();
-font-family: $font-family-serif;
-@include mq('tablet-wide'){
-
-}
-}
-
-.commitment__body-copy--leader {
-font-weight: 400;
-@include body-text-md();
-font-family: $font-family-sans-serif;
-color: $gray-700;
-}
-
-
 
 
 .chev--dwn {

@@ -87,9 +87,9 @@
 
 @mixin      greeting {                    @include vr($font-size: 5, $line-height: 5);                                               }
   
-
-@mixin ultra            {   font-weight: 600;                letter-spacing: -0.075rem;                                              }
-
+ 
+@mixin black            {   font-weight: 600;                letter-spacing: -0.075rem;                                              }
+@mixin ultra            {   font-weight: 700;                letter-spacing: -.25rem;                                                     }
 @mixin headline__header {   @include header__headline;       font-weight: 500;      letter-spacing: -.025em;                         }
 @mixin headline__block  {   @include block__headline;        font-weight: 400;      letter-spacing: -.025em;                         }
 @mixin headline__section{   @include section__headline;      font-weight: 400;      letter-spacing: -.025em;                         }

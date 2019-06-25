@@ -2604,13 +2604,14 @@ background: $black;
 
 .growth__grid-item-copy{
   // font-weight: 400;
-  text-align: center;
-  justify-content: center;
-  @include vr($margin: 5 auto 1 auto);
-  width: 83%;
+
 }
 
         .growth__grid-item-copy {
+          text-align: center;
+          justify-content: center;
+          @include vr($margin: 5 auto 1 auto);
+          width: 83%;
           margin-top: 0;
           display: flex;
           min-height: 4em;
@@ -2618,7 +2619,10 @@ background: $black;
           z-index: 1;
           // background: rgba(000, 000, 000, .2);
           // @include vr($padding: 2 4);
-          max-width: 74%;  
+ @include mq('tablet'){
+             max-width: 83%; 
+             @include vr($margin: 1 auto 4 auto);
+ }
         @include mq('desktop'){
           max-width: 100%;  
           flex: 1 1 auto;
@@ -3453,8 +3457,8 @@ max-width: 83%;
   min-height: 66em;
   overflow: hidden;
   border-bottom: thin solid #777;
-  margin-left: .25rem;
-  margin-right: .25rem;
+  margin-left: .05rem;
+  margin-right: .05rem;
 
   @include vr($padding-top: 4);
   // border-top: 1px solid $white;
@@ -3478,12 +3482,12 @@ max-width: 83%;
   }
 
   @include mq('desktop') {
-    @include vr($padding: 4 1);
+    @include vr($padding: 3 0);
     @include light-shadow();
     height: 78em;
     // flex: 1 1 20%;
-    border-left: thin $gray-100 solid;
-    border-right: thin $gray-100 solid;
+    border-left: .5rem $gray-100 solid;
+    border-right: .5rem $gray-100 solid;
     justify-content: center;
 
     &:hover {

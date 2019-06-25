@@ -8,10 +8,19 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="section">
-	<article class="article__wrapper  content__wrapper my-capabilities skills">
-		<h1 class="pagination">a la Carte Services</h1>
-		<div class="container my-capabilities my-capabilities__container__skills" id="my-skills">
+<section class="a-la-carte">
+	<article>
+		<h1 class="pagination"></h1>
+<div class="flex-container">
+	<div class="flex-item__content">
+		<h2 class="headline">A LA CARTE Services</h2>
+		<div class="flex-item__hr"><hr class="a-la-carte-hr"></div>
+		<p class="copy">Sometimes you just need an unbiased third party or another set of hands. See below for an exhaustive list of my capabilities.</p>
+		<div class="flex-item__hr"><hr class="a-la-carte-hr"></div>
+	</div>
+
+	<div class="flex-item__flex-diagram">
+		<div class="my-capabilities my-capabilities__container__skills" id="my-skills">
 			<div class="capabilities__overlay capabilities__overlay--marketing-strategy" id="expt-overlay-1">
 				<button class="circle__button expt__close--button" id="expt-close-1">
 					<div class="button__content">&times;</div>
@@ -99,8 +108,7 @@ if (!defined('ABSPATH')) {
 						<div class="overlay__content--head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Concepts & Frameworks</h5>
 						</div>
-						<!-- 						<hr>
- -->
+
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Outcome-Driven Marketing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
@@ -116,8 +124,7 @@ if (!defined('ABSPATH')) {
 						<div class="overlay__content--head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Strategy</h5>
 						</div>
-						<!-- 						<hr>
- -->
+
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Product/Service Management</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
@@ -137,8 +144,7 @@ if (!defined('ABSPATH')) {
 						<div class="overlay__content--head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Intelligence & Insights</h5>
 						</div>
-						<!-- 						<hr>
- -->
+
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Performance Auditing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
@@ -158,8 +164,7 @@ if (!defined('ABSPATH')) {
 						<div class="overlay__content--head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Cross Pollination</h5>
 						</div>
-						<!-- 						<hr>
- -->
+
 						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Value Stewardship</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
@@ -367,7 +372,6 @@ if (!defined('ABSPATH')) {
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
 							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 						</div>
-						<!-- 						<button class="circle__button expt__close--button bottom" id="expt-close-4">&times;</button> -->
 					</div>
 				</div>
 			</div>
@@ -462,12 +466,11 @@ if (!defined('ABSPATH')) {
 				<div class="my-capabilities__main-page_wrapper">
 				</div>
 				<nav class="capabilities__main-page_menu">
-					<div class="split-container my-capabilities__panel-head">
-						<h2 class="headline headline__header headline">Services & Capabilities</h2>
-						<h3 class="subhead subhead__header subhead__header--capabilities">With more than two decades of marketing under my belt, there isn't much I can't do. And if I can't, I'll be happy to help you find someone right for you.</h3>
-						<!-- <p class="copy copy__header copy__header--capabilities">Aliqua consequat incididunt officia in ut. Nisi occaecat enim do eu. Qui reprehenderit eu consectetur aute. Et dolore amet eu laborum aliqua dolore esse. Nulla ea ea veniam elit aute reprehenderit.</p> -->
-						<p class="link__text">click below to see a list of my capabilities by disipline</p>
-					</div>
+					<!-- <div class="split-container my-capabilities__panel-head"> -->
+						<!-- <h2 class="headline">Services & Capabilities</h2> -->
+						<!-- <h3 class="subhead">With more than two decades of marketing under my belt, there isn't much I can't do. And if I can't, I'll be happy to help you find someone right for you.</h3>
+						<p class="link__text">click below to see a list of my capabilities by disipline</p> -->
+					<!-- </div> -->
 					<div class="capabilities__menu_item" id="open-expt-overlay-4">
 						<img src="/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
@@ -512,5 +515,13 @@ if (!defined('ABSPATH')) {
 			</div>
 			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
+	</div>
+
+</div>
+
+
+
+
+
 	</article>
 </section>

@@ -16,116 +16,6 @@ p {
   font-weight: unset;
 }
 
-%title,
-%title-lg,
-%title-sm {
-  font-family: $headline-font-family;
-  color: $headline-color;
-  font-weight: 600;
-}
-
-%headline,
-%headline-lg,
-%headline-sm {
-  font-family: $headline-font-family;
-  color: $headline-color;
-
-  /* color:              $accent; */
-  font-weight: $headline-font-weight;
-}
-
-%subhead,
-%subhead-lg,
-%subhead-sm {
-  font-family: $subhead-font-family;
-  color: $subhead-color;
-  font-weight: $subhead-font-weight;
-}
-
-%sublist,
-%sublist-lg,
-%sublist-sm {
-  font-family: $subhead-font-family;
-  color: $subhead-color;
-}
-
-%display-text,
-%display-text-lg,
-%display-text-sm,
-%figure-head,
-%figure-head-lg,
-%figure-head-sm,
-%figure-text,
-%figure-text-lg,
-%figure-text-sm,
-.d-text,
-.d-text-lg,
-.d-text-sm,
-.figure-head,
-.figure-head-lg,
-.figure-head-sm,
-.figure-text,
-.figure-text-lg,
-.figure-text-sm {
-  font-family: $display-text-font-family;
-  color: $display-text-color;
-  font-weight: 300;
-}
-
-%body-text,
-%body-text-lg,
-%body-text-sm {
-  font-family: $body-text-font-family;
-  color: $body-text-color;
-  font-weight: $body-text-font-weight;
-}
-
-%para-head,
-%para-head-lg,
-%para-head-sm {
-  font-family: $font-family-sans-serif;
-  font-weight: 400;
-}
-
-%para,
-%para-lg,
-%para-sm {
-  font-family: $font-family-serif;
-}
-
-%list-head,
-%list-head-lg,
-%list-head-sm {
-  font-family: $display-text-font-family;
-  color: $display-text-color;
-  font-weight: 400;
-  letter-spacing: -.025em;
-}
-
-%list-item,
-%list-item-lg,
-%list-item-sm {
-  font-family: $display-text-font-family;
-  color: $display-text-color;
-  font-weight: 200;
-}
-
-%caption,
-%caption-lg,
-%caption-sm {
-  font-family: $font-family-monospace;
-  color: $subhead-color;
-  font-weight: 300;
-}
-
-%legal,
-%legal-lg,
-%legal-sm {
-  font-family: $font-family-monospace;
-  color: $subhead-color;
-
-  // font-weight:        200;
-}
 
 .nav-link {
   text-transform: lowercase;
@@ -139,25 +29,6 @@ p {
 .lead {
   font-weight: $lead-font-weight;
 }
-
-// =========================================================================
-// temp
-// =========================================================================
-
-// .page__headline {
-//   // @include headline-sm;
-//   // @include mq("tablet") {
-//   //   @include headline-lg;
-//   // }
-// @include headline();
-// }
-
-// .headline{
-//   @include headline-sm();
-//   @include mq("tablet") {
-//     @include headline-lg();
-//   }
-// }
 
 // =========================================================================
 // typography
@@ -185,103 +56,6 @@ p {
   position: relative;
 }
 
-
-.section {
-  // &__headline{
-  //  @include headline-sm;
-  //   @include mq("tablet") {
-  //     @include headline;
-  //   }
-  //   @include mq("desktop") {
-  //     @include headline-lg;
-  //   }
-
-  // }
-  &__subhead {}
-
-  &__sublist {}
-
-  &__deck {
-    &__display-text {}
-
-    &__body-text {}
-
-    &--lg {}
-
-    &--sm {}
-  }
-
-  &__copy {
-    &--short {}
-
-    &--long {}
-  }
-
-  &__caption {}
-
-  &__quote &__quip {}
-
-  &__footnote {}
-
-  &__legal {}
-
-  &__citation {}
-}
-
-.panel {
-  &__headline {}
-
-  &__subhead {}
-
-  &__sublist {}
-
-  &__deck {
-    &__display-text {}
-
-    &__body-text {}
-
-    &--lg {}
-
-    &--sm {}
-  }
-
-  &__copy {
-    &--short {}
-
-    &--long {}
-  }
-}
-
-.card {
-  &__headline {}
-
-  &__subhead {}
-
-  &__sublist {}
-
-  &__deck &__body-lg {}
-
-  &__body-sm {}
-
-  &__caption {}
-
-  &__quote &__quip {}
-
-  &__footnote {}
-
-  &__legal {}
-}
-
-// .page__subhead{
-//  @include subhead();
-//    &--serif{
-//    font-family: $font-family-serif;
-//  }
-//  @include mq('tablet'){
-//  @include subhead-lg();
-//  }
-
-// }
 .section {
   display: block;
   position: relative;
@@ -300,12 +74,6 @@ p {
     display: flex;
   }
 
-  // &__wrapper{
-  // &--fluid{
-  //   width: 100%;
-  //   max-width: 100%;
-  // }
-  // }
 
   &--container {
     @include container();

@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
 /*   padding: $navbar-padding-y $navbar-padding-x; */
-    @extend .fixed-top;
+@include fixed-top();
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properities so that content nested within behave properly.
   > .container,
@@ -402,11 +402,14 @@ svg#bug {
 
 //Nav-Link Hover Animation
 .nav-link {
-    @extend .hvr-underline-from-center;
+    @include hvr-underline-from-center();
 
 }
 
 
+.hvr-underline-from-center:before{
+  background: $navbar-all-text-hover-color;
+}
 
 .navbar__mail-link {}
 

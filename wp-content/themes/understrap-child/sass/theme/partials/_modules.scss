@@ -635,8 +635,9 @@ button {
 .services-splash__link--jump                { @include jump-button-basic(); margin-top: 3rem;}
 .expertise__link--jump                      { @include jump-button-basic(); margin: 0 auto; }
 .service-areas__link--jump                  { @include jump-button-basic(); margin: 0 auto; }
-.capabilites__link--jump                    { @include jump-button-basic(); margin: 0 auto; }
+.capabilites__link--jump                    { @include jump-button-basic(); margin: 5em auto; }
 .committment__link--jump                    { @include jump-button-basic(); margin: 0 auto; }
+.growth-article__link--jump                 { @include jump-button-basic(); margin: 0 auto; }
 
 //* background page links
 .background-splash__link--jump              { @include jump-button-basic(); @include self-center(); }

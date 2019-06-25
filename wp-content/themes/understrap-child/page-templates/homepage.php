@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'panel-content/panel', 'home_page__placeholder' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__claim' ); ?>
 			<!-- ?php get_template_part( 'panel-content/panel', 'home_page__method' ); ?> -->
-			<?php get_template_part( 'panel-content/panel', 'home_page__growth' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'offering' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__hybrid' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__services' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__stats' ); ?>

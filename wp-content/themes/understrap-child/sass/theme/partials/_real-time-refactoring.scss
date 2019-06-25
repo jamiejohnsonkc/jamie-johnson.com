@@ -19,3 +19,17 @@ z-index: -1;
   width: 100%;
   max-width: 100%;
 }
+
+@mixin fixed-top{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.fixed-top{
+  @include fixed-top();
+}
+
+.article__wrapper--fluid {
+  overflow: hidden;
+}

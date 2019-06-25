@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <section class="section section--splash section--justification-splash">
 <article class="article__wrapper--fluid splash__article--wrapper article--services-splash">
-		<div class="container container--services-splash container--splash  splash__container">
-		<h1 class="pagination pagination--white pagination--center pagination--services-splash">i provide</h1>
-		<h2 class="title title--white">Modern &amp; Comprehensive Marketing Services</h2>
-		<h3 class="title-sub services-splash__title-sub">Hell bent on <br class="services__splash_br">service,<br class="services__splash_br services__splash_br--service"> performance<br class="services__splash_br"> &<br class="services__splash_br"> quality.</h3>
+		<div class="services-splash__container">
+		<h1 class="pagination pagination--white services-splash__pagination">i provide</h1>
+		<h2 class="title title--white">Comprehensive Marketing Solutions</h2>
+		<h3 class="title-sub services-splash__title-sub">Modern approaches delivered with old-fashioned values.</h3>
 <!-- 		<h4 class="services__splash_quip">(in that order)</h4> -->
 <!-- 		<ul class="services__splash_list">
 			<li class="services__splash_list-item"><a href="">Core Services</a></li>
-			<li class="services__splash_list-item"><a href="">Service Levels</a></li>
+			<li class="services__splash_list-item"><a href="">Service Levels</a></li>services-splash__container
 			<li class="services__splash_list-item"><a href="">a La Carte Services</a></li>
 			<li class="services__splash_list-item"><a href="">Approach</a></li>
 		</ul> -->

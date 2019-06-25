@@ -108,7 +108,7 @@ align-items: center;
 }
 }
 .brands__pagination{
-align-self: flex-start;
+align-self: center;
 }
 
 
@@ -120,6 +120,10 @@ align-self: flex-start;
   width: 61%;
   max-width: 61%;
 }
+}
+
+.brands__deck-header{
+  max-width: 83%;
 }
 .brands__copy-header{
 
@@ -171,10 +175,16 @@ max-width: 100%;
   flex: 1;
   max-width: 100%;
   display: flex;
-  flex: 0 0 66.65%;
+
   min-height: 100%;
   justify-content: center;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  flex: 1 0 100%;
+@include mq('tablet-wide'){
+  flex: 0 0 66.65%;
+}
 }
 
 .flexbox-grid__last-cell{
@@ -218,6 +228,34 @@ max-width: 100%;
 
 
 
+
+.personal{
+  height: 850px;
+          @include mq('phone'){
+  
+  }
+  }
+  
+  
+  .container.about-me__container_personal{
+  // background: $dark-bg-trans;
+  background: -moz-linear-gradient(top, rgba(221,238,255,.9) 50%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  color: $black;
+  
+  // p{
+  //   @include display-text-sm();;
+  // }
+  @include mq('tablet-wide'){
+    background: -moz-linear-gradient(left, rgba(221,238,255,.9) 15%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(left, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to right, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  }
+  }
+  
 
 
 

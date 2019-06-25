@@ -1249,7 +1249,7 @@ font-weight: 400;
 }
 
 .services__list-head_sublist, .services__list-head_link, .services__list-head_dot-divider{
-  @extend %sublist-sm;
+  // @extend %sublist-sm;
 }
 
 
@@ -1283,7 +1283,7 @@ font-weight: 400;
 .services-list__page-head_core-services {
 }
 .services__list-item_link {
-@extend %list-item;
+// @extend %list-item;
 }
 .services__list_container--service-models {
 }
@@ -1353,7 +1353,7 @@ padding-left: 2em;
 }
 
 .services__list-item {
-  @extend %list-item;
+  // @extend %list-item;
     // list-style-type: disc;
     // list-style-position: inside;
     // text-indent: -1em;
@@ -1485,7 +1485,7 @@ font-weight: 400;
 
 
 .capabilities__menu_item {
- background: lighten($primary, 5%);
+
 }
 
 
@@ -1741,148 +1741,43 @@ p.background__text{
 
 
 
-.categories__content_caption {
-  & h3 {
-     
-  font-weight: 400;
-    @include vr($margin-bottom: .25, $margin-top: 0);
-  }
-
-  & p {
-    @include vr($font-size: 16px, $margin-top: .25);
-  }
-}
-
-.categories__content_caption {
-  opacity: 0;
-}
-
-.background__categories_content {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-
-  &,
-  &:hover .categories__content_caption {
-    opacity: 1;
-    transition: opacity 0.3s linear;
-  }
-
-  filter: none;
-}
-
-// .background__categories_content:nth-child(odd){
-// img{
-//     filter: brightness(80%);
-
-// }
-// }
-
-.background__categories_content:hover > img {
-  filter: blur(1px);
-  filter: contrast(200%);
-  filter: brightness(100%);
-  transition: opacity 0.3s linear;
-}
-
-.categories__content_caption {
-  color: #fff;
-  background: rgba(59, 68, 76, 0.8);
-  text-align: center;
-
-  %subhead-sm {
-    @include vr($margin-bottom: 0);
-  }
-
-  %display-text-sm {
-    @include vr($margin: 0 0);
-
-    font-weight: 200;
-  }
-  @include mq('tablet-wide'){
-p{
-      @include vr($font-size: 14px);
-    }
-  }
-
-  @include mq("desktop") {}
 
 
-  @include mq("desktop-xl") {}
-}
-
-
-
-
-.categories, .brands{
-    background: #fff;
-}
-
-
-
-.personal{
-height: 850px;
-        @include mq('phone'){
-
-}
-}
-
-
-.container.about-me__container_personal{
-// background: $dark-bg-trans;
-background: -moz-linear-gradient(top, rgba(221,238,255,.9) 50%, rgba(0,0,0,0) 100%);
-background: -webkit-linear-gradient(top, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
-background: linear-gradient(to bottom, rgba(221,238,255,.9) 50%,rgba(0,0,0,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
-color: $black;
-
-// p{
-//   @include display-text-sm();;
-// }
-@include mq('tablet-wide'){
-  background: -moz-linear-gradient(left, rgba(221,238,255,.9) 15%, rgba(0,0,0,0) 100%);
-background: -webkit-linear-gradient(left, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
-background: linear-gradient(to right, rgba(221,238,255,.9) 15%,rgba(0,0,0,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
-}
-}
 
 // ==========================================================================
 // TRASH?
 // ==========================================================================
 
-.bshit {
-// @include subhead();
-}
+// .bshit {
+// // @include subhead();
+// }
 
-.alternate {
-  & h1 {
+// .alternate {
+//   & h1 {
 
-  }
+//   }
 
-  & h2 {
+//   & h2 {
 
-  }
+//   }
 
-  & h3 {
-    // @extend %subhead;
-    letter-spacing: .05rem;
-  }
+//   & h3 {
+//     // @extend %subhead;
+//     letter-spacing: .05rem;
+//   }
 
-  & p {
+//   & p {
 
 
-    /*      @include vr($font-size: 6, $line-height: 2);    */
-  }
-}
+//     /*      @include vr($font-size: 6, $line-height: 2);    */
+//   }
+// }
 
 // ==========================================================================
 // splash article - master
 // ==========================================================================
 
-.article__wrapper--fluid {
-  overflow: hidden;
-}
+
 
 
 
@@ -1908,7 +1803,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 
  .justification__conclusion {
-        @extend .justification__conclusion--background;
+        // @extend .justification__conclusion--background;
         @include vr($padding: 1);
  }
 

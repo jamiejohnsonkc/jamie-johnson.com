@@ -1721,18 +1721,18 @@ svg#services__arrow--img {
 .capabilities__main-page_menu {
   @include vr($margin-top: 4);
   @include mq("tablet-wide") {
-    @include vr($width: 95%, $padding: 4);
+    @include vr($width: 100%, $padding: 0, $margin-top: 2);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: $offwhite;
+    // background: $offwhite;
     align-items: stretch;
-    border-radius: 2em 2em 0 0;
+    // border-radius: 2em 2em 0 0;
 //     margin-top: -20em;
     margin-left: auto;
     margin-right: auto;
-    border: thin solid $gray-300;
+    // border: thin solid $gray-300;
   }
   @include mq("desktop"){
     width: 83%;

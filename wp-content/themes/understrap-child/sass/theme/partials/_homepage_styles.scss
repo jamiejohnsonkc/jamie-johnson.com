@@ -108,6 +108,8 @@
   width: 100%;
   text-align: center;
   display: flex;
+  text-align: center;
+  justify-content: center;
   @include vr($margin-bottom: 3);
 }
 
@@ -3435,7 +3437,8 @@ max-width: 83%;
 
 .offering__content-item.offering__content-item--summary {
   @include vr($padding-left: 1, $padding-right: 1, $padding-bottom: 6);
-@include mq('desktop'){
+
+  @include mq('desktop'){
   @include vr($padding-left: 3, $padding-right: 3);
 }
 }

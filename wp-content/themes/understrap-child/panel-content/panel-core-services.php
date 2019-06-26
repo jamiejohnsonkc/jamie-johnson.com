@@ -19,6 +19,7 @@ if (!defined('ABSPATH')) {
 				<p class="copy">Consequat duis occaecat non incididunt quis ullamco laborum do ea ad aliquip do commodo. Tempor id ad commodo id. Sunt ex do cillum reprehenderit magna anim aute mollit adipisicing pariatur duis. Proident quis incididunt exercitation qui culpa quis. </p>
 				<p class="copy">Ipsum sunt consequat velit labore aliqua laborum sint ullamco veniam elit. Sint voluptate mollit ipsum ullamco in.</p>
 			</div>
+			<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 		<article class="modern-marketing-management">
 			<div class="container-wrapper">
@@ -46,7 +47,7 @@ if (!defined('ABSPATH')) {
 						<div class="growth__content-item--container growth__content--light">
 							<div class="growth__headline--prehead">I can help you</div>
 
-							<div class="deck__block growth__grid-item-header">Get Competitive</div>
+							<div class="deck__block growth__grid-item-header">Get <br>Competitive</div>
 							<div class="copy__block growth__grid-item-copy">Design and deliver superior competitive value</div>
 							<!-- <div class="copy__block growth__copy-header">Consectetur elit labore esse nisi cupidatat ad occaecat cillum cillum.</div> -->
 							<div class="button overlay__button growth__overlay-button">maximize advantage</div>

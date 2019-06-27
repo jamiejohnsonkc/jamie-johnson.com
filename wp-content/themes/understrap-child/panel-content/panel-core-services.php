@@ -9,39 +9,43 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="core-services">
 	<div class="section-wrapper">
-
-		<div class="flex-container header__container">
-			<div class="flex-item">
-				<h1 class="headline">CORE SERVICES</h1>
-				<h2 class="sublist"> modern marketing management + digital & traditional marcom + marketing operations</h2>
+		<div class="header__wrapper">
+		<div class="background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="..."></div>
+			<div class="flex-container header__container">
+				<div class="flex-item">
+					<h1 class="headline">CORE SERVICES</h1>
+					<h2 class="sublist">strategic marketing management + digital & traditional marcom + marketing operations</h2>
+				</div>
+				<div class="flex-item">
+					<p class="copy">Consequat duis occaecat non incididunt quis ullamco laborum do ea ad aliquip do commodo. Tempor id ad commodo id. Sunt ex do cillum reprehenderit magna anim aute mollit adipisicing pariatur duis. Proident quis incididunt exercitation qui culpa quis. </p>
+					<p class="copy">Ipsum sunt consequat velit labore aliqua laborum sint ullamco veniam elit. Sint voluptate mollit ipsum ullamco in.</p>
+				</div>
+				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
-			<div class="flex-item">
-				<p class="copy">Consequat duis occaecat non incididunt quis ullamco laborum do ea ad aliquip do commodo. Tempor id ad commodo id. Sunt ex do cillum reprehenderit magna anim aute mollit adipisicing pariatur duis. Proident quis incididunt exercitation qui culpa quis. </p>
-				<p class="copy">Ipsum sunt consequat velit labore aliqua laborum sint ullamco veniam elit. Sint voluptate mollit ipsum ullamco in.</p>
-			</div>
-			<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 		<article class="modern-marketing-management">
 			<div class="container-wrapper">
-				<div class="flex-container growth__content-container growth__content-intro">
+				<div class="flex-container growth__content-intro">
 					<div class="headline__header growth__grid-headline--overlay">Four Ways I Can Help You Grow</div>
 					<div class="growth__content-item growth__content-item--summary">
-						<h1 class="pagination">four ways I can help you grow</h1>
-						<h2 class="headline">Strategic Marketing Management</h2>
-						<p class="copy">Marketing management geared for the post-digital, customer-led business relationship.</p>
-						<p class="copy">It encapsulates the four critical outcomes businesses must acheive to succeed:</p>
-						<ol class="list">
-							<li><span>get competitive:</span><br> represent superior competitive value for your customers</li>
-							<li><span>get found:</span><br> be present and top of mind when customers take action</li>
-							<li><span>get sold:</span><br> establish rapport and establish trust to enable conversion</li>
-							<li><span>get more:</span><br> optimize strategy, operations and programs to improve performance</li>
-						</ol>
-						<div class="link__text--flex link__text--growth growth__link">grow your business</div>
-						<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<div class="growth__content-item-wrapper">
+							<h1 class="pagination">four ways I can help you grow</h1>
+							<h2 class="headline">Strategic Marketing Management</h2>
+							<p class="copy">Marketing management geared for the post-digital, customer-led business relationship.</p>
+							<p class="copy">It encapsulates the four critical outcomes businesses must acheive to succeed:</p>
+							<ol class="list">
+								<li><span>get competitive:</span><br> represent superior competitive value for your customers</li>
+								<li><span>get found:</span><br> be present and top of mind when customers take action</li>
+								<li><span>get sold:</span><br> establish rapport and establish trust to enable conversion</li>
+								<li><span>get more:</span><br> optimize strategy, operations and programs to improve performance</li>
+							</ol>
+							<div class="link__text--flex link__text--growth growth__link">grow your business</div>
+							<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						</div>
 					</div>
 					<div class="growth__content-item growth__content-item--competitive">
 						<div class="image__container growth__image-container">
-							<img src="/wp-content/uploads/2019/06/hero-14.jpg" class="img-throttle" alt="...">
+							<img src="/wp-content/uploads/2019/06/hero-14.jpg" class="image--throttle" alt="...">
 						</div>
 						<div class="growth__image--overlay"></div>
 						<div class="growth__content-item--container growth__content--light">
@@ -52,7 +56,7 @@ if (!defined('ABSPATH')) {
 							<!-- <div class="copy__block growth__copy-header">Consectetur elit labore esse nisi cupidatat ad occaecat cillum cillum.</div> -->
 							<div class="button overlay__button growth__overlay-button">maximize advantage</div>
 						</div>
-						<a href="/" class="button ui-button__jump get-competitive__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<a href="/" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 					</div>
 
 					<div class="growth__content-item growth__content-item--found ">
@@ -68,7 +72,7 @@ if (!defined('ABSPATH')) {
 							<!-- <div class="copy__header growth__copy-header">Consectetur elit labore esse nisi cupidatat ad occaecat cillum cillum.</div> -->
 							<div class="button overlay__button growth__overlay-button">engage customers</div>
 						</div>
-						<a href="/" class="button ui-button__jump get-found__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<a href="/" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 					</div>
 
@@ -84,7 +88,7 @@ if (!defined('ABSPATH')) {
 							<!-- <div class="copy__header growth__copy-header">Consectetur elit labore esse nisi cupidatat ad occaecat cillum cillum.</div> -->
 							<div class="button overlay__button growth__overlay-button">earn trust</div>
 						</div>
-						<a href="/" class="button ui-button__jump get-more__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<a href="/" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 					</div>
 					<div class="growth__content-item growth__content-item--more ">
@@ -99,50 +103,114 @@ if (!defined('ABSPATH')) {
 							<!-- <div class="copy__header growth__copy-header">Consectetur elit labore esse nisi cupidatat ad occaecat cillum cillum.</div> -->
 							<div class="button overlay__button growth__overlay-button">optimize performance</div>
 						</div>
-						<a href="/" class="button ui-button__jump get-more__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+						<a href="/" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 					</div>
 				</div>
 			</div>
 		</article>
+
+		<article class="growth__article-test foo">
+<h1 class="pagination"></h1>
+<div class="flex__wrapper">
+<div class="flex-container">
+	<div class="flex-item__a">
+		<div class="container"></div>
+	<div class="flex-item__c"><div class="container"></div></div>
+	</div>
+	<div class="flex-item__b"><div class="container"></div></div>
+</div>
+
+</div>
+
+
+</article>
+
+
+
+
 		<article class="growth__article communications">
 			<div class="article__wrapper">
 				<h1 class="pagination">how i can help you communicate </h1>
 				<div class="flex-container">
 					<div class="flex-item__image-container">
-						<img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="...">
-					</div>
+					<div class="flex-item__image-wrapper">	
+					<img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="...">
+				</div>
+			</div>
 					<div class="flex-item__content">
-						<h2 class="headline">DIGITAL &AMP; ANALOG COMMUNICATIONS</h2>
-						<h3 class="subhead">strategy &amp; production</h3>
-						<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
-						<p class="copy"> Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
+						<div class="flex-item communications-flex-item__a">
+							<h2 class="headline">DIGITAL &AMP; ANALOG COMMUNICATIONS</h2>
+							<h3 class="subhead">strategy &amp; production</h3>
+							<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
+							<p class="copy"> Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
+						</div>
+						<div class="flex-item communications-flex-item__b">
+						<h4 class="growth-article__list-head">Title to come later:</h4>		
+						<ul>
+								<li>Amet voluptate officia</li>
+								<li>Et cupidatat ex exercitation</li>
+								<li>Enim fugiat sit exercitatio</li>
+								<li>Dolore mollit nulla</li>
+								<li>Reprehenderit adipisicing</li>
+								<li>Et cupidatat ex exercitation</li>
+								<li>Mollit ullamco commodo l</li>
+								<li>Enim fugiat sit exercitatio</li>
+								<li>Dolore mollit nulla</li>
+							</ul>
+						</div>
+
+
 						<a href="/" class="link__text">engage modern customers</a>
 					</div>
 				</div>
 				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
 		</article>
+
+
 		<article class="growth__article operations">
 			<div class="article__wrapper">
-				<h1 class="pagination">how i can help you operate</h1>
+				<h1 class="pagination">how i can help you operate </h1>
 				<div class="flex-container">
-
-					<div class="flex-item__content">
-						<h2 class="headline">MARKETING OPERATIONS</h2>
-						<h3 class="subhead">management &amp; control</h3>
-						<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
-						<p class="copy">Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
-						<a href="/" class="link__text">engage modern customers</a>
-					</div>
-
 					<div class="flex-item__image-container">
-						<img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="...">
+					<div class="flex-item__image-wrapper">	
+					<img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="...">
+					</div>
+					</div>
+					<div class="flex-item__content">
+						<div class="flex-item operations-flex-item__a">
+							<h2 class="headline">DIGITAL &AMP; ANALOG operations</h2>
+							<h3 class="subhead">strategy &amp; production</h3>
+							<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
+							<p class="copy"> Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
+						</div>
+						<div class="flex-item operations-flex-item__b">
+						<h4 class="growth-article__list-head">Title to come later:</h4>		
+						<ul>
+								<li>Amet voluptate officia</li>
+								<li>Et cupidatat ex exercitation</li>
+								<li>Enim fugiat sit exercitatio</li>
+								<li>Dolore mollit nulla</li>
+								<li>Reprehenderit adipisicing</li>
+								<li>Et cupidatat ex exercitation</li>
+								<li>Mollit ullamco commodo l</li>
+								<li>Enim fugiat sit exercitatio</li>
+								<li>Dolore mollit nulla</li>
+							</ul>
+						</div>
+
+
+						<a href="/" class="link__text">optimze your performance</a>
 					</div>
 				</div>
 				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
-
 			</div>
 		</article>
+
+
+
+
+
 	</div>
 </section>

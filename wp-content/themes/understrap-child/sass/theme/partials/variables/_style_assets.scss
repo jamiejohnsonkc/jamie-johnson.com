@@ -384,3 +384,76 @@ background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 14%,rgb
 background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 14%,rgba(0,0,0,0.01) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
+
+
+//*=============================================
+//*=             animation            =
+//*=============================================*/
+
+
+
+
+//*----------  fade-in  ----------*/
+
+
+@mixin fade-in{
+  animation: fadeIn ease-in-out 2s;
+  -webkit-animation: fadeIn ease-in-out 2s;
+  -moz-animation: fadeIn ease-in-out 2s;
+  -o-animation: fadeIn ease-in-out 2s;
+  -ms-animation: fadeIn ease-in-out 2s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+//*=============================================
+//*=            transitions            =
+//*=============================================*/
+
+

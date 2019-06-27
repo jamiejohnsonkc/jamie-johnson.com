@@ -622,10 +622,7 @@ button {
 .home-splash__link--jump                    { @include jump-button-basic(); @include self-center(); margin-top: auto; margin-bottom: 6em; }
 .overview__link--jump                       { @include jump-button-basic(); @include self-center(); }
 .claim__link--jump                          { @include jump-button-basic();} 
-.get-competitive__link--jump                { @include jump-button-basic(); @include self-center(); z-index: 6; @include mq('tablet-wide'){display: none;}}  
-.get-found__link--jump                      { @include jump-button-basic(); @include self-center(); z-index: 6; @include mq('tablet-wide'){display: none;}}  
-.get-sold__link--jump                       { @include jump-button-basic(); @include self-center(); z-index: 6; @include mq('tablet-wide'){display: none;}}  
-.get-more__link--jump                       { @include jump-button-basic(); @include self-center(); z-index: 6; @include mq('tablet-wide'){display: none;}}  
+
 .intro-services__link--jump                 { @include jump-button-basic(); @include self-center(); z-index: 6; position: relative; }
 .hybrid__link--jump                         { @include jump-button-basic(); @include self-center(); }
 .stats__link--jump                          { @include jump-button-basic(); @include self-center(); margin-bottom: 6rem;}

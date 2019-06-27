@@ -31007,6 +31007,10 @@ li.expertise__carousel--list-divider {
 .capabilities__menu_icon--marketing {
   max-width: 58%; }
 
+.background__image--cover {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%); }
+
 .core-services {
   background: #343a40;
   padding: 9.00006rem 1.50001rem; }
@@ -31042,15 +31046,15 @@ li.expertise__carousel--list-divider {
   @media only screen and (max-width: 47.9em) and (min-width: 160rem) {
     .core-services .section-wrapper {
       padding: 6.00004rem 0; } }
-    @media screen and (max-width: 65em) and (min-width: 47em) {
+    @media screen and (max-width: 64em) and (min-width: 48em) {
       .core-services .section-wrapper {
         background: #9dd1f1; } }
     .core-services .section-wrapper .header__wrapper {
-      background: #9dd1f1; }
+      background: #9dd1f1;
+      position: relative; }
       @media only screen and (min-width: 78em) {
         .core-services .section-wrapper .header__wrapper {
           height: 107em;
-          position: relative;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -31098,7 +31102,10 @@ li.expertise__carousel--list-divider {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center;
-          background: #9dd1f1; } }
+          width: 100%;
+          max-width: 100%;
+          background: rgba(255, 255, 255, 0.9);
+          border-bottom: 1.5rem #9dd1f1 solid; } }
       @media only screen and (min-width: 64em) {
         .core-services .section-wrapper .header__container {
           max-width: 50%;
@@ -31118,7 +31125,8 @@ li.expertise__carousel--list-divider {
           -ms-flex-line-pack: center;
               align-content: center;
           width: 100%;
-          margin: 0 auto; } }
+          margin: 0 auto;
+          background: rgba(157, 209, 241, 0.5); } }
       @media only screen and (min-width: 78em) {
         .core-services .section-wrapper .header__container {
           min-height: 75em;
@@ -31234,8 +31242,8 @@ li.expertise__carousel--list-divider {
             -webkit-box-flex: 0;
                 -ms-flex: 0 1 auto;
                     flex: 0 1 auto;
-            color: #fff;
-            border-color: #fff; } }
+            color: #343a40;
+            border-color: #343a40; } }
         @media only screen and (min-width: 64em) {
           .core-services .section-wrapper .header__container .flex-item > .sublist {
             -webkit-box-pack: center;
@@ -31243,7 +31251,9 @@ li.expertise__carousel--list-divider {
                     justify-content: center;
             font-size: 3.375rem;
             line-height: 4.50001rem;
-            max-width: 100%; } }
+            max-width: 100%;
+            color: #fff;
+            border-color: #fff; } }
       .core-services .section-wrapper .header__container .flex-item > .copy {
         font-size: 2.25rem;
         line-height: 3.00001rem;
@@ -31283,12 +31293,29 @@ li.expertise__carousel--list-divider {
       .core-services .section-wrapper {
         padding: 1.50001rem; } }
 
-.image-awesome {
-  max-width: 200%;
-  width: 115%;
-  position: absolute;
-  left: 0;
-  top: -15%; }
+@media only screen and (min-width: 48em) {
+  .image-awesome {
+    position: absolute;
+    max-width: 500%;
+    width: 210%;
+    left: -36%;
+    bottom: 0; } }
+
+@media only screen and (min-width: 64em) {
+  .image-awesome {
+    position: absolute;
+    max-width: 500%;
+    width: 200%;
+    left: -36%;
+    top: -15%; } }
+
+@media only screen and (min-width: 78em) {
+  .image-awesome {
+    max-width: 200%;
+    width: 115%;
+    position: absolute;
+    left: 0;
+    top: -15%; } }
 
 .modern-marketing-management > .container-wrapper > .growth__content-intro > .growth__content-item--summary {
   padding-bottom: 9.00006rem;
@@ -31319,6 +31346,9 @@ li.expertise__carousel--list-divider {
       padding-bottom: 9.00006rem;
       padding-right: 1.50001rem;
       padding-left: 1.50001rem; } }
+  @media only screen and (min-width: 48em) {
+    .modern-marketing-management > .container-wrapper > .growth__content-intro > .growth__content-item--summary {
+      border-bottom: 1.5rem solid #9dd1f1; } }
   @media only screen and (min-width: 64em) {
     .modern-marketing-management > .container-wrapper > .growth__content-intro > .growth__content-item--summary {
       height: unset;
@@ -31893,35 +31923,184 @@ li.expertise__carousel--list-divider {
       margin-bottom: 3.00002rem; } }
 
 /*----------  growth article > communications   ----------*/
-apply this structure to communications and operations to enable hover over the image to see the list of tactics .growth__article-test.foo .flex__wrapper .flex-container {
-  height: 60em;
+.article.how-i-communicate .flex-item__c {
+  display: none; }
+
+.article.how-i-communicate .flex__wrapper .flex-container {
   position: relative; }
-  apply this structure to communications and operations to enable hover over the image to see the list of tactics .growth__article-test.foo .flex__wrapper .flex-container .flex-item__a {
-    height: 15em;
+  .article.how-i-communicate .flex__wrapper .flex-container .flex-item__a {
+    height: 38em;
+    width: 100%; }
+    .article.how-i-communicate .flex__wrapper .flex-container .flex-item__a > .image__container {
+      overflow: hidden;
+      position: relative;
+      height: 100%; }
+      .article.how-i-communicate .flex__wrapper .flex-container .flex-item__a > .image__container > img {
+        width: 150%;
+        max-width: 200%;
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+  .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container {
     width: 100%;
-    background: blue; }
-  apply this structure to communications and operations to enable hover over the image to see the list of tactics .growth__article-test.foo .flex__wrapper .flex-container .flex-item__b > .container {
-    height: 20em;
-    width: 100%;
-    background: yellow; }
-  apply this structure to communications and operations to enable hover over the image to see the list of tactics .growth__article-test.foo .flex__wrapper .flex-container .flex-item__c {
-    position: absolute;
-    bottom: 0;
+    max-width: 100%;
+    padding: 4%; }
+    .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .headline {
+      font-size: 3.375rem;
+      line-height: 4.50001rem;
+      margin-top: 1.50001rem;
+      margin-bottom: 1.50001rem;
+      font-weight: 400;
+      letter-spacing: -.025em;
+      font-weight: 700;
+      letter-spacing: -.1rem; }
+      @media (min-width: 48em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .headline {
+          font-size: 3.375rem;
+          line-height: 4.66668rem;
+          margin-top: 1.55557rem;
+          margin-bottom: 1.55557rem; } }
+      @media (min-width: 78em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .headline {
+          font-size: 3.375rem;
+          line-height: 4.50001rem;
+          margin-top: 1.50001rem;
+          margin-bottom: 1.50001rem; } }
+      @media (min-width: 118em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .headline {
+          font-size: 3.375rem;
+          line-height: 4.66668rem;
+          margin-top: 1.55557rem;
+          margin-bottom: 1.55557rem; } }
+      @media (min-width: 160rem) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .headline {
+          font-size: 3.375rem;
+          line-height: 4.50001rem;
+          margin-top: 1.50001rem;
+          margin-bottom: 1.50001rem; } }
+    .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .copy {
+      font-size: 2.25rem;
+      line-height: 3.00001rem;
+      line-height: 3.75002rem; }
+      @media (min-width: 48em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .copy {
+          font-size: 2.25rem;
+          line-height: 3.11112rem;
+          line-height: 3.88891rem; } }
+      @media (min-width: 78em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .copy {
+          font-size: 2.25rem;
+          line-height: 3.00001rem;
+          line-height: 3.75002rem; } }
+      @media (min-width: 118em) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .copy {
+          font-size: 2.25rem;
+          line-height: 3.11112rem;
+          line-height: 3.88891rem; } }
+      @media (min-width: 160rem) {
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b > .copy__container .copy {
+          font-size: 2.25rem;
+          line-height: 3.00001rem;
+          line-height: 3.75002rem; } }
+  .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d {
+    position: relative;
     left: 0;
-    height: 25em;
-    width: 100%;
-    display: block; }
-    apply this structure to communications and operations to enable hover over the image to see the list of tactics .growth__article-test.foo .flex__wrapper .flex-container .flex-item__c > .container {
-      height: 25em;
-      width: 100%;
-      background: green; }
+    width: 100%; }
+    .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container {
+      width: 100%; }
+      .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container > .list-head {
+        font-weight: 300;
+        padding-left: 4%;
+        font-variant-caps: all-small-caps;
+        width: 100%;
+        max-width: 100%;
+        font-size: 3.375rem;
+        line-height: 4.50001rem;
+        line-height: 1.50001rem;
+        margin-bottom: 3.00002rem;
+        letter-spacing: .1rem; }
+        @media (min-width: 48em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container > .list-head {
+            font-size: 3.375rem;
+            line-height: 4.66668rem;
+            line-height: 1.55557rem;
+            margin-bottom: 3.11113rem; } }
+        @media (min-width: 78em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container > .list-head {
+            font-size: 3.375rem;
+            line-height: 4.50001rem;
+            line-height: 1.50001rem;
+            margin-bottom: 3.00002rem; } }
+        @media (min-width: 118em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container > .list-head {
+            font-size: 3.375rem;
+            line-height: 4.66668rem;
+            line-height: 1.55557rem;
+            margin-bottom: 3.11113rem; } }
+        @media (min-width: 160rem) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container > .list-head {
+            font-size: 3.375rem;
+            line-height: 4.50001rem;
+            line-height: 1.50001rem;
+            margin-bottom: 3.00002rem; } }
+      .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container li {
+        font-size: 16px;
+        line-height: 3.75002rem;
+        padding-left: 0;
+        text-align: left;
+        font-weight: 200;
+        letter-spacing: .05em; }
+        @media (min-width: 48em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container li {
+            line-height: 3.88891rem; } }
+        @media (min-width: 78em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container li {
+            line-height: 3.75002rem; } }
+        @media (min-width: 118em) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container li {
+            line-height: 3.88891rem; } }
+        @media (min-width: 160rem) {
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__d > .list__container li {
+            line-height: 3.75002rem; } }
+
+@media only screen and (min-width: 48em) {
+  .article.how-i-communicate {
+    background: #fafafa;
+    margin-top: 1.50001rem; } }
+  @media only screen and (min-width: 48em) and (min-width: 48em) {
+    .article.how-i-communicate {
+      margin-top: 1.55557rem; } }
+  @media only screen and (min-width: 48em) and (min-width: 78em) {
+    .article.how-i-communicate {
+      margin-top: 1.50001rem; } }
+  @media only screen and (min-width: 48em) and (min-width: 118em) {
+    .article.how-i-communicate {
+      margin-top: 1.55557rem; } }
+  @media only screen and (min-width: 48em) and (min-width: 160rem) {
+    .article.how-i-communicate {
+      margin-top: 1.50001rem; } }
+
+@media only screen and (min-width: 48em) {
+    .article.how-i-communicate .flex__wrapper .flex-container .flex-item__b {
+      padding: 0 2%; }
+    .article.how-i-communicate .flex__wrapper .flex-container .list__container {
+      padding: 0 2%; }
+      .article.how-i-communicate .flex__wrapper .flex-container .list__container ul {
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2; } }
+
+.article.how-i-communicate .flex__wrapper .flex-container .list__container {
+  padding: 0 4%; }
 
 @media only screen and (min-width: 78em) {
-  .growth__article-test.foo {
+  .article.how-i-communicate {
     background: #e9ecef;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: 80em;
     width: 100%;
     -webkit-box-pack: center;
@@ -31929,62 +32108,82 @@ apply this structure to communications and operations to enable hover over the i
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center; }
-    .growth__article-test.foo .pagination {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0;
-              flex: 0 0; }
-    .growth__article-test.foo .flex__wrapper {
-      height: 63em;
+    .article.how-i-communicate .pagination {
+      display: block;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+      margin-left: 2%; }
+    .article.how-i-communicate .flex__wrapper {
+      height: 54em;
       width: 100%;
       position: relative;
       -ms-flex-item-align: center;
           align-self: center;
       overflow: hidden;
-      background: #e83e8c; }
-    .growth__article-test.foo .flex-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      height: 100%;
-      width: 100%;
-      background: red; }
-      .growth__article-test.foo .flex-container:hover .flex-item__c {
-        display: block;
-        opacity: 1;
-        -webkit-transition: opacity 1s;
-        transition: opacity 1s; }
-      .growth__article-test.foo .flex-container .flex-item__a {
-        -webkit-box-flex: 2;
-            -ms-flex: 2;
-                flex: 2;
-        background: blue;
-        position: relative; }
-        .growth__article-test.foo .flex-container .flex-item__a > .container {
-          height: 100%;
-          width: 96%;
-          margin-left: auto;
-          background: purple; }
-      .growth__article-test.foo .flex-container .flex-item__b {
-        -webkit-box-flex: 1.4;
-            -ms-flex: 1.4;
-                flex: 1.4;
-        background: yellow; }
-        .growth__article-test.foo .flex-container .flex-item__b > .container {
-          max-width: 100%;
-          height: 100%;
-          border: 0.5rem solid #000;
-          width: 74%; }
-      .growth__article-test.foo .flex-container .flex-item__c {
-        background: green;
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        z-index: 1;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .article.how-i-communicate .flex__wrapper .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         height: 100%;
-        width: 100%;
-        -webkit-transition: opacity 1s;
-        transition: opacity 1s; } }
+        width: 96%; }
+        .article.how-i-communicate .flex__wrapper .flex-container:hover .flex-item__c {
+          display: block;
+          opacity: 1;
+          -webkit-transition: opacity .5s ease-in-out;
+          -moz-transition: opacity .5s ease-in-out;
+          -ms-transition: opacity .5s ease-in-out;
+          -o-transition: opacity .5s ease-in-out; }
+        .article.how-i-communicate .flex__wrapper .flex-container .flex-item__a {
+          -webkit-box-flex: 2.5;
+              -ms-flex: 2.5;
+                  flex: 2.5;
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%; }
+          .article.how-i-communicate .flex__wrapper .flex-container .flex-item__a > .image__container {
+            height: 100%;
+            width: 100%;
+            margin-left: auto;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                    flex: 0 0 auto; }
+    .article.how-i-communicate .flex-item__b {
+      -webkit-box-flex: 1.4;
+          -ms-flex: 1.4;
+              flex: 1.4;
+      padding: 2% 6%; }
+      .article.how-i-communicate .flex-item__b > .copy__container {
+        max-width: 100%;
+        height: 90%;
+        width: 64%; }
+    .article.how-i-communicate .flex-item__c {
+      display: block;
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%; }
+    .article.how-i-communicate .flex-item__d {
+      display: none; } }
 
 @media only screen and (min-width: 78em) {
   .communications {

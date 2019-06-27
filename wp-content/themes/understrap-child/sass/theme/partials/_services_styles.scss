@@ -973,6 +973,9 @@ li.expertise__carousel--list-divider {
 
 }
 
+.background__image--cover{
+  filter: brightness(150%);
+}
 
 
 //! revised service css begins here
@@ -992,22 +995,24 @@ li.expertise__carousel--list-divider {
     @include vr($padding: 2 2);
     background: $white;
 
-    @media screen and (max-width: 65em) and (min-width: 47em) {
+    @media screen and (max-width: 64em) and (min-width: 48em) {
       background: $secondary;
+  
     }
 
     .header__wrapper {
       background: $secondary;
-    @include mq('desktop'){
-      height: 107em;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-    }
+position: relative;
+
+      @include mq('desktop') {
+        height: 107em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     .header__container {
@@ -1021,7 +1026,12 @@ li.expertise__carousel--list-divider {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: $secondary;
+        // background: $secondary;
+        // background: rgba($white, $alpha: .85);
+        width: 100%;
+        max-width: 100%;
+        background: rgba($color: #ffffff, $alpha: .9);
+        border-bottom: 1.5rem $secondary solid;
       }
 
       @include mq('tablet-wide') {
@@ -1034,6 +1044,7 @@ li.expertise__carousel--list-divider {
         align-content: center;
         width: 100%;
         margin: 0 auto;
+        background: rgba($secondary, $alpha: .5)
       }
 
       @include mq('desktop') {
@@ -1090,8 +1101,8 @@ li.expertise__carousel--list-divider {
             display: flex;
             min-height: 4em;
             flex: 0 1 auto;
-            color: #fff;
-            border-color: #fff;
+            color: $deep-gray;
+            border-color: $deep-gray;
           }
 
           @include mq('tablet-wide') {
@@ -1099,6 +1110,8 @@ li.expertise__carousel--list-divider {
             justify-content: center;
             @include vr($font-size: 3);
             max-width: 100%;
+            color: $white;
+            border-color: $white;
 
           }
         }
@@ -1109,7 +1122,8 @@ li.expertise__carousel--list-divider {
           @include mq('tablet-wide') {
             @include vr($padding: 2);
           }
-          @include mq('desktop'){
+
+          @include mq('desktop') {
             color: $white;
           }
         }
@@ -1130,12 +1144,29 @@ li.expertise__carousel--list-divider {
   }
 }
 
-.image-awesome{
+.image-awesome {
+ @include mq('tablet'){
+  position: absolute;
+  max-width: 500%;
+  width: 210%;
+  left: -36%;
+bottom: 0;
+
+ }
+ @include mq('tablet-wide'){
+  position: absolute;
+  max-width: 500%;
+  width: 200%;
+  left: -36%;
+  top: -15%;
+ }
+  @include mq('desktop'){
   max-width: 200%;
   width: 115%;
   position: absolute;
   left: 0;
   top: -15%;
+  }
 
 }
 
@@ -1144,6 +1175,11 @@ li.expertise__carousel--list-divider {
   width: 100%;
   max-width: 100%;
   flex: 1 0 100%;
+
+
+@include mq('tablet'){
+  border-bottom: 1.5rem solid $secondary;
+}
 
   @include mq('tablet-wide') {
     height: unset;
@@ -1386,9 +1422,11 @@ li.expertise__carousel--list-divider {
     flex-wrap: wrap;
     justify-content: center;
     @include vr($padding-top: 3);
-@include mq('tablet-wide'){
-  padding-top: 0;
-}
+
+    @include mq('tablet-wide') {
+      padding-top: 0;
+    }
+
     .subhead,
     .copy {
       width: 100%;
@@ -1406,7 +1444,7 @@ li.expertise__carousel--list-divider {
 
       @include mq('tablet-wide') {
         text-align: left;
-//         max-width: 83%;
+        //         max-width: 83%;
       }
     }
 
@@ -1428,9 +1466,10 @@ li.expertise__carousel--list-divider {
 
     .copy {
       @include para();
-    @include mq('desktop'){
-      @include vr($font-size: 2, $line-height: 2.25);
-    }
+
+      @include mq('desktop') {
+        @include vr($font-size: 2, $line-height: 2.25);
+      }
     }
 
     .flex-item {
@@ -1474,7 +1513,7 @@ li.expertise__carousel--list-divider {
       width: 100%;
       @include vr($padding-top: 0, $padding-bottom: 0);
       margin: 0 auto;
-      column-count:2;
+      column-count: 2;
     }
 
     @include mq('desktop') {
@@ -1502,13 +1541,14 @@ li.expertise__carousel--list-divider {
 
     @include mq('tablet-wide') {
       @include vr($line-height: 1.25, $margin-bottom: 1);
-      padding-left: 10%;// @include list-item-lg;
+      padding-left: 10%; // @include list-item-lg;
     }
 
-    @include mq('desktop'){
+    @include mq('desktop') {
       font-size: 16px;
       @include vr($line-height: 1.5);
     }
+
     >span {
       line-height: inherit;
       // font-variant-caps: all-small-caps;
@@ -1531,13 +1571,14 @@ li.expertise__carousel--list-divider {
       flex: 0 0 100%;
       text-align: center;
     }
-    @include mq('desktop'){
+
+    @include mq('desktop') {
       flex: 0 0;
     }
   }
 }
 
-.growth-article__list-head{
+.growth-article__list-head {
   font-weight: 300;
   padding-left: 4%;
   font-variant-caps: all-small-caps;
@@ -1548,167 +1589,387 @@ li.expertise__carousel--list-divider {
 }
 
 /*----------  growth article > communications   ----------*/
-apply this structure to communications and operations to enable hover over the image to see the list of tactics
-  .growth__article-test.foo {
+// apply this structure to communications and operations to enable hover over the image to see the list of tactics
+.article.how-i-communicate {
+  .pagination {}
+  .flex-item__c { //! flex-item__c for desktop+ only
+    display: none;
+  }
+  .flex__wrapper {
+    .flex-container {
+      // height: 120em;
+      position: relative;
+
+      .flex-item__a {
+        height: 38em;
+        width: 100%;
+        // background: blue;
+      >.image__container{
+
+     overflow: hidden;
+     position: relative;
+     height: 100%;
+     >img{
+       width: 150%;
+       max-width: 200%;
+       position: absolute;
+       left: 0;
+       bottom: 0;
+     }
+      }
+      }
+
+      .flex-item__b {
+        // height: 65em;
+
+        >.copy__container {
+ 
+          width: 100%;
+          max-width: 100%;
+          // background: yellow;
+          padding: 4%;
+
+        .headline{
+     
+          @include headline__item();
+          @include ultra();
+        }
+        .copy{
+          @include copy__para();
+        }
+        }
+      }
+
+   
+
+      .flex-item__d {
+        position: relative;
+        left: 0;
+        width: 100%;
+
+
+        >.list__container {
+          // height: 48em;
+          width: 100%;
+          // background: green;
+          
+          >.list-head{
+            font-weight: 300;
+            padding-left: 4%;
+            font-variant-caps: all-small-caps;
+            width: 100%;
+            max-width: 100%;
+            @include vr($margin-bottom: 2, $font-size: 3, $line-height: 1);
+            letter-spacing: .1rem;
+          }
+          ul{
+
+          }
+          li{
+            font-size: 16px;
+            @include vr($line-height: 2.5);
+            padding-left: 0;
+            text-align: left;
+            // padding-left: 1em;
+            font-weight: 200;
+            letter-spacing: .05em;
+          }
+
+
+        }
+      }
+    }
+  }
+}
+
+@include mq('tablet'){
+  .article.how-i-communicate {
+background: $offwhite;
+@include vr($margin-top: 1);
     .pagination {
     }
     .flex__wrapper {
       .flex-container {
-height: 60em;
-position: relative;
         .flex-item__a {
-        height: 15em;
-        width: 100%;
-        background: blue;
         }
         .flex-item__b {
-
-        
-        >.container {
-          height: 20em;
-          width: 100%;
-          background: yellow;
+        padding: 0 2%;
         }
-      }
+        .flex-item__d {
+        }
+        .image__container {
+          .monitors {
+          }
+        }
         .flex-item__c {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 25em;
-          width: 100%;
-          display: block;
-      
-        
-        >.container {
-          height: 25em;
-          width: 100%;
-          background: green;
-     
+          .list__container {
+          }
+          .list-head {
+          }
+          ul {
+            li {
+            }
+          }
+        }
+        .copy__container {
+          .headline {
+          }
+          .subhead {
+          }
+          .copy {
+          }
+        }
+        .list__container {
+          padding: 0 2%;
+          .list-head {
+          }
+          ul {
+          column-count: 2;
+          }
+          li {
+          }
         }
       }
     }
   }
+}
+
+
+  .article.how-i-communicate {
+    .pagination {
+    }
+    .flex__wrapper {
+      .flex-container {
+        .flex-item__a {
+        }
+        .flex-item__b {
+        }
+        .flex-item__d {
+        }
+        .image__container {
+          .monitors {
+          }
+        }
+        .flex-item__c {
+          .list__container {
+          }
+          .list-head {
+          }
+          ul {
+            li {
+            }
+          }
+        }
+        .copy__container {
+          .headline {
+          }
+          .subhead {
+          }
+          .copy {
+          }
+        }
+        .list__container {
+        padding: 0 4%;
+          .list-head {
+          }
+          ul {
+          }
+          li {
+          }
+        }
+      }
+    }
   }
 
-@include mq('desktop'){
-  .growth__article-test.foo {
+//foo li settings
+// @include mq('tablet') {
+//   @include vr($line-height: 2);
+//   // @include list-item-lg;
+// }
+
+// @include mq('tablet-wide') {
+//   @include vr($line-height: 1.25, $margin-bottom: 1);
+//   padding-left: 10%; // @include list-item-lg;
+// }
+
+// @include mq('desktop') {
+//   font-size: 16px;
+//   @include vr($line-height: 1.5);
+// }
+
+// >span {
+//   line-height: inherit;
+//   // font-variant-caps: all-small-caps;
+//   font-weight: 400;
+// }
+
+// >br {
+//   display: block;
+
+//   @include mq('desktop') {
+//     display: none;
+//   }
+// }
+
+
+
+
+@include mq('desktop') {
+  .article.how-i-communicate {
     background: $gray-200;
-    display:flex;
+    display: flex;
+    flex-wrap: wrap;
     height: 80em;
     width: 100%;
     justify-content: center;
     align-content: center;
-    
+
     .pagination {
-    flex: 0 0;
+      display: block;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+      margin-left: 2%;
     }
-    .flex__wrapper{
-      height: 63em;
+
+    .flex__wrapper {
+      height: 54em;
       width: 100%;
       position: relative;
       align-self: center;
       overflow: hidden;
-      background: $pink;
-  
-    }
+      // background: $pink;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    
+
     .flex-container {
       display: flex;
-     height: 100%;
-     width: 100%;
-     background: red;
-&:hover {
-  .flex-item__c{
-    display: block;
-opacity: 1;
-transition: opacity 1s;
+      height: 100%;
+      width: 96%;
+      // background: red;
 
-  }
-}
+      &:hover {
+        .flex-item__c {
+          display: block;
+          opacity: 1;
+          -webkit-transition: opacity .5s ease-in-out;
+          -moz-transition: opacity .5s ease-in-out;
+          -ms-transition: opacity .5s ease-in-out;
+          -o-transition: opacity .5s ease-in-out;
+        }
+      }
+        .flex-item__a {
+          flex: 2.5;
+          // background: blue;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+  
+          >.image__container {
+            height: 100%;
+            width: 100%;
+            margin-left: auto;
+            // background: purple;
+            flex: 0 0 auto;
+          }
+        }
+      }
+    }
 
-     .flex-item__a {
-    flex: 2;
-    background: blue;
-  position: relative;  
- >.container{
-   height: 100%;
-   width: 96%;
-   margin-left: auto;
-   background: purple;
- }
-  }
+      
+
       .flex-item__b {
-      flex: 1.4;
-    background: yellow;
-    >.container{
-      max-width: 100%;
-      height: 100%;
-      border: .5rem solid $black;
-      width: 74%;
+        flex: 1.4;
+        // background: yellow;
+        padding: 2% 6%;
 
 
-    }  
-    }
+        >.copy__container {
+          max-width: 100%;
+          height: 90%;
+          // border: .5rem solid $black;
+          width: 64%;
+
+
+        }
+      }
+
       .flex-item__c {
-      background: green;
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-      transition: opacity 1s;
-    }
+        display: block;
+        // background: green;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        // transition: opacity 1s ease-in-out;
+      >.list__container{}
+      }
+      .flex-item__d{
+        display: none;
+      }
     }
   }
 
-}
+
 
 .communications {
+
   // .article__wrapper{
   //   padding: 0;
   // }
-  @include mq('desktop'){
+  @include mq('desktop') {
     background: $offwhite;
   }
+
   .flex-container {
 
     .flex-item__content {
       order: 2;
       z-index: 3;
-    @include mq('desktop'){
-      flex: 1;
-      flex-direction: column;
-      padding: 0% 3%;
-      // border: .05rem solid #999;
-    }
+
+      @include mq('desktop') {
+        flex: 1;
+        flex-direction: column;
+        padding: 0% 3%;
+        // border: .05rem solid #999;
+      }
     }
 
     .flex-item__image-container {
-//       order: 1;
-//       min-height: 30em;
-//       position: relative;
-//       width: 100%;
-    min-height: 62em;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-    @include mq('desktop'){
-      position: relative;
-      min-height: 0;
-      flex: 2;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
-    >.flex-item__image-wrapper{
-      @include mq('desktop'){
-        width: 100%;
-        height: 40em;
+      //       order: 1;
+      //       min-height: 30em;
+      //       position: relative;
+      //       width: 100%;
+      min-height: 62em;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+
+      @include mq('desktop') {
+        position: relative;
+        min-height: 0;
+        flex: 2;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
       }
-    }
+
+      >.flex-item__image-wrapper {
+        @include mq('desktop') {
+          width: 100%;
+          height: 40em;
+        }
+      }
+
       >img {
         position: absolute;
         max-width: 200%;
@@ -1716,11 +1977,12 @@ transition: opacity 1s;
         bottom: 0;
         left: -15%;
         overflow: hidden;
-        @include mq('desktop'){
+
+        @include mq('desktop') {
           position: relative;
           width: 100%;
           left: unset;
-      
+
         }
       }
     }
@@ -1732,13 +1994,15 @@ transition: opacity 1s;
   max-width: 64%;
   color: white;
   background: rgba($color: #000000, $alpha: .2);
-  @include mq('desktop'){
+
+  @include mq('desktop') {
     width: 100%;
     max-width: 100%;
     background: $offwhite;
     color: $black;
   }
-  .copy{
+
+  .copy {
     padding-right: 4%;
     font-size: 14px;
   }
@@ -1748,64 +2012,70 @@ transition: opacity 1s;
 
 .communications-flex-item__b {
   flex: 1;
-background: $secondary;
+  background: $secondary;
   @include vr($padding: 0 1 0 1);
   @include light-shadow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-@include mq('desktop'){
-  width: 100%;
-  color: $black;
-  background: $offwhite;
-  padding: 4% 2%;
-  box-shadow: none;
-}
+
+  @include mq('desktop') {
+    width: 100%;
+    color: $black;
+    background: $offwhite;
+    padding: 4% 2%;
+    box-shadow: none;
+  }
 }
 
 /*----------  growth article > operations   ----------*/
 
 
 .operations {
+
   // .article__wrapper{
   //   padding: 0;
   // }
-  @include mq('desktop'){
+  @include mq('desktop') {
     background: $offwhite;
   }
+
   .flex-container {
 
     .flex-item__content {
       order: 2;
       z-index: 3;
-    @include mq('desktop'){
-      flex: 1;
-      flex-direction: column;
-      padding: 8% 6%;
-      // border: .05rem solid #999;
-    }
+
+      @include mq('desktop') {
+        flex: 1;
+        flex-direction: column;
+        padding: 8% 6%;
+        // border: .05rem solid #999;
+      }
     }
 
     .flex-item__image-container {
-//       order: 1;
-//       min-height: 30em;
-//       position: relative;
-//       width: 100%;
-    min-height: 62em;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-    @include mq('desktop'){
-      position: relative;
-      min-height: 0;
-      flex: 2;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-    }
+      //       order: 1;
+      //       min-height: 30em;
+      //       position: relative;
+      //       width: 100%;
+      min-height: 62em;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+
+      @include mq('desktop') {
+        position: relative;
+        min-height: 0;
+        flex: 2;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
       >img {
         position: absolute;
         max-width: 200%;
@@ -1813,11 +2083,12 @@ background: $secondary;
         bottom: 0;
         left: -15%;
         overflow: hidden;
-        @include mq('desktop'){
+
+        @include mq('desktop') {
           position: relative;
           width: 100%;
           left: unset;
-      
+
         }
       }
     }
@@ -1829,13 +2100,15 @@ background: $secondary;
   max-width: 64%;
   color: black;
   background: rgba($color: #ffffff, $alpha: .7);
-  @include mq('desktop'){
+
+  @include mq('desktop') {
     width: 100%;
     max-width: 100%;
     background: $offwhite;
     color: $black;
   }
-  .copy{
+
+  .copy {
     padding-right: 4%;
     font-size: 14px;
   }
@@ -1845,20 +2118,21 @@ background: $secondary;
 
 .operations-flex-item__b {
   flex: 1;
-background: $secondary;
+  background: $secondary;
   @include vr($padding: 0 1 0 1);
   @include light-shadow;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-@include mq('desktop'){
-  width: 100%;
-  color: $black;
-  background: $offwhite;
-  padding: 4% 2%;
-  box-shadow: none;
-}
+
+  @include mq('desktop') {
+    width: 100%;
+    color: $black;
+    background: $offwhite;
+    padding: 4% 2%;
+    box-shadow: none;
+  }
 }
 
 
@@ -1867,10 +2141,12 @@ background: $secondary;
 
 .modern-marketing-management {
   background: #fff;
-position: relative;
-@include mq('desktop'){
-  padding: 4% 2%;
-}
+  position: relative;
+
+  @include mq('desktop') {
+    padding: 4% 2%;
+  }
+
   >.container-wrapper {
     @include mq('phone', $type: max) {
       background: $primary;
@@ -1901,8 +2177,9 @@ position: relative;
     }
 
     @media screen and (max-width: 77em) and (min-width: 64em) {
-    @include vr($margin-bottom: 6);
+      @include vr($margin-bottom: 6);
     }
+
     @include mq('desktop') {
       align-content: baseline;
       max-width: 100%;
@@ -1976,7 +2253,7 @@ position: relative;
     max-width: 100%;
     flex: 1 1 auto;
     color: $black;
- @include vr($margin: 1 auto 1 auto);
+    @include vr($margin: 1 auto 1 auto);
   }
 
   @include mq('desktop-hd') {
@@ -2059,7 +2336,7 @@ position: relative;
     flex: 0 1 24%;
     height: 63em;
     min-height: 63em;
-  border-bottom: none;
+    border-bottom: none;
   }
 
   @include mq('desktop') {
@@ -2068,7 +2345,7 @@ position: relative;
     flex: 1 1 18%;
     border-left: thin $gray-100 solid;
     border-right: thin $gray-100 solid;
-    
+
 
     &:hover {
       .growth__image--overlay {
@@ -2173,17 +2450,19 @@ position: relative;
     position: absolute;
     display: block;
   }
-@media screen and (max-width: 77em) and (min-width: 64em) {
-top: 65%;
-left: 0;
-width: 98%;
-padding-left: 0;
-background: none;
-}  
-    @include mq('desktop') {
-      @include offwhite-trans-overlay();
-    }
+
+  @media screen and (max-width: 77em) and (min-width: 64em) {
+    top: 65%;
+    left: 0;
+    width: 98%;
+    padding-left: 0;
+    background: none;
   }
+
+  @include mq('desktop') {
+    @include offwhite-trans-overlay();
+  }
+}
 
 
 

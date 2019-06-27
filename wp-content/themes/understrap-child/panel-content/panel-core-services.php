@@ -8,9 +8,10 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <section class="core-services">
+<!-- <div class="small-screen-background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="..."></div> -->
 	<div class="section-wrapper">
 		<div class="header__wrapper">
-		<div class="background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="..."></div>
+			<div class="background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="..."></div>
 			<div class="flex-container header__container">
 				<div class="flex-item">
 					<h1 class="headline">CORE SERVICES</h1>
@@ -110,21 +111,59 @@ if (!defined('ABSPATH')) {
 			</div>
 		</article>
 
-		<article class="growth__article-test foo">
-<h1 class="pagination"></h1>
-<div class="flex__wrapper">
-<div class="flex-container">
-	<div class="flex-item__a">
-		<div class="container"></div>
-	<div class="flex-item__c"><div class="container"></div></div>
-	</div>
-	<div class="flex-item__b"><div class="container"></div></div>
-</div>
+		<article class="article how-i-communicate">
+			<h1 class="pagination">how i can help you communicate</h1>
+			<div class="flex__wrapper">
+				<div class="flex-container">
+					<div class="flex-item__a">
+						<div class="image__container"><img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="..."></div>
+						<div class="flex-item__c">
+							<div class="list__container">
+								<h4 class="list-head">Title to come later:</h4>
+								<ul>
+									<li>Amet voluptate officia</li>
+									<li>Et cupidatat ex exercitation</li>
+									<li>Enim fugiat sit exercitatio</li>
+									<li>Dolore mollit nulla</li>
+									<li>Reprehenderit adipisicing</li>
+									<li>Et cupidatat ex exercitation</li>
+									<li>Mollit ullamco commodo l</li>
+									<li>Enim fugiat sit exercitatio</li>
+									<li>Dolore mollit nulla</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="flex-item__b">
+						<div class="copy__container">
+							<h2 class="headline">DIGITAL &AMP; ANALOG COMMUNICATIONS</h2>
+							<h3 class="subhead">strategy &amp; production</h3>
+							<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
+							
+						</div>
+					</div>
+					<div class="flex-item__d">
+							<div class="list__container">
+								<h4 class="list-head">Title to come later:</h4>
+								<ul>
+									<li>Amet voluptate officia</li>
+									<li>Et cupidatat ex exercitation</li>
+									<li>Enim fugiat sit exercitatio</li>
+									<li>Dolore mollit nulla</li>
+									<li>Reprehenderit adipisicing</li>
+									<li>Et cupidatat ex exercitation</li>
+									<li>Mollit ullamco commodo l</li>
+									<li>Enim fugiat sit exercitatio</li>
+									<li>Dolore mollit nulla</li>
+								</ul>
+							</div>
+						</div>
+				</div>
 
-</div>
+			</div>
 
 
-</article>
+		</article>
 
 
 
@@ -134,10 +173,10 @@ if (!defined('ABSPATH')) {
 				<h1 class="pagination">how i can help you communicate </h1>
 				<div class="flex-container">
 					<div class="flex-item__image-container">
-					<div class="flex-item__image-wrapper">	
-					<img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="...">
-				</div>
-			</div>
+						<div class="flex-item__image-wrapper">
+							<img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="...">
+						</div>
+					</div>
 					<div class="flex-item__content">
 						<div class="flex-item communications-flex-item__a">
 							<h2 class="headline">DIGITAL &AMP; ANALOG COMMUNICATIONS</h2>
@@ -146,8 +185,8 @@ if (!defined('ABSPATH')) {
 							<p class="copy"> Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
 						</div>
 						<div class="flex-item communications-flex-item__b">
-						<h4 class="growth-article__list-head">Title to come later:</h4>		
-						<ul>
+							<h4 class="growth-article__list-head">Title to come later:</h4>
+							<ul>
 								<li>Amet voluptate officia</li>
 								<li>Et cupidatat ex exercitation</li>
 								<li>Enim fugiat sit exercitatio</li>
@@ -174,9 +213,9 @@ if (!defined('ABSPATH')) {
 				<h1 class="pagination">how i can help you operate </h1>
 				<div class="flex-container">
 					<div class="flex-item__image-container">
-					<div class="flex-item__image-wrapper">	
-					<img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="...">
-					</div>
+						<div class="flex-item__image-wrapper">
+							<img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="...">
+						</div>
 					</div>
 					<div class="flex-item__content">
 						<div class="flex-item operations-flex-item__a">
@@ -186,8 +225,8 @@ if (!defined('ABSPATH')) {
 							<p class="copy"> Aute ipsum do labore duis ea consectetur in consequat tempor minim officia reprehenderit elit. Sit laboris minim anim pariatur do irure reprehenderit ea nisi voluptate fugiat occaecat dolor eu. Culpa dolor anim qui pariatur dolor fugiat irure culpa.</p>
 						</div>
 						<div class="flex-item operations-flex-item__b">
-						<h4 class="growth-article__list-head">Title to come later:</h4>		
-						<ul>
+							<h4 class="growth-article__list-head">Title to come later:</h4>
+							<ul>
 								<li>Amet voluptate officia</li>
 								<li>Et cupidatat ex exercitation</li>
 								<li>Enim fugiat sit exercitatio</li>

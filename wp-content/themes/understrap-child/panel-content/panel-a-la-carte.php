@@ -474,7 +474,7 @@ if (!defined('ABSPATH')) {
 					<div class="capabilities__menu_item" id="open-expt-overlay-4">
 						<img src="/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon" />
 						<div class="capabilities__menu_item--content">
-							<h3 class="capabilities__menu-content_header">Mobile + Web Design & Development</h3>
+							<h3 class="capabilities__menu-content_header">Mobile + Web</h3>
 							<p class="capabilities__menu_copy">Digital assets and content built from the ground up to advance business.</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>
 						</div>

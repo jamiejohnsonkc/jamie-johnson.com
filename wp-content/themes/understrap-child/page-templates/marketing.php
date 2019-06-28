@@ -16,12 +16,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<main class="site-main" id="main" role="main">
 		
 			<?php get_template_part( 'panel-content/panel', 'marketing__splash' ); ?>
-		<?php get_template_part( 'panel-content/panel', 'marketing__intro' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'marketing__better' ); ?>
-			<?php get_template_part( 'panel-content/panel', 'home_page__proof' ); ?>
+		<?php get_template_part( 'panel-content/panel', 'perspective' ); ?>
+		<?php get_template_part( 'panel-content/panel', 'agile' ); ?>
+		
+			<!-- ?php get_template_part( 'panel-content/panel', 'marketing__better' ); ?> -->
+		
 			<?php get_template_part( 'panel-content/panel', 'justification__reasons' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'marketing__pov' ); ?>
-
+			<?php get_template_part( 'panel-content/panel', 'home_page__proof' ); ?>
 	
 			<?php get_template_part( 'panel-content/panel', 'marketing__approach' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'marketing__cta' ); ?>

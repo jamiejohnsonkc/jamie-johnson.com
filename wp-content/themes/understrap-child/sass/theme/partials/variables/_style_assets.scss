@@ -151,6 +151,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f9fa', end
   // background-repeat: repeat;
 }
 
+@mixin az-primary{
+  background-color: $primary;
+  background-image: url("/wp-content/uploads/2019/05/az-subtle.png");
+}
+
 @mixin carbon {
   background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
@@ -457,3 +462,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 //*=============================================*/
 
 
+
+
+
+
+
+
+
+//*=============================================
+//*=            Accordian effect            =
+//*=============================================*/
+
+
+.container__accordian{
+  display: none;
+}
+
+
+//*=====  End of Accordian effect  ======*/
+
+
+
+
+//*=============================================
+//*=            animations / transformations            =
+//*=============================================*/
+
+.rotate{
+  transform: rotate(90deg);
+  transition: all .3s ease-in;
+}
+
+
+
+//*=====  End of animations / transformations  ======*/

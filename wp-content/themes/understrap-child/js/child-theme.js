@@ -7280,6 +7280,39 @@ $('.moreless-button__optimize').click(function() {
 
 
 jQuery(document).ready(function($) {
+  $('#expand-perspective').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+jQuery(document).ready(function($) {
+  $('#expand-paradigm').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+jQuery(document).ready(function($) {
+  $('#expand-time').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+  $(id).slideToggle(500);
+})
+});
+
+
+
+
+
+
+
+//*----------  my mo expand buttons  ----------*/
+
+
+jQuery(document).ready(function($) {
   $('#expand-mo-solutions').click(function(e) {
     e.preventDefault();
     var id = $(this).attr('href');

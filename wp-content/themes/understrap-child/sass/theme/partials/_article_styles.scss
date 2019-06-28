@@ -1884,14 +1884,14 @@ p.background__text{
     width: 100%;
 
     .st0 {
-        fill: $primary;
+        fill: $deep-gray;
         stroke: #ffffff;
         stroke-width: 1px;
     }
 
     .st1 {
         font-family: roboto;
-        fill: $primary;
+        fill: $deep-gray;
     }
 
     .st2 {
@@ -1947,7 +1947,7 @@ text.st3.st4.st5{
 
 //superior value diagram
 #appbar\2e smiley\2e happy-2, #Path_7509, #Path_7510, #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(4), #Layer_1 > g:nth-child(1) > g:nth-child(3) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(6), #Layer_1 > g:nth-child(1) > g:nth-child(2) > g:nth-child(4){
-    fill: $primary;
+    fill: $deep-gray;
 }
 
 
@@ -2020,7 +2020,7 @@ text.st3.st4.st5{
 @include mq('tablet'){}
 @include mq('tablet-wide'){
   .page__header-text_container--grow, .page__header-text_container--modernize{
-    background: $primary;
+    @include az-primary();
   }
 
 }

@@ -3281,8 +3281,15 @@ margin-right: auto;
 // ==========================================================================
 
 .categories__content_caption {
-  @include make-row;
+ opacity: 0;
+ -webkit-transition: opacity .5s ease-in-out;
+ -moz-transition: opacity .5s ease-in-out;
+ -ms-transition: opacity .5s ease-in-out;
+ -o-transition: opacity .5s ease-in-out;
+ background: rgba($deep-primary, $alpha: .8);      
 
+  @include make-row;
+color: $white;
   top: 0;
   left: 0;
   width: 100%;
@@ -3294,11 +3301,35 @@ margin-right: auto;
   justify-content: center;
 
   @include vr($padding: 3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  .categories__overlay_headline{
+    font-weight: 400;
+  }
+  .categories__overlay_subtext{
+    max-width: 83%;
+  }
+}
+
+.background__categories_content{
+  text-align: center;
+  &:hover{
+    .categories__content_caption{
+      opacity: 1;
+    }
+  }
 }
 
 .categories__content_image {
   width: 100%;
   height: auto;
+// &:hover{
+//   .categories__content_caption{
+//     opacity: 1;
+//   }
+// }
 }
 
 @include mq("tablet", $type: max) {
@@ -3312,6 +3343,7 @@ margin-right: auto;
   .content2__background--categories {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .background__categories_content {
@@ -3335,7 +3367,8 @@ margin-right: auto;
     width: 31%;
     flex: 0 0 auto;
 
-    @include vr($margin: 1%);
+    @include vr($margin: .5%);
+    @include light-shadow();
   }
 
   img.categories__content_image {
@@ -3807,16 +3840,16 @@ padding-left: .5em;
   display: block;
   height: auto;
   .st0{
-stroke: #ADB5BD;
+stroke: $deep-gray;
   }
   .st1{
-    fill: #ADB5BD;
+    fill: $deep-gray;
   }
   .st2{
     font-weight: 500;
   }
   .st4{
-    fill: $primary;
+    fill: $deep-gray;
   }
 }
 
@@ -3969,9 +4002,10 @@ stroke: #ADB5BD;
 
   .justification__page-header_text--square {
     width: 83.82%;
-    text-align: justify;
+//     text-align: justify;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: .05em;
   }
 
   .read-more__container {
@@ -4048,7 +4082,7 @@ stroke: #ADB5BD;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     svg {
       width: 40em;

@@ -378,6 +378,9 @@ display: block;
     // .style-svg, .cls-1, .cls-3, .cls-4 {
     //     max-width: $ms-10;
         fill: $black;
+          @include mq('tablet') {
+          fill: $gray-500;
+          }
     }
 
 

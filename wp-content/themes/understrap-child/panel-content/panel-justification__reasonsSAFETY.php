@@ -12,18 +12,20 @@
 		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
 			<!-- CONTAINER -->
 
-			<div class="container business-value justification__container justification__container_objectives" id="objectives">
+			<div class="container business-value justification__container justification__container_objectives" id="		objectives">
 				<h1 class="pagination pagination--reasons">my beliefs</h1>
 				<div class="justification--flex-container">
-
+					<!-- <div class="justification__page-header page__header header-25x75row__row1 header-25x75row__row1--jumbo-digit-title justification__page-header--objectives"> -->
 					<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#1 Outcomes Not Overhead</h1>	
-				
-						<p class="deck deck__header deck__header--reasons deck__header--objectives">Everything marketing is and does should advance business objectives. otherwise. it's not marketing. it's just spending.</p>
+						<div class="header-25x75row__container">
+							<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit  jumbo-digit--01-tweak">01</h2>
+							<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">Outcomes <br class="br__outcomes--diagram">not overhead</h3>
+						</div>
+						<p class="deck deck__header deck__header--reasons deck__header--objectives">The purpose of marketing is to improve your business &mdash; not just to create "stuff". </p>
 					</div>
-		
+					<!-- <p class="copy copy__header">Every marketing investment should tie back to a specific objective. Otherwise you're just spending.</p> -->
 					<div class="diagram justification__diagram diagram--objectives" id="objectives__diagram">
-					
+						<h4 class="diagram__header-headline headline--objectives diagram__header-headline--f-align-start">My Approach:</h4>
 						<p class="diagram__header-copy header-copy--objectives-diagram">Everything I do is geared to achieve strategic objectives, improve business health and grow ROI.</p>
 
 						<div class="diagram__list-item-container diagram__list-item-container--objectives">
@@ -33,7 +35,7 @@
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">business <span class="br"><br></span>goals</h5>
-									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Alignining marketing strategy with business objective.</p>
+									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Est eu dolore magna duis esse ullamco commodo aliqua magna in reprehenderit non ut id nisi proident enim.</p>
 								</div>
 							</div>
 							<div class="objectives-diagram__delta-icon">
@@ -50,7 +52,7 @@
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">marketing <span class="br"><br></span>solutions</h5>
-									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Identifying and engaging solutions to advance business objectives.</p>
+									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Est eu dolore magna duis esse ullamco commodo aliqua magna in reprehenderit non ut id nisi proident enim.</p>
 								</div>
 							</div>
 							<div class="objectives-diagram__delta-icon">
@@ -67,7 +69,7 @@
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">performance <span class="br"><br></span>metrics</h5>
-									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Enuring programs perform to expectations in aligment with strategy.</p>
+									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Est eu dolore magna duis esse ullamco commodo aliqua magna in reprehenderit non ut id nisi proident enim.</p>
 								</div>
 							</div>
 							<div class="objectives-diagram__delta-icon">
@@ -84,13 +86,13 @@
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">business <span class="br"><br></span>impact</h5>
-									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Evaluating marketing performance against tangible business contributions.</p>
+									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Est eu dolore magna duis esse ullamco commodo aliqua magna in reprehenderit non ut id nisi proident enim.</p>
 								</div>
 
 							</div>
 
 						</div>
-						<!-- <a class="button moreless-button moreless-button__outcomes">Read more</a> -->
+						<a class="button moreless-button moreless-button__outcomes">Read more</a>
 						<div class="read-more__container read-more__outcomes">
 							<div class="justification__conclusion">
 								<p class="body__text_lg">Every marketing investment should tie back to a specific objective. Otherwise you're just spending.</p>
@@ -112,20 +114,24 @@
 			<!-- CONTAINER -->
 
 			<div class="container business-value justification__container justification__container_grow" id="grow">
-				<!-- <h1 class="pagination pagination--reasons">I advocate value & substance</h1> -->
-				
-				<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#2 the customer, the customer, the customer</h1>	
+				<h1 class="pagination pagination--reasons">I advocate value & substance</h1>
+				<div class="header-25x75row__container objectives-header--squeeze">
+					<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit jumbo-digit--snuggie">02</h2>
+					<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">Forget the smoke &amp; mirrors</h3>
+				</div>
+
 
 
 				<div class="diagram__header diagram__header--reasons">
-					<p class="deck deck__header deck__header--reasons deck__header--value">The customer decides what is and isn't important.</p> 
-					<p class="diagram__header-copy">They decide enough to warrant their time, interest and investment. And they have more influence on your success than ever before.</p><p class="diagram__header-copy">Ignore them at your peril. Please them and you will thrive.</p>
+					<p class="deck deck__header deck__header--reasons deck__header--value">The defining characterstic of post-digital is not digital technology.</p>
+					<p class="justification__page-header_text deck__header--value">It's the inversion of buyer &amp; seller relationship dynamics.</p>
+					<p class="justification__page-header_text deck__header--value">The essential ingredient for successful marketing is the effective management of value. The value your business offers, the value customers desire and the exercise of bringing the two into alignment.</p>  
+					<p class="justification__page-header_text deck__header--value"> What customers value, how they buy and what they expect from sellers are redefining traditional approaches to marketing.</p>
 				</div>
 				<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">
 					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="..." class="style-svg diagram-content__superior-value_svg" />
 				</div>
-				<!-- <a class="button moreless-button moreless-button__value">Read more</a> -->
+				<a class="button moreless-button moreless-button__value">Read more</a>
 				<div class="read-more__container read-more__value">
 					<div class="justification__conclusion justification__conclusion--background" id="value__conclusion_cultivate">
 						<p class="body__text_lg">Competitive dynamics are evolving. Customers don't want posturing, they want substance and authenticity.</p>
@@ -142,21 +148,17 @@
 		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
 			<!-- CONTAINER -->
 
-			<div class="container business-value justification__container justification__container_modernize" id="modernize">
-			<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#3 Superior Competitive Value Wins</h1>	
-
-
-				<div class="diagram__header diagram__header--reasons">
-					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">The modern customer's definition of value transcends far beyond products and services.</p>  -->
-					<!-- <p class="diagram__header-copy">Did you live up to their expectations. How were they treated. Were you a pain in the ass or a delight to work with?</p> -->
+			<div class="container business-value justification__containerjustification__container_modernize" id="modernize">
+				<h1 class="pagination pagination--reasons">traditional values, modern methods</h1>
+				<div class="header-25x75row__container">
+					<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit jumbo-digit--snuggie">03</h2>
+					<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">I <br class="br__modernize--diagram">modernize <br class="br__modernize--diagram">marketing</h3>
 				</div>
 
 
 				<div class="header__modernize">
 					<div class="page__header-text_container page__header-text_container--modernize">
-						<p class="justification__page-header_text justification__page-header_text--square">The modern customer's definition of value transcends far beyond products and services.</p>
-						<p class="justification__page-header_text justification__page-header_text--square">Did you live up to their expectations. How were they treated. Were you a pain in the ass or a delight to work with?</p>
+						<p class="justification__page-header_text justification__page-header_text--square">We used to bring products to market. Today you have to bring the market to you. And that requires a whole new approach.</p>
 					</div>
 					<div class="diagram justification__diagram diagram__modern-marketing">
 						<div class="diagram-content">
@@ -164,7 +166,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- <a class="button moreless-button moreless-button__modernize">Read more</a> -->
+				<a class="button moreless-button moreless-button__modernize">Read more</a>
 				<div class="read-more__container read-more__modernize">
 					<div class="justification__conclusion" id="value__conclusion_modernize">
 						<p class="body__text_lg">Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must ensure customers find you, trust you and, most importantly, you deliver as promised after the sale.</p>
@@ -183,18 +185,13 @@
 			<div class="container business-value justification__container justification__container_optimize" id="optimize">
 				<h1 class="pagination pagination--reasons">integration & optimization</h1>
 				<div class="justification--flex-container">
-				<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#4 Marketing Must Transcend Promotions</h1>	
-
-
-				<div class="diagram__header diagram__header--reasons">
-					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">Marketing Must Transcend Promotions</p>  -->
-					<p class="diagram__header-copy">today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses need, or will need, marketing functions capable of managing value throughout the expanding customer experience.</p>
-				</div>
-
-
-
-
+					<div class="header-25x75row__container">
+						<h2 class="header-25x75row__row1 header-25x75row__row1--jumbo-digit jumbo-digit--snuggie">04</h2>
+						<h3 class="header-25x75row__row2 header-25x75row__row2--custom-headline">I optimize <span class="br"><br></span>Marketing Investments</h3>
+					</div>
+					<div class="page__header-text_container page__header-text_container--optimize">
+						<p class="justification__page-header_text justification__page-header_text">I bring strategic continuity and clarity to an increasingly fragmented business function</p>
+					</div>
 					<div class="diagram__container diagram__content_container optimize-diagram__container">
 						<div class="diagram justification__diagram diagram__end-to-end">
 							<div class="diagram-content diagram__end-to-end--horizontal">
@@ -207,7 +204,7 @@
 								<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div>
 							</div>
 						</div>
-						<!-- <a class="button moreless-button moreless-button__optimize">Read more</a> -->
+						<a class="button moreless-button moreless-button__optimize">Read more</a>
 						<div class="read-more__container read-more__optimize">
 							<div class="justification__conclusion">
 								<p class="body__text_lg">I can help you decide how and where to invest your marketing to enable optimal returns.</p>

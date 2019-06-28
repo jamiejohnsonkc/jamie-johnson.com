@@ -41,7 +41,10 @@
 		width: 98%;
 	}
 
-	@include mq('desktop') {}
+	@include mq('desktop') {
+	    max-width: 83.82%;
+		width: 83.82%;
+	}
 
 	@include mq('desktop-wide') {
 

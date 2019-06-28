@@ -18,8 +18,9 @@ if (!defined('ABSPATH')) {
 					<h2 class="sublist">strategic marketing management + digital & traditional marcom + marketing operations</h2>
 				</div>
 				<div class="flex-item">
-					<p class="copy">Consequat duis occaecat non incididunt quis ullamco laborum do ea ad aliquip do commodo. Tempor id ad commodo id. Sunt ex do cillum reprehenderit magna anim aute mollit adipisicing pariatur duis. Proident quis incididunt exercitation qui culpa quis. </p>
-					<p class="copy">Ipsum sunt consequat velit labore aliqua laborum sint ullamco veniam elit. Sint voluptate mollit ipsum ullamco in.</p>
+					<p class="copy">Management consultants promise the world just before they leave. Creative services, well they create things. Nevermind trying to keep up with the web guys. On top of that who's watching the big picture for you?</p>
+					<p class="copy">There are two universal marketing truths today.  1. It's getting complicated. 2. There is less and less of you to go around.</p>
+					<p class="copy">That's where I come in.  I can help you decide what to do, how to do it. And if you like, I can do it for you, too.</p>
 				</div>
 				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
@@ -112,24 +113,22 @@ if (!defined('ABSPATH')) {
 		</article>
 
 		<article class="article how-i-communicate">
-			<h1 class="pagination">how i can help you communicate</h1>
+			<h1 class="pagination">how i can help you engage</h1>
 			<div class="flex__wrapper">
 				<div class="flex-container">
 					<div class="flex-item__a">
 						<div class="image__container"><img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="..."></div>
 						<div class="flex-item__c">
 							<div class="list__container">
-								<h4 class="list-head">Title to come later:</h4>
+								<h4 class="list-head">Integrated Marketing Communications</h4>
 								<ul>
-									<li>Amet voluptate officia</li>
-									<li>Et cupidatat ex exercitation</li>
-									<li>Enim fugiat sit exercitatio</li>
-									<li>Dolore mollit nulla</li>
-									<li>Reprehenderit adipisicing</li>
-									<li>Et cupidatat ex exercitation</li>
-									<li>Mollit ullamco commodo l</li>
-									<li>Enim fugiat sit exercitatio</li>
-									<li>Dolore mollit nulla</li>
+									<li>Web design & development</li>
+									<li>Art & copy</li>
+									<li>Graphics & imagery</li>
+									<li>Branding & Messaging</li>
+									<li>Earned, owned, paid & social media</li>
+									<li>Planning & implementation</li>
+									<li>Budget development & control</li>
 								</ul>
 							</div>
 						</div>
@@ -138,23 +137,67 @@ if (!defined('ABSPATH')) {
 						<div class="copy__container">
 							<h2 class="headline">DIGITAL &AMP; ANALOG COMMUNICATIONS</h2>
 							<h3 class="subhead">strategy &amp; production</h3>
-							<p class="copy">Aliquip occaecat enim adipisicing elit ea aliqua irure eiusmod duis minim adipisicing. Est excepteur nisi aute nisi. Elit proident laboris veniam Lorem tempor culpa anim culpa aliquip magna exercitation et.</p>
+							<p class="copy">Today customers want authenticity and transparency. What you say and do is just as, if not more important, than how you do it. You need to get found, establish rapport and project your potential value.</p>
 							
 						</div>
 					</div>
 					<div class="flex-item__d">
 							<div class="list__container">
-								<h4 class="list-head">Title to come later:</h4>
+							<h4 class="list-head">Integrated Marketing Communications</h4>
 								<ul>
-									<li>Amet voluptate officia</li>
-									<li>Et cupidatat ex exercitation</li>
-									<li>Enim fugiat sit exercitatio</li>
-									<li>Dolore mollit nulla</li>
-									<li>Reprehenderit adipisicing</li>
-									<li>Et cupidatat ex exercitation</li>
-									<li>Mollit ullamco commodo l</li>
-									<li>Enim fugiat sit exercitatio</li>
-									<li>Dolore mollit nulla</li>
+									<li>Web design & development</li>
+									<li>Art & copy</li>
+									<li>Graphics & imagery</li>
+									<li>Branding & Messaging</li>
+									<li>Earned, owned, paid & social media</li>
+									<li>Planning & implementation</li>
+									<li>Budget development & control</li>
+							</div>
+						</div>
+				</div>
+
+			</div>
+
+
+		</article>
+
+
+		<article class="article how-i-operate">
+			<h1 class="pagination">how i can help you optimize</h1>
+			<div class="flex__wrapper">
+				<div class="flex-container">
+					<div class="flex-item__a">
+						<div class="image__container"><img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="..."></div>
+						<div class="flex-item__c">
+							<div class="list__container">
+							<h4 class="list-head">Marketing Operations & Technology</h4>
+								<ul>
+								<li>Requisites & Performance</li>
+								<li>Process & Management</li>
+								<li>Roles, dominion & output</li>
+								<li>Technology & Infrastructure</li>
+								<li>Functions, capabilities & methods</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="flex-item__b">
+						<div class="copy__container">
+							<h2 class="headline">MARKETING OPERATIONS</h2>
+							<h3 class="subhead">management &amp; control</h3>
+							<p class="copy">The marketing function is an increasingly complicating exercise. Engaging it effectively requires weaving together the right technology, people, process, practices. Now. Make it scale with your business.</p>
+							
+						</div>
+					</div>
+					<div class="flex-item__d">
+							<div class="list__container">
+								<h4 class="list-head">Marketing Operations & Technology</h4>
+								<ul>
+								<li>Requisites & Performance</li>
+								<li>Process & Management</li>
+								<li>Roles, dominion & output</li>
+								<li>Technology & Infrastructure</li>
+								<li>Functions, capabilities & methods</li>
 								</ul>
 							</div>
 						</div>
@@ -167,8 +210,7 @@ if (!defined('ABSPATH')) {
 
 
 
-
-		<article class="growth__article communications">
+		<!-- <article class="growth__article communications">
 			<div class="article__wrapper">
 				<h1 class="pagination">how i can help you communicate </h1>
 				<div class="flex-container">
@@ -203,12 +245,12 @@ if (!defined('ABSPATH')) {
 						<a href="/" class="link__text">engage modern customers</a>
 					</div>
 				</div>
-				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more">?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
-		</article>
+		</article> -->
 
 
-		<article class="growth__article operations">
+		<!-- <article class="growth__article operations">
 			<div class="article__wrapper">
 				<h1 class="pagination">how i can help you operate </h1>
 				<div class="flex-container">
@@ -243,9 +285,9 @@ if (!defined('ABSPATH')) {
 						<a href="/" class="link__text">optimze your performance</a>
 					</div>
 				</div>
-				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+				<a href="/" class="button ui-button__jump growth-article__link--jump" title="read more">?php get_template_part('buttons/button', 'jump'); ?></a>
 			</div>
-		</article>
+		</article> -->
 
 
 

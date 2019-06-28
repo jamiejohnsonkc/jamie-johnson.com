@@ -1,0 +1,137 @@
+.section--reasons{
+  .headline{
+    @include vr($font-size: 5);
+    @include ultra();
+  }
+
+@include mq('tablet-wide'){
+  .container.business-value.justification__container{
+    width: 90%;
+    max-width: 90%;
+    min-height: 82em;
+  }
+
+  .diagram__list-item-container--objectives{
+    padding: 0 4%;
+  }
+
+  .diagram--objectives{
+    width: 100%;
+    max-width: 100%;
+//     padding: 0 4% 0 4%;
+  }
+  .objectives-diagram__list-item{
+    flex: 1 1 21%;
+    justify-content: flex-start;
+  }
+  .objectives-diagram__delta-icon {
+  flex: 1 1 2%;
+  padding-right: 2em;
+  }
+
+  .diagram-item__copy--objectives-diagram{
+  max-width: 100%;
+  flex: 0 1 100%;
+  @include vr($font-size: 1, $line-height: 2, $padding-right: .5);
+  }
+
+  .diagram-item__container--23row {
+  flex: 0 1 64%;
+  max-width: 64%;
+  }
+
+
+  .diagram-item__headline{
+    max-width: 83%;
+  @include vr($font-size: 2, $line-height: 1.75 );
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  }
+
+}
+@include mq('desktop'){
+  .container.business-value.justification__container{
+    width: 83%;
+    max-width: 83%;
+    .headline{
+      max-width: 83%;
+    }
+    .diagram__header-copy{
+      max-width: 83%;
+    }
+}
+}
+
+
+.justification__container_grow{
+  padding: 8% 4% 0 4%;
+}
+
+
+
+.diagram__content_container .icon .cls-1, .diagram__content_container .icon .cls-2, .diagram__content_container .icon .cls-3, .diagram__content_container .icon .cls-4, .diagram__content_container .icon .cls-5{
+  fill: $deep-gray;
+}
+
+
+
+}
+
+@include mq('tablet-wide'){
+
+.justification__container_modernize{
+  padding: 8% 4% 0 4%;
+
+  .diagram__header--reasons{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
+    padding-right: 17%;
+  }
+
+  .deck__header--value{
+    width: 100%;
+    max-width: 100%;
+  }
+  .justification__page-header_text--square{
+    @include vr($font-size: 2, $line-height: 2.5);
+    padding-bottom: 0;
+  }
+}
+
+.justification__container_optimize{
+  .diagram__header--reasons{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
+  }
+  .diagram__header-copy{
+width: 90%;
+max-width: 90%;
+  }
+
+.end-to-end--horz{
+  width: 100%;
+  // margin-top: -3em;
+}
+}
+}
+
+.page__header-text_container--modernize{
+  @include light-shadow();
+}
+
+img.style-svg.image-bell{
+  width: 10em;
+}
+
+#shape{
+  path{
+    fill: $deep-gray;
+
+  }
+  circle{
+    fill: $deep-gray;
+  }
+}

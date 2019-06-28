@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 <section class="proof__section">
 	<article class="proof__section--header">
-					<h2 class="headline headline__header headline__header--proof proof__section-headline">Here's Three Outstanding reasons to Hire Me</h2>
+					<h2 class="headline headline__header headline__header--proof proof__section-headline">3 Outstanding reasons to Hire Me</h2>
 
 	</article>
 
@@ -93,7 +93,8 @@ if (!defined('ABSPATH')) {
 	<div class="proof__content-container centricity__content-container"> 
 		
 				<h5	class="headline headline__header proof__panel_headline headline headline__header centricity__headline-header">I think a professional service should be professional about service</h5>
-				<div class="content__item_img image__container bell__image-container"><img src="/wp-content/uploads/2019/03/bell.svg" alt="..." class="style-svg silo-bell"></div>
+				<div class="content__item_img image__container bell__image-container">
+					<img src="/wp-content/uploads/2019/03/silverbell.jpg" alt="..." class="style-svg image-bell"></div>
 				<div class="proof__content_text proof__content_text--centricity">
 					<p class="copy__header proof__panel_body-copy copy__header proof__panel_body-copy--centricity">I spent the better part of my career managing professional service teams and the other half working with them.</p>
 				</div>

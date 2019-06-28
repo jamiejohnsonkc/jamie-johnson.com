@@ -75,7 +75,7 @@ font-size: 10.0625rem;
 }
 
 .header__wrapper--reasons{
-  padding-left: 4%;
+  padding-left: 0%;
 }
 }
 
@@ -89,7 +89,7 @@ font-size: 10.0625rem;
 }
 .optimize-diagram__container{
   @include mq('desktop'){
-    min-height: 77em;
+    min-height: 32em;
   }
 }
 .diagram-item__headline{
@@ -161,6 +161,6 @@ background: $offwhite;
 }
 
 .diagram__superior-value{
-  background: $white;
-  @include light-shadow();
+//   background: $white;
+//   @include light-shadow();
 }

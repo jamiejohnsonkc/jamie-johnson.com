@@ -1890,6 +1890,7 @@ p.homepage-summary__claim--fancy {
     display: flex;
     flex-direction: row;
     flex-wrap: inherit;
+    flex-wrap: wrap;
   }
 }
 
@@ -1910,7 +1911,8 @@ p.homepage-summary__claim--fancy {
   @include mq("tablet-wide") {
     width: 50%;
     max-width: 50%;
-    flex: 0 0 46%;
+    flex: 0 0 50%;
+    padding-right: 4%;
   }
 }
 
@@ -1918,7 +1920,7 @@ p.homepage-summary__claim--fancy {
   &--objectives {
     @include mq("tablet-wide") {
       width: 83%;
-      max-width: 71%;
+      max-width: 83%;
       flex: 0 0 auto;
     }
   }
@@ -1928,8 +1930,8 @@ p.homepage-summary__claim--fancy {
       flex: 0 0 auto;
       display: flex;
       margin: 0;
-      width: 83%;
-      max-width: 83%;
+      width: 90%;
+      max-width: 90%;
       @include vr($margin: 1 0);
     }
   }
@@ -1982,9 +1984,9 @@ p.homepage-summary__claim--fancy {
   @include mq("tablet-wide") {
     flex: 0 0 auto;
     @include vr($font-size: 3, $padding:2);
-    text-align: justify;
-    font-weight: 400;
-    color: $gray-600;
+//     text-align: justify;
+    font-weight: 300;
+//     color: $gray-600;
   }
 }
 

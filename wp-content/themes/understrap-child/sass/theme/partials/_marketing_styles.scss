@@ -120,12 +120,12 @@ font-style: italic;
 }
 
 .marketing-splash__image-container {
-//   background-color: rgba($color: #000000, $alpha: .8);
+  background-color: rgba($color: #000000, $alpha: .8);
   overflow: hidden;
   width: 100%;
 
   img {
-    // mix-blend-mode: overlay;
+    mix-blend-mode: overlay;
     position: absolute;
     max-width: 300%;
 

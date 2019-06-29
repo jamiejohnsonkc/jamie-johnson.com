@@ -31162,7 +31162,6 @@ li.expertise__carousel--list-divider {
   max-width: 58%; }
 
 .core-services {
-  background: #343a40;
   padding: 9.00006rem 1.50001rem; }
   @media (min-width: 48em) {
     .core-services {
@@ -31287,8 +31286,10 @@ li.expertise__carousel--list-divider {
           -webkit-box-align: start;
               -ms-flex-align: start;
                   align-items: flex-start;
-          width: 38%;
-          background: #000;
+          width: 43%;
+          background: #222;
+          -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
+          box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
           margin-right: 10%;
           border-bottom: none; } }
       .core-services .section-wrapper .header__container .flex-item > .headline {
@@ -31431,7 +31432,9 @@ li.expertise__carousel--list-divider {
             line-height: 3.75002rem; } }
         @media only screen and (min-width: 64em) {
           .core-services .section-wrapper .header__container .flex-item > .copy {
-            padding: 3.00002rem; } }
+            margin-top: 0.375rem;
+            margin-bottom: 0.375rem;
+            padding: 1.50001rem 0.375rem; } }
         @media only screen and (min-width: 78em) {
           .core-services .section-wrapper .header__container .flex-item > .copy {
             color: #fff; } }
@@ -32656,9 +32659,9 @@ li.expertise__carousel--list-divider {
 
 /*----------  growth article > communications   ----------*/
 .core-services .background__image--cover {
-  background-color: #daeaf7; }
+  background-color: rgba(218, 234, 247, 0.2); }
   .core-services .background__image--cover img {
-    mix-blend-mode: overlay; }
+    mix-blend-mode: hard-light; }
 
 @media only screen and (min-width: 78em) {
   .communications {
@@ -33931,9 +33934,11 @@ li.expertise__carousel--list-divider {
         margin-bottom: 1.50001rem; } }
 
 .marketing-splash__image-container {
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
   width: 100%; }
   .marketing-splash__image-container img {
+    mix-blend-mode: overlay;
     position: absolute;
     max-width: 300%;
     max-width: 500%;

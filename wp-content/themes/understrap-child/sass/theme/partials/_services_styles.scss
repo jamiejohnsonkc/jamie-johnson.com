@@ -1021,9 +1021,8 @@ justify-content: center;
 //! revised service css begins here
 
 .core-services {
-  background: $deep-gray;
+ 
   @include vr($padding: 6 1);
-
 
   .section-wrapper {
     @include dark-shadow();
@@ -1090,10 +1089,11 @@ justify-content: center;
       @include mq('desktop') {
         min-height: 75em;
         flex: 0 0 auto;
-        @include vr($padding: 4);
+        @include vr($padding: 4 4);
         align-items: flex-start;
-        width: 38%;
-        background: $black;
+        width: 43%;
+        background: #222;
+        @include light-shadow();
         margin-right: 10%;
         border-bottom: none;
       }
@@ -1161,7 +1161,7 @@ justify-content: center;
           @include copy__para();
 
           @include mq('tablet-wide') {
-            @include vr($padding: 2);
+            @include vr($padding: 1 .25, $margin-top: .25, $margin-bottom: .25);
           }
 
           @include mq('desktop') {
@@ -2416,9 +2416,9 @@ justify-content: center;
 
   .core-services{
     .background__image--cover{
-      background-color: rgba($color: $primary, $alpha: 1);
+      background-color: rgba($color: $primary, $alpha: .2);
     img{
-      mix-blend-mode: overlay;
+      mix-blend-mode: hard-light;
     }
     }
   }

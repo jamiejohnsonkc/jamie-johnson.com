@@ -6,9 +6,9 @@
  */
 if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
-}
+} 
 ?>
-<section class="stats-and-mo__section">
+<section class="stats-and-mo__section" id="stats">
 <article class="article__wrapper article__wrapper--fluid stats__article-wrapper">
 	<div class="pagination__container  stats__pagination--container"><h1 class="pagination pagination--revprimary pagination--homepage stats__pagination">My Background</h1>
 	</div>
@@ -223,9 +223,9 @@ if (!defined('ABSPATH')) {
 			</a>
 		</div>
 	</div>
-<a href="/" class="link link__text--flex stats__text-link">See where I've been</a>
+<a href="/background" class="link link__text--flex stats__text-link">See where I've been</a>
 
-	<a href="/" class="button ui-button__jump--positioned stats__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#mymo" class="button ui-button__jump--positioned stats__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
 <!-- </div> -->
 <!-- cover end --> 

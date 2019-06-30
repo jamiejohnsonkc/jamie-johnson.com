@@ -1028,7 +1028,7 @@ justify-content: center;
     @include dark-shadow();
 
     @include mq('tablet', $type: max) {
-      @include vr($padding: 4 0);
+      @include vr($padding: 1 0);
     }
 
     @include vr($padding: 2 2);
@@ -1057,7 +1057,7 @@ justify-content: center;
     .header__container {
       position: relative;
       margin: 0 auto;
-      @include vr($padding: 6 2);
+      @include vr($padding: 6 0);
 
       @include mq('tablet') {
         // height: 50vh;
@@ -1125,10 +1125,10 @@ justify-content: center;
         }
 
         >.sublist {
-          @include vr($font-size: 2, $padding: 1 0);
+          @include vr($font-size: 3, $padding: 1 0);
           font-variant-caps: all-small-caps;
           font-weight: 300;
-          color: $accent;
+//           color: $accent;
           text-align: center;
           margin: 0 auto;
           border-top: thin solid $gray-400;
@@ -2416,13 +2416,17 @@ justify-content: center;
 
   .core-services{
     .background__image--cover{
-      background-color: rgba($color: $primary, $alpha: .2);
+//       background-color: rgba($black, $alpha: .9);
+display: none;
+      @include mq('tablet-wide'){
+              dipslay: block;
+                background-color: rgba($color: $primary, $alpha: .2);
     img{
       mix-blend-mode: hard-light;
     }
     }
   }
-
+  }
 
 
 .communications {

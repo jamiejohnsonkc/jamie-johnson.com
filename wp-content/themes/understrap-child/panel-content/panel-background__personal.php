@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="section personal__section">
+<section class="section personal__section" id="personal">
 <article class="article__wrapper content__wrapper about-me personal">
 	<div class="image__container--fam" id="fam-container"><img src="/wp-content/uploads/2019/05/famv3.jpg" alt="profile pic" id="fam-img"></div>
 		
@@ -30,9 +30,9 @@ exit; // Exit if accessed directly.
 		<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-modance-business-objectives" title="go to next">
 			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/>
 		</a> -->
-		
+		 
 		
 	</div>
-	<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/></a>
+	<a href="#background__cta" class="button ui-button__jump categories__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 	</article>
 	</section><!-- Container end -->

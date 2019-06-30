@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="section brands__section">
+<section class="section brands__section" id="#brands">
 <article class="article article__wrapper brands__article-wrapper">
 	<div class="article article__container article__container--brands brands__article-container">
 		<div class="header header__container header__container--brands brands__section-header">
@@ -21,7 +21,7 @@ exit; // Exit if accessed directly.
 		<div class="wrapper wrapper__grid--brands brands__grid-wrapper">
 		<div class="flexbox-grid flexbox-grid__container--brands container--brands-history background__brands_content brands__grid-container">
 		<div class="flexbox-grid__cell--image flexbox-grid__first-cell"><p class="copy copy__container copy__header brands__copy-header">Every experience taught me something about marketing, the nature of business and how to get the most (and in some cases the least) from every marketing dollar.</p></div>
-			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" />
+			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_01.svg" alt="exp logo" /> 
 			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_02.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_03.svg" alt="exp logo" />
 			<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_04.svg" alt="exp logo" />
@@ -60,7 +60,7 @@ exit; // Exit if accessed directly.
 		</div>
 		</div>
 	</div>
-	<a href="#services-summary" class="button ui-button__jump brands__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#categories" class="button ui-button__jump brands__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 </div>
 

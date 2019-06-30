@@ -24,4 +24,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 	
 		</main><!-- #main -->
 		</div><!-- Wrapper end -->
-<?php get_footer(); ?>
+<?php get_footer(); ?> 

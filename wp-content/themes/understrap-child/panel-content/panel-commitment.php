@@ -1,5 +1,4 @@
-<?php
-/**
+<?php 
  * container Splash Intro.
  *
  * @package understrap
@@ -8,7 +7,7 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="commitment">
+<section class="commitment" id="commitment">
 	<article>
 		<h1 class="pagination">my commitment to you</h1>
 <div class="container">
@@ -40,6 +39,7 @@ if (!defined('ABSPATH')) {
 
 </div>
 
+<a href="#services__cta" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 
 

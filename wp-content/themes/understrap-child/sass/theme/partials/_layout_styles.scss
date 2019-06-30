@@ -3297,19 +3297,33 @@ color: $white;
   position: absolute;
   display: flex;
   flex-direction: column;
+  // flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
-  @include vr($padding: 3);
+  @include vr($padding: 0 0);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
   .categories__overlay_headline{
     font-weight: 400;
+    @include vr($margin: 0 0 0 0);
+    // flex: 1;
+    display: flex;
+    width: 90%;
+    min-height: 2em;
+    text-align: center;
+    justify-content: center;
+
   }
   .categories__overlay_subtext{
-    max-width: 83%;
+    max-width: 74%;
+    @include vr($margin: 0 0 0 0);
+  // flex: .8;
+  display: flex;
+  min-height: 1em;
+  text-align: center;
   }
 }
 

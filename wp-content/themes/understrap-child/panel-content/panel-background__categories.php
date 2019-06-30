@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="section categories__section">
+<section class="section categories__section" id="categories">
 <article class="article__wrapper categories categories__article-wrapper">
 	<div class="article__container article__container--categories categories__article-container">
 		<div class="header header__container header__container--categories categories__header">
@@ -26,7 +26,7 @@ exit; // Exit if accessed directly.
 			<div class="content2 content2__background background__text content2__background--categories categories__content--grid">
 				<div class="background__categories_content background__categories_content--industrial">
 					<img src="/wp-content/uploads/2018/12/vert1.jpg" alt="Industrial Process" class="categories__content_image"/>
-					<div class="categories__content_caption">
+					<div class="categories__content_caption"> 
 						<h3 class="categories__overlay_headline">Industrial Process</h3>
 						<p class="categories__overlay_subtext">Pnuematic & Mechanical Conveyance Systems</p>
 					</div>
@@ -165,7 +165,7 @@ exit; // Exit if accessed directly.
 			</div>
 	
 	</div>
-	<a href="#services-summary" class="button ui-button__jump categories__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#personal" class="button ui-button__jump categories__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 </article>
 </section>

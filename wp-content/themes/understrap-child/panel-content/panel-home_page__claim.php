@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 </article> -->
 
 
-<article class="claim__article--wrapper">
+<article class="claim__article--wrapper" id="claim">
 	<div class="arrow__container">
 		<img src="/wp-content/uploads/2019/04/arrow-up.svg" class="style-svg arrow-up-svg" alt="...">
 	
@@ -33,5 +33,6 @@ if (!defined('ABSPATH')) {
 		</div>
 	</div>
 	</div>
-	<a href="#services-summary" class="button ui-button__jump--positioned claim__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#offering" class="button ui-button__jump--positioned claim__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
+ 

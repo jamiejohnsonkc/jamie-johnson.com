@@ -18,10 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->
 		
-	<a href="#services-summary" class="button ui-button__jump background-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#background__summary" class="button ui-button__jump background-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 	</div>
 		<div class="container-hero__img--mobile container-hero__img-mobile_shoes" id="my-shoes"><img src="/wp-content/uploads/2019/05/shoes-smallv2.png" alt="..." id="shoes-img"/></div>
 	</article><!-- cover end -->
 	</section>
-	
+	 

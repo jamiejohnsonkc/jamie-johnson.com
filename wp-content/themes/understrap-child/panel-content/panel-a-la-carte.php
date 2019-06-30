@@ -2,13 +2,13 @@
 /**
  * container Splash Intro.
  *
- * @package understrap
+ * @package understrap 
  */
 if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="a-la-carte">
+<section class="a-la-carte" #id="a-la-carte">
 	<article>
 		<h1 class="pagination"></h1>
 <div class="flex-container">
@@ -513,7 +513,7 @@ if (!defined('ABSPATH')) {
 					</div>
 				</nav>
 			</div>
-			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+			<a href="#commitment" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 	</div>
 

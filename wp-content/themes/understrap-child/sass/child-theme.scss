@@ -6,9 +6,9 @@
 @import "theme/partials/mixins/bootstrap_mixins_override";
 @import "theme/partials/variables/_theme_font_variables";
 // @import "theme/partials/navigation/navigation_import";
-@import "theme/partials/mixins/css_hover_mixins";
-@import "theme/partials/variables/_style_assets";
+@import "theme/partials/mixins/css_hover_mixins"; 
 @import "theme/partials/variables/_theme_color_and_nav_variables";
+@import "theme/partials/variables/style_assets.scss";
 
  // @import "theme/partials/variables/bootstrap_customized_variables"; 
 
@@ -69,7 +69,7 @@
 //  @import "theme/dev_utilities/palette";
 
 
-// @import "theme/partials/contact_article_layout_template";
+@import "theme/partials/contact_article_layout_template";
 
 // @import "theme/partials/custom_variables";
 

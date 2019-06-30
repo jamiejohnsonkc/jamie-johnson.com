@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 ?>
 <!-- <article class="article__wrapper  basic homepage homepage__my-mo">
 	<div class="container homepage__my-mo__container"> -->
-	<article class="article__wrapper article__wrapper--fluid article__wrapper--black mo__article-wrapper">
+	<article class="article__wrapper article__wrapper--fluid article__wrapper--black mo__article-wrapper" id="mymo">
 		<div class="container container--mymo text--white mo__container">
 
 			<h1 class="header pagination pagination--homepage  pagination--strengths-intro pagination--black mo__pagination">
@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) {
 			<div class="mo__diagram-container">
 			<p class="diagram__head mo__diagram-head">I pursue three standing objectives:</p>
 				<div class="mo__diagram-box">
-					<!-- <div class="mo__diagram-big-digit">
+					<!-- <div class="mo__diagram-big-digit"> 
 						<div class="circle-digit__icon circle-digit__01"><img src="/wp-content/uploads/2019/03/circledigit-_1.svg" class="style-svg" alt="..."></div>
 					</div> -->
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
@@ -82,8 +82,8 @@ if (!defined('ABSPATH')) {
 
 
 		</div>
-		<a class="link link__text link__text--white link__text--center mo__text-link">> See where I've been</a>
-		<a href="/" class="button ui-button__jump mymo__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+		<a href="/better" class="link link__text link__text--white link__text--center mo__text-link"> See how I can make your marketing better</a>
+		<a href="#homepage__cta" class="button ui-button__jump mymo__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 	</article>
 </section>

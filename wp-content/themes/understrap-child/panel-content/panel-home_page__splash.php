@@ -35,7 +35,10 @@ if (!defined('ABSPATH')) {
 			</div>
 
 
-			<a class="ui-button__jump home-splash__link--jump" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><?php get_template_part( 'buttons/button', 'jump' ); ?></a>
+
+
+
+			<a class="ui-button__jump home-splash__link--jump" href="#placeholder" title="go to next"><?php get_template_part( 'buttons/button', 'jump' ); ?></a>
 
 
 		</div>

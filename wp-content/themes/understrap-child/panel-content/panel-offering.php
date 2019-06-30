@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  *
  * @package understrap
@@ -7,13 +7,13 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<section class="offering">
+<section class="offering" id="offering">
 	<article>
 		<div class="container-wrapper">
 			<div class="flex-container offering__content-container offering__content-intro">
 				<div class="headline__header offering__grid-headline--overlay">i create strategic, tactical & operational solutions for modern marketing challenges
 				</div>
-				<div class="offering__content-item offering__content-item--summary">
+				<a class="offering__content-item offering__content-item--summary">
 					<h1 class="pagination">how i do it</h1>
 					<h2 class="headline">purposeful</h2>
 					<h2 class="headline">performant</h2>
@@ -21,10 +21,11 @@ if (!defined('ABSPATH')) {
 					<p class="copy">I know. I know. Alliterative buzzwords and marketers are as cliché as Subarus and bumper stickers.</p>
 					<p class="copy">But it quite nicely sums up my point of view that marketing should do more than look pretty. </p>
 
-					<div class="link__text--flex link__text--offering offering__link">learn more about my POV</div>
-					<a href="/" class="button ui-button__jump offering-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+					<a class="link link__text link__text--offering offering__link" href="/better">learn more about my POV</a>
+					
+					<a href="#grow" class="button ui-button__jump offering-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
-				<div class="offering__content-item offering__content-item--competitive">
+				<div class="offering__content-item offering__content-item--competitive" id="grow">
 
 					<div class="offering__content-item--container offering__content--light">
 
@@ -38,9 +39,9 @@ if (!defined('ABSPATH')) {
 						<p class="copy">deliver value</p>
 						<div class="link__text">see how i can help you grow</div>
 					</div>
-					<a href="/" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+					<a href="#engage" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
-				<div class="offering__content-item offering__content-item--competitive">
+				<div class="offering__content-item offering__content-item--competitive" id="engage">
 
 					<div class="offering__content-item--container offering__content--light">
 
@@ -53,9 +54,9 @@ if (!defined('ABSPATH')) {
 						<p class="copy">experience management</p>
 						<div class="link__text">see how i can help you engage your customers</div>
 					</div>
-					<a href="/" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+					<a href="#optimize" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
-				<div class="offering__content-item offering__content-item--competitive">
+				<div class="offering__content-item offering__content-item--competitive" id="optimize">
 
 					<div class="offering__content-item--container offering__content--light">
 
@@ -69,7 +70,7 @@ if (!defined('ABSPATH')) {
 						<p class="copy">systems & operations</p>
 						<div class="link__text">see how i can help you get the most from your marketing</div>
 					</div>
-					<a href="/" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+					<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
 
 

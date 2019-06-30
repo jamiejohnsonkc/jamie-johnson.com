@@ -604,7 +604,7 @@ left: 50%;
   @include vr($padding-bottom: 6);
 background: #343a40;
   @include mq('tablet') {
-    min-height: 125em;
+    min-height: 145em;
   }
 
   @include mq('desktop') {
@@ -789,7 +789,7 @@ color: $primary;
 
   @include mq('tablet') {
     max-width: 100%;
-    width: 100%;
+    width: 83%;
     @include vr($margin: 3 auto 1 auto);
 
   }
@@ -1119,7 +1119,14 @@ margin-bottom: 6rem;
   @include mq('tablet') {
     width: 61%;
     max-width: 61%;
+   align-items: center;
 
+  }
+}
+
+.mo__header{
+  @include mq('tablet'){
+    max-width: 83%;
   }
 }
 
@@ -1128,13 +1135,29 @@ margin-bottom: 6rem;
   font-style: italic;
  @include vr($font-size: 1.75, $margin-bottom: 1);
   @include vr($margin-bottom: 1);
-  @include mq('desktop'){
+  @include mq('tablet'){
+   @include vr($margin-bottom: 3);
+  }
+  @include mq('tablet-wide'){
   @include vr($margin-bottom: 2);
   }
 }
 
+.headline__header.headline--intro{
+  border-top: .05em solid $gray-300;
+  @include vr($padding-top: 1);
+  @include mq('tablet'){  
+  @include vr($margin-bottom: 3);
+}
+}
+
 .mo__header-copy {
   @include vr($margin-bottom: 2);
+  border-bottom: .05em solid $gray-300;
+  @include vr($padding-bottom: 2);
+  @include mq('tablet'){
+  
+  }
 }
 
 .mo__deck {
@@ -1142,6 +1165,7 @@ margin-bottom: 6rem;
     text-align: left;
     width: 100%;
     max-width: 100%;
+    @include vr($margin-bottom: 2);
   }
 }
 
@@ -1162,7 +1186,6 @@ margin-bottom: 6rem;
     @include mq('phone') {
       width: 100%;
       max-width: 100%;
-
     }
   
 
@@ -1170,6 +1193,9 @@ margin-bottom: 6rem;
     max-width: 100%;
     min-height: 80em;
     align-items: center;
+    @include vr($margin-top: 3, $padding-top: 0);
+    
+
   }
   @include mq('desktop'){
     margin: 2 auto 0 auto;
@@ -1198,8 +1224,12 @@ min-height: 24em;
   // align-items: flex-start;
   // justify-content: flex-start;
   min-width: 48em;
-  min-height: 25em;
+  min-height: 18em;
   margin-top: 3rem;
+  
+  .mo__expand-button{
+    @include vr($margin-left: 1);
+  }
 
 }
 @include mq('desktop'){
@@ -1211,6 +1241,8 @@ min-height: 24em;
 
 .mo__head--flex-wrap{
   display: flex;
+  align-items: center;
+  justify-content: center;
   
   @include mq('tablet'){
     width: 100%;
@@ -1250,25 +1282,24 @@ margin-right: 0;
 .mo__diagram-big-digit {
   
   display: flex;
-  font-weight: 400;
   justify-content: center;
-  color: $gray-800;
-  font-family: $font-family-serif;
+  fill: $gray-800;
 flex: 0 1 auto;
 align-items: center;
 // width: 9rem;
-font-size: 10em;// @include vr($font-size: 9);
-@include vr($height: 6);
+// @include vr($height: 6);
 
   // height: 18em;
  
 
   @include mq("tablet") {
    margin-bottom: unset;
-    max-width: 11rem;
-min-height: 10rem;
-height: 10rem;
-font-size: 20em;// @include vr($font-size: 9);
+    max-width: 5rem;
+    width: 5rem;
+min-height: 5rem;
+height: 5rem;
+// font-size: 20em
+// @include vr($font-size: 9);
 // background: purple;
 flex: 1 0 20%;
   }
@@ -1357,8 +1388,9 @@ text-align: center;
     min-height: 10rem;
     max-width: 100%;
    align-items: center;
+   justify-content: center;
 
-@include vr($font-size: 3, $margin-bottom: 0);
+@include vr($font-size: 2, $margin-bottom: 0);
     text-align: center;
 
   }
@@ -1409,6 +1441,7 @@ margin: 0;
 }
 
 .mo__text-link {
+  @include vr($margin-bottom: 4);
   @include mq('tablet') {
     align-self: center;
   }
@@ -2545,18 +2578,32 @@ height: 90em;
     transform: rotate(180deg);
     position: relative;
     z-index: 0;
+    // display: block;
   .st0{
   fill: #fafafa;
   stroke: #b0d2ee;
   stroke-width: 12px;
   stroke-linecap: round;
 
+
 }
   }
 
 
+.ui-button__jump{
+  .st0{
+    display: flex;
+}
+}
+.arrow__container{
+  .st0{
+    display: flex;
+  }
+}
 
-
+path.st0 {
+      display: flex;
+    }
 
 
 
@@ -3048,9 +3095,16 @@ display: flex;
 align-items: center;
 width: 60%;
 margin: 0;
-color: $secondary;
-@include vr($margin-top: 4, $padding: .25 1);
+color: $black;
+background: $primary;
+text-align: center;
+@include pill();
+  @include vr($padding: .25 2);
+
+@include vr($margin-top: 4);
+// @include vr($margin-top: 4, $padding: .25 1);
 // background: rgba(255,255,255, .8);
+min-height: 2em;
 @include mq('tablet'){
   margin-left: auto;
   margin-right: auto;
@@ -3101,21 +3155,28 @@ transform-style: preserve-3d;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   align-content: center;
+  flex: 0 1 auto;
+  flex-direction: column;
 }
 .services-list__copy-block{
 @include vr($line-height: 2);
 max-width: 83%;
+width: 83%;
+text-align: center;
 }
 
-.services-link{
-  min-height: 1em;
-  color: $white;
-  font-weight: 300;
-  @include vr($padding: .25 .75);
-  border-radius: 5px;
-  background: darken($primary, $amount:15%);
+.services-card-back--link{
+max-width: 52%;
+@include pill();
+background: $white;
+color: $black;
+  //   min-height: 1em;
+//   color: $white;
+//   font-weight: 300;
+//   @include vr($padding: .25 .75);
+//   border-radius: 5px;
+//   background: darken($primary, $amount:15%);
 }
 
 
@@ -3547,7 +3608,7 @@ max-width: 83%;
     max-width: 90%;
     width: 90%;
     justify-content: stretch;
-    min-height: 22em;
+    min-height: 65em;
     align-self: center;
   }
 
@@ -3606,6 +3667,21 @@ position: relative;
 
   @include mq('desktop') {}
 }
+
+.svg-cluster{
+  g{
+    rect, .st1{
+      fill: #222;
+    }
+  }
+#Group_1061{ 
+  .st0, .st1{
+  fill: $secondary;
+  stroke:none;
+}
+}
+}
+
 
 .offering__image-container{
   .svg-rocket, .svg-cluster, .svg-gears{

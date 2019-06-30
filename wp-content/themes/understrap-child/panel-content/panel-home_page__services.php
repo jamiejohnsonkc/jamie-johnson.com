@@ -8,8 +8,8 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-
-<article class="article__wrapper services-list__article-wrapper">
+ 
+<article class="article__wrapper services-list__article-wrapper" id="services">
 
 	<div class="services-list__background--container">
 		<img src="/wp-content/uploads/2019/01/brains.jpg" class="services-list__background--image" alt="...">
@@ -23,20 +23,6 @@ if (!defined('ABSPATH')) {
 			<h2 class="title services-list__title">My Services</h2>
 		<h3 class="copy__header services-list__copy-header">I offer development, implementation and execution services spanning the spectrum of modern marketing in consulting, collaborative or blah roles.</h3>
 		</div>
-		<!-- <div class="services-list__grid">
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">websites</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">digital marketing</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">experience design</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">branding &amp; messaging</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">value design</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">marketing content</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">strategy & consultation</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">graphics &amp; collateral</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">inbound operations & initiatives</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">transformation & modernization</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">peformance optimization</h3></div>
-		<div class="content__item services-list__content-item"><h3 class="deck deck__header services-list__deck-header">capabilities planning &amp; development</h3></div>
-	</div> -->
 		<div class="services-list__grid">
 		<div class="services-list__content-label">customer engagement</div>
 			<div class="content__item services-list__content-item">
@@ -46,7 +32,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 						<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for every budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -57,7 +43,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 						<div class="copy__block services-list__copy-block">Lorem ex ut labore ipsum.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -68,7 +54,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -79,7 +65,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design and production of digital and traditional marketing materials, collateral and editorial.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -92,7 +78,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 						<div class="copy__block services-list__copy-block">Cupidatat anim nisi commodo nulla.Id ea cillum enim pariatur enim culpa.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -103,7 +89,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 					<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div> -->
@@ -114,7 +100,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Articulate your </div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div> -->
@@ -126,7 +112,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Identify and engage critical paths to establish long-term growth.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -138,7 +124,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 						<div class="copy__block services-list__copy-block">Qui velit excepteur ullamco commodo ipsum excepteur. Et fugiat est sunt exercitatio.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -149,7 +135,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Consequat irure aute cupidatat Lorem ullamco.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -160,7 +146,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Sint qui exercitation quis aliquip nisi do aliquip dolor dolore quis ut sunt irure.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -172,7 +158,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div> -->
@@ -184,7 +170,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -195,7 +181,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Aliqua cillum aliqua eu adipisicing aute cillum occaecat sint laborum cupidatat anim est.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -206,7 +192,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -217,7 +203,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div> -->
@@ -228,7 +214,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -239,7 +225,7 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div>
@@ -250,14 +236,14 @@ if (!defined('ABSPATH')) {
 					</div>
 					<div class="services-list-card__back">
 	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<div class="link__text services-link">learn more</div>
+						<div class="link__text services-card-back--link">learn more</div>
 					</div>
 				</div>
 			</div> -->
 		</div>
-		<p class="link link__text--positioned services-list__text-link">See A Complete List of My Capabilities</p>
+		<a href="#capabilities" class="link link__text--positioned services-list__text-link">See A Complete List of My Capabilities</a>
 
 	</div>
-	<a href="/" class="button ui-button__jump--positioned intro-services__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+	<a href="#stats" class="button ui-button__jump--positioned intro-services__link--jump" title="to next section"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>
 </section>

@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
 }
 ?>
-<section class="section__placeholder">
+<section class="section__placeholder" id="placeholder">
 <article class="article__wrapper article__homepage-placeholder">
 
 	<!-- <h2 class="title title--white headline__header--placeholder">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
@@ -26,8 +26,8 @@ exit; // Exit if accessed directly.
 
 	<div class="body__container--flex body__container--placeholder placeholder__body-container">
 		<p class="copy copy__block copy__block--placeholder placeholder__link--volley copy--bold">Seen Enough?</p>
-		<a class="link link__text placeholder__text-link">Yep. He's amazing. I'm gonna click this and hire him.</a>
-		<a href="#services-summary" class="button ui-button__jump overview__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+		<a href="/contact"class="link link__text placeholder__text-link">Yep. He's amazing. I'm gonna click this and hire him.</a>
+		<a href="#claim" class="button ui-button__jump overview__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 	</div>
 	<!-- <div class="link link__text link--hybrid">> Quis ex laborum non id</div> -->
 

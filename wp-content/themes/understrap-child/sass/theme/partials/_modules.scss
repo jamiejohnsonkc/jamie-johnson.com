@@ -560,53 +560,53 @@ button {
 
 //* ui-button__jump
 
-@mixin jump-button-basic() {
+@mixin jump-button-basic{
   background:           $button-light-background;
-  path.st0 {  stroke:   $black;}
+  path.st0 {  
+    stroke: $black;}
 }
 
-
-@mixin jump-button-theme-light() {
+@mixin jump-button-theme-light{
   border-color:         $button-light-border;
   background:           $button-light-background;
   path.st0 {  stroke:   $button-light-foreground;}
 }
 
-@mixin jump-button-theme-dark() {
+@mixin jump-button-theme-dark{
   border-color:         $button-dark-border;
   background:           $button-dark-background;
   path.st0 {  stroke:   $button-dark-foreground;}
 }
 
-@mixin jump-button-nuetral() {
+@mixin jump-button-nuetral{
   border-color:         $button-neutral-border;
   background:           $button-neutral-background;
   path.st0 {  stroke:   $button-neutral-foreground;}
 }
 
-@mixin jump-button-white-black() {
+@mixin jump-button-white-black{
   border-color:         $button-neutral-border;
   background:           $button-neutral-background;
   path.st0 {  stroke:   $button-neutral-foreground;}
 }
 
-@mixin jump-button-black-white() {
+@mixin jump-button-black-white{
   border-color:         $white;
   background:           $black;
   path.st0 {  stroke:   $white;}
 }
 
-@mixin jump-button-white-outline() {
+@mixin jump-button-white-outline{
   border-color:         $white;
   path.st0 { stroke:    $white;
   }
 }
 
-@mixin jump-button-black-outline() {
+@mixin jump-button-black-outline{
   border-color:         $black ;
   path.st0 {  stroke:   $black ;}
 }
-@mixin absolute-center-bottom(){
+@mixin absolute-center-bottom{
   display: flex;
   position: absolute;
   transform: translateX(-50%);

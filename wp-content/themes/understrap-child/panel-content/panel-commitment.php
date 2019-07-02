@@ -1,10 +1,11 @@
-<?php 
- * container Splash Intro.
- *
- * @package understrap
- */
-if (!defined('ABSPATH')) {
-	exit; // Exit if accessed directly.
+<?php
+/**
+* container Splash template.
+*
+* @package understrap
+*/
+if ( ! defined( 'ABSPATH' ) ) {
+exit; // Exit if accessed directly.
 }
 ?>
 <section class="commitment" id="commitment">

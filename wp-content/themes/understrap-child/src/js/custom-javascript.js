@@ -269,6 +269,7 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     var id = $(this).attr('href');
   $(id).slideToggle(500);
+  
 })
 });
 

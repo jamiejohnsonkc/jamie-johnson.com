@@ -32,4 +32,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</main><!-- #main -->
 		<div class="scroll-top" id="scroll-up" onclick="topFunction()"><a href="" title=""><img src="/wp-content/uploads/2018/12/chevup.svg" alt="" class="style-svg" id="scroll-top"/></a></div>
 		</div><!-- Wrapper end -->
-		<?php get_footer(); ?>									
+		<?php get_footer(); ?>									 

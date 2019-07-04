@@ -41,6 +41,38 @@
 @mixin      item__list-head {             @include vr($font-size: 3,        $margin-top: 1, $margin-bottom: .5);                     }
 @mixin      item__list-item {             @include vr($font-size: 3,        $margin-bottom:0.75);                                    }
 
+
+
+@mixin      xs__headline {              @include vr($font-size: 2,        $margin-top:1, $margin-bottom:1, $line-height: 2);                          }
+@mixin      xs__subhead {               @include vr($font-size: 2,        $margin-top:2, $margin-bottom:0);                          }
+@mixin      xs__deck {                  @include vr($font-size: 2,        $margin:2 0);                                              }
+@mixin      xs__copy {                  @include vr($font-size: 2,        $margin-top:1, $margin-bottom:1);                          }
+@mixin      xs__list-head {             @include vr($font-size: 2,        $margin-top: 1, $margin-bottom: .5);                       }
+@mixin      xs__list-item {             @include vr($font-size: 2,        $margin-bottom:0.75);    }
+
+
+
+
+
+@mixin      sm__headline {              @include vr($font-size: 3,        $margin-top:1, $margin-bottom:1);                          }
+@mixin      sm__subhead {               @include vr($font-size: 3,        $margin-top:2, $margin-bottom:0);                          }
+@mixin      sm__deck {                  @include vr($font-size: 3,        $margin:2 0);                                              }
+@mixin      sm__copy {                  @include vr($font-size: 2,        $margin-top:1, $margin-bottom:1);                          }
+@mixin      sm__list-head {             @include vr($font-size: 3,        $margin-top: 1, $margin-bottom: .5);                       }
+@mixin      sm__list-item {             @include vr($font-size: 3,        $margin-bottom:0.75);                                       }   
+
+
+
+@mixin      xs__headline {              @include vr($font-size: 2,        $margin-top:1, $margin-bottom:1, $line-height: 2);                          }
+@mixin      xs__subhead {               @include vr($font-size: 2,        $margin-top:2, $margin-bottom:0);                          }
+@mixin      xs__deck {                  @include vr($font-size: 2,        $margin:2 0);                                              }
+@mixin      xs__copy {                  @include vr($font-size: 1,        $margin-top:1, $margin-bottom:1);                          }
+@mixin      xs__list-head {             @include vr($font-size: 2,        $margin-top: 1, $margin-bottom: .5);                       }
+@mixin      xs__list-item {             @include vr($font-size: 2,        $margin-bottom:0.75);                                      }
+
+
+
+
 @mixin      diagram__header-headline {    @include vr($font-size: 4,        $margin-top:1, $margin-bottom:1);                        }
 @mixin      diagram__header-copy {        @include vr($font-size: 4,        $line-height:2, $margin:1 0);                            }
 @mixin      diagram__item-headline {      @include vr($font-size: 4,        $margin-top:1, $margin-bottom:1);                        }
@@ -93,11 +125,19 @@
 @mixin headline__header {   @include header__headline;       font-weight: 500;      letter-spacing: -.025em;                         }
 @mixin headline__block  {   @include block__headline;        font-weight: 400;      letter-spacing: -.025em;                         }
 @mixin headline__section{   @include section__headline;      font-weight: 400;      letter-spacing: -.025em;                         }
-@mixin headline__item   {   @include item__headline;         font-weight: 400;      letter-spacing: -.025em;                         }
+@mixin headline__item   {   @include item__headline;         font-weight: 400;      letter-spacing: -.025em;                    }
+@mixin headline__sm   {   @include sm__headline;         font-weight: 400;      letter-spacing: -.025em;                         }
+
+@mixin headline__xs     {   @include xs__headline;         font-weight: 400;      letter-spacing: -.025em;                         }
+
 @mixin copy__header     {   @include header__copy;                                                                                   }
+
+
+
 @mixin copy__block      {   @include block__copy;                                                                                    }
 @mixin copy__item       {   @include item__copy;                                                                                     }
 @mixin copy__para       {   @include para__copy;                                                                                     }
+@mixin copy__sm      {   @include sm__copy;                                                                                    }
 @mixin deck__header     {   
     @include header__deck;
     font-weight: 300;

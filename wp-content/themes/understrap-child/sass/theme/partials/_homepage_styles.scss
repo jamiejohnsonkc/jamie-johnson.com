@@ -43,7 +43,7 @@
 
 .article__homepage-placeholder {
   position: relative;
-  background: $black;
+  background: #333;
   color: $white;
   display: flex;
   width: 100%;
@@ -60,7 +60,25 @@
   }
 }
 
+.article__homepage-placeholder::after{
+    content:'';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.28);
+    background-image: url(/wp-content/uploads/2019/07/black-mesh.png);
+    background-repeat: repeat;
+    background-size: auto;
+}  
 
+
+
+
+.header__container--placeholder, .placeholder__body-container{
+  z-index: 2;
+}
 
 
 .header__container--placeholder {
@@ -73,7 +91,6 @@
   flex: 0 0 auto;
   max-width: 90%;
   width: 90%;
-
   @include mq('tablet') {
     width: 83%;
     max-width: 83%;
@@ -124,7 +141,7 @@
   justify-content: space-evenly;
   align-items: center;
   min-height: 0;
-  flex: 1 1 auto;
+  flex: .5 1 auto;
 }
 
 .copy.placeholder__link--volley{
@@ -304,6 +321,7 @@ a.home-splash__jump{
   width: 130%;
   height: 66em;
   margin-left: 6%;
+ 
 //   >svg#Layer_1{
 //   min-height: 65em;
 //   flex: auto;
@@ -318,7 +336,7 @@ margin-top: -5em;
 margin-left: 0;
 }
 @include mq('desktop'){
-    min-height: 102vh;
+    min-height: 112vh;
     height: 106vh;
     width: auto;
     margin-top: -3vh;
@@ -329,6 +347,9 @@ margin-left: 0;
 }
 @include mq('desktop-uhd'){
   margin-left: -1vw;
+}
+svg#Layer_1{
+  filter: drop-shadow(5px 3px 5px #222);
 }
 }
 
@@ -597,16 +618,32 @@ left: 50%;
 
 
 
-
+.section__hybrid{
+  background: #343a40;  
+  @include inset-shadow();
+}
+//   position: relative;
+//     // height: px;
+//     // display: block;
+//     // background-image: url('../images/posts/css-effects/3/atx-rooftop.jpg');
+//     // background-size: cover;
+//   }
+  
+//   .section__hybrid:after {
+//     content: '';
+//     position: absolute;
+//     top: 0; left: 0; bottom: 0; right: 0;
+//     box-shadow: inset 0px 0px 15px black;
+// }
 
 
 .hybrid__article-wrapper {
   @include vr($padding-bottom: 6);
-background: #343a40;
+
   @include mq('tablet') {
     min-height: 145em;
+  position: relative;
   }
-
   @include mq('desktop') {
     width: 100%;
     max-width: 100%;
@@ -687,7 +724,7 @@ background: #343a40;
   @include mq('desktop') {
     flex: 0 0 38%;
     max-width: 38%;
-    height:  48em;
+    min-height: 32em;
   }
 }
 
@@ -742,8 +779,10 @@ min-height: 0;
 }
 
 .hybrid__body-container {
+ 
   @include vr($padding:0);
-max-width: 83%;
+  max-width: 90%;
+  flex: 0 0 90%;
   @include mq('tablet') {
     flex: 0 0 61%;
     max-width: 61%;
@@ -763,6 +802,12 @@ max-width: 83%;
 .hybrid__copy-container--background{
   // background: rgba(255,255,255,.5);
   // padding: 18%;
+}
+
+
+.copy__block--intro.hybrid__copy-block, .hybrid__copy-block.hybrid__copy-block--smallcaps{
+  width: 90%;
+  max-width: 90%;
 }
 
 .hybrid__copy-block {
@@ -794,9 +839,19 @@ color: $primary;
 
   }
 
+@include mq('tablet-wide'){
+max-width: 50%;
+margin: 0 auto;
+bottom: 10%;
+position: absolute;
+padding: 0;
+transform: translateX(-50%);
+left: 50%;
+text-align: center;
+}
+
   @include mq('desktop') {
-    width: 100%;
-    max-width: 100%;
+
     @include vmar-2-0;
     padding: 0% 9%;
   }
@@ -816,7 +871,8 @@ color: $primary;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: $gray-800;
+
+  background: $deep-gray;
   @include vr($padding-bottom: 6);
 
   @include mq('tablet') {
@@ -922,7 +978,7 @@ margin: unset;
   max-width: 90%;
 flex: 0 1 38em;
 min-height: 48em;
-background: $gray-800;
+// background: $gray-800;
   // margin-top: -7em;
   @include mq('phone') {
     width: 100%;
@@ -1489,7 +1545,10 @@ margin: 0;
   @include vr($margin-bottom: 4);
   align-self: center;
   text-align: center;
+  color: $white;
+  max-width: 80%;
   @include mq('tablet') {
+    max-width: 83%;
 
   }
 }
@@ -2222,6 +2281,10 @@ min-height: 12em;
    }
   
    .article__homepage-placeholder{
+     display: flex;
+     flex-direction: column;
+     min-height: 50vh;
+     background-color: #222;
      @include mq('desktop'){
        flex: 0 1 auto;
        width: 50%;
@@ -2231,6 +2294,22 @@ min-height: 12em;
      }
    }
   
+.article__homepage-placeholder:after{
+  content:'';
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.28);
+  background-image: url(/wp-content/uploads/2019/07/black-mesh.png);
+  background-repeat: repeat;
+  background-size: auto;
+  // z-index: -1;
+  
+
+}
+
    .stats__article-wrapper, .mo__article-wrapper{
     @include mq('desktop'){
       flex: 0 1 auto;
@@ -2616,6 +2695,11 @@ align-items: center;
 justify-content: center;
 min-height: 60em;
 text-align: center;
+.copy__block{
+  @include mq('desktop'){
+    max-width: 23.6%;
+  }
+}
 }
 
 .cta__title{
@@ -3300,7 +3384,7 @@ line-height: 4rem;
 
   .services-list__article-wrapper{
     position: relative;
-    margin: 6em 0;
+    margin: 6em 0 0 0;
     padding: 9em 0;
     @include mq('desktop'){
         margin: 0;
@@ -3321,6 +3405,7 @@ line-height: 4rem;
 position: absolute;
 width: 100%;
 height: 100%;
+bottom: 0;
   }
 
   .services-list__background--image{
@@ -3385,7 +3470,7 @@ height: 100%;
   min-height: 24em;
   flex-wrap: wrap;
   align-content: center;
-  @include vr($margin-bottom: 1);
+  @include vr($margin-bottom: 3);
 }
 
 
@@ -3402,10 +3487,10 @@ height: 100%;
   display: flex;
   width: 100%;
   color: $gray-500;
-@include vr($font-size: 18px, $padding: .25 0);
+@include vr($font-size: 1, $padding: .25 0);
 text-transform: lowercase;
 @include mq('desktop'){
-  @include vr($font-size: 9px);
+  @include vr($font-size: 1);
   letter-spacing: .15rem;
 }
 }
@@ -3501,7 +3586,12 @@ transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   backface-visibility: hidden; 
-  background: rgba($primary, $alpha: .97)
+  background: rgba($primary, $alpha: .97);
+// background: #daeaf7;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to bottom, #ffffff, #daeaf7);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to bottom, #ffffff, #daeaf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 
@@ -3556,59 +3646,11 @@ color: $black;
 //*=============================================*/
 
 .offering{
-.container-wrapper{
-  padding: 6% 2%;
+
+
+
 }
-}
 
-// .core-services {
-//   background: $deep-gray;
-//   @include vr($padding: 6 1);
-
-//   .section-wrapper {
-//     @include mq('tablet', $type: max) {
-//       @include vr($padding: 4 0);
-//     }
-
-//     @include vr($padding: 2 .5);
-//     background: $white;
-
-//     >.headline {
-//       @include ultra();
-//       text-align: center;
-
-//       @include mq('tablet') {
-//         @include block__headline();
-//         text-align: left;
-//       }
-//     }
-
-//     >.sublist {
-//       @include vr($font-size: 2, $width: 83%, $padding: 1 0);
-//       font-variant-caps: all-small-caps;
-//       font-weight: 200;
-//       text-align: center;
-//       margin: 0 auto;
-//       border-top: thin solid $gray-400;
-//       border-bottom: thin solid $gray-400;
-
-//       @include mq('phone', $type: max) {
-//         @include vr($margin-bottom: 4, $padding: 1);
-//       }
-//     }
-
-
-//   }
-  
-
-//   @include mq('tablet') {
-//     @include vr($padding: 4);
-
-//     .section-wrapper {
-//       @include vr($padding: 4);
-//     }
-//   }
-// }
 
 .offering__content-intro {
   .headline {
@@ -3670,13 +3712,21 @@ color: $black;
 
 
 .offering{
-  @include vr($padding: 3 .75);
+  background-color: $primary;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  @include vr($padding: .5 .5);
   width:  100%;
   max-width: 100%;
   position: relative;
 
   .article__wrapper {
     padding: 4%;
+  }
+  .container-wrapper{
+    padding: 1% 0%;
+    @include mq('tablet-wide'){
+      padding: 6% 2%;
+    }
   }
 .pagination{
   @include vr($margin: 3 0);
@@ -3791,7 +3841,7 @@ color: $black;
 
 
 .offering__content-item.offering__content-item--summary {
-  @include vr($padding-left: 1, $padding-right: 1, $padding-bottom: 6);
+  @include vr($padding-left: .75, $padding-right: .75, $padding-bottom: 6);
 
   @include mq('desktop'){
   @include vr($padding-left: 3, $padding-right: 3);
@@ -3814,11 +3864,17 @@ color: $black;
   width: 100%;
   min-height: 66em;
   overflow: hidden;
-  border-bottom: thin solid #777;
+  border: thin solid #777;
   margin-left: .05rem;
   margin-right: .05rem;
+  align-items: center;
+//     @include vr($padding: 5 0 1.5 0);
+@include mq('tablet-wide', $type:max){
+@include vr($margin-bottom: 1);
+}
 
-  @include vr($padding-top: 4);
+@include vr($padding: 3 0 1.5 0);
+
   // border-top: 1px solid $white;
   // border-bottom: 1px solid $white;
   background: $white;
@@ -3837,6 +3893,7 @@ color: $black;
 
   @include mq('tablet-wide') {
     flex: 1 1 auto;
+    border: none;
   }
 
   @include mq('desktop') {
@@ -3940,7 +3997,7 @@ color: $black;
 
 @include mq('desktop') {
   .offering__content-item--summary {
-    flex: 1 1 28%;
+    flex: 1 1 26%;
     border: none;
     display: flex;
   }
@@ -3964,13 +4021,23 @@ color: $black;
 
 .offering__content-item--container {
   position: relative;
-  width: 90%;
-  max-width: 90%;
+  width: 97%;
+  max-width: 97%;
   display: flex;
   flex-direction: column;
   flex: 0 1 auto;
   align-items: center;
   min-height: 30em;
+  @include vr($padding: 1.5 0 1.5 0);
+//   background: rgba(250,250,250,1);
+//   background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
+//   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(35%, rgba(250,250,250,0.76)), color-stop(61%, rgba(250,250,250,0.76)), color-stop(100%, rgba(250,250,250,0)));
+//   background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
+//   background: -o-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
+//   background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
+//   background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#fafafa', GradientType=0 );
+// @include light-shadow();
 
 
   @include mq('tablet') {
@@ -3982,13 +4049,13 @@ color: $black;
     max-width: 90%;
     width: 90%;
     justify-content: stretch;
-    min-height: 65em;
+    min-height: 66em;
     align-self: center;
   }
 
   @include mq('desktop-wide') {
-    width: 61%;
-    max-width: 61%;
+    width: 90%;
+    max-width: 90%;
   }
 
   @include mq('desktop-hd') {
@@ -3997,22 +4064,23 @@ color: $black;
 
   }
   .headline{
-    @include vr($font-size: 3, $line-height: 2.5);
-    text-transform: lowercase;
-    font-weight: 500;
+    @include vr($font-size: 3, $line-height: 2.75);
+    text-transform: capitalize;
+    font-weight: 700;
     text-align: center;
-    min-height: 3em;
-    flex: 0 1 auto;
+    min-height: 3rem;
+    flex: 1 1 auto;
     display: flex;
     margin: 0;
-    color: $deep-gray;
+    color: $gray-800;
+    letter-spacing: -.1rem;
   }
   .copy{
-    min-height: 1.5em;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     display: flex;
     margin: 0;
-    max-width: 83%;
+    min-height: 2rem;
+    max-width: 90%;
     text-align: center;
     font-weight: 300;
     @include vr($font-size: 2, $line-height: 2, $margin-top: .5, $margin-bottom: .5);
@@ -4023,19 +4091,35 @@ color: $black;
   }
   .link__text{
     min-height: 1.5em;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     display: flex;
     text-align: center;
     @include vr($margin-top: 2, $margin-bottom: 1);
     color: $secondary;
+    align-self: center;
   }
 }
 
 
+.offering__copy-container{
+  min-height: 24rem;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
 .offering__image-container {
-  height: 15em;
+  min-height: 15em;
   width: 100%;
 position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 0 0 auto;
 
   @include mq('tablet-wide') {}
 
@@ -4045,12 +4129,12 @@ position: relative;
 .svg-cluster{
   g{
     rect, .st1{
-      fill: #222;
+      fill: $white;
     }
   }
 #Group_1061{ 
   .st0, .st1{
-  fill: $secondary;
+  fill: $gray-800;
   stroke:none;
 }
 }
@@ -4065,7 +4149,7 @@ position: relative;
   }
   
   .cls-1{
-    fill: $secondary;
+    fill: $gray-800;
   }
 }
 

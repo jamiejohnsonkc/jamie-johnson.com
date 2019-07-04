@@ -10,6 +10,7 @@ exit; // Exit if accessed directly.
 ?>
 <section class="section__placeholder" id="placeholder">
 <article class="article__wrapper article__homepage-placeholder">
+	<!-- <div class="background__image--overlay"></div> -->
 
 	<!-- <h2 class="title title--white headline__header--placeholder">I provide comprehensive marketing capabilities and expertise focused on business growth and performance.</h2> -->
 

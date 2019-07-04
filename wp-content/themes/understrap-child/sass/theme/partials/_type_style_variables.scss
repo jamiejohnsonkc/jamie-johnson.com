@@ -373,6 +373,10 @@ p {
     }
 
     &--home-hybrid {
+      @include mq('tablet'){
+      flex: 0 0 90%;
+      max-width: 90%;
+      }
       display: flex;
       flex: 0 0 83%;
       max-width: 83%;

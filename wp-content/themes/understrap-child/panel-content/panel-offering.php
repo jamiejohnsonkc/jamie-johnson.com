@@ -29,15 +29,17 @@ if (!defined('ABSPATH')) {
 
 					<div class="offering__content-item--container offering__content--light">
 
-						<div class="headline">GROW<br>BUSINESS</div>
+						<div class="headline">Grow<br>Business</div>
 						<div class="image__container offering__image-container">
 							<img src="/wp-content/uploads/2018/12/skills_02.svg" class="style-svg svg-rocket" alt="...">
 						</div>
+						<div class="offering__copy-container">
 						<p class="copy">maximize competitive advantage</p>
 						<p class="copy">start conversations</p>
 						<p class="copy">convert prospects</p>
-						<p class="copy">deliver value</p>
-						<div class="link__text">see how i can help you grow</div>
+						<p class="copy">deliver value</p> 
+						</div>
+						<a href="/services#modern-marketing-management" class="link__text">see how i can help you grow</a>
 					</div>
 					<a href="#engage" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
@@ -45,14 +47,16 @@ if (!defined('ABSPATH')) {
 
 					<div class="offering__content-item--container offering__content--light">
 
-						<div class="headline">ENGAGE<br>CUSTOMERS</div>
+						<div class="headline">Engage<br>Customers</div>
 						<div class="image__container offering__image-container">
 							<img src="/wp-content/uploads/2019/01/skills_31.svg" class="style-svg svg-gears" alt="...">
 						</div>
+						<div class="offering__copy-container">
 						<p class="copy">web design & development</p>
 						<p class="copy">digital & traditional programs</p>
 						<p class="copy">experience management</p>
-						<div class="link__text">see how i can help you engage your customers</div>
+						</div>
+						<a href="/services#communications" class="link__text">see how i can help you engage your customers</a>
 					</div>
 					<a href="#optimize" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>
@@ -60,15 +64,17 @@ if (!defined('ABSPATH')) {
 
 					<div class="offering__content-item--container offering__content--light">
 
-						<div class="headline">optimize<br>performance</div>
+						<div class="headline">Optimize<br>Performance</div>
 						<div class="image__container offering__image-container">
 							<img src="/wp-content/uploads/2019/01/skills_27.svg" class="style-svg svg-cluster" alt="...">
 						</div>
+						<div class="offering__copy-container">
 						<p class="copy">business contribution</p>
 						<p class="copy">organizational value</p>
 						<p class="copy">assets & capabilities</p>
 						<p class="copy">systems & operations</p>
-						<div class="link__text">see how i can help you get the most from your marketing</div>
+						</div>
+						<a href="/services#operations" class="link__text">see how i can help you get the most from your marketing</a>
 					</div>
 					<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 				</div>

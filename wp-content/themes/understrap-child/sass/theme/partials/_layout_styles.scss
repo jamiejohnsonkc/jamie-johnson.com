@@ -3329,6 +3329,7 @@ color: $white;
 
 .background__categories_content{
   text-align: center;
+  position: relative;
   &:hover{
     .categories__content_caption{
       opacity: 1;

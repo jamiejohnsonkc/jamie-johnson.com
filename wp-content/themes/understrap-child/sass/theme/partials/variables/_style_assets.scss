@@ -327,6 +327,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f9fa', end
 
 
 
+
+
 //*============================================
 //* =            //*box shdadows            =
 //*=============================================*/
@@ -342,6 +344,55 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f9fa', end
   -moz-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.9);
   box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.9);
 }
+
+
+//* this mixin allows you to add "psuedos" selectors to any mixin
+@mixin p-el($el, $el-width, $el-height){
+  &:#{$el}{
+    @extend %psuedos;
+    width: $el-width;
+    height: $el-height;
+    @content;
+  } 
+}
+
+
+
+  @mixin inset-shadow{
+position: relative;
+
+  @include p-el(after, 100%, 100%){
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 0px 0px 15px black;
+  }
+
+}
+
+
+
+
+// .section__hybrid{
+//   background: #343a40;  
+//   position: relative;
+//     // height: px;
+//     display: block;
+//     background-image: url('../images/posts/css-effects/3/atx-rooftop.jpg');
+//     background-size: cover;
+//   }
+  
+//   .section__hybrid:after {
+//     content: '';
+//     position: absolute;
+//     top: 0; left: 0; bottom: 0; right: 0;
+//     box-shadow: inset 0px 0px 15px black;
+// }
+
+
 
 
 

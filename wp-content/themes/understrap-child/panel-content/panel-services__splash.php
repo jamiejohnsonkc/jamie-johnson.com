@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
 			<h1 class="pagination pagination--white services-splash__pagination">i provide</h1>
 			<h2 class="title title--white">Comprehensive Marketing Solutions</h2>
 			<h3 class="title-sub services-splash__title-sub">Modern approaches delivered with old-fashioned values.</h3>
+			
 			<a href="#services-summary" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>
 		<div class="background__image--cover services-splash__image-container">

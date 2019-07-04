@@ -90,11 +90,15 @@
 
 
 .container__contact--content{
+    position: relative;
     display: flex;
    flex-direction: column;
     align-content: center;
     justify-content: center;
     background: $black;
+    @include mq('tablet', $type:max){
+    display: none;
+    }
   }
   
   .container__contact--form{
@@ -105,10 +109,18 @@
     background: $white;
    min-height: 80em;
   @include mq('tablet', $type:max){
-      @include vr($padding: 3 1);
+      @include vr($padding: 3 2);
       margin: 0 auto;
       width: 100%;
       max-width: 100%;
+//       position: absolute;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       z-index: 3;
+//     justify-content: flex-start;
+
+//       background: rgba($white, $alpha: .95);
   }
   }
   

@@ -582,7 +582,7 @@
 }
 
 .proof__panel_wrapper--stats {
-  background: $primary;
+//   background: $primary;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -967,6 +967,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  @include vr($margin-bottom: 3);
 }
 
 .header__container--brands {
@@ -2216,7 +2217,7 @@ p.homepage-summary__claim--fancy {
       max-width: 8em;
       height: 8em;
       display: flex;
-      border: 1px solid $white;
+      border: 1px solid $deep-gray;
 
       >svg {
         width: 8em;

@@ -26,15 +26,15 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="footer-content col-lg-3 col-md-6 col-sm-12">
 				<div class="footer__content-container--contact">
 					<div class="footer__contact--bug">
-						<div class="footer__contact--logo-container"><img src="/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></div>
+						<a href="/index" class="footer__contact--logo-container"><img src="/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></a>
 						<div class="footer__contact--moniker">
-							<div class="footer__contact--name">jamie johnson</div>
+							<a href="/contact" class="footer__contact--name footer__text-link">jamie johnson</a>
 							<!-- <div class="footer__contact--tag">lorem ipsum dolemite</div> -->
 						</div>
 					</div>
 					<div class="footer__contact--tag">Kansas City (Lenexa, KS)</div>
-					<div class="footer__contact--phone">913-207-6966</div>
-					<div class="button footer__contact--button">Drop Me A Note</div>
+					<a class="footer__contact--phone footer__text-link" href="tel:913-207-6966">913-207-6966</a>
+					<a href="mailto:jamie@jamie-johnson.com" class="button footer__contact--button footer__text-link">Drop Me A Note</a>
 				</div>
 			</div>
 

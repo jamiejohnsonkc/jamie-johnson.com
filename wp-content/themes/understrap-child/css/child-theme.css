@@ -9774,10 +9774,12 @@ margin-right: $navbar-padding-x; */
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 0;
-  padding-top: 3.00002rem;
   list-style: none;
   background: rgba(0, 0, 0, 0.6);
   margin: 0; }
+  @media only screen and (max-width: 34.9em) {
+    .navbar-nav {
+      padding-top: 3.00002rem; } }
   .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 0; }
@@ -10123,11 +10125,6 @@ svg#bug {
 
 .navbar__call-link {
   margin-left: 2rem; }
-
-#navbarNavDropdown a {
-  font-size: 2.0736rem;
-  line-height: 3.00001rem;
-  line-height: 4.50003rem; }
 
 /*
 * Use existing Bootstrap 4 classes and
@@ -31834,32 +31831,32 @@ li.expertise__carousel--list-divider {
         margin-top: 1.50001rem;
         margin-bottom: 1.50001rem; } }
 
-.core-services__overview .flex-container .flex-item {
-  margin-bottom: 4.50003rem; }
+.core-services__overview .flex-container .flex-item__a, .core-services__overview .flex-container .flex-item__b, .core-services__overview .flex-container .flex-item__c {
+  margin-bottom: 46.50031rem; }
   @media (min-width: 48em) {
-    .core-services__overview .flex-container .flex-item {
-      margin-bottom: 4.6667rem; } }
+    .core-services__overview .flex-container .flex-item__a, .core-services__overview .flex-container .flex-item__b, .core-services__overview .flex-container .flex-item__c {
+      margin-bottom: 48.22253rem; } }
   @media (min-width: 78em) {
-    .core-services__overview .flex-container .flex-item {
-      margin-bottom: 4.50003rem; } }
+    .core-services__overview .flex-container .flex-item__a, .core-services__overview .flex-container .flex-item__b, .core-services__overview .flex-container .flex-item__c {
+      margin-bottom: 46.50031rem; } }
   @media (min-width: 118em) {
-    .core-services__overview .flex-container .flex-item {
-      margin-bottom: 4.6667rem; } }
+    .core-services__overview .flex-container .flex-item__a, .core-services__overview .flex-container .flex-item__b, .core-services__overview .flex-container .flex-item__c {
+      margin-bottom: 48.22253rem; } }
   @media (min-width: 160rem) {
-    .core-services__overview .flex-container .flex-item {
-      margin-bottom: 4.50003rem; } }
-  .core-services__overview .flex-container .flex-item .headline {
+    .core-services__overview .flex-container .flex-item__a, .core-services__overview .flex-container .flex-item__b, .core-services__overview .flex-container .flex-item__c {
+      margin-bottom: 46.50031rem; } }
+  .core-services__overview .flex-container .flex-item__a .headline, .core-services__overview .flex-container .flex-item__b .headline, .core-services__overview .flex-container .flex-item__c .headline {
     font-size: 3.375rem;
     line-height: 4.50001rem;
     margin-top: 1.50001rem;
     margin-bottom: 1.50001rem;
     font-weight: 400;
     letter-spacing: -.025em;
-    font-weight: 700;
-    letter-spacing: -.1rem;
+    font-weight: 400;
+    font-variant-caps: all-small-caps;
+    letter-spacing: .025em;
     line-height: 3.37502rem;
     vertical-align: baseline;
-    text-transform: lowercase;
     margin-right: 0.75001rem;
     padding: 0.375rem 0.375rem 0.375rem 0;
     color: #000;
@@ -31868,30 +31865,30 @@ li.expertise__carousel--list-divider {
             flex: 0;
     text-align: left; }
     @media (min-width: 48em) {
-      .core-services__overview .flex-container .flex-item .headline {
+      .core-services__overview .flex-container .flex-item__a .headline, .core-services__overview .flex-container .flex-item__b .headline, .core-services__overview .flex-container .flex-item__c .headline {
         font-size: 3.375rem;
         line-height: 4.66668rem;
         margin-top: 1.55557rem;
         margin-bottom: 1.55557rem; } }
     @media (min-width: 78em) {
-      .core-services__overview .flex-container .flex-item .headline {
+      .core-services__overview .flex-container .flex-item__a .headline, .core-services__overview .flex-container .flex-item__b .headline, .core-services__overview .flex-container .flex-item__c .headline {
         font-size: 3.375rem;
         line-height: 4.50001rem;
         margin-top: 1.50001rem;
         margin-bottom: 1.50001rem; } }
     @media (min-width: 118em) {
-      .core-services__overview .flex-container .flex-item .headline {
+      .core-services__overview .flex-container .flex-item__a .headline, .core-services__overview .flex-container .flex-item__b .headline, .core-services__overview .flex-container .flex-item__c .headline {
         font-size: 3.375rem;
         line-height: 4.66668rem;
         margin-top: 1.55557rem;
         margin-bottom: 1.55557rem; } }
     @media (min-width: 160rem) {
-      .core-services__overview .flex-container .flex-item .headline {
+      .core-services__overview .flex-container .flex-item__a .headline, .core-services__overview .flex-container .flex-item__b .headline, .core-services__overview .flex-container .flex-item__c .headline {
         font-size: 3.375rem;
         line-height: 4.50001rem;
         margin-top: 1.50001rem;
         margin-bottom: 1.50001rem; } }
-  .core-services__overview .flex-container .flex-item .copy {
+  .core-services__overview .flex-container .flex-item__a .copy, .core-services__overview .flex-container .flex-item__b .copy, .core-services__overview .flex-container .flex-item__c .copy {
     font-size: 2.25rem;
     line-height: 3.00001rem;
     margin-top: 1.50001rem;
@@ -31899,59 +31896,65 @@ li.expertise__carousel--list-divider {
     letter-spacing: .01em;
     font-weight: 200; }
     @media (min-width: 48em) {
-      .core-services__overview .flex-container .flex-item .copy {
+      .core-services__overview .flex-container .flex-item__a .copy, .core-services__overview .flex-container .flex-item__b .copy, .core-services__overview .flex-container .flex-item__c .copy {
         font-size: 2.25rem;
         line-height: 3.11112rem;
         margin-top: 1.55557rem;
         margin-bottom: 1.55557rem; } }
     @media (min-width: 78em) {
-      .core-services__overview .flex-container .flex-item .copy {
+      .core-services__overview .flex-container .flex-item__a .copy, .core-services__overview .flex-container .flex-item__b .copy, .core-services__overview .flex-container .flex-item__c .copy {
         font-size: 2.25rem;
         line-height: 3.00001rem;
         margin-top: 1.50001rem;
         margin-bottom: 1.50001rem; } }
     @media (min-width: 118em) {
-      .core-services__overview .flex-container .flex-item .copy {
+      .core-services__overview .flex-container .flex-item__a .copy, .core-services__overview .flex-container .flex-item__b .copy, .core-services__overview .flex-container .flex-item__c .copy {
         font-size: 2.25rem;
         line-height: 3.11112rem;
         margin-top: 1.55557rem;
         margin-bottom: 1.55557rem; } }
     @media (min-width: 160rem) {
-      .core-services__overview .flex-container .flex-item .copy {
+      .core-services__overview .flex-container .flex-item__a .copy, .core-services__overview .flex-container .flex-item__b .copy, .core-services__overview .flex-container .flex-item__c .copy {
         font-size: 2.25rem;
         line-height: 3.00001rem;
         margin-top: 1.50001rem;
         margin-bottom: 1.50001rem; } }
-  .core-services__overview .flex-container .flex-item .subhead {
-    font-size: 2.25rem;
+  .core-services__overview .flex-container .flex-item__a .subhead, .core-services__overview .flex-container .flex-item__b .subhead, .core-services__overview .flex-container .flex-item__c .subhead {
+    font-size: 2.25001rem;
     line-height: 3.00001rem;
-    margin: 3.00002rem 0;
-    font-variant-caps: all-small-caps;
-    font-size: 2.50001rem;
-    line-height: 3.00001rem;
-    line-height: 40px;
+    line-height: 3.00002rem;
     margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-transform: capitalize; }
     @media (min-width: 48em) {
-      .core-services__overview .flex-container .flex-item .subhead {
-        font-size: 2.25rem;
+      .core-services__overview .flex-container .flex-item__a .subhead, .core-services__overview .flex-container .flex-item__b .subhead, .core-services__overview .flex-container .flex-item__c .subhead {
+        font-size: 2.00001rem;
         line-height: 3.11112rem;
-        margin: 3.11113rem 0; } }
+        line-height: 3.11113rem;
+        margin-top: 20px;
+        margin-bottom: 20px; } }
     @media (min-width: 78em) {
-      .core-services__overview .flex-container .flex-item .subhead {
-        font-size: 2.25rem;
+      .core-services__overview .flex-container .flex-item__a .subhead, .core-services__overview .flex-container .flex-item__b .subhead, .core-services__overview .flex-container .flex-item__c .subhead {
+        font-size: 2.25001rem;
         line-height: 3.00001rem;
-        margin: 3.00002rem 0; } }
+        line-height: 3.00002rem;
+        margin-top: 20px;
+        margin-bottom: 20px; } }
     @media (min-width: 118em) {
-      .core-services__overview .flex-container .flex-item .subhead {
-        font-size: 2.25rem;
+      .core-services__overview .flex-container .flex-item__a .subhead, .core-services__overview .flex-container .flex-item__b .subhead, .core-services__overview .flex-container .flex-item__c .subhead {
+        font-size: 2.00001rem;
         line-height: 3.11112rem;
-        margin: 3.11113rem 0; } }
+        line-height: 3.11113rem;
+        margin-top: 20px;
+        margin-bottom: 20px; } }
     @media (min-width: 160rem) {
-      .core-services__overview .flex-container .flex-item .subhead {
-        font-size: 2.25rem;
-        line-height: 3.00001rem;
-        margin: 3.00002rem 0; } }
+      .core-services__overview .flex-container .flex-item__a .subhead, .core-services__overview .flex-container .flex-item__b .subhead, .core-services__overview .flex-container .flex-item__c .subhead {
+        font-size: 1.28572rem;
+        line-height: 1.50001rem;
+        line-height: 3.00002rem;
+        margin-top: 20px;
+        margin-bottom: 20px; } }
 
 .modern-marketing-management > .container-wrapper > .growth__content-intro > .growth__content-item--summary {
   padding-bottom: 9.00006rem;

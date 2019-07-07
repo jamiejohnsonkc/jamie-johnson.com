@@ -137,7 +137,7 @@
 @mixin copy__block      {   @include block__copy;                                                                                    }
 @mixin copy__item       {   @include item__copy;                                                                                     }
 @mixin copy__para       {   @include para__copy;                                                                                     }
-@mixin copy__sm      {   @include sm__copy;                                                                                    }
+@mixin copy__sm         {   @include sm__copy;                                                                                    }
 @mixin deck__header     {   
     @include header__deck;
     font-weight: 300;

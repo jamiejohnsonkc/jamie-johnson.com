@@ -29,9 +29,6 @@ if (!defined('ABSPATH')) {
                 <p class="copy">Customer creation. Revenue generation. Performance Optimization. Oh. And I make stuff too.</p>
               </div>
 
-
-
-
               <div class="flex-item">
                 <div class="flex-headline">
                   <div class="headline__box">How i do it</div>
@@ -71,10 +68,11 @@ if (!defined('ABSPATH')) {
           </div>
         </div><!-- end flex-container -->
       </article> <!-- end of core-services__intro -->
+      
       <article class="core-services__overview">
         <div class="flex-container">
 
-          <div class="flex-item">
+          <div class="flex-item__a">
             <h3 class="headline">Practice Areas</h3>
             <p class="copy">Officia nisi duis culpa cupidatat minim do. Ut commodo laboris cillum eiusmod magna ipsum quis occaecat proident anim id. Officia incididunt id dolore ea ad ut nulla.</p>
 
@@ -94,7 +92,9 @@ if (!defined('ABSPATH')) {
             </div>
           </div>
 
-          <div class="flex-item">
+
+
+          <div class="flex-item__b">
             <h3 class="headline">Core Disciplines</h3>
             <p class="copy">Officia nisi duis culpa cupidatat minim do. Ut commodo laboris cillum eiusmod magna ipsum quis occaecat proident anim id. Officia incididunt id dolore ea ad ut nulla.</p>
 
@@ -119,7 +119,9 @@ if (!defined('ABSPATH')) {
             </div>
           </div>
 
-          <div class="flex-item">
+
+
+          <div class="flex-item__c">
             <h3 class="headline">Services Models</h3>
             <p class="copy">Officia nisi duis culpa cupidatat minim do. Ut commodo laboris cillum eiusmod magna ipsum quis occaecat proident anim id. Officia incididunt id dolore ea ad ut nulla.</p>
 

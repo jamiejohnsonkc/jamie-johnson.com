@@ -98,7 +98,9 @@ margin-right: $navbar-padding-x; */
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
+  @include mq('phablet', $type:max){
   @include vr($padding-top: 2);
+  }
 
   list-style: none;
   background: $navbar-nav-background;
@@ -419,8 +421,8 @@ svg#bug {
      margin-left: 2rem; 
 }
 
-#navbarNavDropdown{
-  a{
-      @include vr($font-size: 4, $line-height: 3);
-  }
-}
+// #navbarNavDropdown{
+//   a{
+//       @include vr($font-size: 4, $line-height: 3);
+//   }
+// }

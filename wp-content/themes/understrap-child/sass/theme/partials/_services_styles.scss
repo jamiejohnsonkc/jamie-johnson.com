@@ -1295,14 +1295,19 @@ li.expertise__carousel--list-divider {
 
   .core-services__overview {
     .flex-container {
-      .flex-item {
-        @include vr($margin-bottom: 3);
+      .flex-item__a, .flex-item__b, .flex-item__c {
+        @include vr($margin-bottom: 31);
         .headline {
           @include headline__item;
-          @include ultra();
+          font-weight: 400;
+          font-variant-caps: all-small-caps;
+          letter-spacing: .025em;
+          // text-transform: capitalize;
+          // @include ultra();
+
           @include vr($line-height: 2.25);
           vertical-align: baseline;
-          text-transform: lowercase;
+          // text-transform: lowercase;
           @include vr($padding: .25 .25 .25 0, $margin-right: .5);
           color: $black;
           flex: 0;
@@ -1316,9 +1321,9 @@ li.expertise__carousel--list-divider {
         .flex-element {
         }
         .subhead {
-        @include xs__deck;
-        font-variant-caps: all-small-caps;
-        @include vr($font-size: 20px, $line-height: 40px, $margin-bottom: 20px, $margin-top: 20px);
+        @include vr($font-size: 18px, $line-height: 2, $margin-bottom: 20px, $margin-top: 20px);
+        font-weight: 300;
+        text-transform: capitalize;
 
         }
  

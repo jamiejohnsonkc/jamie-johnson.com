@@ -651,13 +651,13 @@ p {
   }
 
   &--white {
-    color: $offwhite;
+    color: $off-white;
   }
 
   &--revwhite {
     // border: 2px solid #fafafa;
     color: $black;
-    background: $offwhite;
+    background: $off-white;
     border-radius: 50px;
     height: 2em;
     display: inline-flex;
@@ -982,7 +982,7 @@ p {
     }
 
     &--offwhite {
-      color: $offwhite;
+      color: $off-white;
     }
 
     &--weak {
@@ -1025,7 +1025,7 @@ p {
 }
 
   &--offwhite {
-    color: $offwhite;
+    color: $off-white;
   }
 
   &--center {
@@ -1225,7 +1225,7 @@ display: flex;
 }
 
   &__header {
-    @include header__copy;
+    @include header__copy();
 
     &:last-of-type {
       margin-bottom: 0;
@@ -1244,7 +1244,7 @@ display: flex;
       min-height: 5em;
       position: relative;
 
-      // color: $offwhite;
+      // color: $off-white;
       >em {
         justify-content: center;
         display: flex;
@@ -1255,7 +1255,7 @@ display: flex;
     }
 
     &--end2end {
-      color: $offwhite;
+      color: $off-white;
       width: 67%;
       margin-bottom: 4em;
 
@@ -1274,7 +1274,7 @@ display: flex;
   }
 
   &__block {
-    @include block__copy;
+    @include block__copy();
 
     &:last-of-type {
       margin-bottom: 0;
@@ -1309,7 +1309,7 @@ display: flex;
   }
 
   &__block--flex{
-    @include block__copy;
+    @include block__copy();
     display: flex;
     flex: 0 1 auto;
     min-height: 0;
@@ -1318,7 +1318,7 @@ max-width: 83%;
   }
 
   &__item {
-    @include item__copy;
+    @include item__copy();
 
     &:last-of-type {
       margin-bottom: 0;
@@ -1391,19 +1391,19 @@ min-height: 0;
   letter-spacing: .025em;
 
   &__header {
-    @include header__list-head;
+    @include header__list-head();
     font-weight: 400;
     letter-spacing: .025em;
   }
 
   &__block {
-    @include block__list-head;
+    @include block__list-head();
     font-weight: 400;
     letter-spacing: .025em;
   }
 
   &__item {
-    @include item__list-head;
+    @include item__list-head();
     font-weight: 400;
     letter-spacing: .025em;
 
@@ -1514,7 +1514,7 @@ min-height: 0;
     text-indent: -2em;
     padding-left: 2em;
 
-    @include push-auto;
+    @include push-auto();
     // @include vr($padding-bottom: 2);
   }
 
@@ -1585,16 +1585,16 @@ min-height: 0;
   // text-indent: 1em;
   // margin-left: -1em;
   &__header {
-    @include header__list-item;
+    @include header__list-item();
     font-weight: 200;
   }
 
   &__block {
-    @include block__list-item;
+    @include block__list-item();
   }
 
   &__block--jump {
-    @include block__list-item;
+    @include block__list-item();
     // text-indent: -2em;
     // margin-left: 2em;
     padding-left: 1em;
@@ -1612,7 +1612,7 @@ min-height: 0;
   
 
   // &--intro {
-  //   color: $offwhite;
+  //   color: $off-white;
   //   font-weight: 200;
   //   margin-left: -1em;
   //   flex: 0 1 80%;
@@ -1622,7 +1622,7 @@ min-height: 0;
   // }
 
   &__item {
-    @include item__list-item;
+    @include item__list-item();
     font-weight: 200;
   }
 
@@ -1754,7 +1754,7 @@ display: flex;
   }
 
   &__header-headline {
-    @include diagram__header-headline;
+    @include diagram__header-headline();
 
     font-weight: 400;
     flex: 1 0 100%;
@@ -1769,7 +1769,7 @@ display: flex;
   }
 
   &__header-copy {
-    @include diagram__header-copy;
+    @include diagram__header-copy();
 
     display: flex;
 
@@ -1897,7 +1897,7 @@ display: flex;
   &__headline {
     font-weight: 300;
 
-    @include diagram__item-headline;
+    @include diagram__item-headline();
 
     &--intro {
       color: $primary;
@@ -1911,7 +1911,7 @@ display: flex;
 
   &__subhead {
     font-weight: 400;
-    @include diagram__item-subhead;
+    @include diagram__item-subhead();
     font-style: italic;
     @include vr($margin-bottom: 1);
 
@@ -1921,7 +1921,7 @@ display: flex;
   &__copy {
     font-weight: 200;
 
-    @include diagram__item-copy;
+    @include diagram__item-copy();
 
     &--objectives-diagram {
       text-align: justify;
@@ -1963,7 +1963,7 @@ display: flex;
   }
 
   &--offwhite {
-    color: $offwhite;
+    color: $off-white;
   }
 }
 

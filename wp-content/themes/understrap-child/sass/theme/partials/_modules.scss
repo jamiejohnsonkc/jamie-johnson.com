@@ -634,7 +634,7 @@ button {
 
 //* homepage links
 .home-splash__link--jump                    { @include jump-button-basic(); @include self-center(); margin-top: auto; margin-bottom: 6em; }
-.overview__link--jump                       { @include jump-button-basic(); @include self-center(); }
+.overview__link--jump                       { @include jump-button-basic(); @include self-center();}
 .claim__link--jump                          { @include jump-button-basic();} 
 
 .intro-services__link--jump                 { @include jump-button-basic(); @include self-center(); z-index: 6; position: relative; }

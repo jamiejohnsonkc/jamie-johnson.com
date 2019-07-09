@@ -60,12 +60,12 @@ $grays: map-merge((
 
 
 //* default bootstrap colors
-$offwhite1:                            rgba(253, 253, 253, 1);
-$offwhite:                             rgba(250,250,250, 1);
-$ghostwhite:                           #F8F8FF;
-$lightgray:                            #d3d3d3;
+$off-white1:                            rgba(253, 253, 253, 1);
+$off-white:                             rgba(250,250,250, 1);
+$ghost-white:                           #F8F8FF;
+$light-gray:                            #d3d3d3;
 $silver:                               #c0c0c0;
-$darkgray:                             #a9a9a9;
+$dark-gray:                             #a9a9a9;
 $gray:                                 #808080;
 $grayrgba:                             rgba(128,128,128,1);
                                       
@@ -80,10 +80,10 @@ $green:                                #28a745 !default;
 $teal:                                 #20c997 !default;
 $cyan:                                 #17a2b8 !default;
 
-$offwhite1:                            rgba(253, 253, 253, 1);
-$offwhite:                             rgba(250,250,250, 1);
-$ghostwhite:                           #F8F8FF;
-         
+$off-white-1:                            rgba(253, 253, 253, 1);
+$off-white:                             rgba(250,250,250, 1);
+$ghost-white:                           #F8F8FF;
+$dirty-white:                           #f9f9f9;        
 
 
 $bluea-background-color:               rgba(51, 51, 68, .8);

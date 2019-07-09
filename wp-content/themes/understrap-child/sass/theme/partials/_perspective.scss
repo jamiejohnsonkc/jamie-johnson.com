@@ -1,8 +1,8 @@
 .article.perspective {
-  background: $offwhite;
+  background: $off-white;
   @include az-subtle();
   position: relative;
-  // color: $offwhite;
+  // color: $off-white;
   padding: 16% 8%;
 @include mq('desktop'){
   max-width: 50%;

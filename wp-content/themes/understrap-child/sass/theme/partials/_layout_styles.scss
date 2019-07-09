@@ -1726,7 +1726,7 @@ svg#services__arrow--img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // background: $offwhite;
+    // background: $off-white;
     align-items: stretch;
     // border-radius: 2em 2em 0 0;
 //     margin-top: -20em;
@@ -2072,7 +2072,7 @@ max-width: 100%;
     @include make-col-ready();
     @include make-col(4);
     @include vr($margin-bottom: 2);
-    fill: $offwhite;
+    fill: $off-white;
     position: relative;
     display: flex;
     min-height: 0;
@@ -2415,7 +2415,7 @@ display: flex;
   }
 
   .deck__article__expertise, li.services__list-item {
-    color: $offwhite;
+    color: $off-white;
   }
 
   // .services__list-item{
@@ -2668,7 +2668,7 @@ display: flex;
   .services__panel_content--planning {
     width: 100%;
     max-width: 100%;
-    color: $offwhite;
+    color: $off-white;
     z-index: 3;
     flex: 0 0 auto;
 

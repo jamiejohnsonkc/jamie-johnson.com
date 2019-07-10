@@ -1788,7 +1788,7 @@ li.expertise__carousel--list-divider {
     background: $gray-200;
     display: flex;
     flex-wrap: wrap;
-    height: 80em;
+    height: 107em;
     width: 100%;
     justify-content: center;
     align-content: center;
@@ -1805,7 +1805,7 @@ li.expertise__carousel--list-divider {
 
   .flex__wrapper {
     @include mq('desktop') {
-      height: 54em;
+      height: 76em;
       width: 96%;
       position: relative;
       align-self: center;
@@ -2004,10 +2004,11 @@ li.expertise__carousel--list-divider {
     //     background: $gray-200;
     display: flex;
     flex-wrap: wrap;
-    height: 80em;
+    height: 106em;
     width: 100%;
     justify-content: center;
     align-content: center;
+    margin-top: 0;
   }
 
   .pagination {
@@ -2021,7 +2022,7 @@ li.expertise__carousel--list-divider {
 
   .flex__wrapper {
     @include mq('desktop') {
-      height: 54em;
+      height: 76em;
       width: 96%;
       position: relative;
       align-self: center;
@@ -3002,8 +3003,8 @@ li.expertise__carousel--list-divider {
   @include mq('tablet-wide') {
     max-width: 24%;
     flex: 0 1 24%;
-    height: 63em;
-    min-height: 63em;
+    height: 76em;
+    min-height: 76em;
     border-bottom: none;
   }
 

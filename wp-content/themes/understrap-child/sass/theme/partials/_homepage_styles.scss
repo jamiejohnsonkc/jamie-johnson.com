@@ -3723,16 +3723,22 @@ color: $black;
       align-items: baseline;
       
     }
-  .subhead__header{ //*specific to .intro__header
-    // @include mq('tablet-wide'){
+  .deck__item{
+    max-width: 83%;
+    @include mq('tablet-wide'){
       text-align: left;
-    // }
+    }
   }
   .copy{
     @include copy__xs();
     @include vr($line-height: 2);
+    @include mq('tablet-wide'){
+      max-width: 83%;
+    }
   }
   }
+
+  
   .subhead__header{
     font-weight: 500;
     text-align: center;
@@ -3979,6 +3985,16 @@ color: $black;
   // background-repeat: no-repeat;
   // background-size: cover;
   color: $white;
+  @include mq('tablet-wide'){
+    display: flex;
+  height: 80em;
+  }
+  .flex-container{
+    @include mq('tablet-wide'){
+      display: flex;
+      width: 100%;
+    }
+  }
   .flex-item__a{
     display: block;
     position: absolute;
@@ -3998,6 +4014,7 @@ color: $black;
     position: relative;
     z-index: 1;
     }
+
   }
   .flex-item__b{
     // background-blend-mode: hard-light;
@@ -4009,7 +4026,6 @@ color: $black;
     height: 94em;
     overflow: hidden;
     filter: brightness(.35);
-
     //   position: absolute;
   //   height: 100%;
   //   width: 100%;
@@ -4027,6 +4043,9 @@ color: $black;
   background: $secondary;
   background-image: url(/wp-content/uploads/2019/06/hero-7.jpg);
   background-blend-mode: hard-light;
+  @media only screen and (max-height: 500px) {
+
+  }
   background-size: 302%;
   background-position: 55% 50%;
   background-repeat: no-repeat;
@@ -4036,13 +4055,50 @@ color: $black;
 
 
   @include mq('tablet-wide'){
+    display: flex;
+    position: relative;
     flex: 0 0 100%;
       .flex-item__a{
         flex: 1;  
+        max-width: 50%;
+        transform: none;
+        left: unset;
+        top: unset;
+        z-index: 0;
+        background: $black;
+        .pagination{
+          @include vr($margin-bottom: 3);
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 64%;
+
         }
+      .headline-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 64%;
+      }  
+      .offering__link{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 64%;
+      }
+
+        }
+        
        .flex-item__b{
         flex: .75;
-        }  
+        display: flex;
+        max-width: 50%;
+        height: 80em;
+      .background__image--cover{
+        background-size: 225%;
+        background-position: 67% 50%;
+      }  
+      }  
     }
     @include mq('desktop'){
     @include vr($padding-left: 3, $padding-right: 3);
@@ -4259,7 +4315,9 @@ max-width: 100%;
     
   }
   @include mq('desktop') {
-    // display: block;
+    br{
+display: flex;
+    }
 
   }
 }

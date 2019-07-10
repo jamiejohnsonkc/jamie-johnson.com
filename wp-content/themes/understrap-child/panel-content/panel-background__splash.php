@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="container container--splash container--splash-background background-splash__container">
 		<h1 class="pagination pagination--splash background__splash-pagination">about me</h1>
 <h2 class="title__header background__splash--title ">I'm a salty marketing veteran who knows a thing or two.</h2>          
-<h3 class="title-sub">I'm not out to change the world.<br>Just grow your business.</h3>            
+<h3 class="title-sub">Serious about marketing. But not too serious.         
 	
 		
 	<!-- 	<p>Seeking contract, consulting or freelance opportunities <span class="br"><br></span>(or the right long-term gig)</p> -->

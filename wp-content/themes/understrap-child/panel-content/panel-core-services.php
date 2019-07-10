@@ -8,16 +8,16 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 ?>
-<section class="core-services" id="core-services-intro">
+<!-- <section class="core-services" id="core-services-intro"> -->
   <!-- <div class="small-screen-background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="..."></div> -->
-  <div class="section-wrapper">
+  <!-- <div class="section-wrapper">
     <div class="background__container">
       <div class="background__image--cover"><img src="/wp-content/uploads/2019/06/hero-13.jpg" class="image-awesome" alt="...">
-      </div>
-      <article class="core-services__intro">
+      </div> -->
+      <!-- <article class="core-services__intro">
         <div class="flex-container">
           <div class="flex-item__hero">
-            <!-- header -->
+
             <div class="flex-item__wrapper">
               <h1 class="pagination">integrative marketing services</h1>
 
@@ -64,12 +64,12 @@ if (!defined('ABSPATH')) {
               </div>
 
             </div>
-            <!-- <a href="/" class="link__text"></a> -->
+       
           </div>
-        </div><!-- end flex-container -->
-      </article> <!-- end of core-services__intro -->
-      
-      <article class="core-services__overview">
+        </div>
+      </article> 
+       -->
+      <!-- <article class="core-services__overview">
         <div class="flex-container">
 
           <div class="flex-item__a">
@@ -142,14 +142,14 @@ if (!defined('ABSPATH')) {
 
           </div>
 
-        </div> <!-- end flex-container -->
+        </div>
 
-        <a href="#modern-marketing-management" class="button ui-button__jump growth-article__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
-    </div> <!-- end background__container -->
-    </article> <!-- end of core-services__overview -->
-  </div> <!-- end section-wrapper -->
+        <a href="#modern-marketing-management" class="button ui-button__jump growth-article__link--jump" title="read more">?php get_template_part('buttons/button', 'jump'); ?></a>
+    </div> 
+    </article> 
+  </div> 
 
-</section> <!-- end core-services -->
+</section>  -->
 
 
 

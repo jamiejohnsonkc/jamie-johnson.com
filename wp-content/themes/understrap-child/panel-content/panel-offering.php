@@ -16,19 +16,19 @@
  				<h1 class="pagination">how i do it</h1>
  				<h2 class="headline__header offering__headline">I Make <br>Marketing Better</h2>
  				<!-- <p class="subhead__header">After <a href="/background" class="subhead__header copy__link">20+ years in marketing</a>, I know what works and what doesn't.</p> -->
- 				<p class="subhead__header">After 20+ years in marketing</a>, I know what works and what doesn't.</p>
+ 				<p class="deck__item">I see the forest, the trees and the acorns.</p>
 
  				<p class="copy">I can help you identify the right <span class="copy offering__header--emphasis">growth objectives </span>, translate them into <span class="copy offering__header--emphasis">effective marketing strategy</span> and ensure you engage the <span class="copy offering__header--emphasis">optimal marketing mix</span> for your business.</p>
  				<p class="copy">Oh. I also build websites and other stuff too.</p>
  				<a class="link link__text link__text--offering offering__link" href="/better">&#8250;See what makes me perfect for young enterprises</a>
  			</div>
  		</div>
-
+	
  		<div class="flex-container offering__content-container offering__content-intro">
 
  			<div class="offering__content-item offering__content-item--intro">
  				<div class="offering-intro__header">
- 					<h1 class="pagination">my value</h1>
+ 					<h1 class="pagination">my areas of expertise</h1>
  					<h2 class="headline__header">Three ways I can help grow your business:</h2>
  				</div>
  			</div>
@@ -37,8 +37,8 @@
 
  				<div class="offering__content-item--container">
  					<div class="container__number">#1</div>
- 					<h3 class="subhead__header">Strategy Development & Implementation</h3>
- 					<h4 class="subsubhead">Strategic Marketing Management</h4>
+ 					<h3 class="subhead__header">Generate Outcomes</h3>
+ 					<h4 class="subsubhead">Strategy Development & Implementation</h4>
  					<div class="image__container offering__image-container">
  						<img src="/wp-content/uploads/2018/12/skills_02.svg" class="style-svg svg-rocket" alt="...">
  					</div>
@@ -49,7 +49,7 @@
  						<p class="copy">revenue generation</p>
  						<p class="copy">organizational value</p> -->
  					</div>
- 					<a href="/services#modern-marketing-management" class="link__text">&#8250;see how i can help you grow your business</a>
+ 					<a href="/services#modern-marketing-management" class="link__text">&#8250;lear more about Strategic Marketing Management</a>
  				</div> <a href="#engage" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
  			</div>
 
@@ -57,8 +57,8 @@
 
  				<div class="offering__content-item--container offering__content--light">
  					<div class="container__number">#2</div>
- 					<div class="subhead__header">Program Design & Execution</div>
- 					<h4 class="subsubhead">Integrative Marketing</h4>
+ 					<div class="subhead__header">Engage Customers</div>
+ 					<h4 class="subsubhead">Program Design & Execution</h4>
  					<div class="image__container offering__image-container">
  						<img src="/wp-content/uploads/2019/01/skills_25.svg" class="style-svg svg-chat" alt="...">
  					</div>
@@ -71,7 +71,7 @@
  						<p class="copy">Staffing & resources</p>
  						<p class="copy">Metrics & peformance</p> -->
  					</div>
- 					<a href="/services#operations" class="link__text">&#8250;see how i can help you create customers</a>
+ 					<a href="/services#operations" class="link__text">&#8250;learn more about integrative marketing</a>
  				</div>
  				<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
@@ -83,8 +83,8 @@
 
  				<div class="offering__content-item--container offering__content--light">
  					<div class="container__number">#3</div>
- 					<div class="subhead__header">Management, Organization & Control</div>
- 					<h4 class="subsubhead">Marketing Operations</h4>
+ 					<div class="subhead__header">Optimize Marketing Performance</div>
+ 					<h4 class="subsubhead">Management, Organization & Control</h4>
  					<div class="image__container offering__image-container">
  						<img src="/wp-content/uploads/2019/01/skills_23.svg" class="style-svg svg-integrative" alt="...">
  					</div>
@@ -96,7 +96,7 @@
 							<p class="copy">Staffing & resources</p>
 							<p class="copy">Metrics & peformance</p> -->
  					</div>
- 					<a href="/services#operations" class="link__text">&#8250;see how i can help you get more from your marketing</a>
+ 					<a href="/services#operations" class="link__text">&#8250;learn more about marketing operations</a>
  				</div>
  				<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 

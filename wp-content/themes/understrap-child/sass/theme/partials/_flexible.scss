@@ -1,0 +1,232 @@
+.article__flexible {
+  position: relative;
+  background: $black;
+  @include vr($margin: .5 0);
+  @include mq('tablet'){
+    @include vr($margin: 1, $padding: 1);
+    @include light-shadow();
+
+  }
+
+  .flex-container {
+    color: $white;
+@include mq('desktop'){
+  display: flex;
+  flex-wrap: wrap;
+}
+    .flex-item__a {
+      position: relative;
+      width: 100%;
+      height: 40em;
+
+      @include mq('tablet') {
+        height: 80em;
+      }
+      @include mq('desktop'){
+        display: flex;
+        flex: 1.5 1 50%;
+        max-width: 83%;
+        width: unset;
+      }
+
+      .title {
+        @include sm__title();
+        @include ultra();
+        @include vr($line-height: 4);
+        // color: $accent;
+        // @include ultra(); 
+        position: absolute;
+        transform: translateY(-50%);
+        top: 41%;
+        width: 68%;
+        right: 3rem;
+        z-index: 1;
+        text-align: right;
+
+        @include mq('tablet', $type: max) {
+          br {
+            display: block;
+          }
+        }
+
+        @include mq('tablet') {
+          width: 66%;
+          @include item__title();
+          @include vr($line-height: 8);
+        }
+
+        @include mq('desktop') {
+          @include sm__title();
+          @include ultra();
+          @include vr($line-height: 4);
+          position: absolute;
+          bottom: 0;
+          height: 2.5em;
+          flex: 0 0 0;
+          top: unset;
+          width: 64%;
+          br{
+            display: none;
+          }
+        }
+      }
+
+      .background__image--cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 0;
+      }
+
+      .img-waiting {
+        position: absolute;
+        height: auto;
+        width: 200%;
+        max-width: 300%;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        transform: scaleX(-1);
+      }
+    }
+
+
+    .flex-item__b {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include vr($padding: 2);
+
+      @include mq('tablet') {
+@include vr($padding: 4 2 9 2);
+        .header, .copy__container {
+          width: 64%;
+          }
+        @include mq('tablet-wide'){
+          @include vr($padding-bottom: 1);
+        }
+
+        }
+        @include mq('desktop'){
+          .header, .copy__container {
+            width: 83%;
+            }
+         
+          display: flex;
+          flex: 1 1 auto;
+          max-width: 27%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .header{
+          @include mq('desktop'){
+            flex: 0 1 auto;
+            min-height: 20em;
+          display: flex;
+          }
+        }
+        .headline {
+          text-transform: lowercase;
+          // color: $accent;
+          @include headline__sm();
+
+          @include mq('tablet') {
+            @include headline__item();
+          }
+          @include mq('desktop'){
+            @include vr($line-height: 3);
+          }
+         
+        }
+.copy__container{
+  @include mq('desktop'){
+  min-height: 10em;
+  flex: 0 1 auto;
+  display: flex;
+}
+
+        .copy {
+          @include copy__xs();
+          @include vr($margin-bottom: 1);
+
+          @include mq('tablet') {
+            @include copy__sm();
+          }
+          @include mq('desktop'){
+            @include vr($line-height: 3);
+          }
+         
+        }
+      }
+    }
+      .flex-item__c{
+        display: flex;
+        flex: 1 1 auto;
+        max-width: 100%;
+        @include vr($padding: 2);
+flex-wrap: wrap;
+        @include mq('tablet') {
+          @include vr($padding: 4 2 9 2);
+        width: 64%;
+        flex-wrap: nowrap;
+        }
+        @include mq('tablet-wide'){
+          max-width: 100%;
+          width: 100%;
+          flex: 0 1 auto;
+        }
+        @include mq('desktop'){
+          width: 83%;
+          justify-content: space-evenly;
+        }
+
+
+      .flex-item__c-1, .flex-item__c-2, .flex-item__c-3{
+        display: flex;
+flex: 1 1 100%;
+@include vr($margin-bottom: 5);
+
+        .headline{
+          @include vr($margin-bottom: 1, $font-size: 1);
+          text-transform: uppercase;
+          @include ultra();
+          letter-spacing: 0;
+          // color: $accent;
+
+        }
+        .blurb{
+          @include xs__copy();
+          @include vr($margin-bottom: 2);
+          font-weight: 200;
+        }
+        .copy{
+          @include xs__copy();
+          font-weight: 200;
+          @include vr($margin-bottom: .5);
+          @include vr($padding: 0 0, $line-height: .75);
+
+          span{
+            @include xs__copy();
+            font-weight: 600;
+            @include vr($line-height: .75, $padding-right: .25);
+            letter-spacing: .05rem;
+            // color: $accent;
+          }
+        }
+
+      @include mq('tablet'){
+        flex: 1 1 38%;
+        max-width: 38%;
+        width: unset;
+        @include vr($padding: 0 2%);
+      
+      }
+      }
+      }
+    }
+  }
+
+
+

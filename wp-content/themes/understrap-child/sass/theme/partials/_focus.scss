@@ -1,0 +1,166 @@
+.article__focus {
+  position: relative;
+  background: $black;
+  @include mq('tablet', $type: max){
+    border: .05rem solid $white;
+    @include vr($margin: .5 .5);
+  }
+  @include mq('tablet'){
+    @include vr($margin: 1, $padding: 1);
+    @include light-shadow();
+
+  }
+
+  .flex-container {
+    color: $white;
+@include mq('desktop'){
+  display: flex;
+}
+    .flex-item__a {
+      position: relative;
+      width: 100%;
+      height: 40em;
+
+      @include mq('tablet') {
+        height: 80em;
+      }
+      @include mq('desktop'){
+        display: flex;
+        flex: 1.5 1 50%;
+        max-width: 83%;
+        width: unset;
+        height: 101em;
+      }
+
+      .title {
+        @include sm__title();
+        @include ultra();
+        @include vr($line-height: 4);
+        // @include ultra(); 
+        position: absolute;
+        transform: translateY(-50%);
+        top: 41%;
+        width: 68%;
+        left: 3rem;
+        z-index: 1;
+
+        @include mq('tablet', $type: max) {
+          br {
+            display: block;
+          }
+        }
+
+        @include mq('tablet') {
+          width: 66%;
+          @include item__title();
+          @include vr($line-height: 8);
+        }
+
+        @include mq('desktop') {
+          @include md__title();
+          @include ultra();
+          // @include vr($line-height: 4);
+          position: absolute;
+          bottom: 0;
+          height: 2.5em;
+          flex: 0 0 0;
+          top: unset;
+          width: 64%;
+          br{
+            display: none;
+          }
+        }
+      }
+
+      .background__image--cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 0;
+      }
+
+      .img-passenger {
+        position: absolute;
+        height: auto;
+        width: 200%;
+        max-width: 300%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+      @include mq('desktop'){
+        width: 124%;
+      }
+      }
+    }
+
+
+    .flex-item__b {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include vr($padding: 2);
+
+      @include mq('tablet') {
+@include vr($padding: 4 2 9 2);
+        .header, .copy__container {
+          width: 64%;
+          }
+        
+        }
+        @include mq('desktop'){
+          .header, .copy__container {
+            width: 83%;
+            }
+         
+          display: flex;
+          flex: 1 1 auto;
+          max-width: 24%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .header{
+          @include mq('desktop'){
+            flex: 0 1 auto;
+            min-height: 20em;
+          display: flex;
+          }
+        }
+        .headline {
+          text-transform: uppercase;
+          @include headline__xs();
+
+          @include mq('tablet') {
+            @include headline__item();
+          }
+          @include mq('desktop'){
+            @include vr($line-height: 3);
+            @include headline__sm();
+          }
+         
+        }
+.copy__container{
+  @include mq('desktop'){
+  min-height: 10em;
+  flex: 0 1 auto;
+  display: flex;
+}
+}
+        .copy {
+          @include copy__xs();
+          @include vr($margin-bottom: 1);
+
+          @include mq('tablet') {
+            @include copy__sm();
+          }
+          @include mq('desktop'){
+           
+            @include copy__sm();
+            @include vr($line-height: 2.5);
+          }
+         
+        }
+      }
+    }
+  }

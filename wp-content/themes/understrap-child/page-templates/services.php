@@ -16,6 +16,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<main class="site-main" id="main" role="main">
 		
 			<?php get_template_part( 'panel-content/panel', 'services__splash' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'focus' ); ?>
+			<?php get_template_part( 'panel-content/panel', 'flexible' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'core-services' ); ?>
 			<!-- ?php get_template_part( 'panel-content/panel', 'services__expertise' ); ?> -->
 			<!-- ?php get_template_part( 'panel-content/panel', 'services__intro' ); ?> -->

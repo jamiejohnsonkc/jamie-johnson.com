@@ -20,7 +20,7 @@ exit; // Exit if accessed directly.
 	<h2 class="title headline__header--placeholder">Integrative Marketing</h2>
 		<h3 class="subhead subhead__header deck__header--placeholder">business &#8250; marketing &#8250; technology</h3>
 		<!-- <h3 class="subhead">I </h3> -->
-		<p class="copy copy__block copy__block--placeholder copy__block--serif">I strategize. I create. I code.</p>
+		<p class="copy copy__block copy__block--placeholder copy__block--serif">i strategize. i create. i code.</p>
 		<p class="copy copy__block copy__block--placeholder copy__block--serif">&dash;sweet</p>
 	</div>
 

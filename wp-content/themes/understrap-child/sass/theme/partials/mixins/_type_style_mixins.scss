@@ -50,7 +50,7 @@
  @mixin xs__headline             { @include vr($font-size: 2      , $margin-top:1, $margin-bottom:1, $line-height: 2);              }
  @mixin xs__subhead              { @include vr($font-size: 2      , $margin-top:2, $margin-bottom:0);                               }
  @mixin xs__deck                 { @include vr($font-size: 2      , $margin:2 0);                                                   }
- @mixin xs__copy                 { @include vr($font-size: 1      , $margin-top:1, $margin-bottom:1);                               }
+ @mixin xs__copy                 { @include vr($font-size: 1      , $margin-top:1, $margin-bottom:1, $line-height: 2);                               }
  @mixin xs__list-head            { @include vr($font-size: 2      , $margin-top: 1, $margin-bottom: .5);                            }
  @mixin xs__list-item            { @include vr($font-size: 2      , $margin-bottom:0.75);                                           }
  @mixin diagram__header-headline { @include vr($font-size: 4      , $margin-top:1, $margin-bottom:1);                               }
@@ -82,6 +82,8 @@
  @mixin header__title            { @include vr($font-size: 8      , $margin:2 0, $line-height:3.5);                                 }
  @mixin block__title             { @include vr($font-size: 7      , $margin:2 0, $line-height:3.5);                                 }
  @mixin item__title              { @include vr($font-size: 6      , $margin:2 0, $line-height:3.5);                                 }
+ @mixin md__title              { @include vr($font-size: 5      , $margin:2 0, $line-height:5);                   }
+ @mixin sm__title              { @include vr($font-size: 4      , $margin:2 0, $line-height:3.5);                                 }
  @mixin title-lg                 { @include vr($font-size: 10     , $margin:2 0);                                                   }
  @mixin title-sub                { @include vr($font-size: 6      , $margin:2 0, $line-height:3);                                   }
  @mixin title-sub-lg             { @include vr($font-size: 7      , $margin:2 0);                                                   }

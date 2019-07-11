@@ -926,18 +926,18 @@
 //   }
 // }
 
-.row__capabilities-overlay {
+.capabilities-overlay {
   justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.image__capabilities-overlay--icon {
-  svg {
-    fill: red;
-  }
-}
+// .image__capabilities-overlay--icon {
+//   svg {
+//     fill: red;
+//   }
+// }
 
 .overlay__hr--capabilities-webdev {
   &::after {
@@ -1924,7 +1924,11 @@ p.homepage-summary__claim--fancy {
       max-width: 83%;
       flex: 0 0 auto;
     }
+    @include mq('desktop'){
+      max-width: 50%;  
+      width: 50%;
   }
+}
 
   &--value {
     @include mq("tablet-wide") {

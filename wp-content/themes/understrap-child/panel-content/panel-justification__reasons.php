@@ -63,7 +63,7 @@
 							</div>
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-instruments">
-									<img src="/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon metrics style-svg" />
+									<img src="/wp-content/uploads/2019/01/skills_27.svg" alt="metrics" class="icon svg-cluster style-svg" />
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">performance <span class="br"><br></span>metrics</h5>

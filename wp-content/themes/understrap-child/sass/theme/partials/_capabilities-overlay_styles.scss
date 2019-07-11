@@ -1,0 +1,366 @@
+// ==========================================================================
+// capabilities overlay
+// ==========================================================================
+
+
+
+.a-la-carte .overlay {
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  transition: all 0.5s;
+  color: $off-white;
+  height: 100vh;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+
+
+  hr {
+    width: 100%;
+  }
+  @include mq('desktop'){
+    align-items: flex-end;
+  }
+}
+
+
+.a-la-carte {
+
+  .overlay__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    @include vr($padding: 1);
+
+    @include mq("tablet") {
+      padding: 0;
+      // align-items: inherit;
+    }
+    @include mq('desktop'){
+      justify-content: flex-start;
+      // align-content: center;
+      max-width: 90%;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      @include vr($margin-top: 4);
+      padding: 4%;
+      // width: 83%;
+      // max-width: 83%;
+      width: 100%;
+      max-width: 100%;
+
+      @include mq("tablet") {
+        // max-width: 61%;
+        // width: 61%;
+        max-width: 83%;
+        width: 83%;
+        padding: 8%;
+        // width: 100%;
+        // max-width: 100%;
+      }
+
+      @include mq("desktop") {
+        max-width: 83%;
+        width: 83%;
+        padding-left: 0;
+        padding: 8% 8% 2% 0%;
+      }
+
+      @include mq("desktop-hd") {
+        max-width: 64%;
+        width: 64%;
+      }
+
+
+      .headline {
+        @include headline__sm();
+        color: $secondary;
+
+      }
+
+      .copy {
+        @include copy__sm();
+        @include mq('tablet'){
+        @include vr($line-height: 3);
+      }
+      @include mq('desktop'){
+        max-width: 50%;
+      }
+    }
+    }
+
+    
+  
+
+
+  .icon__container {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 25%;
+  
+    @include mq("tablet") {
+  
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 12em;
+      max-width: 12em;
+      min-height: 1em;
+      // height: 40em;
+    }
+  }
+    .overlay__head {
+      display: flex;
+      max-width: 75%;
+      flex: 1 1 75%;
+  
+  
+      // @include mq("tablet") {
+      //   text-align: left;
+  
+      //   display: flex;
+      //   max-width: 81%;
+      //   width: 81%;
+  
+      //   flex: 0 0 5.5em;
+      //   //     padding-left: 3%;
+      //   min-height: 5.5em;
+      //   position: relative;
+      // }
+  
+      .headline {
+        @include headline__xs();
+      }
+    }
+      .list {
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 1.5rem;
+        flex: 1 0 93px;
+        list-style: none;
+        max-width: 95%;
+        /* margin-left: auto; */
+        display: flex;
+        flex-wrap: wrap;
+justify-content: flex-start;
+
+        // @include mq("tablet") {
+        //   text-align: left;
+        //   justify-content: flex-start;
+  
+        //   // flex: 0 0 20em;
+        //   flex: 0 0 0;
+        //   padding-left: 3%;
+        //   display: flex;
+        //   min-height: 7em;
+        //   max-width: 80%;
+        //   width: 80%;
+        //   position: relative;
+
+
+          
+        // }
+  
+      }
+  
+      .list-item {
+        @include list-item();
+        display: flex;
+        flex: .05 auto;
+        flex-wrap: wrap;
+        max-width: 70%;
+      }
+      .list-item__spacer{
+        @include list-item();
+        padding: 0 .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 10px;
+        text-align: center;
+        max-width: 10px;
+      }
+
+    
+  }
+  }
+
+
+.a-la-carte .overlay__flex-item {
+  @include vr($margin: 2 0 2 0);
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 0 0 auto;
+  @include vr($padding: 2 1 0 1);
+
+  @include mq("phone, $type:max") {
+    flex: 0 0 95%;
+  }
+
+  @include mq("phone-wide") {
+    flex: 0 0 83%;
+    width: 83%;
+    max-width: 83%;
+  }
+
+  @include mq("tablet") {
+    @include vr($margin-top: 3, $margin-bottom: 3);
+    width: 83%;
+    max-width: 83%;
+    flex: 0 0 auto;
+    min-height: 40em;
+    height: 40em;
+
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 8%;
+
+  }
+
+  @include mq("desktop") {
+    max-width: 38%;
+    width: 26%;
+    margin-right: 6%;
+    height: unset;
+    min-height: unset;
+    padding: 0;
+    margin-bottom: 3rem;
+    align-content: flex-start;
+  }
+
+  @include mq("desktop-hd") {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+
+
+
+
+
+.overlay--webdev {
+
+  .headline{
+  @include headline__xs();
+  color: $secondary;
+  }
+  hr {
+    border: 0;
+    flex: 0 0 auto;
+    display: flex;
+    min-height: 0;
+    text-transform: uppercase;
+    margin: 0;
+    height: 3rem;
+  @include mq('desktop'){
+    height: 6rem;
+  }
+  }
+  hr:after{
+    height: 1px;
+    background: #333;
+    width: 90%;
+    margin: 0 auto;
+  }
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+@include mq('tablet-wide'){
+  flex-wrap: wrap;
+  max-width: 90%;
+align-items: flex-start;
+}
+}
+}
+
+
+.overlay__flex-item.overlay__flex-item--webdev {
+  flex-direction: row;
+  min-height: 1px;
+  height: unset;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 90%;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 4% 8%;
+
+  @include mq("desktop") {
+    max-width: 50%;
+    width: 50%;
+    padding: 4% 8% 0 8%;
+  }
+
+  @include mq("desktop-hd") {
+    max-width: 50.1%;
+    width: 50.1%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+.svg__skills {
+  @include vr($height: 5, $width: 5);
+  max-width: 10em;
+
+  @include mq("tablet") {
+    display: flex;
+    // width: 27em;
+    // max-width: 27em;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.webdev-skills {
+  @include make-col-ready();
+  @include make-col(4);
+  @include vr($margin-bottom: 2);
+  fill: $gray-200;
+  position: relative;
+  display: flex;
+  min-height: 0;
+  @include mq('desktop'){
+    flex: 0 0 31%;
+  }
+}
+
+.overlay--marketing-communications{
+
+  @include mq('desktop'){
+    .header{
+      max-height: 66em;
+    }
+    .copy{
+      column-count: 2;
+      max-width: 64%;
+      padding-right: 6rem;
+  }
+}
+}

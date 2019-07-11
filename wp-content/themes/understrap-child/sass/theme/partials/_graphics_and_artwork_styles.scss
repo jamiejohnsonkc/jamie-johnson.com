@@ -374,13 +374,17 @@ display: block;
 }
 
 
-.capabilities__menu_icon, .capabilities__menu_icon .cls-2, .capabilities__menu_icon .cls-1{
+.icon__svg, .icon__svg .cls-2, .icon__svg .cls-1{
     // .style-svg, .cls-1, .cls-3, .cls-4 {
     //     max-width: $ms-10;
         fill: $black;
-          @include mq('tablet') {
-          fill: $gray-500;
-          }
+//           @include mq('tablet') {
+// //           fill: $gray-500;
+//           }
+    }
+
+    #overlays_2_{
+        fill: $primary;
     }
 
 
@@ -424,34 +428,10 @@ stroke: none;
 #accessible{
     fill: #fff;
 }
-// .intro__icon--rocket, .intro__icon--conversation{
-//         .cls-1{
-//             fill: $black;
-//         }
-//     }
-
-// .intro__icon--fish{
-//     .st0{
-//         fill: $black;
-//     }
-// }
 
 
-// .strengths__icon{
-//      .cls-1, .cls-3{
-//         fill: $primary;
-//     }
-// }
 
-
-// .strengths__icon #Speech_Bubble{
-//      .cls-1, .cls-3{
-//         fill: $gray-800;
-//     }
-// }
-
-
-.image__svg-icon--skills {
+.svg__skills {
       // fill: $capabilities-overlay-icon-fill-color;
       fill: $primary;
     .cls-1, .cls-2 {

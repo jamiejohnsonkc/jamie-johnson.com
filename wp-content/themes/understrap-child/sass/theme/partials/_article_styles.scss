@@ -1454,69 +1454,17 @@ padding-left: 2em;
 
 
 
-.my-capabilities__main-page {
-// background: $primary;
-}
-
-.my-capabilities__panel-head{
-text-align: center;
-}
-
-h2.capabilities__menu_headline{
-  
-  // // @include headline-sm();
-font-weight: 400;
-}
-
-.capabilities__menu_subhead{
-  @include body-text-lg();
-  @include mq('tablet-wide'){
-  // @include vr($width: 40);
-  margin-left: auto;
-  margin-right: auto;
-}
-}
-
-.capabilities__menu_text{
- @include display-text();
-  // @include vr($width: 29);
-}
-
-
-
-.capabilities__menu_item {
-
-}
-
-
-.capabilities__menu_copy{
-      @include body-text-md();
-      font-weight: 200;
-      @include vr($line-height: 1.75, $margin-bottom: 0.25);
-    }
-
-
-
-// .capabilities__menu-content_header{
-//   @extend %subhead-sm;
-// }
-
-
-// .capabilities__menu_item > div > p {
-//   @include display-text-sm();;
-// }
-
 
 // ==========================================================================
 // capabilities overlay
 // ==========================================================================
 
-.capabilities__overlay {
-  background: rgba(0, 0, 0, 0.92);
-  opacity: 0;
-  transition: all 0.5s;
-  color: $off-white;
-}
+// .overlay {
+//   background: rgba(0, 0, 0, 0.92);
+//   opacity: 0;
+//   transition: all 0.5s;
+//   color: $off-white;
+// }
 //   .expt-body-text, .expt-vert {
 //     color: $dark-sea-green;
 //   }
@@ -1536,7 +1484,7 @@ font-weight: 400;
 //   }
 // }
 
-// .overlay__container > .overlay-intro {
+// .overlay__container > .header {
 //   @include mq("tablet") {
 //     p {
 //       @include vr($font-size: 2, $line-height: 3);
@@ -1544,11 +1492,11 @@ font-weight: 400;
 //   }
 // }
 
-// .overlay__content--head h5 {
+// .overlay__flex-item-head h5 {
 //  @include display-text();
 // }
 
-// .overlay__content {
+// .overlay__flex-item {
 //   /*    h3{
 //        @include vr($font-size: 1);
 //    } */
@@ -1570,7 +1518,7 @@ font-weight: 400;
 //   }
 // }
 
-// .overlay-intro p {
+// .header p {
 //   @include display-text-sm();;
 
 //   font-weight: 200;
@@ -1578,18 +1526,20 @@ font-weight: 400;
 
 
 
-.capabilities__overlay--webdev {
- .headline, hr {
-    border: 0;
+// .overlay--webdev {
+//  .headline, hr {
+//     border: 0;
 
-    /*     max-width: 100%;
-    width: 100%; */
-    flex: 0 0 auto;
-    display: flex;
-    min-height: 0;
-    text-transform: uppercase;
-  }
-}
+//     /*     max-width: 100%;
+//     width: 100%; */
+//     // margin-bottom: 3rem;
+//     // flex: 1;
+//     flex: 0 0 auto;
+//     display: flex;
+//     min-height: 0;
+//     text-transform: uppercase;
+//   }
+// }
 
 
 
@@ -2104,11 +2054,11 @@ height:auto;
 @include vr($margin-top: 4, $margin-bottom: 4);
 }
 
-.overlay__content{
+.overlay__flex-item{
   &--capabilities{
   background: rgba(000,000,000, .2);
 }
 }
-.overlay-intro{
-   background: rgba(000,000,000, .2);
+.header{
+//    background: rgba(000,000,000, .2);
 }

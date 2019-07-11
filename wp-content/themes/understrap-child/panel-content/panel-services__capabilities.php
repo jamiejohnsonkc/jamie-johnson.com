@@ -24,43 +24,43 @@ if (!defined('ABSPATH')) {
 						<p class="copy__header">When you stop thinking about what you could do and focus on what you should do, it changes your whole perspective.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_01.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline--capabilites-overlay">Strategic Design</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">Problem solving 101. A combination of creative thinking and strategic analysis applied to business challenges and opportunities.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_02.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_02.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Performance Optimization</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">A comphrensive examination of your existing marketing appartatus to fine tune performance.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_03.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_03.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Superior Customer Value</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">The currency of modern marketing. Today's customers don't want sensationalism, they want substance. Its a whole new world.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_04.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_04.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Modernization</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">The digital age rewrote the marketing playbook. What was out is now in. Those who led now follow. And ignore disgruntled customers at your own risk.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_05.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_05.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Output to Outcomes</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">Emerging paradigms and technologies are transforming the marketing function from an overhead expense to a strategic asset for business leaders.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities overlay__content--marketing-strategy">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_06.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_06.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Customer Centricity</h5>
 						</div>
 						<p class="copy__block copy__block--capabilities-overlay">Customers have more influence than ever on a brand's success. And they have expectations that stem from front to back of the brand experience. Today everyone is customer facing.</p>
@@ -78,11 +78,11 @@ if (!defined('ABSPATH')) {
 						<p class="copy__header">It's a whole new paradigm that requires new methods and mindsets about what marketing is and, more importantly, raising your expectations about what it can achieve.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_07.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Function Leadership</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Operations</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Financials</li>
@@ -95,13 +95,13 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_08.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Concepts & Frameworks</h5>
 						</div>
 						<!-- 						<hr>
  -->
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Outcome-Driven Marketing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Competitive Advantage</li>
@@ -112,13 +112,13 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_11.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Strategy</h5>
 						</div>
 						<!-- 						<hr>
  -->
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Product/Service Management</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Value Design</li>
@@ -133,13 +133,13 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_12.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Intelligence & Insights</h5>
 						</div>
 						<!-- 						<hr>
  -->
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Performance Auditing</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Market Research</li>
@@ -154,13 +154,13 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_13.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Cross Pollination</h5>
 						</div>
 						<!-- 						<hr>
  -->
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Value Stewardship</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Customer Centricity</li>
@@ -184,11 +184,11 @@ if (!defined('ABSPATH')) {
 						<p class="copy__header">So today's communications are all about developing relationships, engaging customers on their terms and actually trying to help them. I know. It's crazy.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities row+col__container">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_14.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Strategy & Planning</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Branding & Positioning</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Targeting & Segmentation</li>
@@ -201,11 +201,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_15.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_15.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Digital Marketing</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Responsive Web Development</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">UX / UI Design</li>
@@ -218,11 +218,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_16.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_16.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Lead-to-Revenue</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Marketing/Sales Funnel</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Force Multiplication</li>
@@ -233,11 +233,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_18.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_18.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Content Development</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Social Media</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Blogging</li>
@@ -248,11 +248,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_17.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_17.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Outbound</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Press Relations & Publicity</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Sponsorships</li>
@@ -265,11 +265,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_19.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_19.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Graphic Design</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Brand Identity</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Collateral</li>
@@ -290,82 +290,82 @@ if (!defined('ABSPATH')) {
 						<h4 class="headline headline__header">Mobile + Web</h4>
 						<p class="copy__header">Today nearly every brand relationships begins online in one form or another. So if you get on their radar and if you spark their interest and if they visit your page....it better not suck. Nuff said.</p>
 					</div>
-					<div class="row row__capabilities-overlay">
+					<div class="row capabilities-overlay">
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">languages & frameworks </h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_47.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_44.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_15.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_16.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_19.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_41.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_14.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_47.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_44.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_15.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_16.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_17.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_46.svg" alt="expt-icon" />
 						</div>
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">design & prototyping</h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_22.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_74.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_03.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_04.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_12.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_13.svg" alt="expt-icon" />
 						</div>
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">systems & environments</h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_09.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_29.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_30.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_31.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_33.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_35.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_36.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_05.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_06.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_08.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_09.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_29.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_30.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_31.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_33.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_35.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_36.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_37.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_64.svg" alt="expt-icon" />
 						</div>
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">task processors</h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_49.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_50.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_51.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_52.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_53.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_68.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_69.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_10.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_55.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_48.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_49.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_50.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_51.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_52.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_53.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_68.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_69.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_66.svg" alt="expt-icon" />
 						</div>
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">design & production</h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_02.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_18.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_32.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_65.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_54.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_02.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_18.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_43.svg" alt="expt-icon" />
 						</div>
 						<div class="overlay__content overlay__content--capabilities  overlay__content--webdev-capabilities">
 							<h5 class="headline headline__block headline__block--capabilites headline__block--webdev">collaboration</h5>
 							<hr class="overlay__hr--capabilities-webdev">
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_25.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_26.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_27.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
-							<img class="style-svg image__svg-icon--webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_20.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_21.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_23.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_25.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_26.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_27.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_28.svg" alt="expt-icon" />
+							<img class="style-svg webdev-skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/apps_73.svg" alt="expt-icon" />
 						</div>
 						<!-- 						<button class="circle__button expt__close--button bottom" id="expt-close-4">&times;</button> -->
 					</div>
@@ -383,11 +383,11 @@ if (!defined('ABSPATH')) {
 						<p class="copy__header">I can help.</p>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_30.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_30.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Marketing I.T.</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Automation Platforms</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Relationship management</li>
@@ -400,11 +400,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_09.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2018/12/skills_09.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Workflow/Process</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Strategic planning</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Creative development</li>
@@ -417,11 +417,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_28.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_28.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Asset Management</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Budgets & Expenses</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Staffing & Resources</li>
@@ -438,11 +438,11 @@ if (!defined('ABSPATH')) {
 						</ul>
 					</div>
 					<div class="overlay__content overlay__content--capabilities">
-						<div class="image__container--skills-icon"><img class="style-svg image__svg-icon--skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_32.svg" alt="skill icon" /></div>
-						<div class="overlay__content--head">
+						<div class="icon__container"><img class="style-svg svg__skills image__capabilities-overlay--icon" src="/wp-content/uploads/2019/01/skills_32.svg" alt="skill icon" /></div>
+						<div class="overlay__content-head">
 							<h5 class="headline headline__block headline__block--capabilites-overlay">Performance Management</h5>
 						</div>
-						<ul class="list list--no-bullets list__inline list--capabilities-overlay">
+						<ul class="list list--no-bullets list__inline list__capabilities-overlay">
 							<li class="list-item__block list-item--flex-auto">Analytics & Reporting</li>
 							<li class="list-item__block list-item--flex-auto list-item__spacer list-item__spacer--primary-color">&#x000B7;</li>
 							<li class="list-item__block list-item--flex-auto">Conversion tracking</li>
@@ -458,51 +458,51 @@ if (!defined('ABSPATH')) {
 					</div>
 				</div>
 			</div>
-			<div class="my-capabilities__main-page">
-				<div class="my-capabilities__main-page_wrapper">
+			<div class="my-capabilities">
+				<div class="my-capabilities__wrapper">
 				</div>
-				<nav class="capabilities__main-page_menu">
+				<nav class="my-capabilities__menu">
 					<div class="split-container my-capabilities__panel-head">
 						<h2 class="headline headline__header headline">Services & Capabilities</h2>
 						<h3 class="subhead subhead__header subhead__header--capabilities">With more than two decades of marketing under my belt, there isn't much I can't do. And if I can't, I'll be happy to help you find someone right for you.</h3>
 						<!-- <p class="copy copy__header copy__header--capabilities">Aliqua consequat incididunt officia in ut. Nisi occaecat enim do eu. Qui reprehenderit eu consectetur aute. Et dolore amet eu laborum aliqua dolore esse. Nulla ea ea veniam elit aute reprehenderit.</p> -->
 						<p class="link__text">click below to see a list of my capabilities by disipline</p>
 					</div>
-					<div class="capabilities__menu_item" id="open-expt-overlay-4">
-						<img src="/wp-content/uploads/2019/01/skills_20.svg" class="capabilities__menu_icon capabilities__menu_icon--webdev style-svg" id="mobile-icon" alt="skills_icon" />
-						<div class="capabilities__menu_item--content">
+					<div class="menu__item" id="open-expt-overlay-4">
+						<img src="/wp-content/uploads/2019/01/skills_20.svg" class="icon__svg icon__svg--webdev style-svg" id="mobile-icon" alt="skills_icon" />
+						<div class="menu__item--content">
 							<h3 class="capabilities__menu-content_header">Mobile + Web</h3>
 							<p class="capabilities__menu_copy">Digital assets and content built from the ground up to advance business.</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>
 						</div>
 					</div>
-					<div class="capabilities__menu_item" id="open-expt-overlay-3">
-						<img src="/wp-content/uploads/2018/12/skills_25.svg" class="capabilities__menu_icon capabilities__menu_icon--communications style-svg" alt="skills_icon" />
-						<div class="capabilities__menu_item--content">
+					<div class="menu__item" id="open-expt-overlay-3">
+						<img src="/wp-content/uploads/2018/12/skills_25.svg" class="icon__svg icon__svg--communications style-svg" alt="skills_icon" />
+						<div class="menu__item--content">
 							<h3 class="capabilities__menu-content_header">Integrated Communications</h3>
 							<p class="capabilities__menu_copy">Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>
 						</div>
 					</div>
-					<div class="capabilities__menu_item" id="open-expt-overlay-2">
-						<img src="/wp-content/uploads/2018/12/skills_21.svg" class="capabilities__menu_icon capabilities__menu_icon--marketing style-svg" alt="skills_icon" />
-						<div class="capabilities__menu_item--content">
+					<div class="menu__item" id="open-expt-overlay-2">
+						<img src="/wp-content/uploads/2018/12/skills_21.svg" class="icon__svg icon__svg--marketing style-svg" alt="skills_icon" />
+						<div class="menu__item--content">
 							<h3 class="capabilities__menu-content_header">Strategic Marketing Management</h3>
 							<p class="capabilities__menu_copy">Where business plans transform into marketing strategy</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>
 						</div>
 					</div>
-					<div class="capabilities__menu_item" id="open-expt-overlay-5">
-						<img src="/wp-content/uploads/2019/01/skills_31.svg" class="capabilities__menu_icon capabilities__menu_icon--operations style-svg" id="gears-icon" alt="skills_icon" />
-						<div class="capabilities__menu_item--content">
+					<div class="menu__item" id="open-expt-overlay-5">
+						<img src="/wp-content/uploads/2019/01/skills_31.svg" class="icon__svg icon__svg--operations style-svg" id="gears-icon" alt="skills_icon" />
+						<div class="menu__item--content">
 							<h3 class="capabilities__menu-content_header">Marketing Operations</h3>
 							<p class="capabilities__menu_copy">Optimizing marketing as a function, organization and an activity</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>
 						</div>
 					</div>
-					<div class="capabilities__menu_item" id="open-expt-overlay-1">
-						<img src="/wp-content/uploads/2018/12/skills_22.svg" class="capabilities__menu_icon capabilities__menu_icon--leadership style-svg" alt="skills_icon" />
-						<div class="capabilities__menu_item--content">
+					<div class="menu__item" id="open-expt-overlay-1">
+						<img src="/wp-content/uploads/2018/12/skills_22.svg" class="icon__svg icon__svg--leadership style-svg" alt="skills_icon" />
+						<div class="menu__item--content">
 							<h3 class="capabilities__menu-content_header">Strategy & Implementation</h3>
 							<p class="capabilities__menu_copy">Modern marketing concepts, strategies and practices to achieve business outcomes</p>
 							<a class="link" id="capabilities__menu_link">Learn More</a>

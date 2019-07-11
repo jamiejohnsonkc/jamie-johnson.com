@@ -67,7 +67,7 @@
   @include mq('desktop') {
     max-width: 38%;
     transform: translateX(45%);
-    padding: 4% 8%;
+    padding: 2% 4%;
     height: 74%;
   }
 }
@@ -120,7 +120,7 @@ font-style: italic;
 }
 
 .marketing-splash__image-container {
-  background-color: rgba($color: #000000, $alpha: .8);
+  background-color: rgba($color: #000000, $alpha: .2);
   overflow: hidden;
   width: 100%;
 

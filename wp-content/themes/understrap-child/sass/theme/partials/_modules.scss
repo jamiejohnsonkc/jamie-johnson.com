@@ -649,6 +649,8 @@ button {
 .capabilites__link--jump                    { @include jump-button-basic(); margin: 5em auto; }
 .committment__link--jump                    { @include jump-button-basic(); margin: 0 auto; }
 .growth-article__link--jump                 { @include jump-button-basic(); margin: 0 auto; position: absolute; bottom: 6rem; flex: 0 0; }
+.communications__link--jump   { @include jump-button-basic(); margin: 5em auto; }
+.operations__link--jump  { @include jump-button-basic(); margin: 5em auto; }
 
 //* background page links
 .background-splash__link--jump              { @include jump-button-basic(); @include self-center(); }

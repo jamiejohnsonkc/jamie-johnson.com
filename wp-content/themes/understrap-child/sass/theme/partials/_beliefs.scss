@@ -33,11 +33,21 @@
   max-width: 100%;
   flex: 0 1 100%;
   @include vr($font-size: 1, $line-height: 2, $padding-right: .5);
+  @include mq('desktop'){
+max-width: 83%;
+@include copy__sm();
+  }
+
+
+
   }
 
   .diagram-item__container--23row {
   flex: 0 1 64%;
   max-width: 64%;
+  @include mq('desktop'){
+      min-height: 20em;
+  }
   }
 
 
@@ -128,10 +138,10 @@ img.style-svg.image-bell{
 
 #shape{
   path{
-    fill: $deep-gray;
+    fill: $gray-200();
 
   }
   circle{
-    fill: $deep-gray;
+    fill: $gray-200;
   }
 }

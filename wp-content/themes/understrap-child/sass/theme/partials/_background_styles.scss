@@ -329,7 +329,7 @@ max-width: 100%;
 }
 
 .copy.categories__copy-container{
-  @include vr($margin-top: 1, $margin-bottom: 2);
+  @include vr($margin-top: 1, $margin-bottom: 2, $line-height: 3);
   @include mq('tablet'){
     @include vr($margin-bottom: 5);
        }

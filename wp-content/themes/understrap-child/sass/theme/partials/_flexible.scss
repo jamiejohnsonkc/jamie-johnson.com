@@ -3,12 +3,19 @@
   background: $white;
   @include vr($margin: .5 0);
 
+
   @include mq('tablet') {
     @include vr($margin: 1, $padding: 1);
     @include light-shadow();
 
   }
-
+@include mq('desktop'){
+  height: 100em;
+display: flex;
+align-items: center;
+margin: 0;
+justify-content: center;
+}
   .flex-container {
     color: $black;
 
@@ -16,6 +23,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      max-width: 83%;
     }
 
     .flex-item__a {
@@ -32,6 +40,7 @@
         flex: 1 1 36%;
         max-width: 36%;
         width: unset;
+        height: 83em;
 
       }
 
@@ -102,8 +111,9 @@
 
         }
 @include mq('desktop'){
-        width: 151%;
+    width: 200%;
     bottom: -28%;
+    @include light-shadow();
 }
       }
     }
@@ -130,15 +140,33 @@
 
       @include mq('desktop') {
 
+
         
         display: flex;
         flex: 1 1 auto;
         max-width: 64%;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: row;
-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0;
       }
+
+.flex-item__b--inner-wrapper{
+@include mq('desktop'){
+  margin: 4%;
+  padding: 2% 0 4% 0;
+// @include vr($padding: 4%);
+border-top: 1px solid $gray-200;
+border-bottom: 1px solid $gray-200;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+}
+
+
 
       .header,
       .copy__container {
@@ -177,10 +205,11 @@ flex-wrap: wrap;
 
       .copy__container {
         @include mq('desktop') {
-          min-height: 10em;
+          min-height: 15em;
           flex: 0 1 auto;
           display: flex;
-          max-width: 50%;
+          max-width: 70%;
+
         }
 
         .copy {
@@ -192,7 +221,7 @@ flex-wrap: wrap;
           }
 
           @include mq('desktop') {
-            @include vr($line-height: 3);
+            @include vr($line-height: 2);
           }
 
         }
@@ -210,8 +239,8 @@ flex-wrap: wrap;
         flex: 1;
         flex-wrap: wrap;
         width: 100%;
-        max--width: 100%;
-        justify-content: center;
+        max-width: 100%;
+        justify-content: space-between;
         align-content: center;
       }
 
@@ -232,7 +261,7 @@ flex-wrap: wrap;
         @include mq('desktop') {
           margin-bottom: 0;
           max-width: 30%;
-          padding: 0 4%;
+          padding: 0 4% 0 0;
         }
 
         .headline {

@@ -211,8 +211,9 @@ if (!defined('ABSPATH')) {
       <div class="headline__header growth__grid-headline--overlay">Four Ways I Can Help You Grow</div>
       <div class="growth__content-item growth__content-item--summary">
         <div class="growth__content-item-wrapper">
-          <h1 class="pagination">four ways I can help you grow</h1>
+          <h1 class="pagination">i can help you grow</h1>
           <h2 class="headline">Strategic Marketing Management</h2>
+          <h3 class="subhead">planning &amp; consultation</h3>
           <p class="copy">Marketing management geared for the post-digital, customer-led business relationship.</p>
           <p class="copy">It encapsulates the four critical outcomes businesses must acheive to succeed:</p>
           <ol class="list">
@@ -230,7 +231,8 @@ if (!defined('ABSPATH')) {
           <img src="/wp-content/uploads/2019/06/hero-14.jpg" class="image--throttle" alt="...">
         </div>
         <div class="growth__image--overlay">
-          <h3 class="header">Maximize Competitive Advantage</h3>
+        <div class="growth-overlay__flex-item">  
+        <h3 class="header">Maximize Competitive Advantage</h3>
           <p class="copy">Win more sales by aligning your value proposition with customer expectations to deliver a superior competitive value:</p>
           <ul class="list">
 
@@ -241,6 +243,7 @@ if (!defined('ABSPATH')) {
             <!-- <li></li> -->
           </ul>
           <a href="/contact" class="link__text">start growing your business</a>
+        </div>
         </div>
         <div class="growth__content-item--container growth__content--light">
           <div class="growth__headline--prehead">I can help you</div>
@@ -257,7 +260,21 @@ if (!defined('ABSPATH')) {
         <div class="image__container growth__image-container">
           <img src="/wp-content/uploads/2019/06/hero-8.jpg" class="image--smoke-growth" alt="...">
         </div>
-        <div class="growth__image--overlay"></div>
+        <div class="growth__image--overlay">
+                <div class="growth-overlay__flex-item">  
+        <h3 class="header">Engage Customers</h3>
+          <p class="copy">Sensationalism and spectacle are giving way to substance and value.<br/>Today it's all about developing relationships and engaging customers on their terms. </p>
+          <ul class="list">
+
+            <li>Inbound Programs</li>
+            <li>Value-driven Content</li>
+            <li>Owned/Earned/Social/Paid Media</li>
+            <li>Earning and rewarding trust</li>
+            <!-- <li></li> -->
+          </ul>
+          <a href="/contact" class="link__text">start engaging customers</a>
+        </div>
+        </div>
         <div class="growth__content-item--container growth__content--light">
 
           <div class="growth__headline--prehead">I can help you</div>
@@ -274,7 +291,21 @@ if (!defined('ABSPATH')) {
         <div class="image__container growth__image-container">
           <img src="/wp-content/uploads/2019/06/hero-18.jpg" class="image--signature-growth" alt="...">
         </div>
-        <div class="growth__image--overlay"></div>
+        <div class="growth__image--overlay">
+                <div class="growth-overlay__flex-item">  
+        <h3 class="header">Demonstrate Superior Value</h3>
+          <p class="copy">You need customers much more than they need you. And Modern buyers can smell B.S. a mile away. Stop selling. Be helpful. Win the business.</p>
+          <ul class="list">
+
+            <li>Lead-to-revenue Management</li>
+            <li>Force multiplication</li>
+            <li>Prescriptive engagement</li>
+            <li>Substantive messaging</li>
+            <!-- <li></li> -->
+          </ul>
+          <a href="/contact" class="link__text">start generating rapport</a>
+        </div>
+        </div>
         <div class="growth__content-item--container growth__content--light">
           <div class="growth__headline--prehead">I can help you</div>
           <div class="growth__grid-item-header">Get <br class="br__growth-grid-item-header">Sold</div>
@@ -289,7 +320,21 @@ if (!defined('ABSPATH')) {
         <div class="image__container growth__image-container image__container--conductor">
           <img src="/wp-content/uploads/2019/05/conductor-hued.png" class="image--conductor-growth" alt="...">
         </div>
-        <div class="growth__image--overlay"></div>
+        <div class="growth__image--overlay">
+                <div class="growth-overlay__flex-item">  
+        <h3 class="header">Optimize Value Delivery</h3>
+          <p class="copy">Today what you do is way more important than anything say. Empower and educate your organization to put the customer first.</p>
+          <ul class="list">
+
+            <li>Reactive marketing</li>
+            <li>Personalization</li>
+            <li>Value stewardship</li>
+            <li>Experience design</li>
+            <!-- <li></li> -->
+          </ul>
+          <a href="/contact" class="link__text">start delivering value to customers</a>
+        </div>
+        </div>
         <div class="growth__content-item--container growth__content--light">
           <div class="growth__headline--prehead">I can help you</div>
           <div class="growth__grid-item-header">Get <br class="br__growth-grid-item-header">More</div>
@@ -305,7 +350,7 @@ if (!defined('ABSPATH')) {
 </article>
 
 <article class="article how-i-communicate" id="communications">
-  <h1 class="pagination">how i can help you engage</h1>
+  <h1 class="pagination">i can help you engage</h1>
   <div class="flex__wrapper">
     <div class="flex-container">
       <div class="flex-item__a">
@@ -347,7 +392,7 @@ if (!defined('ABSPATH')) {
         </div>
       </div>
     </div>
-    <a href="#operations" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+    <a href="#operations" class="button ui-button__jump communications__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
   </div>
 
@@ -356,7 +401,7 @@ if (!defined('ABSPATH')) {
 
 
 <article class="article how-i-operate" id="operations">
-  <h1 class="pagination">how i can help you optimize</h1>
+  <h1 class="pagination">i can help you optimize</h1>
   <div class="flex__wrapper">
     <div class="flex-container">
       <div class="flex-item__a">
@@ -379,7 +424,6 @@ if (!defined('ABSPATH')) {
           <h2 class="headline">MARKETING OPERATIONS</h2>
           <h3 class="subhead">management &amp; control</h3>
           <p class="copy">The marketing function is an increasingly complicating exercise. Engaging it effectively requires weaving together the right technology, people, process, practices. Now. Make it scale with your business.</p>
-
         </div>
       </div>
       <div class="flex-item__d">
@@ -395,7 +439,7 @@ if (!defined('ABSPATH')) {
         </div>
       </div>
     </div>
-    <a href="#a-la-carte" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+    <a href="#a-la-carte" class="button ui-button__jump operations__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
   </div>
 

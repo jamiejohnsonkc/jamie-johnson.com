@@ -1,0 +1,338 @@
+.a-la-carte article{
+  @include mq('tablet-wide'){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq('desktop'){
+    height: 115rem;
+    background: $off-white;
+max-width: 94%;
+  }
+}
+.a-la-carte {
+  border: .5px solid $white;
+  background: $off-white;
+  color: $black;
+  @include vr($padding: 1);
+
+  @include mq('tablet-wide') {
+    @include vr($padding: 3 0 3 0);
+    height: 110em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq('desktop') {
+    min-height: 135em;
+    @include black-gradient();
+  }
+
+
+  .flex-container{
+    @include mq('tablet'){
+      justify-content: center;
+      align-items: center;
+      max-width: 83%;
+    }
+  }
+  .flex-item__a {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq('tablet') {
+      max-width: 83%;
+      margin: 0 auto;
+      @include vr($margin-top: 3);
+    }
+    @include mq('desktop'){
+      max-width: 100%;
+    }
+
+
+    .headline {
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: -.15rem;
+      text-transform: uppercase;
+      flex: 1 1 auto;
+      max-width: 100%;
+      padding-right: .5rem;
+
+      @include mq('desktop') {
+        width: unset;
+        max-width: 25%;
+        flex: 1 1 auto;
+      }
+    }
+
+    .copy {
+      @include copy__item();
+
+      @include mq('tablet') {
+        @include deck__item();
+      }
+
+      @include mq('desktop') {
+        max-width: 42%;
+        @include vr($margin-top: 1, $margin-bottom: 3);
+      }
+    }
+
+    .flex-item__hr {
+      flex: 1;
+      margin: 0;
+      display: flex;
+      align-items: center;
+
+    }
+
+    hr.a-la-carte-hr {
+      margin: 0;
+      flex: 1;
+    }
+
+    .flex-item__hr.flex-item__hr--1 {
+      @include mq('desktop') {
+        // display: none;
+        flex: 3 0 70%;
+      }
+    }
+
+    .flex-item__hr.flex-item__hr--2 {
+      @include mq('desktop') {
+        display: none;
+      }
+    }
+  }
+}
+  //* Capbilities Menu
+
+
+  .my-capabilities__menu {
+    position: relative;
+    overflow: hidden;
+@include mq('tablet'){
+  height: 60em;
+  max-width: 90%;
+}
+    @include mq('desktop') {
+      height: 45em;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+
+
+  .my-capabilities__wrapper {
+    position: relative;
+    width: 100%;
+
+    @include vr($padding: 1 4 0 4);
+
+    @include mq('tablet-wide') {
+      @include vr($padding: 2 3 0 3);
+    }
+
+    @include mq('desktop') {
+      display: none;
+    }
+  }
+
+
+  .my-capabilities__menu {
+    
+  }
+
+
+  // @include mq("tablet-wide") {
+  //   .container.my-capabilities {
+  //     width: 100%;
+  //     max-width: 100%;
+  //   }
+  // }
+
+
+
+  .my-capabilities__menu {
+    @include vr($margin-top: 2);
+    max-width: 100%;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // background: $off-white;
+    // align-items: stretch;
+    // border-radius: 2em 2em 0 0;
+    //     margin-top: -20em;
+    margin-left: auto;
+    margin-right: auto;
+    // border: thin solid $gray-300;
+    @include dark-shadow();
+    display: flex;
+    align-items: center;
+
+    @include mq("tablet-wide") {
+      @include vr($width: 100%, $padding: 0, $margin-top: 2);
+
+    }
+
+    @include mq("desktop") {
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      margin: 0;
+    }
+
+    @include mq("desktop-hd") {}
+
+    @include mq("desktop-uhd") {}
+
+
+    .menu__item {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      width: 100%;
+      max-width: 50%;
+      justify-content: center;
+      align-items: stretch;
+      background: $primary;
+      border: 1px solid $off-white;
+      margin-top: 0;
+      margin-bottom: 0;
+      align-items: center;
+
+      // @include vr($margin: 3 0);
+      @include mq("tablet") {
+        flex-direction: row;
+        justify-content: center;
+        border: $white solid .25em;
+        // height: 42em;
+      }
+
+
+      @include mq("tablet-wide") {
+        // @include make-col-ready;
+        // @include make-col(6);
+        max-width: 20%;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex-direction: column;
+        height: 30em;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      @include mq('desktop') {
+        height: 46em;
+
+
+      }
+    }
+    .headline {
+      @include vr($font-size: 1, $line-height: 1.25);
+      margin-top: -1em;
+      margin-bottom: 0;
+      max-width: 75%;
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      font-weight: 400;
+      text-align: center;
+      min-height: 2.5em;
+      @include vr($margin-bottom: 1);
+
+      @include mq('tablet') {
+        @include vr($font-size: 2, $line-height: 2);
+        max-width: 56%;
+      }
+
+      @include mq('desktop') {
+        max-width: 83%;
+        width: 83%;
+        @include vr($margin: .5 0 3 0);
+      }
+    }
+
+    #capabilities__menu_link {
+      font-style: normal;
+      font-variant-caps: all-small-caps;
+      font-weight: 400;
+      letter-spacing: .15rem;
+      display: flex;
+      flex: 0 1 auto;
+      @include vr($margin: .5 auto);
+      position: relative;
+      bottom: unset;
+      min-height: 1em;
+
+      @include mq('tablet') {
+        @include vr($font-size: 1);
+        @include vr($margin-top: 1);
+      }
+
+      @include mq('desktop') {
+        margin: 0;
+      }
+    }
+
+    .copy {
+      display: none;
+      @include body-text-md();
+      font-weight: 200;
+      @include vr($line-height: 1.75, $margin-bottom: 0.25);
+    }
+
+
+    // .link {
+    //   @include vr($margin-bottom: 0);
+    // }
+
+    #mobile-icon {
+      @include vr($padding: 0.5);
+    }
+
+    #gears-icon {
+      @include vr($padding: 1);
+    }
+
+    .icon__svg {
+      // @include make-col-ready;
+      // @include make-col(3);
+      flex: 0 0 auto;
+      // height: 16em;
+      min-height: 12em;
+      height: 12em;
+      width: 16em;
+      max-width: 20em;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      display: flex;
+      // margin-top: 2em;
+@include mq('tablet'){
+  margin-top: 0;
+}
+      @include mq("tablet-wide") {
+        margin-top: 0em;
+      }
+
+      @include mq('desktop') {
+        margin-top: unset;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .icon__svg,
+  .icon__svg .cls-2,
+  .icon__svg .cls-1 {
+    // width: 50%;
+  }
+
+

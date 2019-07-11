@@ -18,6 +18,7 @@ if (!defined('ABSPATH')) {
 		<div class="flex-container">
 			
 			<div class="flex-item__b">
+				<div class="flex-item__b--inner-wrapper">
 			<div class="flex-item__b-1">	
 			<div class="header">
 					<h2 class="headline">small, flexible & agile by design</h2>
@@ -35,11 +36,10 @@ if (!defined('ABSPATH')) {
 			<div class="flex-item__b-2-1">
 					<div class="flex-item__content--wrapper">
 <div class="headline">Outcomes</div>
-<p class="blurb">Sometimes you need an objective opinion, someone to carry the water or just another set of hands. I can do all three.</p>
-<p class="copy"><span>Marketing</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
-<p class="copy"><span>Mar</span> developing plans to achieve predefined goals and objectives.
-</p>
-<p class="copy"><span>Consulation</span> defining paths to advance your business.</p>
+<p class="blurb">I'm in the outcome business. So tell me what you want to achieve and I'll help find the right marketing solution for your business.</p>
+<p class="copy"><span>Strategic</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
+<p class="copy"><span>Tactical</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
+<p class="copy"><span>Operational</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
 					</div>
 				</div>
 				<div class="flex-item__b-2-2">
@@ -54,15 +54,15 @@ if (!defined('ABSPATH')) {
 				</div>
 				<div class="flex-item__b-2-3">
 					<div class="flex-item__content--wrapper">
-					<div class="headline">Role</div>
-<p class="blurb">Sometimes you need an objective opinion, someone to carry the water or just another set of hands. I can do all three.</p>
-<p class="copy"><span>Execution</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
-<p class="copy"><span>Implementation</span> developing plans to achieve predefined goals and objectives.
-</p>
-<p class="copy"><span>Consulation</span> defining paths to advance your business.</p>
+					<div class="headline">Occupation</div>
+<p class="blurb">Sometimes you want ideas and sometimes you just need it done. You're the client. I'm happy to assist.</p>
+<p class="copy"><span>Directed</span> You tell me what to do. I do it. No muss. No fuss.</p>
+<p class="copy"><span>Collaborative</span> Share your ideas. I'll share mine. You decide.</p>
+<p class="copy"><span>Prescriptive</span> I'll bring you recommendations.</p>
 					</div>
 				</div>
 			</div>
+</div>
 </div>
 			<div class="flex-item__a">
 				<h1 class="title">designed for clients by a client</h1>

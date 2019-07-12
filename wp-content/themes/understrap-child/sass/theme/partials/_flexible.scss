@@ -258,6 +258,10 @@ align-items: center;
           @include vr($padding: 0 2%);
 
         }
+         @include mq('tablet-wide') {
+             max-width: 33%;
+         }
+
         @include mq('desktop') {
           margin-bottom: 0;
           max-width: 30%;

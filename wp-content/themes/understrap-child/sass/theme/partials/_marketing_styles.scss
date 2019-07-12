@@ -37,9 +37,11 @@
     width: 64%;
     height: unset;
     padding: 12% 8%;
-    background: rgba($color: #111111, $alpha: .8);
+//     background: rgba($color: #111111, $alpha: .8);
+background: none;
     align-items: flex-start;
     transform: translateY(-10%);
+//     color: $black;
 
 
     >.pagination {
@@ -66,7 +68,7 @@
 
   @include mq('desktop') {
     max-width: 38%;
-    transform: translateX(45%);
+    transform: translateX(-50%);
     padding: 2% 4%;
     height: 74%;
   }
@@ -96,7 +98,7 @@
 
 .marketing-splash__container {
   >.copy__container{
-    color: $white;
+    color: $black;
     max-width: 100%;
     width: 100%;
     @include mq('tablet'){
@@ -120,9 +122,10 @@ font-style: italic;
 }
 
 .marketing-splash__image-container {
-  background-color: rgba($color: #000000, $alpha: .2);
+//   background-color: rgba($color: #000000, $alpha: .2);
   overflow: hidden;
   width: 100%;
+      filter: brightness(1.25);
 
   img {
     mix-blend-mode: overlay;
@@ -149,15 +152,17 @@ font-style: italic;
     }
 
     @include mq('tablet-wide') {
-      top: -30%;
-      left: -100%;
-      width: 150%;
+     top: -38%;
+    width: 143%;
+    transform: scaleX(-1);
+    left: -32%;
     }
 
     @include mq('desktop') {
-      top: -30%;
-      left: -100%;
-      width: 150%;
+     top: -38%;
+    width: 143%;
+    transform: scaleX(-1);
+    left: -32%;
       // transform: translate(21%, 37%);
     }
   }

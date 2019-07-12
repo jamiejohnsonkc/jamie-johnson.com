@@ -187,6 +187,9 @@ max-width: 100%;
   flex: 0 0 66.65%;
   padding: 4%;
 }
+@include mq('desktop'){
+margin-bottom: 0;
+}    
 }
 
 .flexbox-grid__last-cell{

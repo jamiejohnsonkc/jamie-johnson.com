@@ -34,7 +34,7 @@ $container = get_theme_mod('understrap_container_type');
 					</div>
 					<div class="footer__contact--tag">Kansas City (Lenexa, KS)</div>
 					<a class="footer__contact--phone footer__text-link" href="tel:913-207-6966">913-207-6966</a>
-					<a href="mailto:jamie@jamie-johnson.com" class="button footer__contact--button footer__text-link">Drop Me A Note</a>
+					<a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top" class="button footer__contact--button footer__text-link">Drop Me A Note</a>
 				</div>
 			</div>
 

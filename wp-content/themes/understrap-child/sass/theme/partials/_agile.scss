@@ -7,14 +7,14 @@
   @include mq('desktop'){
     max-width: 50%;
     width: 50%;
-    padding: 16% 4%;
+    padding: 0% 4%;
   }
 .pagination{
   align-self: flex-start;
   width: 100%;
   @include mq('tablet'){
     justify-content: center;
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
   }
   @include mq('desktop'){
 //     margin-left: 24%;
@@ -29,6 +29,7 @@
   @include mq('tablet-wide'){
     max-width: 73%;
     text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
 .flex-container{
@@ -55,7 +56,7 @@ background: $dkgray-bg-trans;
 }
 
 .flex-grid__a{
-@include vr($width: 100%, $height: 40, $padding:2 .5);
+@include vr($width: 100%, $height: 40, $padding:0 .5);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -66,7 +67,8 @@ background: $dkgray-bg-trans;
   width: 71%;
 }
   @include mq('desktop'){
-  @include vr($width: 40, $height: 25);
+  @include vr($width: 60, $height: 25);
+  min-height: 33em;
 }
 
 
@@ -78,7 +80,7 @@ background: $dkgray-bg-trans;
     // background: #333;
     // border: thin solid #555;
     flex: 1 1 45%;
-    @include vr($height: 3);
+    @include vr($height: 2);
 
   }
   .flex-item__title{
@@ -121,13 +123,13 @@ flex: 0 1 100%;
     // background: #333;
     // border-bottom: .05rem solid #444;
     font-variant-caps: all-small-caps;
-    @include vr($height: 3);
+    @include vr($height: 2);
   }
   .flex-grid__content{
 // font-size: 1.5rem;
 @include vr($font-size: 1);
 @include mq('tablet-wide'){
-  @include vr($font-size:2);
+  @include vr($font-size:1);
 }
 
 }
@@ -135,29 +137,20 @@ flex: 0 1 100%;
   flex: 0 1 5%;
   max-width: 10%;
   height: auto;
-  .grid-arrow{
-   
-    // height:4em;
-    width: 1.5rem;
-    transform: rotate(90deg);
-    @include mq('tablet'){
-      width: 3.5rem;
-  }
-  .st0{
-    // fill: #444;
-    fill: $secondary;
-  }
-
-
-}
+  text-align: center;
+@include vr($font-size:3);
+color: $secondary;
 }
 }
 }
 
 .flex-grid__a--hr{
   width: 83%;
+  height: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
 &::after{
-  height: .05rem;
+  height: .25rem;
   background: #222;
 }
 }

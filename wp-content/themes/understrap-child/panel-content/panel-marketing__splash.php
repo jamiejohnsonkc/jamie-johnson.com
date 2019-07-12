@@ -12,8 +12,8 @@ if (!defined('ABSPATH')) {
 <section>
 	<article class="article__wrapper--fluid article--marketing-splash">
 		<div class="marketing-splash__container">
-			<h1 class="pagination pagination--white marketing-splash__pagination">my purpose</h1>
-			<h2 class="title title--white">i make marketing better</h2>
+			<h1 class="pagination marketing-splash__pagination">my purpose</h1>
+			<h2 class="title">i make marketing better</h2>
 			<div class="copy__container">
 				<p>Today's strategic challenges mandate new approaches.</p> 
 <p>Customers don't want to be bothered, they don't want to be sold. And they aren't moved by empty or self-serving claims.</p>

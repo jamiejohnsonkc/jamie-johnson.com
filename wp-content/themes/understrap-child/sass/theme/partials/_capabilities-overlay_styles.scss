@@ -80,8 +80,8 @@
       }
 
       @include mq("desktop-hd") {
-        max-width: 64%;
-        width: 64%;
+        max-width: 100%;
+        width: 100%;
       }
 
 
@@ -98,6 +98,10 @@
       }
       @include mq('desktop'){
         max-width: 50%;
+      }
+        @include mq('desktop-hd'){
+        max-width: 100%;
+        padding-right: 35%;
       }
     }
     }
@@ -250,8 +254,14 @@ justify-content: flex-start;
   }
 
   @include mq("desktop-hd") {
-    max-width: 50%;
-    width: 50%;
+    max-width: 38%;
+    width: 26%;
+    margin-right: 6%;
+    height: unset;
+    min-height: unset;
+    padding: 0;
+    margin-bottom: 3rem;
+    align-content: flex-start;
   }
 }
 
@@ -311,16 +321,15 @@ align-items: flex-start;
   padding: 4% 8%;
 
   @include mq("desktop") {
-    max-width: 50%;
+    max-width: 45%;
     width: 50%;
     padding: 4% 8% 0 8%;
   }
 
   @include mq("desktop-hd") {
-    max-width: 50.1%;
-    width: 50.1%;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 43%;
+    width: 45%;
+    padding: 4% 8% 0 8%;
   }
 }
 

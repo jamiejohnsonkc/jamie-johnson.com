@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {
 
 			<div class="flex-item__b-2-1">
 					<div class="flex-item__content--wrapper">
-<div class="headline">Outcomes</div>
+<div class="headline">Outcome</div>
 <p class="blurb">I'm in the outcome business. So tell me what you want to achieve and I'll help find the right marketing solution for your business.</p>
 <p class="copy"><span>Strategic</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>
 <p class="copy"><span>Tactical</span> officia laborum ea aliquip commodo laborum enim aliqua.</p>

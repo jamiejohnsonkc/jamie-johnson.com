@@ -71,7 +71,7 @@
  						<p class="copy">Staffing & resources</p>
  						<p class="copy">Metrics & peformance</p> -->
  					</div>
- 					<a href="/services#operations" class="link__text">&#8250;learn more about integrative marketing</a>
+ 					<a href="/services#communications" class="link__text">&#8250;learn more about integrative marketing</a>
  				</div>
  				<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 

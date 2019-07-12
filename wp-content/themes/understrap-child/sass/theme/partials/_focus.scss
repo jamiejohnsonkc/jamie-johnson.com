@@ -6,7 +6,7 @@
     @include vr($margin: .5 .5);
   }
   @include mq('tablet'){
-    @include vr($margin: 1, $padding: 1);
+    @include vr($margin: 0, $padding: 1);
     @include light-shadow();
 
   }
@@ -78,6 +78,12 @@
         width: 100%;
         display: block;
         z-index: 0;
+
+          background-color: $primary;
+    
+        
+ 
+      
       }
 
       .img-passenger {
@@ -88,6 +94,8 @@
         overflow: hidden;
         top: 0;
         left: 0;
+        // background-color: rgba($primary, $alpha: .9);
+        mix-blend-mode: multiply;
       @include mq('desktop'){
         width: 124%;
       }

@@ -545,6 +545,7 @@ max-width: 100%;
 }
 
 .claim__title {
+  color: $black;
   @include vr($font-size: 2, $line-height:3.25);
 
   @include mq('phone') {
@@ -667,7 +668,7 @@ left: 50%;
   @include mq('desktop') {
     display: flex;
     position: absolute;
-    width: 100%;
+//     width: 100%;
     max-width: 100%;
     // height: 50vh;
     align-items: center;
@@ -730,6 +731,7 @@ left: 50%;
     flex: 0 0 38%;
     max-width: 38%;
     min-height: 32em;
+    display: flex;
   }
 }
 
@@ -774,7 +776,9 @@ min-height: 0;
 
   }
 
-  @include mq('desktop') {}
+  @include mq('desktop') {
+      display: none;
+  }
 }
 
 .hybrid__graphic-element {
@@ -2471,8 +2475,8 @@ min-height: 12em;
   // display: flex;
   // flex: 0 1 auto;
 @include mq('desktop'){
-  width: 74.82%;
-  max-width: 74.82%;
+  width: 99%;
+  max-width: 99%;
 }
 }
 
@@ -2530,6 +2534,10 @@ text-align: right;
 .footer__list-item{
   color: $white;
   font-weight: 200;
+}
+
+a.footer__text-link{
+  color: $white;
 }
 
 
@@ -3708,6 +3716,9 @@ color: $black;
     left: 72%;
     filter: brightness(.75);
   }
+   @include mq('desktop'){
+left: 50%;
+}
 }
   .header{
     display: flex;
@@ -3727,6 +3738,7 @@ color: $black;
       max-width: 23.16%;
       flex: 0 1 auto;
       align-items: baseline;
+          transform: translateX(-50%);
       
     }
   .deck__item{
@@ -3995,6 +4007,10 @@ color: $black;
     display: flex;
   height: 80em;
   }
+
+
+
+
   .flex-container{
     @include mq('tablet-wide'){
       display: flex;
@@ -4055,7 +4071,12 @@ color: $black;
   background-size: 302%;
   background-position: 55% 50%;
   background-repeat: no-repeat;
-}  
+  @include mq('desktop'){
+    height: 100%;
+} 
+
+}
+
 }
   
 
@@ -4103,11 +4124,19 @@ color: $black;
       .background__image--cover{
         background-size: 225%;
         background-position: 67% 50%;
+           @include mq('desktop'){ 
+      background-size: 157%;
+    background-position: 73% 50%;
+      }
       }  
+          @include mq('desktop'){
+          height: 100em;
+          }
       }  
     }
     @include mq('desktop'){
-    @include vr($padding-left: 3, $padding-right: 3);
+    @include vr($padding-left: 0, $padding-right: 0);
+    height: 100em;
     .flex-item__a{
     padding: 0 12%;
     text-align: center;
@@ -4524,6 +4553,7 @@ flex: 0 0 auto;
   path.st1{  //*cluster circular backgrounds
   fill: none;
   stroke: $black;
+  stroke-width: 2;
   }
   }
   g:nth-child(3){ //*cluster dial hash marks & indicator

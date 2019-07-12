@@ -96,7 +96,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Function Leadership</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Operations</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Financials</li>
@@ -114,7 +114,7 @@ if (!defined('ABSPATH')) {
                                     <h5 class="headline">Concepts & Frameworks</h5>
                                 </div>
 
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Outcome-Driven Marketing</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Competitive Advantage</li>
@@ -130,7 +130,7 @@ if (!defined('ABSPATH')) {
                                     <h5 class="headline">Strategy</h5>
                                 </div>
 
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Product/Service Management</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Value Design</li>
@@ -150,7 +150,7 @@ if (!defined('ABSPATH')) {
                                     <h5 class="headline">Intelligence & Insights</h5>
                                 </div>
 
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Performance Auditing</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Market Research</li>
@@ -170,7 +170,7 @@ if (!defined('ABSPATH')) {
                                     <h5 class="headline">Cross Pollination</h5>
                                 </div>
 
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Value Stewardship</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Customer Centricity</li>
@@ -196,7 +196,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Strategy & Planning</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Branding & Positioning</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Targeting & Segmentation</li>
@@ -213,7 +213,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Digital Marketing</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Responsive Web Development</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">UX / UI Design</li>
@@ -230,7 +230,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Lead-to-Revenue</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Marketing/Sales Funnel</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Force Multiplication</li>
@@ -245,7 +245,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Content Development</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Social Media</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Blogging</li>
@@ -260,7 +260,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Outbound</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Press Relations & Publicity</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Sponsorships</li>
@@ -277,7 +277,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Graphic Design</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Brand Identity</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Collateral</li>
@@ -395,7 +395,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Marketing I.T.</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Automation Platforms</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Relationship management</li>
@@ -412,7 +412,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Workflow/Process</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Strategic planning</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Creative development</li>
@@ -429,7 +429,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Asset Management</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Budgets & Expenses</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Staffing & Resources</li>
@@ -450,7 +450,7 @@ if (!defined('ABSPATH')) {
                                 <div class="overlay__head">
                                     <h5 class="headline">Performance Management</h5>
                                 </div>
-                                <ul class="list">
+                                <ul class="list list">
                                     <li class="list-item">Analytics & Reporting</li>
                                     <li class="list-item__spacer">&#x000B7;</li>
                                     <li class="list-item">Conversion tracking</li>

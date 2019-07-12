@@ -17,9 +17,9 @@
 				<div class="justification--flex-container">
 
 					<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#1 Outcomes Not Overhead</h1>	
+					<h1 class="headline">#1 Outcomes Not Output</h1>	
 				
-						<p class="deck deck__header deck__header--reasons deck__header--objectives">Everything marketing is and does should advance business objectives. otherwise. it's not marketing. it's just spending.</p>
+						<p class="deck deck__header deck__header--reasons deck__header--objectives">Everything marketing is and does should advance business objectives. Otherwise it's not marketing. It's just spending.</p>
 					</div>
 		
 					<div class="diagram justification__diagram diagram--objectives" id="objectives__diagram">
@@ -67,7 +67,7 @@
 								</div>
 								<div class="diagram-item__container--77row">
 									<h5 class="diagram-item__headline">performance <span class="br"><br></span>metrics</h5>
-									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Enuring programs perform to expectations in aligment with strategy.</p>
+									<p class="diagram-item__container--77row diagram-item__copy diagram-item__copy--objectives-diagram">Ensuring programs perform to expectations in aligment with strategy.</p>
 								</div>
 							</div>
 							<div class="objectives-diagram__delta-icon">
@@ -97,9 +97,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-						<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-					</a>
+					
 				</div>
 			
 			
@@ -115,7 +113,7 @@
 				<!-- <h1 class="pagination pagination--reasons">I advocate value & substance</h1> -->
 				
 				<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#2 the customer, the customer, the customer</h1>	
+					<h1 class="headline">#2<br> the customer, the customer, the customer</h1>	
 
 
 				<div class="diagram__header diagram__header--reasons">
@@ -132,9 +130,7 @@
 						<p class="body__text_lg">Before you can generate revenue you have to get found then you have to win their trust. You have to really know your customer and more importantly, be honest about your offering.</p>
 					</div>
 				</div>
-				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-				</a>
+				
 			</div>
 
 		</article>
@@ -170,9 +166,7 @@
 						<p class="body__text_lg">Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must ensure customers find you, trust you and, most importantly, you deliver as promised after the sale.</p>
 					</div>
 				</div>
-				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-				</a>
+				
 			</div>
 
 		</article>

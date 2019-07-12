@@ -96,6 +96,9 @@ font-size: 10.0625rem;
   font-variant-caps: all-small-caps;
   letter-spacing: .15rem;
   font-weight: 400;
+  @include mq('desktop'){
+      @include headline__item();
+}
 }
 
 

@@ -7,7 +7,7 @@
 @include mq('desktop'){
   max-width: 50%;
   width: 50%;
-  padding: 16% 12%;
+  padding: 9% 12%;
 }
   .flex-container {}
 
@@ -16,7 +16,7 @@
   .title {
     @include headline__item();
     @include ultra();
-    max-width: 78%;
+    max-width: 90%;
 
   }
 

@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "jamiejohnsonmev2.test",
+    "proxy": "jamie-johnson.test",
     "notify": false,
     "online": true
   },

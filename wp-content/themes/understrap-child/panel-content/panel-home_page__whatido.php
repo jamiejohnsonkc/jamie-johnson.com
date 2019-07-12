@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 		<div class="article__spacer"></div>
-<article class="article__wrapper  home-page home-page__whatido bgarrow" id="wrapper__whatido">
+<article class="article__wrapper  homepage homepage__whatido bgarrow" id="wrapper__whatido">
 	<div class="mobile__background--image" id="trend-arrow">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/01/arrowbg.svg" alt="" class="style-svg"/>
+		<img src="/wp-content/uploads/2019/01/arrowbg.svg" alt="..." class="style-svg"/>
 	</div>
-	<div class="container home-page__whatido__container core" id="whatido">
+	<div class="container homepage__whatido__container core" id="whatido">
 	
 	<h1>what i do</h1>
 	<div class="content-container">
@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p>After 20 years of strategic leadership, marketing management and integrated communications, my primary strength is making sure your marketing does more than just look nice.</p>
 	</div>
 </div>
-		<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+		<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 	</a>
 		</div>
 

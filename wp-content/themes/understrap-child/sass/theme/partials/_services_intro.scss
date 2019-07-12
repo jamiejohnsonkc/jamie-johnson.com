@@ -1,0 +1,98 @@
+
+  .article__services-intro {
+    position: relative;
+    background: $primary;
+    height: 120em;
+    // color: darken($secondary, $amount: 20%);
+    color: $black;
+
+    width: 100%;
+    .background__image--cover{
+      img{
+        mix-blend-mode: hard-light;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+      }
+    @include mq('tablet-wide'){
+      border: 3rem solid $white;
+    }
+    }
+    .flex-container {
+        width: 100%;
+        height: 100%;
+
+        @include mq('tablet-wide'){
+          z-index: 3;
+          top: 0;
+          left: 0;
+          position: absolute{
+        }
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .flex-item {
+        max-width: 90%;
+        // background: darken($secondary, $amount: 15%);
+        background: $white;
+        @include vr($padding: 3);
+        @include dark-shadow();
+        @include mq('tablet'){
+        max-width:  83%;
+        }
+@include mq('tablet-wide'){
+  max-width: 50%;
+  display: block;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  @include vr($padding: 6 6);
+  position: absolute;
+}
+@include mq('desktop'){
+  max-width: 24%;
+}
+        &__wrapper {
+        }
+        .title {
+          @include sm__title();
+        
+          @include mq('tablet'){
+          @include item__title();
+        }
+        @include mq('desktop'){
+          @include sm__title();
+        }
+        }
+        .subhead {
+          width: 100%;
+          max-width: 100%;
+          @include headline__xs()
+          @include mq('tablet'){
+            @include headline__item();
+          }
+          @include mq('desktop'){
+            @include sm__title();
+              @include headline__sm();
+            
+          }
+        }
+        .copy {
+          @include copy__xs();
+          @include vr($margin-bottom: 1);
+
+          @include mq('tablet') {
+            @include copy__sm();
+          }
+          @include mq('desktop'){
+           
+            @include copy__sm();
+            @include vr($line-height: 2.5);
+          }
+         
+        }
+      }
+    }
+  }

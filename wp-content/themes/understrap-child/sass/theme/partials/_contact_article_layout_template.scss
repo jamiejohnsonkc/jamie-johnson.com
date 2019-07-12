@@ -1,0 +1,148 @@
+// ==========================================================================
+// contact page
+// ==========================================================================
+
+// #contact-content.block {
+//     @include make-col-ready;
+//     @include make-col(12);
+ 
+//     // margin-top: $rvr-5;
+
+//     @include media-breakpoint-up(md) {
+//         @include make-col-ready;
+//         @include make-col(6);
+//     }
+// }
+
+// #contact-form.block {
+//     @include make-col-ready;
+//     @include make-col(12);
+//     @include media-breakpoint-up(md) {
+//         @include make-col-ready;
+//         @include make-col(6);
+//     }
+// }
+
+.contact-form-message {
+    // padding: $ms-1;
+    // margin-bottom: $rvr-2;
+    // margin-top: $rvr-2;
+    color: white;
+    border-radius: 2px;
+}
+
+.contact-form-message#success {
+ background: $accent;
+ border-radius: 5px;
+ color: $white;
+ @include vr($padding: .25 .5, $font-size: 2);
+ font-variant-caps: all-small-caps;
+ text-align: center;
+ letter-spacing: .15rem;
+ font-weight: 200;
+}
+
+.contact-form-message#error {
+    background: $primary;
+    border-radius: 5px;
+    color: $black;
+    @include vr($padding: .25 .5, $font-size: 2);
+    font-variant-caps: all-small-caps;
+    text-align: center;
+    letter-spacing: .15rem;
+    font-weight: 200;
+}
+
+#respond label {
+    font-family: $font-family-monospace;
+    width: 100%;
+    @include vr($font-size: 1);
+    // margin-bottom: $rvr-1;
+}
+
+#respond input{
+    @include vr($height: 2);
+
+}
+#respond input, #respond textarea {
+    
+}
+
+.form-control{
+}
+
+#respond {
+    & textarea, & input {
+    @include vr($font-size: 1, $margin-bottom: 1.5);
+    border: none;
+    background: $gray-100;
+}
+}
+
+#respond > form > input[type="submit"]:nth-child(7) {
+    background: $dark-sea-green;
+    -webkit-appearance: none;
+    border: 1px solid $dark-sea-green;
+    border-radius: 5px;
+    // padding: $rvr-_25 $ms-_5;
+    color: $gray-600;
+}
+
+
+.container__contact--content{
+    position: relative;
+    display: flex;
+   flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: $black;
+    @include mq('tablet', $type:max){
+    display: none;
+    }
+  }
+  
+  .container__contact--form{
+    display: flex;
+   flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: $white;
+   min-height: 80em;
+  @include mq('tablet', $type:max){
+      @include vr($padding: 3 2);
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+//       position: absolute;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       z-index: 3;
+//     justify-content: flex-start;
+
+//       background: rgba($white, $alpha: .95);
+  }
+  }
+  
+.relax-img{
+    max-width: 300%;
+    width: 200%;
+    overflow: hidden;
+    margin-left: -76%;
+}
+  
+
+  .deck__block.contact__deck{
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .contact__form--wrapper{
+    @include mq('tablet'){
+    max-width: 61%;
+    width: 61%;
+  margin: 0 auto;
+  }
+  }
+  
+  

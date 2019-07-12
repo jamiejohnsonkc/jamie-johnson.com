@@ -1,0 +1,265 @@
+.section--reasons{
+  .headline{
+    @include vr($font-size: 5);
+    @include ultra();
+  }
+
+@include mq('tablet-wide'){
+  .container.business-value.justification__container{
+    width: 90%;
+    max-width: 90%;
+    min-height: 82em;
+         @include mq('desktop'){ 
+          min-height: 60rem;
+      }
+  }
+
+  .diagram__list-item-container--objectives{
+    padding: 0 4%;
+     @include mq('desktop'){ 
+          margin-bottom: 12rem;
+      }
+    
+
+  }
+
+  .diagram--objectives{
+    width: 100%;
+    max-width: 100%;
+//     padding: 0 4% 0 4%;
+  .diagram-item__container--77row{
+      @include mq('desktop'){ 
+          min-height: 11rem;
+      }
+  }
+}
+  .objectives-diagram__list-item{
+    flex: 1 1 21%;
+    justify-content: flex-start;
+  }
+  .objectives-diagram__delta-icon {
+  flex: 1 1 2%;
+  padding-right: 2em;
+  }
+
+  .diagram-item__copy--objectives-diagram{
+  max-width: 100%;
+  flex: 0 1 100%;
+  @include vr($font-size: 1, $line-height: 2, $padding-right: .5);
+  @include mq('desktop'){
+max-width: 83%;
+@include copy__sm();
+  }
+
+
+
+  }
+
+  .diagram-item__container--23row {
+  flex: 0 1 64%;
+  max-width: 64%;
+  svg{
+  
+      filter: drop-shadow(5px 3px 5px $gray-600);  
+  
+  }
+
+  @include mq('desktop'){
+      min-height: 20em;
+      margin-left: -10%;
+  }
+  }
+
+
+  .diagram-item__headline{
+    max-width: 83%;
+  @include vr($font-size: 2, $line-height: 1.75 );
+  min-height: 1em;
+  display: flex;
+  align-items: center;
+  }
+
+}
+@include mq('desktop'){
+  .container.business-value.justification__container{
+    width: 83%;
+    max-width: 83%;
+    .headline{
+      max-width: 100%;
+      width: 90%;
+      @include mq('desktop'){
+  
+    flex: 1 1 25%;
+    max-width: 33%;
+    width: unset;
+    display: flex;
+      }
+    }
+    .diagram__header-copy{
+      max-width: 83%;
+    }
+}
+.diagram__header--reasons{
+  max-width: 33%;
+}
+}
+
+
+.justification__container_grow{
+  padding: 8% 4% 0 4%;
+  @include mq('desktop'){
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+   .diagram__header{
+           max-width: 33%;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 33%;
+    width: 33%;
+    padding-right: 0;
+    padding-left: 4%;
+    align-content: flex-start;
+}
+
+.diagram__superior-value{
+    display: flex;
+    flex: 1;
+    max-width: 33%;
+}
+  }
+}
+
+.diagram__content_container .icon .cls-1, .diagram__content_container .icon .cls-2, .diagram__content_container .icon .cls-3, .diagram__content_container .icon .cls-4, .diagram__content_container .icon .cls-5{
+  fill: $deep-gray;
+}
+
+
+
+}
+
+@include mq('tablet-wide'){
+
+.justification__container_modernize{
+  padding: 8% 4% 0 4%;
+
+  .diagram__header--reasons{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
+    padding-right: 17%;
+  }
+
+  .deck__header--value{
+    width: 100%;
+    max-width: 100%;
+  }
+  .justification__page-header_text--square{
+    @include vr($font-size: 2, $line-height: 2.5);
+    padding-bottom: 0;
+  }
+}
+
+.justification__container_optimize{
+  .diagram__header--reasons{
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
+  }
+  .diagram__header-copy{
+width: 90%;
+max-width: 90%;
+  }
+
+.end-to-end--horz{
+  width: 100%;
+  // margin-top: -3em;
+}
+}
+}
+
+.page__header-text_container--modernize{
+  @include light-shadow();
+}
+
+img.style-svg.image-bell{
+  width: 10em;
+}
+
+#shape{
+  path{
+    fill: $gray-200();
+
+  }
+  circle{
+    fill: $gray-200;
+  }
+}
+
+
+.header__wrapper .header__wrapper--reasons{
+  br{
+    display: none;
+  }
+  @include mq('desktop'){
+    display: flex;
+    flex-direction: column;
+    max-width: 36%;
+  width: unset;
+  flex: 1 1 25%;
+br{
+  display: flex;
+}  
+}
+}
+
+
+.justification__container_objectives{
+  .headline{
+    @include mq('desktop'){
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+}
+
+#objectives > div > div.header__wrapper.header__wrapper--reasons > h1{
+  @include mq('desktop'){
+    width: 90%;
+    max-width: 90%;
+    flex: 0 0 auto;
+  }
+}
+
+#modernize > div > h1{
+  @include mq('desktop'){
+    width: 100%;
+    max-width: 100%;
+    @include vr($margin-bottom: 6);
+  }
+}
+
+#main > section.section--reasons > article:nth-child(3){
+  @include mq('desktop'){
+    min-height: 100em;
+  }
+}
+
+#optimize{
+@include mq('desktop'){
+  width: 100%;
+max-width: 100%;
+}
+}
+
+#optimize > div > div > h1{
+  @include mq('desktop'){
+    width: 100%;
+    max-width: 100%;
+  }
+}

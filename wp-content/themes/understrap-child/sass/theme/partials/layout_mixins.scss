@@ -1,0 +1,23 @@
+@mixin vmar-6-2 {@include vr($margin-top: 6, $margin-bottom: 2);   }
+@mixin vmar-5-2 {@include vr($margin-top: 5, $margin-bottom: 2);   }
+@mixin vmar-4-3 {@include vr($margin-top: 4, $margin-bottom: 3);   }
+@mixin vmar-4-2 {@include vr($margin-top: 4, $margin-bottom: 2);   }
+@mixin vmar-3-3 {@include vr($margin-top: 3, $margin-bottom: 3);   }
+@mixin vmar-3-2 {@include vr($margin-top: 3, $margin-bottom: 2);   }
+@mixin vmar-2-2 {@include vr($margin-top: 2, $margin-bottom: 2);   }
+@mixin vmar-1-2 {@include vr($margin-top: 1, $margin-bottom: 2);   }
+@mixin vmar-1-1 {@include vr($margin-top: 1, $margin-bottom: 1);   }
+@mixin vmar-2-1 {@include vr($margin-top: 2, $margin-bottom: 1);   }
+@mixin vmar-2-0 {@include vr($margin-top: 2, $margin-bottom: 0);   }
+@mixin vmar-0-2 {@include vr($margin-top: 0, $margin-bottom: 2);   }
+
+
+@mixin self-center(){ align-self: center;}
+@mixin self-start(){ align-self: flex-start;}
+@mixin self-end (){ align-self: flex-end;}
+
+@mixin pointer(){
+    &:hover{
+        cursor: pointer;
+    }
+}

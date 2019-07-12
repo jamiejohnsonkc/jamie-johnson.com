@@ -8,18 +8,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper  home-page">
-	<div class="container cta__container home-page__cta__container cta" id="home-page__cta">
+<section class="homepage__cta" id="homepage__cta">
+<article class="article__wrapper cta__home-page">
+	<div class="container-single-box-center cta__container az-subtle">
 		
 		
 		
-		<h1>I'm Available</h1>
+		<h1 class="title title__header cta__title">Interested?</h1>
+		<h2 class="subhead subhead__header cta__copy">Gimme a Shout</h2>
+		<p class="copy copy__block">Have a question? Need quick a gutcheck? Wanna rap or just get weird with somebody?</p>
+		<a class="link link__text" href="/contact"><h3 class="cta__link">CONNECT</h3></a>
 		
-		<h2>Hire Me</h2>
 		
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-		
-
-	<a class="link link__advance--text" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">I think you should hire me.</a>		
 		</div><!-- Container end -->
 		</article><!-- cover end -->
+
+		</section>

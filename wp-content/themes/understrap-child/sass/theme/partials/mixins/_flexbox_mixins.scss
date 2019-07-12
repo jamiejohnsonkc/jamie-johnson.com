@@ -1,272 +1,403 @@
-@mixin left-link(){
-	.link{
-	left: 0;
-}
-}
+// @mixin col-ready(){
+// 	width: 100%;
+// 	position: relative;
+// }
 
 
-
-@mixin narrow-single-col(){
-h3, h4, p, div > p  {
-	@include make-col-ready();
-	width: 45%;
-	max-width: 45%;
-/* 	padding-left: 0px;
-padding-right: 0px; */
-	margin-right: 35%;
-}
-}
-
-@mixin make-row(){
-// margin-left: 0;
-// margin-right: 0;
-// width: 100%;
-}
-
-
-// @mixin wide-container(){
-// 	@include mq('phone'){}	
-// 	@include mq('phone-wide'){}	
-// 	@include mq('phablet'){}	
-// 	@include mq('tablet-small'){}	
-// 	@include mq('tablet'){}	
-// 	@include mq('tablet-wide'){
-// width: 99rem;
-// max-width: 99rem;
-// /* 	width: 78.5%;
-// max-width: 78.5%; */
-// 	}	
-// 	@include mq('desktop-wide'){}	
-// 	@include mq('desktop-xl'){}	
-// 	@include mq('desktop-xxl'){}	
+// @mixin left-link(){
+// 	.link{
+// 	left: 0;
+// }
 // }
 
 
 
-//FLEX CONTAINERS
+// @mixin narrow-single-col(){
+// h3, h4, p, div > p  {
+// 	@include make-col-ready();
+// 	width: 45%;
+// 	max-width: 45%;
+// /* 	padding-left: 0px;
+// padding-right: 0px; */
+// 	margin-right: 35%;
+// }
+// }
 
-@mixin rows(){
-display: flex;
-flex-direction: row;
+// @mixin make-row(){
+// // margin-left: 0;
+// // margin-right: 0;
+// // width: 100%;
+// }
+
+
+// // @mixin wide-container(){
+// // 	@include mq('phone'){}	
+// // 	@include mq('phone-wide'){}	
+// // 	@include mq('phablet'){}	
+// // 	@include mq('tablet-small'){}	
+// // 	@include mq('tablet'){}	
+// // 	@include mq('tablet-wide'){
+// // width: 99rem;
+// // max-width: 99rem;
+// // /* 	width: 78.5%;
+// // max-width: 78.5%; */
+// // 	}	
+// // 	@include mq('desktop-wide'){}	
+// // 	@include mq('desktop-hd'){}	
+// // 	@include mq('desktop-uhd'){}	
+// // }
+
+
+
+// //FLEX CONTAINERS
+
+@mixin rows() {
+	display: flex;
+	flex-direction: row;
 }
 
-@mixin cols(){
-display: flex;
-flex-direction: column;
+@mixin cols() {
+	display: flex;
+	flex-direction: column;
 }
 
 
+// //FLEX CONTAINERS & ITEMS
 
-@mixin split-cols(){
-@include rows();
-@include make-row();
-
-.content1, .content2{
-    @include make-col-ready();
-    @include make-col(6);
-}
+@mixin split-cols() {
+	@include rows();
+	@include make-row();
 }
 
+// .content1, .content2{
+//     @include make-col-ready();
+//     @include make-col(6);
+// }
+// }
 
-@mixin split-rows(){
-@include rows();
-@include make-row();
-.content1, .content2{
-    @include make-col-ready();
-    @include make-col(12);
+
+@mixin split-rows() {
+	@include rows();
+	@include make-row();
+
+	.content1,
+	.content2 {
+		@include make-col-ready();
+		@include make-col(12);
+	}
 }
-}
+
 /* 
-@mixin narrow(){
-	width: 30%;
-	max-width: 30%;
-} */
-// CONTENT ALIGNMENT
+// @mixin narrow(){
+// 	width: 30%;
+// 	max-width: 30%;
+// } */
 
-@mixin push-auto(){
+
+// // CONTENT ALIGNMENT
+
+@mixin push-auto() {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@mixin push-right(){
+@mixin push-right() {
 	margin-left: 100%;
 }
 
 
 
-// //horz / vert center column with set height
-@mixin center-middle(){
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
+// // //horz / vert center column with set height
+// @mixin center-middle(){
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-content: center;
+// text-align: center;
+// }
+
+
+
+
+
+// // }
+// //.left-center
+// %left-middle{
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// justify-content: center;
+// text-align: left;
+// }
+
+@mixin left-middle() {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: left;
+
 }
 
+// //left / vert top
+// %left-top{
+// 	display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// text-align: left;
+// }
+
+// @mixin left-top{
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// text-align: left;
+// }
+
+
+// %center-top{
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// }
+
+// @mixin center-top(){
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// }
 
 
 
+// @mixin push-middle(){
+
+// @include mq('tablet-wide'){
 
 // }
-//.left-center
-%left-middle{
+// @include mq('desktop'){
+
+// }
+// }
+
+// @mixin flush-left{
+// @include make-row();
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// text-align: left;
+// .content-container{
+// 	flex-direction: column;
+// }
+// .content1, .content2{
+// 	@include make-col-ready();
+// 	@include make-col(12);
+// /* 	padding-left: 0px;
+// padding-right: 0px; */
+// }
+// .content2{
+// 	@include vr($margin-top: 1,);
+// }
+// }
+
+
+// @mixin flush-cols-left{
+// @include make-row();
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// text-align: left;
+
+// .content1, .content2{
+// 	@include make-col-ready();
+// 	@include make-col(6);
+// /* 	padding-left: 0px;
+// padding-right: 0px; */
+// }
+// .content2{
+// 	@include vr($margin-top: 1,);
+// }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin queue(){
+// %flexbox{
+//     @include row();
+//     @include cols();
+
+//        // @include center-top();
+
+// }
+// }
+
+
+
+// @mixin stack(){
+// %flexbox{
+//     @include row();
+//     @include rows();
+//           // @include center-top();
+
+// }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// //flexbox configurations
+
+
+
+
+
+// .col-list{
+
+// }
+
+
+// .col-rows{
+
+// }
+
+// .rows-cols{
+
+// }
+
+// .row-list{
+
+// }
+
+
+
+
+// .flex-container {
+// 	display: flex;
+// 	min-height: 0;
+
+// 	&__row {
+// 		flex-direction: row;
+		
+// 		&--wrap{
+// 			flex-wrap: wrap;
+// 		}
+		
+
+// 		&--aligncenter {
+// 			align-items: center;
+// 		}
+
+// 		&--justifycenter {
+// 			justify-content: center;
+		
+// 		}
+// 	}
+	
+
+	
+// 	&__column &--wrap {
+// 		flex-wrap: wrap; 
+// 		flex-direction: column;
+// 	}
+	
+
+// 		&--nowrap {
+// 			flex-wrap: nowrap;
+// 		}
+	
+// 		&--aligncenter {
+// 			align-items: center;
+// 		}
+
+// 		&--justifycenter {
+// 			justify-content: center;
+// 		}
+// 	}
+
+
+
+@mixin flex-item{
 display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-text-align: left;
+flex: 0 0 auto;
+min-height: 0;
 }
 
-@mixin left-middle(){
+
+.f-item {
+	@include flex-item();
+	&--selfcenter {
+			@include flex-item();
+		align-content: center;
+
+	}
+
+	&--selfstart {
+			@include flex-item();
+		align-content: flex-start;
+	}
+
+	&--selfend {
+			@include flex-item();
+		align-content: flex-end;
+	}
+
+}
+
+.f-container{
 	display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-text-align: left;
+	&--center{
+		display: flex;
+		align-items: center;
+	}
+	&--center-middle{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__column{ 
+			display: flex;
+		flex-direction: column;
+	}
+	&__column--center{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}	 
+	&__column--wrap{
+			display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		}
+	&__row{ 
+			display: flex;
+		flex-direction: row;
+		} 
+	&__row--wrap{
+			display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}	
+	}
 
-}
+	f-grid{
+		&__container{}
+		&__item{}
+	}
 
-//left / vert top
-%left-top{
-	display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-}
-
-@mixin left-top{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-}
-
-
-%center-top{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-@mixin center-top(){
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-
-
-@mixin push-middle(){
-
-@include mq('tablet-wide'){
-
-}
-@include mq('desktop'){
-
-}
-}
-
-@mixin flush-left{
-@include make-row();
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-.content-container{
-	flex-direction: column;
-}
-.content1, .content2{
-	@include make-col-ready();
-	@include make-col(12);
-/* 	padding-left: 0px;
-padding-right: 0px; */
-}
-.content2{
-	@include vr($margin-top: 1,);
-}
-}
-
-
-@mixin flush-cols-left{
-@include make-row();
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-text-align: left;
-
-.content1, .content2{
-	@include make-col-ready();
-	@include make-col(6);
-/* 	padding-left: 0px;
-padding-right: 0px; */
-}
-.content2{
-	@include vr($margin-top: 1,);
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@mixin queue(){
-%flexbox{
-    @include row();
-    @include cols();
-
-       // @include center-top();
-
-}
-}
-
-
-
-@mixin stack(){
-%flexbox{
-    @include row();
-    @include rows();
-          // @include center-top();
-
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-//flexbox configurations
-
-
-
-
-
-.col-list{
-
-}
-
-
-.col-rows{
-
-}
-
-.rows-cols{
-
-}
-
-.row-list{
-
-}
+	

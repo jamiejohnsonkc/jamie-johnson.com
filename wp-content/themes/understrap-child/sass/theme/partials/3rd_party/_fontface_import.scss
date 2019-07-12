@@ -10,6 +10,7 @@
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'geomanist';
     src: url('../fonts/geomanist-light-webfont/geomanist-light-webfont.eot');
@@ -73,6 +74,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'geomanist';
+    src: url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.eot');
+    src: url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.woff2') format('woff2'),
+         url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.woff') format('woff'),
+         url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.ttf') format('truetype'),
+         url('../fonts/geomanist-ultra-webfont/geomanist-ultra-webfont.svg#geomanistultra') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 /* // Jamie-johson.me note: need to install Geomanist italics - if desired */

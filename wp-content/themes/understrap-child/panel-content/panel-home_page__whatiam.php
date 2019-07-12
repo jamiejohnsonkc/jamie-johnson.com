@@ -9,8 +9,8 @@ exit; // Exit if accessed directly.
 }
 ?>
 
-<article class="article__wrapper  home-page whatiam"> <!-- CONTAINER -->
-<div class="container home-page__whatiam__container core" id="whatiam">
+<article class="article__wrapper  homepage whatiam"> <!-- CONTAINER -->
+<div class="container homepage__whatiam__container core" id="whatiam">
 	<h1>what i am</h1>
 	<h2>I Am An End to End Marketer</h2>
 	<h3>Strategic Marketing <span class="br"><br></span>&amp; Front-end Design <span class="br-2"><br></span>+ Development</h3>	
@@ -69,8 +69,8 @@ exit; // Exit if accessed directly.
 
 </div>
 
-	<a class="link link__advance--chevron" href="//localhost:3000/modus-operandi#i-advance-business-objectives" title="go to next">
-		<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/chevdn.svg" alt="" class="chev--dwn style-svg"/>
+	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
+		<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/>
 	</a>
 	</div>
 </article>

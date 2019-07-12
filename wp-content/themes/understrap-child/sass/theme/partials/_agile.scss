@@ -1,0 +1,156 @@
+.vision{
+  background: $black;
+  color: $off-white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16% 8%;
+  @include mq('desktop'){
+    max-width: 50%;
+    width: 50%;
+    padding: 0% 4%;
+  }
+.pagination{
+  align-self: flex-start;
+  width: 100%;
+  @include mq('tablet'){
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  @include mq('desktop'){
+//     margin-left: 24%;
+ 
+  }
+
+}
+.title{
+  @include headline__item();
+  @include ultra();
+  margin: 0 auto;
+  @include mq('tablet-wide'){
+    max-width: 73%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-item{
+width:96%;
+max-width: 96%;
+display: flex;
+
+}
+.flex-item__a{
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+.header__container{
+// width: 100%;
+height: 33em;
+background: $dkgray-bg-trans;
+}
+
+}
+
+.flex-grid__a{
+@include vr($width: 100%, $height: 40, $padding:0 .5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  // font-family: Arial, Helvetica, sans-serif;
+
+  justify-content: center;
+@include mq('tablet'){
+  width: 71%;
+}
+  @include mq('desktop'){
+  @include vr($width: 60, $height: 25);
+  min-height: 33em;
+}
+
+
+  .flex-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: #333;
+    // border: thin solid #555;
+    flex: 1 1 45%;
+    @include vr($height: 2);
+
+  }
+  .flex-item__title{
+width: 100%;
+max-width: 100%;
+flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // background: #333;
+    // border: thin solid #555;
+    display: block;
+
+    @include vr($font-size: 2, $line-height: 2.5);
+    text-align: center;
+    align-self: center;
+    max-width: 83%;
+    display: flex;
+    font-weight: 400;
+    width: 100%;
+    @include vr($height: 5);
+    letter-spacing: .1rem;
+    @include mq('phone-wide', $type:max) {
+      @include vr($font-size:2);
+
+    
+    }
+  }
+  .flex-grid__head{
+    // font-size: 1.75rem;
+    @include vr($font-size: 2);
+    color: $primary;
+    width: 50%;  
+    display: flex;
+    flex: 0 1 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: #333;
+    // border-bottom: .05rem solid #444;
+    font-variant-caps: all-small-caps;
+    @include vr($height: 2);
+  }
+  .flex-grid__content{
+// font-size: 1.5rem;
+@include vr($font-size: 1);
+@include mq('tablet-wide'){
+  @include vr($font-size:1);
+}
+
+}
+.flex-divider{
+  flex: 0 1 5%;
+  max-width: 10%;
+  height: auto;
+  text-align: center;
+@include vr($font-size:3);
+color: $secondary;
+}
+}
+}
+
+.flex-grid__a--hr{
+  width: 83%;
+  height: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
+&::after{
+  height: .25rem;
+  background: #222;
+}
+}

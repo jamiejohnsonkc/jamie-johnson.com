@@ -28,11 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) {
   }
 
   //response messages
-  $not_human       = "Human verification incorrect.";
-  $missing_content = "Please supply all information.";
-  $email_invalid   = "Email Address Invalid.";
+  $not_human       = "time to brush up on that basic algebra, huh?";
+  $missing_content = "Please supply all information";
+  $email_invalid   = "Email Address Invalid";
   $message_unsent  = "Double check your entries. Something's amiss.";
-  $message_sent    = "Thanks for your interest! I'll be in touch shortly &mdash; jamie";
+  $message_sent    = "Message Sent!";
 
   //user posted variables
   $name = $_POST['message_name'];
@@ -75,16 +75,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-<div class="wrapper" id="full-width-page-wrapper">
+<div class="contact__wrapper" id="full-width-page-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 		<div class="row">
-			<div class="col-md-12 content-area" id="primary">
+			<div class="col-md-12 contact__content-area" id="primary">
 				<main class="site-main" id="main" role="main">
-					<section class="container-fluid" id="contact">
-            <div class="container container__contact">
-					
-              <h1>Contact</h1>
-							<p>Lorem ipsum pariatur nisi dolor aute cillum adipisicing ut pariatur officia esse sunt eu esse sed qui.</p>
+					<section class="container-fluid contact__container" id="contact">
+          <div class="row">
+          <div class="col-lg-6 container__contact--content">
+            <img src="/wp-content/uploads/2019/06/hero-7.jpg" class="relax-img" alt="...">
+          </div>  
+          <div class="col-lg-6 container__contact--form">
+					<div class="contact__form--wrapper">
+              <h1 class="headline__header contact__header">Whatcha Need?</h1>
+							<p class="deck deck__block contact__deck">Curious? Wanna kick the tires a little? Go ahead ask me something. You know you want to.</p>
 				
 						<div class="contact__form"> 
 						<div id="respond">
@@ -92,14 +96,18 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <form role="form" action="<?php the_permalink(); ?>" method="post">
                 		<br style="clear:both">
                   <label for="name">Name: <span>*</span> <br><input class="form-control" id="name" type="text" name="message_name" value="<?php echo esc_attr($_POST['message_name']); ?>"></label>
-                  <label for="message_email">Email: <span>*</span> <br><input class="form-control" id="name" type="text" name="message_email" value="<?php echo esc_attr($_POST['message_email']); ?>"></label>
-                  <label for="message_text">Message: <span>*</span> <br><textarea class="form-control" id="name" type="text" name="message_text"><?php echo esc_textarea($_POST['message_text']); ?></textarea></label>
-                  <label for="message_human">Human Verification: <span>*</span> <br><input class="form-control" id="name" type="text" name="message_human"> + 3 = 5</label>
+                  <label for="message_email">Email: <span>*</span> <br><input class="form-control" id="email" type="text" name="message_email" value="<?php echo esc_attr($_POST['message_email']); ?>"></label>
+                  <label for="message_text">Message: <span>*</span> <br><textarea class="form-control" id="message" type="text" name="message_text"><?php echo esc_textarea($_POST['message_text']); ?></textarea></label>
+                  <label for="message_human">what + 3 = 5 ?</label>
+                    
+                  <input class="form-control" id="verification" type="text" name="message_human"></label>
                   <input type="hidden" name="submitted" value="1">
                   <input type="submit">
                 </form>
               </div>
                   </div>
+                  </div>
+          </div>
           </div>
 							<!-- <form role="form">
 									<br style="clear:both">

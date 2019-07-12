@@ -1,0 +1,432 @@
+//homepage splash sublist dividers
+.hide-1 {
+}
+
+.hide-2 {
+}
+
+.hide-3 {
+}
+
+.hide-4 {
+}
+
+.br, .br-2, .br-3, .br-4 {
+    display: none;
+    height: 0;
+    line-height: 0;
+}
+
+.br__opt, .br {
+    display: none;
+    line-height: 0;
+}
+
+
+.intro__summation_graphic-headline--br{
+    display: none;
+}
+
+
+.intro__summation_graphic-headline--br2{
+display: none;
+}
+
+.services-panel__bgimg_widescreen{
+    display: none;
+}
+
+.diagram__end-to-end--horizontal {
+
+}
+
+ .homepage-summary__claim_subhead--br{
+    display: none;
+ }
+
+.services__splash_br{
+    display: none;
+@include mq('tablet'){
+    display: none;
+}
+}
+
+
+.services__splash_br.services__splash_br--service{
+@include mq('phone'){
+display: flex;
+}
+}
+
+
+// ==========================================================================
+// homepage__splash_splash-label variables
+// ==========================================================================
+
+.home-splash__label-head_br--tablet-wide{
+display: none;
+}
+@include mq('tablet-wide'){
+    .home-splash__label-head_br--tablet-wide{
+        display: block;
+    }
+}
+
+.splash__label_divider, .splash__label_divider--tablet-wide, .splash__label_divider--desktop{
+    display: none;
+@include mq('tablet-wide'){
+    display: flex;
+}
+}
+
+.splash__label_item--tablet-wide, .splash__label_item--desktop{
+    display:none;
+    @include mq('tablet-wide'){
+        display: flex;
+    }
+}
+
+
+
+@media (min-width:14em) {
+    .page__header h3 {
+        .br {
+            display: block;
+        }
+
+    }
+
+    .justification__container_modernize h3 {
+        .br {
+            display: none;
+        }
+
+    }
+
+}
+
+@media (min-width:19em) {
+    .justification__container_optimize h3 {
+        .br__opt {
+            display: block;
+        }
+
+    }
+
+}
+.services-panel__bgimg-container_wide-screen--planning,
+.services__panel-img_container--wide-screen, .services__panel-img_container-wide-screen--management, .services-panel__bgimg-container_small-screen--planning {
+    display: none;
+}
+.objectives-diagram__horizontal--delta {
+    display: none;
+}
+.three-up-carousel{
+    display: none;
+}
+@include mq('phone') {
+}
+
+@include mq('phone-wide') {
+}
+
+@include mq('phablet') {
+}
+
+@include mq('tablet-small') {
+}
+
+@include mq('tablet') {
+    .br__opt {
+        display: block;
+    }
+
+    #main > section > article:nth-child(3) > div > div > div > h3 {
+        .br {
+            display: block;
+        }
+
+    }three-
+    .homepage-summary__claim_subhead--br{
+        display: flex;
+    }
+}
+
+@include mq('tablet-wide') {
+   .one-up-carousel{
+       display: none;
+   }
+   
+    .three-up-carousel{
+display: flex;
+   }
+
+   .objectives-diagram__vertical--delta {
+display: none;
+    }
+    .objectives-diagram__horizontal--delta {
+    display: flex;
+    transform: translateX(-300%);
+}
+
+
+    .br {
+        display: none;
+    }
+
+    .services__panel-img_container--small-screen, .services-panel__bgimg-container_small-screen--planning {
+        display: none;
+    }
+
+    .services__panel-img_container--wide-screen {
+        display: flex;
+    }
+
+    .services-panel__bgimg_widescreen, .services-panel_bgimg_wide-screen--management, .services-panel_bgimg_wide-screen--webdev, .services-panel__bgimg-container_wide-screen--planning {
+        display: block;
+    }
+
+.diagram__end-to-end--horizontal{
+        display: block;
+    }
+
+    .diagram__end-to-end--vertical{
+        display: none;
+    } 
+
+// #stats-slider>.carousel-inner.one-up-carousel{
+//     // display: none;
+// }
+// .three-up-carousel{
+//     display: block;
+// }
+
+}
+
+@include mq('desktop') {
+    .diagram-content__end-to-end--vertical {
+        display: none;
+    }
+    .three-up-carousel{
+        display: none;
+    }
+    .one-up-carousel{
+        display: block;
+    }
+
+}
+
+@include mq('desktop-wide') {
+}
+
+@include mq('desktop-hd') {
+}
+
+@include mq('desktop-uhd') {
+}
+
+.ui-button__jump, .ui-button__jump--positioned{
+    @include mq('tablet-wide'){
+        display: none;
+    }
+}
+
+// ==========================================================================
+// everything beyond here appears to need parsing
+// ==========================================================================
+
+
+
+.nope {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+[aria-hidden="true"] {
+    display: none;
+}
+
+[aria-hidden="false"] {
+    display: block;
+}
+
+#home__splash p {
+    .br {
+        display: block;
+    }
+
+}
+
+.header {
+    @media (max-width:30em) {
+        .br {
+            display: block;
+        }
+
+    }
+
+}
+
+.intro__icon_caption {
+    .br {
+        display: block;
+    }
+
+}
+
+#expt-overlay-1 {
+    order: 2;
+
+    @include mq('desktop') {
+        order: 1;
+    }
+
+}
+
+#expt-overlay-2 {
+    order: 3;
+
+    @include mq('desktop') {
+        order: 2;
+    }
+
+}
+
+#expt-overlay-3 {
+    order: 4;
+
+    @include mq('desktop') {
+        order: 3;
+    }
+
+}
+
+#expt-overlay-4 {
+    order: 5;
+
+    @include mq('desktop') {
+        order: 4;
+    }
+
+}
+
+#expt-overlay-5 {
+    order: 6;
+
+    @include mq('desktop') {
+        order: 5;
+    }
+
+}
+
+ .scroll-top {
+    display: none;
+} 
+
+.panel.business-value.grow > div > div > h3 > br, .panel.business-value.modernize > div > div > h3 > br {
+    display: none;
+}
+
+.diagram-content__end-to-end--horizontal {
+    display: none;
+
+    @include mq('tablet-wide') {
+        display: block;
+    }
+
+}
+
+span.summary-page__subhead_claim--br{
+    display: block;
+}
+
+/*      @include media-breakpoint-up(sm) {
+    display: none;
+    }
+@include media-breakpoint-up(md) {
+        display: none;
+      }
+@include media-breakpoint-up(lg) {
+            display: block;
+        }
+@include media-breakpoint-up(xl) {
+    }
+    
+} */
+
+/*      @include media-breakpoint-up(sm) {
+    
+    }
+@include media-breakpoint-up(md) {
+    }    
+@include media-breakpoint-up(lg) {
+            display: none;
+        }
+@include media-breakpoint-up(xl) {
+    } */
+
+
+
+.read-more__outcomes, .read-more__optimize, .read-more__value, .read-more__modernize, .services__read-more_dev-design, .services__read-more_planning-analysis, .services__read-more_ops-management {
+    display: none;
+}
+
+#expt-overlay-1.show, #expt-overlay-2.show, #expt-overlay-3.show, #expt-overlay-4.show, #expt-overlay-5.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.justification__content__verbose {
+    display: none;
+}
+
+.mobile__background--image {
+    @include mq('desktop-hd') {
+        display: none;
+    }
+
+}
+
+.container-hero__img--mobile {
+    @include mq('desktop-wide') {
+        display: none;
+    }
+
+}
+
+.container-hero__img-mobile_shoes{
+        @include mq('desktop') {
+        display: block;
+    }
+}
+
+.br__proof--me{
+    
+}
+
+.br__diagram-intro--copy, .br__diagram-intro--copy2{
+    @include mq("tablet-wide"){
+        display: none;
+    }
+}
+
+.br__outcomes--diagram{
+    @include mq("tablet-wide"){
+        display: none;
+    }
+}
+
+.br__modernize--diagram{
+    display: none;
+    @include mq("tablet-wide"){
+        display: none;
+    }
+}
+
+
+
+
+
+

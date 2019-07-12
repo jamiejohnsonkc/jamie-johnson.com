@@ -152,8 +152,6 @@ class UpdraftPlus {
 	/**
 	 * Enables automatic updates for the plugin.
 	 *
-	 * Enables automatic updates for the plugin..
-	 *
 	 * @access public
 	 * @see __construct
 	 * @internal uses auto_update_plugin filter
@@ -2102,7 +2100,7 @@ class UpdraftPlus {
 
 			if (empty($useful_checkin) || $useful_checkin < $last_resumption) {
 				$this->log(sprintf('The current run is resumption number %d, and there was nothing useful done on the last run (last useful run: %s) - will not schedule a further attempt until we see something useful happening this time', $resumption_no, $useful_checkin));
-				// Internally, we do actually scheduled a resumption; but only in order to be able to nice handle and log the failure, which otherwise may not be logged
+				// Internally, we do actually schedule a resumption; but only in order to be able to nicely handle and log the failure, which otherwise may not be logged
 				$this->jobdata_set('fail_on_resume', $next_resumption);
 				$schedule_resumption = 1;
 			} else {
@@ -2976,7 +2974,7 @@ class UpdraftPlus {
 	 * @param Boolean $allow_email - if this is false, then no email will be sent
 	 * @param Boolean $force_abort - set to indicate that the user is manually aborting the backup
 	 */
-	private function backup_finish($do_cleanup, $allow_email, $force_abort = false) {
+	public function backup_finish($do_cleanup, $allow_email, $force_abort = false) {
 
 		if (!empty($this->semaphore)) $this->semaphore->unlock();
 
@@ -3008,8 +3006,10 @@ class UpdraftPlus {
 			}
 		} else {
 			if ($this->newresumption_scheduled) {
-				$this->log("There were errors in the uploads, so the 'resume' event is remaining scheduled");
-				$this->jobdata_set('jobstatus', 'resumingforerrors');
+				if ($this->current_resumption + 1 != $this->jobdata_get('fail_on_resume')) {
+					$this->log("There were errors in the uploads, so the 'resume' event is remaining scheduled");
+					$this->jobdata_set('jobstatus', 'resumingforerrors');
+				}
 			}
 			// If there were no errors before moving to the upload stage, on the first run, then bring the resumption back very close. Since this is only attempted on the first run, it is really only an efficiency thing for a quicker finish if there was an unexpected networking event. We don't want to do it straight away every time, as it may be that the cloud service is down - and might be up in 5 minutes time. This was added after seeing a case where resumption 0 got to run for 10 hours... and the resumption 7 that should have picked up the uploading of 1 archive that failed never occurred.
 			if (isset($this->error_count_before_cloud_backup) && 0 === $this->error_count_before_cloud_backup) {
@@ -3066,7 +3066,13 @@ class UpdraftPlus {
 				do_action('updraftplus_remotesend_upload_complete');
 			}
 			if ($do_cleanup) $delete_jobdata = apply_filters('updraftplus_backup_complete', $delete_jobdata);
-		} elseif (false == $this->newresumption_scheduled) {
+		} elseif (false == $this->newresumption_scheduled || $this->current_resumption + 1 == $this->jobdata_get('fail_on_resume')) {
+		
+			if ($this->current_resumption + 1 == $this->jobdata_get('fail_on_resume')) {
+				$this->log("The resumption is being cancelled, as it was only scheduled to enable error reporting, which can be performed now");
+				wp_clear_scheduled_hook('updraft_backup_resume', array($this->current_resumption + 1, $this->nonce));
+			}
+		
 			$send_an_email = true;
 			$final_message = __('The backup attempt has finished, apparently unsuccessfully', 'updraftplus');
 			if (!empty($clone_job)) $this->get_updraftplus_clone()->clone_failed_delete(array('clone_id' => $clone_id, 'secret_token' => $secret_token));
@@ -3643,7 +3649,7 @@ class UpdraftPlus {
 					// Now deal with entries in $skip_these_dirs ending in * or starting with *
 					foreach ($skip_these_dirs as $skip => $sind) {
 						if ('*' == substr($skip, -1, 1) && '*' == substr($skip, 0, 1) && strlen($skip) > 2) {
-							if (strpos($entry, substr($skip, 1, strlen($skip-2))) !== false) {
+							if (strpos($entry, substr($skip, 1, strlen($skip)-2)) !== false) {
 								$this->log("finding files: $entry: skipping: excluded by options (glob)");
 								$add_to_list = false;
 							}
@@ -4074,9 +4080,15 @@ class UpdraftPlus {
 
 	/**
 	 * Sets up the nonce, basic job data, opens a log file for a new restore job, and makes sure that the Updraft_Restorer class is available
+	 *
+	 * @param boolean|string $nonce - the job nonce we want to use or false for a new one
+	 *
+	 * @return void
 	 */
-	public function initiate_restore_job() {
-		$this->backup_time_nonce();
+	public function initiate_restore_job($nonce = false) {
+		$this->backup_time_nonce($nonce);
+		// we reset here so that we ensure the correct jobdata gets loaded while we resume
+		$this->jobdata_reset();
 		$this->jobdata_set('job_type', 'restore');
 		$this->jobdata_set('job_time_ms', $this->job_time_ms);
 		$this->logfile_open($this->nonce);
@@ -4651,6 +4663,8 @@ class UpdraftPlus {
 			'updraftplus_tmp_googledrive_access_token',
 			'updraftplus_dismissedautobackup',
 			'dismissed_general_notices_until',
+			'dismissed_clone_php_notices_until',
+			'dismissed_clone_wc_notices_until',
 			'dismissed_season_notices_until',
 			'updraftplus_dismissedexpiry',
 			'updraftplus_dismisseddashnotice',
@@ -4866,6 +4880,15 @@ class UpdraftPlus {
 				break;
 			case 'shop_premium':
 				return apply_filters('updraftplus_com_shop_premium', 'https://updraftplus.com/shop/updraftplus-premium/');
+				break;
+			case 'shop_vault_5':
+				return apply_filters('updraftplus_com_shop_vault_5', 'https://updraftplus.com/shop/updraftplus-vault-storage-5-gb/');
+				break;
+			case 'shop_vault_15':
+				return apply_filters('updraftplus_com_shop_vault_15', 'https://updraftplus.com/shop/updraftplus-vault-storage-15-gb/');
+				break;
+			case 'shop_vault_50':
+				return apply_filters('updraftplus_com_shop_vault_50', 'https://updraftplus.com/shop/updraftplus-vault-storage-50-gb/');
 				break;
 			default:
 				return 'URL not found ('.$which_page.')';

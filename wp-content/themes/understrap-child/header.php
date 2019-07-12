@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * The header for our theme. 
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
@@ -24,6 +24,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="https://use.typekit.net/hny8rtu.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143791287-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143791287-1');
+</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -39,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="container" >
 			
-				<a href="http://localhost:3000/" class="custom-logo-link" rel="home" itemprop="url">	<img src="http://jamiejohnsonmev2.test/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
+				<a href="/" class="custom-logo-link" rel="home" itemprop="url">	<img src="/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
 
 
 				<div class="navbar-brand mb-0">
@@ -50,7 +59,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-					<span class="navbar-toggler-icon"><img src="http://jamiejohnsonmev2.test/wp-content/uploads/2019/03/hamburger-icon.svg" alt="hamburger-icon" class="style-svg hamburger-icon-svg"></span>
+					<span class="navbar-toggler-icon"><img src="/wp-content/uploads/2019/03/hamburger-icon.svg" alt="hamburger-icon" class="style-svg hamburger-icon-svg"></span>
 				</button>
 
 				<!-- The WordPress Menu goes here -->

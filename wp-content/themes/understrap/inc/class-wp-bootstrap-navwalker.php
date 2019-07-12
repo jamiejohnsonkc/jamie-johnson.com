@@ -5,9 +5,8 @@
  * @package WP-Bootstrap-Navwalker
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /*
  * Class Name: WP_Bootstrap_Navwalker
@@ -183,7 +182,12 @@ if ( ! class_exists( 'Understrap_WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+			if ( '_blank' === $item->target && empty( $item->xfn ) ) { // Thanks to LukaszJaro, see https://github.com/understrap/understrap/issues/973
+				$atts['rel'] = 'noopener noreferrer';
+			} else {
+				$atts['rel'] = $item->xfn;
+			}
+
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth !== 1 ) {
 				$atts['href']          = '#';

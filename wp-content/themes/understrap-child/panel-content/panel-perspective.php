@@ -32,7 +32,7 @@ if (!defined('ABSPATH')) {
 				
 				<div class="flex-item flex-item__b">
 					<div class="header__container">
-						<h3 class="headline">2. Businesses need marketing to evolve</h3> 
+						<h3 class="headline">2. It's Time For Marketing To Evolve</h3> 
 						<div class="expand-button__comtainer"><a href="#perspective-evolve" class="ui-button ui-button__expand expand-button--perspective" id="expand-perspective" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a></div>
 					</div>
 					

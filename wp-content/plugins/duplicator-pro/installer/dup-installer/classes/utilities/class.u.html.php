@@ -24,6 +24,7 @@ class DUPX_U_Html
     {
         self::lightBoxCss();
         self::moreContentCss();
+        self::inputPasswordToggleCss();
     }
 
     /**
@@ -33,6 +34,7 @@ class DUPX_U_Html
     {
         self::lightBoxJs();
         self::moreContentJs();
+        self::inputPasswordToggleJs();
     }
 
     private static function getUniqueId()
@@ -424,6 +426,124 @@ class DUPX_U_Html
 
                     moreCheck(moreCont, moreWrap);
                 });
+            });
+        </script>
+        <?php
+    }
+
+    public static function inputPasswordToggle($name, $id = '', $classes = array(), $attrs = array())
+    {
+        if (!is_array($attrs)) {
+            $attrs = array();
+        }
+        if (!is_array($classes)) {
+            if (empty($classes)) {
+                $classes = array();
+            } else {
+                $classes = array($classes);
+            }
+        }
+        $idAttr    = empty($id) ? '_id_'.$name : $id;
+        $classes[] = 'input-password-group';
+
+        $attrs['type'] = 'password';
+        $attrs['name'] = $name;
+        $attrs['id']   = $idAttr;
+        $attrsHtml     = array();
+
+        foreach ($attrs as $atName => $atValue) {
+            $attrsHtml[] = $atName.'="'.DUPX_U::esc_attr($atValue).'"';
+        }
+        ?>
+        <span class="<?php echo implode(' ', $classes); ?>" >
+            <input <?php echo implode(' ', $attrsHtml); ?> />
+            <button type="button" title="Show the password"><i class="fas fa-eye fa-xs"></i></button>
+        </span>
+        <?php
+    }
+
+    protected static function inputPasswordToggleCss()
+    {
+        ?>
+        <style>
+            .input-password-group {
+                display: inline-block;
+                width: 100%;
+                border: 1px solid darkgray;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+            }
+            .input-password-group input:not([type=checkbox]):not([type=radio]):not([type=button])  {
+                width: calc(100% - 30px) !important;
+                padding: 4px;
+                line-height: 20px;
+                height: 30px;
+                box-sizing: border-box;
+                display: inline-block;
+                border-radius: 0;
+                border: 0 none;
+                border-right: 1px solid darkgray;
+            }
+            .input-password-group button {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                border: 0 none;
+                overflow: hidden;
+                float: right;
+                cursor: pointer;
+            }
+
+            .input-password-group button i {
+                line-height: 30px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .input-password-group .parsley-errors-list {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+            
+        </style>
+        <?php
+    }
+
+    protected static function inputPasswordToggleJs()
+    {
+        ?>
+        <script>
+            $(document).ready(function () {
+                $('.input-password-group').each(function () {
+                    var group = $(this);
+                    var pwdInput = group.find('input');
+                    var pwdLock = group.find('button');
+
+                    pwdLock.click(function () {
+                        if (pwdInput.attr('type') === 'password') {
+                            pwdInput.attr({
+                                'type': 'text',
+                                'title': 'Hide the password'
+                            });
+                            pwdLock.find('i')
+                                    .removeClass('fa-eye')
+                                    .addClass('fa-eye-slash');
+                        } else {
+                            pwdInput.attr({
+                                'type': 'password',
+                                'title': 'Show the password'
+                            });
+                            pwdLock.find('i').removeClass('fa-eye-slash').addClass('fa-eye');
+                        }
+                    });
+                });
+
             });
         </script>
         <?php

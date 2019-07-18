@@ -252,7 +252,7 @@ TOOL-BAR -->
 
 	$confirm1 = new DUP_PRO_UI_Dialog();
 	$confirm1->title			 = DUP_PRO_U::__('Delete Storage?');
-	$confirm1->message			 = DUP_PRO_U::__('Are you sure, you want to delete the selected storage(s)?');
+	$confirm1->message			 = DUP_PRO_U::__('Are you sure you want to delete the selected storage(s)?');
 	$confirm1->message			.= '<br/>';
 	$confirm1->message			.= DUP_PRO_U::__('<small><i>Note: This action removes all storages.</i></small>');
 	$confirm1->progressText      = DUP_PRO_U::__('Removing Storages, Please Wait...');
@@ -261,7 +261,7 @@ TOOL-BAR -->
 
     $confirm2 = new DUP_PRO_UI_Dialog();
     $confirm2->title            = $confirm1->title;
-	$confirm2->message          = DUP_PRO_U::__('Are you sure, you want to delete this storage?');
+	$confirm2->message          = DUP_PRO_U::__('Are you sure you want to delete this storage?');
     $confirm2->progressText     = $confirm1->progressText;
 	$confirm2->jsCallback		= 'DupPro.Storage.DeleteThis(this)';
 	$confirm2->initConfirm();

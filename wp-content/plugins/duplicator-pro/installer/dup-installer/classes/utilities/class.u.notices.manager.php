@@ -88,7 +88,7 @@ final class DUPX_NOTICE_MANAGER
             $notices['finalReport'][$uniqueId] = $notice->toArray();
         }
 
-        $json = defined('JSON_PRETTY_PRINT') ? json_encode($notices, JSON_PRETTY_PRINT) : json_encode($notices);
+        $json = DupProSnapJsonU::wp_json_encode_pprint($notices);
         file_put_contents($this->persistanceFile, $json);
     }
 

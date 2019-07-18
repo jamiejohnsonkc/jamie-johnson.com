@@ -2452,6 +2452,7 @@ display: flex;
   width: 61%;
   margin: 0 auto;
   display: block;
+
 }
 
 .proof-quals {
@@ -2462,6 +2463,13 @@ display: flex;
   @include vr($margin: 2 0 2 0);
   @include make-col-ready;
   @include make-col(12);
+  @include mq('tablet'){
+    // height: em;
+    width: 74em;
+  }
+@include mq('desktop'){
+  margin: 0;
+}
 }
 
 .proof__panel-content_carousel {

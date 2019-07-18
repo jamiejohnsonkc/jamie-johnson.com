@@ -251,7 +251,7 @@ function DUP_PRO_Type_Viewer($opts)
 						DUP_PRO_Type_Viewer(array('mu2' => 0, 'lic' => $global->license_limit));
 						break;
 					case DUP_PRO_License_Type::BusinessGold:
-						DUP_PRO_U::esc_html_e("Business");
+						DUP_PRO_U::esc_html_e("Business/Gold");
 						DUP_PRO_Type_Viewer(array('mu2' => 1, 'lic' => 'Unlimited'));
 						break;
 					default:

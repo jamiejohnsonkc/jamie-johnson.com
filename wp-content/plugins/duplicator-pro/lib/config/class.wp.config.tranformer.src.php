@@ -59,7 +59,7 @@ if (!class_exists('WPConfigTransformerSrc')):
          *
          * @return array
          */
-        public function get_value($type, $name)
+        public function get_value($type, $name, $get_real_value = true)
         {
             $this->wp_configs = $this->parse_wp_config($this->wp_config_src);
 
@@ -69,12 +69,11 @@ if (!class_exists('WPConfigTransformerSrc')):
 
             // Duplicator Extra
             $val = $this->wp_configs[$type][$name]['value'];
-            if (is_string($val)) {
-                $val = trim($val, '"');
-                $val = trim($val, "'");
+            if ($get_real_value) {
+                return self::getRealValFromVal($val);
+            } else {
+                return $val;
             }
-
-            return $val;
         }
 
         /**
@@ -89,5 +88,6 @@ if (!class_exists('WPConfigTransformerSrc')):
             return true;
         }
     }
+
 
 endif;

@@ -77,7 +77,7 @@ class DUPX_DB
      */
     public static function countTableRows($dbh, $name)
     {
-        $total = mysqli_query($dbh, "SELECT COUNT(*) FROM `$name`");
+        $total = mysqli_query($dbh, "SELECT COUNT(*) FROM `".mysqli_real_escape_string($dbh, $name)."`");
         if ($total) {
             $total = @mysqli_fetch_array($total);
             return $total[0];
@@ -120,9 +120,11 @@ class DUPX_DB
                 $localhost[] = $row["Collation"];
             }
 
-            foreach ($collations as $key => $val) {
-                $status[$key]['name']  = $val;
-                $status[$key]['found'] = (in_array($val, $localhost)) ? 1 : 0;
+            if (DUPX_U::isTraversable($collations)) {
+                foreach ($collations as $key => $val) {
+                    $status[$key]['name']  = $val;
+                    $status[$key]['found'] = (in_array($val, $localhost)) ? 1 : 0;
+                }
             }
         }
         $result->free();

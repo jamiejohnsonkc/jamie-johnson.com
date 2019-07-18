@@ -1,6 +1,7 @@
 <?php
 if (!defined("ABSPATH") && !defined("DUPXABSPATH"))
     die("");
+
 if(!class_exists('DupArchiveJsonU')) {
 class DupArchiveJsonU
 {
@@ -15,15 +16,7 @@ class DupArchiveJsonU
 
     public static function customEncode($value, $iteration = 1)
     {
-        if (function_exists('wp_json_encode')) {
-            $encoded = wp_json_encode($value);
-        } else {
-            if (version_compare(PHP_VERSION, '5.4.0') >= 0) {
-                $encoded = json_encode($value, JSON_PRETTY_PRINT);
-            } else {
-                $encoded = json_encode($value);
-            }
-        }
+        $encoded = DupProSnapJsonU::wp_json_encode_pprint($value);
 
         switch (json_last_error()) {
             case JSON_ERROR_NONE:
@@ -50,7 +43,7 @@ class DupArchiveJsonU
 
     public static function encode($value, $options = 0)
     {
-        $result = json_encode($value, $options);
+        $result = DupProSnapJsonU::wp_json_encode($value, $options);
 
         if ($result !== FALSE) {
 

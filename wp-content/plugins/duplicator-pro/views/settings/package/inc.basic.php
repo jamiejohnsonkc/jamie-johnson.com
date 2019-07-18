@@ -4,7 +4,7 @@ defined("ABSPATH") or die("");
 
 $is_zip_available			= (DUP_PRO_Zip_U::getShellExecZipPath() != null);
 $is_shellexec_on			= DUP_PRO_Shell_U::isShellExecEnabled();
-$phpdump_chunkopts			= array("20", "100", "500", "1000", "2000");
+
 $user_id = get_current_user_id();
 $package_ui_created = is_numeric(get_user_meta($user_id,'duplicator_pro_created_format',true)) ? get_user_meta($user_id,'duplicator_pro_created_format',true) : 1; //Old option was $global->package_ui_created
 
@@ -73,19 +73,20 @@ class DUP_PRO_UI_Settings_General_Basic
 
     public static function getMySQLDumpMessage($mysqlDumpFound = false, $mysqlDumpPath = '')
     { ?>
-        <?php if ( $mysqlDumpFound ) : ?>
+        <?php if ($mysqlDumpFound) : ?>
             <div class="dup-feature-found">
-                <i class="fa fa-check-circle"></i>
-                <?php DUP_PRO_U::esc_html_e("Successfully Found:"); ?> &nbsp;
-                <i><?php echo $mysqlDumpPath ?></i>
-            </div><br/>
+				<?php echo $mysqlDumpPath ?> &nbsp;
+                <small>
+					<i class="fa fa-check-circle"></i>&nbsp;<i><?php DUP_PRO_U::esc_html_e("Successfully Found"); ?></i>
+				</small>
+            </div>
         <?php else : ?>
             <div class="dup-feature-notfound">
                 <i class="fa fa-exclamation-triangle fa-sm" aria-hidden="true"></i>
                 <?php
                     self::getMySqlDumpPathProblems($mysqlDumpPath, !empty($mysqlDumpPath));
                 ?>
-            </div><br/>
+            </div>
         <?php endif;
     }
 
@@ -117,7 +118,7 @@ class DUP_PRO_UI_Settings_General_Basic
 				DUP_PRO_U::esc_html_e("If the problem persist contact your server admin for the correct path. For a list of approved providers that support mysqldump ");
 				echo "<a href='https://snapcreek.com/wordpress-hosting/' target='_blank'>".DUP_PRO_U::esc_html__("click here")."</a>.";
 			} else {
-				DUP_PRO_U::esc_html_e('The mysqldump program was not found at its default location. Please try to use custom mysqldump path to resolve this issue.');
+				DUP_PRO_U::esc_html_e('The mysqldump program was not found at its default location. To use mysqldump, ask your host to install it or for a custom mysqldump path.');
 			}
 		}
 
@@ -168,7 +169,6 @@ DATABASE -->
 
 			<!-- MYSQLDUMP IN-ACTIVE -->
 			<?php if (! $is_shellexec_on) : ?>
-
 				<div class="dup-feature-notfound">
 					<?php
 						echo DUP_PRO_U::__("In order to use mysqldump the PHP function shell_exec needs to be enabled. This server currently does not allow ")
@@ -178,26 +178,40 @@ DATABASE -->
 							. "until this issue is resolved by your hosting provider.";
 					?>
 				</div><br/>
-
 			<!-- MYSQLDUMP ACTIVE -->
 			<?php else : ?>
 
+					<label><?php DUP_PRO_U::esc_html_e("Current Path:"); ?></label>
 					<?php DUP_PRO_UI_Settings_General_Basic::getMySQLDumpMessage($mysqlDumpFound, (!empty($mysqlDumpPath) ? $mysqlDumpPath : $global->package_mysqldump_path)); ?>
+					<br/>
+                    <label for="_package_mysqldump_qrylimit"><?php DUP_PRO_U::esc_html_e("Query Limit Size"); ?>:</label>
+                    <select name="_package_mysqldump_qrylimit" id="_package_mysqldump_qrylimit" style="width:70px">
+                        <?php
+                            foreach (DUP_PRO_Constants::getMysqlDumpChunkSizes() as $value => $label) {
+                                $selected = ( $global->package_mysqldump_qrylimit == $value ? "selected='selected'" : '' );
+                                echo "<option {$selected} value='".esc_attr($value)."'>".esc_html($label).'</option>';
+                            }
+                        ?>
+                    </select>
+					<i style="margin-right:7px" class="fas fa-question-circle fa-sm"
+						data-tooltip-title="<?php DUP_PRO_U::esc_attr_e("MYSQL query Limit Size:"); ?>"
+						data-tooltip="<?php DUP_PRO_U::esc_attr_e('A higher limit size will speed up the database build time, however it will use more memory.  If your host has memory caps start off low.'); ?>"></i>
 
-					<label><?php DUP_PRO_U::esc_html_e("Custom Path"); ?></label>
-					<i class="fas fa-question-circle fa-sm"
+                    <br>
+					<label><?php DUP_PRO_U::esc_html_e("Custom Path:"); ?></label>
+					<input class="wide-input" type="text" name="_package_mysqldump_path" id="_package_mysqldump_path" value="<?php echo esc_attr($global->package_mysqldump_path); ?>"  placeholder="<?php DUP_PRO_U::esc_attr_e("/usr/bin/mypath/mysqldump"); ?>" />
+                    <i class="fas fa-question-circle fa-sm"
 						data-tooltip-title="<?php DUP_PRO_U::esc_attr_e("mysqldump"); ?>"
 						data-tooltip="<?php DUP_PRO_U::esc_attr_e('Add a custom path if the path to mysqldump is not properly detected.   For all paths use a forward slash as the '
 							. 'path seperator.  On Linux systems use mysqldump for Windows systems use mysqldump.exe.  If the path tried does not work please contact your hosting '
-							. 'provider for details on the correct path.'); ?>"></i><br/>
-					<input class="wide-input" type="text" name="_package_mysqldump_path" id="_package_mysqldump_path" value="<?php echo esc_attr($global->package_mysqldump_path); ?>"  placeholder="<?php DUP_PRO_U::esc_attr_e("/usr/bin/mypath/mysqldump"); ?>" />
+							. 'provider for details on the correct path.'); ?>"></i>
 					<br/>
+
 			<?php endif; ?>
 		</div>
 
 		<!-- PHP OPTION -->
 		<div class="engine-sub-opts" id="dbengine-details-2" style="display:none; line-height: 35px; margin-top:-5px">
-
 			<label><?php DUP_PRO_U::esc_html_e("Mode"); ?>:</label>
 			<select name="_phpdump_mode">
 				<option <?php echo DUP_PRO_UI::echoSelected($global->package_phpdump_mode == DUP_PRO_PHPDump_Mode::Multithreaded); ?> value="<?php echo DUP_PRO_PHPDump_Mode::Multithreaded ?>">
@@ -218,16 +232,15 @@ DATABASE -->
 
 			<select name="_package_phpdump_qrylimit" id="_package_phpdump_qrylimit" style="width:70px">
 				<?php
-					foreach ($phpdump_chunkopts as $value) {
+					foreach (DUP_PRO_Constants::getPhpDumpChunkSizes() as $value) {
 						$selected = ( $global->package_phpdump_qrylimit == $value ? "selected='selected'" : '' );
 						echo "<option {$selected} value='".esc_attr($value)."'>".number_format($value).'</option>';
 					}
 				?>
 			</select>
-						<i style="margin-right:7px" class="fas fa-question-circle fa-sm"
+			<i style="margin-right:7px" class="fas fa-question-circle fa-sm"
 			   data-tooltip-title="<?php DUP_PRO_U::esc_attr_e("PHP Query Limit Size:"); ?>"
 			   data-tooltip="<?php DUP_PRO_U::esc_attr_e('A higher limit size will speed up the database build time, however it will use more memory.  If your host has memory caps start off low.'); ?>"></i>
-
 		</div>
 	</td>
 </tr>
@@ -320,7 +333,7 @@ ARCHIVE ENGINE -->
 				<input style="width:84px;" maxlength="4"
 					   data-parsley-required data-parsley-errors-container="#ziparchive_chunk_size_error_container" data-parsley-min="5" data-parsley-type="number"
 					   type="text" name="ziparchive_chunk_size_in_mb" id="ziparchive_chunk_size_in_mb" value="<?php echo $global->ziparchive_chunk_size_in_mb; ?>" />
-				<label><?php DUP_PRO_U::esc_html_e('MB'); ?></label>
+				<?php DUP_PRO_U::esc_html_e('MB'); ?>
 				<i style="margin-right:7px" class="fas fa-question-circle fa-sm"
 					data-tooltip-title="<?php DUP_PRO_U::esc_attr_e("PHP ZipArchive Buffer:"); ?>"
 					data-tooltip="<?php DUP_PRO_U::esc_attr_e('Buffer size only applies to multi-threaded requests and indicates how large an archive will get before a close is registered.  Higher values are faster but can be more unstable based on the hosts max_execution time.'); ?>"></i>

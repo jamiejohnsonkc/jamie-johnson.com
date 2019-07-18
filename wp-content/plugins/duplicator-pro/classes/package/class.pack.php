@@ -1,7 +1,5 @@
 <?php
-defined("ABSPATH") or die("");
-if (!defined('DUPLICATOR_PRO_VERSION'))
-    exit; // Exit if accessed directly
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
 require_once (DUPLICATOR_PRO_PLUGIN_PATH . 'classes/entities/class.global.entity.php');
 require_once (DUPLICATOR_PRO_PLUGIN_PATH . 'classes/entities/class.storage.entity.php');
@@ -177,18 +175,73 @@ class DUP_PRO_Package
     public $ziparchive_mode;
 
     //Objects
+
+    /**
+     *
+     * @var DUP_PRO_Archive
+     */
     public $Archive;
+
+    /**
+     *
+     * @var DUP_PRO_Multisite
+     */
     public $Multisite;
+
+    /**
+     *
+     * @var DUP_PRO_Installer
+     */
     public $Installer;
+
+    /**
+    *
+    * @var DUP_PRO_Database
+    */
     public $Database;
+
+    /**
+     *
+     * @var int
+     */
     public $Status = DUP_PRO_PackageStatus::PRE_PROCESS;
+
+    /**
+     *
+     * @var int
+     */
     public $schedule_id = -1;   // Schedule ID that created this
     
     // Chunking progress through build and storage uploads
+
+    /**
+     *
+     * @var DUP_PRO_Build_Progress
+     */
     public $build_progress;
+
+    /**
+     *
+     * @var DUP_PRO_Build_Progress
+     */
     public $db_build_progress;
-    public $upload_infos;
+
+    /**
+     *
+     * @var DUP_PRO_Package_Upload_Info[]
+     */
+    public $upload_infos = array();
+
+    /**
+     *
+     * @var int
+     */
     public $active_storage_id = -1;
+
+    /**
+     *
+     * @var int
+     */
     public $template_id = -1;
 
     public function add_log_to_zip($zip_filepath)
@@ -226,6 +279,26 @@ class DUP_PRO_Package
         $default_upload_info->storage_id = DUP_PRO_Virtual_Storage_IDs::Default_Local;
 
         array_push($this->upload_infos, $default_upload_info);
+    }
+
+    function __destruct()
+    {
+        unset($this->ID);
+        unset($this->Version);
+        unset($this->Name);
+        unset($this->Notes);
+        unset($this->StoreURL);
+        unset($this->StorePath);
+        unset($this->Database);
+        unset($this->Archive);
+        unset($this->Multisite);
+        unset($this->Installer);
+        unset($this->build_progress);
+        unset($this->db_build_progress);
+        foreach ($this->upload_infos as $obj) {
+            unset($obj);
+        }
+        unset($this->upload_infos);
     }
 
     public function cancel_all_uploads()
@@ -406,7 +479,7 @@ class DUP_PRO_Package
 
         if ($file_type == DUP_PRO_Package_File_Type::Installer) {
             DUP_PRO_LOG::trace("Installer requested");
-            $file_name = $this->get_installer_filename();
+            $file_name = apply_filters('duplicator_pro_installer_file_path', $this->get_installer_filename());
         } else if ($file_type == DUP_PRO_Package_File_Type::Archive) {
             DUP_PRO_LOG::trace("Archive requested");
             $file_name = $this->get_archive_filename();
@@ -477,7 +550,7 @@ class DUP_PRO_Package
                 )
             );
 
-        $validator->explode_filter_custom($this->Archive->FilterDirs, ';' , DUP_PRO_Validator::FILTER_VALIDATE_FOLDER ,
+        $validator->explode_filter_custom($this->Archive->FilterDirs, ';' , DUP_PRO_Validator::FILTER_VALIDATE_FOLDER_WITH_COMMENT ,
             array(  'valkey' => 'FilterDirs' ,
                     'errmsg' => __('Directories: <b>%1$s</b> isn\'t a valid path', 'duplicator'),
                 )
@@ -489,7 +562,7 @@ class DUP_PRO_Package
                 )
             );
 
-        $validator->explode_filter_custom($this->Archive->FilterFiles, ';' , DUP_PRO_Validator::FILTER_VALIDATE_FILE ,
+        $validator->explode_filter_custom($this->Archive->FilterFiles, ';' , DUP_PRO_Validator::FILTER_VALIDATE_FILE_WITH_COMMENT ,
             array(  'valkey' => 'FilterFiles' ,
                     'errmsg' => __('Files: <b>%1$s</b> isn\'t a valid file name', 'duplicator'),
                 )
@@ -609,33 +682,226 @@ class DUP_PRO_Package
         return $complete;
     }
 
-    public static function get_all()
+    /**
+     *
+     * @param array $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::COMPLETED ]
+     *                              ]
+     * @return string
+     */
+    protected static function statusContitionsToWhere($conditions = array())
+    {
+        $accepted_op = array('<', '>', '=', '<>', '>=', '<=');
+        $relation    = (isset($conditions['relation']) && strtoupper($conditions['relation']) == 'OR') ? ' OR ' : ' AND ';
+        unset($conditions['relation']);
+
+        $where = '';
+        if (!empty($conditions)) {
+            $str_conds = array();
+
+            foreach ($conditions as $cond) {
+                $op          = (isset($cond['op']) && in_array($cond['op'], $accepted_op)) ? $cond['op'] : '=';
+                $status      = isset($cond['status']) ? (int) $cond['status'] : 0;
+                $str_conds[] = 'status '.$op.' '.$status;
+            }
+
+            $where = ' WHERE '.implode($relation, $str_conds).' ';
+        }
+
+        return $where;
+    }
+
+    /**
+     * Get packages with status conditions and/or pagination
+     *
+     * @global wpdb $wpdb
+     *
+     * @param array             //  $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::COMPLETED ]
+     *                              ]
+     *                              if empty get all pacages
+     * @param int $limit        // max row numbers fi false the limit is PHP_INT_MAX
+     * @param int $offset       // offset 0 is at begin
+     * @param string $orderBy   // default `id` ASC if empty no order
+     * @param string $resultType    //  ids => int[]
+     *                                  row => row without package blob
+     *                                  fullRow => row with package blob
+     *                                  objs => array of DUP_Package objects
+     *
+     * @return DUP_PRO_Package[]|array[]|int[]
+     */
+    public static function get_packages_by_status($conditions = array(), $limit = false, $offset = 0, $orderBy = '`id` ASC', $resultType = 'objs')
     {
         global $wpdb;
-        $table = $wpdb->base_prefix . "duplicator_pro_packages";
-        $packages = array();
-        $rows = $wpdb->get_results("SELECT * FROM `{$table}` ORDER BY ID ASC");
+        $table = $wpdb->base_prefix."duplicator_pro_packages";
+        $where = self::statusContitionsToWhere($conditions);
+
+        $packages   = array();
+        $offsetStr  = ' OFFSET '.(int) $offset;
+        $limitStr   = ' LIMIT '.($limit !== false ? max(0, $limit) : PHP_INT_MAX);
+        $orderByStr = empty($orderBy) ? '' : ' ORDER BY '.$orderBy.' ';
+        switch ($resultType) {
+            case 'ids':
+                $cols = '`id`';
+                break;
+            case 'row':
+                $cols = '`id`,`name`,`hash`,`status`,`created`,`owner`';
+                break;
+            case 'fullRow':
+            case 'objs':
+            default:
+                $cols = '*';
+                break;
+        }
+
+        $rows = $wpdb->get_results('SELECT '.$cols.' FROM `'.$table.'` '.$where.$orderByStr.$limitStr.$offsetStr);
         if ($rows != null) {
-            foreach ($rows as $row) {
-                $package = self::package_from_row($row);
-                if ($package != null) {
-                    array_push($packages, $package);
-                }
+            switch ($resultType) {
+                case 'ids':
+                    foreach ($rows as $row) {
+                        $packages[] = $row->id;
+                    }
+                    break;
+                case 'row':
+                case 'fullRow':
+                    $packages = $rows;
+                    break;
+                case 'objs':
+                default:
+                    foreach ($rows as $row) {
+                        $package = self::package_from_row($row);
+                        if ($package != null) {
+                            $packages[] = $package;
+                        }
+                    }
             }
         }
         return $packages;
     }
 
-    public static function get_all_by_type($type)
+    /**
+     * Get packages row db with status conditions and/or pagination
+     *
+     * @param array             //  $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::COMPLETED ]
+     *                              ]
+     *                              if empty get all pacages
+     * @param int $limit        // max row numbers
+     * @param int $offset       // offset 0 is at begin
+     * @param string $orderBy   // default `id` ASC if empty no order
+     *
+     * @return array[]      // return row database without package blob
+     */
+    public static function get_row_by_status($conditions = array(), $limit = false, $offset = 0, $orderBy = '`id` ASC')
     {
-        $filtered_packages = array();
-        $packages = self::get_all();
-        foreach ($packages as $package) {
-            if ($package->Type == $type) {
-                array_push($filtered_packages, $package);
+        return self::get_packages_by_status($conditions, $limit, $offset, $orderBy, 'row');
+    }
+
+    /**
+     * Get packages ids with status conditions and/or pagination
+     *
+     * @param array             //  $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PackageStatus::COMPLETED ]
+     *                              ]
+     *                              if empty get all pacages
+     * @param int $limit        // max row numbers
+     * @param int $offset       // offset 0 is at begin
+     * @param string $orderBy   // default `id` ASC if empty no order
+     *
+     * @return array[]      // return row database without package blob
+     */
+    public static function get_ids_by_status($conditions = array(), $limit = false, $offset = 0, $orderBy = '`id` ASC')
+    {
+        return self::get_packages_by_status($conditions, $limit, $offset, $orderBy, 'ids');
+    }
+
+    /**
+     * count package with status condition
+     *
+     * @global wpdb $wpdb
+     * @param array $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::COMPLETED ]
+     *                              ]
+     * @return int
+     */
+    public static function count_by_status($conditions = array())
+    {
+        global $wpdb;
+
+        $table = $wpdb->base_prefix."duplicator_pro_packages";
+        $where = self::statusContitionsToWhere($conditions);
+
+        $count = $wpdb->get_var("SELECT count(id) FROM `{$table}` ".$where);
+        return $count;
+    }
+
+    /**
+     * Execute $callback function foreach package result
+     * For each iteration the memory is released
+     *
+     * @param callable $callback    // function callback(DUP_PRO_Package $package)
+     * @param array             //  $conditions es. [
+     *                                  relation = 'AND',
+     *                                  [ 'op' => '>=' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::START ]
+     *                                  [ 'op' => '<' ,
+     *                                    'status' =>  DUP_PRO_PackageStatus::COMPLETED ]
+     *                              ]
+     *                              if empty get all pacages
+     * @param int $limit        // max row numbers
+     * @param int $offset       // offset 0 is at begin
+     * @param string $orderBy   // default `id` ASC if empty no order
+     *
+     * @return void
+     */
+    public static function by_status_callback($callback, $conditions = array(), $limit = false, $offset = 0, $orderBy = '`id` ASC')
+    {
+        if (!is_callable($callback)) {
+            throw new Exception('No callback function passed');
+        }
+
+        $offset      = max(0, $offset);
+        $numPackages = self::count_by_status($conditions);
+        $maxLimit    = $offset + ($limit !== false ? max(0, $limit) : PHP_INT_MAX - $offset);
+        $numPackages = min($maxLimit, $numPackages);
+        $orderByStr = empty($orderBy) ? '' : ' ORDER BY '.$orderBy.' ';
+
+        global $wpdb;
+        $table = $wpdb->base_prefix."duplicator_pro_packages";
+        $where = self::statusContitionsToWhere($conditions);
+        $sql   = 'SELECT * FROM `'.$table.'` '.$where.$orderByStr.' LIMIT 1 OFFSET ';
+
+        for (; $offset < $numPackages; $offset ++) {
+            $rows = $wpdb->get_results($sql.$offset);
+            if ($rows != null) {
+                $package = self::package_from_row($rows[0]);
+                if ($package != null) {
+                    call_user_func($callback, $package);
+                    unset($package);
+                }
+                unset($rows);
             }
         }
-        return $filtered_packages;
     }
 
     public function set_for_cancel()
@@ -668,17 +934,31 @@ class DUP_PRO_Package
         }
     }
 
+    /**
+     *
+     * @global wpdb $wpdb
+     * @param int $id
+     * @return DUP_PRO_Package|bool false if fail
+     */
     public static function get_by_id($id)
     {
         global $wpdb;
-        $table = $wpdb->base_prefix . "duplicator_pro_packages";
-        $sql = $wpdb->prepare("SELECT * FROM `{$table}` where ID = %d", $id);
-        $row = $wpdb->get_row($sql);
+        $table = $wpdb->base_prefix."duplicator_pro_packages";
+        $sql   = $wpdb->prepare("SELECT * FROM `{$table}` where ID = %d", $id);
+        $row   = $wpdb->get_row($sql);
         //DUP_PRO_LOG::traceObject('Object row', $row);
-        return self::package_from_row($row);
+        if ($row) {
+            return self::package_from_row($row);
+        } else {
+            return false;
+        }
     }
 
-    // returns either package or null if can't get it
+    /**
+     *
+     * @param object $row
+     * @return null|DUP_PRO_Package
+     */
     private static function package_from_row($row)
     {
         $package = null;
@@ -693,22 +973,28 @@ class DUP_PRO_Package
                     DUP_PRO_LOG::traceError("Problem deserializing package or package not an object");
                 } else {
                     // Since ID was stuffed into the package body the ID was known cant rely on it thus just do a quick copy on construction
-                    $package->ID = $row->id;
+                    $package->ID = (int) $row->id;
                 }
             }
         }
         return $package;
     }
 
+    /**
+     *
+     * @global wpdb $wpdb
+     * @param boolean $delete_temp Deprecated, always true
+     * @return boolean
+     */
     public function delete($delete_temp = false)
     {
-        $ret_val = false;
+        $ret_val   = false;
         global $wpdb;
-        $tblName = $wpdb->base_prefix . 'duplicator_pro_packages';
+        $tblName   = $wpdb->base_prefix.'duplicator_pro_packages';
         $getResult = $wpdb->get_results($wpdb->prepare("SELECT name, hash FROM `{$tblName}` WHERE id = %d", $this->ID), ARRAY_A);
 
         if ($getResult) {
-            $row = $getResult[0];
+            $row       = $getResult[0];
             $name_hash = "{$row['name']}_{$row['hash']}";
             $delResult = $wpdb->query($wpdb->prepare("DELETE FROM `{$tblName}` WHERE id = %d", $this->ID));
 
@@ -778,70 +1064,40 @@ class DUP_PRO_Package
 
     public static function delete_default_local_files($name_hash, $delete_temp, $delete_log_files = true)
     {
-        /* @var $global DUP_PRO_Global_Entity */
-        $global = DUP_PRO_Global_Entity::get_instance();
-
-        $archive_cfg_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_archive.txt");
-        $archive_temppath_pattern = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_archive.*");
-        $database_sql_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_database.sql");
-        $installer_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_{$global->installer_base_name}");
-        $scan_json_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_scan.json");
-        $files_list_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_files.txt");
-        $dirs_list_temppath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_dirs.txt");
-
-        $archive_cfg_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_archive.txt");
-        $archive_filepath_pattern = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_archive.*");
-        $database_sql_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_database.sql");
-        $installer_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_{$global->installer_base_name}");
-        $log_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_log.txt");
-        $scan_json_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_scan.json");
-        $files_list_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_files.txt");
-        $dirs_list_filepath = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_dirs.txt");
-
-        //Perms
         if ($delete_temp) {
-            @chmod($archive_cfg_temppath, 0644);
-            @chmod($database_sql_temppath, 0644);
-            @chmod($installer_temppath, 0644);
-            @chmod($scan_json_temppath, 0644);
-            @chmod($files_list_temppath, 0644);
-            @chmod($dirs_list_temppath, 0644);
-
-            DupProSnapLibIOU::chmodPattern($archive_temppath_pattern, 0644);
+            // It's written in comment because It might be useful in future
+            /*
+            if (wp_is_writable(DUPLICATOR_PRO_SSDIR_PATH_TMP)) {
+                DupProSnapLibIOU::chmod(DUPLICATOR_PRO_SSDIR_PATH_TMP, 0755);
+            }
+            */
+            $glob_temp_package_files = glob(DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . "/{$name_hash}_*"));
+            foreach ($glob_temp_package_files as $glob_temp_package_file) {
+                DupProSnapLibIOU::chmod($glob_temp_package_file, 0644);
+                @unlink($glob_temp_package_file);
+            }
         }
 
-        @chmod($archive_cfg_filepath, 0644);
-        @chmod($database_sql_filepath, 0644);
-        @chmod($installer_filepath, 0644);
-        @chmod($scan_json_filepath, 0644);
-        @chmod($files_list_filepath, 0644);
-        @chmod($dirs_list_filepath, 0644);
-        DupProSnapLibIOU::chmodPattern($archive_filepath_pattern, 0644);
-
-        if ($delete_log_files) {
-            @chmod($log_filepath, 0644);
+        // It's written in comment because It might be useful in future
+        /*
+        if (wp_is_writable(DUPLICATOR_PRO_SSDIR_PATH)) {
+            DupProSnapLibIOU::chmod(DUPLICATOR_PRO_SSDIR_PATH, 0755);
         }
-
-        if ($delete_temp) {
-            @unlink($archive_cfg_temppath);
-            @unlink($database_sql_temppath);
-            @unlink($installer_temppath);
-            @unlink($scan_json_temppath);
-            @unlink($files_list_temppath);
-            @unlink($dirs_list_temppath);
-            DupProSnapLibIOU::rmPattern($archive_temppath_pattern);
-        }
-
-        @unlink($archive_cfg_temppath);
-        @unlink($database_sql_filepath);
-        @unlink($installer_filepath);
-        @unlink($scan_json_filepath);
-        @unlink($files_list_filepath);
-        @unlink($dirs_list_filepath);
-        DupProSnapLibIOU::rmPattern($archive_filepath_pattern);
-
-        if ($delete_log_files) {
-            @unlink($log_filepath);
+        */
+        $log_suffix = '_log.txt';
+        $len_log_suffix = strlen($log_suffix);
+        $glob_package_files = glob(DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH . "/{$name_hash}_*"));
+        foreach ($glob_package_files as $glob_package_file) {
+            $glob_package_file_log_suffix = substr($glob_package_file, -$len_log_suffix);
+            if ($glob_package_file_log_suffix === $log_suffix) {
+                if ($delete_log_files) {
+                    DupProSnapLibIOU::chmod($glob_package_file, 0644);
+                    @unlink($glob_package_file);    
+                }
+            } else {
+                DupProSnapLibIOU::chmod($glob_package_file, 0644);
+                @unlink($glob_package_file);
+            }
         }
     }
 
@@ -884,7 +1140,6 @@ class DUP_PRO_Package
             }
         }
 
-
         //@todo Find a better approach
         if (property_exists($stdobject->Database, 'info')) {
             DUP_PRO_U::objectCopy($stdobject->Database->info, $package->Database->info);
@@ -907,12 +1162,11 @@ class DUP_PRO_Package
         DUP_PRO_U::objectCopy($stdobject->build_progress, $package->build_progress);
         if (property_exists($stdobject->build_progress, 'custom_data') && ($stdobject->build_progress->custom_data != null)) {
             //       DUP_PRO_LOG::traceObject('build prog', $stdobject->build_progress);
-
             $package->build_progress->custom_data = new stdClass();
-
             DUP_PRO_U::objectCopy($stdobject->build_progress->custom_data, $package->build_progress->custom_data);
         }
-
+        unset($stdobject);
+        
         return $package;
     }
 
@@ -986,20 +1240,22 @@ class DUP_PRO_Package
         return $this->NameHash . '_dir.txt';
     }
 
-
-
+    /**
+     *
+     * @return null|DUP_PRO_Package
+     */
     public static function get_next_active_package()
     {
-        $packages = self::get_all();
-
-        if (count($packages) > 0) {
-            foreach ($packages as $package) {
-                if (($package->Status >= 0) && ($package->Status < 100)) {
-                    return $package;
-                }
-            }
+        $result = self::get_packages_by_status(array(
+                'relation' => 'AND',
+                array('op' => '>=', 'status' => DUP_PRO_PackageStatus::PRE_PROCESS),
+                array('op' => '<', 'status' => DUP_PRO_PackageStatus::COMPLETE)
+                ), 1, 0, '`id` ASC');
+        if (count($result) > 0) {
+            return $result[0];
+        } else {
+            return null;
         }
-        return null;
     }
 
     // Quickly determine without going through the overhead of creating package objects
@@ -1124,8 +1380,7 @@ class DUP_PRO_Package
             $report['ARC']['FilterDirsAll']       = $this->Archive->FilterDirsAll;
             $report['ARC']['FilterFilesAll']      = $this->Archive->FilterFilesAll;
             $report['ARC']['FilterExtsAll']       = $this->Archive->FilterExtsAll;
-            $report['ARC']['FilterInfo']          = $this->Archive->FilterInfo;
-
+            
             if ($global->archive_build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive) {
                 $site_warning_size = DUPLICATOR_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE;
             } else {
@@ -1174,10 +1429,9 @@ class DUP_PRO_Package
 
             if ($global->json_mode == DUP_PRO_JSON_Mode::PHP) {
                 try {
-                    $json = DUP_PRO_JSON_U::encodePrettyPrint($report);
+                    $json = DupProSnapJsonU::wp_json_encode_pprint($report);
                 } catch (Exception $jex) {
                     DUP_PRO_LOG::trace("Problem encoding using PHP JSON so switching to custom");
-
                     $global->json_mode = DUP_PRO_JSON_Mode::Custom;
                     $global->save();
                 }
@@ -1203,6 +1457,11 @@ class DUP_PRO_Package
             //report stores the full directory and file lists
             $this->Archive->Dirs  = null;
             $this->Archive->Files = null;
+
+            /**
+             * don't save filter info in report scan json.
+             */
+            $report['ARC']['FilterInfo']          = $this->Archive->FilterInfo;
 
             DUP_PRO_Log::trace("TOTAL SCAN TIME = ".DUP_PRO_U::elapsedTime(DUP_PRO_U::getMicrotime(), $timerStart));
         } catch (Exception $ex) {
@@ -1263,10 +1522,16 @@ class DUP_PRO_Package
         return $report;
     }
 
+    protected function cleanObjectBeforeSave()
+    {
+        $this->Archive->FilterInfo->reset();
+    }
+
     public function save()
     {
 		/* @var $global DUP_PRO_Global_Entity */
         global $wpdb;
+        global $current_user;
 
         if ($this->ID == -1 || empty($this->ID)) {
 
@@ -1274,7 +1539,8 @@ class DUP_PRO_Package
             $global->adjust_settings_for_system();
 
             $this->build_progress->set_build_mode();
-            $packageObj = DUP_PRO_JSON_U::encode($this);
+            $this->cleanObjectBeforeSave();
+            $packageObj = DupProSnapJsonU::wp_json_encode_pprint($this);
             
             $results = $wpdb->insert($wpdb->base_prefix . "duplicator_pro_packages", array(
                 'name' => $this->Name,
@@ -1287,7 +1553,6 @@ class DUP_PRO_Package
 
             if ($results === false) {
                 DUP_PRO_LOG::trace("Problem inserting package: {$wpdb->last_error}");
-
                 DUP_PRO_Log::error("Duplicator is unable to insert a package record into the database table.", "'{$wpdb->last_error}'");
             } else {
                 DUP_PRO_LOG::trace("inserted properly now saving $wpdb->insert_id");
@@ -1351,6 +1616,7 @@ class DUP_PRO_Package
             $php_max_memory = ($php_max_memory === false) ? "Unable to set php memory_limit" : DUPLICATOR_PRO_PHP_MAX_MEMORY . " ({$php_max_memory} default)";
             $architecture = DUP_PRO_U::getArchitectureString();
             $clientkickoffstate = $global->clientside_kickoff ? 'on' : 'off';
+            $archive_engine = $global->get_archive_engine();
 
             $info = "********************************************************************************\n";
             $info .= "DUPLICATOR PRO PACKAGE-LOG: " . @date("Y-m-d H:i:s") . "\n";
@@ -1364,8 +1630,9 @@ class DUP_PRO_Package
             $info .= "CLIENT KICKOFF: {$clientkickoffstate} \n";
             $info .= "PHP TIME LIMIT: {$php_max_time} \n";
             $info .= "PHP MAX MEMORY: {$php_max_memory} \n";
-            $info .= "RUN TYPE: " . $this->get_type_string() . "\n";
-            $info .= "MEMORY STACK: " . DUP_PRO_Server::getPHPMemory();
+            $info .= "RUN TYPE:\t" . $this->get_type_string() . "\n";
+            $info .= "MEMORY STACK:\t" . DUP_PRO_Server::getPHPMemory() . "\n";
+            $info .= "ARCHIVE ENGINE: {$archive_engine}";
 
             DUP_PRO_Log::info($info);
             DUP_PRO_LOG::trace($info);
@@ -1373,7 +1640,7 @@ class DUP_PRO_Package
 
             //CREATE DB RECORD
             $this->build_progress->set_build_mode();
-            $packageObj = DUP_PRO_JSON_U::encode($this);
+            $packageObj = DupProSnapJsonU::wp_json_encode($this);
 
             if (!$packageObj) {
                 DUP_PRO_Log::error("Unable to serialize pacakge object while building record.");
@@ -1563,7 +1830,7 @@ class DUP_PRO_Package
 
         //------------------------
         //INSTALLER CHECK:
-        $exe_temp_path = DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . '/' . $this->Installer->File);
+        $exe_temp_path = apply_filters('duplicator_pro_installer_file_path', DUP_PRO_U::safePath(DUPLICATOR_PRO_SSDIR_PATH_TMP . '/' . $this->Installer->File));
         $exe_temp_size = @filesize($exe_temp_path);
         $exe_easy_size = DUP_PRO_U::byteSize($exe_temp_size);
         $exe_done_txt = DUP_PRO_U::tailFile($exe_temp_path, 10);
@@ -1689,12 +1956,9 @@ class DUP_PRO_Package
                     case ZipArchive::ER_NOZIP :
                         $consistency_error = DUP_PRO_U::__('ERROR: Archive is not valid zip archive.');
                         break;
-
                     case ZipArchive::ER_INCONS :
                         $consistency_error = DUP_PRO_U::__("ERROR: Archive doesn't pass consistency check.");
                         break;
-
-
                     case ZipArchive::ER_CRC :
                         $consistency_error = DUP_PRO_U::__("ERROR: Archive checksum is bad.");
                         break;
@@ -1752,7 +2016,6 @@ class DUP_PRO_Package
 
                 if (empty($to)) {
                     $to = get_option('admin_email');
-
                     DUP_PRO_LOG::trace("Email address not defined so using admin email ($to)");
                 }
 
@@ -1893,8 +2156,7 @@ class DUP_PRO_Package
         if (DUP_PRO_Log::isTraceLogEnabled()) {
             DUP_PRO_Log::trace("Package ".print_r($this,true));
         }
-        $json_package = DUP_PRO_JSON_U::encode($this);
-        
+        $json_package = DupProSnapJsonU::wp_json_encode($this);
         update_option(self::OPT_ACTIVE, $json_package);
     }
 
@@ -1911,26 +2173,26 @@ class DUP_PRO_Package
             $mtemplate = DUP_PRO_Package_Template_Entity::get_manual_template();
 
             if (isset($post['filter-dirs'])) {
-                $post_filter_dirs = sanitize_textarea_field($post['filter-dirs']);
-                $filter_dirs = DUP_PRO_Archive::parseDirectoryFilter($post_filter_dirs);
+                $post_filter_dirs = DupProSnapLibUtil::sanitize_non_stamp_chars($post['filter-dirs']);
+                $mtemplate->archive_filter_dirs = DUP_PRO_Archive::parseDirectoryFilter($post_filter_dirs);
             } else {
-                $filter_dirs = '';
+                $mtemplate->archive_filter_dirs = '';
             }
             
             $filter_sites = !empty($post['mu-exclude']) ? $post['mu-exclude'] : '';
 
             if (isset($post['filter-exts'])) {
                 $post_filter_exts = sanitize_text_field($post['filter-exts']);
-                $filter_exts = DUP_PRO_Archive::parseExtensionFilter($post_filter_exts);
+                $mtemplate->archive_filter_exts = DUP_PRO_Archive::parseExtensionFilter($post_filter_exts);
             } else {
-                $filter_exts = '';
+                $mtemplate->archive_filter_exts = '';
             }
             
             if (isset($post['filter-files'])) {
-                $post_filter_files = sanitize_textarea_field($post['filter-files']);
-                $filter_files = DUP_PRO_Archive::parseFileFilter($post_filter_files);
+                $post_filter_files = DupProSnapLibUtil::sanitize_non_stamp_chars($post['filter-files']);
+                $mtemplate->archive_filter_files = DUP_PRO_Archive::parseFileFilter($post_filter_files);
             } else {
-                $filter_files = '';
+                $mtemplate->archive_filter_files = '';
             }
             
             $tablelist = isset($post['dbtables']) ? implode(',', $post['dbtables']) : '';
@@ -1952,9 +2214,6 @@ class DUP_PRO_Package
             //ARCHIVE
             $mtemplate->archive_export_onlydb = isset($post['export-onlydb']) ? 1 : 0;
             $mtemplate->archive_filter_on = isset($post['filter-on']) ? 1 : 0;
-            $mtemplate->archive_filter_dirs = sanitize_textarea_field($filter_dirs);
-            $mtemplate->archive_filter_exts = str_replace(array('.', ' '), "", sanitize_text_field($filter_exts));
-            $mtemplate->archive_filter_files = sanitize_textarea_field($filter_files);
 
             //INSTALLER
             $mtemplate->installer_opts_secure_on   = isset($post['secure-on']) ? 1 : 0;
@@ -2075,7 +2334,7 @@ class DUP_PRO_Package
 
             $package->add_upload_infos($storage_ids);
 
-            $json_package = DUP_PRO_JSON_U::encode($package);
+            $json_package = DupProSnapJsonU::wp_json_encode($package);
 
             /* @var $system_global DUP_PRO_System_Global_Entity */
             $system_global = DUP_PRO_System_Global_Entity::get_instance();
@@ -2112,7 +2371,7 @@ class DUP_PRO_Package
 
         $reflectionClass = new ReflectionClass($package);
         $reflectionClass->getProperty($property)->setValue($package, $value);
-        $json_package = DUP_PRO_JSON_U::encode($package);
+        $json_package = DupProSnapJsonU::wp_json_encode($package);
 
         update_option(self::OPT_ACTIVE, $json_package);
 
@@ -2123,57 +2382,62 @@ class DUP_PRO_Package
 
     /**
      *  Sets the status to log the state of the build
+     *
      *  @param $status The status level for where the package is
-     *  @return void */
+     * 
+     *  @return void
+     * 
+     */
     public function set_status($status)
     {
-        do_action('duplicator_pro_package_before_set_status' , $this , $status);
-
-        global $wpdb;
-        $this->Status = $status;
-        $packageObj = DUP_PRO_JSON_U::encode($this);
-
         if (!isset($status)) {
             DUP_PRO_Log::error("Package SetStatus did not receive a proper code.");
         }
 
-        if (!$packageObj) {
-            DUP_PRO_Log::error("Package SetStatus was unable to serialize package object while updating record.");
-        }
 
-        $wpdb->flush();
-        $table = $wpdb->base_prefix . "duplicator_pro_packages";
+        do_action('duplicator_pro_package_before_set_status', $this, $status);
 
-        // Have to escape the serialized package object b/c can contain characters that screwn up the SQL.
-        $packageObj = DUP_PRO_DB::escSQL($packageObj, true);
+        $this->Status = $status;
 
-        // getting a timeout on this massive set...
-        $sql = "UPDATE `{$table}` SET  status = {$status}, package = '$packageObj' WHERE ID = {$this->ID}";
+        $this->update();
 
-        $wpdb->query($sql);
-
-        do_action('duplicator_pro_package_after_set_status' , $this , $status);
+        do_action('duplicator_pro_package_after_set_status', $this, $status);
     }
 
+    /**
+     * update package in database
+     * die on db error
+     *
+     * @global wpdb $wpdb
+     */
     public function update()
     {
         global $wpdb;
-        $packageObj = DUP_PRO_JSON_U::encode($this);
+        
+        $this->cleanObjectBeforeSave();
+        $this->Status = number_format($this->Status, 1, '.', '');
+        $packageObj = DupProSnapJsonU::wp_json_encode_pprint($this);
 
         if (!$packageObj) {
             DUP_PRO_Log::error("Package SetStatus was unable to serialize package object while updating record.");
         }
 
         $wpdb->flush();
-        $table = $wpdb->base_prefix . "duplicator_pro_packages";
-
-        // Have to escape the serialized package object b/c can contain characters that screw up the SQL.
-        $packageObj = DUP_PRO_DB::escSQL($packageObj, true);
-
-        // getting a timeout on this massive set...
-        $sql = "UPDATE `{$table}` SET  status = {$this->Status}, package = '$packageObj' WHERE ID = {$this->ID}";
-
-        $wpdb->query($sql);
+        if ($wpdb->update(
+                $wpdb->base_prefix . "duplicator_pro_packages",
+                array(
+                    'status' => $this->Status,	
+                    'package' => $packageObj	
+                ),
+                array( 'ID' => $this->ID ),
+                array(
+                    '%s',
+                    '%s'
+                ),
+                array( '%d' )
+            ) === false) {
+            DUP_PRO_Log::error("Database update error: ".$wpdb->last_error);
+        }
     }
 
     /**
@@ -2303,7 +2567,9 @@ class DUP_PRO_Package
 		if(file_exists($extras_directory)) {
 			try
 			{
-				DupProSnapLibIOU::rrmdir($extras_directory);
+                if (!DupProSnapLibIOU::rrmdir($extras_directory)) {
+                    throw Exception('Failed to delete: '.$extras_directory);
+                }
 			}
 			catch(Exception $ex)
 			{

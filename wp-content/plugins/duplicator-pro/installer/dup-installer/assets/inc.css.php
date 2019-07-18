@@ -5,8 +5,51 @@
     h3 {margin:1px; padding:1px; font-size:13px;}
     a {color:#222}
     a:hover{color:gray}
-    input[type=text], input[type=password], select {width:97%; border-radius:2px; border:1px solid silver; padding:4px; font-family:Verdana,Arial,sans-serif;}
-    select {padding-left:0; width:99%}
+
+    input:not([type=checkbox]):not([type=radio]):not([type=button]) , select {
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid silver;
+        padding: 4px;
+        padding-left: 4px;
+        font-family: Verdana,Arial,sans-serif;
+        line-height: 20px;
+        height: 30px;
+        box-sizing: border-box;
+        background-color: white;
+        color: black;
+        border-radius: 4px;
+    }
+
+    input:not([type=checkbox]):not([type=radio]):not([type=button]).w30 , select.w30 {
+        width: 30%;
+    }
+
+    input:not([type=checkbox]):not([type=radio]):not([type=button]).w50 , select.w50 {
+        width: 50%;
+    }
+
+    select[size] {
+        height: auto;
+        line-height: 25px;
+    }
+
+    select , option {
+        background-color: lightgray;
+        color: black;
+    }
+    select {
+        padding-left:0;
+    }
+    select option {
+        padding: 2px 5px;
+    }
+    select option:disabled {
+        text-decoration: line-through;
+        cursor: not-allowed;
+        color: #A9A9A9;
+    }
+    
     select:disabled {background:#EBEBE4}
     input.readonly {background-color:#efefef;}
     .no-display { display: none; }
@@ -34,8 +77,10 @@
     .dupx-warn {display:inline-block; color:#555;}
     .dupx-notice {display:inline-block; color:#000;}
     i[data-tooltip].fa-question-circle {cursor: pointer; color:#C3C3C3}
-    div.status-badge-pass {float:right; border-radius:4px; color:#fff; padding:0 3px 0 3px;  font-size:11px; min-width:30px; text-align:center;background-color:#418446; font-weight:normal; }
-    div.status-badge-fail {float:right; border-radius:4px; color:#fff; padding:0 3px 0 3px;  font-size:11px; min-width:30px; text-align:center;background-color:maroon; font-weight:normal;}
+    div.status-badge-pass {background-color:#418446;}
+    div.status-badge-fail {background-color:maroon;}
+    div.status-badge-warn {background-color:#555;}
+    div.status-badge-pass, div.status-badge-fail, div.status-badge-warn {float:right; border-radius:4px; color:#fff; padding:0 3px 0 3px;  font-size:11px; min-width:30px; text-align:center; font-weight:normal;}
 
     button.default-btn, input.default-btn {
         cursor:pointer; color:#fff; font-size:16px; border-radius:5px;	padding:7px 25px 5px 25px;
@@ -92,7 +137,7 @@
         padding-top: 5px;
         border-top: 1px solid lightgray;
     }
-    
+
     .notice .info pre {
         margin: 0;
         padding: 0;
@@ -185,10 +230,19 @@
     ============================ */
     button.pass-toggle {height:26px; width:26px; position:absolute; top:0px; right:0px; border:1px solid silver;  border-radius:0 4px 4px 0;padding:2px 0 0 3px;}
     button.pass-toggle  i { padding:0; display:block; margin:-4px 0 0 -5px}
-    div.i1-pass-area {width:100%; text-align:center}
-    div.i1-pass-data {padding:30px; margin:auto; text-align:center; width:300px}
+    div.i1-pass-area {
+        width:100%;
+        text-align:center;
+        max-width: 500px;
+        margin: auto;
+        position: relative;
+    }
     div.i1-pass-data table {width:100%; border-collapse:collapse; padding:0}
-    div.i1-pass-data label {font-weight:bold}
+    div.i1-pass-data label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight:bold;
+    }
     div.i1-pass-errmsg {color:maroon; font-weight:bold}
     div#i1-pass-input {position:relative; margin:2px 0 15px 0}
     input#secure-pass {border-radius:4px 0 0 4px; width:250px}
@@ -228,10 +282,10 @@
     div#s1-multisite p.note {font-size:10px; font-style:italic; text-align:center; color:#777; margin:0}
 
     /*Terms and Notices*/
-    div#s1-warning-check label{cursor:pointer;}
+    div.s1-accept-check label{cursor:pointer;}
     div#s1-warning-msg {padding:5px;font-size:12px; color:#333; line-height:14px;font-style:italic; overflow-y:scroll; height:460px; border:1px solid #dfdfdf; background:#fff; border-radius:3px}
-    div#s1-warning-check {padding:3px; font-size:14px; font-weight:normal;}
-    input#accept-warnings {height: 17px; width:17px}
+    div.s1-accept-check {padding:3px; font-size:14px; font-weight:normal;}
+    input#accept-warnings, input#accept-perm-error {height: 17px; width:17px}
 
     /* ============================
     STEP 2 VIEW
@@ -378,6 +432,10 @@
     /* ============================
     STEP 5 HELP
     ============================	*/
+    #body-help div#content {
+        width: 100%;
+        max-width: 1024px;
+    }
     div.help-target {float:right;}
     div.help-target a {float:right; font-size:16px; color:#13659C}
     div#main-help sup {font-size:11px; font-weight:normal; font-style:italic; color:blue}
@@ -387,11 +445,14 @@
     div#main-help {font-size:13px; line-height:17px}
     div#main-help h3 {border-bottom:1px solid silver; padding:8px; margin:4px 0 8px 0; font-size:20px}
     div#main-help span.step {color:#DB4B38}
-    table.help-opt {width: 100%; border: none; border-collapse: collapse;  margin:5px 0 0 0;}
-    table.help-opt td.section {background-color:#dfdfdf;}
-    table.help-opt td, th {padding:7px; border:1px solid silver;}
-    table.help-opt td:first-child {font-weight:bold; padding-right:10px; white-space:nowrap}
-    table.help-opt th {background: #333; color: #fff;border:1px solid #333; padding:3px}
+    .help-opt {width: 100%; border: none; border-collapse: collapse;  margin:5px 0 0 0;}
+    .help-opt .col-opt {
+        width: 250px;
+    }
+    .help-opt td.section {background-color:#dfdfdf;}
+    .help-opt td, .help-opt th {padding:15px 10px; border:1px solid silver;}
+    .help-opt td:first-child {font-weight:bold; padding-right:10px; white-space:nowrap}
+    .help-opt th {background: #333; color: #fff;border:1px solid #333 }
 
     #main-help section {
         border: 1px solid silver;
@@ -456,12 +517,37 @@
     /*!
      * password indicator
      */
-    .top_testresult{font-weight:bold;	font-size:11px; color:#222;	padding:1px 1px 1px 4px; margin:4px 0 0 0; width:495px; dislay:inline-block}
-    .top_testresult span{margin:0;}
-    .top_shortPass{background:#edabab; border:1px solid #bc0000;display:block;}
-    .top_badPass{background:#edabab;border:1px solid #bc0000;display:block;}
-    .top_goodPass{background:#ffffe0; border:1px solid #e6db55;	display:block;}
-    .top_strongPass{background:#d3edab;	border:1px solid #73bc00; display:block;}
+
+    .top_testresult{
+        font-weight:bold;	font-size:11px; color:#222;	display: block;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        text-align: right;
+        padding-right: 20px;
+        box-sizing: border-box;
+        width: 40%;
+        height: 30px;
+        line-height: 30px;
+    }
+
+
+    .top_shortPass,
+    .top_badPass {
+        background:#edabab;
+        background: transparent linear-gradient(90deg, transparent 20%, #edabab);
+        display:block;
+    }
+    .top_goodPass{ 
+        background:#ffffe0;
+        background: transparent linear-gradient(90deg, transparent 20%, #ffffe0);
+        display:block;
+    }
+    .top_strongPass{
+        background:#d3edab;
+        background: transparent linear-gradient(90deg, transparent 20%, #d3edab);
+        display:block;
+    }
 
     /*================================================
     LIB OVERIDES*/

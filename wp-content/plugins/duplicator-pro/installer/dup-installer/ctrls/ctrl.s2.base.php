@@ -356,4 +356,4 @@ DUPX_Log::info('STEP-2 COMPLETE @ '.@date('h:i:s')." - RUNTIME: {$ajax1_sum}");
 
 error_reporting($ajax2_error_level);
 DUPX_Log::close();
-die(DupProSnapLibUtil::wp_json_encode($JSON));
+die(DupProSnapJsonU::wp_json_encode($JSON));

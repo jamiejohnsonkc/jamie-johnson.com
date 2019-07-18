@@ -56,6 +56,7 @@ class DUP_PRO_UI_ViewState
      */
     public static function saveByPost()
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_UI_ViewState_SaveByPost', 'nonce');        
         DUP_PRO_U::hasCapability('export');        
 

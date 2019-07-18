@@ -4,16 +4,16 @@ defined("DUPXABSPATH") or die("");
 /* @var $GLOBALS['DUPX_AC'] DUPX_ArchiveConfig */
 /* @var $state DUPX_InstallerState */
 
-$state = $GLOBALS['DUPX_STATE'];
-$is_standard_mode	= $state->mode == DUPX_InstallerMode::StandardInstall;
-$is_overwrite_mode	= $state->mode == DUPX_InstallerMode::OverwriteInstall;
+$state             = $GLOBALS['DUPX_STATE'];
+$is_standard_mode  = $state->mode == DUPX_InstallerMode::StandardInstall;
+$is_overwrite_mode = $state->mode == DUPX_InstallerMode::OverwriteInstall;
 
-if($is_standard_mode) {
+if ($is_standard_mode) {
 
-    $ovr_dbhost = NULL;
-    $ovr_dbname = NULL;
-    $ovr_dbuser = NULL;
-    $ovr_dbpass = NULL;
+    $ovr_dbhost = '';
+    $ovr_dbname = '';
+    $ovr_dbuser = '';
+    $ovr_dbpass = '';
 
     $dbhost = $GLOBALS['DUPX_AC']->dbhost;
     $dbname = $GLOBALS['DUPX_AC']->dbname;
@@ -22,23 +22,19 @@ if($is_standard_mode) {
 
     $dbFormDisabledString = '';
 } else {
-	$wpConfigPath	= "{$GLOBALS['DUPX_ROOT']}/wp-config.php";
-	require_once($GLOBALS['DUPX_INIT'].'/lib/config/class.wp.config.tranformer.php');
-	$config_transformer = new WPConfigTransformer($wpConfigPath);
-	function dupxGetDbConstVal($constName) {
-		if ($GLOBALS['config_transformer']->exists('constant', $constName)) {
-			$configVal = $GLOBALS['config_transformer']->get_value('constant', $constName);
-			$constVal = htmlspecialchars($configVal);
-		} else {
-			$constVal = '';
-		}
-		return $constVal;
-	}
+    $wpConfigPath       = "{$GLOBALS['DUPX_ROOT']}/wp-config.php";
+    require_once($GLOBALS['DUPX_INIT'].'/lib/config/class.wp.config.tranformer.php');
+    $config_transformer = new WPConfigTransformer($wpConfigPath);
 
-	$ovr_dbhost = dupxGetDbConstVal('DB_HOST');
-	$ovr_dbname = dupxGetDbConstVal('DB_NAME');
-	$ovr_dbuser = dupxGetDbConstVal('DB_USER');
-	$ovr_dbpass = dupxGetDbConstVal('DB_PASSWORD');
+    function dupxGetDbConstVal($config_transformer, $constName)
+    {
+        return $config_transformer->exists('constant', $constName) ? $config_transformer->get_value('constant', $constName) : '';
+    }
+    
+    $ovr_dbhost = dupxGetDbConstVal($config_transformer, 'DB_HOST');
+    $ovr_dbname = dupxGetDbConstVal($config_transformer, 'DB_NAME');
+    $ovr_dbuser = dupxGetDbConstVal($config_transformer, 'DB_USER');
+    $ovr_dbpass = dupxGetDbConstVal($config_transformer, 'DB_PASSWORD');
 
     $dbhost = '';
     $dbname = '';
@@ -107,7 +103,17 @@ BASIC PANEL -->
 			</td>
 		</tr>
 		<tr><td>User:</td><td><input type="text" name="dbuser" id="dbuser" required="true" value="<?php echo DUPX_U::esc_attr($dbuser); ?>" placeholder="valid database username" /></td></tr>
-		<tr><td>Password:</td><td><input type="text" name="dbpass" id="dbpass" value="<?php echo DUPX_U::esc_attr($dbpass); ?>"  placeholder="valid database user password"  /></td></tr>
+		<tr>
+            <td>Password:</td>
+            <td>
+                <?php
+                DUPX_U_Html::inputPasswordToggle('dbpass' , 'dbpass' , array() , array(
+                    'placeholder' => 'valid database user password' ,
+                    'value' => $dbpass
+                ));
+                ?>    
+            </td>
+        </tr>
 	</table>
 </div>
 <br/><br/>
@@ -130,15 +136,7 @@ OPTIONS -->
         <tr>
             <td style="vertical-align:top">Chunking:</td>
             <td>
-				<?php if($GLOBALS['DUPX_AC']->dbInfo->buildMode != 'MYSQLDUMP') : ?>
-					<input type="checkbox" name="dbchunk" id="dbchunk" value="1" checked /> <label for="dbchunk">Enable multi-threaded requests to chunk SQL file</label>
-				<?php else :?>
-					<input type="checkbox" name="dbchunk" id="dbchunk" value="0" disabled="true" /> <label for="dbchunk">Enable multi-threaded requests to chunk SQL file</label>
-					<div class="php-chuncking-warning">
-						This option is only available when the package is built with PHP Code.  To use this feature go to to Plugin Settings &gt; Packages Tab &gt; 
-						SQL Script &gt; choose PHP Code and create a new package.
-					</div>
-				<?php endif; ?>
+                <input type="checkbox" name="dbchunk" id="dbchunk" value="1" checked /> <label for="dbchunk">Enable multi-threaded requests to chunk SQL file</label>
 			</td>
         </tr>
 		<tr>
@@ -263,20 +261,20 @@ $(document).ready(function ()
 
 	DUPX.checkOverwriteParameters = function(dbhost, dbname, dbuser, dbpass)
 	{
-		$("#dbhost").val(<?php echo "'{$ovr_dbhost}'" ?>);
-		$("#dbname").val(<?php echo "'{$ovr_dbname}'" ?>);
-		$("#dbuser").val(<?php echo "'{$ovr_dbuser}'" ?>);
-		$("#dbpass").val(<?php echo "'{$ovr_dbpass}'" ?>);
+		$("#dbhost").val(<?php echo DupProSnapJsonU::wp_json_encode($ovr_dbhost); ?>);
+		$("#dbname").val(<?php echo DupProSnapJsonU::wp_json_encode($ovr_dbname); ?>);
+		$("#dbuser").val(<?php echo DupProSnapJsonU::wp_json_encode($ovr_dbuser); ?>);
+		$("#dbpass").val(<?php echo DupProSnapJsonU::wp_json_encode($ovr_dbpass); ?>);
 		DUPX.basicDBToggleImportMode('readonly');
 		$("#s2-db-basic-setup").show();
 	}
 
 	DUPX.fillInPlaceHolders = function()
 	{
-		$("#dbhost").attr('placeholder', <?php echo "'{$ovr_dbhost}'" ?>);
-		$("#dbname").attr('placeholder', <?php echo "'{$ovr_dbname}'" ?>);
-		$("#dbuser").attr('placeholder', <?php echo "'{$ovr_dbuser}'" ?>);
-		$("#dbpass").attr('placeholder', <?php echo "'{$ovr_dbpass}'" ?>);
+		$("#dbhost").attr('placeholder', <?php echo DupProSnapJsonU::wp_json_encode($ovr_dbhost); ?>);
+		$("#dbname").attr('placeholder', <?php echo DupProSnapJsonU::wp_json_encode($ovr_dbname); ?>);
+		$("#dbuser").attr('placeholder', <?php echo DupProSnapJsonU::wp_json_encode($ovr_dbuser); ?>);
+		$("#dbpass").attr('placeholder', <?php echo DupProSnapJsonU::wp_json_encode($ovr_dbpass); ?>);
 	}
 
 	DUPX.resetParameters = function()

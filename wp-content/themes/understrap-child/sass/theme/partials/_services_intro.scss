@@ -14,6 +14,13 @@
         display: block;
         bottom: 0;
         left: 0;
+         @include mq('desktop'){
+        top: -31%;
+        left: 0;
+        bottom: unset;
+        max-width: 200%;
+        width: 109%;
+        }
       }
     @include mq('tablet-wide'){
       border: 3rem solid $white;
@@ -36,7 +43,7 @@
       .flex-item {
         max-width: 90%;
         // background: darken($secondary, $amount: 15%);
-        background: $white;
+        background: rgba($white, $alpha: .7);
         @include vr($padding: 3);
         @include dark-shadow();
         @include mq('tablet'){

@@ -54,7 +54,7 @@ abstract class DUPX_ChunkingManager_file extends DUPX_ChunkingManager
      */
     protected function saveStoredData($key, $data)
     {
-        if (($json = DupProSnapLibUtil::wp_json_encode($data)) === false) {
+        if (($json = DupProSnapJsonU::wp_json_encode($data)) === false) {
             throw new Exception('Json encode chunk data error');
         }
 

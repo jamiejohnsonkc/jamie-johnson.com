@@ -210,7 +210,7 @@ include_once 'inc.phpinfo.php';
 </form>
 <?php
 	$confirm1 = new DUP_PRO_UI_Dialog();
-	$confirm1->title			 = DUP_PRO_U::__('Are you sure, you want to delete?');
+	$confirm1->title			 = DUP_PRO_U::__('Are you sure you want to delete?');
 	$confirm1->message			 = DUP_PRO_U::__('Delete this option value.');
 	$confirm1->progressText      = DUP_PRO_U::__('Removing, Please Wait...');
 	$confirm1->jsCallback		 = 'DupPro.Settings.DeleteThisOption(this)';

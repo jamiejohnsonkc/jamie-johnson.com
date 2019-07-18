@@ -1,5 +1,5 @@
 <?php
-defined("ABSPATH") or die("");
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
 class DUP_PRO_JSON_U
 {
@@ -15,15 +15,7 @@ class DUP_PRO_JSON_U
     public static function customEncode($value, $iteration = 1)
     {
         if (DUP_PRO_U::PHP53()) {
-            if (function_exists('wp_json_encode')) {
-                $encoded = wp_json_encode($value);
-            } else {
-                if (version_compare(PHP_VERSION, '5.4.0') >= 0) {
-                    $encoded = json_encode($value, JSON_PRETTY_PRINT);
-                } else {
-                    $encoded = json_encode($value);
-                }
-            }
+            $encoded = DupProSnapJsonU::wp_json_encode_pprint($value);
 
             switch (json_last_error()) {
                 case JSON_ERROR_NONE:
@@ -53,62 +45,10 @@ class DUP_PRO_JSON_U
         }
     }
 
-    /**
-     *
-     * @param mixed $data    Variable (usually an array or object) to encode as JSON.
-     * @param int   $options Optional. Options to be passed to json_encode(). Default 0.
-     * @param int   $depth   Optional. Maximum depth to walk through $data. Must be
-     *                       greater than 0. Default 512.
-     * @return string|false The JSON encoded string, or false if it cannot be encoded.
-     */
-    public static function encodePrettyPrint($data, $options = 0, $depth = 512)
-    {
-        if (defined('JSON_PRETTY_PRINT')) {
-            return self::encode($data, JSON_PRETTY_PRINT | $options, $depth);
-        } else {
-            return self::encode($data, $options, $depth);
-        }
-    }
-
-    /**
-     * @param mixed $data    Variable (usually an array or object) to encode as JSON.
-     * @param int   $options Optional. Options to be passed to json_encode(). Default 0.
-     * @param int   $depth   Optional. Maximum depth to walk through $data. Must be
-     *                       greater than 0. Default 512.
-     * @return string|false The JSON encoded string, or false if it cannot be encoded.
-     */
-    public static function encode($data, $options = 0, $depth = 512)
-    {
-        $result = false;
-
-        if (function_exists('wp_json_encode')) {
-            $result = wp_json_encode($data, $options, $depth);
-        } else {
-            if (version_compare(PHP_VERSION, '5.5', '>=')) {
-                $result = json_encode($data, $options, $depth);
-            } elseif (version_compare(PHP_VERSION, '5.3', '>=')) {
-                $result = json_encode($data, $options);
-            } else {
-                $result = json_encode($data);
-            }
-        }
-
-        if ($result === false) {
-            if (function_exists('json_last_error')) {
-                $message = self::$_messages[json_last_error()];
-            } else {
-                $message = DUP_PRO_U::__('One or more filenames isn\'t compatible with JSON encoding');
-            }
-            throw new RuntimeException($message);
-        }
-
-        return $result;
-    }
-
     public static function safeEncode($data, $options = 0, $depth = 512)
     {
         try {
-            $jsonString = self::encode($data, $options, $depth);
+            $jsonString = DupProSnapJsonU::wp_json_encode($data, $options, $depth);
         } catch (Exception $e) {
             $jsonString = false;
         }
@@ -129,10 +69,8 @@ class DUP_PRO_JSON_U
     }
 
     /** ========================================================
-	 * PRIVATE METHODS
+     * PRIVATE METHODS
      * =====================================================  */
-
-
     private static function makeUTF8($mixed)
     {
         if (is_array($mixed)) {
@@ -163,7 +101,7 @@ class DUP_PRO_JSON_U
             //}
             //$val = implode(',', $arr);
             //$out .= "{{$val}}";
-            $in = get_object_vars($in);
+            $in        = get_object_vars($in);
         }
         //else
         if (is_array($in)) {

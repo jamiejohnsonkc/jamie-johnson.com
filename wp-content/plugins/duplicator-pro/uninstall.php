@@ -75,7 +75,7 @@ if ($global->uninstall_packages) {
 	$check = glob("{$ssdir}/wp-config.php");
 	if (count($check) == 0) {
 		require_once 'lib/snaplib/class.snaplib.u.io.php';
-		DupProSnapLibIOU::rrmdir($ssdir);
+		DupProSnapLibIOU::rrmdir($ssdir, true);
 	}
 }
 
@@ -90,4 +90,5 @@ if ($global->uninstall_settings) {
 	delete_option('duplicator_pro_send_trace_to_error_log');
     delete_option('duplicator_pro_license_key');
     delete_option('duplicator_pro_reset_user_settings_required');
+    delete_option('duplicator_pro_package_active');
 }

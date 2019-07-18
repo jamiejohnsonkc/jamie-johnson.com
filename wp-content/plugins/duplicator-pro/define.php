@@ -9,7 +9,7 @@ if (function_exists('plugin_dir_url')) {
     if (!defined('MB_IN_BYTES'))  define('MB_IN_BYTES', 1024 * KB_IN_BYTES);
     if (!defined('GB_IN_BYTES'))  define('GB_IN_BYTES', 1024 * MB_IN_BYTES);
 
-    define('DUPLICATOR_PRO_VERSION', '3.8.3.4');
+    define('DUPLICATOR_PRO_VERSION', '3.8.4');
     define('DUPLICATOR_PRO_LIMIT_UPLOAD_VERSION', '3.3.0.0'); // Limit Drag & Drop`
     define('DUPLICATOR_PRO_GIFT_THIS_RELEASE', false); // Display Gift - should be true for new features OR if we want them to fill out survey
     define('DUPLICATOR_PRO_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -50,7 +50,7 @@ if (function_exists('plugin_dir_url')) {
     define('DUPLICATOR_PRO_CERT_PATH', apply_filters('duplicator_pro_certificate_path', DUPLICATOR_PRO_LIB_PATH.'/certificates/cacert.pem'));
 
     //RESTRAINT CONSTANTS
-    define('DUPLICATOR_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
+    if (!defined('DUPLICATOR_PRO_PHP_MAX_MEMORY'))  define('DUPLICATOR_PRO_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
     define("DUPLICATOR_PRO_DB_MAX_TIME", 5000);
     define("DUPLICATOR_PRO_DB_EOF_MARKER", 'DUPLICATOR_PRO_MYSQLDUMP_EOF');
     define("DUPLICATOR_PRO_SCAN_SITE_ZIP_ARCHIVE_WARNING_SIZE", 367001600); //350MB
@@ -68,7 +68,6 @@ if (function_exists('plugin_dir_url')) {
     define('DUPLICATOR_PRO_SQL_SCRIPT_PHP_CODE_MULTI_THREADED_MAX_RETRIES', 6);
     define('DUPLICATOR_PRO_TEST_SQL_LOCK_NAME', 'duplicator_pro_test_lock');
 
-    define("DUPLICATOR_PRO_INSTALLER_CSRF_CRYPT", 1);
     define("DUPLICATOR_PRO_SCAN_MIN_WP", "4.6.0");
 
     $GLOBALS['DUPLICATOR_PRO_SERVER_LIST'] = array('Apache', 'LiteSpeed', 'Nginx', 'Lighttpd', 'IIS', 'WebServerX', 'uWSGI');

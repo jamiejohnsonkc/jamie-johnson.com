@@ -289,7 +289,7 @@ THICK-BOX DIALOGS: -->
 
 	$confirm1 = new DUP_PRO_UI_Dialog();
 	$confirm1->title			 = DUP_PRO_U::__('Delete Brand?');
-	$confirm1->message			 = DUP_PRO_U::__('Are you sure, you want to delete the selected brand(s)?');
+	$confirm1->message			 = DUP_PRO_U::__('Are you sure you want to delete the selected brand(s)?');
 	$confirm1->message			.= '<br/>';
 	$confirm1->message			.= DUP_PRO_U::__('<small><i>Note: This action removes all brands.</i></small>');
 	$confirm1->progressText      = DUP_PRO_U::__('Removing Brands, Please Wait...');
@@ -298,7 +298,7 @@ THICK-BOX DIALOGS: -->
 
     $confirm2 = new DUP_PRO_UI_Dialog();
 	$confirm2->title			 = DUP_PRO_U::__('Delete Brand?');
-	$confirm2->message			 = DUP_PRO_U::__('Are you sure, you want to delete the selected brand(s)?');
+	$confirm2->message			 = DUP_PRO_U::__('Are you sure you want to delete the selected brand(s)?');
 	$confirm2->progressText      = DUP_PRO_U::__('Removing Brands, Please Wait...');
 	$confirm2->jsCallback		 = 'DupPro.Settings.Brand.DeleteThis(this)';
 	$confirm2->initConfirm();

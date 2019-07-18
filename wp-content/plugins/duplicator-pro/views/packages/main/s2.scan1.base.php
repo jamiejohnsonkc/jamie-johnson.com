@@ -47,7 +47,7 @@ $archive_export_onlydb = isset($_POST['export-onlydb']) ? 1 :0;
 
 <style>
 	/*PROGRESS-BAR - RESULTS - ERROR */
-	form#form-duplicator {text-align:center; max-width:900px; min-height:200px; margin:0px auto 0px auto; padding:0px;}
+	form#form-duplicator {text-align:center; max-width:825px; min-height:200px; margin:0px auto 0px auto; padding:0px;}
 	div.dup-progress-title {font-size:22px; padding:5px 0 20px 0; font-weight:bold}
 	div#dup-msg-success {padding:0 5px 5px 5px; text-align:left}
 	div#dup-msg-success div.details {padding:10px 15px 10px 15px; margin:5px 0 15px 0; background:#fff; border-radius:5px; border:1px solid #ddd;box-shadow:0 8px 6px -6px #999; }
@@ -150,7 +150,12 @@ $archive_export_onlydb = isset($_POST['export-onlydb']) ? 1 :0;
 	div#data-db-tablelist {max-height:250px; overflow-y:scroll; border:1px solid silver; padding:8px; background: #efefef; border-radius: 4px}
 	div#data-db-tablelist td{padding:0 5px 3px 20px; min-width:100px}
     div#data-db-size1 {display: inline-block; font-size:11px; margin-right:1px;}
-    /*FILES */
+    /*WARNING-CONTINUE*/
+	div#dpro-scan-warning-continue {display:none; text-align:center; padding:0 0 15px 0}
+	div#dpro-scan-warning-continue div.msg1 label{font-size:16px; color:#630f0f}
+	div#dpro-scan-warning-continue div.msg2 {padding:2px; line-height:13px}
+	div#dpro-scan-warning-continue div.msg2 label {font-size:11px !important}
+	/*FILES */
 	div#dpro-confirm-area {color:maroon; display:none; font-size:14px; line-height:24px; font-weight: bold; margin: -5px 0 10px 0}
 	div#dpro-confirm-area label {font-size:14px !important}
 
@@ -274,6 +279,28 @@ TOOL-BAR -->
 		</div>
 	</div>
 
+	<!-- WARNING CONTINUE -->
+	<div id="dpro-scan-warning-continue">
+		<div class="msg1">
+			<label for="dup-scan-warning-continue-checkbox">
+				<?php esc_html_e('A notice status has been detected, are you sure you want to continue?', 'duplicator');?>
+			</label>
+			<div style="padding:8px 0">
+				<input type="checkbox" id="dup-scan-warning-continue-checkbox" onclick="DupPro.Pack.warningContinue(this);"/>
+				<label for="dup-scan-warning-continue-checkbox"><?php esc_html_e('Yes.  Continue with the build process!', 'duplicator');?></label>
+			</div>
+		</div>
+		<div class="msg2">
+			<label for="dup-scan-warning-continue-checkbox">
+				<?php
+					_e("Scan checks are not required to pass, however they could cause issues on some systems.", 'duplicator');
+					echo '<br/>';
+					_e("Please review the details for each section by clicking on the detail title.", 'duplicator');
+				?>
+			</label>
+		</div>
+	</div>
+
 	<div id="dpro-confirm-area">
 		<label for="dpro-confirm-check"><?php DUP_PRO_U::esc_html_e('Do you want to continue?');
 		echo '<br/> ';
@@ -387,6 +414,7 @@ jQuery(document).ready(function ($)
 		$('#dup-msg-success,#dup-msg-error,.dup-button-footer,#dpro-confirm-area').hide();
 		$('#dpro-confirm-check').prop('checked', false);
 		$('#dup-progress-bar-area').show();
+		$('#dpro-scan-warning-continue').hide();
 		DupPro.Pack.runScanner(callbackOnSuccess);
 	}
 
@@ -469,6 +497,41 @@ jQuery(document).ready(function ($)
 				$('#dup-scan-db').html(html);
 			}
 
+			var isWarn = false;
+			for (key in data.ARC.Status) {
+				if ('Big' != key && 'Warn' == data.ARC.Status[key]) {
+					isWarn = true;
+				}
+			}
+
+			if (!isWarn) {
+				if ('Warn' == data.DB.Status.Size) {
+					isWarn = true;
+				}
+			}
+
+			if (!isWarn && 'Warn' == data.DB.Status.Rows) {
+				isWarn = true;
+			}
+
+			if (!isWarn && 'Warn' == data.SRV.PHP.ALL) {
+				isWarn = true;
+			}
+
+			if (!isWarn && 'Warn' == data.SRV.WP.ALL) {
+				isWarn = true;
+			}
+
+			if (isWarn) {
+				$('#dpro-scan-warning-continue').show();
+				$('#dup-build-button').prop("disabled",true).removeClass('button-primary');
+				if ($('#dpro-scan-warning-continue-checkbox').is(':checked')) {
+					$('#dup-build-button').removeAttr('disabled').addClass('button-primary');
+				}
+			} else {
+				$('#dpro-scan-warning-continue').hide();
+				$('#dup-build-button').prop("disabled",false).addClass('button-primary');
+			}
 		}
 		catch(err) {
 			err += '<br/> Please try again!'
@@ -526,6 +589,14 @@ jQuery(document).ready(function ($)
 				result = 'unable to read';
 		}
 		return result;
+	}
+
+	//Allows user to continue with build if warnings found
+	DupPro.Pack.warningContinue = function(checkbox)
+	{
+		($(checkbox).is(':checked'))
+			?	$('#dup-build-button').prop('disabled',false).addClass('button-primary')
+			:	$('#dup-build-button').prop('disabled',true).removeClass('button-primary');
 	}
 
 	//Page Init:

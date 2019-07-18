@@ -38,7 +38,7 @@ defined("ABSPATH") or die("");
 
 class DupArchive_Installer_Extractor
 {
-		const VERSION			 = '3.8.3.4';
+		const VERSION			 = '3.8.4';
 
 	/**
 	 * Instantiate the Bootstrap Object

@@ -33,15 +33,17 @@ class DUP_PRO_Extraction
 
     public function __construct($post)
     {
-        $this->set_file_perms = (isset($post['set_file_perms']) && $post['set_file_perms'] == '1') ? true : false;
-        $this->set_dir_perms = (isset($post['set_dir_perms']) && $post['set_dir_perms'] == '1') ? true : false;
-        $this->file_perms_value = (isset($post['file_perms_value'])) ? intval(('0' . $post['file_perms_value']),
-            8) : 0755;
-        $this->dir_perms_value = (isset($post['dir_perms_value'])) ? intval(('0' . $post['dir_perms_value']), 8) : 0644;
-        $this->zip_filetime = (isset($post['zip_filetime'])) ? DUPX_U::sanitize_text_field($post['zip_filetime']) : 'current';
-        $this->retain_config = (isset($post['retain_config']) && $post['retain_config'] == '1') ? true : false;
-        $this->archive_engine = (isset($post['archive_engine'])) ? DUPX_U::sanitize_text_field($post['archive_engine']) : 'manual';
-        $this->exe_safe_mode = (isset($post['exe_safe_mode'])) ? DUPX_U::sanitize_text_field($post['exe_safe_mode']) : 0;
+        $this->set_file_perms     = (isset($post['set_file_perms']) && $post['set_file_perms'] == '1') ? true : false;
+        $this->set_dir_perms      = (isset($post['set_dir_perms']) && $post['set_dir_perms'] == '1') ? true : false;
+        $this->file_perms_value   = (isset($post['file_perms_value'])) ? intval(('0'.$post['file_perms_value']), 8) : 0755;
+        $this->dir_perms_value    = (isset($post['dir_perms_value'])) ? intval(('0'.$post['dir_perms_value']), 8) : 0644;
+        $this->zip_filetime       = (isset($post['zip_filetime'])) ? DUPX_U::sanitize_text_field($post['zip_filetime']) : 'current';
+        $this->retain_config      = (isset($post['retain_config']) && $post['retain_config'] == '1') ? true : false;
+        $this->archive_engine     = (isset($post['archive_engine'])) ? DUPX_U::sanitize_text_field($post['archive_engine']) : 'manual';
+        $this->exe_safe_mode      = (isset($post['exe_safe_mode'])) ? DUPX_U::sanitize_text_field($post['exe_safe_mode']) : 0;
+        $this->clientside_kickoff = (isset($post['clientside_kickoff'])) ? (int) $post['clientside_kickoff'] : 0;
+        $this->remove_redundant   = (isset($post['remove-redundant'])) ? (int) $post['remove-redundant'] : 0;
+
         $this->archive_offset = (isset($post['archive_offset'])) ? intval($post['archive_offset']) : 0;        
         if (isset($post['zip_arc_chunks_extract_rates'])) {
             if (is_array($post['zip_arc_chunks_extract_rates'])) {
@@ -57,80 +59,87 @@ class DUP_PRO_Extraction
         $this->num_files = (isset($post['$num_files'])) ? intval($post['num_files']) : 0;
         $this->do_chunking = (isset($post['pass'])) ? $post['pass'] == -1 : false;
 
-        // extra_data	{"archive_offset":27121850,"archive_size":27121913,"failures":[],"file_index":3461,"is_done":true,"timestamp":1555090042}
-        if (isset($post['dawn_status'])) {
-            try {
-                $json              = json_decode($post['dawn_status'], true);
-                $this->dawn_status = (object) filter_var_array($json,
-                        array(
-                        'archive_offset' => array(
-                            'filter' => FILTER_VALIDATE_INT,
-                            'flags' => FILTER_NULL_ON_FAILURE,
-                            'options' => array(
-                                'min_range' => 0
-                            )
-                        ),
-                        'archive_size' => array(
-                            'filter' => FILTER_VALIDATE_INT,
-                            'flags' => FILTER_NULL_ON_FAILURE,
-                            'options' => array(
-                                'min_range' => 0
-                            )
-                        ),
-                        // DupArchiveProcessingFailure
-                        'failures' => array(
-                            'flags' => FILTER_REQUIRE_ARRAY | FILTER_NULL_ON_FAILURE,
-                        ),
-                        'file_index' => array(
-                            'filter' => FILTER_VALIDATE_INT,
-                            'flags' => FILTER_NULL_ON_FAILURE,
-                            'options' => array(
-                                'min_range' => 0
-                            )
-                        ),
-                        'is_done' => FILTER_VALIDATE_BOOLEAN,
-                        'timestamp' => array(
-                            'filter' => FILTER_VALIDATE_INT,
-                            'flags' => FILTER_NULL_ON_FAILURE,
-                            'options' => array(
-                                'min_range' => 0
-                            )
-                        )
-                ));
+        // check dawn_status only if is a duparchive
+        if ($this->archive_engine == 'duparchive') {
+            if (isset($post['dawn_status'])) {
+                // extra_data	{"archive_offset":27121850,"archive_size":27121913,"failures":[],"file_index":3461,"is_done":true,"timestamp":1555090042}
+                try {
+                    $json = json_decode($post['dawn_status'], true);
+                    if (!is_array($json)) {
+                        throw new Exception('dawn_status isn\'t an array');
+                    }
 
-                if (is_null($this->dawn_status->failures)) {
-                    $this->dawn_status->failures = array();
-                }
-
-                foreach ($this->dawn_status->failures as $key => $failure) {
-                    $this->dawn_status->failures[$key] = (object) filter_var_array($failure,
+                    $this->dawn_status = (object) filter_var_array($json,
                             array(
-                            'type' => array(
+                            'archive_offset' => array(
                                 'filter' => FILTER_VALIDATE_INT,
+                                'flags' => FILTER_NULL_ON_FAILURE,
                                 'options' => array(
-                                    'default' => 0,
-                                    'min_range' => 0,
-                                    'max_range' => 2
+                                    'min_range' => 0
                                 )
                             ),
-                            'description' => array(
-                                'filter' => FILTER_CALLBACK,
-                                'options' => array('DUPX_U', 'sanitize_text_field')
+                            'archive_size' => array(
+                                'filter' => FILTER_VALIDATE_INT,
+                                'flags' => FILTER_NULL_ON_FAILURE,
+                                'options' => array(
+                                    'min_range' => 0
+                                )
                             ),
-                            'subject' => array(
-                                'filter' => FILTER_CALLBACK,
-                                'options' => array('DUPX_U', 'sanitize_text_field')
+                            // DupArchiveProcessingFailure
+                            'failures' => array(
+                                'flags' => FILTER_REQUIRE_ARRAY | FILTER_NULL_ON_FAILURE,
                             ),
-                            'isCritical' => FILTER_VALIDATE_BOOLEAN,
+                            'file_index' => array(
+                                'filter' => FILTER_VALIDATE_INT,
+                                'flags' => FILTER_NULL_ON_FAILURE,
+                                'options' => array(
+                                    'min_range' => 0
+                                )
+                            ),
+                            'is_done' => FILTER_VALIDATE_BOOLEAN,
+                            'timestamp' => array(
+                                'filter' => FILTER_VALIDATE_INT,
+                                'flags' => FILTER_NULL_ON_FAILURE,
+                                'options' => array(
+                                    'min_range' => 0
+                                )
+                            )
                     ));
+
+                    if (is_null($this->dawn_status->failures)) {
+                        $this->dawn_status->failures = array();
+                    }
+
+                    foreach ($this->dawn_status->failures as $key => $failure) {
+                        $this->dawn_status->failures[$key] = (object) filter_var_array($failure,
+                                array(
+                                'type' => array(
+                                    'filter' => FILTER_VALIDATE_INT,
+                                    'options' => array(
+                                        'default' => 0,
+                                        'min_range' => 0,
+                                        'max_range' => 2
+                                    )
+                                ),
+                                'description' => array(
+                                    'filter' => FILTER_CALLBACK,
+                                    'options' => array('DUPX_U', 'sanitize_text_field')
+                                ),
+                                'subject' => array(
+                                    'filter' => FILTER_CALLBACK,
+                                    'options' => array('DUPX_U', 'sanitize_text_field')
+                                ),
+                                'isCritical' => FILTER_VALIDATE_BOOLEAN,
+                        ));
+                    }
+                } catch (Exception $e) {
+                    DUPX_Log::info("EXCEPTION: Dawn status validate error MESSAGE: ".$e->getMessage());
+                    $this->dawn_status = null;
                 }
-            } catch (Exception $e) {
-                DUPX_Log::info("EXCEPTION: Dawn status validate error MESSAGE: ".$e->getMessage());
+            } else {
+                DUPX_Log::info("Dawn status no in POST");
                 $this->dawn_status = null;
             }
-        } else {
-            DUPX_Log::info("Dawn status no in POST");
-            $this->dawn_status = null;
         }
 
         $this->post_log = $post;
@@ -157,13 +166,13 @@ class DUP_PRO_Extraction
         //===============================
         ($GLOBALS['LOG_FILE_HANDLE'] != false) or DUPX_Log::error(ERR_MAKELOG);
 
-        $min_chunk_size = 2 * MB_IN_BYTES;
+        $min_chunk_size = 2 * DUPLICATOR_PRO_INSTALLER_MB_IN_BYTES;
         $this->max_size_extract_at_a_time = DUPX_U::get_default_chunk_size_in_byte($min_chunk_size);
 
         if (isset($post['sub_folder_archive'])) {
             $this->sub_folder_archive = trim(DUPX_U::sanitize_text_field($post['sub_folder_archive']));
         } else {
-            if ('duparchive' == $this->archive_engine) {
+            if ('duparchive' == $this->archive_engine || $this->archive_engine == 'manual') {
                 $this->sub_folder_archive = '';
             } elseif (($this->sub_folder_archive = DUPX_U::findDupInstallerFolder($this->archive_path)) === false) {
                 DUPX_Log::info("findDupInstallerFolder error; set no subfolder");
@@ -193,7 +202,8 @@ class DUP_PRO_Extraction
         $this->log1();
 
         if ($this->archive_engine == 'manual') {
-            DUPX_Log::info("\n** PACKAGE EXTRACTION IS IN MANUAL MODE ** \n");
+            DUPX_Log::info("\n\nSTART ZIP FILE EXTRACTION MANUAL MODE >>> ");
+            DUPX_Log::info("\tDONE");
         } else {
 
             if ($this->archive_engine == 'shellexec_unzip') {
@@ -217,8 +227,7 @@ class DUP_PRO_Extraction
             }
 
             $this->log1();
-
-            DUPX_Log::info(">>> Starting ZipArchive Chunking Unzip");
+            DUPX_Log::info("\n\nSTART ZIP FILE EXTRACTION CHUNKING >>> ");
             if (!empty($this->sub_folder_archive)) {
                 DUPX_Log::info("ARCHIVE dup-installer SUBFOLDER:\"".$this->sub_folder_archive."\"");
             } else {
@@ -243,9 +252,11 @@ class DUP_PRO_Extraction
         $zip = new ZipArchive();
         $start_time = DUPX_U::getMicrotime();
         $time_over = false;
+        if ($this->archive_offset == 0) {
 
-        DUPX_Log::info("archive offset " . $this->archive_offset);
-        DUPX_Log::info('Dup installer zip path:"'.$dupInstallerZipPath.'"',2);
+        }
+        DUPX_Log::info("ARCHIVE OFFSET " .DUPX_Log::varToString($this->archive_offset));
+        DUPX_Log::info('DUP INSTALLER ARCHIVE PATH:"'.$dupInstallerZipPath.'"',2);
 
         if($zip->open($this->archive_path) == true){
             $this->num_files = $zip->numFiles;
@@ -257,7 +268,6 @@ class DUP_PRO_Extraction
 
             // Main chunk
             do {
-                $skip_filenames = array();
                 $extract_filename = null;
 
                 $no_of_files_in_micro_chunk = 0;
@@ -269,7 +279,7 @@ class DUP_PRO_Extraction
                     $skip = (strpos($filename, 'dup-installer') === 0);
 
                     if ($skip) {
-                        $skip_filenames[] = $filename;
+                        DUPX_Log::info("FILE EXTRACTION SKIP: ".DUPX_Log::varToString($filename), DUPX_Log::LV_DETAILED);
                     } else {
                         $extract_filename = $filename;
                         $size_in_micro_chunk += $stat_data['size'];
@@ -284,29 +294,25 @@ class DUP_PRO_Extraction
                     $size_in_micro_chunk < $this->max_size_extract_at_a_time
                 );
 
-                if (!empty($skip_filenames)) {
-                    DUPX_Log::info("SKIPPING\n".implode("\n", $skip_filenames),2);
-                }
-
                 if (!empty($extract_filename)) {
                     // skip dup-installer folder. Alrady extracted in bootstrap
                     if (
                         (strpos($extract_filename, $dupInstallerZipPath) === 0) ||
                         (!empty($this->sub_folder_archive) && strpos($extract_filename, $this->sub_folder_archive) !== 0)
                     ) {
-                        DUPX_Log::info("SKIPPING NOT IN ZIPATH:\"".$extract_filename."\"" ,2);
+                        DUPX_Log::info("SKIPPING NOT IN ZIPATH:\"".DUPX_Log::varToString($extract_filename)."\"" , DUPX_Log::LV_DETAILED);
                     } else {
                         try {
                             //rsr uncomment if debugging     DUPX_Log::info("Attempting to extract {$extract_filename}. Time:". time());
                             if (!$zip->extractTo($this->root_path, $extract_filename)) {
                                 if (DupProSnapLibUtilWp::isWpCore($extract_filename, DupProSnapLibUtilWp::PATH_RELATIVE)) {
-                                    DUPX_Log::info("FILE CORE EXTRACION ERROR: ".$extract_filename);
+                                    DUPX_Log::info("FILE CORE EXTRACTION ERROR: ".$extract_filename);
                                     $shortMsg      = 'Can\'t extract wp core files';
                                     $finalShortMsg = 'Wp core files not extracted';
                                     $errLevel      = DUPX_NOTICE_ITEM::CRITICAL;
                                     $idManager      = 'wp-extract-error-file-core';
                                 } else {
-                                    DUPX_Log::info("FILE EXTRACION ERROR: ".$extract_filename);
+                                    DUPX_Log::info("FILE EXTRACTION ERROR: ".$extract_filename);
                                     $shortMsg      = 'Can\'t extract files';
                                     $finalShortMsg = 'Files not extracted';
                                     $errLevel      = DUPX_NOTICE_ITEM::SOFT_WARNING;
@@ -328,17 +334,17 @@ class DUP_PRO_Extraction
                                     'sections' => array('files'),
                                 ), DUPX_NOTICE_MANAGER::ADD_UNIQUE_APPEND, $idManager);
                             } else {
-                                DUPX_Log::info("DONE: ".$extract_filename, DUPX_Log::LV_HARD_DEBUG);
+                                DUPX_Log::info("FILE EXTRACTION DONE: ".DUPX_Log::varToString($extract_filename), DUPX_Log::LV_HARD_DEBUG);
                             }
                         } catch (Exception $ex) {
                             if (DupProSnapLibUtilWp::isWpCore($extract_filename, DupProSnapLibUtilWp::PATH_RELATIVE)) {
-                                DUPX_Log::info("FILE CORE EXTRACION ERROR: {$extract_filename} | MSG:".$ex->getMessage());
+                                DUPX_Log::info("FILE CORE EXTRACTION ERROR: {$extract_filename} | MSG:".$ex->getMessage());
                                 $shortMsg      = 'Can\'t extract wp core files';
                                 $finalShortMsg = 'Wp core files not extracted';
                                 $errLevel      = DUPX_NOTICE_ITEM::CRITICAL;
                                 $idManager      = 'wp-extract-error-file-core';
                             } else {
-                                DUPX_Log::info("FILE EXTRACION ERROR: {$extract_filename} | MSG:".$ex->getMessage());
+                                DUPX_Log::info("FILE EXTRACTION ERROR: {$extract_filename} | MSG:".$ex->getMessage());
                                 $shortMsg      = 'Can\'t extract files';
                                 $finalShortMsg = 'Files not extracted';
                                 $errLevel      = DUPX_NOTICE_ITEM::SOFT_WARNING;
@@ -487,7 +493,7 @@ class DUP_PRO_Extraction
         DUPX_Log::info("********************************************************************************");
         DUPX_Log::info("USER INPUTS");
         DUPX_Log::info(str_pad('ARCHIVE ENGINE', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->archive_engine));
-        DUPX_Log::info(str_pad('CLIENT KICKOFF', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->post_log['clientside_kickoff']));
+        DUPX_Log::info(str_pad('CLIENT KICKOFF', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->clientside_kickoff));
         DUPX_Log::info(str_pad('SET DIR PERMS', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->set_dir_perms));
         DUPX_Log::info(str_pad('DIR PERMS VALUE', $labelPadSize, '_', STR_PAD_RIGHT).': '.decoct($this->dir_perms_value));
         DUPX_Log::info(str_pad('SET FILE PERMS', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->set_file_perms));
@@ -496,7 +502,7 @@ class DUP_PRO_Extraction
         DUPX_Log::info(str_pad('LOGGING', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->post_log['logging']));
         DUPX_Log::info(str_pad('RETAIN CONFIG', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->retain_config));
         DUPX_Log::info(str_pad('FILE TIME', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->zip_filetime));
-        DUPX_Log::info(str_pad('REMOVE RENDUNDANT', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->post_log['remove-redundant']));
+        DUPX_Log::info(str_pad('REMOVE RENDUNDANT', $labelPadSize, '_', STR_PAD_RIGHT).': '.DUPX_Log::varToString($this->remove_redundant));
         DUPX_Log::info("********************************************************************************\n");
         
         $log = "--------------------------------------\n";
@@ -563,14 +569,14 @@ class DUP_PRO_Extraction
     {
         $this->shell_exec_path = DUPX_Server::get_unzip_filepath();
 
-        DUPX_Log::info("ZIP:\tShell Exec Unzip");
+        DUPX_Log::info("\n\nSTART ZIP FILE EXTRACTION SHELLEXEC >>> ");
 
         $command = escapeshellcmd($this->shell_exec_path)." -o -qq ".escapeshellarg($this->archive_path)." -d ".escapeshellarg($this->root_path)." 2>&1";
         if ($this->zip_filetime == 'original') {
             DUPX_Log::info("\nShell Exec Current does not support orginal file timestamp please use ZipArchive");
         }
 
-        DUPX_Log::info(">>> Starting Shell-Exec Unzip:\nCommand: {$command}");
+        DUPX_Log::info('SHELL COMMAND: '.DUPX_Log::varToString($command));
         $stderr = shell_exec($command);
         if ($stderr != '') {
             $zip_err_msg = ERR_SHELLEXEC_ZIPOPEN . ": $stderr";
@@ -582,45 +588,38 @@ class DUP_PRO_Extraction
 
     public function runZipArchive()
     {
-        DUPX_Log::info(">>> Starting ZipArchive Unzip");
+        DUPX_Log::info("\n\nSTART ZIP FILE EXTRACTION STANDARD >>> ");
         $this->runZipArchiveChunking(false);
     }
 
     public function setFilePermission()
     {
         // When archive engine is ziparchivechunking, File permissions should be run at the end of last chunk (means after full extraction)
-        if ('ziparchivechunking' == $this->archive_engine && !$this->chunkedExtractionCompleted)  return;
-        
+        if ('ziparchivechunking' == $this->archive_engine && !$this->chunkedExtractionCompleted) return;
+
         if ($this->set_file_perms || $this->set_dir_perms || (($this->archive_engine == 'shellexec_unzip') && ($this->zip_filetime == 'current'))) {
 
             DUPX_Log::info("Resetting permissions");
-            $set_file_perms = $this->set_file_perms;
-            $set_dir_perms = $this->set_dir_perms;
-            $set_file_mtime = ($this->zip_filetime == 'current');
+            $set_file_perms   = $this->set_file_perms;
+            $set_dir_perms    = $this->set_dir_perms;
+            $set_file_mtime   = ($this->zip_filetime == 'current');
             $file_perms_value = $this->file_perms_value ? $this->file_perms_value : 0644;
-            $dir_perms_value = $this->dir_perms_value ? $this->dir_perms_value : 0755;
+            $dir_perms_value  = $this->dir_perms_value ? $this->dir_perms_value : 0755;
 
-            $objects = new RecursiveIteratorIterator(new IgnorantRecursiveDirectoryIterator($this->root_path),
-                RecursiveIteratorIterator::SELF_FIRST);
+            $objects = new RecursiveIteratorIterator(new IgnorantRecursiveDirectoryIterator($this->root_path), RecursiveIteratorIterator::SELF_FIRST);
 
             foreach ($objects as $name => $object) {
-
-                $last_char_of_path = substr($name, -1);
-			    if ('.' == $last_char_of_path)  continue;
+                if ('.' == substr($name, -1)) {
+                    continue;
+                }
 
                 if ($set_file_perms && is_file($name)) {
-                    $retVal = @chmod($name, $file_perms_value);
-
-                    if (!$retVal) {
-                        DUPX_Log::info("Permissions setting on {$name} failed");
+                    if (!DupProSnapLibIOU::chmod($name, $file_perms_value)) {
+                        DUPX_Log::info('CHMOD FAIL: '.$name);
                     }
-                } else {
-                    if ($set_dir_perms && is_dir($name)) {
-                        $retVal = @chmod($name, $dir_perms_value);
-
-                        if (!$retVal) {
-                            DUPX_Log::info("Permissions setting on {$name} failed");
-                        }
+                } else if ($set_dir_perms && is_dir($name)) {
+                    if (!DupProSnapLibIOU::chmod($name, $dir_perms_value)) {
+                        DUPX_Log::info('CHMOD FAIL: '.$name);
                     }
                 }
 
@@ -648,7 +647,7 @@ class DUP_PRO_Extraction
         $this->JSON['pass'] = 1;
         error_reporting($this->ajax1_error_level);
         DUPX_Log::close();
-        die(DupProSnapLibUtil::wp_json_encode($this->JSON));
+        die(DupProSnapJsonU::wp_json_encode($this->JSON));
     }
 
     public function finishChunkExtraction()
@@ -667,7 +666,7 @@ class DUP_PRO_Extraction
             $this->JSON['zip_arc_chunk_notice'] = ($this->zip_arc_chunk_notice_no > -1) ? $GLOBALS['ZIP_ARC_CHUNK_EXTRACT_NOTICES'][$this->zip_arc_chunk_notice_no] : '';
         }
         DUPX_Log::close();
-        die(DupProSnapLibUtil::wp_json_encode($this->JSON));
+        die(DupProSnapJsonU::wp_json_encode($this->JSON));
     }
 
     public function finishExtraction()

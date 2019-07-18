@@ -11,7 +11,7 @@ $nonce_action = 'duppro-template-edit';
 
 $was_updated = false;
 $package_template_id = isset($_REQUEST['package_template_id']) ? sanitize_text_field($_REQUEST['package_template_id']) : -1;
-$package_templates = DUP_PRO_Package_Template_Entity::get_all();
+$package_templates = DUP_PRO_Package_Template_Entity::get_all(true);
 $package_template_count = count($package_templates);
 
 $view_state = DUP_PRO_UI_ViewState::getArray();
@@ -28,17 +28,6 @@ if ($package_template_id == -1) {
 if (isset($_REQUEST['action'])) {
 	check_admin_referer($nonce_action);
 	if ($_REQUEST['action'] == 'save') {
-		if (isset($_REQUEST['_database_filter_tables'])) {
-			$package_template->database_filter_tables = implode(',', $_REQUEST['_database_filter_tables']);
-		} else {
-			$package_template->database_filter_tables = '';
-		}
-
-		$package_template->archive_filter_dirs	 = isset($_REQUEST['_archive_filter_dirs']) ? DUP_PRO_Archive::parseDirectoryFilter($_REQUEST['_archive_filter_dirs']) : '';
-		$package_template->archive_filter_exts	 = isset($_REQUEST['_archive_filter_exts']) ? DUP_PRO_Archive::parseExtensionFilter($_REQUEST['_archive_filter_exts']) : '';
-		$package_template->archive_filter_files	 = isset($_REQUEST['_archive_filter_files']) ? DUP_PRO_Archive::parseFileFilter($_REQUEST['_archive_filter_files']) : '';
-        $package_template->filter_sites = !empty($_REQUEST['_mu_exclude']) ? $_REQUEST['_mu_exclude'] : '';
-
 		DUP_PRO_LOG::traceObject('request', $_REQUEST);
 
 		// Checkboxes don't set post values when off so have to manually set these
@@ -133,15 +122,53 @@ TOOL-BAR -->
 <table class="dpro-edit-toolbar">
 	<tr>
 		<td>
-			<?php if ($package_template_count > 0) : ?>
+			<?php if ($package_template_count > 0) :
+				$general_templates = array();
+				$existing_templates = array();
+				foreach ($package_templates as $copy_package_template) {
+					if ($copy_package_template->id != $package_template->id) {
+						if ($copy_package_template->is_default || $copy_package_template->is_manual) {
+							$general_templates[$copy_package_template->id] = $copy_package_template->is_manual ? DUP_PRO_U::__("Active Build Settings") : $copy_package_template->name;
+						} else {
+							$existing_templates[$copy_package_template->id] = $copy_package_template->name;
+						}
+					}
+				}
+				?>
+
 				<select name="duppro-source-template-id">
-					<option value="-1" selected="selected"><?php _e("Copy From"); ?></option>
-					<?php foreach ($package_templates as $copy_package_template) :
-						if($copy_package_template->id != $package_template->id) : ?>
-						<option value="<?php echo esc_attr($copy_package_template->id); ?>"><?php echo esc_html($copy_package_template->name); ?></option>
+					<option value="-1"><?php DUP_PRO_U::esc_html_e("Copy From");?></option>
 					<?php
-						endif;
-						endforeach;
+					if (!empty($general_templates)) {
+						asort($general_templates);
+					?>
+						<optgroup label="<?php DUP_PRO_U::esc_attr_e("General Templates");?>">
+							<?php
+							foreach ($general_templates as $id => $val) {
+							?>
+								<option value="<?php echo esc_attr($id);?>"><?php echo esc_html($val);?></option>
+							<?php
+							}
+							?>
+						</optgroup>
+					<?php
+					}
+					?>
+					<?php
+					if (!empty($existing_templates)) {
+						asort($existing_templates);
+					?>
+						<optgroup label="<?php DUP_PRO_U::esc_attr_e("Existing Templates");?>">
+							<?php
+							foreach ($existing_templates as $id =>  $val) {
+							?>
+								<option value="<?php esc_attr($id);?>"><?php echo esc_html($val);?></option>
+							<?php
+							}
+							?>
+						</optgroup>
+					<?php
+					}
 					?>
 				</select>
 				<input type="button" class="button action" value="<?php DUP_PRO_U::esc_attr_e("Apply") ?>" onclick="DupPro.Template.Copy()">
@@ -665,7 +692,7 @@ jQuery(document).ready(function($) {
 	};
 
 	//INIT
-	$('#template-name').focus();
+	$('#template-name').focus().select();
 	$('#_archive_filter_dirs').val($('#_archive_filter_dirs').val().trim());
 	//Default to cPanel tab if used
 	$('#cpnl-enable').is(":checked") ? $('#dpro-cpnl-tab-lbl').trigger("click") : null;

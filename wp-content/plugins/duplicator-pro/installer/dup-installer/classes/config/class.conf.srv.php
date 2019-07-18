@@ -59,7 +59,7 @@ class DUPX_ServerConfig
 			$htacess_content = "#This file has been reset by Duplicator Pro. See .htaccess-".$GLOBALS['DUPX_AC']->package_hash." for the original file";
 			$htacess_content .= self::getOldHtaccessAddhandlerLine($path);
 			file_put_contents("{$path}/.htaccess", $htacess_content);
-			@chmod("{$path}/.htaccess", 0644);
+			DupProSnapLibIOU::chmod("{$path}/.htaccess", 0644);
 		} else {
 			DUPX_Log::info("- .htaccess file was not reset or backed up.");
 		}
@@ -67,7 +67,7 @@ class DUPX_ServerConfig
 		/*
 		if (self::runReset($path, '.htaccess')) {
 			file_put_contents("{$path}/.htaccess", "#This file has been reset by Duplicator Pro. See .htaccess-{$time}.orig for the original file");
-			@chmod("{$path}/.htaccess", 0644);
+			DupProSnapLibIOU::chmod("{$path}/.htaccess", 0644);
 		}
 		*/
 		
@@ -294,7 +294,7 @@ HTACCESS;
 		} else {
 			DUPX_Log::info("- Successfully updated the .htaccess file setting.");
 		}
-		@chmod("{$path}/.htaccess", 0644);		
+		DupProSnapLibIOU::chmod("{$path}/.htaccess", 0644);
 
 		
     }

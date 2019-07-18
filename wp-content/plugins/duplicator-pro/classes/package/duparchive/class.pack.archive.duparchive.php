@@ -70,9 +70,6 @@ class DUP_PRO_Dup_Archive extends DUP_PRO_Archive
 
             $archive->Package->safe_tmp_cleanup(true);
 
-            /* @var $global DUP_PRO_Global_Entity */
-            $global = DUP_PRO_Global_Entity::get_instance();
-
             $compressDir  = rtrim(DUP_PRO_U::safePath($archive->PackDir), '/');
             $sqlPath      = DUP_PRO_U::safePath("{$archive->Package->StorePath}/{$archive->Package->Database->File}");
             $archivePath  = DUP_PRO_U::safePath("{$archive->Package->StorePath}/{$archive->File}");
@@ -172,11 +169,9 @@ class DUP_PRO_Dup_Archive extends DUP_PRO_Archive
 
             try {
                 if ($buildProgress->custom_data == null) {
-					$createState                    = DUP_PRO_Dup_Archive_Create_State::createNew($archive->Package, $archivePath, $compressDir, self::WorkerTimeInSec, $buildProgress->current_build_compression, true);
-                    $createState->throttleDelayInUs = DUP_PRO_Server_Load_Reduction::microseconds_from_reduction($global->server_load_reduction);
+                    $createState = DUP_PRO_Dup_Archive_Create_State::createNew($archive->Package, $archivePath, $compressDir, self::WorkerTimeInSec, $buildProgress->current_build_compression, true);
                 } else {
                     DUP_PRO_LOG::traceObject('Resumed build_progress', $archive->Package->build_progress);
-
                     $createState = DUP_PRO_Dup_Archive_Create_State::createFromPackage($archive->Package);
                 }
 
@@ -270,7 +265,6 @@ class DUP_PRO_Dup_Archive extends DUP_PRO_Archive
                         $expandStateEntity->working                = true;
                         $expandStateEntity->timeSliceInSecs        = self::WorkerTimeInSec;
                         $expandStateEntity->basePath               = DUPLICATOR_PRO_SSDIR_PATH_TMP.'/validate';
-                        $expandStateEntity->throttleDelayInUs      = DUP_PRO_Server_Load_Reduction::microseconds_from_reduction($global->server_load_reduction);
                         $expandStateEntity->validateOnly           = true;
                         $expandStateEntity->validationType         = DupArchiveValidationTypes::Standard;
                         $expandStateEntity->working                = true;

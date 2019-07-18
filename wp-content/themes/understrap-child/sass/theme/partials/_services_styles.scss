@@ -115,12 +115,15 @@
   @include mq('tablet') {
     margin-bottom: unset;
   }
+}
 
 
-.title{
-  color: $white;
+.services-splash__container{
+    .title{
+        color: $white;
+    }
 }
-}
+
 .services-splash__title-sub {
   color: $white;
   max-width: 90%;
@@ -172,10 +175,10 @@
     }
 
     @include mq('desktop') {
-      width: 129%;
-      left: -28%;
-      top: -97%;
-      transform: translate(21%, 37%);
+    width: 110%;
+    left: -23%;
+    top: -115%;
+    transform: translate(21%,37%);
     }
   }
 }
@@ -3442,7 +3445,10 @@ display: flex;
 position: relative;
 width: 100%;
 height: 100%;
+display: none;
+
 @include mq('desktop'){
+display: block;
   height: 275em;
 }
 .background__image--cover{

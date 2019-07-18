@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-<section class="a-la-carte" #id="a-la-carte">
+<section class="a-la-carte" id="alacarte">
     <article>
         <h1 class="pagination"></h1>
         <div class="flex-container">

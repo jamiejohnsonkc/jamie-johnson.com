@@ -26,13 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="stylesheet" href="https://use.typekit.net/hny8rtu.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143791287-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-143791287-1');
-</script>
 	<?php wp_head(); ?>
 </head>
 

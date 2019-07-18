@@ -162,7 +162,7 @@ class DUP_PRO_UI_Alert
         ."<img src='".esc_url($img_url)."' style='margin-top:15px;'>"
         .'<p style="font-size:1.5em; line-height:1.4em;">'
         .'<b>The Bad News:</b> Your Duplicator Pro License is Invalid. <br/>'
-        .'<b>The Good News:</b> You Can Get 30% Off Duplicator Pro Today! </p>'
+        .'<b>The Good News:</b> You Can Get 10% Off Duplicator Pro Today! </p>'
         ."The Duplicator Pro plugin has been running for at least 30 days without a valid license.<br/>"
         .'...which means you don\'t have access to <b>security updates</b>, <i>bug fixes</i>, <b>support requests</b> or <i>new features</i>.<br/>'
         ."<p style='font-size:1.5rem'><a href='".esc_url($licensing_tab_url)."'>Activate Your License Now...</a> <br/> - OR - <br/> "

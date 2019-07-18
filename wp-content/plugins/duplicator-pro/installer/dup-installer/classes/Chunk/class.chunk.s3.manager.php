@@ -139,7 +139,7 @@ class DUPX_chunkS3Manager extends DUPX_ChunkingManager_file
         $s3Funcs->saveData();
 
         // managed output for timeout shutdown
-        DUPX_Handler::setShutdownReturn(DUPX_Handler::SHUTDOWN_TIMEOUT, DupProSnapLibUtil::wp_json_encode($s3Funcs->getJsonReport()));
+        DUPX_Handler::setShutdownReturn(DUPX_Handler::SHUTDOWN_TIMEOUT, DupProSnapJsonU::wp_json_encode($s3Funcs->getJsonReport()));
 
         /**
          * store position post and globals

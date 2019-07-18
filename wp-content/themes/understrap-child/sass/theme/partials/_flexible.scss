@@ -22,7 +22,7 @@ justify-content: center;
     @include mq('desktop') {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: center; 
       max-width: 83%;
     }
 
@@ -280,12 +280,12 @@ align-items: center;
         .blurb {
           @include xs__copy();
           @include vr($margin-bottom: 2);
-          font-weight: 200;
+          font-weight: 300;
         }
 
         .copy {
           @include xs__copy();
-          font-weight: 200;
+          font-weight: 300;
           @include vr($margin-bottom: .5);
           @include vr($padding: 0 0, $line-height:2);
 

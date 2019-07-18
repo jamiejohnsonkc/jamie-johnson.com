@@ -571,34 +571,37 @@ $multisite_disabled = ($archive_config->getLicenseType() != DUPX_LicenseType::Bu
         <tr>
             <td>Extraction:</td>
             <td>
-                <?php $num_selections = ($archive_config->isZipArchive() ? 3 : 2); ?>
+                <?php 
+                $options = array();
+                $options[] = '<option '.($is_wpconfarc_present ? '' : 'disabled').' value="manual">Manual Archive Extraction '.($is_wpconfarc_present ? '' : '*').'</option>';
+                if ($archive_config->isZipArchive()) {
+                    //ZIP-ARCHIVE
+                    if ($zip_archive_enabled) {
+                        $options[] = '<option value="ziparchive">PHP ZipArchive</option>';
+                        $options[] = '<option value="ziparchivechunking" selected="true">PHP ZipArchive Chunking</option>';
+                    } else {
+                        $options[] = '<option value="ziparchive" disabled="true">PHP ZipArchive (not detected on server)</option>';
+                    }
+                    //SHELL-EXEC UNZIP
+                    if ($shell_exec_unzip_enabled) {
+                        if ($zip_archive_enabled) {
+                            $options[] = '<option value="shellexec_unzip" >Shell Exec Unzip</option>';
+                        } else {
+                            $options[] = '<option value="shellexec_unzip" selected="true">Shell Exec Unzip</option>';
+                        }
+                    } else {
+                        $options[] = '<option value="shellexec_unzip" disabled="true">Shell Exec Unzip (not detected on server)</option>';
+                    }
+                } else {
+                    $options[] = '<option value="duparchive" selected="true">DupArchive</option>';
+                }
+                $num_selections = count($options);
+                ?>
                 <select id="archive_engine" name="archive_engine" size="<?php echo $num_selections; ?>">
-					<option <?php echo ($is_wpconfarc_present ? '' : 'disabled'); ?> value="manual">Manual Archive Extraction <?php echo ($is_wpconfarc_present ? '' : '*'); ?></option>
                     <?php
-                        if($archive_config->isZipArchive()){
-
-                            //ZIP-ARCHIVE
-                            if ($zip_archive_enabled){
-                                echo '<option value="ziparchive">PHP ZipArchive</option>';
-                                echo '<option value="ziparchivechunking" selected="true">PHP ZipArchive Chunking</option>';
-                            } else {
-                                echo '<option value="ziparchive" disabled="true">PHP ZipArchive (not detected on server)</option>';
-                            }
-                            
-                            //SHELL-EXEC UNZIP
-                            if ($shell_exec_unzip_enabled) {
-                                 if($zip_archive_enabled) {
-                                    echo '<option value="shellexec_unzip" >Shell Exec Unzip</option>';
-                                 } else {
-                                    echo '<option value="shellexec_unzip" selected="true">Shell Exec Unzip</option>';
-                                 }
-                            } else {
-                                echo '<option value="shellexec_unzip" disabled="true">Shell Exec Unzip (not detected on server)</option>';
-                            }
-                    }
-                    else {
-                        echo '<option value="duparchive" selected="true">DupArchive</option>';
-                    }
+                        foreach($options as $opt) {
+                            echo $opt;
+                        }
                     ?>
                 </select><br/>
 				<?php if(!$is_wpconfarc_present) :?>
@@ -613,9 +616,9 @@ $multisite_disabled = ($archive_config->getLicenseType() != DUPX_LicenseType::Bu
 			<td>Permissions:</td>
 			<td>
 				<input type="checkbox" name="set_file_perms" id="set_file_perms" value="1" onclick="jQuery('#file_perms_value').prop('disabled', !jQuery(this).is(':checked'));"/>
-				<label for="set_file_perms">All Files</label><input name="file_perms_value" id="file_perms_value" style="width:30px; margin-left:7px;" value="644" disabled> &nbsp;
+				<label for="set_file_perms">All Files</label><input name="file_perms_value" id="file_perms_value" style="width:45px; margin-left:7px;" value="644" disabled> &nbsp;
 				<input type="checkbox" name="set_dir_perms" id="set_dir_perms" value="1" onclick="jQuery('#dir_perms_value').prop('disabled', !jQuery(this).is(':checked'));"/>
-				<label for="set_dir_perms">All Directories</label><input name="dir_perms_value" id="dir_perms_value" style="width:30px; margin-left:7px;" value="755" disabled>
+				<label for="set_dir_perms">All Directories</label><input name="dir_perms_value" id="dir_perms_value" style="width:45px; margin-left:7px;" value="755" disabled>
 			</td>
 		</tr>
 	</table><br/><br/>
@@ -665,10 +668,7 @@ $multisite_disabled = ($archive_config->getLicenseType() != DUPX_LicenseType::Bu
                         <label for="clientside_kickoff" style="font-weight: normal">Browser drives the archive engine.</label>
                     </td>
                 </tr>
-            <?php endif;
-            $licence_type = $GLOBALS['DUPX_AC']->getLicenseType();
-            if ($licence_type >= DUPX_LicenseType::Freelancer) {
-            ?>
+            <?php endif; ?>
             <tr id="remove-redundant-row" <?php if ($GLOBALS['DUPX_AC']->exportOnlyDB) {?>style="display:none;"<?php } ?>>
                 <td>Inactive Plugins<br> and Themes:</td>
                 <td>
@@ -682,24 +682,16 @@ $multisite_disabled = ($archive_config->getLicenseType() != DUPX_LicenseType::Bu
                     <?php } ?>                    
                 </td>
             </tr>
-            <?php
-            }
-            ?>
         </table>
     </div><br/>
 
-    <?php include ('view.s1.terms.php') ;?>
-
-    <div id="s1-warning-check">
-        <input id="accept-warnings" name="accpet-warnings" type="checkbox" onclick="DUPX.acceptWarning()" />
-        <label for="accept-warnings">I have read and accept all <a href="javascript:void(0)" onclick="DUPX.viewTerms()">terms &amp; notices</a> <small style="font-style:italic">(required to continue)</small></label><br/>
-    </div>
-    <br/><br/>
-    <br/><br/>
-
+    <?php
+    $req_counts = array_count_values($req);
+    $is_only_permission_issue = (isset($req_counts['Fail']) && 1 == $req_counts['Fail'] && 'Fail' == $req[10] && 'Fail' == $all_req && 'Fail' != $arcCheck);
+    ?>
 
     <?php if (!$req_success || $arcCheck == 'Fail') : ?>
-        <div class="s1-err-msg">
+        <div class="s1-err-msg" <?php if ($is_only_permission_issue) { ?>style="padding: 0 0 20px 0;"<?php } ?>>
             <i>
                 This installation will not be able to proceed until the archive and validation sections both pass. Please adjust your servers settings or contact your
                 server administrator, hosting provider or visit the resources below for additional help.
@@ -709,12 +701,37 @@ $multisite_disabled = ($archive_config->getLicenseType() != DUPX_LicenseType::Bu
                 &raquo; <a href="https://snapcreek.com/support/docs/" target="_blank">Online Documentation</a> <br/>
             </div>
         </div>
-    <?php else : ?>
-        <div class="footer-buttons" >
+    <?php
+        $is_next_btn_html = false;
+    else :
+        $is_next_btn_html = true;
+    endif;
+    
+    if ($is_only_permission_issue) { ?>
+        <div class="s1-accept-check">
+            <input id="accept-perm-error" name="accept-perm-error" type="checkbox" onclick="DUPX.showHideNextBtn(this)" />
+            <label for="accept-perm-error" style="color: #AF0000;">I would like to proceed with my own risk despite the permission error</label><br/>
+        </div>
+    <?php
+    }
+
+    include ('view.s1.terms.php'); ?>
+
+    <div class="s1-accept-check">
+        <input id="accept-warnings" name="accpet-warnings" type="checkbox" onclick="DUPX.acceptWarning()" />
+        <label for="accept-warnings">I have read and accept all <a href="javascript:void(0)" onclick="DUPX.viewTerms()">terms &amp; notices</a> <small style="font-style:italic">(required to continue)</small></label><br/>
+    </div>
+    <br/><br/>
+    <br/><br/>
+    <?php
+    if ($is_next_btn_html || $is_only_permission_issue) {
+    ?>
+        <div class="footer-buttons" <?php if ($is_only_permission_issue) { ?>style="display: none;"<?php } ?>>
             <button id="s1-deploy-btn" type="button" title="<?php echo $agree_msg; ?>" onclick="DUPX.processNext()"  class="default-btn"> Next <i class="fa fa-caret-right"></i> </button>
         </div>
-    <?php endif; ?>
-
+    <?php
+    }
+    ?>
 </form>
 
 
@@ -1461,6 +1478,18 @@ DUPX.hideErrorResult = function ()
 }
 
 /**
+ * show next button */
+DUPX.showHideNextBtn = function (evtSrc)
+{
+    var target = $(".footer-buttons");
+    if (evtSrc.checked) {
+        target.slideDown();
+    } else {
+        target.slideUp();
+    }
+};
+
+/**
  * Accetps Usage Warning */
 DUPX.acceptWarning = function ()
 {
@@ -1509,8 +1538,7 @@ $(document).ready(function ()
 	DUPX.acceptWarning();
 
     <?php
-    $isWindows = DUPX_U::isWindows();
-    if (!$isWindows) {
+    if (!DupProSnapLibOSU::isWindows()) {
     ?>
         $('#set_file_perms').trigger("click");
         $('#set_dir_perms').trigger("click");

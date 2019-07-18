@@ -141,7 +141,8 @@ defined("ABSPATH") or die("");
 						DUP_PRO_U::esc_html_e("Use filenames without paths to filter same-named files across multiple directories.");
 						echo "</b>";
 						?> <br/>
-						<?php DUP_PRO_U::esc_html_e("Use semicolons to separate all items."); ?>
+						<?php DUP_PRO_U::esc_html_e("Use semicolons to separate all items."); ?><br/>
+                        <?php DUP_PRO_U::esc_html_e("Use # to comment a line."); ?>
 					</div>
 				</div>
 			</div>

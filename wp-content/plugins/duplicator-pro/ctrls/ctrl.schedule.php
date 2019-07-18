@@ -13,6 +13,7 @@ class DUP_PRO_CTRL_Schedule extends DUP_PRO_Web_Services
 
     function duplicator_pro_schedule_bulk_delete()
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('duplicator_pro_schedule_bulk_delete', 'nonce');
         DUP_PRO_U::hasCapability('export');
         try {
@@ -47,6 +48,7 @@ class DUP_PRO_CTRL_Schedule extends DUP_PRO_Web_Services
     // { schedule_id, is_running=true|false, last_ran_string}
     function get_schedule_infos()
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('duplicator_pro_get_schedule_infos', 'nonce');
         DUP_PRO_U::hasCapability('export');
         $schedules      = DUP_PRO_Schedule_Entity::get_all();
@@ -78,6 +80,7 @@ class DUP_PRO_CTRL_Schedule extends DUP_PRO_Web_Services
 
     function run_schedule_now()
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('duplicator_pro_run_schedule_now', 'nonce');
         DUP_PRO_U::hasCapability('export');
         

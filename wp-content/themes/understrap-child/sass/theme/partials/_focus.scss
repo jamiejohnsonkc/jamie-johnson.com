@@ -119,6 +119,7 @@
         @include mq('desktop'){
           .header, .copy__container {
             width: 83%;
+            max-width: 83%;
             }
          
           display: flex;

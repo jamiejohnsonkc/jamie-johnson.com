@@ -207,7 +207,7 @@ TOOL-BAR -->
 
 	$confirm1 = new DUP_PRO_UI_Dialog();
 	$confirm1->title			 = DUP_PRO_U::__('Delete Schedule?');
-	$confirm1->message			 = DUP_PRO_U::__('Are you sure, you want to delete the selected schedule(s)?');
+	$confirm1->message			 = DUP_PRO_U::__('Are you sure you want to delete the selected schedule(s)?');
 	$confirm1->message			.= '<br/>';
 	$confirm1->message			.= DUP_PRO_U::__('<small><i>Note: This action removes all schedules.</i></small>');
 	$confirm1->progressText      = DUP_PRO_U::__('Removing Schedules, Please Wait...');
@@ -216,14 +216,14 @@ TOOL-BAR -->
 
     $confirm2 = new DUP_PRO_UI_Dialog();
     $confirm2->title            = DUP_PRO_U::__('RUN SCHEDULE?');
-	$confirm2->message          = DUP_PRO_U::__('Are you sure, you want to run schedule now?');
+	$confirm2->message          = DUP_PRO_U::__('Are you sure you want to run schedule now?');
     $confirm2->progressText     = DUP_PRO_U::__('Running Schedule, Please Wait...');
 	$confirm2->jsCallback		= 'DupPro.Schedule.Run(this)';
 	$confirm2->initConfirm();
 
     $confirm3 = new DUP_PRO_UI_Dialog();
     $confirm3->title            = $confirm1->title;
-	$confirm3->message          = DUP_PRO_U::__('Are you sure, you want to delete this schedule?');
+	$confirm3->message          = DUP_PRO_U::__('Are you sure you want to delete this schedule?');
     $confirm3->progressText     = $confirm1->progressText;
 	$confirm3->jsCallback		= 'DupPro.Schedule.DeleteThis(this)';
 	$confirm3->initConfirm();

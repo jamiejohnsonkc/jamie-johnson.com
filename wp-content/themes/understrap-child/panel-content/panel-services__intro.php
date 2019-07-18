@@ -19,10 +19,11 @@ exit; // Exit if accessed directly.
 <div class="flex-container">
 	<div class="flex-item">
 <div class="flex-item__wrapper">
-	<h1 class="title">It's not me it's you.</h1>
-	<h2 class="subhead">End to End Capabilities. Zero B.S.</h2>
+<h1 class="title">Customer-Driven. Agile Solutions. Zero Hype.</h1>
+	<!-- <h1 class="title">It's not me. <br>It's you.</h1>
+	<h2 class="subhead">End to End Capabilities. Zero B.S.</h2> -->
 	<p class="copy">I spent half my career in agencies and roughly the other half on the client-side. I think it's time for something new.</p>
-	<p class="copy">I think marketing services need to practice what they preach. So I'm setting out to create a truly a professional service focused on professional service.</p>
+	<p class="copy">I think marketing services need to practice what they preach. So I'm setting out to create something a bit novel &mdash; a marketing service driven to serve its customers.</p>
 </div>
 	</div>
 	

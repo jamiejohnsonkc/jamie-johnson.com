@@ -198,7 +198,11 @@ class DUPX_DBInstall
                     @mysqli_query($this->dbh, "SET wait_timeout = ".mysqli_real_escape_string($this->dbh, $GLOBALS['DB_MAX_TIME']));
                     DUPX_DB::setCharset($this->dbh, $this->post['dbcharset'], $this->post['dbcollate']);
                 }
-                @mysqli_autocommit($this->dbh, false);
+                if (@mysqli_autocommit($this->dbh, false)) {
+                    DUPX_Log::info('Auto Commit set to false successfully');
+                } else {
+                    DUPX_Log::info('Failed to set Auto Commit to false');
+                }
 
                 DUPX_Log::info("DATABASE CHUNK: Iterating query loop", DUPX_Log::LV_DEBUG);
                 $query = null;
@@ -215,8 +219,8 @@ class DUPX_DBInstall
                         /*
                           $rand_no = rand(0, 500);
                           if (0 == $this->post['dbchunk_retry'] && 1 == $rand_no) {
-                          DUPX_Log::info("#### intentionally killing db chunk installation process");
-                          error_log('#### intentionally killing db chunk installation process');
+                          DUPX_Log::info("intentionally killing db chunk installation process");
+                          error_log('intentionally killing db chunk installation process');
                           exit(1);
                           }
                          */
@@ -255,7 +259,11 @@ class DUPX_DBInstall
                         $query = null;
                     }
                 }
-                @mysqli_autocommit($this->dbh, true);
+                if (@mysqli_autocommit($this->dbh, true)) {
+                    DUPX_Log::info('Auto Commit set to true successfully');
+                } else {
+                    DUPX_Log::info('Failed to set Auto Commit to true');
+                }
             } else {
                 DUPX_Log::info("DATABASE CHUNK: Skipping query loop because already out of time. Elapsed time: ".DUPX_Log::varToString($elapsed_time), DUPX_Log::LV_DEBUG);
                 $query_offset = ftell($handle);
@@ -551,6 +559,7 @@ class DUPX_DBInstall
         $query_strlen = strlen(trim($query));
         
         $nManager = DUPX_NOTICE_MANAGER::getInstance();
+        @mysqli_autocommit($this->dbh, false);
 
         if ($this->dbvar_maxpacks < $query_strlen) {
 
@@ -638,6 +647,8 @@ class DUPX_DBInstall
                 $this->dbquery_rows++;
             }
         }
+        @mysqli_commit($this->dbh);
+        @mysqli_autocommit($this->dbh, true);
     }
 
 	public function runCleanupRotines()

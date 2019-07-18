@@ -1,6 +1,6 @@
 <?php
 /**
- * container Splash template.
+ * container Splash template. 
  *
  * @package understrap
  */
@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">WEBSITES / DIGITAL</h3>
 					</div>
 					<div class="services-list-card__back">
-						<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for every budget.</div>
+						<div class="copy__block services-list__copy-block">Responsive, mobile-first and cost-appropriate web design &amp; development to get you found and engaged online.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -39,10 +39,10 @@ if (!defined('ABSPATH')) {
 			<div class="content__item services-list__content-item">
 				<div class="services-list-card-inner">
 					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">identity & substantiation</h3>
+						<h3 class="deck deck__header services-list__deck-header">Branding & substantiation</h3>
 					</div>
 					<div class="services-list-card__back">
-						<div class="copy__block services-list__copy-block">Lorem ex ut labore ipsum.</div>
+						<div class="copy__block services-list__copy-block">"Because we say so" doesn't go over well these days. I can help you strategize for the modern customer.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -53,7 +53,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">inbound initiatives</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
+	<div class="copy__block services-list__copy-block">Comprehensive marketing initiatives to attract, engage and establish rapport with the modern customer.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -64,7 +64,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">MARKETING CONTENT</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design and production of digital and traditional marketing materials, collateral and editorial.</div>
+	<div class="copy__block services-list__copy-block">Creation, development and production of digital and traditional marketing materials, collateral and editorial.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -77,7 +77,7 @@ if (!defined('ABSPATH')) {
 		
 					</div>
 					<div class="services-list-card__back">
-						<div class="copy__block services-list__copy-block">Cupidatat anim nisi commodo nulla.Id ea cillum enim pariatur enim culpa.</div>
+						<div class="copy__block services-list__copy-block">Online and analog outbound initiatives to generate brand awareness at scale.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -111,7 +111,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">value design</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Identify and engage critical paths to establish long-term growth.</div>
+	<div class="copy__block services-list__copy-block">Align, optimize and articulate your competitive strategy to drive optimum business performance.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -123,7 +123,7 @@ if (!defined('ABSPATH')) {
 		
 					</div>
 					<div class="services-list-card__back">
-						<div class="copy__block services-list__copy-block">Qui velit excepteur ullamco commodo ipsum excepteur. Et fugiat est sunt exercitatio.</div>
+						<div class="copy__block services-list__copy-block">Ensure every customer experience delivers an accurate and effective portrayal of your competitive value from beginning to end.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -134,7 +134,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">revenue generation</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Consequat irure aute cupidatat Lorem ullamco.</div>
+	<div class="copy__block services-list__copy-block">Calibrate marketing and sales operations, activities and mindsets for optimal performance in the customer-led economy.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -145,7 +145,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">product / brand management</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Sint qui exercitation quis aliquip nisi do aliquip dolor dolore quis ut sunt irure.</div>
+	<div class="copy__block services-list__copy-block">Comprehensive marketing and management strategies to create products and services that are eas(ier) to sell.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -169,7 +169,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">Marketing Funnel Management</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
+	<div class="copy__block services-list__copy-block">New buying behavior, new expectations, new relationship dynamics. Now slam sales and marketing types together and make it work.  Yep.  Call me.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -180,7 +180,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">Function & Capabilities Development</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Aliqua cillum aliqua eu adipisicing aute cillum occaecat sint laborum cupidatat anim est.</div>
+	<div class="copy__block services-list__copy-block">What capabilities are needed in-house and what can be outsourced? What will you need next year?  I can help.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>
@@ -191,7 +191,7 @@ if (!defined('ABSPATH')) {
 						<h3 class="deck deck__header services-list__deck-header">MARKETING I.T.</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
+	<div class="copy__block services-list__copy-block">Digital infrastructure, assets and online properties are critical to  marketing today. Get help engaging what's right for your business.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>

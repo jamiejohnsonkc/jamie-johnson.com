@@ -5,8 +5,14 @@ require_once(DUPLICATOR_PRO_PLUGIN_PATH . '/classes/entities/class.system.global
 require_once(DUPLICATOR_PRO_PLUGIN_PATH . '/classes/class.package.pagination.php');
 require_once(DUPLICATOR_PRO_PLUGIN_PATH . '/classes/ui/class.ui.dialog.php');
 
-$is_freelancer_plus = (DUP_PRO_License_U::getLicenseType() >= DUP_PRO_License_Type::Freelancer);
-$display_brand = false;
+global $packagesViewData;
+$packagesViewData = array(
+    'is_freelancer_plus' => (DUP_PRO_License_U::getLicenseType() >= DUP_PRO_License_Type::Freelancer),
+    'display_brand' => false,
+    'pending_cancelled_package_ids' => DUP_PRO_Package::get_pending_cancellations(),
+    'rowCount' => 0,
+    'package_ui_created' => null
+);
 
 if (isset($_REQUEST['create_from_temp'])) {
     //Takes temporary package and inserts it into the package table
@@ -15,6 +21,7 @@ if (isset($_REQUEST['create_from_temp'])) {
 		$package->save();
 	}
 	unset($_REQUEST['create_from_temp']);
+    unset($package);
 }
 
 $system_global = DUP_PRO_System_Global_Entity::get_instance();
@@ -32,13 +39,13 @@ if (isset($_REQUEST['action'])) {
 			$result = DUP_PRO_Package::force_delete($package_id);
 			($result) ? DUP_PRO_LOG::trace("Hard delete success") : DUP_PRO_LOG::trace("Hard delete failure");
 		}
+        unset($action_package);
 	} else if ($_REQUEST['action'] == 'clear-messages') {
 		$system_global->clear_recommended_fixes();
 		$system_global->save();
 	}
 }
 
-$pending_cancelled_package_ids = DUP_PRO_Package::get_pending_cancellations();
 $totalElements = $wpdb->get_var("SELECT count(id) as totalElements FROM `{$wpdb->base_prefix}duplicator_pro_packages`");
 $statusActive = $wpdb->get_var("SELECT count(id) as totalElements FROM `{$wpdb->base_prefix}duplicator_pro_packages`  WHERE status < 100 and status > 0");
 
@@ -46,17 +53,16 @@ $pager		= new DUP_PRO_Package_Pagination();
 $per_page	= $pager->get_per_page();
 $current_page	= ($statusActive >= 1) ? 1 : $pager->get_pagenum();
 $offset			= ( $current_page - 1 ) * $per_page;
-$qryResult		= $wpdb->get_results("SELECT * FROM `{$wpdb->base_prefix}duplicator_pro_packages` ORDER BY id DESC LIMIT ${offset}, ${per_page} ", ARRAY_A);
 
 $global = DUP_PRO_Global_Entity::get_instance();
 $active_package_present = DUP_PRO_Package::is_active_package_present();
 
 $orphan_info = DUP_PRO_Server::getOrphanedPackageInfo();
-$orphan_display_msg = ($orphan_info['count'] > 3   ? 'display: block' : 'display: none');
+$orphan_display_msg = ($orphan_info['count'] ? 'display: block' : 'display: none');
 
 $recommended_text_fix_present = false;
 $user_id = get_current_user_id();
-$package_ui_created = is_numeric(get_user_meta($user_id,'duplicator_pro_created_format',true)) ? get_user_meta($user_id,'duplicator_pro_created_format',true) : 1; //Old option was $global->package_ui_created
+$packagesViewData['package_ui_created'] = is_numeric(get_user_meta($user_id,'duplicator_pro_created_format',true)) ? get_user_meta($user_id,'duplicator_pro_created_format',true) : 1; //Old option was $global->package_ui_created
 
 if (count($system_global->recommended_fixes) > 0) {
 	foreach ($system_global->recommended_fixes as $fix) {
@@ -151,8 +157,6 @@ $gift_nonce = wp_create_nonce('DUP_PRO_CTRL_Package_toggleGiftFeatureButton');
 
     /* Quick fix */
     .color-alert { color: #dc3232 !important; }
-    .wp-core-ui button.quick-fix-button { background: #dc3232; color: white; border: 0 none; box-shadow: 0 0 3px darkgray; }
-
 
 </style>
 
@@ -219,14 +223,14 @@ TOOL-BAR -->
 	if ($recommended_text_fix_present) {
 		echo '<p>';
 		echo '<b style="font-size:18px"><i class="fa fa-exclamation-circle fa-3 color-alert" ></i> '.DUP_PRO_U::__('Duplicator Pro').' </b><br/>';
-		echo '<b style="text-transform: uppercase;" >'.DUP_PRO_U::__('Configuration Error(s) Detected:').' </b>';
+		echo '<b style="text-transform: uppercase;" >'.DUP_PRO_U::__('Error(s) Detected:').' </b>';
 		echo DUP_PRO_U::esc_html_e('Please perform the following actions below then build package again.');
 		echo '</p>';
 		echo '<ul class="dpro-auto-conf">';
         $is_quick_fix = false;
 		foreach ($system_global->recommended_fixes as $fix) {
 			if ($fix->recommended_fix_type == DUP_PRO_Recommended_Fix_Type::Text) {
-				echo "<li><i class='fa fa-question-circle color-alert' data-tooltip='{$fix->error_text}'></i>&nbsp; {$fix->parameter1} </li>";
+				echo "<li><i class='fa fa-question-circle color-alert' data-tooltip='".esc_attr($fix->error_text)."'></i>&nbsp; ".$fix->parameter1." </li>";
 			}
             else if ($fix->recommended_fix_type == DUP_PRO_Recommended_Fix_Type::QuickFix) {
                 $is_quick_fix = true;
@@ -234,7 +238,7 @@ TOOL-BAR -->
                 . "<table width='100%' id='quick-fix-{$fix->id}-table'>"
                     . "<tr>"
                         . "<td width='13%' valign='middle' style='text-align:center' id='quick-fix-{$fix->id}-action'>"
-                            . "<button id='quick-fix-{$fix->id}-button' onclick='return DupPro.Pack.QuickFix(this, {{$fix->parameter2}})' type='button' class='button quick-fix-button' data-id='{$fix->id}' data-toggle='#quick-fix-{$fix->id}'>"
+                            . "<button id='quick-fix-{$fix->id}-button' onclick='return DupPro.Pack.QuickFix(this, {{$fix->parameter2}})' type='button' class='button button-primary' data-id='{$fix->id}' data-toggle='#quick-fix-{$fix->id}'>"
                                 . "<i class='fa fa-wrench' aria-hidden='true'></i>&nbsp; "
                                 .DUP_PRO_U::__('Resolve This')
                             ."</button>"
@@ -260,7 +264,7 @@ LIST ALL PACKAGES -->
 	<tr>
 		<th><input type="checkbox" id="dpro-chk-all"  title="<?php DUP_PRO_U::esc_attr_e("Select all packages") ?>" style="margin-left:15px" onClick="DupPro.Pack.SetDeleteAll()" /></th>
 		<th style='padding-right:25px'><?php DUP_PRO_U::esc_html_e("Type") ?></th>
-        <?php if($display_brand===true && $is_freelancer_plus): ?>
+        <?php if ($packagesViewData['display_brand'] === true && $packagesViewData['is_freelancer_plus']): ?>
             <th><?php DUP_PRO_U::esc_html_e("Brand") ?></th>
         <?php endif; ?>
 		<th style='padding-right:25px'><?php DUP_PRO_U::esc_html_e("Created") ?></th>
@@ -289,14 +293,12 @@ LIST ALL PACKAGES -->
 <?php endif; ?>	
 
 <?php
-$rowCount = 0;
-$rows = $qryResult;
-$pack_dbonly  = false;
-$txt_dbonly  = DUP_PRO_U::__('Database Only');
-
-foreach ($rows as $row) {
-
-	$Package = DUP_PRO_Package::get_from_json($row['package']);
+function tablePackageRow($Package) {
+    global $packagesViewData;
+    $global = DUP_PRO_Global_Entity::get_instance();
+    $pack_dbonly  = false;
+    $txt_dbonly  = DUP_PRO_U::__('Database Only');
+    
 	if (is_object($Package)) {
 		$pack_name			 = $Package->Name;
 		$pack_archive_size	 = $Package->Archive->Size;
@@ -312,9 +314,8 @@ foreach ($rows as $row) {
 	}
 
 	//Links
-	$uniqueid = "{$row['name']}_{$row['hash']}";
-	$detail_id = "duplicator-detail-row-{$rowCount}";
-	$css_alt = ($rowCount % 2 != 0) ? '' : 'alternate';
+	$uniqueid = $Package->NameHash;
+	$css_alt = ($packagesViewData['rowCount'] % 2 != 0) ? '' : 'alternate';
 
 	$remote_display		= $Package->contains_non_default_storage();
 	$storage_problem	= (($Package->Status == DUP_PRO_PackageStatus::STORAGE_CANCELLED) || ($Package->Status == DUP_PRO_PackageStatus::STORAGE_FAILED));
@@ -350,18 +351,18 @@ foreach ($rows as $row) {
 	}
 	?>
 
-	<?php if (($row['status'] >= 100) || ($storage_problem)) : ?>
+	<?php if (($Package->Status >= DUP_PRO_PackageStatus::COMPLETE) || ($storage_problem)) : ?>
 		<!-- COMPLETE -->
-		<tr class="dpro-pkinfo <?php echo $css_alt ?>" id="duppro-packagerow-<?php echo $row['id']; ?>">
-			<td class="pass"><input name="delete_confirm" type="checkbox" id="<?php echo esc_attr($row['id']); ?>" 
+		<tr class="dpro-pkinfo <?php echo $css_alt ?>" id="duppro-packagerow-<?php echo $Package->ID; ?>">
+			<td class="pass"><input name="delete_confirm" type="checkbox" id="<?php echo esc_attr($Package->ID); ?>"
 					data-archive-name="<?php echo esc_attr($archive_name);?>" data-installer-name="<?php echo esc_attr($installer_name);?>" /></td>
 			<td <?php echo $package_type_style; ?>><?php echo $package_type_string . " <sup>{$pack_format}</sup>"; ?></td>
-            <?php if($display_brand===true && $is_freelancer_plus): ?>
+            <?php if($packagesViewData['display_brand']===true && $packagesViewData['is_freelancer_plus']): ?>
             <td class='brand-name'>
 				<?php echo $brand; ?>
 			</td>
             <?php endif; ?>
-			<td><?php echo DUP_PRO_Package::format_created_date($row['created'], $package_ui_created); ?></td>
+			<td><?php echo DUP_PRO_Package::format_created_date($Package->Created, $packagesViewData['package_ui_created']); ?></td>
 			<td><?php echo DUP_PRO_U::byteSize($pack_archive_size); ?></td>
 			<td class='pack-name'>
 				<?php echo ($pack_dbonly) ? "{$pack_name} <sup title='{$txt_dbonly}'>DB</sup>" : $pack_name ; ?>
@@ -391,7 +392,7 @@ foreach ($rows as $row) {
 						</div>
 						<div onClick="DupPro.Pack.DownloadFile(<?php echo $js_arc_params ?>);  jQuery(this).parent().hide();">
 							<span title="<?php if(!$archive_exists){DUP_PRO_U::esc_html_e("Download not accessible from here");} ?>">
-								<i class="<?php echo ($archive_exists ? 'far fa-file-archive' : 'fa fa-exclamation-triangle') ?>"></i> 
+								<i class="<?php echo ($archive_exists ? 'far fa-file-archive' : 'fa fa-exclamation-triangle') ?>"></i>
 									<?php echo DUP_PRO_U::__("Archive") . " ({$pack_format})" ?>
 							</span>
 						</div>
@@ -432,7 +433,7 @@ foreach ($rows as $row) {
 	// NOT COMPLETE
 	else :
 
-		if ($row['status'] < DUP_PRO_PackageStatus::COPIEDPACKAGE) {
+		if ($Package->Status < DUP_PRO_PackageStatus::COPIEDPACKAGE) {
 			// In the process of building
 			$size		 = 0;
 			$tmpSearch	 = glob(DUPLICATOR_PRO_SSDIR_PATH_TMP."/{$pack_namehash}_*");
@@ -445,67 +446,65 @@ foreach ($rows as $row) {
 		}
 
 		// If its in the pending cancels consider it stopped
-		$status = $row['status'];
-		$id = (int) $row['id'];
-
-		if (in_array($id, $pending_cancelled_package_ids)) {
+		if (in_array($Package->ID, $packagesViewData['pending_cancelled_package_ids'])) {
 			$status = DUP_PRO_PackageStatus::PENDING_CANCEL;
-		}
+		} else {
+            $status = $Package->Status;
+        }
 
 		if ($status >= 0) {
 			$progress_css = 'run';
 			if ($status >= 75) {
 				$stop_button_text	 = DUP_PRO_U::__('Stop Transfer');
-				$progress_html		 = "<i class='fa fa-sync fa-sm fa-spin'></i> <span id='status-progress-{$id}'>0</span>%"
-					."<span style='display:none' id='status-{$id}'>{$status}</span>";
+				$progress_html		 = "<i class='fa fa-sync fa-sm fa-spin'></i> <span id='status-progress-{$Package->ID}'>0</span>%"
+					."<span style='display:none' id='status-{$Package->ID}'>{$status}</span>";
 			} else if ($status > 0) {
 				$stop_button_text	 = DUP_PRO_U::__('Stop Build');
-				$progress_html		 = "<i class='fa fa-cog fa-sm fa-spin'></i> <span id='status-{$id}'>{$status}</span>%";
+				$progress_html		 = "<i class='fa fa-cog fa-sm fa-spin'></i> <span id='status-{$Package->ID}'>{$status}</span>%";
 			} else {
 				// In a pending state
 				$stop_button_text	 = DUP_PRO_U::__('Cancel Pending');
-				$progress_html		 = " <span style='display:none' id='status-{$id}'>{$status}</span>";
+				$progress_html		 = " <span style='display:none' id='status-{$Package->ID}'>{$status}</span>";
 			}
 		} else {
 			/** FAILURES AND CANCELLATIONS * */
 			$progress_css = 'fail';
 
 			if ($status == DUP_PRO_PackageStatus::ERROR) {
-				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> <a href="#" onclick="DupPro.Pack.OpenPackDetail('.$Package->ID.'); return false;">'.DUP_PRO_U::__('Error Processing')."</a></div><span style='display:none' id='status-$id'>$status</span>";
+				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> <a href="#" onclick="DupPro.Pack.OpenPackDetail('.$Package->ID.'); return false;">'.DUP_PRO_U::__('Error Processing')."</a></div><span style='display:none' id='status-".$Package->ID."'>$status</span>";
 			} else if ($status == DUP_PRO_PackageStatus::BUILD_CANCELLED) {
-				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Build Cancelled')."</div><span style='display:none' id='status-$id'>$status</span>";
+				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Build Cancelled')."</div><span style='display:none' id='status-".$Package->ID."'>$status</span>";
 			} else if ($status == DUP_PRO_PackageStatus::PENDING_CANCEL) {
-				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Cancelling Build')."</div><span style='display:none' id='status-$id'>$status</span>";
+				$progress_error = '<div class="progress-error"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Cancelling Build')."</div><span style='display:none' id='status-".$Package->ID."'>$status</span>";
 			} else if ($status == DUP_PRO_PackageStatus::REQUIREMENTS_FAILED) {
-				$package_id = $row['id'];
+				$package_id = $Package->ID;
 				$package = DUP_PRO_Package::get_by_id($package_id);
-				$package_log_store_dir = dirname($package->StorePath);
-				$package_log_store_dir = trailingslashit($package_log_store_dir);
+				$package_log_store_dir = trailingslashit(dirname($package->StorePath));
 				$is_txt_log_file_exist = file_exists("{$package_log_store_dir}{$package->NameHash}_log.txt");
 				if ($is_txt_log_file_exist) {
-					$link_log = "{$package->StoreURL}{$package->NameHash}_log.txt";    
+					$link_log = "{$package->StoreURL}{$package->NameHash}_log.txt";
 				} else { // .log is for backward compatibility
 					$link_log = "{$package->StoreURL}{$package->NameHash}.log";
 				}
-				$progress_error = '<div class="progress-error"><a href="'.esc_url($link_log).'" target="_blank"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Requirements Failed')."</a></div><span style='display:none' id='status-$id'>$status</span>";
+				$progress_error = '<div class="progress-error"><a href="'.esc_url($link_log).'" target="_blank"><i class="fa fa-exclamation-triangle fa-sm"></i> '.DUP_PRO_U::__('Requirements Failed')."</a></div><span style='display:none' id='status-".$Package->ID."'>$status</span>";
 			}
 		}
 		?>
 
-		<tr class="dpro-pkinfo  <?php echo $css_alt ?>" id="duppro-packagerow-<?php echo $row['id']; ?>">
-			<?php if ($status >= 0) : ?>
-			   <td class="<?php echo $progress_css ?>"><input name="delete_confirm" type="checkbox" id="<?php echo $row['id']; ?>" /></td>
+		<tr class="dpro-pkinfo  <?php echo $css_alt ?>" id="duppro-packagerow-<?php echo $Package->ID; ?>">
+			<?php if ($status >= DUP_PRO_PackageStatus::PRE_PROCESS) : ?>
+			   <td class="<?php echo $progress_css ?>"><input name="delete_confirm" type="checkbox" id="<?php echo $Package->ID; ?>" /></td>
 			<?php else : ?>
-				<td class="<?php echo $progress_css ?>"><input name="delete_confirm" type="checkbox" id="<?php echo $row['id']; ?>" /></td>
+				<td class="<?php echo $progress_css ?>"><input name="delete_confirm" type="checkbox" id="<?php echo $Package->ID; ?>" /></td>
 			<?php endif; ?>
 			<td><?php echo (($Package->Type == DUP_PRO_PackageType::MANUAL) ? DUP_PRO_U::__('Manual') : DUP_PRO_U::__('Schedule')); ?></td>
-			<td><?php echo DUP_PRO_Package::format_created_date($row['created'], $package_ui_created); ?></td>
+			<td><?php echo DUP_PRO_Package::format_created_date($Package->Created, $packagesViewData['package_ui_created']); ?></td>
 			<td><?php echo $Package->get_display_size(); ?></td>
 			<td class='pack-name'>
 				<?php	echo ($pack_dbonly) ? "{$pack_name} <sup title='{$txt_dbonly}'>DB</sup>" : $pack_name ; ?>
 			</td>
 			<td class="get-btns-transfer" colspan="3">
-				<?php if ($status >= 75) : ?>
+				<?php if ($status >= DUP_PRO_PackageStatus::STORAGE_PROCESSING) : ?>
 					<button id="<?php echo "{$uniqueid}_{$global->installer_base_name}" ?>" <?php DUP_PRO_UI::echoDisabled(!$installer_exists); ?> class="button no-select" onClick="DupPro.Pack.DownloadPackageFile(0, <?php echo $Package->ID; ?>); return false;">
 						<i class="fa <?php echo ($installer_exists ? 'fa-bolt' : 'fa-exclamation-triangle') ?>"></i> <?php DUP_PRO_U::esc_html_e("Installer") ?>
 					</button>
@@ -514,7 +513,7 @@ foreach ($rows as $row) {
 					</button>
 				<?php else : ?>
 					<?php if ($status == 0): ?>
-						<button onClick="DupPro.Pack.StopBuild(<?php echo $row['id']; ?>); return false;" class="button button-large dpro-btn-stop">
+						<button onClick="DupPro.Pack.StopBuild(<?php echo $Package->ID; ?>); return false;" class="button button-large dpro-btn-stop">
 							<i class="fa fa-times fa-sm"></i> &nbsp; <?php echo $stop_button_text; ?>
 						</button>
 						<?php echo $progress_html; ?>
@@ -525,14 +524,14 @@ foreach ($rows as $row) {
 			</td>
 		</tr>
 
-		<?php if ($status == 0) : ?>
+		<?php if ($status == DUP_PRO_PackageStatus::PRE_PROCESS) : ?>
 			<!--   NO DISPLAY -->
-		<?php elseif ($status > 0) : ?>
+		<?php elseif ($status > DUP_PRO_PackageStatus::PRE_PROCESS) : ?>
 			<tr>
 				<td colspan="8" class="run <?php echo $css_alt ?>">
 					<div class="wp-filter dpro-build-msg">
 
-						<?php if ($status < 75) : ?>
+						<?php if ($status < DUP_PRO_PackageStatus::STORAGE_PROCESSING) : ?>
 							<!-- BUILDING PROGRESS-->
 							<div id='dpro-progress-status-message-build'>
 								<?php
@@ -559,7 +558,7 @@ foreach ($rows as $row) {
 						<div id="dpro-progress-bar-area">
 							<div id="dpro-progress-bar"></div>
 						</div>
-						<button onClick="DupPro.Pack.StopBuild(<?php echo $row['id']; ?>); return false;" class="button button-large dpro-btn-stop">
+						<button onClick="DupPro.Pack.StopBuild(<?php echo $Package->ID; ?>); return false;" class="button button-large dpro-btn-stop">
 							<i class="fa fa-times fa-sm"></i> &nbsp; <?php echo $stop_button_text; ?>
 						</button>
 					</div>
@@ -571,8 +570,10 @@ foreach ($rows as $row) {
 
 	<?php endif; ?>
 	<?php
-	$rowCount++;
+	$packagesViewData['rowCount'] ++;
 }
+
+DUP_PRO_Package::by_status_callback('tablePackageRow', array(), $per_page, $offset, '`id` DESC');
 ?>
 <tfoot>
 	<tr>
@@ -617,7 +618,8 @@ foreach ($rows as $row) {
 <div style="float:right; padding:10px 5px">
 	<?php echo 	$totalElements . '&nbsp;' . DUP_PRO_U::__("items");	?>
 </div>
-<?php endif; ?>
+<?php endif;
+?>
 
 
 <!-- ==========================================
@@ -668,7 +670,7 @@ THICK-BOX DIALOGS: -->
 
 	$confirm1 = new DUP_PRO_UI_Dialog();
 	$confirm1->title			 = DUP_PRO_U::__('Delete Packages?');
-	$confirm1->message			 = DUP_PRO_U::__('Are you sure, you want to delete the selected package(s)?');
+	$confirm1->message			 = DUP_PRO_U::__('Are you sure you want to delete the selected package(s)?');
 	$confirm1->message			.= '<br/>';
 	$confirm1->message			.= DUP_PRO_U::__('<small><i>Note: This action removes only packages located on this server.  If a remote package was created then it will not be removed or affected.</i></small>');
 	$confirm1->progressText      = DUP_PRO_U::__('Removing Packages, Please Wait...');
@@ -688,7 +690,7 @@ DupPro.Pack.StorageTypes =
 	s3: 4,
 	sftp: 5,
 	onedrive: 6
-}
+};
 
 DupPro.Pack.CreateNew = function(e){
     var $this = $(e);
@@ -696,7 +698,7 @@ DupPro.Pack.CreateNew = function(e){
         <?php $alert3->showAlert(); ?>
         return false;
     }
-}
+};
 
 DupPro.Pack.QuickFix = function(e, pharams){
     console.log(pharams);
@@ -1044,7 +1046,7 @@ DupPro.Pack.ShowRemote = function(package_id, name)
 					case DupPro.Pack.StorageTypes.dropbox:
 						var dbox_url = "<a href='" + store.storage_location_string + "' target='_blank'>" + store.storage_location_string + "</a>";
 						info += "<div style='" + styling + "'>";
-						info += "<b><i class='fa fa-dropbox'></i> <?php DUP_PRO_U::esc_html_e('Dropbox Endpoint'); ?>: '" + store.name + failed_string + cancelled_string + "'</b><br/>";
+						info += "<b><i class='fab fa-dropbox fa-lg'></i> <?php DUP_PRO_U::esc_html_e('Dropbox Endpoint'); ?>: '" + store.name + failed_string + cancelled_string + "'</b><br/>";
 						info += "<span>Location: " + dbox_url + "</span><br/>";
 						info += "</div>";
 					break;
@@ -1238,6 +1240,8 @@ DupPro.Pack.UpdateUnfinishedPackages = function()
 					if((package_info.status == -2) || (package_info.status == -4)) {
 						// refresh when its gone to cancelled
 						window.location = window.location.href;
+					} else {
+						activePackagePresent = true;
 					}
 				} else if(currentProcessingState == DupPro.Pack.ProcessingStats.Finished) {
 					// IF something caused the package to come out of finished refresh everything (has to be out of finished or error state)

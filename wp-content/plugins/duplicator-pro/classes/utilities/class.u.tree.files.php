@@ -40,11 +40,15 @@ class DUP_PRO_Tree_files
      *
      * @param string $rootPath
      */
-    public function __construct($rootPath)
+    public function __construct($rootPath, $addAllChilds = true)
     {
-        $rootPath       = rtrim(str_replace("\\", '/', $rootPath), '/');
-        $this->tree     = new DUP_PRO_Tree_files_node($rootPath);
-        $this->tree->addAllChilds();
+        $rootPath   = rtrim(str_replace("\\", '/', $rootPath), '/');
+        $this->tree = new DUP_PRO_Tree_files_node($rootPath);
+
+        if ($addAllChilds) {
+            $this->tree->addAllChilds();
+        }
+
         $this->rootPath = $rootPath;
     }
 

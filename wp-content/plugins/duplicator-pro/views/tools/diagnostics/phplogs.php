@@ -203,7 +203,7 @@ if($error) : ?>
 <?php
 $confirm1 = new DUP_PRO_UI_Dialog();
 $confirm1->title			 = DUP_PRO_U::__('Clear PHP Log?');
-$confirm1->message			 = DUP_PRO_U::__('Are you sure, you want to clear PHP log??');
+$confirm1->message			 = DUP_PRO_U::__('Are you sure you want to clear PHP log??');
 $confirm1->message			.= '<br/>';
 $confirm1->message			.= DUP_PRO_U::__('<small><i>Note: This action will delete all data and can\'t be stopped.</i></small>');
 $confirm1->progressText      = DUP_PRO_U::__('Clear PHP log, Please Wait...');

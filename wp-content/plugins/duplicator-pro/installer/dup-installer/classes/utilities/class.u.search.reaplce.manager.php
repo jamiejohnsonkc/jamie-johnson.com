@@ -105,7 +105,7 @@ final class DUPX_S_R_MANAGER
      *
      * @param string $search
      * @param string $replace
-     * @param string $type                  // item type DUPX_S_R_ITEM::[TYPE_STRING|TYPE_URL|TYPE_PATH]
+     * @param string $type                  // item type DUPX_S_R_ITEM::[TYPE_STRING|TYPE_URL|TYPE_URL_NORMALIZE_DOMAIN|TYPE_PATH]
      * @param int $prority                  // lower first
      * @param bool|string|string[] $scope   // true = global scope | false = never | string signle scope | string[] scope list
      *
@@ -270,9 +270,10 @@ class DUPX_S_R_ITEM
 {
     private static $uniqueIdCount = 0;
 
-    const TYPE_STRING = 'str';
-    const TYPE_URL    = 'url';
-    const TYPE_PATH   = 'path';
+    const TYPE_STRING               = 'str';
+    const TYPE_URL                  = 'url';
+    const TYPE_URL_NORMALIZE_DOMAIN = 'urlnd';
+    const TYPE_PATH                 = 'path';
 
     /**
      *
@@ -326,10 +327,21 @@ class DUPX_S_R_ITEM
             $this->scope = $scope;
         }
         $this->prority = (int) $prority;
-        $this->search  = $type == DUPX_S_R_ITEM::TYPE_URL ? rtrim($search, '/') : (string) $search;
-        $this->replace = $type == DUPX_S_R_ITEM::TYPE_URL ? rtrim($replace, '/') : (string) $replace;
-        $this->type    = $type;
-        $this->id      = self::$uniqueIdCount;
+        switch ($type) {
+            case DUPX_S_R_ITEM::TYPE_URL:
+            case DUPX_S_R_ITEM::TYPE_URL_NORMALIZE_DOMAIN:
+                $this->search  = rtrim($search, '/');
+                $this->replace = rtrim($replace, '/');
+                break;
+            case DUPX_S_R_ITEM::TYPE_PATH:
+            case DUPX_S_R_ITEM::TYPE_STRING:
+            default:
+                $this->search  = (string) $search;
+                $this->replace = (string) $replace;
+                break;
+        }
+        $this->type = $type;
+        $this->id   = self::$uniqueIdCount;
         self::$uniqueIdCount ++;
     }
 
@@ -367,6 +379,8 @@ class DUPX_S_R_ITEM
         switch ($this->type) {
             case self::TYPE_URL:
                 return self::searchReplaceUrl($this->search, $this->replace);
+            case self::TYPE_URL_NORMALIZE_DOMAIN:
+                return self::searchReplaceUrl($this->search, $this->replace, true, true);
             case self::TYPE_PATH:
                 return self::searchReplacePath($this->search, $this->replace);
             case self::TYPE_STRING:
@@ -428,7 +442,7 @@ class DUPX_S_R_ITEM
      * Add replace strings to substitute old url to new url
      * 1) no protocol old url to no protocol new url (es. //www.hold.url  => //www.new.url)
      * 2) wrong protocol new url to right protocol new url (es. http://www.new.url => https://www.new.url)
-     * 
+     *
      * result
      * [
      *      ['search' => ...,'replace' => ...]
@@ -441,7 +455,7 @@ class DUPX_S_R_ITEM
      *
      * @return array
      */
-    public static function searchReplaceUrl($search_url, $replace_url, $force_new_protocol = true)
+    public static function searchReplaceUrl($search_url, $replace_url, $force_new_protocol = true, $normalizeWww = false)
     {
         if (($parse_search_url = parse_url($search_url)) !== false && isset($parse_search_url['scheme'])) {
             $search_url_raw = substr($search_url, strlen($parse_search_url['scheme']) + 1);
@@ -454,11 +468,24 @@ class DUPX_S_R_ITEM
         } else {
             $replace_url_raw = $replace_url;
         }
-
         //SEARCH WITH NO PROTOCOL: RAW "//"
         $result = self::searchReplaceWithEncodings($search_url_raw, $replace_url_raw);
 
+        // NORMALIZE source www
+        if ($normalizeWww && self::domainCanNormalized($search_url_raw)) {
+            if (self::isWww($search_url_raw)) {
+                $fromDomain = '//'.substr($search_url_raw , strlen('//www.'));
+            } else {
+                $fromDomain = '//www.'.substr($search_url_raw , strlen('//'));
+            }
 
+            // prevent double subsition for subdiv problems.
+            if (strpos($replace_url_raw, $fromDomain) !== 0) {
+                $result = array_merge($result, self::searchReplaceWithEncodings($fromDomain, $replace_url_raw));
+            }
+        }
+
+        // NORMALIZE source protocol
         if ($force_new_protocol && $parse_replace_url !== false && isset($parse_replace_url['scheme'])) {
             //FORCE NEW PROTOCOL [HTTP / HTTPS]
             switch ($parse_replace_url['scheme']) {
@@ -512,5 +539,73 @@ class DUPX_S_R_ITEM
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param $url string The URL whichs domain you want to get
+     * @return string The domain part of the given URL
+     *                  www.myurl.co.uk     => myurl.co.uk
+     *                  www.google.com      => google.com
+     *                  my.test.myurl.co.uk => myurl.co.uk
+     *                  www.myurl.localweb  => myurl.localweb
+     *
+     */
+    public static function getDomain($url)
+    {
+        $pieces = parse_url($url);
+        $domain = isset($pieces['host']) ? $pieces['host'] : '';
+        $regs   = null;
+        if (strpos($domain, ".") !== false) {
+            if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+                return $regs['domain'];
+            } else {
+                $exDomain = explode('.', $domain);
+                return implode('.', array_slice($exDomain, -2, 2));
+            }
+        } else {
+            return $domain;
+        }
+    }
+
+    public static function domainCanNormalized($url)
+    {
+        $pieces = parse_url($url);
+
+        if (!isset($pieces['host'])) {
+            return false;
+        }
+
+        if (strpos($pieces['host'], ".") === false) {
+            return false;
+        }
+
+        $dLevels = explode('.', $pieces['host']);
+        if ($dLevels[0] == 'www') {
+            return true;
+        }
+
+        switch (count($dLevels)) {
+            case 1:
+                return false;
+            case 2:
+                return true;
+            case 3:
+                if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $pieces['host'], $regs)) {
+                    return $regs['domain'] == $pieces['host'];
+                }
+                return false;
+            default:
+                return false;
+        }
+    }
+
+    public static function isWww($url)
+    {
+        $pieces = parse_url($url);
+        if (!isset($pieces['host'])) {
+            return false;
+        } else {
+            return strpos($pieces['host'], 'www.') === 0;
+        }
     }
 }

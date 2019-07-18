@@ -20,19 +20,23 @@ class DUP_PRO_Validator
      */
     private static $patterns = array(
         'fdir' => '/^([a-zA-Z]:[\\\\\/]|\/|\\\\\\\\|\/\/)[^<>\0]+$/',
+        'fdirwc' => '/^[\s\t]*?(#.*|[a-zA-Z]:[\\\\\/]|\/|\\\\\\\\|\/\/)[^<>\0]*$/',
         'ffile' => '/^([a-zA-Z]:[\\\\\/]|\/|\\\\\\\\|\/\/)[^<>\0]+$/',
+        'ffilewc' => '/^[\s\t]*?(#.*|[a-zA-Z]:[\\\\\/]|\/|\\\\\\\\|\/\/)[^<>\0]*$/',
         'fext' => '/^\.?[^\\\\\/*:<>\0?"|\s\.]+$/',
         'email' => '/^[a-zA-Z0-9.!#$%&\'*+\/=?^_\`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/',
         'empty' => '/^$/',
-        'nempty' => '/^.+$/',
+        'nempty' => '/^.+$/'
     );
 
-    const FILTER_VALIDATE_IS_EMPTY  = 'empty';
-    const FILTER_VALIDATE_NOT_EMPTY = 'nempty';
-    const FILTER_VALIDATE_FILE      = 'ffile';
-    const FILTER_VALIDATE_FOLDER    = 'fdir';
-    const FILTER_VALIDATE_FILE_EXT  = 'fext';
-    const FILTER_VALIDATE_EMAIL     = 'email';
+    const FILTER_VALIDATE_IS_EMPTY            = 'empty';
+    const FILTER_VALIDATE_NOT_EMPTY           = 'nempty';
+    const FILTER_VALIDATE_FILE                = 'ffile';
+    const FILTER_VALIDATE_FILE_WITH_COMMENT   = 'ffilewc';
+    const FILTER_VALIDATE_FOLDER              = 'fdir';
+    const FILTER_VALIDATE_FOLDER_WITH_COMMENT = 'fdirwc';
+    const FILTER_VALIDATE_FILE_EXT            = 'fext';
+    const FILTER_VALIDATE_EMAIL               = 'email';
 
     /**
      * @var array $errors [ ['key' => string field key,

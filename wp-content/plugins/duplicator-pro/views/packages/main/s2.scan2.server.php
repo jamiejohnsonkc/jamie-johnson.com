@@ -102,7 +102,10 @@ WP SETTINGS -->
 <div class="scan-item scan-item-last">
 	<?php
 	if (!$archive_export_onlydb && isset($_POST['filter-on'])) {
-		$file_filter_data		 = array('filter-dir' => $_POST['filter-dirs'], 'filter-files' => $_POST['filter-files']);
+		$file_filter_data		 = array(
+            'filter-dir' => DUP_PRO_Archive::parsePathFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($_POST['filter-dirs'])),
+            'filter-files' => DUP_PRO_Archive::parsePathFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($_POST['filter-files']))
+            );
 		$_SESSION['filter_data'] = $file_filter_data;
 	} else {
 		if (isset($_SESSION['filter_data'])) {
@@ -118,9 +121,8 @@ WP SETTINGS -->
 	$core_file_notice	 = false;
 
 	if (!$archive_export_onlydb && isset($_POST['filter-on']) && isset($_POST['filter-dirs'])) {
-
 		//findout matched core directories
-		$filter_dirs = explode(";", trim($_POST['filter-dirs']));
+		$filter_dirs =  DUP_PRO_Archive::parsePathFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($_POST['filter-dirs']),true);
 
 		// clean possible blank spaces before and after the paths
 		for ($i = 0; $i < count($filter_dirs); $i++) {
@@ -132,7 +134,7 @@ WP SETTINGS -->
 
 
 		//find out core files
-		$filter_files = explode(";", trim($_POST['filter-files']));
+		$filter_files = DUP_PRO_Archive::parsePathFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($_POST['filter-files']), true);
 
 		// clean possible blank spaces before and after the paths
 		for ($i = 0; $i < count($filter_files); $i++) {

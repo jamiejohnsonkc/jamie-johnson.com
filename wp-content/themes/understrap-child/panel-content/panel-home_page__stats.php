@@ -77,7 +77,7 @@ if (!defined('ABSPATH')) {
 							<img src="/wp-content/uploads/2019/03/stats_10.svg" class="style-svg" id="p&l" alt="..." />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container>">
 								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content">operations responsibility</<h6>
-								</h6>>
+								</h6>
 							</div>
 						</div>
 					</div>
@@ -130,12 +130,12 @@ if (!defined('ABSPATH')) {
 						</div>
 					</div>
 				</div>
-				<div class="carousel-inner three-up-carousel  stats__three-up-carousel-inner">
+				<!-- <div class="carousel-inner three-up-carousel  stats__three-up-carousel-inner">
 					<div class="carousel-item row no-gutters three-up active stats__carousel-threeup-item">
 						<div class="proof-quals stats__carousel-content">
 							<img src="/wp-content/uploads/2019/03/stats_11.svg" class="style-svg" id="brands" alt="First slide" />
 							<div class="stats-caption carousel-caption stats__carousel-caption--container stats__carousel-caption">
-								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header ">brands supported</h6>
+								<h6 class="deck deck__header deck__header--stats stats__carousel-caption--content stats__carousel-deck-header">brands supported</h6>
 							</div>
 						</div>
 						<div class="proof-quals stats__carousel-content">
@@ -211,7 +211,7 @@ if (!defined('ABSPATH')) {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<a class="carousel-control-prev stats__carousel-control-prev" href="#stats-slider" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="false"></span>
@@ -223,7 +223,7 @@ if (!defined('ABSPATH')) {
 			</a>
 		</div>
 	</div>
-<a href="/background" class="link link__text--flex stats__text-link">See where I've been</a>
+<a href="/background" class="link link__text--flex stats__text-link">&#8250; See where I've been</a>
 
 	<a href="#mymo" class="button ui-button__jump--positioned stats__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </article>

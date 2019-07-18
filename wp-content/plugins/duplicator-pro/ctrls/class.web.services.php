@@ -41,6 +41,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $this->add_class_action('wp_ajax_duplicator_pro_package_scan', 'duplicator_pro_package_scan');
             $this->add_class_action('wp_ajax_duplicator_pro_package_delete', 'duplicator_pro_package_delete');
             $this->add_class_action('wp_ajax_duplicator_pro_reset_user_settings', 'duplicator_pro_reset_user_settings');
+            $this->add_class_action('wp_ajax_duplicator_pro_reset_packages', 'duplicator_pro_reset_packages');
 
             $this->add_class_action('wp_ajax_duplicator_pro_dropbox_send_file_test', 'duplicator_pro_dropbox_send_file_test');
             $this->add_class_action('wp_ajax_duplicator_pro_gdrive_send_file_test', 'duplicator_pro_gdrive_send_file_test');
@@ -51,7 +52,6 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $this->add_class_action('wp_ajax_duplicator_pro_ftp_send_file_test', 'duplicator_pro_ftp_send_file_test');
             $this->add_class_action('wp_ajax_duplicator_pro_get_storage_details', 'duplicator_pro_get_storage_details');
 
-
             $this->add_class_action('wp_ajax_duplicator_pro_get_trace_log', 'get_trace_log');
             $this->add_class_action('wp_ajax_duplicator_pro_delete_trace_log', 'delete_trace_log');
             $this->add_class_action('wp_ajax_duplicator_pro_get_package_statii', 'get_package_statii');
@@ -60,12 +60,8 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $this->add_class_action('wp_ajax_duplicator_pro_get_package_delete', 'duplicator_pro_get_package_delete');
             $this->add_class_action('wp_ajax_duplicator_pro_is_pack_running', 'is_pack_running');
 
-
-
-
             $this->add_class_action('wp_ajax_duplicator_pro_process_worker', 'process_worker');
             $this->add_class_action('wp_ajax_nopriv_duplicator_pro_process_worker', 'process_worker');
-
 
             $this->add_class_action('wp_ajax_duplicator_pro_gdrive_get_auth_url', 'get_gdrive_auth_url');
             $this->add_class_action('wp_ajax_duplicator_pro_dropbox_get_auth_url', 'get_dropbox_auth_url');
@@ -79,12 +75,10 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
             /* Granular Web Methods */
             $this->add_class_action('wp_ajax_duplicator_pro_package_stop_build', 'package_stop_build');
-
             $this->add_class_action('wp_ajax_duplicator_pro_export_settings', 'export_settings');
 
             /* Flock second process */
             $this->add_class_action('wp_ajax_nopriv_duplicator_pro_try_to_lock_test_sql', 'try_to_lock_test_file');
-
             $this->add_class_action('wp_ajax_duplicator_pro_brand_delete', 'duplicator_pro_brand_delete');
 
             /* Quick Fix */
@@ -97,8 +91,71 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $this->add_class_action('wp_ajax_duplicator_pro_get_folder_children', 'duplicator_pro_get_folder_children');
         }
 
+        /**
+         * with function wrap a callback and return always a json well formatted output
+         *
+         * check nonce and capability if passed and return a json with this format
+         * [
+         *      success : bool
+         *      data : [
+         *          funcData : mixed    // callback return data
+         *          message : string    // a message for jvascript func (for example an exception message)
+         *          output : string     // all normal output wrapped between ob_start and ob_get_clean
+         *                              // if $errorUnespectedOutput is true and output isn't empty the json return an error
+         *      ]
+         * ]
+         *
+         * @param resource $callback
+         * @param string $nonceaction           // if action is null don't verify nonce
+         * @param string $nonce
+         * @param string $capability            // if capability is null don't verify capability
+         * @param bool $errorUnespectedOutput    // if true thorw exception with unespected optput
+         *
+         * @throws Exception
+         */
+        protected static function ajax_json_wrapper($callback, $nonceaction = null, $nonce = null, $capability = null, $errorUnespectedOutput = true)
+        {
+            $result = array(
+                'funcData' => null,
+                'output' => '',
+                'message' => ''
+            );
+
+            ob_start();
+            try {
+                DUP_PRO_Handler::init_error_handler();
+                
+                if (!is_null($nonceaction) && !wp_verify_nonce($nonce, $nonceaction)) {
+                    DUP_PRO_LOG::trace('Security issue');
+                    throw new Exception('Security issue');
+                }
+                if (!is_null($capability)) {
+                    DUP_PRO_U::hasCapability($capability, DUP_PRO_U::SECURE_ISSUE_THROW);
+                }
+
+                // execute ajax function
+                $result['funcData'] = call_user_func($callback);
+            } catch (Exception $e) {
+                $error             = true;
+                $result['message'] = $e->getMessage();
+            }
+
+            $result['output'] = ob_get_clean();
+            if ($errorUnespectedOutput && !empty($result['output'])) {
+                $error = true;
+            }
+
+            if ($error) {
+                wp_send_json_error($result);
+            } else {
+                wp_send_json_success($result);
+            }
+            die;
+        }
+
         function process_worker()
         {
+            DUP_PRO_Handler::init_error_handler();
             DUP_PRO_U::checkAjax();
             header("HTTP/1.1 200 OK");
 
@@ -122,6 +179,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         function manual_transfer_storage()
         {
+            DUP_PRO_Handler::init_error_handler();
             DUP_PRO_LOG::trace("manual transfer storage");
 
             $nonce = sanitize_text_field($_POST['nonce']);
@@ -187,9 +245,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 $report['retval'] = ''; // Indicates not to do the popup
             }
 
-            $json = json_encode($report);
-
-            die($json);
+            die(DupProSnapJsonU::wp_json_encode($report));
         }
 
         /**
@@ -202,6 +258,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
          */
         public function duplicator_pro_build_package_test()
         {
+            DUP_PRO_Handler::init_error_handler();
             DUP_PRO_U::hasCapability('export');
             ob_start();
             try {
@@ -327,9 +384,9 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                  * OVERWRITE TEMPLATE
                  */
                 $package->Archive->FilterOn      = 1;
-                $package->Archive->FilterDirs    = DUP_PRO_Archive::parseDirectoryFilter(sanitize_textarea_field($request['filter-dirs']));
+                $package->Archive->FilterDirs    = DUP_PRO_Archive::parseDirectoryFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($request['filter-dirs']));
                 $package->Archive->FilterExts    = DUP_PRO_Archive::parseExtensionFilter(sanitize_text_field($request['filter-exts']));
-                $package->Archive->FilterFiles   = DUP_PRO_Archive::parseFileFilter(sanitize_textarea_field($request['filter-files']));
+                $package->Archive->FilterFiles   = DUP_PRO_Archive::parseFileFilter(DupProSnapLibUtil::sanitize_non_stamp_chars($request['filter-files']));
                 $package->Database->FilterOn     = 1;
                 $package->Database->FilterTables = sanitize_text_field(implode(',', $request['dbtables']));
                 $package->save();
@@ -375,6 +432,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
         {
             ob_start();
             try {
+                DUP_PRO_Handler::init_error_handler();
                 $error  = false;
                 $result = array(
                     'data' => array(
@@ -416,6 +474,8 @@ if (!class_exists('DUP_PRO_Web_Services')) {
         {
             ob_start();
             try {
+                DUP_PRO_Handler::init_error_handler();
+
                 $error  = false;
                 $result = array(
                     'data' => array(
@@ -433,7 +493,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 }
 
                 $packageId = (int) $_POST['id'];
-                $lines = (int) $_POST['lines'];
+                $lines     = (int) $_POST['lines'];
                 $package   = DUP_PRO_Package::get_by_id($packageId);
                 if (is_null($package)) {
                     throw new Exception(DUP_PRO_U::__("Couldn't get package"));
@@ -447,7 +507,6 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 }
 
                 $result['data']['log'] = esc_html(DUP_PRO_U::tailFile($logFile, $lines));
-
             } catch (Exception $e) {
                 $error             = true;
                 $result['message'] = $e->getMessage();
@@ -465,6 +524,8 @@ if (!class_exists('DUP_PRO_Web_Services')) {
         {
             ob_start();
             try {
+                DUP_PRO_Handler::init_error_handler();
+
                 /** TEST */
                 //throw new Exception('force exit fail to test');
 
@@ -514,8 +575,9 @@ if (!class_exists('DUP_PRO_Web_Services')) {
          */
         function duplicator_pro_package_scan($not_ajax_call = false)
         {
+            DUP_PRO_Handler::init_error_handler();
             DUP_PRO_U::hasCapability('export');
-            $global   = DUP_PRO_Global_Entity::get_instance();
+            $global = DUP_PRO_Global_Entity::get_instance();
             if ($not_ajax_call !== true) {
                 // Should be used $_REQUEST sometimes it gets in _GET and sometimes in _POST
                 check_ajax_referer('duplicator_pro_package_scan', 'nonce');
@@ -584,13 +646,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 $global->save();
             }
 
-            //$json = json_encode($report);
             try {
                 $json = null;
 
                 if ($global->json_mode == DUP_PRO_JSON_Mode::PHP) {
                     try {
-                        $json = DUP_PRO_JSON_U::encode($report);
+                        $json = DupProSnapJsonU::wp_json_encode($report);
                     } catch (Exception $jex) {
                         DUP_PRO_LOG::trace("Problem encoding using PHP JSON so switching to custom");
 
@@ -624,6 +685,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
          */
         function duplicator_pro_quick_fix()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_quick_fix', 'nonce');
             DUP_PRO_U::hasCapability('export');
             try {
@@ -746,10 +808,10 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                         'error' => 'Object "setup" is not provided or formatted on proper way.',
                     );
                 }
-                exit(json_encode($json));
+                exit(DupProSnapJsonU::wp_json_encode($json));
             } catch (Exception $e) {
                 $json['error'] = "{$e}";
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
         }
 
@@ -762,6 +824,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
          */
         function duplicator_pro_brand_delete()
         {
+            DUP_PRO_Handler::init_error_handler();
             DUP_PRO_U::hasCapability('export');
             try {
                 $json = array();
@@ -783,12 +846,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 }
             } catch (Exception $e) {
                 $json['error'] = "{$e}";
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
             $json['ids']     = "{$postIDs}";
             $json['removed'] = $delCount;
-            exit(json_encode($json));
+            exit(DupProSnapJsonU::wp_json_encode($json));
         }
 
         /**
@@ -800,6 +863,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
          */
         function duplicator_pro_package_delete()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_package_delete', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -823,28 +887,42 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 }
             } catch (Exception $e) {
                 $json['error'] = "{$e}";
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
             $json['ids']     = esc_html($postIDs);
             $json['removed'] = absint($delCount);
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         /**
          *  DUPLICATOR_PRO_PACKAGE_DELETE
          *  Deletes the files and database record entries
          *
-         *  @return json   A json message about the action.
-         * 				   Use console.log to debug from client
+         *  @return json   
          */
         function duplicator_pro_reset_user_settings()
         {
-            check_ajax_referer('duplicator_pro_reset_user_settings', 'nonce');
-            DUP_PRO_U::hasCapability('export');
-            
-            $json = array();
+            ob_start();
             try {
+                DUP_PRO_Handler::init_error_handler();
+
+                $error  = false;
+                $result = array(
+                    'data' => array(
+                        'status' => null
+                    ),
+                    'html' => '',
+                    'message' => ''
+                );
+
+                $nonce = sanitize_text_field($_POST['nonce']);
+                if (!wp_verify_nonce($nonce, 'duplicator_pro_reset_user_settings')) {
+                    DUP_PRO_LOG::trace('Security issue');
+                    throw new Exception('Security issue');
+                }
+                DUP_PRO_U::hasCapability('export');
+
                 /* @var $global DUP_PRO_Global_Entity */
                 $global = DUP_PRO_Global_Entity::get_instance();
 
@@ -856,11 +934,57 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 $global->save();
                 set_transient('duplicator_pro_settings_message', DUP_PRO_U::__('Settings reset to defaults successfully'), 60);
             } catch (Exception $e) {
-                $json['error'] = "{$e}";
-                die(json_encode($json));
+                $error             = true;
+                $result['message'] = $e->getMessage();
             }
 
-            die(json_encode($json));
+            $result['html'] = ob_get_clean();
+            if ($error) {
+                wp_send_json_error($result);
+            } else {
+                wp_send_json_success($result);
+            }
+        }
+
+        function duplicator_pro_reset_packages()
+        {
+            ob_start();
+            try {
+                DUP_PRO_Handler::init_error_handler();
+
+                $error  = false;
+                $result = array(
+                    'data' => array(
+                        'status' => null
+                    ),
+                    'html' => '',
+                    'message' => ''
+                );
+
+                $nonce = sanitize_text_field($_POST['nonce']);
+                if (!wp_verify_nonce($nonce, 'duplicator_pro_reset_packages')) {
+                    DUP_PRO_LOG::trace('Security issue');
+                    throw new Exception('Security issue');
+                }
+                DUP_PRO_U::hasCapability('export');
+
+                // first last package id 
+                $ids = DUP_PRO_Package::get_ids_by_status(array(array('op' => '<', 'status' => DUP_PackageStatus::COMPLETE)), false, 0, '`id` DESC');
+                foreach ($ids as $id) {
+                    // A smooth deletion is not performed because it is a forced reset.
+                    DUP_PRO_Package::force_delete($id);
+                }
+            } catch (Exception $e) {
+                $error             = true;
+                $result['message'] = $e->getMessage();
+            }
+
+            $result['html'] = ob_get_clean();
+            if ($error) {
+                wp_send_json_error($result);
+            } else {
+                wp_send_json_success($result);
+            }
         }
 
 // DROPBOX METHODS
@@ -868,6 +992,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         function duplicator_pro_get_storage_details()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_get_storage_details', 'nonce');
             DUP_PRO_U::hasCapability('export');
             try {
@@ -907,32 +1032,33 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     $json['succeeded'] = false;
                     $json['message']   = $message;
                     DUP_PRO_LOG::traceError($message);
-                    die(json_encode($json));
+                    die(DupProSnapJsonU::wp_json_encode($json));
                 }
             } catch (Exception $e) {
                 $json['succeeded'] = false;
                 $json['message']   = "{$e}";
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         // Returns status: {['success']={message} | ['error'] message}
         function duplicator_pro_ftp_send_file_test()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_ftp_send_file_test', 'nonce');
             //	DUP_PRO_LOG::traceObject("enter", $_REQUEST);
             DUP_PRO_U::hasCapability('export');
 
             $json = array();
             try {
-                $ftp_connect_exists = function_exists('ftp_connect');
+                $ftp_connect_exists          = function_exists('ftp_connect');
                 $ftp_connect_exists_filtered = apply_filters('duplicator_pro_ftp_connect_exists', $ftp_connect_exists);
                 if ($ftp_connect_exists_filtered) {
-                    $source_handle = null;
-                    $dest_handle   = null;
-                    $request = stripslashes_deep($_REQUEST);
+                    $source_handle  = null;
+                    $dest_handle    = null;
+                    $request        = stripslashes_deep($_REQUEST);
                     $storage_folder = $request['storage_folder'];
                     $server         = $request['server'];
                     $port           = $request['port'];
@@ -976,7 +1102,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                         if ($ftp_directory_exists) {
                             if ($ftp_client->upload_file($source_filepath, $storage_folder)) {
                                 /** -- Download the file --* */
-                                $dest_filepath = tempnam(sys_get_temp_dir(), 'DUP');
+                                $dest_filepath = wp_tempnam('DUP', DUPLICATOR_PRO_SSDIR_PATH_TMP);;
 
                                 if ($dest_filepath === false) {
                                     throw new Exception(DUP_PRO_U::__("Couldn't create the destination temp file for the FTP send test"));
@@ -1036,8 +1162,9 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                         $json['error'] = DUP_PRO_U::__('Error opening FTP connection');
                     }
                 } else {
-                    $json['error'] = sprintf(DUP_PRO_U::esc_html__('FTP storage requires FTP module enabled. Please install the FTP module as described in the %s.'), '<a href="https://secure.php.net/manual/en/ftp.installation.php" target="_blank">https://secure.php.net/manual/en/ftp.installation.php</a>');
-                    die(json_encode($json));
+                    $json['error'] = sprintf(DUP_PRO_U::esc_html__('FTP storage requires FTP module enabled. Please install the FTP module as described in the %s.'),
+                        '<a href="https://secure.php.net/manual/en/ftp.installation.php" target="_blank">https://secure.php.net/manual/en/ftp.installation.php</a>');
+                    die(DupProSnapJsonU::wp_json_encode($json));
                 }
             } catch (Exception $e) {
                 if ($source_handle != null) {
@@ -1054,21 +1181,24 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
                 DUP_PRO_LOG::trace($errorMessage);
                 $json['error'] = "{$errorMessage} ".DUP_PRO_U::__('For additional help see the online '
-                . '<a href="https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-400-q" target="_blank">FTP troubleshooting steps</a>.');;
+                        .'<a href="https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-400-q" target="_blank">FTP troubleshooting steps</a>.');
+                ;
 
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
             if (!empty($json['error'])) {
                 $json['error'] .= " ".DUP_PRO_U::__('For additional help see the online '
-                . '<a href="https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-400-q" target="_blank">FTP troubleshooting steps</a>.');;
+                        .'<a href="https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-400-q" target="_blank">FTP troubleshooting steps</a>.');
+                ;
             }
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         function duplicator_pro_sftp_send_file_test()
         {
-            check_ajax_referer('duplicator_pro_sftp_send_file_test', 'nonce' );
+            DUP_PRO_Handler::init_error_handler();
+            check_ajax_referer('duplicator_pro_sftp_send_file_test', 'nonce');
             //	DUP_PRO_LOG::traceObject("enter", $_REQUEST);
             DUP_PRO_U::hasCapability('export');
 
@@ -1127,15 +1257,16 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 DUP_PRO_LOG::trace($errorMessage);
                 $json['error'] = "{$errorMessage}";
 
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         function duplicator_pro_gdrive_send_file_test()
         {
-            check_ajax_referer('duplicator_pro_gdrive_send_file_test', 'nonce' );
+            DUP_PRO_Handler::init_error_handler();
+            check_ajax_referer('duplicator_pro_gdrive_send_file_test', 'nonce');
             DUP_PRO_U::hasCapability('export');
             try {
                 $source_handle = null;
@@ -1152,7 +1283,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 $storage = DUP_PRO_Storage_Entity::get_by_id($storage_id);
 
                 if ($storage != null) {
-                    $source_filepath = tempnam(sys_get_temp_dir(), 'DUP');
+                    $source_filepath = wp_tempnam('DUP', DUPLICATOR_PRO_SSDIR_PATH_TMP);
 
                     if ($source_filepath === false) {
                         throw new Exception(DUP_PRO_U::__("Couldn't create the temp file for the Google Drive send test"));
@@ -1168,7 +1299,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
                     /** -- Send the file --* */
                     $basename        = basename($source_filepath);
-                    $gdrive_filepath = $storage_folder."/$basename";
+                    $gdrive_filepath = trailingslashit($storage_folder).$basename;
 
                     /* @var $google_client Duplicator_Pro_Google_Client */
                     $google_client = $storage->get_full_google_client();
@@ -1242,14 +1373,15 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 DUP_PRO_LOG::trace($errorMessage);
                 $json['error'] = "{$errorMessage}";
 
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         function duplicator_pro_s3_send_file_test()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_s3_send_file_test', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1269,7 +1401,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     $secret_key     = sanitize_text_field($request['secret_key']);
                     $endpoint       = sanitize_text_field($request['endpoint']);
 
-                    $storage_folder = rtrim($storage_folder, '/');
+                    $storage_folder  = rtrim($storage_folder, '/');
                     $source_filepath = tempnam(sys_get_temp_dir(), 'DUP');
 
                     if ($source_filepath === false) {
@@ -1321,17 +1453,18 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     DUP_PRO_LOG::trace($errorMessage);
                     $json['error'] = "{$errorMessage}";
 
-                    die(json_encode($json));
+                    die(DupProSnapJsonU::wp_json_encode($json));
                 }
             } else {
                 $json['error'] = DUP_PRO_U::esc_html__("Amazon S3  (or Compatible) requires PHP cURL extension. This server hasn't PHP cURL extension.");
             }
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         function duplicator_pro_dropbox_send_file_test()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_dropbox_send_file_test', 'nonce');
             DUP_PRO_U::hasCapability('export');
             try {
@@ -1378,7 +1511,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     DUP_PRO_LOG::trace("Couldn't find Storage ID $storage_id when performing Dropbox file test");
 
                     $json['error'] = "Couldn't find Storage ID $storage_id when performing Dropbox file test";
-                    die(json_encode($json));
+                    die(DupProSnapJsonU::wp_json_encode($json));
                 }
                 DUP_PRO_LOG::trace("About to send $source_filepath to $dropbox_filepath in dropbox");
                 // $dropbox->SetAccessToken($access_token);
@@ -1412,14 +1545,17 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
                 DUP_PRO_LOG::trace($errorMessage);
                 $json['error'] = "{$errorMessage}";
-                die(json_encode($json));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         function get_trace_log()
         {
+            /**
+             * don't init DUP_PRO_Handler::init_error_handler() in get trace
+             */
             check_ajax_referer('duplicator_pro_get_trace_log', 'nonce');
             DUP_PRO_LOG::trace("enter");
             DUP_PRO_U::hasCapability('export');
@@ -1477,6 +1613,9 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         function delete_trace_log()
         {
+            /**
+             * don't init DUP_PRO_Handler::init_error_handler() in get trace
+             */
             check_ajax_referer('duplicator_pro_delete_trace_log', 'nonce');
             DUP_PRO_LOG::trace("enter");
             DUP_PRO_U::hasCapability('export');
@@ -1486,6 +1625,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         function export_settings()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_import_export_settings', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1515,6 +1655,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
         //			retval: null or error message
         public function package_stop_build()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_package_stop_build', 'nonce');
             $succeeded  = false;
             $retval     = '';
@@ -1549,7 +1690,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $json['succeeded'] = $succeeded;
             $json['retval']    = $retval;
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         // Retrieve view model for the Packages/Details/Transfer screen
@@ -1559,6 +1700,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
         // transfer_logs: array of transfer request vms (start, stop, status, message)
         function packages_details_transfer_get_package_vm()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_packages_details_transfer_get_package_vm', 'nonce');
 
             $request    = stripslashes_deep($_REQUEST);
@@ -1658,7 +1800,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $json['succeeded'] = true;
             $json['retval']    = $vm;
 
-            die(json_encode($json));
+            die(DupProSnapJsonU::wp_json_encode($json));
         }
 
         private static function get_adjusted_package_status($package)
@@ -1689,6 +1831,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         public function is_pack_running()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_is_pack_running', 'nonce');
             DUP_PRO_U::hasCapability('export');
             ob_start();
@@ -1714,25 +1857,49 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     throw new Exception('Security issue');
                 }
 
-                $packages = DUP_PRO_Package::get_all();
-
-                foreach ($packages as $package) {
-                    $status = self::get_adjusted_package_status($package);
-
-                    if ($status === DUP_PRO_PackageStatus::COMPLETE) {
-                        $result['data']['complete_ids'][] = $package->ID;
-                    } elseif (
-                        $status >= DUP_PRO_PackageStatus::PRE_PROCESS && $status < DUP_PRO_PackageStatus::COMPLETE ||
-                        $status === DUP_PRO_PackageStatus::PENDING_CANCEL
-                    ) {
-                        $result['running']           = true;
-                        $result['data']['run_ids'][] = $package->ID;
-                    } elseif ($status === DUP_PRO_PackageStatus::BUILD_CANCELLED || $status === DUP_PRO_PackageStatus::STORAGE_CANCELLED) {
-                        $result['data']['cac_ids'][] = $package->ID;
-                    } else {
-                        $result['data']['err_ids'][] = $package->ID;
-                    }
+                $tmpPackages = DUP_PRO_Package::get_row_by_status(array(
+                        array('op' => '>=', 'status' => DUP_PRO_PackageStatus::COMPLETE)
+                ));
+                foreach ($tmpPackages as $cPack) {
+                    $result['data']['complete_ids'][] = $cPack->id;
                 }
+
+                $tmpPackages = DUP_PRO_Package::get_row_by_status(array(
+                        relation => 'AND',
+                        array('op' => '>=', 'status' => DUP_PRO_PackageStatus::PRE_PROCESS),
+                        array('op' => '<', 'status' => DUP_PRO_PackageStatus::COMPLETE)
+                ));
+                foreach ($tmpPackages as $cPack) {
+                    $result['data']['run_ids'][] = $cPack->id;
+                }
+                $tmpPackages = DUP_PRO_Package::get_row_by_status(array(
+                        array('op' => '=', 'status' => DUP_PRO_PackageStatus::PENDING_CANCEL)
+                ));
+                foreach ($tmpPackages as $cPack) {
+                    $result['data']['run_ids'][] = $cPack->id;
+                }
+
+                $tmpPackages = DUP_PRO_Package::get_row_by_status(array(
+                        relation => 'OR',
+                        array('op' => '=', 'status' => DUP_PRO_PackageStatus::BUILD_CANCELLED),
+                        array('op' => '=', 'status' => DUP_PRO_PackageStatus::STORAGE_CANCELLED)
+                ));
+                foreach ($tmpPackages as $cPack) {
+                    $result['data']['cac_ids'][] = $cPack->id;
+                }
+
+                $tmpPackages = DUP_PRO_Package::get_row_by_status(array(
+                        relation => 'AND',
+                        array('op' => '<', 'status' => DUP_PRO_PackageStatus::PRE_PROCESS),
+                        array('op' => '!=', 'status' => DUP_PRO_PackageStatus::BUILD_CANCELLED),
+                        array('op' => '!=', 'status' => DUP_PRO_PackageStatus::STORAGE_CANCELLED),
+                        array('op' => '!=', 'status' => DUP_PRO_PackageStatus::PENDING_CANCEL)
+                ));
+                foreach ($tmpPackages as $cPack) {
+                    $result['data']['err_ids'][] = $cPack->id;
+                }
+
+                $result['running'] = count($result['data']['run_ids']) > 0;
             } catch (Exception $e) {
                 $error             = true;
                 $result['message'] = $e->getMessage();
@@ -1745,9 +1912,35 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 wp_send_json_success($result);
             }
         }
+        private static $package_statii_data = null;
+
+        public static function statii_callback($package)
+        {
+            /* @var $package DUP_PRO_Package */
+            $package_status = new stdClass();
+
+            $package_status->ID = $package->ID;
+
+            $package_status->status          = self::get_adjusted_package_status($package);
+            //$package_status->status = $package->Status;
+            $package_status->status_progress = $package->get_status_progress();
+            $package_status->size            = $package->get_display_size();
+
+            //TODO active storage
+            $active_storage = $package->get_active_storage();
+
+            if ($active_storage != null) {
+                $package_status->status_progress_text = $active_storage->get_action_text();
+            } else {
+                $package_status->status_progress_text = '';
+            }
+
+            self::$package_statii_data[] = $package_status;
+        }
 
         function get_package_statii()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_get_package_statii', 'nonce');
             $nonce = sanitize_text_field($_POST['nonce']);
             if (!wp_verify_nonce($nonce, 'duplicator_pro_get_package_statii')) {
@@ -1756,33 +1949,10 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             }
 
             DUP_PRO_U::hasCapability('export');
-            $request        = stripslashes_deep($_REQUEST);
-            $packages       = DUP_PRO_Package::get_all();
-            $package_statii = array();
+            self::$package_statii_data = array();
+            DUP_PRO_Package::by_status_callback(array(__CLASS__, 'statii_callback'));
 
-            foreach ($packages as $package) {
-                /* @var $package DUP_PRO_Package */
-                $package_status = new stdClass();
-
-                $package_status->ID = $package->ID;
-
-                $package_status->status          = self::get_adjusted_package_status($package);
-                //$package_status->status = $package->Status;
-                $package_status->status_progress = $package->get_status_progress();
-                $package_status->size            = $package->get_display_size();
-
-                //TODO active storage
-                $active_storage = $package->get_active_storage();
-
-                if ($active_storage != null) {
-                    $package_status->status_progress_text = $active_storage->get_action_text();
-                } else {
-                    $package_status->status_progress_text = '';
-                }
-
-                array_push($package_statii, $package_status);
-            }
-            die(json_encode($package_statii));
+            die(DupProSnapJsonU::wp_json_encode(self::$package_statii_data));
         }
 
         function add_class_action($tag, $method_name)
@@ -1792,6 +1962,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         function get_dropbox_auth_url()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_dropbox_get_auth_url', 'nonce');
             DUP_PRO_U::hasCapability('export');
             $response           = array();
@@ -1802,13 +1973,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $response['dropbox_auth_url'] = $dropbox_client->createAuthUrl();
             $response['status']           = 0;
 
-            $json_response = json_encode($response);
-
-            die($json_response);
+            die(DupProSnapJsonU::wp_json_encode($response));
         }
 
         function get_onedrive_auth_url()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_onedrive_get_auth_url', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1822,13 +1992,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $response['onedrive_auth_url'] = esc_url_raw($auth_arr["url"]);
             $response['status']            = 0;
 
-            $json_response = json_encode($response);
-
-            die($json_response);
+            die(DupProSnapJsonU::wp_json_encode($response));
         }
 
         function get_onedrive_logout_url()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_onedrive_get_logout_url', 'nonce');
             DUP_PRO_U::hasCapability('export');
             
@@ -1841,13 +2010,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
             $response['onedrive_logout_url'] = DUP_PRO_Onedrive_U::get_onedrive_logout_url($callback_uri);
             $response['status']              = 0;
 
-            $json_response = json_encode($response);
-
-            die($json_response);
+            die(DupProSnapJsonU::wp_json_encode($response));
         }
 
         function duplicator_pro_onedrive_send_file_test()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_onedrive_send_file_test', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1904,7 +2072,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 }
                 fclose($source_handle);
                 unlink($source_filepath);
-                die(json_encode($response));
+                die(DupProSnapJsonU::wp_json_encode($response));
             } catch (Exception $e) {
 
                 $errorMessage = $e->getMessage();
@@ -1912,12 +2080,13 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 DUP_PRO_LOG::trace($errorMessage);
                 $json['error'] = "{$errorMessage}";
 
-                die(json_encode($response));
+                die(DupProSnapJsonU::wp_json_encode($json));
             }
         }
 
         function get_gdrive_auth_url()
         {
+            DUP_PRO_Handler::init_error_handler();
             check_ajax_referer('duplicator_pro_gdrive_get_auth_url', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1934,13 +2103,12 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                 $response['status'] = -2;
             }
 
-            $json_response = json_encode($response);
-
-            die($json_response);
+            die(DupProSnapJsonU::wp_json_encode($response));
         }
 
         function try_to_lock_test_file()
         {
+            DUP_PRO_Handler::init_error_handler();
             // $nonce = sanitize_text_field($_GET['nonce']);
             // This is not working, because it is called by the wp_remote_request and it is considered as separate request
             /*
@@ -1963,6 +2131,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
 
         public function duplicator_pro_get_folder_children()
         {
+            DUP_PRO_Handler::init_error_handler();
             // check_ajax_referer('duplicator_pro_get_folder_children', 'nonce');
             DUP_PRO_U::hasCapability('export');
 
@@ -1987,7 +2156,7 @@ if (!class_exists('DUP_PRO_Web_Services')) {
                     }
 
                     $jsTreeData = DUP_PRO_Archive::treeNodeTojstreeNode($treeObj->tree);
-                    $result = $jsTreeData['children'];
+                    $result     = $jsTreeData['children'];
                 }
             } catch (Exception $e) {
                 DUP_PRO_LOG::trace($e->getMessage());

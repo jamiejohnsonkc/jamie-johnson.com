@@ -34,17 +34,17 @@ class DUPX_Boot
         }
 
         /** Absolute path to the Installer directory. - necessary for php protection */
-        if (!defined('KB_IN_BYTES')) {
-            define('KB_IN_BYTES', 1024);
+        if (!defined('DUPLICATOR_PRO_INSTALLER_KB_IN_BYTES')) {
+            define('DUPLICATOR_PRO_INSTALLER_KB_IN_BYTES', 1024);
         }
-        if (!defined('MB_IN_BYTES')) {
-            define('MB_IN_BYTES', 1024 * KB_IN_BYTES);
+        if (!defined('DUPLICATOR_PRO_INSTALLER_MB_IN_BYTES')) {
+            define('DUPLICATOR_PRO_INSTALLER_MB_IN_BYTES', 1024 * DUPLICATOR_PRO_INSTALLER_KB_IN_BYTES);
         }
-        if (!defined('GB_IN_BYTES')) {
-            define('GB_IN_BYTES', 1024 * MB_IN_BYTES);
+        if (!defined('DUPLICATOR_PRO_GB_IN_BYTES')) {
+            define('DUPLICATOR_PRO_GB_IN_BYTES', 1024 * DUPLICATOR_PRO_INSTALLER_MB_IN_BYTES);
         }
-        if (!defined('DUPLICATOR_PHP_MAX_MEMORY')) {
-            define('DUPLICATOR_PHP_MAX_MEMORY', 4096 * MB_IN_BYTES);
+        if (!defined('DUPLICATOR_PRO_PHP_MAX_MEMORY')) {
+            define('DUPLICATOR_PRO_PHP_MAX_MEMORY', 4096 * DUPLICATOR_PRO_INSTALLER_MB_IN_BYTES);
         }
 
         date_default_timezone_set('UTC'); // Some machines don’t have this set so just do it here.
@@ -59,7 +59,7 @@ class DUPX_Boot
             @ini_set("default_charset", 'utf-8');
         }
         if (DupProSnapLibUtil::wp_is_ini_value_changeable('memory_limit')) {
-            @ini_set('memory_limit', DUPLICATOR_PHP_MAX_MEMORY);
+            @ini_set('memory_limit', DUPLICATOR_PRO_PHP_MAX_MEMORY);
         }
         if (DupProSnapLibUtil::wp_is_ini_value_changeable('max_input_time')) {
             @ini_set('max_input_time', '-1');
@@ -88,6 +88,7 @@ class DUPX_Boot
         require_once($GLOBALS['DUPX_INIT'].'/classes/utilities/class.u.notices.manager.php');
         require_once($GLOBALS['DUPX_INIT'].'/classes/utilities/class.u.html.php');
         require_once($GLOBALS['DUPX_INIT'].'/classes/config/class.constants.php');
+        require_once($GLOBALS['DUPX_INIT'].'/ctrls/ctrl.base.php');
     }
 
     public static function initArchiveAndLog()

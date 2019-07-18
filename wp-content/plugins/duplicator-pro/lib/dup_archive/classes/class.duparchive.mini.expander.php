@@ -1,6 +1,5 @@
 <?php
-if (!defined("ABSPATH") && !defined("DUPXABSPATH"))
-    die("");
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 //---------- DUPARCHIVE MINI EXPANDER: The contents of this file will be injected into the installer bootlog at build time ------------------------
 
 class DupArchiveHeaderMiniU
@@ -149,6 +148,9 @@ class DupArchiveMiniHeader
     private function __construct()
     {
         // Prevent instantiation
+        if (!class_exists('DUPX_Bootstrap')) {
+            throw new Exception('Class DUPX_Bootstrap not found');
+        }
     }
 
     public static function readFromArchive($archiveHandle)
@@ -294,7 +296,7 @@ class DupArchiveMiniExpander
                           //  $mode = $directoryHeader->permissions;
 
                             // rodo handle this more elegantly @mkdir($directory, $directoryHeader->permissions, true);
-                            @mkdir($directory, 0755, true);
+                            DUPX_Bootstrap::mkdir($directory, 'u+rwx', true);
 
 
                             $writeInfo->directoryWriteCount++;
@@ -350,19 +352,13 @@ class DupArchiveMiniExpander
 		{
 			/* @var $writeInfo DupArchiveMiniWriteInfo */
 			$parentDir = dirname($destFilePath);
-
 			if (!file_exists($parentDir)) {
-
-				$r = @mkdir($parentDir, 0755, true);
-
-				if(!$r)
-				{
+                if (!DUPX_Bootstrap::mkdir($parentDir, 'u+rwx', true)) {
 					throw new Exception("Couldn't create {$parentDir}");
 				}
 			}
 
 			$destFileHandle = fopen($destFilePath, 'wb+');
-
 			if ($destFileHandle === false) {
 				throw new Exception("Couldn't open {$destFilePath} for writing.");
 			}
@@ -378,14 +374,14 @@ class DupArchiveMiniExpander
 
 			fclose($destFileHandle);
 
-            @chmod($destFilePath, 0644);
+            DUPX_Bootstrap::chmod($destFilePath, 'u+rw');
 
 			self::validateExpandedFile($writeInfo);
 		} else {
 			if(touch($destFilePath) === false) {
 				throw new Exception("Couldn't create $destFilePath");
 			}
-            @chmod($destFilePath, 0644);
+            DUPX_Bootstrap::chmod($destFilePath, 'u+rw');
 		}
     }
 
@@ -431,4 +427,6 @@ class DupArchiveMiniExpander
         return (substr($candidate, 0, strlen($filter)) == $filter);
     }
 }
+
+// don't remove the php closing delimiter. It needs to intaller.tpl expand
 ?>

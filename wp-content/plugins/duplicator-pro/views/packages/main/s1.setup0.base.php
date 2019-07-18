@@ -462,6 +462,7 @@ jQuery(document).ready(function ($) {
     DupPro.Pack.ExportOnlyDB();
     DPRO_NAME_LAST  = $('#package-name').val();
 	DupPro.Pack.CountFilters();
+	$('input#package-name').focus().select();
 
 });
 </script>

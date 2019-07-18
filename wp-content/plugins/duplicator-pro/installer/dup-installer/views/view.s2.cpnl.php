@@ -19,27 +19,39 @@ C-PANEL PANEL -->
 	</div>
 
 	<div id="s2-cpnl-area">
-		<table class="dupx-opts">
-			<tr>
-				<td>Host:</td>
-				<td>
-					<input type="text" name="cpnl-host" id="cpnl-host" required="true" value="<?php echo $GLOBALS['DUPX_AC']->cpnl_host; ?>" placeholder="cPanel url" />
-					 <a id="cpnl-host-get-lnk" href="javascript:DUPX.getcPanelURL('cpnl-host')" style="font-size:12px">get</a>
-					<div id="cpnl-host-warn">
-						Caution: The cPanel host name and URL in the browser address bar do not match, in rare cases this may be intentional.
-						Please be sure this is the correct server to avoid data loss.
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>Username:</td>
-				<td>
-					<!-- Pattern: "/^[a-zA-Z0-9-_]+$/" was to restrictive -->
-					<input type="text" name="cpnl-user" id="cpnl-user" required="true" data-parsley-pattern="/^[\w.-~]+$/" value="<?php echo DUPX_U::esc_attr($GLOBALS['DUPX_AC']->cpnl_user); ?>" placeholder="cPanel username" />
-				</td>
-			</tr>
-			<tr><td>Password:</td><td><input type="text" name="cpnl-pass" id="cpnl-pass" value="<?php echo DUPX_U::esc_attr($GLOBALS['DUPX_AC']->cpnl_pass); ?>"  placeholder="cPanel password" required="true" /></td></tr>
-		</table>
+        <table class="dupx-opts">
+                <tr>
+                    <td>Host:</td>
+                    <td>
+                        <input type="text" name="cpnl-host" id="cpnl-host" required="true" value="<?php echo $GLOBALS['DUPX_AC']->cpnl_host; ?>" placeholder="cPanel url" />
+                        <a id="cpnl-host-get-lnk" href="javascript:DUPX.getcPanelURL('cpnl-host')" style="font-size:12px">get</a>
+                        <div id="cpnl-host-warn">
+                            Caution: The cPanel host name and URL in the browser address bar do not match, in rare cases this may be intentional.
+                            Please be sure this is the correct server to avoid data loss.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td>
+                        <!-- Pattern: "/^[a-zA-Z0-9-_]+$/" was to restrictive -->
+                        <input type="text" name="cpnl-user" id="cpnl-user" required="true" data-parsley-pattern="/^[\w.-~]+$/" value="<?php echo DUPX_U::esc_attr($GLOBALS['DUPX_AC']->cpnl_user); ?>" placeholder="cPanel username" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>
+                        <?php
+                        DUPX_U_Html::inputPasswordToggle('cpnl-pass', 'cpnl-pass', array(),
+                            array(
+                            'placeholder' => 'cPanel password',
+                            'value' => $GLOBALS['DUPX_AC']->cpnl_pass,
+                            'required' => 'true'
+                        ));
+                        ?>
+                    </td>
+                </tr>
+            </table>
 
 		<div id="s2-cpnl-connect">
 			<input type="button" id="s2-cpnl-connect-btn" class="default-btn" onclick="DUPX.cpnlConnect()" value="Connect" />
@@ -142,7 +154,19 @@ C-PANEL PANEL -->
 				</div>
 			</td>
 		</tr>
-		<tr><td>Password:</td><td><input type="text" name="cpnl-dbpass" id="cpnl-dbpass" required="true" placeholder="valid database user password" /></td></tr>
+        <tr>
+            <td>Password:</td>
+            <td>
+                <?php
+                DUPX_U_Html::inputPasswordToggle('cpnl-dbpass', 'cpnl-dbpass', array(),
+                    array(
+                    'placeholder' => 'valid database user password',
+                    'value' => '',
+                    'required' => 'true'
+                ));
+                ?>
+            </td>
+        </tr>
 
 	</table>
 	<br/><br/>

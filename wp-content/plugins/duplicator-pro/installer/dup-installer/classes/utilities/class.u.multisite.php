@@ -334,9 +334,9 @@ class DUPX_MU
                 DUPX_DB::queryNoReturn($dbh, $sql);
 
                 //$sql = "SELECT * FROM $usermeta_table_name WHERE meta_key like '{$escaped_subsite_prefix}%'";
-                //DUPX_Log::info("#### {$subsite_id} != {$retained_subsite_id} so executing {$sql}");
+                //DUPX_Log::info("{$subsite_id} != {$retained_subsite_id} so executing {$sql}");
                 //$ret_val = DUPX_DB::queryToArray($dbh, $sql);
-                //DUPX_Log::info("#### return value = " . print_r($ret_val, true));
+                //DUPX_Log::info("return value = " . print_r($ret_val, true));
             }
         }
 
@@ -365,7 +365,7 @@ class DUPX_MU
 
 
             //	$sql = "DELETE FROM $usermeta_table_name WHERE meta_key LIKE '$escaped_base_prefix%' AND meta_key NOT LIKE '$escaped_retained_subsite_prefix%'";
-            //	DUPX_Log::info("#### Subsite {$retained_subsite_id} != 1 so deleting all data with base_prefix and not like retained prefix. SQL= {$sql}");
+            //	DUPX_Log::info("Subsite {$retained_subsite_id} != 1 so deleting all data with base_prefix and not like retained prefix. SQL= {$sql}");
             //	DUPX_DB::queryNoReturn($dbh, $sql);
         }
     }

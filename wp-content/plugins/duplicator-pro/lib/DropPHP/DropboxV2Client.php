@@ -100,6 +100,8 @@ if (!class_exists('DUP_PRO_DropboxV2Client')) {
                 )
             );
             $args = $this->injectExtraReqArgs($args);
+
+            $args['timeout'] = 30;
             $response = wp_remote_post($url, $args);
 
             if (is_wp_error($response)) {
@@ -573,6 +575,10 @@ if (!class_exists('DUP_PRO_DropboxV2Client')) {
             $path = str_replace('//', '/', $path);
             $path = '/'.$path;
             return $path;
+        }
+
+        public function getQuota() {
+            return $this->apiCall('users/get_space_usage'); 
         }
 
         private function apiCall($path, $method = "POST", $params = array(), $content_call = false)

@@ -33,6 +33,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
      */
     public function runScanValidator($post)
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_CTRL_Tools_runScanValidator', 'nonce');
         DUP_PRO_U::hasCapability('export');
         $nonce = sanitize_text_field($_REQUEST['nonce']);
@@ -95,6 +96,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
      */
     public function prepareArchiveForImport($post)
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_CTRL_Tools_prepareArchiveForImport', 'nonce');
         DUP_PRO_U::hasCapability('export');
 
@@ -222,6 +224,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
      */
     public function migrationUploader($post)
     {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_CTRL_Tools_migrationUploader', 'nonce');
         DUP_PRO_U::hasCapability('export');
         
@@ -374,6 +377,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
      *
      */
     public function removeUploadedFilePart($post = array()) {
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_CTRL_Tools_removeUploadedFilePart', 'nonce');
         DUP_PRO_U::hasCapability('export');
 
@@ -388,6 +392,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
     }
 
     public function deleteExistingFile($post){
+        DUP_PRO_Handler::init_error_handler();
         check_ajax_referer('DUP_PRO_CTRL_Tools_deleteExistingPackage', 'nonce');
         DUP_PRO_U::hasCapability('export');
 

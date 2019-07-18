@@ -1,11 +1,12 @@
 <?php
-if (!defined("ABSPATH") && !defined("DUPXABSPATH"))
-    die("");
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 require_once(dirname(__FILE__).'/../headers/class.duparchive.header.file.php');
 require_once(dirname(__FILE__).'/../headers/class.duparchive.header.glob.php');
 
@@ -112,11 +113,8 @@ class DupArchiveFileProcessor
  
         $moreGlobstoProcess = true;
         
-        if (!file_exists($parentDir)) {
+        DupProSnapLibIOU::dirWriteCheckOrMkdir($parentDir, 'u+rwx');
  
-            DupProSnapLibIOU::mkdir($parentDir, 0755, true);
-        }
-
         if ($expandState->currentFileHeader->fileSize > 0) {
 
             if ($expandState->currentFileOffset > 0) {
@@ -191,9 +189,9 @@ class DupArchiveFileProcessor
             }
 
             if (!$moreGlobstoProcess && $expandState->validateOnly && ($expandState->validationType == DupArchiveValidationTypes::Full)) {
-
-                @chmod($destFilepath, 0644);
-                
+                if (!is_writable($destFilepath)) {
+                    DupProSnapLibIOU::chmod($destFilepath, 'u+rw');
+                }
                 if (@unlink($destFilepath) === false) {
               //      $expandState->addFailure(DupArchiveFailureTypes::File, $destFilepath, "Couldn't delete {$destFilepath} during validation", false);
                     // TODO: Have to know how to handle this - want to report it but don’t want to mess up validation - some non critical errors could be important to validation
@@ -255,14 +253,11 @@ class DupArchiveFileProcessor
 
     public static function setFileMode($expandState, $filePath)
     {
-        $mode = $expandState->currentFileHeader->permissions;
-
-        if($expandState->fileModeOverride != -1) {
-
+        $mode = 'u+rw';
+        if($expandState->fileModeOverride !== -1) {
             $mode = $expandState->fileModeOverride;
         }
-
-        @chmod($filePath, $mode);
+        DupProSnapLibIOU::chmod($filePath, $mode);
     }
 
     public static function standardValidateFileEntry(&$expandState, $archiveHandle)

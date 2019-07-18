@@ -127,8 +127,7 @@ final class DUPX_S3_Funcs
             'replaceData' => DUPX_S_R_MANAGER::getInstance()->getArrayData()
         );
 
-        // @todo remove JSON_PRETTY_PRINT  and update snap lib with json pretty function
-        if (($json = DupProSnapLibUtil::wp_json_encode($data, JSON_PRETTY_PRINT)) === false) {
+        if (($json = DupProSnapJsonU::wp_json_encode_pprint($data)) === false) {
             DUPX_Log::info('Can\'t encode json data');
             return false;
         }
@@ -313,19 +312,21 @@ final class DUPX_S3_Funcs
             $this->post['siteurl'] = rtrim($this->post['url_new'], '/');
         }
 
-        $this->post['tables']           = isset($_POST['tables']) && is_array($_POST['tables']) ? array_map('DUPX_U::sanitize_text_field', $_POST['tables']) : array();
-        $this->post['cross_search']     = filter_input(INPUT_POST, 'cross_search', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
-        $this->post['subsite_id']       = filter_input(INPUT_POST, 'subsite_id', FILTER_VALIDATE_INT, array("options" => array('default' => -1, 'min_range' => 0)));
-        $this->post['remove_redundant'] = filter_input(INPUT_POST, 'remove_redundant', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
-        $this->post['replaceMail']      = filter_input(INPUT_POST, 'search_replace_email_domain', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
-        $this->post['search']           = filter_input(INPUT_POST, 'search', FILTER_DEFAULT,
+        $this->post['tables']             = isset($_POST['tables']) && is_array($_POST['tables']) ? array_map('DUPX_U::sanitize_text_field', $_POST['tables']) : array();
+        $this->post['cross_search']       = filter_input(INPUT_POST, 'cross_search', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
+        $this->post['subsite_id']         = filter_input(INPUT_POST, 'subsite_id', FILTER_VALIDATE_INT, array("options" => array('default' => -1, 'min_range' => 0)));
+        $this->post['maxSerializeStrlen'] = filter_input(INPUT_POST, DUPX_CTRL::NAME_MAX_SERIALIZE_STRLEN_IN_M, FILTER_VALIDATE_INT,
+                array("options" => array('default' => DUPX_Constants::DEFAULT_MAX_STRLEN_SERIALIZED_CHECK_IN_M, 'min_range' => 0))) * 1000000;
+        $this->post['remove_redundant']   = filter_input(INPUT_POST, 'remove_redundant', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
+        $this->post['replaceMail']        = filter_input(INPUT_POST, 'search_replace_email_domain', FILTER_VALIDATE_BOOLEAN, array('options' => array('default' => false)));
+        $this->post['search']             = filter_input(INPUT_POST, 'search', FILTER_DEFAULT,
             array(
             'options' => array(
                 'default' => array()
             ),
             'flags' => FILTER_REQUIRE_ARRAY,
         ));
-        $this->post['replace']          = filter_input(INPUT_POST, 'replace', FILTER_DEFAULT,
+        $this->post['replace']            = filter_input(INPUT_POST, 'replace', FILTER_DEFAULT,
             array(
             'options' => array(
                 'default' => array()
@@ -443,6 +444,12 @@ final class DUPX_S3_Funcs
         $this->post['json'] = filter_input(INPUT_POST, 'json', FILTER_DEFAULT, array('options' => array('default' => '{}')));
     }
 
+    /**
+     * get vaule post if  thepost isn't inizialized inizialize it
+     *
+     * @param string $key
+     * @return mixed
+     */
     public function getPost($key = null)
     {
         if (is_null($this->post)) {
@@ -619,7 +626,11 @@ final class DUPX_S3_Funcs
                 $err_log = "\nWARNING: Unable to update file permissions and write to dup-wp-config-arc__[HASH].txt.  ";
                 $err_log .= "Check that the wp-config.php is in the archive.zip and check with your host or administrator to enable PHP to write to the wp-config.php file.  ";
                 $err_log .= "If performing a 'Manual Extraction' please be sure to select the 'Manual Archive Extraction' option on step 1 under options.";
-                chmod($this->getWpconfigArkPath(), 0644) ? DUPX_Log::info("File Permission Update: dup-wp-config-arc__[HASH].txt set to 0644") : DUPX_Log::error("{$err_log}");
+                if (DupProSnapLibIOU::chmod($this->getWpconfigArkPath(), 0644)) {
+                    DUPX_Log::info("File Permission Update: dup-wp-config-arc__[HASH].txt set to 0644");
+                } else {
+                    DUPX_Log::error("{$err_log}");
+                }
             }
         }
 
@@ -834,7 +845,7 @@ final class DUPX_S3_Funcs
                         $tables = true;
                     }
                     $priority = ($cSub->id > 1) ? 5 : 10;
-                    $s_r_manager->addItem($search, $replace, DUPX_S_R_ITEM::TYPE_URL, $priority, $tables);
+                    $s_r_manager->addItem($search, $replace, DUPX_S_R_ITEM::TYPE_URL_NORMALIZE_DOMAIN, $priority, $tables);
 
                     // Replace email address (xyz@oldomain.com to xyz@newdomain.com).
                     if ($this->post['replaceMail']) {
@@ -873,7 +884,7 @@ final class DUPX_S3_Funcs
                 }
                 $search  = $standalone_obj->name;
                 $replace = $this->post['url_new'];
-                $s_r_manager->addItem($search, $replace, DUPX_S_R_ITEM::TYPE_URL, 5);
+                $s_r_manager->addItem($search, $replace, DUPX_S_R_ITEM::TYPE_URL_NORMALIZE_DOMAIN, 5);
 
                 // CONVERSION
                 if ($this->post['subsite_id'] == 1) {
@@ -975,14 +986,13 @@ final class DUPX_S3_Funcs
                 DUPX_Log::info('DB ERROR: '.mysqli_error($this->dbh));
             }
         } catch (Exception $e) {
-            DUPX_Log::info('CONTINUE EXCEPTION: '.$exceptionError->getMessage());
+            DUPX_Log::info('CONTINUE EXCEPTION: '.$e->getMessage());
             DUPX_Log::info('TRACE:');
-            DUPX_Log::info($exceptionError->getTraceAsString());
+            DUPX_Log::info($e->getTraceAsString());
         }
 
-        $old_urls_list = array_unique($old_urls_list);
-        foreach ($old_urls_list as $old_url) {
-            $s_r_manager->addItem($old_url, $post_url_new, DUPX_S_R_ITEM::TYPE_URL, 10);
+        foreach (array_unique($old_urls_list) as $old_url) {
+            $s_r_manager->addItem($old_url, $post_url_new, DUPX_S_R_ITEM::TYPE_URL_NORMALIZE_DOMAIN, 10);
 
             // Replace email address (xyz@oldomain.com to xyz@newdomain.com).
             if ($this->post['replaceMail']) {
@@ -1342,7 +1352,7 @@ final class DUPX_S3_Funcs
                         // sometimes WP_CONTENT_DIR const removal failed, so we need to update them
                         if (false === $ret) {
                             $new_url = $this->post['url_new'].'/wp-content';
-                            $confTransformer->update('constant', 'WP_CONTENT_URL', $new_url, array('raw' => true, 'normalize' => true));
+                            $confTransformer->update('constant', 'WP_CONTENT_URL', $new_url, array('normalize' => true));
                             DUPX_Log::info('UPDATE WP_CONTENT_URL '.DUPX_Log::varToString($new_url));
                         }
                     } else {
@@ -1559,7 +1569,7 @@ final class DUPX_S3_Funcs
                     DUPX_Log::info('REMOVE WP_AUTO_UPDATE_CORE');
                 }
 
-                DUPX_Log::info("\nUPDATED WP-CONFIG ARK FILE: - 'dup-wp-config-arc__[HASH].txt'");
+                DUPX_Log::info("\n*** UPDATED WP CONFIG FILE ***");
             } else {
                 DUPX_Log::info("WP-CONFIG ARK FILE NOT FOUND");
                 DUPX_Log::info("WP-CONFIG ARK FILE:\n - 'dup-wp-config-arc__[HASH].txt'");
@@ -1744,9 +1754,14 @@ LONGMSG;
 
             //-- Finally, back up the old wp-config and rename the new one
             $wpconfig_path = "{$GLOBALS['DUPX_ROOT']}/wp-config.php";
-            if (copy($this->getWpconfigArkPath(), $wpconfig_path) === false) {
-                DUPX_Log::error("ERROR: Unable to copy 'dup-wp-config-arc__[HASH].txt' to 'wp-config.php'.\n".
-                    "Check server permissions for more details see FAQ: https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-055-q");
+            if ($this->getWpconfigArkPath() !== $wpconfig_path) {
+                if (copy($this->getWpconfigArkPath(), $wpconfig_path) === false) {
+                    DUPX_LOG::info(
+                        'COPY SOURCE: '.DUPX_LOG::varToString($this->getWpconfigArkPath())."\n".
+                        "COPY DEST:".DUPX_LOG::varToString($wpconfig_path), DUPX_Log::LV_DEBUG);
+                    DUPX_Log::error("ERROR: Unable to copy 'dup-wp-config-arc__[HASH].txt' to 'wp-config.php'.\n".
+                        "Check server permissions for more details see FAQ: https://snapcreek.com/duplicator/docs/faqs-tech/#faq-trouble-055-q");
+                }
             }
         } else {
             $msg                        = "WP-CONFIG NOTICE: <b>wp-config.php not found.</b><br><br>";
@@ -1798,11 +1813,73 @@ LONGMSG;
         }
     }
 
+    protected function removeRedundant() {
+        if ($this->getPost('remove_redundant')) {
+            self::logSectionHeader('REMOVE REDUNDANT', __FUNCTION__, __LINE__);
+
+            // Need to load if user selected redundant-data checkbox
+            require_once($GLOBALS['DUPX_INIT'].'/classes/utilities/class.u.remove.redundant.data.php');
+            $nManager = DUPX_NOTICE_MANAGER::getInstance();
+            $new_content_dir = (substr($this->post['path_new'], -1, 1) == '/') ? "{$this->post['path_new']}{$GLOBALS['DUPX_AC']->relative_content_dir}" : "{$this->post['path_new']}/{$GLOBALS['DUPX_AC']->relative_content_dir}";
+
+            try {
+                DUPX_RemoveRedundantData::deleteRedundantPlugins($new_content_dir, $GLOBALS['DUPX_AC'], $this->post['subsite_id']);
+            } catch (Exception $ex) {
+                // Technically it can complete but this should be brought to their attention
+                $errorMsg = "**EXCEPTION ERROR** The Inactive Plugins deletion failed";
+                DUPX_Log::info($errorMsg);
+                $nManager->addFinalReportNotice(array(
+                    'shortMsg' => $errorMsg,
+                    'level' => DUPX_NOTICE_ITEM::HARD_WARNING,
+                    'longMsg' => 'Please uninstall all inactive plugins manually',
+                    'sections' => 'general'
+                ));
+            } catch (Error $ex) {
+                // Technically it can complete but this should be brought to their attention
+                $errorMsg = "**FATAL ERROR** The Inactive Plugins deletion failed";
+                DUPX_Log::info($errorMsg);
+                $nManager->addFinalReportNotice(array(
+                    'shortMsg' => $errorMsg,
+                    'level' => DUPX_NOTICE_ITEM::HARD_WARNING,
+                    'longMsg' => 'Please uninstall all inactive plugins manually',
+                    'sections' => 'general'
+                ));
+            }
+
+            try {
+                DUPX_RemoveRedundantData::deleteRedundantThemes($new_content_dir, $GLOBALS['DUPX_AC'], $this->post['subsite_id']);
+            } catch (Exception $ex) {
+                // Technically it can complete but this should be brought to their attention
+                $errorMsg = "**EXCEPTION ERROR** The Inactive Themes deletion failed";
+                DUPX_Log::info($errorMsg);
+                $nManager->addFinalReportNotice(array(
+                    'shortMsg' => $errorMsg,
+                    'level' => DUPX_NOTICE_ITEM::HARD_WARNING,
+                    'longMsg' => 'Please uninstall all inactive themes manually',
+                    'sections' => 'general'
+                ));
+            } catch (Error $e) {
+                $errorMsg = "**FATAL ERROR** The Inactive Themes deletion failed";
+                DUPX_Log::info($errorMsg);
+                $nManager->addFinalReportNotice(array(
+                    'shortMsg' => $errorMsg,
+                    'level' => DUPX_NOTICE_ITEM::HARD_WARNING,
+                    'longMsg' => 'Please uninstall all inactive themes manually',
+                    'sections' => 'general'
+                ));
+            }
+            if ($GLOBALS['DUPX_STATE']->mode == DUPX_InstallerMode::OverwriteInstall) {
+                DUPX_U::maintenanceMode(true, $GLOBALS['DUPX_ROOT']);
+            }
+        }
+    }
+
     public function cleanupTmpFiles()
     {
+        $this->removeRedundant();
+        
         self::logSectionHeader('CLEANUP TMP FILES', __FUNCTION__, __LINE__);
-        // make sure post data is inizialized
-        $this->getPost();
+
 
         //Cleanup any tmp files a developer may have forgotten about
         //Lets be proactive for the developer just in case
@@ -1817,35 +1894,6 @@ LONGMSG;
                 if (rename($file, $tmp_newfile) === false) {
                     DUPX_Log::info("WARNING: Unable to rename '{$file}' to '{$tmp_newfile}'");
                 }
-            }
-        }
-
-        if (isset($this->post['remove_redundant']) && $this->post['remove_redundant']) {
-            $licence_type = $GLOBALS['DUPX_AC']->getLicenseType();
-            if ($licence_type >= DUPX_LicenseType::Freelancer) {
-                // Need to load if user selected redundant-data checkbox
-                require_once($GLOBALS['DUPX_INIT'].'/classes/utilities/class.u.remove.redundant.data.php');
-
-                $new_content_dir = (substr($this->post['path_new'], -1, 1) == '/') ? "{$this->post['path_new']}{$GLOBALS['DUPX_AC']->relative_content_dir}" : "{$this->post['path_new']}/{$GLOBALS['DUPX_AC']->relative_content_dir}";
-
-                try {
-                    DUPX_Log::info("#### Recursively deleting redundant plugins");
-                    DUPX_RemoveRedundantData::deleteRedundantPlugins($new_content_dir, $GLOBALS['DUPX_AC'], $this->post['subsite_id']);
-                } catch (Exception $ex) {
-                    // Technically it can complete but this should be brought to their attention
-                    DUPX_Log::error("Problem deleting redundant plugins");
-                }
-
-                try {
-                    DUPX_Log::info("#### Recursively deleting redundant themes");
-                    DUPX_RemoveRedundantData::deleteRedundantThemes($new_content_dir, $GLOBALS['DUPX_AC'], $this->post['subsite_id']);
-                } catch (Exception $ex) {
-                    // Technically it can complete but this should be brought to their attention
-                    DUPX_Log::error("Problem deleting redundant themes");
-                }
-            }
-            if ($GLOBALS['DUPX_STATE']->mode == DUPX_InstallerMode::OverwriteInstall) {
-                DUPX_U::maintenanceMode(true, $GLOBALS['DUPX_ROOT']);
             }
         }
     }
@@ -1916,7 +1964,20 @@ LONGMSG;
     private function obscureWpConfig($src)
     {
         $transformer = new WPConfigTransformerSrc($src);
-        $obsKeys     = array('DB_PASSWORD', 'AUTH_KEY', 'SECURE_AUTH_KEY', 'LOGGED_IN_KEY', 'NONCE_KEY', 'AUTH_SALT', 'SECURE_AUTH_SALT', 'LOGGED_IN_SALT', 'NONCE_SALT');
+        $obsKeys     = array(
+            'DB_NAME',
+            'DB_USER',
+            'DB_HOST',
+            'DB_PASSWORD',
+            'AUTH_KEY',
+            'SECURE_AUTH_KEY',
+            'LOGGED_IN_KEY',
+            'NONCE_KEY',
+            'AUTH_SALT',
+            'SECURE_AUTH_SALT',
+            'LOGGED_IN_SALT',
+            'NONCE_SALT');
+
         foreach ($obsKeys as $key) {
             if ($transformer->exists('constant', $key)) {
                 $transformer->update('constant', $key, '**OBSCURED**');

@@ -61,8 +61,6 @@ class DUP_PRO_Archive_Config
     public $is_outer_root_wp_content_dir;
     public $wp_content_dir_base_name;
 
-    public $csrf_crypt;
-
     function __construct()
     {
         $this->subsites = array();

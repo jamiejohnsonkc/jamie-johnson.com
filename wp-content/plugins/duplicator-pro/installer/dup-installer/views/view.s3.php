@@ -274,7 +274,15 @@ VIEW: STEP 3- INPUT -->
 				</tr>
 				<tr>
 					<td>Password:</td>
-					<td><input type="text" name="wp_password" id="wp_password" value="" title="6 characters minimum"  placeholder="(6 or more characters)" /></td>
+					<td>
+                        <?php
+                        DUPX_U_Html::inputPasswordToggle('wp_password', 'wp_password', array(),
+                            array(
+                            'placeholder' => '(6 or more characters',
+                            'title' => '6 characters minimum'
+                        ));
+                        ?>
+                    </td>
 				</tr>
 				<tr>
 					<td>Mail:</td>
@@ -354,7 +362,7 @@ VIEW: STEP 3- INPUT -->
 							<a href="javascript:void(0)" onclick="$('#tables option').prop('selected',true);">[All]</a>
 							<a href="javascript:void(0)" onclick="$('#tables option').prop('selected',false);">[None]</a>
 						</div><br style="clear:both" />
-						<select id="tables" name="tables[]" multiple="multiple" style="width:315px; height:100px">
+						<select id="tables" name="tables[]" multiple="multiple" style="width:315px;" size="10">
 							<?php
 							$need_to_check_scan_table = false;
 							if ($GLOBALS['DUPX_AC']->mu_generation > 0
@@ -389,7 +397,7 @@ VIEW: STEP 3- INPUT -->
 							<a href="javascript:void(0)" onclick="$('#plugins option').prop('selected',true);">[All]</a>
 							<a href="javascript:void(0)" onclick="$('#plugins option').prop('selected',false);">[None]</a>
 						</div><br style="clear:both" />
-						<select id="plugins" name="plugins[]" multiple="multiple" style="width:315px; height:100px" <?php echo ($_POST['exe_safe_mode'] > 0) ? 'disabled="true"' : ''; ?>>
+						<select id="plugins" name="plugins[]" multiple="multiple" style="width:315px;" <?php echo ($_POST['exe_safe_mode'] > 0) ? 'disabled="true"' : ''; ?> size="10">
 							<?php
 							$exclude_plugins = array(
 								'really-simple-ssl/rlrsssl-really-simple-ssl.php',
@@ -413,6 +421,14 @@ VIEW: STEP 3- INPUT -->
 			<input type="checkbox" name="search_replace_email_domain" id="search_replace_email_domain" value="1" /> <label for="search_replace_email_domain">Update email domains</label><br/>
 			<input type="checkbox" name="fullsearch" id="fullsearch" value="1" /> <label for="fullsearch">Use Database Full Search Mode</label><br/>
 			<input type="checkbox" name="postguid" id="postguid" value="1" /> <label for="postguid">Keep Post GUID Unchanged</label><br/>
+            <label>
+                <B>Max size check for serialize objects:</b>
+                <input type="number" 
+                       name="<?php echo DUPX_CTRL::NAME_MAX_SERIALIZE_STRLEN_IN_M; ?>"
+                       value="<?php echo DUPX_Constants::DEFAULT_MAX_STRLEN_SERIALIZED_CHECK_IN_M; ?>"
+                       min="0" max="99" step="1" size="2"
+                       style="width: 40px;width: 50px; text-align: center;" /> MB
+            </label>
             <?php
             if ($is_network_install) {
                 $checked = (count($subsites) <= MAX_SITES_TO_DEFAULT_ENABLE_CORSS_SEARCH) ? 'checked="checked"' : '';
@@ -665,7 +681,13 @@ VIEW: STEP 3- INPUT -->
 						} elseif (!empty($cookie_domain_val)) {
 							$parsedUrlOld = parse_url($GLOBALS['DUPX_AC']->url_old);
 							$oldDomain = $parsedUrlOld['host'];
-							$newDomain = $_SERVER['HTTP_HOST'];
+							// for ngrok url and Local by Flywheel Live URL
+							if (isset($_SERVER['HTTP_X_ORIGINAL_HOST'])) {
+								$host = $_SERVER['HTTP_X_ORIGINAL_HOST'];
+							} else {
+								$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];//WAS SERVER_NAME and caused problems on some boxes
+							}
+							$newDomain = $host;
 							$cookie_domain_val = str_ireplace($oldDomain, $newDomain, $cookie_domain_val);
 						}
 					}
@@ -927,7 +949,7 @@ DUPX.ajaxRequest = function(chunk) {
     chunk = chunk || false;
 
     if (chunk) {
-        var data = <?php echo DupProSnapLibUtil::wp_json_encode($actionParams); ?>;
+        var data = <?php echo DupProSnapJsonU::wp_json_encode($actionParams); ?>;
     } else {
         var data = $('#s3-input-form').serialize();
     }
@@ -1063,6 +1085,8 @@ DUPX.showHideRevisionNo = function() {
 
 //DOCUMENT LOAD
 $(document).ready(function() {
+	$('#wp_username').val('');
+	$('#wp_password').val('');
 	$("#tabs").tabs();
 	DUPX.showHideRevisionNo();
 	$('#wp_post_revisions').change(DUPX.showHideRevisionNo);

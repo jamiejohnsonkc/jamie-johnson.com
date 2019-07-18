@@ -377,9 +377,10 @@ class DUPX_UpdateEngine
      */
     private static function evaluateRow(&$rowsParams, $row)
     {
-        $nManager = DUPX_NOTICE_MANAGER::getInstance();
-        $s3Funcs  = DUPX_S3_Funcs::getInstance();
-        $dbh      = $s3Funcs->getDbConnection();
+        $nManager             = DUPX_NOTICE_MANAGER::getInstance();
+        $s3Funcs              = DUPX_S3_Funcs::getInstance();
+        $dbh                  = $s3Funcs->getDbConnection();
+        $maxSerializeLenCheck = $s3Funcs->getPost('maxSerializeStrlen');
 
         $s3Funcs->report['scan_rows'] ++;
         $rowsParams['current_row'] ++;
@@ -455,10 +456,11 @@ class DUPX_UpdateEngine
                     }
                 }
 
-                if (self::is_serialized_string($edited_data) && strlen($edited_data) > MAX_STRLEN_SERIALIZED_CHECK) {
+                // 0 no limit
+                if ($maxSerializeLenCheck > 0 && self::is_serialized_string($edited_data) && strlen($edited_data) > $maxSerializeLenCheck) {
                     $serial_err ++;
-                    $trimLen            = DUPX_Log::isLevel(DUPX_Log::LV_HARD_DEBUG) ? 10000 : 150;
-                    $rowErrors[$column] = 'ENGINE: serialize data too big to convert; data len:'.strlen($edited_data).' Max size:'.MAX_STRLEN_SERIALIZED_CHECK;
+                    $trimLen            = DUPX_Log::isLevel(DUPX_Log::LV_HARD_DEBUG) ? 10000 : 200;
+                    $rowErrors[$column] = 'ENGINE: serialize data too big to convert; data len:'.strlen($edited_data).' Max size:'.$maxSerializeLenCheck;
                     $rowErrors[$column] .= "\n\tDATA: ".mb_strimwidth($edited_data, 0, $trimLen, ' [...]');
                 } else {
                     //Replace logic - level 1: simple check on any string or serlized strings
@@ -480,7 +482,7 @@ class DUPX_UpdateEngine
                                 $edited_data = $serial_check['data'];
                             } elseif ($serial_check['tried'] && !$serial_check['fixed']) {
                                 $serial_err ++;
-                                $trimLen            = DUPX_Log::isLevel(DUPX_Log::LV_HARD_DEBUG) ? 10000 : 150;
+                                $trimLen            = DUPX_Log::isLevel(DUPX_Log::LV_HARD_DEBUG) ? 10000 : 200;
                                 $rowErrors[$column] = 'ENGINE: serialize data serial check error';
                                 $rowErrors[$column] .= "\n\tDATA: ".mb_strimwidth($edited_data, 0, $trimLen, ' [...]');
                             }

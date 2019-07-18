@@ -1,6 +1,4 @@
 <?php
-defined("ABSPATH") or die("");
-
 /**
  * Brand entity layer
  *
@@ -14,6 +12,7 @@ defined("ABSPATH") or die("");
  *
  * @todo Finish Docs
  */
+defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
 /* @var $global DUP_PRO_Global_Entity */
 /* @var $brand DUP_PRO_Brand_Entity */
@@ -215,7 +214,7 @@ class DUP_PRO_Brand_Entity extends DUP_PRO_JSON_Entity_Base
 
         if($attachments === null) {
             if(file_exists($installer) && is_dir($installer)){
-                DupProSnapLibIOU::rrmdir($installer);
+                return DupProSnapLibIOU::rrmdir($installer);
             }
 
             return true;

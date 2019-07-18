@@ -1,8 +1,9 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the #content div and all content after
+ * Contains the closing of the #content div and all content afterP`
  *
  * @package understrap
  */
@@ -38,64 +39,105 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 
-			<div class="footer-content col-lg-3 col-md-6 col-sm-12">
-				<div class="headline headline__item footer__head">Areas of Expertise</div>
+			
+		
+			<div class="footer-content col-lg-2 col-md-6 col-sm-12">
+				<div class="headline headline__item footer__head">End-to-end Marketing Expertise</div>
 				<ul class="list footer__list">
-					<li class="list-item list-item__item footer__list-item">Web Design & Development</li>
-					<li class="list-item list-item__item footer__list-item">Integrated Communications</li>
-					<li class="list-item list-item__item footer__list-item">Marketing Operations</li>
-					<li class="list-item list-item__item footer__list-item">Strategic Marketing Management</li>
-
+					<li class="list-item list-item__item footer__list-item"><a href="/services#modern-marketing-management" class="footer__text-link">Strategic Marketing Management</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#communications" class="footer__text-link">Digital & Analog Communications</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#operations" class="footer__text-link">Marketing Operations</a></li>
 				</ul>
 			</div>
-			<div class="footer-content col-lg-3 col-md-6 col-sm-12">
-				<div class="headline headline__item footer__head">Core Services</div>
+			<div class="footer-content col-lg-2 col-md-6 col-sm-12">
+				<div class="headline headline__item footer__head">Comprehensive Capabilitities</div>
 				<ul class="list footer__list">
-					<li class="list-item list-item__item footer__list-item">Design & Development</li>
-					<li class="list-item list-item__item footer__list-item">Research & Planning</li>
-					<li class="list-item list-item__item footer__list-item">Management Consulting</li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#alacarte" class="footer__text-link">Mobile + Web Development</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#alacarte" class="footer__text-link">Strategic Marketing Management</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#alacarte" class="footer__text-link">Integrated Communications</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#alacarte" class="footer__text-link">Management & Control</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#alacarte" class="footer__text-link">Strategy & Implementation</a></li>
+				</ul>
+			</div>
+			<div class="footer-content col-lg-2 col-md-6 col-sm-12">
+				<div class="headline headline__item footer__head">Flexible & Agile Services</div>
+				<ul class="list footer__list">
+					<li class="list-item list-item__item footer__list-item"><a href="/services#flexible" class="footer__text-link">Execution</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#flexible" class="footer__text-link">Planning</a></li>
+					<li class="list-item list-item__item footer__list-item"><a href="/services#flexible" class="footer__text-link">Consulting</a></li>
 				</ul>
 			</div>
 			<div class="footer-content col-lg-3 col-md-6 col-sm-12 footer-content__icons">
-			<div class="headline headline__item footer__head">Contact</div>	
-			<div class="contact-icons">
-					
-						
-					<div class="footer-contact-icon-container">
-					<div class="footer__subhead">write</div>
-					<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="/wp-content/uploads/2019/05/contact-01.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="/wp-content/uploads/2019/05/contact-02.svg" class="style-svg footer-contact-icon" alt="...">		
+				<div class="headline headline__item footer__head">Contact</div>
+				<div class="contact-icons">
 
-					</div>		
-				
-				
-				
-						<div class="footer-contact-icon-container">
-						<div class="footer__subhead">follow</div>	
-							<img src="/wp-content/uploads/2019/05/contact-04.svg" class="style-svg footer-contact-icon" alt="...">
-							<img src="/wp-content/uploads/2019/05/contact-03.svg" class="style-svg footer-contact-icon" alt="...">
+
+					<div class="footer-contact-icon-container">
+						<div class="footer__subhead">write</div>
+						<!-- //! email -->
+						<div class="footer-contact-icon">
+							<a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top" class="button footer__text-link">
+								<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg icon-email" alt="...">
+							</a>
 						</div>
-									
-						<div class="footer-contact-icon-container">
-						<div class="footer__subhead">speak</div>
-						<div class="footer-contact-icon footer-contact-icon--phone">913-207-6966</div>
-					</div>		
-					<!-- <ul class="list footer__list">
+						<!-- //! what's app -->
+
+						<!-- <div class="footer-contact-icon">
+						<a><img src="/wp-content/uploads/2019/05/contact-01.svg" class="style-svg icon-uncertain" alt="..."></a>
+					</div> -->
+					<!-- //! Messenger -->
+					<div class="footer-contact-icon">
+						<a href="https://www.facebook.com/jamie.johnson.37051579" class="button footer__text-link">
+							<img src="/wp-content/uploads/2019/05/contact-02.svg" class="style-svg icon-messenger" alt="...">
+						</a>
+					</div>
+
+				</div>
+
+
+
+				<div class="footer-contact-icon-container">
+					<div class="footer__subhead">follow</div>
+					<div class="footer-contact-icon">
+						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-04.svg" class="style-svg icon-reddit" alt="..."></a>
+						</div>
+					<div class="footer-contact-icon">
+						<a href="https://www.linkedin.com/in/jamiejohnsonkc/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/linkedin.svg" class="style-svg icon-linkedin" alt="..."></a>
+						</div>
+
+						<div class="footer-contact-icon">
+						<a href="https://www.quora.com/profile/Jamie-Johnson-16" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-03.svg" class="style-svg icon-quora" alt="...">
+						</a>
+						</div>
+						<div class="footer-contact-icon">
+						<a href="https://github.com/jamiejohnsonkc" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/github_glyph.svg" class="style-svg icon-github--glyph" alt="..."></a>
+						</div>
+					</div>
+				<div class="footer-contact-icon-container">
+					<div class="footer__subhead">speak</div>
+					<div class="footer-contact-icon">
+						<a href="tel:913-207-6966" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/mobile.svg" class="style-svg icon-mobile" alt="..."></a>
+					</div>
+					<!-- <div class="footer-contact-icon">
+						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/skype.svg" class="style-svg icon-quora" alt="...">
+						</a>
+						</div> -->
+				</div>
+				<!-- <ul class="list footer__list">
 				<li class="list-item list-item__item footer__list-item footer__nav">services</li>
 				<li class="list-item list-item__item footer__list-item footer__nav">background</li>
 				<li class="list-item list-item__item footer__list-item footer__nav">why me</li>
 			</ul> -->
-				</div>
 			</div>
-			<div class="col-12 footer__site-info">
+		</div>
+		<div class="col-12 footer__site-info">
 			<div class="site-info">&copy; 2018. All Rights Reserved. Privacy Policy</div>
 		</div>
-		</div>
-		
-		
-		
-	
+</div>
+
+
+
+
 
 
 </footer><!-- #colophon -->

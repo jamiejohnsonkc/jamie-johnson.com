@@ -125,13 +125,13 @@ if (DUP_PRO_U::PHP53()) {
 
         // Upload a file all in one shot
         // returns true/false for success/failure
-        public static function upload_file($s3_client, $bucket, $src_filepath, $remote_directory, $storage_class)
+        public static function upload_file($s3_client, $bucket, $src_filepath, $remote_directory, $storage_class, $dest_filename = '')
         {
             // storage classes: s3 standard, s3 infrequent access, reduced redundency
             $success = false;
 
             try {
-                $filename = basename($src_filepath);
+                $filename = !empty($dest_filename) ? $dest_filename : basename($src_filepath);
                 $key      = trim($remote_directory, '/');
                 $key      = "$key/$filename";
 

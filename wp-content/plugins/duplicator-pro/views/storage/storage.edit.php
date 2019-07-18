@@ -145,6 +145,8 @@ if (isset($_REQUEST['action'])) {
         $storage->ftp_ssl = isset($_REQUEST['_ftp_ssl']);
         $storage->ftp_storage_folder = DUP_PRO_U::safePath(sanitize_text_field($_REQUEST['_ftp_storage_folder']));
         $storage->sftp_storage_folder = DUP_PRO_U::safePath(sanitize_text_field($_REQUEST['_sftp_storage_folder']));
+        $storage->dropbox_skip_archive_validation_hash = (isset($_REQUEST['dropbox_skip_archive_validation_hash']) && $_REQUEST['dropbox_skip_archive_validation_hash']) 
+                                                            ? 1 : 0;
         $storage->dropbox_storage_folder = DUP_PRO_U::safePath(sanitize_text_field($_REQUEST['_dropbox_storage_folder']));
         $storage->gdrive_storage_folder = DUP_PRO_U::safePath(sanitize_text_field($_REQUEST['_gdrive_storage_folder']));
         $storage->s3_storage_folder = DUP_PRO_U::safePath(sanitize_text_field($_REQUEST['_s3_storage_folder']));
@@ -234,8 +236,14 @@ if ($storage->dropbox_authorization_state == DUP_PRO_Dropbox_Authorization_State
 
 if ($storage->onedrive_authorization_state == DUP_PRO_OneDrive_Authorization_States::Authorized) {
     $onedrive = $storage->get_onedrive_client();
-    $storage->get_onedrive_storage_folder();
-    $onedrive_account_info = $onedrive->fetchAccountInfo($storage->onedrive_storage_folder_id);
+    
+
+    $onedrive_state = $onedrive->getState();
+    $onedrive_state_token = $onedrive_state->token;
+    if (!isset($onedrive_state_token->data->error)) {
+        $storage->get_onedrive_storage_folder();
+        $onedrive_account_info = $onedrive->fetchAccountInfo($storage->onedrive_storage_folder_id);
+    }
 }
 
 if (DUP_PRO_U::PHP53()) {
@@ -646,6 +654,41 @@ if ($was_updated) {
 
                             <label><?php DUP_PRO_U::esc_html_e('Email'); ?>:</label>
                             <?php echo esc_html($account_info->email); ?>
+                            <?php
+                            if (is_a($dropbox, 'DUP_PRO_DropboxV2Client')) {
+                                $quota = $dropbox->getQuota();
+                                if (isset($quota->used) && isset($quota->allocation->allocated)) {
+                                ?>
+                                    <br/>
+                                    <label><?php DUP_PRO_U::esc_html_e('Quota usage'); ?>:</label>
+                                    <?php
+                                    
+                                    /*
+                                    stdClass Object
+                                    (
+                                        [used] => 0
+                                        [allocation] => stdClass Object
+                                            (
+                                                [.tag] => individual
+                                                [allocated] => 2147483648
+                                            )
+                                    
+                                    )
+                                    */
+                                    /*
+                                    echo "<pre>";
+                                    print_r($quota);
+                                    echo "</pre>";
+                                    */
+                                    $quota_used = $quota->used;
+                                    $quota_total = $quota->allocation->allocated;
+                                    $used_perc = round($quota_used*100/$quota_total, 1);
+                                    $available_quota = $quota_total - $quota_used;
+
+                                    printf(DUP_PRO_U::__('%s %% used, %s available'), $used_perc, round($available_quota/1048576, 1).' MB');                                 
+                                }
+                            }
+                            ?>
                         </div>
                         <?php endif; ?>
                     <br/>
@@ -663,6 +706,15 @@ if ($was_updated) {
                 <b>//Dropbox/Apps/Duplicator Pro/</b>
                 <input id="_dropbox_storage_folder" name="_dropbox_storage_folder" type="text" value="<?php echo esc_attr($storage->dropbox_storage_folder); ?>" class="dpro-storeage-folder-path" />
                 <p><i><?php DUP_PRO_U::esc_html_e("Folder where packages will be stored. This should be unique for each web-site using Duplicator."); ?></i></p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label><?php DUP_PRO_U::esc_html_e("Hash Validation"); ?></label></th>
+            <td>
+                <input type="checkbox" id="dropbox_skip_archive_validation_hash" name="dropbox_skip_archive_validation_hash" value="1" <?php DupProSnapLibUIU::echoChecked($storage->dropbox_skip_archive_validation_hash);?> >                    
+                <label for="dropbox_skip_archive_validation_hash">Disable</label>
+                 <br/>                                                    
+                <p><?php DUP_PRO_U::esc_html_e("Turn off hash validation. This is less reliable, but may be required when transferring very large archives to avoid timeouts."); ?></p>
             </td>
         </tr>
         <tr>
@@ -735,10 +787,33 @@ if ($was_updated) {
                         <?php echo (!$storage->onedrive_is_business()) ? DUP_PRO_U::__('OneDrive Personal Account') : DUP_PRO_U::__('OneDrive Business Account'); ?><br/>
                             <i class="dpro-edit-info"><?php DUP_PRO_U::esc_html_e('Duplicator has been authorized to access this user\'s OneDrive account'); ?></i>
                         </h3>
-                        <div id="onedrive-account-info">
-                            <label><?php DUP_PRO_U::esc_html_e('Name'); ?>:</label>
-    <?php echo esc_html($onedrive_account_info->displayName); ?><br/>
+                        
+                        <?php
+                        if (isset($onedrive_account_info)) {
+                        ?>
+                            <div id="onedrive-account-info">
+                                <label><?php DUP_PRO_U::esc_html_e('Name'); ?>:</label>
+<?php echo esc_html($onedrive_account_info->displayName); ?> <br/>                                
+                            </div>
                         </div>
+                        <?php
+                        } elseif (isset($onedrive_state_token->data->error)) {
+                        ?>
+                            <div class="error-txt">
+                                <?php
+                                printf(DUP_PRO_U::esc_html__('Error: %s'), $onedrive_state_token->data->error_description);
+                                // echo '<br/>';
+                                // $obtained = $onedrive_state_token->obtained;
+                                // printf(DUP_PRO_U::esc_html__('Last authorized date time : %s'), date('d-M-Y H:i:s a', $obtained));
+                                echo '<br/><strong>';
+                                DUP_PRO_U::esc_html_e('Please click on the "Cancel Authorization" button and reauthorize the OneDrive storage');
+                                echo '</strong>';
+                                ?>
+                            </div>
+                        <?php                                
+                        }
+                        ?>
+    
                         <br/>
 
                         <button type="button" class="button button-large" onclick='DupPro.Storage.OneDrive.CancelAuthorization();'>
@@ -2017,7 +2092,7 @@ $alert17->initAlert();
 
         //Init
         DupPro.Storage.LocalFilterToggle();
-        jQuery('#name').focus();
+        jQuery('#name').focus().select();
 
     });
 </script>

@@ -14,7 +14,7 @@ if (DupProSnapLibUtil::wp_is_ini_value_changeable('display_errors')) {
     @ini_set('display_errors', 1);
 }
 error_reporting(E_ALL);
-set_error_handler("terminate_missing_variables");
+set_error_handler("terminate_missing_variables", E_ERROR);
 
 require_once(dirname(__FILE__) . '/class.daws.constants.php');
 

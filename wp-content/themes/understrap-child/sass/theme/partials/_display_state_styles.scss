@@ -153,13 +153,13 @@ display: none;
 }
 
 @include mq('tablet-wide') {
-   .one-up-carousel{
-       display: none;
-   }
+//    .one-up-carousel{
+//        display: none;
+//    }
    
-    .three-up-carousel{
-display: flex;
-   }
+//     .three-up-carousel{
+// display: flex;
+//    }
 
    .objectives-diagram__vertical--delta {
 display: none;
@@ -207,12 +207,12 @@ display: none;
     .diagram-content__end-to-end--vertical {
         display: none;
     }
-    .three-up-carousel{
-        display: none;
-    }
-    .one-up-carousel{
-        display: block;
-    }
+    // .three-up-carousel{
+    //     display: none;
+    // }
+    // .one-up-carousel{
+    //     display: block;
+    // }
 
 }
 

@@ -27,7 +27,7 @@
   align-items: center;
   max-width: 100%;
   z-index: 2;
-  background: rgba($color: #111111, $alpha: .8);
+  background: rgba($color: #ffffff, $alpha: .46);
   padding: 12% 4% 4% 4%;
 @include mq('phone-wide', $type: max){
   height: 70em;
@@ -99,8 +99,8 @@ background: none;
 .marketing-splash__container {
   >.copy__container{
     color: $black;
-    max-width: 100%;
-    width: 100%;
+    max-width: 83%;
+    width: 83%;
     @include mq('tablet'){
       width: 100%;
       max-width: 100%;

@@ -183,7 +183,7 @@
 
 				<div class="diagram__header diagram__header--reasons">
 					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">Marketing Must Transcend Promotions</p>  -->
-					<p class="diagram__header-copy">today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses need, or will need, marketing functions capable of managing value throughout the expanding customer experience.</p>
+					<p class="diagram__header-copy">Today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses will need marketing functions capable of managing value throughout the customer experience.</p>
 				</div>
 
 

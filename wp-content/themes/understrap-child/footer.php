@@ -34,8 +34,8 @@ $container = get_theme_mod('understrap_container_type');
 						</div>
 					</div>
 					<div class="footer__contact--tag">Kansas City (Lenexa, KS)</div>
-					<a class="footer__contact--phone footer__text-link" href="tel:913-207-6966">913-207-6966</a>
-					<a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top" class="button footer__contact--button footer__text-link">Drop Me A Note</a>
+					<a class="footer__contact--phone footer__text-link" href="tel:913.586.8042">913.586.8042</a>
+					<a href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinire" target="_top" class="button footer__contact--button footer__text-link">Drop Me A Note</a>
 				</div>
 			</div>
 
@@ -76,7 +76,7 @@ $container = get_theme_mod('understrap_container_type');
 						<div class="footer__subhead">write</div>
 						<!-- //! email -->
 						<div class="footer-contact-icon">
-							<a href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top" class="button footer__text-link">
+							<a href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinire" target="_top" class="button footer__text-link">
 								<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg icon-email" alt="...">
 							</a>
 						</div>
@@ -116,7 +116,7 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="footer-contact-icon-container">
 					<div class="footer__subhead">speak</div>
 					<div class="footer-contact-icon">
-						<a href="tel:913-207-6966" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/mobile.svg" class="style-svg icon-mobile" alt="..."></a>
+						<a href="tel:913.586.8042" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/mobile.svg" class="style-svg icon-mobile" alt="..."></a>
 					</div>
 					<!-- <div class="footer-contact-icon">
 						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/skype.svg" class="style-svg icon-quora" alt="...">

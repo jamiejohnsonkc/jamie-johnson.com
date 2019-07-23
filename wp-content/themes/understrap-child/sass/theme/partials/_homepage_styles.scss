@@ -1,9 +1,9 @@
 .splash__label_divider {
-  color: $accent;
+  color: $secondary;
 }
 
 .splash__label--emph {
-  color: $accent;
+  color: $secondary;
 }
 
 .homepage__jump {
@@ -3941,7 +3941,7 @@ path.st0 {
     }
 
     @include mq('desktop') {
-      @include vr($margin-top: 1.5);
+      @include vr($margin-top: 1);
     }
   }
 
@@ -4208,7 +4208,9 @@ path.st0 {
               flex-direction: row;
               flex-wrap: wrap;
               width: 64%;
-
+@include mq('tablet-wide'){
+  justify-content: center;
+}
           }
 
           .headline-wrapper {
@@ -4797,7 +4799,7 @@ path.st0 {
   //   background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(250,250,250,0.76) 35%, rgba(250,250,250,0.76) 61%, rgba(250,250,250,0) 100%);
   //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#fafafa', GradientType=0 );
   // @include light-shadow();
-  border: .5px solid $gray-400;
+  // border: .5px solid $gray-400;
 
   @include mq('tablet') {
     width: 50%;
@@ -4807,7 +4809,7 @@ path.st0 {
   @include mq('tablet-wide') {
     width: 99%;
     max-width: 99%;
-    @include light-shadow();
+    @include minimal-shadow();
   }
 
   @include mq('desktop') {
@@ -4824,8 +4826,8 @@ path.st0 {
   }
 
   @include mq('desktop-hd') {
-    width: 83%;
-    max-width: 83%;
+    width: 90%;
+    max-width: 90%;
 
   }
 
@@ -4867,7 +4869,7 @@ path.st0 {
     color: $gray-700;
 
     @include mq('desktop') {
-      max-width: 64%;
+      max-width: 83%;
     }
   }
 
@@ -5003,9 +5005,11 @@ path.st0 {
   // }
 
   .svg-rocket,
-  .svg-integrative,
   .svg-chat {
     filter: drop-shadow(5px 3px 5px $gray-600);
+  }
+  .svg-integrative{
+    filter: drop-shadow(5px 3px 5px $gray-900);
   }
 }
 
@@ -5071,10 +5075,17 @@ path.st0 {
 
 
 .offering {
-  .container__number {
+  .container__number { 
     @include vr($font-size: 2, $line-height: 2, $margin-bottom: 3);
     font-family: $font-family-serif;
-    color: $secondary;
+    color: $gray-800;
+    background: $primary;
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include mq('tablet-wide') {
       flex: 0 1 auto;
@@ -5084,10 +5095,10 @@ path.st0 {
     }
 
     @include mq('desktop') {
-      @include vr($margin: 3 auto, $padding: 1.5);
+      @include vr($margin: 3 auto 4 auto, $padding: 1.5);
       // background: $gray-300;
-      color: $gray-300;
-      border: $gray-300 solid 1px;
+      // color: $gray-300;
+      // border: $gray-300 solid 1px;
     }
   }
 }

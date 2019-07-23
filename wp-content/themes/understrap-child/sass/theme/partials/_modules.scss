@@ -232,7 +232,7 @@ button {
 .link {
   &__text {
     @include link__text();
-    color: $accent;
+    color: $secondary;
     font-weight: 400;
     // text-transform: uppercase;
     font-variant-caps: all-small-caps;

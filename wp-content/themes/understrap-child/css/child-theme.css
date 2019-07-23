@@ -23470,7 +23470,7 @@ button {
   font-size: 2.25rem;
   line-height: 3.00001rem;
   line-height: 2.25002rem;
-  color: #23C9FF;
+  color: #9dd1f1;
   font-weight: 400;
   font-variant-caps: all-small-caps;
   letter-spacing: .05em;
@@ -24220,10 +24220,10 @@ button {
   overflow: hidden; }
 
 .splash__label_divider {
-  color: #23C9FF; }
+  color: #9dd1f1; }
 
 .splash__label--emph {
-  color: #23C9FF; }
+  color: #9dd1f1; }
 
 .homepage__jump {
   -ms-flex-item-align: center;
@@ -28258,7 +28258,7 @@ path.st0 {
         display: flex; } }
     @media only screen and (min-width: 78em) {
       .offering .subsubhead {
-        margin-top: 2.25002rem; } }
+        margin-top: 1.50001rem; } }
   .offering .pagination {
     margin-top: 6.00004rem;
     margin-bottom: 4.50003rem;
@@ -28677,6 +28677,11 @@ path.st0 {
     @media only screen and (min-width: 64em) and (min-width: 160rem) {
       .belief .flex-item__a .pagination {
         margin-bottom: 4.50003rem; } }
+    @media only screen and (min-width: 64em) and (min-width: 64em) {
+      .belief .flex-item__a .pagination {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
     @media only screen and (min-width: 64em) {
         .belief .flex-item__a .headline-wrapper {
           display: -webkit-box;
@@ -29194,8 +29199,7 @@ path.st0 {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 30em;
-  padding: 2.25002rem 0;
-  border: 0.5px solid #ced4da; }
+  padding: 2.25002rem 0; }
   @media (min-width: 48em) {
     .offering__content-item--container {
       padding: 2.33335rem 0; } }
@@ -29216,8 +29220,8 @@ path.st0 {
     .offering__content-item--container {
       width: 99%;
       max-width: 99%;
-      -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
-      box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5); } }
+      -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.2);
+      box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.2); } }
   @media only screen and (min-width: 78em) {
     .offering__content-item--container {
       max-width: 90%;
@@ -29234,8 +29238,8 @@ path.st0 {
       max-width: 90%; } }
   @media only screen and (min-width: 118em) {
     .offering__content-item--container {
-      width: 83%;
-      max-width: 83%; } }
+      width: 90%;
+      max-width: 90%; } }
   .offering__content-item--container .headline {
     font-size: 11.39063rem;
     line-height: 12.00001rem;
@@ -29359,7 +29363,7 @@ path.st0 {
         margin-bottom: 0.75001rem; } }
     @media only screen and (min-width: 78em) {
       .offering__content-item--container .copy {
-        max-width: 64%; } }
+        max-width: 83%; } }
   .offering__content-item--container .link__text {
     min-height: 2em;
     -webkit-box-flex: 1;
@@ -29473,10 +29477,13 @@ path.st0 {
   fill: #ffffff; }
 
 .offering__image-container .svg-rocket,
-.offering__image-container .svg-integrative,
 .offering__image-container .svg-chat {
   -webkit-filter: drop-shadow(5px 3px 5px #6c757d);
           filter: drop-shadow(5px 3px 5px #6c757d); }
+
+.offering__image-container .svg-integrative {
+  -webkit-filter: drop-shadow(5px 3px 5px #212529);
+          filter: drop-shadow(5px 3px 5px #212529); }
 
 .offering__link--jump {
   margin-top: 4.50003rem;
@@ -29542,7 +29549,20 @@ path.st0 {
   line-height: 3.00002rem;
   margin-bottom: 4.50003rem;
   font-family: adobe-garamond-pro, Georgia, Palatino, "Times New Roman", Courier;
-  color: #9dd1f1; }
+  color: #343a40;
+  background: #daeaf7;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media (min-width: 48em) {
     .offering .container__number {
       font-size: 2.25rem;
@@ -29581,10 +29601,8 @@ path.st0 {
       margin-bottom: 1.50001rem; } }
   @media only screen and (min-width: 78em) {
     .offering .container__number {
-      margin: 4.50003rem auto;
-      padding: 2.25002rem;
-      color: #dee2e6;
-      border: #dee2e6 solid 1px; } }
+      margin: 4.50003rem auto 6.00004rem;
+      padding: 2.25002rem; } }
 
 @media only screen and (min-height: 500px) {
   .background-splash__article-wrapper {

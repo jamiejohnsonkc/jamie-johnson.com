@@ -35,8 +35,8 @@
 
  			<div class="offering__content-item offering__content-item--grow" id="grow">
 
- 				<div class="offering__content-item--container">
- 					<div class="container__number">#1</div>
+ 				<div class="offering__content-item--container"> 
+ 					<div class="container__number">1</div> 
  					<h3 class="subhead__header">Generate Outcomes</h3>
  					<h4 class="subsubhead">Strategy Development & Implementation</h4>
  					<div class="image__container offering__image-container">
@@ -56,7 +56,7 @@
  			<div class="offering__content-item offering__content-item--engage" id="engage">
 
  				<div class="offering__content-item--container offering__content--light">
- 					<div class="container__number">#2</div>
+ 					<div class="container__number">2</div>
  					<div class="subhead__header">Engage Customers</div>
  					<h4 class="subsubhead">Program Design & Execution</h4>
  					<div class="image__container offering__image-container">
@@ -82,7 +82,7 @@
 
 
  				<div class="offering__content-item--container offering__content--light">
- 					<div class="container__number">#3</div>
+ 					<div class="container__number">3</div>
  					<div class="subhead__header">Optimize Marketing Performance</div>
  					<h4 class="subsubhead">Management, Organization & Control</h4>
  					<div class="image__container offering__image-container">
@@ -108,7 +108,7 @@
 
  				<div class="flex-container">
  					<div class="flex-item flex-item__a">
- 						<h1 class="pagination">i believe marketing should be</h1>
+ 						<h1 class="pagination">marketing should be</h1>
  						<div class="headline__wrapper"><h2 class="headline">purposeful</h2>
  						<h2 class="headline">performant</h2>
 						 <h2 class="headline">proportional</h2>

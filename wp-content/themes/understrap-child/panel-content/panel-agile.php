@@ -12,13 +12,13 @@ if (!defined('ABSPATH')) {
 
 <article class="article vision">
 
-	<img src="/wp-content/uploads/2019/04/arrow-up.svg" class="comp-arrow style-svg" alt="...">
+	<img src="/wp-content/uploads/2019/04/arrow-up.svg" class="comp-arrow style-svg" alt="arrow up icon">
 
 	<div class="container-wrapper">
 
 		<div class="flex-container">
 
-			<h1 class="pagination">new paradigms</h1>
+			<div class="pagination">new paradigms</div>
 			<h2 class="title">Today business need more from marketing than just marketing</h2>
 
 			<div class="flex-grid__a">

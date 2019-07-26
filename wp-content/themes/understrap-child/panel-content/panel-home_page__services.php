@@ -8,13 +8,13 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
- 
+ <section>
 <article class="article__wrapper services-list__article-wrapper" id="services">
 
 	<div class="services-list__background--container">
-		<img src="/wp-content/uploads/2019/01/brains.jpg" class="services-list__background--image" alt="...">
+		<img src="/wp-content/uploads/2019/01/brains.jpg" class="services-list__background--image" alt="image of store selling brains for 25 cents">
 	</div>
-	<!-- <h2 class="title title--white headline__header--intro">I provide comprehensive marketing capabilities and expertise focused on business services-list and performance.</h2> -->
+
 
 
 
@@ -82,28 +82,6 @@ if (!defined('ABSPATH')) {
 					</div>
 				</div>
 			</div>
-			<!-- <div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">STRATEGY DEVELOMPENT & IMPLEMENTATION</h3>
-					</div>
-					<div class="services-list-card__back">
-					<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div> -->
-			<!-- <div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">BRANDING &amp; MESSAGING</h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Articulate your </div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div> -->
 			<div class="services-list__content-label">strategic management</div>
 			<div class="content__item services-list__content-item">
 				<div class="services-list-card-inner">
@@ -151,18 +129,6 @@ if (!defined('ABSPATH')) {
 				</div>
 			</div>
 			<div class="services-list__content-label">marketing operations</div>
-			<!-- <div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header"></h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div> -->
-
 			<div class="content__item services-list__content-item">
 				<div class="services-list-card-inner">
 					<div class="services-list-card__front">
@@ -196,50 +162,7 @@ if (!defined('ABSPATH')) {
 					</div>
 				</div>
 			</div>
-			<!-- <div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">MARKETING I.T.</h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div> -->
-			<!-- <div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">transformation & modernization</h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">peformance optimization</h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="content__item services-list__content-item">
-				<div class="services-list-card-inner">
-					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">capabilities planning &amp; development</h3>
-					</div>
-					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">Design/build, updates or overhauls. Options for any budget.</div>
-						<a href="/services" class="link__text services-card-back--link">learn more</a>
-					</div>
-				</div>
-			</div> -->
+	
 		</div>
 		<a href="/services#a-la-carte" class="link link__text--positioned services-list__text-link">See A Complete List of My Capabilities</a>
 

@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="a-la-carte" id="alacarte">
     <article>
-        <h1 class="pagination"></h1>
+        <div class="pagination"></div>
         <div class="flex-container">
             <div class="flex-item__a">
                 <h2 class="headline">A LA CARTE Services</h2>

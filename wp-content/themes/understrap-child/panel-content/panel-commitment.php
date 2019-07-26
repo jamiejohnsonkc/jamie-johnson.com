@@ -12,10 +12,10 @@ if (!defined('ABSPATH')) {
 <section class="commitment" id="commitment">
 	<article>
 	<div class="background__image--cover">
-					<img src="/wp-content/uploads/2019/06/hero-23.jpg" class="img-relax" alt="...">
+					<img src="/wp-content/uploads/2019/06/hero-23.jpg" class="img-relax" alt="cafe relax image">
 				</div>
 		<div class="container">
-		<h1 class="pagination">my commitment to you</h1>
+		<div class="pagination">my commitment to you</div>
 			<h2 class="headline">When you hire a professional service you should receive professional service</h2>
 			<div class="content__container commitment__content_container">
 				<div class="commitment__flex-item">
@@ -55,11 +55,7 @@ if (!defined('ABSPATH')) {
 					<p class="commitment__body_copy"><span class="leader">I try to stick to plain English. </span> I do my best to keep all the technical and mystical marketing mumbo-jumbo to a minimum.</p>
 				</div>
 			</div>
-			<!-- <div class="commitment__image-container"> -->
-				<!-- <div class="background__image--cover">
-					<img src="/wp-content/uploads/2019/06/hero-23.jpg" class="img-relax" alt="...">
-				</div> -->
-			<!-- </div> -->
+		
 		</div>
 
 		<a href="#services__cta" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>

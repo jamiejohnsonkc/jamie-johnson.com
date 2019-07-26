@@ -15,7 +15,7 @@ exit; // Exit if accessed directly.
 	<div class="container background about-me__container_personal">
 		<div class="personal__about-me_content personal__content-container-wrapper">
 <div class="personal__content-container">
-		<h1 class="pagination pagination--personal personal__pagination">A Bit About Me</h1>
+		<div class="pagination pagination--personal personal__pagination">A Bit About Me</div>
 		<h2 class="headline headline__header personal__headline">Proud Dad, <br class="br"><br>Lucky Husband</h2>
 		<!-- <h3 class="deck deck__header personal__deck">Sed sunt cillum ut voluptate in incididunt ea ut.</h3> -->
 		<div class="copy__container personal__copy-container">
@@ -28,7 +28,7 @@ exit; // Exit if accessed directly.
 		</div>
 		<!-- <a class="learn" href="http://jamiejohnsonmev2.test/modus-operandi" title="learn more link">Cillum pariatur ad in ullamco.</a>
 		<a class="advance-link" href="http://jamiejohnsonmev2.test/modus-operandi#i-modance-business-objectives" title="go to next">
-			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="style-svg"/>
+			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="style-svg"/>
 		</a> -->
 		 
 		

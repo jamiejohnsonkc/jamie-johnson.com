@@ -77,18 +77,18 @@ $container = get_theme_mod('understrap_container_type');
 						<!-- //! email -->
 						<div class="footer-contact-icon">
 							<a href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinire" target="_top" class="button footer__text-link">
-								<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg icon-email" alt="...">
+								<img src="/wp-content/uploads/2019/05/contact-07.svg" class="style-svg icon-email" alt="email icon">
 							</a>
 						</div>
 						<!-- //! what's app -->
 
 						<!-- <div class="footer-contact-icon">
-						<a><img src="/wp-content/uploads/2019/05/contact-01.svg" class="style-svg icon-uncertain" alt="..."></a>
+						<a><img src="/wp-content/uploads/2019/05/contact-01.svg" class="style-svg icon-uncertain" alt="what's app icon"></a>
 					</div> -->
 					<!-- //! Messenger -->
 					<div class="footer-contact-icon">
 						<a href="https://www.facebook.com/jamie.johnson.37051579" class="button footer__text-link">
-							<img src="/wp-content/uploads/2019/05/contact-02.svg" class="style-svg icon-messenger" alt="...">
+							<img src="/wp-content/uploads/2019/05/contact-02.svg" class="style-svg icon-messenger" alt="facebook messenger icon">
 						</a>
 					</div>
 
@@ -99,35 +99,26 @@ $container = get_theme_mod('understrap_container_type');
 				<div class="footer-contact-icon-container">
 					<div class="footer__subhead">follow</div>
 					<div class="footer-contact-icon">
-						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-04.svg" class="style-svg icon-reddit" alt="..."></a>
+						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-04.svg" class="style-svg icon-reddit" alt="reddit icon"></a>
 						</div>
 					<div class="footer-contact-icon">
-						<a href="https://www.linkedin.com/in/jamiejohnsonkc/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/linkedin.svg" class="style-svg icon-linkedin" alt="..."></a>
+						<a href="https://www.linkedin.com/in/jamiejohnsonkc/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/linkedin.svg" class="style-svg icon-linkedin" alt="linkedin icon"></a>
 						</div>
 
 						<div class="footer-contact-icon">
-						<a href="https://www.quora.com/profile/Jamie-Johnson-16" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-03.svg" class="style-svg icon-quora" alt="...">
+						<a href="https://www.quora.com/profile/Jamie-Johnson-16" class="button footer__text-link"><img src="/wp-content/uploads/2019/05/contact-03.svg" class="style-svg icon-quora" alt="quora icon">
 						</a>
 						</div>
 						<div class="footer-contact-icon">
-						<a href="https://github.com/jamiejohnsonkc" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/github_glyph.svg" class="style-svg icon-github--glyph" alt="..."></a>
+						<a href="https://github.com/jamiejohnsonkc" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/github_glyph.svg" class="style-svg icon-github--glyph" alt="github icon"></a>
 						</div>
 					</div>
 				<div class="footer-contact-icon-container">
 					<div class="footer__subhead">speak</div>
 					<div class="footer-contact-icon">
-						<a href="tel:913.586.8042" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/mobile.svg" class="style-svg icon-mobile" alt="..."></a>
+						<a href="tel:913.586.8042" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/mobile.svg" class="style-svg icon-mobile" alt="mobile phone icon"></a>
 					</div>
-					<!-- <div class="footer-contact-icon">
-						<a href="/" class="button footer__text-link"><img src="/wp-content/uploads/2019/07/skype.svg" class="style-svg icon-quora" alt="...">
-						</a>
-						</div> -->
 				</div>
-				<!-- <ul class="list footer__list">
-				<li class="list-item list-item__item footer__list-item footer__nav">services</li>
-				<li class="list-item list-item__item footer__list-item footer__nav">background</li>
-				<li class="list-item list-item__item footer__list-item footer__nav">why me</li>
-			</ul> -->
 			</div>
 		</div>
 		<div class="col-12 footer__site-info">
@@ -145,7 +136,7 @@ $container = get_theme_mod('understrap_container_type');
 </div>
 
 
-</div> <!-- #page we need this extra closing tag here -->
+</div> 
 
 
 <?php wp_footer(); ?>

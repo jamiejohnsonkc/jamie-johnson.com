@@ -24219,6 +24219,9 @@ button {
   z-index: 0;
   overflow: hidden; }
 
+.home__splash-header_container {
+  visibility: none; }
+
 .splash__label_divider {
   color: #9dd1f1; }
 

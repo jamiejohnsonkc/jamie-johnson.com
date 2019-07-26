@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 		
 		
-		<h1 class="pagination">I'm Available</h1>
+		<div class="pagination">I'm Available</div>
 		
 		<h2 class="page__subhead">Hire Me</h2>
 		

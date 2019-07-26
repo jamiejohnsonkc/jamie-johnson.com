@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="commitment">
 	<article>
-		<h1 class="pagination">working with me</h1>
+		<div class="pagination">working with me</div>
 <div class="container">
 	<h2 class="headline">What it's like to work with me</h2>
 

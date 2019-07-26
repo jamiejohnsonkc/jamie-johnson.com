@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 <article class="article article__wrapper brands__article-wrapper">
 	<div class="article article__container article__container--brands brands__article-container">
 		<div class="header header__container header__container--brands brands__section-header">
-			<h1 class="pagination background__pagination background__pagination--brands brands__pagination">brand history</h1>
+			<div class="pagination background__pagination background__pagination--brands brands__pagination">brand history</div>
 		<h2 class="headline headline__header brands__headline">Exceptional Breadth</h2>
 		<h3 class="deck deck__header deck__header--brands brands__deck-header">I've worked with global leaders, household names and non-starters.</h3>
 		<!-- <p class="copy copy__container copy__header brands__copy-header">B2B</p> -->

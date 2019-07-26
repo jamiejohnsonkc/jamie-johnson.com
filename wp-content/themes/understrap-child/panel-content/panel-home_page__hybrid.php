@@ -14,17 +14,17 @@ exit; // Exit if accessed directly.
 <div class="graphic__container graphic__container--home-hybrid  hybrid__background-graphic-container">
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">
-	<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="bar chart indicating growth graphic"
 		class="hybrid-icon style-svg" />
 </div>							
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">						
-	<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="compass icon"
 		class="hybrid-icon style-svg" />
 </div>
 
 <div class="graphic__element graphic__element--home-hybrid hybrid__background-graphic-element">
-	<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
+	<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="magnet icon"
 		class="hybrid-icon style-svg" />
 </div>
 
@@ -32,7 +32,7 @@ exit; // Exit if accessed directly.
 </div>
 
 
-	<h1 class="pagination pagination--overlay hybrid__pagination">what makes me different</h1>
+	<div class="pagination pagination--overlay hybrid__pagination">what makes me different</div>
 
 	<div class="header__container header__container--home-hybrid hybrid__header-container">
 		<h2 class="title headline__header--intro hybrid__headline-header">I'm what you'd call a 'hybrid' marketer</h2>
@@ -41,17 +41,17 @@ exit; // Exit if accessed directly.
 		<div class="graphic__container graphic__container--home-hybrid  hybrid__graphic-container">
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">
-				<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-arrows.svg" alt="arrow pointing up graphic"
 					class="hybrid-icon style-svg" />
 			</div>							
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">						
-				<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-compass.svg" alt="compass icon"
 					class="hybrid-icon style-svg" />
 			</div>
 
 			<div class="graphic__element graphic__element--home-hybrid hybrid__graphic-element">
-				<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="..."
+				<img src="/wp-content/uploads/2019/05/hybrid-magnet.svg" alt="magnet icon"
 					class="hybrid-icon style-svg" />
 			</div>
 

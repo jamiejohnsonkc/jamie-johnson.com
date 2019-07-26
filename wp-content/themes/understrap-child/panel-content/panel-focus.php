@@ -16,9 +16,9 @@ exit; // Exit if accessed directly.
 
 <div class="flex-container">
 	<div class="flex-item__a">
-<h1 class="title">meet<br> a service<br> actually focused <br>on service</h1>
+<div class="title">meet<br> a service<br> actually focused <br>on service</div>
 <div class="background__image--cover">
-	<img src="/wp-content/uploads/2019/06/hero-22.jpg" class="img-passenger" alt="...">
+	<img src="/wp-content/uploads/2019/06/hero-22.jpg" class="img-passenger" alt="image of business man on airplane">
 </div>
 	</div>
 	<div class="flex-item__b">
@@ -33,7 +33,7 @@ exit; // Exit if accessed directly.
 
 
 
-		<!-- <a href="/contact"class="link link__text focus__text-link">Seen enough? "Yep. He's amazing. I'm gonna click this and hire him."</a> -->
+		<!-- <a href="/contact" class="link link__text focus__text-link">Seen enough? "Yep. He's amazing. I'm gonna click this and hire him."</a> -->
 		<!-- <a href="#claim" class="button ui-button__jump overview__link--jump" title="read more">?php get_template_part('buttons/button', 'jump'); ?></a> -->
 
 	<!-- <div class="link link__text link--hybrid">> Quis ex laborum non id</div> -->

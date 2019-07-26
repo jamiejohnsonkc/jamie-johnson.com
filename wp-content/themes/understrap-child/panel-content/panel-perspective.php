@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 	<article class="article perspective">
 		<div class="container-wrapper">
 			<div class="flex-container">
-				<h1 class="pagination">my perspective</h1>
+				<div class="pagination">my perspective</div>
 				<h2 class="title">it's time for marketing to level up</h2>
 				
 				<div class="flex-item flex-item__a">

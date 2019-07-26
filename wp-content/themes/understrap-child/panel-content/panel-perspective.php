@@ -1,6 +1,6 @@
 <?php
 /**
- * container Splash Intro.
+ * container Splash Intro.`
  *
  * @package understrap
  */
@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 	<article class="article perspective">
 		<div class="container-wrapper">
 			<div class="flex-container">
-				<h1 class="pagination">my perspective</h1>
+				<div class="pagination">my perspective</div>
 				<h2 class="title">it's time for marketing to level up</h2>
 				
 				<div class="flex-item flex-item__a">
@@ -32,13 +32,13 @@ if (!defined('ABSPATH')) {
 				
 				<div class="flex-item flex-item__b">
 					<div class="header__container">
-						<h3 class="headline">2. it's for marketing to evolve</h3> 
+						<h3 class="headline">2. It's Time For Marketing To Evolve</h3> 
 						<div class="expand-button__comtainer"><a href="#perspective-evolve" class="ui-button ui-button__expand expand-button--perspective" id="expand-perspective" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a></div>
 					</div>
 					
 					<div class="container__accordion container__accordion--evolve" id="perspective-evolve">
 					<p class="copy">Let's be honest. "Marketing" is a banal term like "strategy". To some it means sales, to others it's advertising. For many it might as well be a four letter word.</p>
-					<p class="copy">But that's the "old" marketing. Today marketing has more potential than ever. It's can be more personable, measurable, and therefore, more valuable to business than it ever has before.</p>
+					<p class="copy">But that's the "old" marketing. Today marketing has more potential than ever. It can be more personable, measurable and more valuable to business than it ever has before.</p>
 					</div>
 				</div>
 				
@@ -55,7 +55,7 @@ if (!defined('ABSPATH')) {
 					
 					<div class="container__accordion container__accordion--evolve" id="time-evolve">
 					<p class="copy">Adapting to the new normal might be easy for some and complicated for others. Interests, savvy, resources and capabilities vary. Every business is different.</p>
-					<p class="copy">I'm here to help you make sense of it all,  understand your options and engage what's right for your business both for today and tomorrow. </p>
+					<p class="copy">I'm here to help you make sense of it all, understand your options and engage what's right for your business both for today and tomorrow. </p>
 					</div>
 				</div>
 			</h3>

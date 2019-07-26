@@ -16,7 +16,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143791287-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143791287-1');
+</script>	
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,9 +33,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="stylesheet" href="https://use.typekit.net/hny8rtu.css">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143791287-1"></script>
-
 	<?php wp_head(); ?>
 </head>
 
@@ -40,14 +46,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-lg navbar-dark">
 
-			<div class="container" >
+			<div class="container">
 			
 				<a href="/" class="custom-logo-link" rel="home" itemprop="url">	<img src="/wp-content/uploads/2018/12/jjbug.svg" alt="logo" class="style-svg site-logo"/></a>
 
 
 				<div class="navbar-brand mb-0">
-					<a class="navbar__mail-link" href="mailto:jamie@jamie-johnson.me?Subject=Marketing%20Extraordinire" target="_top">jamie@jamie-johnson.me</a>
-					<a class="navbar__call-link" href="tel:+1-913-207-6966">913 207 6966</a>
+					<a class="navbar__mail-link" href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinire" target="_top">jamie@jamie-johnson.com</a>
+					<a class="navbar__call-link" href="tel:+1-913.586.8042">913.586.8042</a>
 				</div>
 
 				
@@ -69,9 +75,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-			<?php if ( 'container' == $container ) : ?>
+		
 			</div><!-- .container -->
-			<?php endif; ?>
+		
 
 		</nav><!-- .site-navigation -->
 

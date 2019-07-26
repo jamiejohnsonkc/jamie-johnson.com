@@ -13,11 +13,11 @@
 			<!-- CONTAINER -->
 
 			<div class="container business-value justification__container justification__container_objectives" id="objectives">
-				<h1 class="pagination pagination--reasons">my beliefs</h1>
+				<div class="pagination pagination--reasons">my beliefs</div>
 				<div class="justification--flex-container">
 
 					<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#1 Outcomes Not Output</h1>	
+					<div class="headline">#1 Outcomes Not Output</div>	
 				
 						<p class="deck deck__header deck__header--reasons deck__header--objectives">Everything marketing is and does should advance business objectives. Otherwise it's not marketing. It's just spending.</p>
 					</div>
@@ -110,10 +110,10 @@
 			<!-- CONTAINER -->
 
 			<div class="container business-value justification__container justification__container_grow" id="grow">
-				<!-- <h1 class="pagination pagination--reasons">I advocate value & substance</h1> -->
+				<!-- <div class="pagination pagination--reasons">I advocate value & substance</div> -->
 				
 				<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#2<br> the customer, the customer, the customer</h1>	
+					<div class="headline">#2<br> the customer, the customer, the customer</div>	
 
 
 				<div class="diagram__header diagram__header--reasons">
@@ -121,7 +121,7 @@
 					<p class="diagram__header-copy">They decide enough to warrant their time, interest and investment. And they have more influence on your success than ever before.</p><p class="diagram__header-copy">Ignore them at your peril. Please them and you will thrive.</p>
 				</div>
 				<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">
-					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="..." class="style-svg diagram-content__superior-value_svg" />
+					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="diagram explaining attributes of modern definition of customer value" class="style-svg diagram-content__superior-value_svg" />
 				</div>
 				<!-- <a class="button moreless-button moreless-button__value">Read more</a> -->
 				<div class="read-more__container read-more__value">
@@ -140,7 +140,7 @@
 
 			<div class="container business-value justification__container justification__container_modernize" id="modernize">
 			<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#3 Superior Competitive Value Wins</h1>	
+					<div class="headline">#3 Superior Competitive Value Wins</div>	
 
 
 				<div class="diagram__header diagram__header--reasons">
@@ -175,15 +175,15 @@
 			<!-- CONTAINER -->
 
 			<div class="container business-value justification__container justification__container_optimize" id="optimize">
-				<h1 class="pagination pagination--reasons">integration & optimization</h1>
+				<div class="pagination pagination--reasons">integration & optimization</div>
 				<div class="justification--flex-container">
 				<div class="header__wrapper header__wrapper--reasons">
-					<h1 class="headline">#4 Marketing Must Transcend Promotions</h1>	
+					<div class="headline">#4 Marketing Must Transcend Promotions</div>	
 
 
 				<div class="diagram__header diagram__header--reasons">
 					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">Marketing Must Transcend Promotions</p>  -->
-					<p class="diagram__header-copy">today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses need, or will need, marketing functions capable of managing value throughout the expanding customer experience.</p>
+					<p class="diagram__header-copy">Today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses will need marketing functions capable of managing value throughout the customer experience.</p>
 				</div>
 
 
@@ -192,16 +192,16 @@
 					<div class="diagram__container diagram__content_container optimize-diagram__container">
 						<div class="diagram justification__diagram diagram__end-to-end">
 							<div class="diagram-content diagram__end-to-end--horizontal">
-								<img src="/wp-content/uploads/2019/03/end_horz.svg" alt="..." class="style-svg end-to-end--horz" />
+								<img src="/wp-content/uploads/2019/03/end_horz.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--horz"/>
 							</div>
 							<div class="diagram-content diagram__end-to-end--vertical">
 								<div class="progression__end-to-end--vertical">
-									<img src="/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="..." class="style-svg end-to-end--vert" />
+									<img src="/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--vert"/>
 								</div>
 								<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div>
 							</div>
 						</div>
-						<!-- <a class="button moreless-button moreless-button__optimize">Read more</a> -->
+				
 						<div class="read-more__container read-more__optimize">
 							<div class="justification__conclusion">
 								<p class="body__text_lg">I can help you decide how and where to invest your marketing to enable optimal returns.</p>
@@ -210,7 +210,7 @@
 					</div>
 				</div>
 				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn" />
+					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg" id="link__advance_chev-dwn" />
 				</a>
 			</div>
 

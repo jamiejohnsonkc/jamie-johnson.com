@@ -13,8 +13,8 @@ if (!defined('ABSPATH')) {
 	<article class="article__wrapper article__wrapper--fluid article__wrapper--black mo__article-wrapper" id="mymo">
 		<div class="container container--mymo text--white mo__container">
 
-			<h1 class="header pagination pagination--homepage  pagination--strengths-intro pagination--black mo__pagination">
-				My M.O.</h1>
+			<div class="header pagination pagination--homepage  pagination--strengths-intro pagination--black mo__pagination">
+				My M.O.</div>
 	<div class="mo__header">
 			<div class="mo__psst">&mdash;pssst!</div>
 			<h2 class="headline headline__header headline--intro">Don't tell anyone, but I've always loathed khakis</h2>
@@ -25,15 +25,13 @@ if (!defined('ABSPATH')) {
 				
 </div>
 
-			<!-- <h4 class="list-head list-head__block"></h4> -->
+	
 			<div class="mo__diagram-container">
 			<p class="diagram__head mo__diagram-head">I pursue three standing objectives:</p>
 				<div class="mo__diagram-box">
-					<!-- <div class="mo__diagram-big-digit"> 
-						<div class="circle-digit__icon circle-digit__01"><img src="/wp-content/uploads/2019/03/circledigit-_1.svg" class="style-svg" alt="..."></div>
-					</div> -->
+				
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
-						<img src="/wp-content/uploads/2019/03/circledigit-_1.svg" class="mo__circle-digit style-svg" alt="..."></div>
+						<img src="/wp-content/uploads/2019/03/circledigit-_1.svg" class="mo__circle-digit style-svg" alt="number 1 graphic"></div>
 					
 					<div class="mo__diagram-subhead">The right solutions</div>
 					<a href="#mo-solutions" class="ui-button__expand ui-button__expand--primary-black mo__expand-button" id="expand-mo-solutions" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
@@ -45,7 +43,7 @@ if (!defined('ABSPATH')) {
 				</div>
 				<div class="mo__diagram-box">
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
-					<img src="/wp-content/uploads/2019/03/circledigit-_2.svg" class="mo__circle-digit style-svg" alt="..."></div>
+					<img src="/wp-content/uploads/2019/03/circledigit-_2.svg" class="mo__circle-digit style-svg" alt="number 2 graphic"></div>
 				
 					<div class="mo__diagram-subhead">The right execution</div>
 					<a href="#mo-execution" class="ui-button__expand ui-button__expand--primary-black mo__expand-button" id="expand-mo-execution" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
@@ -58,7 +56,7 @@ if (!defined('ABSPATH')) {
 				</div>
 				<div class="mo__diagram-box">
 					<div class="mo__head--flex-wrap"><div class="mo__diagram-big-digit">
-			<img src="/wp-content/uploads/2019/03/circledigit-_3.svg" class="mo__circle-digit style-svg" alt="..."></div>
+			<img src="/wp-content/uploads/2019/03/circledigit-_3.svg" class="mo__circle-digit style-svg" alt="number 3 graphic"></div>
 				
 					<div class="mo__diagram-subhead">The right scale</div>
 					<a href="#mo-scale" class="ui-button__expand ui-button__expand--primary-black mo__expand-button" id="expand-mo-scale" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>

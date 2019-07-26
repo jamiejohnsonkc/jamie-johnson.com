@@ -61,9 +61,9 @@ if (!defined('ABSPATH')) {
 				</div>
 			</div>
 			<div class="flex-item__a">
-				<h1 class="title">designed for clients by a client</h1>
+				<div class="title">designed for clients by a client</div>
 				<div class="background__image--cover">
-					<img src="/wp-content/uploads/2019/07/ben-white-292680.jpg" class="img-waiting" alt="...">
+					<img src="/wp-content/uploads/2019/07/ben-white-292680.jpg" class="img-waiting" alt="image of man sitting and waiting">
 				</div>
 			</div>
 			<div class="flex-item__c">

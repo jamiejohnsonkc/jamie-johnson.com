@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 <article class="article__wrapper categories categories__article-wrapper">
 	<div class="article__container article__container--categories categories__article-container">
 		<div class="header header__container header__container--categories categories__header">
-			<h1 class="pagination background__pagination background__pagination--categories categories__pagination">category experience</h1>
+			<div class="pagination background__pagination background__pagination--categories categories__pagination">category experience</div>
 			<h2 class="headline headline__header header__headline--categories categories__section-headline">Incomparible Breadth</h2>
 			<h3 class="deck deck__header header__deck--categories categories__section-deck">B2B, B2C, Agriculture, CPG, to name a few.</h3>
 </div>

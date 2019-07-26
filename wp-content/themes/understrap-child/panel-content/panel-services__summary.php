@@ -12,7 +12,7 @@ exit; // Exit if accessed directly.
 <!-- 	<div class="container__fluid container--flex--column"> -->
 		
 <!-- 		<div class="services__summary_head_wrapper"> -->
-		<h1 class="pagination pagination--services-summary ">End-to-End Expertise</h1>	
+		<div class="pagination pagination--services-summary ">End-to-End Expertise</div>	
 
 			<div class="container--flex container--services-summary">
 				<!-- <div class="wrapper wrapper--header-services-summary"> -->
@@ -67,7 +67,7 @@ exit; // Exit if accessed directly.
 									<a href="#service-areas" class="button ui-button__jump services-summary__link-jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 			<a class="link link__chevron services__link_advance-chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
+			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 <!-- 		</div> -->
 <!-- 		<div class="services__panel_container"> -->
 <!-- </div> -->

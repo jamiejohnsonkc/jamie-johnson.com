@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article class="article__wrapper article__wrapper--fluid bgregister justification-splash__article-wrapper">
 		<div class="container container--splash container--splash-justification  " id="evidence_splash">
 		
-<h1 class="pagination">why me</h1>
+<div class="pagination">why me</div>
 <h2 class="title title__splash">I Know How To Make The Cash Register Ring</h2>          
 <h3 class="title-sub title-sub--splash-justification">If it doesn't make you money, it's not marketing. It's just spending</h3>            
 		

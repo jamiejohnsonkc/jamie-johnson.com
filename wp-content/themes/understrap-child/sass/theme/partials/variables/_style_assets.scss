@@ -340,6 +340,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 //* =            //*box shdadows            =
 //*=============================================*/
 
+@mixin minimal-shadow {
+  -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.2);
+}
+
 @mixin light-shadow {
   -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);

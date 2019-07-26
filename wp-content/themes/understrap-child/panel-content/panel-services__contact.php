@@ -79,7 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article class="article__wrapper content__wrapper about-me">
             <div class="container container__contact">
-					<h1>Let's Chat</h1>
+					<div>Let's Chat</div>
 								<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
 		<p>Lorem ipsum ea id sit culpa ut laborum enim culpa sint in aliquip aute aliquip ullamco quis velit fugiat reprependeri</p>
 				

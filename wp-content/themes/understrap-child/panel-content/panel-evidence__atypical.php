@@ -13,7 +13,7 @@ exit; // Exit if accessed directly.
 		<div class="content-container">
 			<div class="content1">
 				<div class="atypical__intro">
-					<h1>atypical</h1>
+					<div>atypical</div>
 					<h2>Five Ways I'm Different Than Most Marketers</h2>
 					<h3>lDolore fugiat elit in.</h3>
 					<p>Dolore magna dolor commodo amet anim veniam aliquip sit eiusmod quis veniam aliqua.</p>
@@ -77,7 +77,7 @@ exit; // Exit if accessed directly.
 						</div>
 					</div>
 				</div>	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="..." class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
+			<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg" id="link__advance_chev-dwn"/></a>
 		</div>
 	</div>
 </article>

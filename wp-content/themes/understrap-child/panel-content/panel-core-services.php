@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
       <div class="headline__header growth__grid-headline--overlay">Four Ways I Can Help You Grow</div>
       <div class="growth__content-item growth__content-item--summary">
         <div class="growth__content-item-wrapper">
-          <h1 class="pagination">i can help you grow</h1>
+          <div class="pagination">i can help you grow</div>
           <h2 class="headline">Strategic Marketing Management</h2>
           <h3 class="subhead">planning &amp; consultation</h3>
           <p class="copy">Marketing management geared for the post-digital, customer-led business relationship.</p>
@@ -33,7 +33,7 @@ if (!defined('ABSPATH')) {
       </div>
       <div class="growth__content-item growth__content-item--competitive" id="competitive">
         <div class="image__container growth__image-container">
-          <img src="/wp-content/uploads/2019/06/hero-14.jpg" class="image--throttle" alt="...">
+          <img src="/wp-content/uploads/2019/06/hero-14.jpg" class="image--throttle" alt="image of nautical monitor">
         </div>
         <div class="growth__image--overlay">
         <div class="growth-overlay__flex-item">  
@@ -63,7 +63,7 @@ if (!defined('ABSPATH')) {
 
       <div class="growth__content-item growth__content-item--found" id="found">
         <div class="image__container growth__image-container">
-          <img src="/wp-content/uploads/2019/06/hero-8.jpg" class="image--smoke-growth" alt="...">
+          <img src="/wp-content/uploads/2019/06/hero-8.jpg" class="image--smoke-growth" alt="smoke signal image">
         </div>
         <div class="growth__image--overlay">
                 <div class="growth-overlay__flex-item">  
@@ -94,7 +94,7 @@ if (!defined('ABSPATH')) {
 
       <div class="growth__content-item growth__content-item--sold" id="sold">
         <div class="image__container growth__image-container">
-          <img src="/wp-content/uploads/2019/06/hero-18.jpg" class="image--signature-growth" alt="...">
+          <img src="/wp-content/uploads/2019/06/hero-18.jpg" class="image--signature-growth" alt="signing contract image">
         </div>
         <div class="growth__image--overlay">
                 <div class="growth-overlay__flex-item">  
@@ -123,7 +123,7 @@ if (!defined('ABSPATH')) {
       </div>
       <div class="growth__content-item growth__content-item--more " id="more">
         <div class="image__container growth__image-container image__container--conductor">
-          <img src="/wp-content/uploads/2019/05/conductor-hued.png" class="image--conductor-growth" alt="...">
+          <img src="/wp-content/uploads/2019/05/conductor-hued.png" class="image--conductor-growth" alt="conductor's arms image">
         </div>
         <div class="growth__image--overlay">
                 <div class="growth-overlay__flex-item">  
@@ -155,11 +155,11 @@ if (!defined('ABSPATH')) {
 </article>
 
 <article class="article how-i-communicate" id="communications">
-  <h1 class="pagination">i can help you engage</h1>
+  <div class="pagination">i can help you engage</div>
   <div class="flex__wrapper">
     <div class="flex-container">
       <div class="flex-item__a">
-        <div class="image__container"><img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="..."></div>
+        <div class="image__container"><img src="/wp-content/uploads/2019/06/hero-12.jpg" class="monitors" alt="computer screens image"></div>
         <div class="flex-item__c">
           <div class="list__container">
             <h4 class="list-head">Integrated Marketing Communications</h4>
@@ -206,11 +206,11 @@ if (!defined('ABSPATH')) {
 
 
 <article class="article how-i-operate" id="operations">
-  <h1 class="pagination">i can help you optimize</h1>
+  <div class="pagination">i can help you optimize</div>
   <div class="flex__wrapper">
     <div class="flex-container">
       <div class="flex-item__a">
-        <div class="image__container"><img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="..."></div>
+        <div class="image__container"><img src="/wp-content/uploads/2019/03/conftable.jpg" class="conftable" alt="conference table image"></div>
         <div class="flex-item__c">
           <div class="list__container">
             <h4 class="list-head">Marketing Operations & Technology</h4>

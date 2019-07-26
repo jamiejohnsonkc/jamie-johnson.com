@@ -12,8 +12,8 @@ if (!defined('ABSPATH')) {
 	<article class="article__wrapper--fluid splash__article--wrapper article--services-splash">
 		<div class="services-splash__container">
 			<div class="pagination services-splash__pagination">i provide</div>
-			<h2 class="title">Comprehensive Marketing Solutions</h2>
-			<h3 class="title-sub services-splash__title-sub">Modern approaches delivered with old-fashioned values.</h3>
+			<h1 class="title">Comprehensive Marketing Solutions</h1>
+			<h2 class="title-sub services-splash__title-sub">Modern approaches delivered with old-fashioned values.</h2>
 			
 			<a href="#services-summary" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 		</div>

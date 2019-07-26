@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 <article class="article__wrapper--fluid article--marketing-splash">
 <div class="marketing-splash__container">
 <div class="pagination marketing-splash__pagination">my purpose</div>
-<h2 class="title">i make marketing better</h2>
+<h1 class="title">i make marketing better</h1>
 <div class="copy__container">
 <p>Today's strategic challenges mandate new approaches.</p> 
 <p>Customers don't want to be bothered, they don't want to be sold. And they aren't moved by empty or self-serving claims.</p>

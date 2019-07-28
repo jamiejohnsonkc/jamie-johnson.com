@@ -345,7 +345,7 @@ ARCHIVE -->
 					$zip_mode_string	 = DUP_PRO_U::__('Unknown');
 
                     if(isset($package->build_progress->current_build_mode)) {
-                        if ($package->build_progress->current_build_mode === DUP_PRO_Archive_Build_Mode::ZipArchive) {
+                        if ($package->build_progress->current_build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive) {
 							$zip_mode_string = DUP_PRO_U::__("ZipArchive");
 
 							if (isset($package->ziparchive_mode)) {
@@ -353,7 +353,7 @@ ARCHIVE -->
 									$zip_mode_string = DUP_PRO_U::__("ZipArchive ST");
 								}
 							}
-                        } else if ($package->build_progress->current_build_mode === DUP_PRO_Archive_Build_Mode::Shell_Exec) {
+                        } else if ($package->build_progress->current_build_mode == DUP_PRO_Archive_Build_Mode::Shell_Exec) {
 							$zip_mode_string = DUP_PRO_U::__("Shell Exec");
 						} else {
 							$zip_mode_string = DUP_PRO_U::__("DupArchive");

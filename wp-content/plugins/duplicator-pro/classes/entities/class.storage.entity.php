@@ -418,8 +418,20 @@ class DUP_PRO_Storage_Entity extends DUP_PRO_JSON_Entity_Base
 
         $onedrive = DUP_PRO_Onedrive_U::get_onedrive_client_from_state($state);
 
-        if($onedrive->getAccessTokenStatus() < 0){
+        if ($onedrive->getAccessTokenStatus() < 0) {
             $onedrive->renewAccessToken(DUP_PRO_OneDrive_Config::ONEDRIVE_CLIENT_SECRET);
+            $state = $onedrive->getState();
+            if (isset($this->onedrive_refresh_token) && isset($state->token->data->access_token)) {
+                $this->onedrive_token_obtained = time();
+                $this->onedrive_refresh_token = $state->token->data->refresh_token;
+                $this->onedrive_access_token = $state->token->data->access_token;
+                $this->save();
+            } else {
+                $errorMessage = "Your OneDrive Access token can't be renewed";
+                error_log($errorMessage);
+                DUP_PRO_LOG::traceError($errorMessage);
+                throw new Exception($errorMessage);
+            }
         }
 
         return $onedrive;

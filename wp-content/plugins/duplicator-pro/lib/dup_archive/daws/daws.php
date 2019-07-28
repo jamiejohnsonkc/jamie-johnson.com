@@ -228,7 +228,9 @@ class DAWS
                 $retVal->pass = true;
                 $retVal->status = $this->getStatus($expandState);
             } else if ($action == 'cancel') {
-                DupProSnapLibIOU::touch(DAWSConstants::$PROCESS_CANCEL_FILEPATH);
+                if (!DupProSnapLibIOU::touch(DAWSConstants::$PROCESS_CANCEL_FILEPATH)) {
+                    throw new Exception("Couldn't update time on ".DAWSConstants::$PROCESS_CANCEL_FILEPATH);
+                }
                 $retVal->pass = true;
             } else {
                 throw new Exception('Unknown command.');

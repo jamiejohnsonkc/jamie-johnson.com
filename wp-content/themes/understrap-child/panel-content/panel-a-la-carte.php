@@ -476,7 +476,7 @@ if (!defined('ABSPATH')) {
 
                                 <h3 class="headline">Mobile + Web</h3>
                                 <p class="copy">Digital assets and content built from the ground up to advance business.</p>
-                                <a class="link" id="capabilities__menu_link">Learn More</a>
+                                <a class="link capabilities__menu_link">Learn More</a>
 
                             </div>
                             <div class="menu__item" id="open-expt-overlay-3">
@@ -484,7 +484,7 @@ if (!defined('ABSPATH')) {
 
                                 <h3 class="headline">Integrated Communications</h3>
                                 <p class="copy">Comprhensive, program-level iniatitives to get you found, get you trusted and get you sold</p>
-                                <a class="link" id="capabilities__menu_link">Learn More</a>
+                                <a class="link capabilities__menu_link">Learn More</a>
 
                             </div>
                             <div class="menu__item" id="open-expt-overlay-2">
@@ -492,7 +492,7 @@ if (!defined('ABSPATH')) {
 
                                 <h3 class="headline">Strategic Marketing Management</h3>
                                 <p class="copy">Where business plans transform into marketing strategy</p>
-                                <a class="link" id="capabilities__menu_link">Learn More</a>
+                                <a class="link capabilities__menu_link">Learn More</a>
 
                             </div>
                             <div class="menu__item" id="open-expt-overlay-5">
@@ -500,7 +500,7 @@ if (!defined('ABSPATH')) {
 
                                 <h3 class="headline">Marketing Operations</h3>
                                 <p class="copy">Optimizing marketing as a function, organization and an activity</p>
-                                <a class="link" id="capabilities__menu_link">Learn More</a>
+                                <a class="link capabilities__menu_link">Learn More</a>
 
                             </div>
                             <div class="menu__item" id="open-expt-overlay-1">
@@ -508,7 +508,7 @@ if (!defined('ABSPATH')) {
 
                                 <h3 class="headline">Strategy & Implementation</h3>
                                 <p class="copy">Modern marketing concepts, strategies and practices to achieve business outcomes</p>
-                                <a class="link" id="capabilities__menu_link">Learn More</a>
+                                <a class="link capabilities__menu_link">Learn More</a>
 
                             </div>
                         </nav>

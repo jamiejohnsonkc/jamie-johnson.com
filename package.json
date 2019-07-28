@@ -51,5 +51,8 @@
     "run-sequence": "^2.2.1",
     "understrap": "^0.9.1",
     "undescores-for-npm": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3"
   }
 }

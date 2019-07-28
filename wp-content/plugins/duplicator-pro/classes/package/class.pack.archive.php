@@ -460,19 +460,22 @@ class DUP_PRO_Archive
                     if ($add) {
                         $this->getFileLists($fullPath);
                         $this->addToList($fullPath, 'dir');
-                        //MT: SERVER THROTTLE
+                        // MT: SERVER THROTTLE
+                        /*  Disable throttle on scan ulti chunking is implementend
                         if ($this->throttleDelayInUs > 0) {
                             usleep($this->throttleDelayInUs);
-                        }
+                        } */
+                         
                     }
                 } else {
                     // Note: The last clause is present to perform just a filename check
                     if (!(in_array(pathinfo($file, PATHINFO_EXTENSION), $this->FilterExtsAll) || in_array($fullPath, $this->FilterFilesAll) || in_array($file, $this->FilterFilesAll))) {
                         $this->addToList($fullPath, 'file');
                         //MT: SERVER THROTTLE
+                        /*  Disable throttle on scan ulti chunking is implementend
                         if ($this->throttleDelayInUs > 0) {
                             usleep($this->throttleDelayInUs);
-                        }
+                        } */
                     }
                 }
             }
@@ -544,8 +547,8 @@ class DUP_PRO_Archive
                 }
 
                 if ($invalid_name) {
-                    if (($this->global->archive_build_mode === DUP_PRO_Archive_Build_Mode::ZipArchive)
-                        || ($this->global->archive_build_mode === DUP_PRO_Archive_Build_Mode::DupArchive)) {
+                    if (($this->global->archive_build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive)
+                        || ($this->global->archive_build_mode == DUP_PRO_Archive_Build_Mode::DupArchive)) {
                         $this->FilterInfo->Files->Warning[] = array(
                             'name'	=> $fileName,
                             'dir'	=> pathinfo($filePath, PATHINFO_DIRNAME),
@@ -594,8 +597,8 @@ class DUP_PRO_Archive
                 }
 
                 if($invalid_name) {
-                    if (($this->global->archive_build_mode === DUP_PRO_Archive_Build_Mode::ZipArchive)
-                        || ($this->global->archive_build_mode === DUP_PRO_Archive_Build_Mode::DupArchive)) {
+                    if (($this->global->archive_build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive)
+                        || ($this->global->archive_build_mode == DUP_PRO_Archive_Build_Mode::DupArchive)) {
                         // only warnings, not removing dir from archive
                         $this->FilterInfo->Dirs->Warning[] = $dirPath;
                     }

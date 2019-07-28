@@ -16,6 +16,7 @@ if (!class_exists('DupProSnapLibOSU', false)) {
 
     class DupProSnapLibOSU
     {
+
         const DEFAULT_WINDOWS_MAXPATH = 260;
         const DEFAULT_LINUX_MAXPATH   = 4096;
 
@@ -54,4 +55,3 @@ if (!class_exists('DupProSnapLibOSU', false)) {
         }
     }
 }
-

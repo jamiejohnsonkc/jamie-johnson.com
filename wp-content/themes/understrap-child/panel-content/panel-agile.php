@@ -25,76 +25,51 @@ if (!defined('ABSPATH')) {
 
 				<div class="flex-grid__head">then</div>
 				<div class="flex-grid__head">now</div>
-				
+
 				<hr class="flex-grid__a--hr">
 
-				<div class="flex-item">
-					<div class="flex-grid__content">broadcasting</div>
-				</div>
+				<div class="flex-item"><div class="flex-grid__content">broadcasting</div></div>
+
+				<div class="flex-divider">&#x27A7;</div>
+
+				<div class="flex-item"><div class="flex-grid__content">conversing</div></div>
+
+				<div class="flex-item"><div class="flex-grid__content">claiming</div></div>
+
+				<div class="flex-divider">&#x27A7;</div>
+
+				<div class="flex-item"><div class="flex-grid__content">substantiating</div></div>
+	
+
+				<div class="flex-item"><div class="flex-grid__content">being seen</div></div>
+
+				<div class="flex-divider">&#x27A7;</div>
+
+				<div class="flex-item"><div class="flex-grid__content">getting found</div></div>
+
+				<div class="flex-item"><div class="flex-grid__content">positioning</div></div>
 
 				<div class="flex-divider">&#x27A7;</div>
 				
-				<div class="flex-item">
-					<div class="flex-grid__content">conversing</div>
-				</div>
+				<div class="flex-item"><div class="flex-grid__content">prescribing</div></div>
+	
 
-				<!-- <hr class="flex-grid__a--hr"> -->
-
-				<div class="flex-item">
-					<div class="flex-grid__content">claiming</div>
-				</div>
+				<div class="flex-item"><div class="flex-grid__content">selling</div></div>
+				
 				<div class="flex-divider">&#x27A7;</div>
-				<div class="flex-item">
-					<div class="flex-grid__content">substantiating</div>
-				</div>
-				<!-- <hr class="flex-grid__a--hr"> -->
 
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						being seen</div>
-				</div>
-				<div class="flex-divider">&#x27A7;</div>
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						getting found</div>
-				</div>
-				<!-- <hr class="flex-grid__a--hr"> -->
+				<div class="flex-item"><div class="flex-grid__content">aiding</div></div>
 
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						positioning</div>
-				</div>
-				<div class="flex-divider">&#x27A7;</div>
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						prescribing</div>
-				</div>
-				<!-- <hr class="flex-grid__a--hr"> -->
 
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						selling</div>
-				</div>
+				<div class="flex-item"><div class="flex-grid__content">promising</div></div>
+				
 				<div class="flex-divider">&#x27A7;</div>
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						aiding</div>
-				</div>
-				<!-- <hr class="flex-grid__a--hr"> -->
 
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						promising</div>
-				</div>
-				<div class="flex-divider">&#x27A7;</div>
-				<div class="flex-item">
-					<div class="flex-grid__content">
-						delivering</div>
-				</div>
+				<div class="flex-item"><div class="flex-grid__content">delivering</div></div>
 
 			</div>
 
 		</div>
-
+</div>
 </article>
 </section>

@@ -16,6 +16,7 @@ if (!class_exists('DupProSnapLibLogger', false)) {
 
     class DupProSnapLibLogger
     {
+
         public static $logFilepath = null;
         static $logHandle          = null;
 

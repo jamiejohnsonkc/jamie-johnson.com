@@ -77,7 +77,7 @@
 
  			</div>
 
- 			<div class="offering__content-item offering__content-item--engage" id="engaging">
+ 			<div class="offering__content-item offering__content-item--engage" id="optimize">
 
 
 

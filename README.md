@@ -12,5 +12,5 @@ Understrap child is a skeleton theme for Understrap; a WP-based framework built 
 I began this site with a basic understanding of html and css. My skills in bootstrap, flexbox and sass developed organically as I sought various solutions and capabilities. Eventually I developed a thorough understanding of bootstrap's strengths and weaknesses and where and how to rely on flexbox. Also, I grasped the benefits of moderate/advanced sass to eliminate duplication and bloat.
 
 #refactoring
-Upon investigation you'll see a vareity of conventions and practices (BEM, Atomic, etc.). The inconsistent and varying accuracy in the implementation of these principles reflects my continued learnings and evolution as a developer as I built the site. I plan to continue refactoring as a means of honing my understanding of Atomic Design and Pattern Lab principles to product truely modular systems.   
+Upon investigation you'll see a vareity of conventions and practices (BEM, Atomic, etc.). The inconsistent and varying accuracy in the implementation of these principles reflects my continued learnings and evolution as a developer as I built the site. I plan to continue refactoring as a means of honing my understanding of Atomic Design and Pattern Lab principles to produce modular design systems.   
 

@@ -1,61 +1,16 @@
+## Built on the understrap-child theme developed by @holger1411 and various contributors. It can be found at https://github.com/understrap/understrap-child
 
-# understrap-child
-Basic Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
+## Development is a mashup of:
 
-## How it works
-Understrap Child Theme shares with the parent theme all PHP files and adds its own functions.php on top of the UnderStrap parent theme's functions.php.
+#Wordpress
+I utilized Wordpress to support future plans to add a blog.  Otherwise minimal wordpress conventions (plug-ins, widgets, etc.) were limited tools to aid SEO and migration.  I wanted to keep the site as light as possible. Basic PHP was incorporated to enable a page+panels-based structure that quickened development & content revisions.
 
-**IT DOES NOT LOAD THE PARENT THEMES CSS FILE(S)!** Instead it uses the UnderStrap Parent Theme as a dependency via npm and compiles its own CSS file from it.
+#understrap-child
+Understrap child is a skeleton theme for Understrap; a WP-based framework built on bootstrap 4 and the Underscores theme by Automatic. The theme provided a blank canvas and a hefty gulp-driven set of pre/post processors to aid development and site performance (i.e. sass, browsersync and an array of linting, minification and optimization modules).
 
-Understrap Child Theme uses the Enqueue method to load and sort the CSS file the right way instead of the old @import method.
+#boostrap 4 / flexbox / sass
+I began this site with a basic understanding of html and css. My skills in bootstrap, flexbox and sass developed organically as I sought various solutions and capabilities. Eventually I developed a thorough understanding of bootstrap's strengths and weaknesses and where and how to rely on flexbox. Also, I grasped the benefits of moderate/advanced sass to eliminate duplication and bloat.
 
-## Installation
-1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap`
-   - IMPORTANT: If you download UnderStrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
-1. Upload the understrap-child folder to your wp-content/themes directory
-1. Go into your WP admin backend 
-1. Go to "Appearance -> Themes"
-1. Activate the UnderStrap Child theme
-
-## Editing
-Add your own CSS styles to `/sass/theme/_child_theme.scss`
-or import you own files into `/sass/theme/understrap-child.scss`
-
-To overwrite Bootstrap's or UnderStrap's base variables just add your own value to:
-`/sass/theme/_child_theme_variables.scss`
-
-For example, the "$brand-primary" variable is used by both Bootstrap and UnderStrap.
-
-Add your own color like: `$brand-primary: #ff6600;` in `/sass/theme/_child_theme_variables.scss` to overwrite it. This change will automatically apply to all elements that use the $brand-primary variable.
-
-It will be outputted into:
-`/css/understrap-child.min.css` and `/css/understrap-child.css`
-
-So you have one clean CSS file at the end and just one request.
-
-## Developing With NPM, Gulp, SASS and Browser Sync
-
-### Installing Dependencies
-- Make sure you have installed Node.js, Gulp, and Browser-Sync [1] on your computer globally
-- Open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ gulp copy-assets`
-
-### Running
-To work and compile your Sass files on the fly start:
-
-- `$ gulp watch`
-
-Or, to run with Browser-Sync:
-
-- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
-```javascript
-  "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
-    "notify": false
-  }
-};
-```
-- then run: `$ gulp watch-bs`
-
-[1] Visit [https://browsersync.io/](https://browsersync.io/) for more information on Browser Sync
+#refactoring
+Upon investigation you'll see a vareity of conventions and practices (BEM, Atomic, etc.). The inconsistent and varying accuracy in the implementation of these principles reflects my continued learnings and evolution as a developer as I built the site. I plan to continue refactoring as a means of honing my understanding of Atomic Design and Pattern Lab principles to product truely modular systems.   
 

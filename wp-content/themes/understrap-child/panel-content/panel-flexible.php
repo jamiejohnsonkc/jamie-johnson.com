@@ -1,5 +1,4 @@
 <?php
-
 /**
  * container Splash template.
  *
@@ -11,12 +10,7 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="section__flexible" id="flexible">
 	<article class="article__flexible">
-		<!-- <div class="background__image--overlay"></div> -->
-
-		<!-- <h2 class="title title--white headline__header--flexible">I provide comprehensive marketing capabilities and expertise flexibleed on business growth and performance.</h2> -->
-
 		<div class="flex-container">
-
 			<div class="flex-item__b">
 				<div class="flex-item__b--inner-wrapper">
 					<div class="flex-item__b-1">
@@ -66,6 +60,6 @@ if (!defined('ABSPATH')) {
 					<img src="/wp-content/uploads/2019/07/ben-white-292680.jpg" class="img-waiting" alt="image of man sitting and waiting">
 				</div>
 			</div>
-			<div class="flex-item__c">
+		</div>
 	</article>
 </section>

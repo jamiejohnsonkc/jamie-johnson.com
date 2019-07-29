@@ -22,4 +22,4 @@ I began this site with a basic understanding of html and css. My skills in boots
 
 ### refactoring
 
-Upon investigation you'll see a vareity of conventions and practices (BEM, Atomic, etc.). The inconsistent and varying accuracy in the implementation of these principles reflects my continued learnings and evolution as a developer as I built the site. I plan to continue refactoring as a means of honing my understanding of Atomic Design and Pattern Lab principles to produce modular design systems.
+Upon investigation you'll see a variety of conventions and practices (BEM, Atomic, etc.). The inconsistent and varying accuracy in the implementation of these principles reflects my continued learnings and evolution as a developer as I built the site. I plan to continue refactoring as a means of honing my understanding of Atomic Design and Pattern Lab principles to produce modular design systems.

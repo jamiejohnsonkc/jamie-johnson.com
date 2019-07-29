@@ -16,6 +16,7 @@ if (!class_exists('DupProSnapJsonSerializable', false)) {
 
     abstract class DupProSnapJsonSerializable
     {
+
         const CLASS_KEY_FOR_JSON_SERIALIZE = '==_CLASS_==_NAME_==';
 
         protected static function objectToPublicArrayClass($obj = null)

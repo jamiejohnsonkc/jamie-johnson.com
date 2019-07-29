@@ -6,7 +6,7 @@
 */
 if ( ! defined( 'ABSPATH' ) ) {
 exit; // Exit if accessed directly.
-}
+} 
 ?>
 <section class="section categories__section" id="categories">
 <article class="article__wrapper categories categories__article-wrapper">

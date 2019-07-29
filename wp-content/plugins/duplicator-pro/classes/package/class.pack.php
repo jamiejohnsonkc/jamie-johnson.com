@@ -100,7 +100,7 @@ class DUP_PRO_Build_Progress
                 $this->current_build_mode = DUP_PRO_Archive_Build_Mode::Shell_Exec;
             } else if ($build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive) {
                 $this->current_build_mode = DUP_PRO_Archive_Build_Mode::ZipArchive;
-            } else if ($build_mode === DUP_PRO_Archive_Build_Mode::DupArchive) {               
+            } else if ($build_mode == DUP_PRO_Archive_Build_Mode::DupArchive) {               
                 $this->current_build_mode = DUP_PRO_Archive_Build_Mode::DupArchive;
             } else {
                 DUP_PRO_Log::error(DUP_PRO_U::__('Couldn\'t determine the build mode of the package!'));
@@ -2297,7 +2297,7 @@ class DUP_PRO_Package
             //ARCHIVE
             $package->Archive->PackDir = rtrim(DUPLICATOR_PRO_WPROOTPATH, '/');
 
-            if ($global->archive_build_mode === DUP_PRO_Archive_Build_Mode::DupArchive) {
+            if ($global->archive_build_mode == DUP_PRO_Archive_Build_Mode::DupArchive) {
                 $package->Archive->Format = 'DAF';
             } else {
                 $package->Archive->Format = 'ZIP';

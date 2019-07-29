@@ -1,5 +1,4 @@
 <?php
-
 /**
  * container Splash template.
  *
@@ -11,11 +10,11 @@ if (!defined('ABSPATH')) {
 ?>
 <section class="commitment" id="commitment">
 	<article>
-	<div class="background__image--cover">
-					<img src="/wp-content/uploads/2019/06/hero-23.jpg" class="img-relax" alt="cafe relax image">
-				</div>
+		<div class="background__image--cover">
+			<img src="/wp-content/uploads/2019/06/hero-23.jpg" class="img-relax" alt="cafe relax image">
+		</div>
 		<div class="container">
-		<div class="pagination">my commitment to you</div>
+			<div class="pagination">my commitment to you</div>
 			<h2 class="headline">When you hire a professional service you should receive professional service</h2>
 			<div class="content__container commitment__content_container">
 				<div class="commitment__flex-item">
@@ -39,7 +38,6 @@ if (!defined('ABSPATH')) {
 					<div class="commitment__subhead_container">
 						<h3 class="commitment__subhead">I keep it fair and honest</h3>
 					</div>
-
 					<p class="commitment__body_copy"><span class="leader">I do not charge by the hour. </span> (spare a few exceptions). I expect to be compensated in proporation to value I bring to you &mdash;not the time spent at your expense.</p>
 					<p class="commitment__body_copy"><span class="leader">I never markup hard costs. </span> Everything is passed through at cost. No exceptions.</p>
 					<p class="commitment__body_copy"><span class="leader">I don't play the smoke and mirrors game.</span> There are things marketing can do and others it can not. I'll always shoot you straight.</p>
@@ -49,19 +47,12 @@ if (!defined('ABSPATH')) {
 					<div class="commitment__subhead_container">
 						<h3 class="commitment__subhead">I'm here to help</h3>
 					</div>
-
 					<p class="commitment__body_copy"><span class="leader">I have nothing to prove. </span> If I ever did, it was done a long time ago. My goal is to help you succeed.</p>
 					<p class="commitment__body_copy"><span class="leader">I know my limits. </span> I'm good at what I do, but no one is good at everything. If I'm not right for the job, I'll tell you. Then I'll help you find someone who is.</p>
 					<p class="commitment__body_copy"><span class="leader">I try to stick to plain English. </span> I do my best to keep all the technical and mystical marketing mumbo-jumbo to a minimum.</p>
 				</div>
 			</div>
-		
 		</div>
-
 		<a href="#services__cta" class="button ui-button__jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
-
-
-
-
 	</article>
 </section>

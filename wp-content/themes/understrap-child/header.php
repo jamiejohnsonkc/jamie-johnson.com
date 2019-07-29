@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				<div class="navbar-brand mb-0">
-					<a class="navbar__mail-link" href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinire" target="_top">jamie@jamie-johnson.com</a>
+					<a class="navbar__mail-link" href="mailto:jamie@jamie-johnson.com?Subject=Marketing%20Extraordinaire" target="_top">jamie@jamie-johnson.com</a>
 					<a class="navbar__call-link" href="tel:+1-913.586.8042">913.586.8042</a>
 				</div>
 

@@ -481,8 +481,8 @@ a.home-splash__jump {
   }
 }
 
-.claim__pagination {
-
+.pagination.claim__pagination {
+min-height: 2em;
   // top: -15%;
   // left: 49%;
   // position: absolute;
@@ -491,7 +491,10 @@ a.home-splash__jump {
 
 
   @include mq('tablet') {
-    top: 15%;
+    margin-bottom: unset;
+    min-height: 4em;
+    flex: 0 1 4em;
+    //     top: 15%;
     // display: flex;
     //   flex: 0 0 0;
     //   position: relative;
@@ -753,8 +756,8 @@ a.home-splash__jump {
   }
 
   @include mq('desktop') {
-    flex: 0 0 38%;
-    max-width: 38%;
+    flex: 0 0 33%;
+    max-width: 33%;
     min-height: 32em;
     display: flex;
   }
@@ -829,9 +832,9 @@ a.home-splash__jump {
   @include mq('phone') {}
 
   @include mq('desktop') {
-    flex: 0 0 38%;
-    max-width: 35%;
-    padding: 0 4%;
+    flex: 0 0 33%;
+    max-width: 33%;
+    // padding: 0 4%;
     z-index: 3;
   }
 }
@@ -887,6 +890,7 @@ a.home-splash__jump {
     transform: translateX(-50%);
     left: 50%;
     text-align: center;
+    justify-content: center;
   }
 
   @include mq('desktop') {
@@ -2468,7 +2472,7 @@ a.home-splash__jump {
     max-width: 64%;
     width: unset;
     flex: 2;
-    min-height: 100vh;
+    min-height: 115vh;
   }
 }
 
@@ -4583,7 +4587,7 @@ path.st0 {
   @include mq('desktop') {
     @include vr($padding: 3 0 12 0);
     flex: 1 1 18%;
-    max-width: 26%;
+    max-width: 34%;
     min-height: 95em;
     // flex: 1 1 20%;
     border-left: .05rem $gray-100 solid;

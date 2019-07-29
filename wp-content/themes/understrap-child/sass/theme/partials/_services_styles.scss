@@ -73,9 +73,10 @@
   display: flex;
   flex-direction: column;
   justify-content: baseline;
-  align-items: center;
+  // align-items: center;
   max-width: 90%;
   z-index: 2;
+  flex: 0 1 auto;
 
   @include mq('tablet') {
     max-width: 83%;
@@ -91,13 +92,15 @@
       @include mq('tablet') {
         @include vr($margin-top:12);
         align-self: flex-start;
+        width: 40%;
       }
     }
   }
 
   @include mq('tablet-wide') {
     padding-top: 0;
-    max-width: 38%;
+    max-width: 80%;
+    width: 40%;
     margin-left: 16%;
     justify-content: center;
 
@@ -105,8 +108,9 @@
   }
 
   @include mq('desktop') {
-    max-width: 26%;
-    margin-left: 12%;
+    max-width: 35%;
+    width: 35%;
+    margin-left: 8%;
   }
 
 }
@@ -121,22 +125,62 @@
 .services-splash__container{
     .title{
         color: $white;
-    }
+      
+        display: flex;
+        min-height: .25em;
+        flex: 0 1 auto;
+        flex-direction: column;
+        letter-spacing: .025rem;
+        position: relative;
+        @include vr($font-size: 6, $line-height: 2);
+        @include mq('tablet-wide'){
+          @include vr($font-size: 6, $line-height: 2);
+        };
+        @include mq('desktop'){
+        @include vr($font-size: 7, $line-height: 6);
+        }
+      }
 }
 
-.services-splash__title-sub {
+
+
+.br__services-splash{
+@include vr($line-height: 1);
+}
+
+
+.services-splash__sub {
   color: $white;
   max-width: 90%;
-  align-self: flex-start;
+  font-family: $font-family-sans-serif;
+  font-style: none;
+  display: flex;
+  flex-direction: row;
+  min-height: 1em;
+  flex: 0 1 auto;
+align-items: center;
+border-top: .75rem solid $white;
+
 
   @include mq('tablet') {
     max-width: 90%;
   }
 
   @include mq('tablet-wide') {
-    min-height: 3em;
-    flex: 0 0 30%;
+    min-height: 2em;
+    font-size: 2.15rem;
   }
+}
+
+.services-splash__separator{
+  all: inherit;
+  color: $accent;
+  flex: 1 1 auto;
+  max-width: 5%;
+  text-align: center;
+  justify-content: center;
+  border: none;
+
 }
 
 .services-splash__image-container {
@@ -177,9 +221,16 @@
     @include mq('desktop') {
     width: 110%;
     left: -23%;
-    top: -115%;
+    top: -74%;
     transform: translate(21%,37%);
     }
+
+    @include mq('desktop-wide') {
+      width: 110%;
+      left: -23%;
+      top: -115%;
+      transform: translate(21%,37%);
+      }
   }
 }
 

@@ -132,10 +132,10 @@ if (!defined('ABSPATH')) {
 			<div class="content__item services-list__content-item">
 				<div class="services-list-card-inner">
 					<div class="services-list-card__front">
-						<h3 class="deck deck__header services-list__deck-header">Marketing Funnel Management</h3>
+						<h3 class="deck deck__header services-list__deck-header">Modern Sales & Marketing</h3>
 					</div>
 					<div class="services-list-card__back">
-	<div class="copy__block services-list__copy-block">New buying behavior, new expectations, new relationship dynamics. Now slam sales and marketing types together and make it work.  Yep.  Call me.</div>
+	<div class="copy__block services-list__copy-block">New expectations, buying behavior and value functions. Old sales + old marketing = trouble.</div>
 						<a href="/services" class="link__text services-card-back--link">learn more</a>
 					</div>
 				</div>

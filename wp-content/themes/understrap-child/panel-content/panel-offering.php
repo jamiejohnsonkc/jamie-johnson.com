@@ -49,7 +49,7 @@
  						<p class="copy">revenue generation</p>
  						<p class="copy">organizational value</p> -->
  					</div>
- 					<a href="/services#modern-marketing-management" class="link__text">&#8250;lear more about Strategic Marketing Management</a>
+ 					<a href="/services#modern-marketing-management" class="link__text">&#8250;learn more about Strategic Marketing Management</a>
  				</div> <a href="#engaging" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
  			</div>
 
@@ -90,7 +90,7 @@
  					</div>
 
  					<div class="offering__copy-container">
- 						<p class="copy">Deploy the capabilities, practices, infrastructure and process to sustain productive marketing initatives for the long term.</p>
+ 						<p class="copy">Deploy the capabilities, practices, infrastructure and process to sustain productive marketing initiatives for the long term.</p>
  						<!-- <p class="copy">Modern marketing capabilities & methodologies</p> -->
  						<!-- <p class="copy">Digital & physical assets</p>
 							<p class="copy">Staffing & resources</p>

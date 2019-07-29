@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
 			<div class="mo__psst">&mdash;pssst!</div>
 			<h2 class="headline headline__header headline--intro">Don't tell anyone, but I've always loathed khakis</h2>
 			<h3 class="deck deck__header header__deck--white deck--intro mo__deck">I grew up on the business-side, but
-				I've always had a festish for creativity.</h3>
+				I've always had a fetish for creativity.</h3>
 			<p class="copy__header mo__header-copy">So I'm a fanatic when it comes to technology and the work, but
 				business always comes first.</p>
 				
@@ -49,7 +49,7 @@ if (!defined('ABSPATH')) {
 					<a href="#mo-execution" class="ui-button__expand ui-button__expand--primary-black mo__expand-button" id="expand-mo-execution" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
 </div>
 							<div class="container__accordion mo__accordian" id="mo-execution">
-							<p class="mo__diagram-copy">Look. Its almost 2020. Nobody wants to be interupted and they certainly don't want to be sold. I can help you understand how to appeal and connect with modern customers to generate meaningful relationships.</p>
+							<p class="mo__diagram-copy">Look. Its almost 2020. Nobody wants to be interrupted and they certainly don't want to be sold. I can help you understand how to appeal and connect with modern customers to generate meaningful relationships.</p>
 							</div>
 				
 
@@ -62,7 +62,7 @@ if (!defined('ABSPATH')) {
 					<a href="#mo-scale" class="ui-button__expand ui-button__expand--primary-black mo__expand-button" id="expand-mo-scale" title="read more"><?php get_template_part('buttons/button', 'expand'); ?></a>
 </div>
 							<div class="container__accordion mo__accordian" id="mo-scale">
-							<p class="mo__diagram-copy">I'm not Lee Clow and you're probably not Apple, Starbucks or Disney. That doesn't mean you have to market yourself like Crazy Larry's House of Mattresses. I can help you achieve efficacy without an exorberant budget.</p>
+							<p class="mo__diagram-copy">I'm not Lee Clow and you're probably not Apple, Starbucks or Disney. That doesn't mean you have to market yourself like Crazy Larry's House of Mattresses. I can help you achieve efficacy without an exorbitant budget.</p>
 							</div>
 		
 				</div>

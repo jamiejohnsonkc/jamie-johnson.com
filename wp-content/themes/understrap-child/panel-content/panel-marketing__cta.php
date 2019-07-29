@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper cta__home-page">
+<article class="article__wrapper cta__home-page" id="marketing-cta">
 	<div class="row">
 		<div class="col-lg-6 marketing-cta__content-container">
 			<div class="container-single-box-center cta__container cta__container--marketing">

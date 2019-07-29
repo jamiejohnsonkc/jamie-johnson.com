@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<section class="proof__section">
+<section class="proof__section" id="proof-of-claim">
 	<article class="proof__section--header">
 		<h2 class="headline headline__header headline__header--proof proof__section-headline">3 Outstanding reasons to Hire Me</h2>
 
@@ -104,5 +104,5 @@ if (!defined('ABSPATH')) {
 
 	</article>
 
-	<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next"><img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg link__advance_chev-dwn" /></a>
+	<a href="#marketing-cta" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 </section>

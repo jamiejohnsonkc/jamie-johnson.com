@@ -24129,7 +24129,7 @@ button {
   color: #9bc6e9;
   text-decoration: underline; }
 
-.link__advance_chev-dwn {
+#link__advance_chev-dwn {
   width: 1.5em;
   height: 1.5em;
   display: block;
@@ -36335,7 +36335,7 @@ li.expertise__carousel-indicator-list-item {
         max-width: 83%;
         width: 83%;
         margin: 0.75001rem 0 4.50003rem; } }
-  .my-capabilities__menu #capabilities__menu_link {
+  .my-capabilities__menu .capabilities__menu_link {
     font-style: normal;
     font-variant-caps: all-small-caps;
     font-weight: 400;
@@ -36351,24 +36351,24 @@ li.expertise__carousel-indicator-list-item {
     bottom: unset;
     min-height: 1em; }
     @media (min-width: 48em) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         margin: 0.77778rem auto; } }
     @media (min-width: 78em) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         margin: 0.75001rem auto; } }
     @media (min-width: 118em) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         margin: 0.77778rem auto; } }
     @media (min-width: 160rem) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         margin: 0.75001rem auto; } }
     @media only screen and (min-width: 48em) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         font-size: 1.5rem;
         line-height: 1.50001rem;
         margin-top: 1.50001rem; } }
     @media only screen and (min-width: 78em) {
-      .my-capabilities__menu #capabilities__menu_link {
+      .my-capabilities__menu .capabilities__menu_link {
         margin: 0; } }
   .my-capabilities__menu .copy {
     display: none;
@@ -37975,7 +37975,8 @@ img.style-svg.image-bell {
       margin: 1.50001rem;
       padding: 1.50001rem;
       -webkit-box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
-      box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5); } }
+      box-shadow: 12px 10px 19px -14px rgba(0, 0, 0, 0.5);
+      background: green; } }
   @media only screen and (min-width: 78em) {
     .article__flexible {
       height: 100em;

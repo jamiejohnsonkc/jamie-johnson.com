@@ -1,6 +1,6 @@
 <?php
 /**
- * container Splash template.
+ * container Splash template. 
  *
  * @package understrap
  */

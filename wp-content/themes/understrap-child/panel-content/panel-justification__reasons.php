@@ -192,12 +192,13 @@
 							</div>
 						</div>
 					</div>
-					<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-						<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg link__advance_chev-dwn" />
-					</a>
+					<a href="#proof-of-claim" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+
 				</div>
 </div>
 		</article>
 
 
 	</section>
+
+		<a href="#marketing-cta" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>

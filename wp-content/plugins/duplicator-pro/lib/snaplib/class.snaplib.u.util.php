@@ -13,25 +13,6 @@
  */
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 
-if (!interface_exists('JsonSerializable')) {
-    define('SNAP_WP_JSON_SERIALIZE_COMPATIBLE', true);
-
-    /**
-     * JsonSerializable interface.
-     *
-     * Compatibility shim for PHP <5.4
-     *
-     * @link https://secure.php.net/jsonserializable
-     *
-     * @since 4.4.0
-     */
-    interface JsonSerializable
-    {
-
-        public function jsonSerialize();
-    }
-}
-
 if (!class_exists('DupProSnapLibUtil', false)) {
 
     class DupProSnapLibUtil
@@ -79,7 +60,8 @@ if (!class_exists('DupProSnapLibUtil', false)) {
                 } else {
                     return strtolower(md5(uniqid(rand(), true))).'_'.date("YmdHis");
                 }
-            } catch (Exception $exc) {
+            }
+            catch (Exception $exc) {
                 return strtolower(md5(uniqid(rand(), true))).'_'.date("YmdHis");
             }
         }
@@ -133,7 +115,7 @@ if (!class_exists('DupProSnapLibUtil', false)) {
                 $args = func_get_args();
                 foreach ($grouped as $key => $value) {
                     $params        = array_merge(array($value), array_slice($args, 2, func_num_args()));
-                    $grouped[$key] = call_user_func_array('DupProSnapLibUtil::arrayGroupBy', $params);
+                    $grouped[$key] = call_user_func_array(array(__CLASS__, 'arrayGroupBy'), $params);
                 }
             }
             return $grouped;

@@ -7,6 +7,7 @@
   @include mq('tablet') {
     @include vr($margin: 1, $padding: 1);
     @include light-shadow();
+    background: green; 
 
   }
 @include mq('desktop'){

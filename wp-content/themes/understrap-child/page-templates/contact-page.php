@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: contact-page
  *
@@ -11,51 +10,37 @@ if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
-
-
 $response = "";
-
-
 function my_contact_form_generate_response($type, $message)
 {
-
   global $response;
-
   if ($type == "success") $response = "<div class='contact-form-message' id='success'>{$message}</div>";
   else $response = "<div class='contact-form-message' id='error'>{$message}</div>";
 }
-
 //response messages
 $not_human       = "time to brush up on that basic algebra, huh?";
 $missing_content = "Please supply all information";
 $email_invalid   = "Email Address Invalid";
 $message_unsent  = "Double check your entries. Something's amiss.";
 $message_sent    = "Message Sent!";
-
 //user posted variables
 $name = $_POST['message_name'];
 $email = $_POST['message_email'];
 $message = $_POST['message_text'];
 $human = $_POST['message_human'];
-
 //php mailer variables
 $to = get_option('admin_email');
 $subject = "Someone sent a message from " . get_bloginfo('name');
 $headers = 'From: ' . $email . "\r\n" .
   'Reply-To: ' . $email . "\r\n";
-
 if (!$human == 0) {
   if ($human != 2) my_contact_form_generate_response("error", $not_human);
   else {
-
     if (!filter_var($email, FILTER_VALIDATE_EMAIL))
       my_contact_form_generate_response("error", $email_invalid);
     else
     {
-    
       if (empty($name) || empty($message)) {
         my_contact_form_generate_response("error", $missing_content);
       } else //ready to go!
@@ -67,11 +52,8 @@ if (!$human == 0) {
     }
   }
 } else if ($_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
-
 ?>
-
 <?php get_header();
-$container = get_theme_mod('understrap_container_type');
 ?>
 <div class="contact__wrapper" id="full-width-page-wrapper">
   <div class="<?php echo esc_attr($container); ?>" id="content">
@@ -85,9 +67,9 @@ $container = get_theme_mod('understrap_container_type');
               </div>
               <div class="col-lg-6 container__contact--form">
                 <div class="contact__form--wrapper">
+                  <h1 class="title">LET'S TALK</h1>
                   <h2 class="headline__header contact__header">Whatcha Need?</h2>
                   <p class="deck deck__block contact__deck">Curious? Wanna kick the tires a little? Go ahead ask me something. You know you want to.</p>
-
                   <div class="contact__form">
                     <div id="respond">
                       <?php echo $response; ?>
@@ -97,7 +79,6 @@ $container = get_theme_mod('understrap_container_type');
                         <label for="message_email">Email: <span>*</span> <br><input class="form-control" id="email" type="text" name="message_email" value="<?php echo esc_attr($_POST['message_email']); ?>"></label>
                         <label for="message_text">Message: <span>*</span> <br><textarea class="form-control" id="message" type="text" name="message_text"><?php echo esc_textarea($_POST['message_text']); ?></textarea></label>
                         <label for="message_human">what + 3 = 5 ?</label>
-
                         <input class="form-control" id="verification" type="text" name="message_human">
                         <input type="hidden" name="submitted" value="1">
                         <input type="submit">
@@ -107,13 +88,11 @@ $container = get_theme_mod('understrap_container_type');
                 </div>
               </div>
             </div>
-          
           </section>
         </main>
       </div>
     </div>
-   
   </div>
 </div>
-</div>
+<!-- </div> -->
 <?php get_footer(); ?>

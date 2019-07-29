@@ -173,7 +173,7 @@ class DUP_PRO_CTRL_Tools extends DUP_PRO_CTRL_Base
                     $global = DUP_PRO_Global_Entity::get_instance();
 
                     // Assumption is that if shell exec zip works so does unzip
-                 // RSR TODO: for now always use ziparchive   $useShellZip = ($global->get_auto_zip_mode() === DUP_PRO_Archive_Build_Mode::Shell_Exec);
+                 // RSR TODO: for now always use ziparchive   $useShellZip = ($global->get_auto_zip_mode() == DUP_PRO_Archive_Build_Mode::Shell_Exec);
                     $useShellZip = false;
 
                     DUP_PRO_Zip_U::extractFiles($newArchiveFilepath, $relativeFilepaths, DUPLICATOR_PRO_WPROOTPATH, $useShellZip);

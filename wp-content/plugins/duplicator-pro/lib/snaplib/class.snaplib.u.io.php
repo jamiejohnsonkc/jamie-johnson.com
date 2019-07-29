@@ -19,6 +19,7 @@ if (!class_exists('DupProSnapLibIOU', false)) {
 
     class DupProSnapLibIOU
     {
+
         // Real upper bound of a signed int is 214748364.
         // The value chosen below, makes sure we have a buffer of ~4.7 million.
         const FileSizeLimit32BitPHP = 1900000000;
@@ -152,13 +153,18 @@ if (!class_exists('DupProSnapLibIOU', false)) {
 
         public static function touch($filepath, $time = null)
         {
+            if (!function_exists('touch')) {
+                return false;
+            }
+
+            if (!is_writeable($filepath)) {
+                return false;
+            }
+
             if ($time === null) {
                 $time = time();
             }
-
-            if (@touch($filepath, $time) === null) {
-                throw new Exception("Couldn't update time on {$filepath}");
-            }
+            return @touch($filepath, $time);
         }
 
         public static function rmdir($dirname, $mustExist = false)
@@ -239,7 +245,8 @@ if (!class_exists('DupProSnapLibIOU', false)) {
          *
          * @return bool Returns true if all content was removed
          */
-        public static function rrmdir($path) {
+        public static function rrmdir($path)
+        {
             if (is_dir($path)) {
                 if (($dh = opendir($path)) === false) {
                     return false;

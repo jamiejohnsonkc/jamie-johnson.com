@@ -1,4 +1,5 @@
 <?php
+
 /**
  * container Splash template.
  *
@@ -8,8 +9,7 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<article class="article__wrapper cta__home-page">
-
+<article class="article__wrapper cta__home-page" id="marketing-cta">
 	<div class="row">
 		<div class="col-lg-6 marketing-cta__content-container">
 			<div class="container-single-box-center cta__container cta__container--marketing">
@@ -18,17 +18,9 @@ if (!defined('ABSPATH')) {
 				<h3 class="cta__link">I think You Should Hire Me</h3>
 			</div>
 		</div>
-
 		<div class="col-lg-6 marketing-cta__image-container">
-<img src="/wp-content/uploads/2019/06/hero-9.jpg" class="hire-img" alt="image of taxi sign exclaiming for hire">
+			<img src="/wp-content/uploads/2019/06/hero-9.jpg" class="hire-img" alt="image of taxi sign exclaiming for hire">
 		</div>
-
-
 	</div>
-
-
-
-
-
-	</div><!-- Container end -->
-</article><!-- cover end -->
+	<!-- </div> -->
+</article>

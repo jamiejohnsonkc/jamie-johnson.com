@@ -60,6 +60,7 @@ abstract class DUP_PRO_Archive_Build_Mode
 
 class DUP_PRO_Server_Load_Reduction
 {
+
     const None  = 0;
     const A_Bit = 1;
     const More  = 2;
@@ -76,16 +77,7 @@ class DUP_PRO_Server_Load_Reduction
                 return 500;
             case self::None:
             default:
-               /**
-                * In windows the usleep function is buggy and unlike linux it impacts a lot on the execution time
-                * For this reason, if is windows, None must return 0
-                * @todo improve throttle with pagination (one big sleep every X iterations)
-                **/
-                if (DupProSnapLibOSU::isWindows()) {
-                    return 0;
-                } else {
-                    return 2;
-                }
+                return 0;
         }
     }
 }
@@ -579,7 +571,7 @@ class DUP_PRO_Global_Entity extends DUP_PRO_JSON_Entity_Base
 
     public function get_auto_zip_mode()
     {
-        if (($this->archive_build_mode === DUP_PRO_Archive_Build_Mode::Shell_Exec) || ($this->archive_build_mode === DUP_PRO_Archive_Build_Mode::ZipArchive)) {
+        if (($this->archive_build_mode == DUP_PRO_Archive_Build_Mode::Shell_Exec) || ($this->archive_build_mode == DUP_PRO_Archive_Build_Mode::ZipArchive)) {
 			// Don't override, just use what is configured
 			$build_mode = $this->archive_build_mode;
 		} else {
@@ -842,7 +834,7 @@ class DUP_PRO_Global_Entity extends DUP_PRO_JSON_Entity_Base
 	public function get_archive_extension_type()
     {
 		$mode = 'zip';
-		if ($this->archive_build_mode === DUP_PRO_Archive_Build_Mode::DupArchive) {
+		if ($this->archive_build_mode == DUP_PRO_Archive_Build_Mode::DupArchive) {
 			$mode = 'daf';
 		}
 		return $mode;

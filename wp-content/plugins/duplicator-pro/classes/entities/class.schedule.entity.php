@@ -208,7 +208,7 @@ class DUP_PRO_Schedule_Entity extends DUP_PRO_JSON_Entity_Base
             //ARCHIVE
             $package->Archive->PackDir = rtrim(DUPLICATOR_PRO_WPROOTPATH, '/');
             
-            if ($global->archive_build_mode === DUP_PRO_Archive_Build_Mode::DupArchive) {
+            if ($global->archive_build_mode == DUP_PRO_Archive_Build_Mode::DupArchive) {
                 $package->Archive->Format = 'DAF';
             } else {
                 $package->Archive->Format = 'ZIP';

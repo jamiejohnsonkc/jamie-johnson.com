@@ -13,9 +13,9 @@ if (!defined('ABSPATH')) {
 <article class="article__wrapper--fluid article--marketing-splash">
 <div class="marketing-splash__container">
 <div class="pagination marketing-splash__pagination">my purpose</div>
-<h2 class="title">i make marketing better</h2>
+<h1 class="title">i make marketing better</h1>
 <div class="copy__container">
-<p>Today's strategic challenges mandate new approaches.</p> 
+<h2>Today's marketing challenges mandate new approaches.</h2> 
 <p>Customers don't want to be bothered, they don't want to be sold. And they aren't moved by empty or self-serving claims.</p>
 <p>It's time to expect more from your marketing.</p>
 </div>
@@ -26,3 +26,4 @@ if (!defined('ABSPATH')) {
 </div>
 </article>
 </section>
+ 

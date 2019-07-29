@@ -10,22 +10,16 @@
 	?>
 	<section class="section--reasons">
 		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
-			<!-- CONTAINER -->
 
 			<div class="container business-value justification__container justification__container_objectives" id="objectives">
 				<div class="pagination pagination--reasons">my beliefs</div>
 				<div class="justification--flex-container">
-
 					<div class="header__wrapper header__wrapper--reasons">
-					<div class="headline">#1 Outcomes Not Output</div>	
-				
+						<div class="headline">#1 Outcomes Not Output</div>
 						<p class="deck deck__header deck__header--reasons deck__header--objectives">Everything marketing is and does should advance business objectives. Otherwise it's not marketing. It's just spending.</p>
 					</div>
-		
 					<div class="diagram justification__diagram diagram--objectives" id="objectives__diagram">
-					
 						<p class="diagram__header-copy header-copy--objectives-diagram">Everything I do is geared to achieve strategic objectives, improve business health and grow ROI.</p>
-
 						<div class="diagram__list-item-container diagram__list-item-container--objectives">
 							<div class="diagram__content_container objectives-diagram__list-item">
 								<div class="diagram-item__container--23row diagram__content--objectives-icon diagram__content--objectives-bullseye">
@@ -97,78 +91,67 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
-			
-			
+
+
 			</div>
-			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>	
+			<a href="/" class="button ui-button__jump capabilites__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
 		</article>
 
 		<article class="article__wrapper article__wrapper--reasons content justification value-substance__article--background">
-			<!-- CONTAINER -->
-
 			<div class="container business-value justification__container justification__container_grow" id="grow">
-				<!-- <div class="pagination pagination--reasons">I advocate value & substance</div> -->
-				
 				<div class="header__wrapper header__wrapper--reasons">
-					<div class="headline">#2<br> the customer, the customer, the customer</div>	
-
-
-				<div class="diagram__header diagram__header--reasons">
-					<p class="deck deck__header deck__header--reasons deck__header--value">The customer decides what is and isn't important.</p> 
-					<p class="diagram__header-copy">They decide enough to warrant their time, interest and investment. And they have more influence on your success than ever before.</p><p class="diagram__header-copy">Ignore them at your peril. Please them and you will thrive.</p>
-				</div>
-				<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">
-					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="diagram explaining attributes of modern definition of customer value" class="style-svg diagram-content__superior-value_svg" />
-				</div>
-				<!-- <a class="button moreless-button moreless-button__value">Read more</a> -->
-				<div class="read-more__container read-more__value">
-					<div class="justification__conclusion justification__conclusion--background" id="value__conclusion_cultivate">
-						<p class="body__text_lg">Competitive dynamics are evolving. Customers don't want posturing, they want substance and authenticity.</p>
-						<p class="body__text_lg">Before you can generate revenue you have to get found then you have to win their trust. You have to really know your customer and more importantly, be honest about your offering.</p>
+					<div class="headline">#2<br> the customer, the customer, the customer</div>
+					<div class="diagram__header diagram__header--reasons">
+						<p class="deck deck__header deck__header--reasons deck__header--value">The customer decides what is and isn't important.</p>
+						<p class="diagram__header-copy">They decide enough to warrant their time, interest and investment. And they have more influence on your success than ever before.</p>
+						<p class="diagram__header-copy">Ignore them at your peril. Please them and you will thrive.</p>
 					</div>
-				</div>
-				
-			</div>
-
-		</article>
-
-		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
-			<!-- CONTAINER -->
-
-			<div class="container business-value justification__container justification__container_modernize" id="modernize">
-			<div class="header__wrapper header__wrapper--reasons">
-					<div class="headline">#3 Superior Competitive Value Wins</div>	
-
-
-				<div class="diagram__header diagram__header--reasons">
-					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">The modern customer's definition of value transcends far beyond products and services.</p>  -->
-					<!-- <p class="diagram__header-copy">Did you live up to their expectations. How were they treated. Were you a pain in the ass or a delight to work with?</p> -->
-				</div>
-
-
-				<div class="header__modernize">
-					<div class="page__header-text_container page__header-text_container--modernize">
-						<p class="justification__page-header_text justification__page-header_text--square">The modern customer's definition of value transcends far beyond products and services.</p>
-						<p class="justification__page-header_text justification__page-header_text--square">Did you live up to their expectations. How were they treated. Were you a pain in the ass or a delight to work with?</p>
+					<div class="diagram diagram--superior-value justification__diagram diagram__superior-value">	
+					<img src="/wp-content/uploads/2019/01/scv5-01.svg" alt="diagram explaining attributes of modern definition of customer value" class="style-svg diagram-content__superior-value_svg"/>
 					</div>
-					<div class="diagram justification__diagram diagram__modern-marketing">
-						<div class="diagram-content">
-							<img src="/wp-content/uploads/2019/03/modern_marketing_redux-v2a.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram" />
+					<div class="read-more__container read-more__value">
+						<div class="justification__conclusion justification__conclusion--background" id="value__conclusion_cultivate">
+							<p class="body__text_lg">Competitive dynamics are evolving. Customers don't want posturing, they want substance and authenticity.</p>
+							<p class="body__text_lg">Before you can generate revenue you have to get found then you have to win their trust. You have to really know your customer and more importantly, be honest about your offering.</p>
 						</div>
 					</div>
 				</div>
-				<!-- <a class="button moreless-button moreless-button__modernize">Read more</a> -->
-				<div class="read-more__container read-more__modernize">
-					<div class="justification__conclusion" id="value__conclusion_modernize">
-						<p class="body__text_lg">Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must ensure customers find you, trust you and, most importantly, you deliver as promised after the sale.</p>
-					</div>
-				</div>
-				
 			</div>
+		</article>
 
+		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
+			<div class="container business-value justification__container justification__container_modernize" id="modernize">
+				<div class="header__wrapper header__wrapper--reasons">
+					<div class="headline">#3 Superior Competitive Value Wins</div>
+
+
+					<div class="diagram__header diagram__header--reasons">
+					</div>
+
+
+					<div class="header__modernize">
+						<div class="page__header-text_container page__header-text_container--modernize">
+							<p class="justification__page-header_text justification__page-header_text--square">The modern customer's definition of value transcends far beyond products and services.</p>
+							<p class="justification__page-header_text justification__page-header_text--square">Did you live up to their expectations. How were they treated. Were you a pain in the ass or a delight to work with?</p>
+						</div>
+						<div class="diagram justification__diagram diagram__modern-marketing">
+							<div class="diagram-content">
+								<img src="/wp-content/uploads/2019/03/modern_marketing_redux-v2a.svg" alt="modern marketing diagram" class="style-svg modern-marketing-diagram" />
+							</div>
+						</div>
+					</div>
+					<!-- <a class="button moreless-button moreless-button__modernize">Read more</a> -->
+					<div class="read-more__container read-more__modernize">
+						<div class="justification__conclusion" id="value__conclusion_modernize">
+							<p class="body__text_lg">Customers have more control, more options and more influence over your success than ever before. If you want to succeed you must ensure customers find you, trust you and, most importantly, you deliver as promised after the sale.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</article>
 
 		<article class="article__wrapper article__wrapper--reasons content__wrapper justification">
@@ -177,44 +160,45 @@
 			<div class="container business-value justification__container justification__container_optimize" id="optimize">
 				<div class="pagination pagination--reasons">integration & optimization</div>
 				<div class="justification--flex-container">
-				<div class="header__wrapper header__wrapper--reasons">
-					<div class="headline">#4 Marketing Must Transcend Promotions</div>	
+					<div class="header__wrapper header__wrapper--reasons">
+						<div class="headline">#4 Marketing Must Transcend Promotions</div>
 
 
-				<div class="diagram__header diagram__header--reasons">
-					<!-- <p class="deck deck__header deck__header--reasons deck__header--value">Marketing Must Transcend Promotions</p>  -->
-					<p class="diagram__header-copy">Today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale. <p class="diagram__header-copy">Businesses will need marketing functions capable of managing value throughout the customer experience.</p>
-				</div>
-
-
-
-
-					<div class="diagram__container diagram__content_container optimize-diagram__container">
-						<div class="diagram justification__diagram diagram__end-to-end">
-							<div class="diagram-content diagram__end-to-end--horizontal">
-								<img src="/wp-content/uploads/2019/03/end_horz.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--horz"/>
-							</div>
-							<div class="diagram-content diagram__end-to-end--vertical">
-								<div class="progression__end-to-end--vertical">
-									<img src="/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--vert"/>
-								</div>
-								<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div>
-							</div>
+						<div class="diagram__header diagram__header--reasons">
+							<!-- <p class="deck deck__header deck__header--reasons deck__header--value">Marketing Must Transcend Promotions</p>  -->
+							<p class="diagram__header-copy">Today we have to reconsider our conceptions of the buyer/seller relationship and find ways to deliver value before during and after the sale.</p> <p class="diagram__header-copy">Businesses will need marketing functions capable of managing value throughout the customer experience.</p>
 						</div>
-				
-						<div class="read-more__container read-more__optimize">
-							<div class="justification__conclusion">
-								<p class="body__text_lg">I can help you decide how and where to invest your marketing to enable optimal returns.</p>
+
+
+
+
+						<div class="diagram__container diagram__content_container optimize-diagram__container">
+							<div class="diagram justification__diagram diagram__end-to-end">
+								<div class="diagram-content diagram__end-to-end--horizontal">
+									<img src="/wp-content/uploads/2019/03/end_horz.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--horz" />
+								</div>
+								<div class="diagram-content diagram__end-to-end--vertical">
+									<div class="progression__end-to-end--vertical">
+										<img src="/wp-content/uploads/2019/01/e2e_vert_v2.svg" alt="horizontal diagram of the modern elements of strategic marketing" class="style-svg end-to-end--vert" />
+									</div>
+									<div class="diagram-content__caption--sticky">I bring value from end to end of the marketing spectrum.</div>
+								</div>
+							</div>
+
+							<div class="read-more__container read-more__optimize">
+								<div class="justification__conclusion">
+									<p class="body__text_lg">I can help you decide how and where to invest your marketing to enable optimal returns.</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<a class="link link__chevron" href="http://jamiejohnsonmev2.test/modus-operandi#i-advance-business-objectives" title="go to next">
-					<img src="/wp-content/uploads/2018/12/chevdn.svg" alt="chevron pointing down" class="chev--dwn style-svg" id="link__advance_chev-dwn" />
-				</a>
-			</div>
+					<a href="#proof-of-claim" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
+				</div>
+</div>
 		</article>
 
 
 	</section>
+
+		<a href="#marketing-cta" class="button ui-button__jump services-splash__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>

@@ -27,7 +27,7 @@ $container = get_theme_mod('understrap_container_type');
 			<div class="footer-content col-lg-3 col-md-6 col-sm-12">
 				<div class="footer__content-container--contact">
 					<div class="footer__contact--bug">
-						<a href="/index" class="footer__contact--logo-container"><img src="/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></a>
+						<a href="/" class="footer__contact--logo-container"><img src="/wp-content/uploads/2019/05/jj-logo.svg" class="style-svg logo-site-footer" alt="jjohnson logo"></a>
 						<div class="footer__contact--moniker">
 							<a href="/contact" class="footer__contact--name footer__text-link">jamie johnson</a>
 							<!-- <div class="footer__contact--tag">lorem ipsum dolemite</div> -->

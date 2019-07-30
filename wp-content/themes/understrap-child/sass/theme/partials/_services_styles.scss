@@ -137,7 +137,7 @@
           @include vr($font-size: 6, $line-height: 2);
         };
         @include mq('desktop'){
-        @include vr($font-size: 7, $line-height: 6);
+        @include vr($font-size: 7, $line-height: 4);
         }
       }
 }

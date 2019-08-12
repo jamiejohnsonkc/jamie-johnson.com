@@ -58,7 +58,7 @@ if (!defined('ABSPATH')) {
 					<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_32.svg" alt="exp logo" />
 					<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_33.svg" alt="exp logo" />
 					<img class="flexbox-grid__cell--image style-svg" src="/wp-content/uploads/2018/12/exp_34.svg" alt="exp logo" />
-					<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text--flex brands__link--text">Smiles are free.</a></div>
+					<div class="flexbox-grid__cell--image flexbox-grid__last-cell"><a class="link__text--flex brands__link--text"></a></div>
 
 				</div>
 			</div>

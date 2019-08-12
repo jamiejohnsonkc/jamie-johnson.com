@@ -73,17 +73,17 @@
  					</div>
  					<a href="/services#communications" class="link__text">&#8250;learn more about integrative marketing</a>
  				</div>
- 				<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+ 				<a href="#engage" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
  			</div>
 
- 			<div class="offering__content-item offering__content-item--engage" id="optimize">
+ 			<div class="offering__content-item offering__content-item--engage" id="engage">
 
 
 
  				<div class="offering__content-item--container offering__content--light">
  					<div class="container__number">3</div>
- 					<div class="subhead__header">Optimize Marketing Performance</div>
+ 					<div class="subhead__header">Optimize Performance</div>
  					<h4 class="subsubhead">Management, Organization & Control</h4>
  					<div class="image__container offering__image-container">
  						<img src="/wp-content/uploads/2019/01/skills_23.svg" class="style-svg svg-integrative" alt="integration icon">

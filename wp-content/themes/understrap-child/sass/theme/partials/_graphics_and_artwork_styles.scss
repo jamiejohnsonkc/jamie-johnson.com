@@ -148,6 +148,9 @@ min-height: 32em;
     right: -0em;
     bottom: 1.25em;
 }
+@include mq('desktop'){
+    z-index: 4;
+}
 }
 //--reminder--image is flipped so everything is backwards
 #shoes-img{
@@ -206,8 +209,6 @@ min-height: 32em;
         background-repeat: no-repeat;
     }
 }
-
-
 // .bgshoes {
 //     background: none;
 
@@ -416,7 +417,7 @@ display: block;
       stroke: $gray-300;
     }
    #solid_dots, #dots{
-      fill: $dark-sea-green;
+      fill: $primary;
     } 
 }
 

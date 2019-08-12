@@ -4587,7 +4587,7 @@ path.st0 {
   @include mq('desktop') {
     @include vr($padding: 3 0 12 0);
     flex: 1 1 18%;
-    max-width: 34%;
+    max-width: 23%;
     min-height: 95em;
     // flex: 1 1 20%;
     border-left: .05rem $gray-100 solid;

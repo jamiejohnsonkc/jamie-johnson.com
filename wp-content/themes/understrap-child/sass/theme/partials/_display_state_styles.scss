@@ -389,13 +389,6 @@ span.summary-page__subhead_claim--br{
 
 }
 
-.container-hero__img--mobile {
-    @include mq('desktop-wide') {
-        display: none;
-    }
-
-}
-
 .container-hero__img-mobile_shoes{
         @include mq('desktop') {
         display: block;

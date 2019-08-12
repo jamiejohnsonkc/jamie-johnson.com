@@ -1,30 +1,4 @@
-//*   custom color patlette
-$int-orange:                           hsla(6%, 100%, 36%, 1);
-$azureish-white:                       hsla(207%, 64%, 91%, 1);
-$dark-sea-green:                       hsla(143%, 30%, 60%, 1);
-$babe-blue-eyes:                       hsla(203%, 75%, 78%, 1);
-$gunmetal:                             hsla(180%, 13%, 20%, 1);
 
-
-$azureish-white:                       #daeaf7;
-$dark-sea-green:                       #79b791;
-$babe-blue-eyes:                       #9dd1f1;
-
-
-$spiro-disco-ball:                     #23C9FF;
-$magic-mint:                           #A9FFCB;
-
-
-$ash-gray:                             #B3BFBF; 
-$gunmetal-gray:                        #708787;
-$gunmetal:                             rgba(45, 58, 58, 1);
-$rich-primary:                           darken(#daeaf7, 40%);
-$deep-primary:                           darken(#daeaf7, 80%);
-
-$int-orange:                           #ba1200;
-
-
-// $aero-blue: #caffd0;
 
 
 
@@ -110,11 +84,28 @@ $colors:                               map-merge((
 ),                 $colors);
 
 
+//*   custom color palette
 
-$primary:                              $azureish-white;   
-$secondary:                            $babe-blue-eyes;
-$accent:                               $spiro-disco-ball;
-$accent2:                              $dark-sea-green;
+$ash-gray:                             #B3BFBF; 
+$gunmetal-gray:                        #708787;
+$gunmetal:                             rgba(45, 58, 58, 1);
+$rich-primary:                           darken(#daeaf7, 40%);
+$deep-primary:                           darken(#daeaf7, 80%);
+
+
+$primary:                              #daeaf7;   
+$secondary:                            #9dd1f1;
+$accent:                               #23C9FF;
+$blaze:                                #d81e58;
+
+
+// $primary:                              #2191FB;   
+// $secondary:                            #2191FB;
+// $accent:                               #23C9FF;
+// $blaze:                                #d81e58;
+
+
+
 $title-color:					                 $off-black;
 $headline-color:				               $off-black;
 $deep-gray:                             $gray-800;
@@ -126,10 +117,10 @@ $para-color: 					                 inherit;
 //*rgba
 
 
-$link-color:                           $secondary;
+$link-color:                           $blaze ;
 $link-decoration:                      $orange;
 $link-hover-color:                     $accent;
-$link-hover-decoration:                none;
+$link-hover-decoration:                $blaze;
 
 $success:                  		         $green;
 $info:                     		         $cyan;

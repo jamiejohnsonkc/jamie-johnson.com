@@ -1,6 +1,6 @@
 # jamie-johnson.com
 
-what began as curious investigations to add capabilities to an online resume exploded into a two year obsession with learning front-end development. Today the site is the base of my first foray into front-end design and development.
+what began as curious investigations to add capabilities to an online resume exploded into an obsession with learning front-end development. Today the site is the base of my first foray into front-end design and development.
 
 ## Built on the understrap-child theme
 

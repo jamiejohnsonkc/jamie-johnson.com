@@ -120,10 +120,10 @@
  					</div>
  					<div class="flex-item flex-item__b">
  						<div class="background__image--cover">
- 							<img src="/wp-content/uploads/2019/06/hero-7.jpg" class="img-hell-yes" alt="image of door knob placard that reads hell yes">
+ 							<img src="/wp-content/uploads/2019/09/hero-7v2.jpg" class="img-hell-yes" alt="image of door knob placard that reads hell yes">
  						</div>
  					</div>
- 	
+ 	 
  		
 
 				

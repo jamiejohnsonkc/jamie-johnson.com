@@ -34,9 +34,9 @@ if (!defined('ABSPATH')) {
 			</div> -->
 
 			<h1 class="home__splash-label_container">
-				<span class="splash__label splash__label--head">i am a professional <br class="home-splash__label-head_br--tablet-wide"></span>
+				<span class="splash__label splash__label--head">i am a professional&nbsp;<br class="home-splash__label-head_br--tablet-wide"></span>
 				<span class="splash__label splash__label--item">designer</span>
-				<span class="splash__label splash__label_divider">&#x000B7 </span>
+				<span class="splash__label splash__label_divider">&#x000B7;</span>
 				<span class="splash__label splash__label--item">developer</span>
 				<span class="splash__label splash__label_divider">&#x000B7;</span>
 				<span class="splash__label splash__label--item splash__label_item--desktop">producer</span>

@@ -14,7 +14,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
-	<main class="site-main" id="main" role="main">
+	<main class="site-main" id="main">
 	
 			<?php get_template_part( 'panel-content/panel', 'home_page__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__placeholder' ); ?>

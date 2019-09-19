@@ -63,7 +63,7 @@ if (!$human == 0) {
           <section class="container-fluid contact__container" id="contact">
             <div class="row">
               <div class="col-lg-6 container__contact--content">
-                <img src="/wp-content/uploads/2019/06/hero-7.jpg" class="relax-img" alt="image cafe relax">
+                <img src="/wp-content/uploads/2019/06/hero-23.jpg" class="relax-img" alt="image cafe relax">
               </div>
               <div class="col-lg-6 container__contact--form">
                 <div class="contact__form--wrapper">

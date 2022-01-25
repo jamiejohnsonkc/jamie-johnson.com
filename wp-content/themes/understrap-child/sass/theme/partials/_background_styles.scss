@@ -17,7 +17,14 @@
   margin-bottom: 3em;
 }
 
+
+
 .container.background-splash__container{
+  display: flex;
+  flex-direction: column;
+  max-width: 83%;
+  height: 100vh;
+  justify-content: center; 
   @include mq('desktop'){
     width: 61%;
     max-width: 61%;
@@ -31,16 +38,31 @@
 
 .background__splash--title{
   @include mq('tablet-wide'){
-    width: 61%;
-    max-width: 61%;
+    width: 61.8%;
+    max-width: 61.8%;
   }
-    @include mq('desktop-wide'){
+    @include mq('desktop'){
+      width: 61.8%;
+      max-width: 61.8%;
+    z-index: 5; 
+  }
+  @include mq('desktop-wide'){
     width: 50%;
     max-width: 50%;
   }
 }
 
-.link__background-splash--jump{
+.background__splash--title-sub{
+  @include mq('desktop'){
+    margin-bottom: auto;
+  }
+  @include mq('desktop-wide'){
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+.background-splash__link--jump{
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -222,6 +244,10 @@ margin-bottom: 0;
     width: 61%;
     max-width: 61%;
   }
+  @include mq('desktop'){
+    width: 38%;
+    max-width: 38%;
+  }
 }
 
 .personal__link-text{
@@ -235,12 +261,7 @@ margin-bottom: 0;
 
 
 
-.personal{
-  height: 850px;
-          @include mq('phone'){
-  
-  }
-  }
+
   
   
   .container.about-me__container_personal{
@@ -339,6 +360,10 @@ max-width: 100%;
      @include mq('tablet-wide'){
       width: 74%;
       max-width: 74%;
+      }
+      @include mq('desktop'){
+        width: 50%;
+        max-width: 50%;
       }
 
 }
@@ -526,16 +551,23 @@ justify-content: center;
 }
 
 @include mq("tablet-wide") {
-  .personal {
-    height: 110em;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
   .about-me__container_personal {
     height: 90em;
   }
+}
+
+.personal{
+  height: 850px;
+
+  @include mq('tablet-wide'){
+  height: 110em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@include mq('desktop'){
+height: 125em;
+}
 }
 
 

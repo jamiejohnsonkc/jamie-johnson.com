@@ -62,15 +62,19 @@ background: none;
     height: 64%;  
     padding: 0 8%;
     transform: translateX(15%);
-
-    .pagination {}
+    background: rgba(255,255,255,.46);
+    padding: 2%;
   }
 
+    .pagination {}
+  
+
   @include mq('desktop') {
-    max-width: 38%;
-    transform: translateX(-50%);
-    padding: 2% 4%;
-    height: 74%;
+    max-width: 24%;
+    width: 33%;
+    transform: translate(-84%,-17%);
+    background: rgba(255,255,255,.46);
+    padding: 2%;
   }
 }
 

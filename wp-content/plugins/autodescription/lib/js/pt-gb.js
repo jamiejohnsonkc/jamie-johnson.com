@@ -7,7 +7,7 @@
 
 /**
  * The SEO Framework plugin
- * Copyright (C) 2019 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
+ * Copyright (C) 2019 - 2020 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published
@@ -39,19 +39,27 @@ window.tsfPTGB = function( $ ) {
 	/**
 	 * Data property injected by WordPress l10n handler.
 	 *
-	 * @since 3.2.0
-	 * @access private
+	 * @since 4.0.0
+	 * @access public
 	 * @type {(Object<string, *>)|boolean|null} l10n Localized strings
 	 */
-	var l10n = 'undefined' !== typeof tsfPTL10n && tsfPTL10n;
+	const l10n = 'undefined' !== typeof tsfPTL10n && tsfPTL10n;
 
+	/**
+	 * @since 3.2.0
+	 * @access private
+	 */
 	const { addFilter } = wp.hooks;
 	const { createElement, Fragment } = wp.element;
 	const { SelectControl } = wp.components;
 	const { addQueryArgs } = wp.url;
 	const apiFetch = wp.apiFetch;
-	const { invoke } = lodash;
+	const { invoke, unescape } = lodash;
 
+	/**
+	 * @since 3.2.0
+	 * @access private
+	 */
 	const DEFAULT_QUERY = {
 		per_page: -1,
 		orderby:  'id',
@@ -62,16 +70,19 @@ window.tsfPTGB = function( $ ) {
 	/**
 	 * Initializes primary term selection for gutenberg.
 	 *
+	 * @since 3.2.0
+	 * @access private
+	 *
 	 * @function
 	 * @return {undefined}
 	 */
 	const _initPrimaryTerm = () => {
 
-		if ( ! tsf.hasInput || ! Object.keys( l10n.taxonomies ).length )
+		if ( ! Object.keys( l10n.taxonomies ).length )
 			return;
 
-		let taxonomies = l10n.taxonomies,
-			inputTemplate = wp.template( 'tsf-primary-term-selector' ),
+		let taxonomies       = l10n.taxonomies,
+			inputTemplate    = wp.template( 'tsf-primary-term-selector' ),
 			registeredFields = {};
 
 		const geti18n = ( taxonomy, what ) => what in taxonomies[ taxonomy ].i18n && taxonomies[ taxonomy ].i18n[ what ] || '';
@@ -99,13 +110,6 @@ window.tsfPTGB = function( $ ) {
 				}
 			}
 		}
-
-		// Hook data handles.
-		(()=>{
-			for ( let taxonomy in taxonomies ) {
-				addDataInput( taxonomy );
-			}
-		})();
 
 		var dataStores = {};
 		class DataStore {
@@ -138,60 +142,53 @@ window.tsfPTGB = function( $ ) {
 		const getStore    = slug => dataStores[ slug ] || createStore( slug );
 
 		class PrimaryTermSelectorHandler extends React.Component {
-			constructor( props ) {
-				super( props );
-
-				this.state = {
-					loading: true,
-				}
-			}
-
 			componentDidMount() {
-				this.updateData();
+				// Mounted for the first time.
+				if ( ! this.dsAccess().registeredData() )
+					this.registerData();
+
 				if ( this.dsAccess().registeredData() ) {
-					this.setState( {
-						loading: false,
-					} );
+					// Remounted thanks to adding a new term (from 1 selected, now 2).
+					if ( this.hasNewTerms() ) {
+						this.fetchTerms();
+					} else {
+						this.setState( {
+							loading: false,
+						} );
+					}
 				}
 			}
 
 			componentWillUnmount() {
 				invoke( this.fetchRequest, [ 'abort' ] );
-				invoke( this.addRequest, [ 'abort' ] );
 			}
 
 			componentDidUpdate( prevProps, prevState ) {
-				this.updateData();
-				if ( this.props.terms.length > 2 && ! this.dsAccess().get( 'availableTerms' ) ) {
-					this.fetchTerms();
-				} else if ( this.props.terms !== prevProps.terms ) {
-					let newID = this.props.terms.filter( termID => prevProps.terms.indexOf( termID ) === -1 );
-					if ( newID.length && ! this.isTermAvailable( newID[0] ) ) {
+				// No noteworthy update occurred. Probably, only the state updated.
+				if ( prevProps.terms === this.props.terms ) return;
+
+				if ( this.props.terms.length > 1 ) {
+					if ( ! this.dsAccess().get( 'availableTerms' ) || this.hasNewTerms() ) {
 						this.fetchTerms();
 					}
 				}
 			}
 
-			updateData() {
-				if ( ! this.dsAccess().registeredData() ) {
-					this.dsAccess().set( 'availableTerms', [] );
-					this.fetchTerms();
-				}
-
-				this.dsAccess().set( 'selectedTerms', this.props.terms );
-			}
-
-			updateTerms() {
-				this.updateData();
+			registerData() {
+				this.dsAccess().set( 'availableTerms', [] );
+				this.fetchTerms();
 			}
 
 			dsAccess() {
 				return getStore( this.props.slug );
 			}
 
+			hasNewTerms() {
+				let availableTermsIds = ( this.dsAccess().get( 'availableTerms' ) || [] ).map( x => x.id );
+				return ! this.props.terms.every( id => availableTermsIds.includes( id ) );
+			}
 			isTermAvailable( id ) {
-				let availableTerms = this.dsAccess().get( 'availableTerms' );
-				return availableTerms.some( term => term.id === id );
+				return this.dsAccess().get( 'availableTerms' ).some( term => term.id === id );
 			}
 
 			fetchTerms() {
@@ -199,12 +196,15 @@ window.tsfPTGB = function( $ ) {
 				if ( ! taxonomy ) return;
 
 				this.setState( {
-					selectedTerms: this.props.terms,
 					loading: true,
 				} );
 
+				// Abort previous, if any? WP doesn't do that either...
 				this.fetchRequest = apiFetch( {
-					path: addQueryArgs( `/wp/v2/${ taxonomy.rest_base }`, DEFAULT_QUERY ),
+					path: addQueryArgs(
+						`/wp/v2/${ taxonomy.rest_base }`,
+						DEFAULT_QUERY
+					),
 				} );
 				this.fetchRequest.then(
 					( terms ) => { // resolve
@@ -223,29 +223,41 @@ window.tsfPTGB = function( $ ) {
 						this.setState( {
 							loading: false,
 						} );
-						this.forceUpdate();
+						// Users may see empty select fields now... Strip them? See getTermName instead?
+						// if ( ! this.dsAccess().get( 'availableTerms' ).length ) {}
 					}
 				);
 			}
 		}
 
 		class TermSelector extends PrimaryTermSelectorHandler {
-			constructor( props ) {
-				super( props );
-
+			constructor() {
+				super( ...arguments );
 				this.onChange = this.onChange.bind( this );
+				this.state = {
+					loading: true,
+				}
 			}
 
 			getTermName( id ) {
 				let availableTerms = this.dsAccess().get( 'availableTerms' );
+
+				if ( ! Array.isArray( availableTerms ) ) return '';
 
 				let term = availableTerms.find( term => term.id === id );
 				return term && term.name || '';
 			}
 
 			getSelectOptions() {
-				return this.dsAccess().get( 'selectedTerms' ).sort().map( id => {
-					return { value: id, label: this.getTermName( id ) };
+				// Terms might not've been registered (yet).
+				if ( ! Array.isArray( this.props.terms ) ) return '';
+
+				return this.props.terms.sort().map( id => {
+					return {
+						value: id,
+						// unescape is also in tsf.js. Prevents double-escape, since React re-escapes.
+						label: unescape( this.getTermName( id ) )
+					};
 				} );
 			}
 
@@ -254,30 +266,35 @@ window.tsfPTGB = function( $ ) {
 					options: this.getSelectOptions(),
 					value:   setPrimaryTermID( this.props.slug, value )
 				} );
-				tsf.registerChange();
+				'tsfAys' in window && tsfAys.registerChange();
 			}
 
 			isDisabled() {
-				return !! this.state.loading;
+				// Terms might not've been registered (yet).
+				if ( this.state.loading || ! Array.isArray( this.props.terms ) )
+					return true;
+
+				let availableTerms = this.dsAccess().get( 'availableTerms' );
+				return ! Array.isArray( availableTerms ) || ! availableTerms.length;
 			}
 
 			render() {
-				this.updateData();
+				// React causes this to loop back to render() once because of debugRenderPhaseSideEffectsForStrictMode...
 				return createElement(
 					SelectControl,
 					{
-						label: geti18n( this.props.slug, 'selectPrimary' ),
-						value: getPrimaryTermID( this.props.slug ),
+						label:     geti18n( this.props.slug, 'selectPrimary' ),
+						value:     getPrimaryTermID( this.props.slug ),
 						className: 'tsf-pt-gb-selector',
-						onChange: this.onChange,
-						options: this.state.loading ? '' : this.getSelectOptions(),
-						disabled: this.isDisabled(),
+						onChange:  this.onChange,
+						options:   this.getSelectOptions(),
+						disabled:  this.isDisabled(),
 					},
 				);
 			}
 		}
 
-		const primaryTermSelectorFilter = PostTaxonomyType => class extends PrimaryTermSelectorHandler {
+		const primaryTermSelectorFilter = PostTaxonomyType => class extends React.Component {
 			initSelectors() {
 				const { slug, terms } = this.props;
 				if ( hasDataInput( slug ) ) {
@@ -297,8 +314,15 @@ window.tsfPTGB = function( $ ) {
 			}
 
 			render() {
-				if ( ! this.props.slug in taxonomies ) return;
+				if ( ! ( this.props.slug in taxonomies ) ) {
+					// Return original component.
+					return createElement(
+						PostTaxonomyType,
+						this.props,
+					);
+				}
 
+				// React causes this to loop back to render() once because of debugRenderPhaseSideEffectsForStrictMode...
 				return createElement(
 					Fragment,
 					{},
@@ -306,21 +330,28 @@ window.tsfPTGB = function( $ ) {
 						PostTaxonomyType,
 						this.props,
 					),
+					// If we can access PostTaxonomyType from here, we can bypass the API fetch and use its results from state instead.
 					this.initSelectors()
 				);
 			}
 		}
 
-		addFilter(
-			'editor.PostTaxonomyType',
-			'tsf/pt',
-			primaryTermSelectorFilter,
-			20
-		);
+		const _init = () => {
+			for ( let taxonomy in taxonomies ) {
+				addDataInput( taxonomy );
+			}
+
+			addFilter(
+				'editor.PostTaxonomyType',
+				'tsf/pt',
+				primaryTermSelectorFilter,
+				20
+			);
+		}
+		_init();
 	}
 
-	//? IE11 Object.assign() alternative.
-	return $.extend( {
+	return Object.assign( {
 		/**
 		 * Initialises all aspects of the scripts.
 		 * You shouldn't call this.
@@ -331,9 +362,11 @@ window.tsfPTGB = function( $ ) {
 		 * @function
 		 * @return {undefined}
 		 */
-		load: function() {
-			$( document.body ).on( 'tsf-onload', _initPrimaryTerm );
+		load: () => {
+			document.body.addEventListener( 'tsf-onload', _initPrimaryTerm );
 		}
-	}, {} );
+	}, {}, {
+		l10n
+	} );
 }( jQuery );
-jQuery( window.tsfPTGB.load );
+window.tsfPTGB.load();

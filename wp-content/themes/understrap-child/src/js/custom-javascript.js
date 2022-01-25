@@ -1,18 +1,17 @@
+//alert('Hello World!');
 
-  //alert('Hello World!');
+// function myFunction() { // Declare a function
+//   document.getElementById("demo").innerHTML = "Hello World!";
+// }
 
-  // function myFunction() { // Declare a function
-  //   document.getElementById("demo").innerHTML = "Hello World!";
-  // }
-   
-  // myFunction(); // Call the function 
+// myFunction(); // Call the function 
 
-  
-  // function checkWidth() { // Declare a function
-  //   document.getElementById("demo").innerHTML = "Hello World!";
-  // }
-   
-  // myFunction(); // Call the function 
+
+// function checkWidth() { // Declare a function
+//   document.getElementById("demo").innerHTML = "Hello World!";
+// }
+
+// myFunction(); // Call the function 
 
 
 //   jQuery(document).ready(function ($) {
@@ -46,18 +45,18 @@
 // $(window).resize(checkWidth);
 // });
 
-jQuery(document).ready(function ($) {
-  if($(window).width() < 769) {
-     $("#advantage").addClass("carousel");
-  }    
+jQuery(document).ready(function($) {
+    if ($(window).width() < 769) {
+        $("#advantage").addClass("carousel");
+    }
 });
 
 
-jQuery(document).ready(function ($) {
-  if($(window).width() > 768) {
-     $(".expertise__carousel-item").removeClass("active");
-     $("#advantage").removeClass("carousel-fade", "carousel");
-  }    
+jQuery(document).ready(function($) {
+    if ($(window).width() > 768) {
+        $(".expertise__carousel-item").removeClass("active");
+        $("#advantage").removeClass("carousel-fade", "carousel");
+    }
 });
 
 // jQuery(document).ready(function ($) {
@@ -88,87 +87,87 @@ jQuery(document).ready(function ($) {
 
 
 jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-1"),
-      close = document.getElementById("expt-close-1"),
-      over = document.getElementById("expt-overlay-1");
-  if(open){
-  open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
+    var open = document.getElementById("open-expt-overlay-1"),
+        close = document.getElementById("expt-close-1"),
+        over = document.getElementById("expt-overlay-1");
+    if (open) {
+        open.addEventListener("click", function() {
+            over.classList.add("show");
+            body.classList.add("nope");
+        });
+        close.addEventListener("click", function() {
+            over.classList.remove("show");
+            body.classList.remove("nope");
+        });
+    }
 });
 
 jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-2"),
-      close = document.getElementById("expt-close-2"),
-      over = document.getElementById("expt-overlay-2");
-  if(open){
-  open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
+    var open = document.getElementById("open-expt-overlay-2"),
+        close = document.getElementById("expt-close-2"),
+        over = document.getElementById("expt-overlay-2");
+    if (open) {
+        open.addEventListener("click", function() {
+            over.classList.add("show");
+            body.classList.add("nope");
+        });
+        close.addEventListener("click", function() {
+            over.classList.remove("show");
+            body.classList.remove("nope");
+        });
+    }
 });
 
 jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-3"),
-      close = document.getElementById("expt-close-3"),
-      over = document.getElementById("expt-overlay-3");
- 
- if(open){
-  open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
+    var open = document.getElementById("open-expt-overlay-3"),
+        close = document.getElementById("expt-close-3"),
+        over = document.getElementById("expt-overlay-3");
+
+    if (open) {
+        open.addEventListener("click", function() {
+            over.classList.add("show");
+            body.classList.add("nope");
+        });
+        close.addEventListener("click", function() {
+            over.classList.remove("show");
+            body.classList.remove("nope");
+        });
+    }
 });
 
 jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-4"),
-      close = document.getElementById("expt-close-4"),
-      over = document.getElementById("expt-overlay-4");
- 
- if(open){
-  open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
+    var open = document.getElementById("open-expt-overlay-4"),
+        close = document.getElementById("expt-close-4"),
+        over = document.getElementById("expt-overlay-4");
+
+    if (open) {
+        open.addEventListener("click", function() {
+            over.classList.add("show");
+            body.classList.add("nope");
+        });
+        close.addEventListener("click", function() {
+            over.classList.remove("show");
+            body.classList.remove("nope");
+        });
+    }
 });
 
 jQuery(document).ready(function($) {
-  var open = document.getElementById("open-expt-overlay-5"),
-      close = document.getElementById("expt-close-5"),
-      over = document.getElementById("expt-overlay-5");
-      body = document.body;
-    
-  if(open){
-    open.addEventListener("click", function(){
-    over.classList.add("show");
-   body.classList.add("nope");
-  });
-  close.addEventListener("click", function(){
-    over.classList.remove("show");
-    body.classList.remove("nope");
-  });
-}
+    var open = document.getElementById("open-expt-overlay-5"),
+        close = document.getElementById("expt-close-5"),
+        over = document.getElementById("expt-overlay-5");
+    body = document.body;
+
+    if (open) {
+        open.addEventListener("click", function() {
+            over.classList.add("show");
+            body.classList.add("nope");
+        });
+        close.addEventListener("click", function() {
+            over.classList.remove("show");
+            body.classList.remove("nope");
+        });
+    }
 });
 
 
@@ -181,48 +180,48 @@ jQuery(document).ready(function($) {
 
 
 jQuery(document).ready(function($) {
-$('.moreless-button__outcomes').click(function() {
-  $('.read-more__outcomes').slideToggle();
-  if ($('.moreless-button__outcomes').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
-});
-});
-
-jQuery(document).ready(function($) {
-$('.moreless-button__value').click(function() {
-  $('.read-more__value').slideToggle();
-  if ($('.moreless-button__value').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
-});
+    $('.moreless-button__outcomes').click(function() {
+        $('.read-more__outcomes').slideToggle();
+        if ($('.moreless-button__outcomes').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
 
 jQuery(document).ready(function($) {
-$('.moreless-button__modernize').click(function() {
-  $('.read-more__modernize').slideToggle();
-  if ($('.moreless-button__modernize').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
+    $('.moreless-button__value').click(function() {
+        $('.read-more__value').slideToggle();
+        if ($('.moreless-button__value').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
+
+jQuery(document).ready(function($) {
+    $('.moreless-button__modernize').click(function() {
+        $('.read-more__modernize').slideToggle();
+        if ($('.moreless-button__modernize').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
 
 
 jQuery(document).ready(function($) {
-$('.moreless-button__optimize').click(function() {
-  $('.read-more__optimize').slideToggle();
-  if ($('.moreless-button__optimize').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
-});
+    $('.moreless-button__optimize').click(function() {
+        $('.read-more__optimize').slideToggle();
+        if ($('.moreless-button__optimize').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
 
 
@@ -232,27 +231,27 @@ $('.moreless-button__optimize').click(function() {
 
 
 jQuery(document).ready(function($) {
-  $('#expand-perspective').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-})
+    $('#expand-perspective').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+    });
 });
 
 jQuery(document).ready(function($) {
-  $('#expand-paradigm').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-})
+    $('#expand-paradigm').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+    });
 });
 
 jQuery(document).ready(function($) {
-  $('#expand-time').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-})
+    $('#expand-time').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+    });
 });
 
 
@@ -265,30 +264,30 @@ jQuery(document).ready(function($) {
 
 
 jQuery(document).ready(function($) {
-  $('#expand-mo-solutions').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-  
-})
+    $('#expand-mo-solutions').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+
+    });
 });
 
 
 jQuery(document).ready(function($) {
-  $('#expand-mo-execution').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-})
+    $('#expand-mo-execution').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+    });
 });
 
 
 jQuery(document).ready(function($) {
-  $('#expand-mo-scale').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-  $(id).slideToggle(500);
-})
+    $('#expand-mo-scale').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).slideToggle(500);
+    });
 });
 
 
@@ -300,36 +299,36 @@ jQuery(document).ready(function($) {
 
 
 jQuery(document).ready(function($) {
-$('.moreless-button__dev-design').click(function() {
-  $('.panel__content_dev-design--read-more').slideToggle();
-  if ($('.moreless-button__dev-design').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
-});
-});
-
-jQuery(document).ready(function($) {
-$('.moreless-button__planning-analysis').click(function() {
-  $('.panel__content_planning-analysis--read-more').slideToggle();
-  if ($('.moreless-button__planning-analysis').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
-});
+    $('.moreless-button__dev-design').click(function() {
+        $('.panel__content_dev-design--read-more').slideToggle();
+        if ($('.moreless-button__dev-design').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
 
 jQuery(document).ready(function($) {
-$('.moreless-button__ops-management').click(function() {
-  $('.panel__content_ops-management--read-more').slideToggle();
-  if ($('.moreless-button__ops-management').text() == "Read more") {
-    $(this).text("Read less")
-  } else {
-    $(this).text("Read more")
-  }
+    $('.moreless-button__planning-analysis').click(function() {
+        $('.panel__content_planning-analysis--read-more').slideToggle();
+        if ($('.moreless-button__planning-analysis').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
+
+jQuery(document).ready(function($) {
+    $('.moreless-button__ops-management').click(function() {
+        $('.panel__content_ops-management--read-more').slideToggle();
+        if ($('.moreless-button__ops-management').text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        }
+    });
 });
 
 
@@ -344,9 +343,9 @@ $('.moreless-button__ops-management').click(function() {
 //*=============================================*/
 
 jQuery(document).ready(function($) {
-  $( ".ui-button__expand" ).on("click", function() {
- $(this).toggleClass("rotate");
-  })
+    $(".ui-button__expand").on("click", function() {
+        $(this).toggleClass("rotate");
+    });
 });
 
 
@@ -460,19 +459,19 @@ function topFunction() {
 // var $el, $ps, $up, totalHeight;
 
 // $(".backstory__content .button").click(function() {
-      
+
 //   totalHeight = 0
 
 //   $el = $(this);
 //   $p  = $el.parent();
 //   $up = $p.parent();
 //   $ps = $up.find("p:not('.read-more')");
-  
+
 //   // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
 //   $ps.each(function() {
 //     totalHeight += $(this).outerHeight();
 //   });
-        
+
 //   $up
 //     .css({
 //       // Set height to prevent instant jumpdown when max height is removed
@@ -482,13 +481,13 @@ function topFunction() {
 //     .animate({
 //       "height": totalHeight
 //     });
-  
+
 //   // fade out read-more
 //   $p.fadeOut();
-  
+
 //   // prevent jump-down
 //   return false;
-    
+
 // }); 
 
 
@@ -501,8 +500,8 @@ function topFunction() {
 /*  $(window).resize(function(){
     alterClass();
   });*/
-  //Fire it when the page first loads:
-  /*alterClass();*/
+//Fire it when the page first loads:
+/*alterClass();*/
 
 
 // fitty('.fit');

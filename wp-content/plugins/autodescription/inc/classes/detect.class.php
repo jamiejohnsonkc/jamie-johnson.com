@@ -1,14 +1,16 @@
 <?php
 /**
- * @package The_SEO_Framework\Classes
+ * @package The_SEO_Framework\Classes\Facade\Detect
+ * @subpackage The_SEO_Framework\Compatibility
  */
+
 namespace The_SEO_Framework;
 
-defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
+\defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 
 /**
  * The SEO Framework plugin
- * Copyright (C) 2015 - 2019 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
+ * Copyright (C) 2015 - 2020 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published
@@ -33,58 +35,11 @@ defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 class Detect extends Render {
 
 	/**
-	 * Determines if we're doing ajax.
-	 *
-	 * @todo use wp_doing_ajax() in a future version. Requires WP 4.7+.
-	 * @since 2.9.0
-	 * @staticvar bool $cache
-	 *
-	 * @return bool True if AJAX
-	 */
-	public function doing_ajax() {
-		static $cache = null;
-
-		return isset( $cache ) ? $cache : $cache = defined( 'DOING_AJAX' ) && DOING_AJAX;
-	}
-
-	/**
-	 * Tests if input URL matches current domain.
-	 *
-	 * @since 2.9.4
-	 *
-	 * @param string $url The URL to test. Required.
-	 * @return bool true on match, false otherwise.
-	 */
-	public function matches_this_domain( $url ) {
-
-		if ( ! $url )
-			return false;
-
-		static $home_domain;
-
-		if ( ! $home_domain ) {
-			$home_domain = \esc_url_raw( \get_home_url(), [ 'http', 'https' ] );
-			//= Simply convert to HTTPS/HTTP based on is_ssl()
-			$home_domain = $this->set_url_scheme( $home_domain );
-		}
-
-		$url = \esc_url_raw( $url, [ 'http', 'https' ] );
-		//= Simply convert to HTTPS/HTTP based on is_ssl()
-		$url = $this->set_url_scheme( $url );
-
-		//= If they start with the same, we can assume it's the same domain.
-		if ( 0 === stripos( $url, $home_domain ) )
-			return true;
-
-		return false;
-	}
-
-	/**
 	 * Returns list of active plugins.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.6.1
-	 * @staticvar array $active_plugins
-	 * @credits JetPack for most code.
+	 * @credits Jetpack for most code.
 	 *
 	 * @return array List of active plugins.
 	 */
@@ -115,7 +70,7 @@ class Detect extends Render {
 	 * Filterable list of conflicting plugins.
 	 *
 	 * @since 2.6.0
-	 * @credits JetPack for most code.
+	 * @credits Jetpack for most code.
 	 *
 	 * @return array List of conflicting plugins.
 	 */
@@ -188,6 +143,7 @@ class Detect extends Render {
 	 * @since 1.3.0
 	 * @since 2.8.0 : 1. Can now check for globals.
 	 *                2. Switched detection order from FAST to SLOW.
+	 * @since 4.0.6 Can no longer autoload classes.
 	 *
 	 * @param array $plugins Array of array for constants, classes and / or functions to check for plugin existence.
 	 * @return boolean True if plugin exists or false if plugin constant, class or function not detected.
@@ -198,56 +154,53 @@ class Detect extends Render {
 			foreach ( $plugins['globals'] as $name ) {
 				if ( isset( $GLOBALS[ $name ] ) ) {
 					return true;
-					break;
 				}
 			}
 		}
 
-		//* Check for constants
+		// Check for constants
 		if ( isset( $plugins['constants'] ) ) {
 			foreach ( $plugins['constants'] as $name ) {
-				if ( defined( $name ) ) {
+				if ( \defined( $name ) ) {
 					return true;
-					break;
 				}
 			}
 		}
 
-		//* Check for functions
+		// Check for functions
 		if ( isset( $plugins['functions'] ) ) {
 			foreach ( $plugins['functions'] as $name ) {
-				if ( function_exists( $name ) ) {
+				if ( \function_exists( $name ) ) {
 					return true;
-					break;
 				}
 			}
 		}
 
-		//* Check for classes
+		// Check for classes
 		if ( isset( $plugins['classes'] ) ) {
 			foreach ( $plugins['classes'] as $name ) {
-				if ( class_exists( $name ) ) {
+				// phpcs:ignore, TSF.Performance.Functions.PHP -- we don't autoload.
+				if ( class_exists( $name, false ) ) {
 					return true;
-					break;
 				}
 			}
 		}
 
-		//* No globals, constant, function, or class found to exist
+		// No globals, constant, function, or class found to exist
 		return false;
 	}
 
 	/**
 	 * Detect if you can use the given constants, functions and classes.
-	 * All must be available to return true.
+	 * All inputs must be available for this method to return true.
+	 * Memoizes the return value for the input argument--sorts the array deeply to ensure a match.
 	 *
 	 * @since 2.5.2
-	 * @staticvar array $cache
 	 * @uses $this->detect_plugin_multi()
 	 *
-	 * @param array $plugins Array of array for globals, constants, classes
-	 *              and/or functions to check for plugin existence.
-	 * @param bool $use_cache Bypasses cache if false
+	 * @param array $plugins   Array of array for globals, constants, classes
+	 *                         and/or functions to check for plugin existence.
+	 * @param bool  $use_cache Bypasses cache if false
 	 */
 	public function can_i_use( array $plugins = [], $use_cache = true ) {
 
@@ -258,22 +211,24 @@ class Detect extends Render {
 
 		$mapped = [];
 
-		//* Prepare multidimensional array for cache.
+		// Prepare multidimensional array for cache.
 		foreach ( $plugins as $key => $func ) {
-			if ( ! is_array( $func ) )
+			if ( ! \is_array( $func ) )
 				return false; // doing it wrong...
 
-			//* Sort alphanumeric by value, put values back after sorting.
+			// Sort alphanumeric by value, put values back after sorting.
+			// TODO Use asort or usort instead???
 			$func = array_flip( $func );
 			ksort( $func );
 			$func = array_flip( $func );
 
-			//* Glue with underscore and space for debugging purposes.
+			// Glue with underscore and space for debugging purposes.
 			$mapped[ $key ] = $key . '_' . implode( ' ', $func );
 		}
 
 		ksort( $mapped );
-		$key = serialize( $mapped ); // phpcs:ignore -- No objects are inserted, nor is this ever unserialized.
+		// phpcs:ignore, WordPress.PHP.DiscouragedPHPFunctions -- No objects are inserted, nor is this ever unserialized.
+		$key = serialize( $mapped );
 
 		if ( isset( $cache[ $key ] ) )
 			return $cache[ $key ];
@@ -286,43 +241,55 @@ class Detect extends Render {
 	 * All parameters must match and return true.
 	 *
 	 * @since 2.5.2
+	 * @since 4.0.6 : 1. Can now check for globals.
+	 *                2. Switched detection order from FAST to SLOW.
+	 *                3. Can no longer autoload classes.
+	 * This method is only used by can_i_use(), and is only effective in the Ultimate Member compat file...
+	 * @TODO deprecate?
 	 *
 	 * @param array $plugins Array of array for constants, classes and / or functions to check for plugin existence.
 	 * @return bool True if ALL functions classes and constants exists or false if plugin constant, class or function not detected.
 	 */
 	public function detect_plugin_multi( array $plugins ) {
 
-		//* Check for classes
-		if ( isset( $plugins['classes'] ) ) {
-			foreach ( $plugins['classes'] as $name ) {
-				if ( ! class_exists( $name ) ) {
+		// Check for globals
+		if ( isset( $plugins['globals'] ) ) {
+			foreach ( $plugins['globals'] as $name ) {
+				if ( ! isset( $GLOBALS[ $name ] ) ) {
 					return false;
-					break;
 				}
 			}
 		}
 
-		//* Check for functions
-		if ( isset( $plugins['functions'] ) ) {
-			foreach ( $plugins['functions'] as $name ) {
-				if ( ! function_exists( $name ) ) {
-					return false;
-					break;
-				}
-			}
-		}
-
-		//* Check for constants
+		// Check for constants
 		if ( isset( $plugins['constants'] ) ) {
 			foreach ( $plugins['constants'] as $name ) {
-				if ( ! defined( $name ) ) {
+				if ( ! \defined( $name ) ) {
 					return false;
-					break;
 				}
 			}
 		}
 
-		//* All classes, functions and constant have been found to exist
+		// Check for functions
+		if ( isset( $plugins['functions'] ) ) {
+			foreach ( $plugins['functions'] as $name ) {
+				if ( ! \function_exists( $name ) ) {
+					return false;
+				}
+			}
+		}
+
+		// Check for classes
+		if ( isset( $plugins['classes'] ) ) {
+			foreach ( $plugins['classes'] as $name ) {
+				// phpcs:ignore, TSF.Performance.Functions.PHP -- we don't autoload.
+				if ( ! class_exists( $name, false ) ) {
+					return false;
+				}
+			}
+		}
+
+		// All classes, functions and constant have been found to exist
 		return true;
 	}
 
@@ -344,16 +311,15 @@ class Detect extends Render {
 		$theme_parent = strtolower( $wp_get_theme->get( 'Template' ) );
 		$theme_name   = strtolower( $wp_get_theme->get( 'Name' ) );
 
-		if ( is_string( $themes ) ) {
+		if ( \is_string( $themes ) ) {
 			$themes = strtolower( $themes );
 			if ( $themes === $theme_parent || $themes === $theme_name )
 				return true;
-		} elseif ( is_array( $themes ) ) {
+		} elseif ( \is_array( $themes ) ) {
 			foreach ( $themes as $theme ) {
 				$theme = strtolower( $theme );
 				if ( $theme === $theme_parent || $theme === $theme_name ) {
 					return true;
-					break;
 				}
 			}
 		}
@@ -363,10 +329,11 @@ class Detect extends Render {
 
 	/**
 	 * Determines if other SEO plugins are active.
+	 * Memoizes the return value.
 	 *
 	 * @since 1.3.0
 	 * @since 2.6.0 Uses new style detection.
-	 * @since 3.1.0: The filter no longer short-circuits the function when it's false.
+	 * @since 3.1.0 The filter no longer short-circuits the function when it's false.
 	 *
 	 * @return bool SEO plugin detected.
 	 */
@@ -383,7 +350,7 @@ class Detect extends Render {
 			$conflicting_plugins = $this->get_conflicting_plugins( 'seo_tools' );
 
 			foreach ( $conflicting_plugins as $plugin_name => $plugin ) {
-				if ( in_array( $plugin, $active_plugins, true ) ) {
+				if ( \in_array( $plugin, $active_plugins, true ) ) {
 					/**
 					 * @since 2.6.1
 					 * @since 3.1.0 Added second and third parameters.
@@ -409,10 +376,11 @@ class Detect extends Render {
 
 	/**
 	 * Determines if other Open Graph or SEO plugins are active.
+	 * Memoizes the return value.
 	 *
 	 * @since 1.3.0
-	 * @since 2.8.0: No longer checks for old style filter.
-	 * @since 3.1.0: The filter no longer short-circuits the function when it's false.
+	 * @since 2.8.0 No longer checks for old style filter.
+	 * @since 3.1.0 The filter no longer short-circuits the function when it's false.
 	 *
 	 * @return bool True if OG or SEO plugin detected.
 	 */
@@ -423,9 +391,9 @@ class Detect extends Render {
 		if ( isset( $detected ) )
 			return $detected;
 
-		//* Detect SEO plugins beforehand.
-		if ( $detected = $this->detect_seo_plugins() )
-			return $detected;
+		// Detect SEO plugins beforehand.
+		if ( $this->detect_seo_plugins() )
+			return $detected = true;
 
 		$active_plugins = $this->active_plugins();
 
@@ -433,7 +401,7 @@ class Detect extends Render {
 			$conflicting_plugins = $this->get_conflicting_plugins( 'open_graph' );
 
 			foreach ( $conflicting_plugins as $plugin_name => $plugin ) {
-				if ( in_array( $plugin, $active_plugins, true ) ) {
+				if ( \in_array( $plugin, $active_plugins, true ) ) {
 					/**
 					 * @since 2.6.1
 					 * @since 3.1.0 Added second and third parameters.
@@ -459,10 +427,10 @@ class Detect extends Render {
 
 	/**
 	 * Determines if other Twitter Card plugins are active.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.6.0
-	 * @since 3.1.0: The filter no longer short-circuits the function when it's false.
-	 * @staticvar bool $detected
+	 * @since 3.1.0 The filter no longer short-circuits the function when it's false.
 	 *
 	 * @return bool Twitter Card plugin detected.
 	 */
@@ -473,9 +441,9 @@ class Detect extends Render {
 		if ( isset( $detected ) )
 			return $detected;
 
-		//* Detect SEO plugins beforehand.
-		if ( $detected = $this->detect_seo_plugins() )
-			return $detected;
+		// Detect SEO plugins beforehand.
+		if ( $this->detect_seo_plugins() )
+			return $detected = true;
 
 		$active_plugins = $this->active_plugins();
 
@@ -483,7 +451,7 @@ class Detect extends Render {
 			$conflicting_plugins = $this->get_conflicting_plugins( 'twitter_card' );
 
 			foreach ( $conflicting_plugins as $plugin_name => $plugin ) {
-				if ( in_array( $plugin, $active_plugins, true ) ) {
+				if ( \in_array( $plugin, $active_plugins, true ) ) {
 					/**
 					 * @since 2.6.1
 					 * @param bool   $detected    Whether the plugin should be detected.
@@ -525,10 +493,10 @@ class Detect extends Render {
 
 	/**
 	 * Determines if other Sitemap plugins are active.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.1.0
-	 * @since 3.1.0: The filter no longer short-circuits the function when it's false.
-	 * @staticvar bool $detected
+	 * @since 3.1.0 The filter no longer short-circuits the function when it's false.
 	 *
 	 * @return bool
 	 */
@@ -539,9 +507,9 @@ class Detect extends Render {
 		if ( isset( $detected ) )
 			return $detected;
 
-		//* Detect SEO plugins beforehand.
-		if ( $detected = $this->detect_seo_plugins() )
-			return $detected;
+		// Detect SEO plugins beforehand.
+		if ( $this->detect_seo_plugins() )
+			return $detected = true;
 
 		$active_plugins = $this->active_plugins();
 
@@ -549,7 +517,7 @@ class Detect extends Render {
 			$conflicting_plugins = $this->get_conflicting_plugins( 'sitemaps' );
 
 			foreach ( $conflicting_plugins as $plugin_name => $plugin ) {
-				if ( in_array( $plugin, $active_plugins, true ) ) {
+				if ( \in_array( $plugin, $active_plugins, true ) ) {
 					/**
 					 * @since 2.6.1
 					 * @param bool   $detected    Whether the plugin should be detected.
@@ -573,6 +541,111 @@ class Detect extends Render {
 	}
 
 	/**
+	 * Tells whether WP 5.5 Core Sitemaps are used.
+	 * Memoizes the return value.
+	 *
+	 * @since 4.1.2
+	 *
+	 * @return bool
+	 */
+	public function use_core_sitemaps() {
+		static $use;
+
+		if ( isset( $use ) ) return $use;
+
+		if ( $this->get_option( 'sitemaps_output' ) )
+			return $use = false;
+
+		if ( \function_exists( '\\wp_sitemaps_get_server' ) ) {
+			$wp_sitemaps_server = \wp_sitemaps_get_server();
+
+			return $use =
+				method_exists( $wp_sitemaps_server, 'sitemaps_enabled' )
+				&& $wp_sitemaps_server->sitemaps_enabled();
+		}
+
+		return $use = false;
+	}
+
+	/**
+	 * Detects presence of a page builder.
+	 * Memoizes the return value.
+	 *
+	 * Detects the following builders:
+	 * - Elementor by Elementor LTD
+	 * - Divi Builder by Elegant Themes
+	 * - Visual Composer by WPBakery
+	 * - Page Builder by SiteOrigin
+	 * - Beaver Builder by Fastline Media
+	 *
+	 * @since 4.0.0
+	 * @since 4.0.6 The output is now filterable.
+	 * @TODO deprecate?
+	 * @ignore unused.
+	 *
+	 * @return bool
+	 */
+	public function detect_page_builder() {
+
+		static $detected = null;
+
+		if ( isset( $detected ) ) return $detected;
+
+		/**
+		 * @since 4.0.6
+		 * @param bool $detected Whether an active page builder is detected.
+		 * @NOTE not to be confused with `the_seo_framework_detect_page_builder`, which tests
+		 *       the page builder status for each post individually.
+		 */
+		return $detected = (bool) \apply_filters(
+			'the_seo_framework_page_builder_active',
+			$this->detect_plugin( [
+				'constants' => [
+					'ELEMENTOR_VERSION',
+					'ET_BUILDER_VERSION',
+					'WPB_VC_VERSION',
+					'SITEORIGIN_PANELS_VERSION',
+					'FL_BUILDER_VERSION',
+				],
+			] )
+		);
+	}
+
+	/**
+	 * Detects presence of a page builder that renders content dynamically.
+	 *
+	 * Detects the following builders:
+	 * - Divi Builder by Elegant Themes
+	 * - Visual Composer by WPBakery
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return bool
+	 */
+	public function detect_non_html_page_builder() {
+
+		static $detected = null;
+
+		if ( isset( $detected ) ) return $detected;
+
+		/**
+		 * @since 4.1.0
+		 * @param bool $detected Whether an active page builder that renders content dynamically is detected.
+		 * @NOTE not to be confused with `the_seo_framework_detect_non_html_page_builder`, which tests
+		 *       the page builder status for each post individually.
+		 */
+		return $detected = (bool) \apply_filters(
+			'the_seo_framework_shortcode_based_page_builder_active',
+			$this->detect_plugin( [
+				'constants' => [
+					'ET_BUILDER_VERSION',
+					'WPB_VC_VERSION',
+				],
+			] )
+		);
+	}
+
+	/**
 	 * Determines whether to add a line within robots based by plugin detection, or sitemap output option.
 	 *
 	 * @since 2.6.0
@@ -581,6 +654,9 @@ class Detect extends Render {
 	 * @since 2.9.2 Now also checks for permalinks.
 	 * @since 2.9.3 Now also checks for sitemap_robots option.
 	 * @since 3.1.0 Removed Jetpack's sitemap check -- it's no longer valid.
+	 * @since 4.0.0 : 1. Now uses has_robots_txt()
+	 *              : 2. Now uses the get_robots_txt_url() to determine validity.
+	 * FIXME This method also checks for file existence (and location...), but is only used when the file definitely doesn't exist.
 	 *
 	 * @param bool $check_option Whether to check for sitemap option.
 	 * @return bool True when no conflicting plugins are detected or when The SEO Framework's Sitemaps are output.
@@ -588,24 +664,20 @@ class Detect extends Render {
 	public function can_do_sitemap_robots( $check_option = true ) {
 
 		if ( $check_option ) {
-			if ( ! $this->get_option( 'sitemaps_output' ) || ! $this->get_option( 'sitemaps_robots' ) )
+			if ( ! $this->get_option( 'sitemaps_output' )
+			|| ! $this->get_option( 'sitemaps_robots' ) )
 				return false;
 		}
 
-		if ( $this->is_subdirectory_installation() )
-			return false;
-
-		if ( ! $this->pretty_permalinks )
-			return false;
-
-		return true;
+		return ! $this->has_robots_txt() && \strlen( $this->get_robots_txt_url() );
 	}
 
 	/**
 	 * Detects presence of robots.txt in root folder.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.5.2
-	 * @staticvar $has_robots
+	 * @since 4.0.0 Now tries to load `wp-admin/includes/file.php` to prevent a fatal error.
 	 *
 	 * @return bool Whether the robots.txt file exists.
 	 */
@@ -616,16 +688,22 @@ class Detect extends Render {
 		if ( isset( $has_robots ) )
 			return $has_robots;
 
+		// Ensure get_home_path() is declared.
+		if ( ! \function_exists( '\\get_home_path' ) )
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+
 		$path = \get_home_path() . 'robots.txt';
 
+		// phpcs:ignore, TSF.Performance.Functions.PHP -- we use path, not URL.
 		return $has_robots = file_exists( $path );
 	}
 
 	/**
 	 * Detects presence of sitemap.xml in root folder.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.5.2
-	 * @staticvar bool $has_map
+	 * @since 4.0.0 Now tries to load `wp-admin/includes/file.php` to prevent a fatal error.
 	 *
 	 * @return bool Whether the sitemap.xml file exists.
 	 */
@@ -636,8 +714,13 @@ class Detect extends Render {
 		if ( isset( $has_map ) )
 			return $has_map;
 
+		// Ensure get_home_path() is declared.
+		if ( ! \function_exists( '\\get_home_path' ) )
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+
 		$path = \get_home_path() . 'sitemap.xml';
 
+		// phpcs:ignore, TSF.Performance.Functions.PHP -- we use path, not URL.
 		return $has_map = file_exists( $path );
 	}
 
@@ -676,6 +759,7 @@ class Detect extends Render {
 	 *
 	 * @since 2.2.5
 	 * @since 3.1.0 Removed caching
+	 * @TODO deprecate me.
 	 *
 	 * @param string|array required $features The features to check for.
 	 * @return bool theme support.
@@ -685,7 +769,6 @@ class Detect extends Render {
 		foreach ( (array) $features as $feature ) {
 			if ( \current_theme_supports( $feature ) ) {
 				return true;
-				break;
 			}
 			continue;
 		}
@@ -694,139 +777,224 @@ class Detect extends Render {
 	}
 
 	/**
-	 * Checks a theme's support for title-tag.
+	 * Determines whether the main query supports custom SEO.
 	 *
-	 * @since 2.6.0
-	 * @since 3.1.0 Removed caching
+	 * @since 4.0.0
+	 * @since 4.0.2 Now tests for an existing post/term ID when on singular/term pages.
+	 * @since 4.0.3 Can now assert empty categories again by checking for taxonomy support.
 	 *
 	 * @return bool
 	 */
-	public function current_theme_supports_title_tag() {
-		return $this->detect_theme_support( 'title-tag' );
-	}
+	public function query_supports_seo() {
 
-	/**
-	 * Detect if the current screen type is a page or taxonomy.
-	 *
-	 * @since 2.3.1
-	 * @staticvar array $is_page
-	 *
-	 * @param string $type the Screen type
-	 * @return bool true if post type is a page or post
-	 */
-	public function is_post_type_page( $type ) {
+		static $cache;
 
-		static $is_page = [];
+		if ( isset( $cache ) ) return $cache;
 
-		if ( isset( $is_page[ $type ] ) )
-			return $is_page[ $type ];
-
-		$post_page = (array) \get_post_types( [ 'public' => true ] );
-
-		foreach ( $post_page as $screen ) {
-			if ( $type === $screen ) {
-				return $is_page[ $type ] = true;
+		switch ( true ) :
+			case $this->is_feed():
+				$supported = false;
 				break;
-			}
-		}
 
-		return $is_page[ $type ] = false;
-	}
+			case $this->is_singular():
+				$supported = $this->is_post_type_supported() && $this->get_the_real_ID();
+				break;
 
-	/**
-	 * Detect WordPress language.
-	 * Considers en_UK, en_US, en, etc.
-	 *
-	 * @since 2.6.0
-	 * @since 3.1.0 Removed caching.
-	 *
-	 * @param string $locale Required, the locale.
-	 * @return bool Whether the input $locale is in the current WordPress locale.
-	 */
-	public function check_wp_locale( $locale = '' ) {
-		return false !== strpos( \get_locale(), $locale );
-	}
+			case \is_post_type_archive():
+				$supported = $this->is_post_type_supported();
+				break;
 
-	/**
-	 * Determines if the post type is disabled from SEO all optimization.
-	 *
-	 * @since 3.1.0
-	 * @since 3.1.2 Now is fiterable.
-	 *
-	 * @param string $post_type The post type, optional. Leave empty to autodetermine type.
-	 * @return bool True if disabled, false otherwise.
-	 */
-	public function is_post_type_disabled( $post_type = '' ) {
+			case $this->is_term_meta_capable():
+				// When a term has no posts attached, it'll not return a post type, and it returns a 404 late in the loop.
+				// This is because get_post_type() tries to assert the first post in the loop here.
+				// Thus, we test for is_taxonomy_supported() instead.
+				$supported = $this->is_taxonomy_supported() && $this->get_the_real_ID();
+				break;
 
-		$post_type = $post_type ?: \get_post_type() ?: $this->get_admin_post_type();
+			// Including 404.
+			default:
+				$supported = true;
+				break;
+		endswitch;
 
 		/**
-		 * @since 3.1.2
-		 * @param bool   $disabled
-		 * @param string $post_type
+		 * Override false negatives on exploit.
+		 *
+		 * This protects against (accidental) negative-SEO bombarding.
+		 * Support broken queries, so we can noindex them.
 		 */
-		return \apply_filters( 'the_seo_framework_post_type_disabled',
-			isset(
-				$this->get_option( 'disabled_post_types' )[ $post_type ]
-			),
-			$post_type
-		);
-	}
-
-	/**
-	 * Determines if the post type is compatible with The SEO Framework inpost metabox.
-	 *
-	 * @since 2.3.5
-	 * @since 3.1.0 1. The first parameter is now required.
-	 *              2. Added caching.
-	 * @staticvar bool $has_filter
-	 *
-	 * @param string $post_type
-	 * @return bool True if post type is supported.
-	 */
-	public function post_type_supports_inpost( $post_type ) {
-
-		if ( ! $post_type ) return false;
-
-		static $has_filter = null;
-
-		if ( is_null( $has_filter ) )
-			$has_filter = \has_filter( 'the_seo_framework_custom_post_type_support' );
-
-		if ( $has_filter ) {
-			/**
-			 * Determines the required post type features before TSF supports it.
-			 * @since 2.3.5
-			 * @since 3.0.4 Default parameter now is `[]` instead of `['title','editor']`.
-			 * @param array $supports The required post type support, like 'title', 'editor'.
-			 */
-			$supports = (array) \apply_filters( 'the_seo_framework_custom_post_type_support', [] );
-
-			foreach ( $supports as $support ) {
-				if ( ! \post_type_supports( $post_type, $support ) ) {
-					return false;
-					break;
-				}
-				continue;
-			}
+		if ( ! $supported && $this->is_query_exploited() ) {
+			$supported = true;
 		}
 
-		return true;
+		/**
+		 * @since 4.0.0
+		 * @param bool $supported Whether the query supports SEO.
+		 */
+		return $cache = (bool) \apply_filters( 'the_seo_framework_query_supports_seo', $supported );
 	}
 
 	/**
-	 * Determines if post type supports The SEO Framework.
+	 * Determines when paged/page is exploited.
+	 * Memoizes the return value.
 	 *
-	 * @since 2.3.9
-	 * @since 3.1.0 1. Removed caching.
-	 *              2. Now works in admin.
+	 * Google is acting "smart" nowadays, and follows everything that remotely resembles a link. Therefore, unintentional
+	 * queries can occur in WordPress. WordPress deals with this well, alas, the query parser (WP_Query::parse_query)
+	 * doesn't rectify the mixed signals it receives. Instead, it only sanitizes it, resulting in a combobulated mess.
+	 * Ultimately, this leads to non-existing blog archives, among other failures.
 	 *
-	 * @param string $post_type The current post type.
-	 * @return bool true of post type is supported.
+	 * Example 1: `/?p=nonnumeric` will cause an issue. We will see a non-existing blog page. `is_home` is true, but
+	 * `page_id` leads to 0 while the database expects the blog page to be another page. So, `is_posts_page` is
+	 * incorrectly false. This is mitigated via the canonical URL, but that MUST output, thus overriding otherwise chosen
+	 * and expected behavior.
+	 *
+	 * Example 2: `/page/2/?p=nonnumeric` will cause a bigger issue. What happens is that `is_home` will again be true,
+	 * but so will `is_paged`. `paged` will be set to `2` (as per example URL). The page ID will again be set to `0`,
+	 * which is completely false. The canonical URL will be malformed. Even moreso, Google can ignore the canonical URL,
+	 * so we MUST output noindex.
+	 *
+	 * Example 3: `/page/2/?X=nonnumeric` will also cause the same issues as in example 2. Where X can be:
+	 * `page_id`, `attachment_id`, `year`, `monthnum`, `day`, `w`, `m`, and of course `p`.
+	 *
+	 * Example 4: `/?hour=nonnumeric`, the same issue as Example 1. The canonical URL is malformed, noindex is set, and
+	 * link relationships will be active. A complete mess. `minute` and `second` are also affected the same way.
+	 *
+	 * Example 5: `/page/2/?p=0`, this is the trickiest. It's indicative of a paginated blog, but also the homepage. When
+	 * the homepage is not a blog, then this query is malformed. Otherwise, however, it's a good query.
+	 *
+	 * @since 4.0.5
+	 * @global \WP_Query $wp_query
+	 *
+	 * @return bool Whether the query is (accidentally) exploited.
+	 *              Defaults to false when `advanced_query_protection` option is disabled.
+	 *              False when there's a query-ID found.
+	 *              False when no custom query is set (for the homepage).
+	 *              Otherwise, it performs query tests.
 	 */
-	public function post_type_supports_custom_seo( $post_type = '' ) {
-		$post_type = $post_type ?: \get_post_type() ?: $this->get_admin_post_type();
-		return $post_type && $this->is_post_type_supported( $post_type ) && $this->post_type_supports_inpost( $post_type );
+	public function is_query_exploited() {
+
+		static $exploited;
+
+		if ( isset( $exploited ) ) return $exploited;
+
+		if ( ! $this->get_option( 'advanced_query_protection' ) )
+			return $exploited = false;
+
+		// When the page ID is not 0, a real page will always be returned.
+		if ( $this->get_the_real_ID() )
+			return $exploited = false;
+
+		global $wp_query;
+
+		// When no special query data is registered, ignore this. Don't set cache.
+		if ( ! isset( $wp_query->query ) )
+			return false;
+
+		/**
+		 * @since 4.0.5
+		 * @param array $exploitables The exploitable endpoints by type.
+		 */
+		$exploitables = \apply_filters(
+			'the_seo_framework_exploitable_query_endpoints',
+			[
+				'numeric'       => [
+					'page_id',
+					'attachment_id',
+					'year',
+					'monthnum',
+					'day',
+					'w',
+					'm',
+					'p',
+					'paged', // 'page' is mitigated by WordPress.
+					'hour',
+					'minute',
+					'second',
+					'subpost_id',
+				],
+				'numeric_array' => [
+					'cat',
+					'author',
+				],
+				'requires_s'    => [
+					'sentence',
+				],
+			]
+		);
+
+		$query     = $wp_query->query;
+		$exploited = false;
+
+		foreach ( $exploitables as $type => $qvs ) :
+			foreach ( $qvs as $qv ) :
+				// Don't guess "empty", because falsey or empty-array is also empty.
+				if ( ! isset( $query[ $qv ] ) ) continue;
+
+				switch ( $type ) :
+					case 'numeric':
+						if ( '0' === $query[ $qv ] || ! is_numeric( $query[ $qv ] ) ) {
+							$exploited = true;
+							break 3;
+						}
+						break;
+
+					case 'numeric_array':
+						// We can't protect non-pretty permalinks.
+						if ( ! $this->pretty_permalinks ) break;
+
+						// If WordPress didn't canonical_redirect() the user yet, it's exploited.
+						// WordPress mitigates this via a 404 query when a numeric value is found.
+						if ( ! preg_match( '/[0-9]/', $query[ $qv ] ) ) {
+							$exploited = true;
+							break 3;
+						}
+						break;
+
+					case 'requires_s':
+						if ( ! isset( $query['s'] ) ) {
+							$exploited = true;
+							break 3;
+						}
+						break;
+
+					default:
+						break;
+				endswitch;
+			endforeach;
+		endforeach;
+
+		return $exploited;
+	}
+
+	/**
+	 * Detects if the current or inputted post type is supported and not disabled.
+	 *
+	 * @since 3.1.0
+	 * @since 4.0.5 The `$post_type` fallback now uses a real query ID, instead of `$GLOBALS['post']`;
+	 *              mitigating issues with singular-archives pages (blog, shop, etc.).
+	 *
+	 * @param string $post_type Optional. The post type to check.
+	 * @return bool
+	 */
+	public function is_post_type_supported( $post_type = '' ) {
+
+		$post_type = $post_type ?: $this->get_post_type_real_ID() ?: $this->get_admin_post_type();
+
+		/**
+		 * @since 2.6.2
+		 * @since 3.1.0 The first parameter is always a boolean now.
+		 * @param bool   $supported           Whether the post type is supported.
+		 * @param string $post_type_evaluated The evaluated post type.
+		 */
+		return (bool) \apply_filters_ref_array(
+			'the_seo_framework_supported_post_type',
+			[
+				$post_type
+					&& ! $this->is_post_type_disabled( $post_type )
+					&& \in_array( $post_type, $this->get_public_post_types(), true ),
+				$post_type,
+			]
+		);
 	}
 
 	/**
@@ -835,62 +1003,39 @@ class Detect extends Render {
 	 * Checks if at least one taxonomy objects post type supports The SEO Framework,
 	 * and wether the taxonomy is public and rewritable.
 	 *
-	 * @since 3.1.0
+	 * @since 4.0.0
 	 *
-	 * @param string $taxonomy The taxonomy name.
+	 * @param string $taxonomy Optional. The taxonomy name.
 	 * @return bool True if at least one post type in taxonomy isn't disabled.
 	 */
-	public function taxonomy_supports_custom_seo( $taxonomy = '' ) {
+	public function is_taxonomy_supported( $taxonomy = '' ) {
 
 		$taxonomy = $taxonomy ?: $this->get_current_taxonomy();
-		if ( ! $taxonomy ) return false;
 
 		/**
 		 * @since 3.1.0
+		 * @since 4.0.0 Now returns only returns false when all post types in the taxonomy aren't supported.
 		 * @param bool   $post_type Whether the post type is supported
 		 * @param string $post_type_evaluated The evaluated post type.
 		 */
-		return (bool) \apply_filters_ref_array( 'the_seo_framework_supported_taxonomy',
+		return (bool) \apply_filters_ref_array(
+			'the_seo_framework_supported_taxonomy',
 			[
 				$taxonomy
 					&& ! $this->is_taxonomy_disabled( $taxonomy )
-					&& $this->is_taxonomy_public( $taxonomy ),
+					&& \in_array( $taxonomy, $this->get_public_taxonomies(), true ),
 				$taxonomy,
 			]
 		);
 	}
 
 	/**
-	 * Detects if the current or inputted post type is supported and not disabled.
-	 *
-	 * @since 3.1.0
-	 *
-	 * @param bool $post_type
-	 * @return bool
-	 */
-	public function is_post_type_supported( $post_type = '' ) {
-		$post_type = $post_type ?: \get_post_type() ?: $this->get_admin_post_type();
-		/**
-		 * @since 2.6.2
-		 * @since 3.1.0 The first parameter is always a boolean now.
-		 * @param bool   $supported           Whether the post type is supported.
-		 * @param string $post_type_evaluated The evaluated post type.
-		 */
-		return (bool) \apply_filters_ref_array( 'the_seo_framework_supported_post_type',
-			[
-				$post_type
-					&& ! $this->is_post_type_disabled( $post_type )
-					&& in_array( $post_type, $this->get_rewritable_post_types(), true ),
-				$post_type,
-			]
-		);
-	}
-
-	/**
 	 * Checks (current) Post Type for having taxonomical archives.
+	 * Memoizes the return value for the input argument.
 	 *
 	 * @since 2.9.3
-	 * @staticvar array $cache
+	 * @since 4.0.5 The `$post_type` fallback now uses a real query ID, instead of `$GLOBALS['post']`;
+	 *              mitigating issues with singular-archives pages (blog, shop, etc.).
 	 * @global \WP_Screen $current_screen
 	 *
 	 * @param string $post_type Optional. The post type to check.
@@ -903,7 +1048,7 @@ class Detect extends Render {
 		if ( isset( $cache[ $post_type ] ) )
 			return $cache[ $post_type ];
 
-		$post_type = $post_type ?: \get_post_type() ?: $this->get_admin_post_type();
+		$post_type = $post_type ?: $this->get_post_type_real_ID() ?: $this->get_admin_post_type();
 		if ( ! $post_type ) return false;
 
 		if ( \get_object_taxonomies( $post_type, 'names' ) )
@@ -927,40 +1072,43 @@ class Detect extends Render {
 		if ( $cache ) return $cache;
 
 		return $cache = array_values(
-			array_filter( $this->get_rewritable_post_types(), [ $this, 'is_post_type_supported' ] )
+			array_filter( $this->get_public_post_types(), [ $this, 'is_post_type_supported' ] )
 		);
 	}
 
 	/**
 	 * Gets all post types that could possibly support SEO.
+	 * Memoizes the return value.
 	 *
-	 * @since 3.1.0
-	 * @since 3.2.1 Added cache.
-	 * @staticvar $cache
+	 * @since 4.1.0
 	 *
-	 * @return array The post types with rewrite capabilities.
+	 * @return array All public post types.
 	 */
-	protected function get_rewritable_post_types() {
+	protected function get_public_post_types() {
+
 		static $cache = null;
-		//? array_values() because get_post_types() gives a sequential array.
-		return isset( $cache ) ? $cache : $cache = array_unique(
-			array_merge(
-				$this->get_forced_supported_post_types(),
-				array_values( (array) \get_post_types( [
-					'public'  => true,
-					'rewrite' => true,
-				] ) )
-			)
+
+		return isset( $cache ) ? $cache : $cache = array_filter(
+			array_unique(
+				array_merge(
+					$this->get_forced_supported_post_types(),
+					//? array_values() because get_post_types() gives a sequential array.
+					array_values( (array) \get_post_types( [
+						'public' => true,
+					] ) )
+				)
+			),
+			'\\is_post_type_viewable'
 		);
 	}
 
 	/**
-	 * Returns a list of supported post types.
+	 * Returns a list of builtin public post types.
+	 * Memoizes the return value.
 	 *
 	 * @since 3.1.0
-	 * @staticvar $cache
 	 *
-	 * @return array Forced supported post types
+	 * @return array Forced supported post types.
 	 */
 	protected function get_forced_supported_post_types() {
 
@@ -979,51 +1127,121 @@ class Detect extends Render {
 	}
 
 	/**
-	 * Checks if at least one taxonomy objects post type supports The SEO Framework.
+	 * Gets all taxonomies that could possibly support SEO.
+	 * Memoizes the return value.
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return array The taxonomies that are public.
+	 */
+	protected function get_public_taxonomies() {
+
+		static $cache = null;
+
+		return isset( $cache ) ? $cache : $cache = array_filter(
+			array_unique(
+				array_merge(
+					$this->get_forced_supported_taxonomies(),
+					//? array_values() because get_taxonomies() gives a sequential array.
+					array_values( (array) \get_taxonomies( [
+						'public'   => true,
+						'_builtin' => false,
+					] ) )
+				)
+			),
+			'\\is_taxonomy_viewable'
+		);
+	}
+
+	/**
+	 * Returns a list of builtin public taxonomies.
+	 * Memoizes the return value.
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return array Forced supported taxonomies
+	 */
+	protected function get_forced_supported_taxonomies() {
+
+		static $cache = null;
+		/**
+		 * @since 4.1.0
+		 * @param array $forced Forced supported post types
+		 */
+		return isset( $cache ) ? $cache : $cache = (array) \apply_filters(
+			'the_seo_framework_forced_supported_taxonomies',
+			array_values( \get_taxonomies( [
+				'public'   => true,
+				'_builtin' => true,
+			] ) )
+		);
+	}
+
+
+	/**
+	 * Determines if the post type is disabled from SEO all optimization.
 	 *
 	 * @since 3.1.0
+	 * @since 3.1.2 Now is fiterable.
+	 * @since 4.0.5 The `$post_type` fallback now uses a real query ID, instead of `$GLOBALS['post']`;
+	 *              mitigating issues with singular-archives pages (blog, shop, etc.).
+	 *
+	 * @param string $post_type Optional. The post type to check.
+	 * @return bool True if disabled, false otherwise.
+	 */
+	public function is_post_type_disabled( $post_type = '' ) {
+
+		$post_type = $post_type ?: $this->get_post_type_real_ID() ?: $this->get_admin_post_type();
+
+		/**
+		 * @since 3.1.2
+		 * @param bool   $disabled
+		 * @param string $post_type
+		 */
+		return \apply_filters( 'the_seo_framework_post_type_disabled',
+			isset(
+				$this->get_option( 'disabled_post_types' )[ $post_type ]
+			),
+			$post_type
+		);
+	}
+
+	/**
+	 * Checks if the taxonomy isn't disabled, and that at least one taxonomy
+	 * objects post type supports The SEO Framework.
+	 *
+	 * @since 3.1.0
+	 * @since 4.0.0 1. Now returns true if at least one post type for the taxonomy is supported.
+	 *              2. Now uses `is_post_type_supported()` instead of `is_post_type_disabled()`.
+	 * @since 4.1.0 1. Now also checks for the option `disabled_taxonomies`.
+	 *              2. Now applies filters `the_seo_framework_taxonomy_disabled`.
 	 *
 	 * @param string $taxonomy The taxonomy name.
 	 * @return bool True if at least one post type in taxonomy is supported.
 	 */
 	public function is_taxonomy_disabled( $taxonomy = '' ) {
 
-		$taxonomy = $taxonomy ?: $this->get_current_taxonomy();
-		if ( ! $taxonomy ) return true;
+		$disabled = false;
 
-		$tax = \get_taxonomy( $taxonomy );
-
-		if ( false === $tax ) return true;
-
-		if ( ! empty( $tax->object_type ) ) {
-			foreach ( $tax->object_type as $type ) {
-				if ( ! $this->is_post_type_disabled( $type ) )
-					return false;
+		if ( isset( $this->get_option( 'disabled_taxonomies' )[ $taxonomy ] ) ) {
+			$disabled = true;
+		} else {
+			foreach ( $this->get_post_types_from_taxonomy( $taxonomy ) as $type ) {
+				// Set here, because the taxonomy might not have post types at all.
+				$disabled = true;
+				if ( $this->is_post_type_supported( $type ) ) {
+					$disabled = false;
+					break;
+				}
 			}
 		}
 
-		return true;
-	}
-
-	/**
-	 * Checks whether the taxonomy is public and rewritable.
-	 *
-	 * @since 3.1.0
-	 *
-	 * @param string $taxonomy The taxonomy name.
-	 * @return bool
-	 */
-	public function is_taxonomy_public( $taxonomy = '' ) {
-
-		$taxonomy = $taxonomy ?: $this->get_current_taxonomy();
-		if ( ! $taxonomy ) return false;
-
-		$tax = \get_taxonomy( $taxonomy );
-
-		if ( false === $tax ) return false;
-
-		return ! empty( $tax->public )
-			&& ( ! empty( $tax->_builtin ) || ! empty( $tax->rewrite ) );
+		/**
+		 * @since 4.1.0
+		 * @param bool   $disabled
+		 * @param string $taxonomy
+		 */
+		return \apply_filters( 'the_seo_framework_taxonomy_disabled', $disabled, $taxonomy );
 	}
 
 	/**
@@ -1048,33 +1266,59 @@ class Detect extends Render {
 	 * @return bool
 	 */
 	public function is_gutenberg_page() {
-		if ( function_exists( '\\use_block_editor_for_post' ) )
+		if ( \function_exists( '\\use_block_editor_for_post' ) )
 			return ! empty( $GLOBALS['post'] ) && \use_block_editor_for_post( $GLOBALS['post'] );
 
-		if ( function_exists( '\\is_gutenberg_page' ) )
+		if ( \function_exists( '\\is_gutenberg_page' ) )
 			return \is_gutenberg_page();
 
 		return false;
 	}
 
 	/**
-	 * Determines if the current theme supports the custom logo addition.
+	 * Determines whether we can output sitemap or not based on options and blog status.
 	 *
-	 * @since 2.8.0
-	 * @since 3.1.0: 1. No longer checks for WP version 4.5+.
-	 *               2. No longer uses caching.
+	 * @since 2.6.0
+	 * @since 2.9.2 No longer checks for plain and ugly permalinks.
+	 * @since 4.0.0 Removed caching.
 	 *
 	 * @return bool
 	 */
-	public function can_use_logo() {
-		return $this->detect_theme_support( 'custom-logo' );
+	public function can_run_sitemap() {
+		return $this->get_option( 'sitemaps_output' ) && ! $this->current_blog_is_spam_or_deleted();
+	}
+
+	/**
+	 * Returns the robots.txt location URL.
+	 * Only allows root domains.
+	 *
+	 * @since 2.9.2
+	 * @since 4.0.2 Now uses the preferred URL scheme.
+	 * @global \WP_Rewrite $wp_rewrite
+	 *
+	 * @return string URL location of robots.txt. Unescaped.
+	 */
+	public function get_robots_txt_url() {
+		global $wp_rewrite;
+
+		if ( $wp_rewrite->using_permalinks() && ! $this->is_subdirectory_installation() ) {
+			$home = \trailingslashit( $this->set_preferred_url_scheme( $this->get_home_host() ) );
+			$path = "{$home}robots.txt";
+		} elseif ( $this->has_robots_txt() ) {
+			$home = \trailingslashit( $this->set_preferred_url_scheme( \get_option( 'home' ) ) );
+			$path = "{$home}robots.txt";
+		} else {
+			$path = '';
+		}
+
+		return $path;
 	}
 
 	/**
 	 * Determines if the current installation is on a subdirectory.
+	 * Memoizes the return value.
 	 *
 	 * @since 2.9.0
-	 * @staticvar $bool $cache
 	 *
 	 * @return bool
 	 */
@@ -1085,8 +1329,36 @@ class Detect extends Render {
 		if ( isset( $cache ) )
 			return $cache;
 
-		$parsed_url = \wp_parse_url( \get_option( 'home' ) );
+		$parsed_url = parse_url( \get_option( 'home' ) );
 
 		return $cache = ! empty( $parsed_url['path'] ) && ltrim( $parsed_url['path'], ' \\/' );
+	}
+
+	/**
+	 * Determines if the input text has transformative Yoast SEO syntax.
+	 *
+	 * @since 4.0.5
+	 * @link <https://yoast.com/help/list-available-snippet-variables-yoast-seo/>
+	 *
+	 * @param string $text The text to evaluate.
+	 * @return bool
+	 */
+	public function has_yoast_syntax( $text ) {
+
+		if ( false === strpos( $text, '%%' ) ) return false;
+
+		$tags_simple = [ 'date', 'title', 'parent_title', 'archive_title', 'sitename', 'sitedesc', 'excerpt', 'excerpt_only', 'tag', 'category', 'primary_category', 'category_description', 'tag_description', 'term_description', 'term_title', 'searchphrase', 'sep', 'pt_single', 'pt_plural', 'modified', 'id', 'name', 'user_description', 'page', 'pagetotal', 'pagenumber', 'caption', 'focuskw', 'term404', 'ct_product_cat', 'ct_product_tag', 'wc_shortdesc', 'wc_sku', 'wc_brand', 'wc_price' ];
+
+		$_regex = sprintf( '%%%s%%', implode( '|', $tags_simple ) );
+
+		if ( preg_match( "/$_regex/i", $text ) ) return true;
+
+		$tags_wildcard_end = [ 'cs_', 'ct_desc_', 'ct_pa_' ];
+
+		$_regex = sprintf( '%%(%s)[^\s]*?%%', implode( '|', $tags_wildcard_end ) );
+
+		if ( preg_match( "/$_regex/", $text ) ) return true;
+
+		return false;
 	}
 }

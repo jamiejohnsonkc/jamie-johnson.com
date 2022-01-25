@@ -49,7 +49,7 @@
  						<p class="copy">revenue generation</p>
  						<p class="copy">organizational value</p> -->
  					</div>
- 					<a href="/services#modern-marketing-management" class="link__text">&#8250;lear more about Strategic Marketing Management</a>
+ 					<a href="/services#modern-marketing-management" class="link__text">&#8250;learn more about Strategic Marketing Management</a>
  				</div> <a href="#engaging" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
  			</div>
 
@@ -73,24 +73,24 @@
  					</div>
  					<a href="/services#communications" class="link__text">&#8250;learn more about integrative marketing</a>
  				</div>
- 				<a href="#hybrid" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
+ 				<a href="#engage" class="button ui-button__jump offering__link--jump" title="read more"><?php get_template_part('buttons/button', 'jump'); ?></a>
 
  			</div>
 
- 			<div class="offering__content-item offering__content-item--engage" id="optimize">
+ 			<div class="offering__content-item offering__content-item--engage" id="engage">
 
 
 
  				<div class="offering__content-item--container offering__content--light">
  					<div class="container__number">3</div>
- 					<div class="subhead__header">Optimize Marketing Performance</div>
+ 					<div class="subhead__header">Optimize Performance</div>
  					<h4 class="subsubhead">Management, Organization & Control</h4>
  					<div class="image__container offering__image-container">
  						<img src="/wp-content/uploads/2019/01/skills_23.svg" class="style-svg svg-integrative" alt="integration icon">
  					</div>
 
  					<div class="offering__copy-container">
- 						<p class="copy">Deploy the capabilities, practices, infrastructure and process to sustain productive marketing initatives for the long term.</p>
+ 						<p class="copy">Deploy the capabilities, practices, infrastructure and process to sustain productive marketing initiatives for the long term.</p>
  						<!-- <p class="copy">Modern marketing capabilities & methodologies</p> -->
  						<!-- <p class="copy">Digital & physical assets</p>
 							<p class="copy">Staffing & resources</p>
@@ -120,10 +120,10 @@
  					</div>
  					<div class="flex-item flex-item__b">
  						<div class="background__image--cover">
- 							<img src="/wp-content/uploads/2019/06/hero-7.jpg" class="img-hell-yes" alt="image of door knob placard that reads hell yes">
+ 							<img src="/wp-content/uploads/2019/09/hero-7v2.jpg" class="img-hell-yes" alt="image of door knob placard that reads hell yes">
  						</div>
  					</div>
- 	
+ 	 
  		
 
 				

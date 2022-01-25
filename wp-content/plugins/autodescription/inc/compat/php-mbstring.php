@@ -1,9 +1,14 @@
 <?php
 /**
  * @package The_SEO_Framework\Compat\PHP\mbstring
+ * @subpackage The_SEO_Framework\Compatibility
+ *
+ * @ignore this file isn't loaded.
  */
 
-defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
+// phpcs:disable -- This file isn't loaded.
+
+\defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 
 /**
  * Extended charset support
@@ -89,7 +94,7 @@ if ( ! function_exists( '_mb_strpos' ) ) :
 			if ( ! isset( $inter ) )
 				return false;
 
-			//* Prevent bugs, (re)assign var.
+			// Prevent bugs, (re)assign var.
 			$pos = null;
 
 			// Find first occurrence greater than or equal to offset
@@ -100,7 +105,7 @@ if ( ! function_exists( '_mb_strpos' ) ) :
 				}
 			}
 
-			//* No key has been found.
+			// No key has been found.
 			if ( ! isset( $pos ) )
 				return false;
 
@@ -171,7 +176,7 @@ if ( ! function_exists( '_mb_strpos' ) ) :
 			if ( ! isset( $inter ) )
 				return false;
 
-			//* Prevent bugs, (re)assign var.
+			// Prevent bugs, (re)assign var.
 			$pos = null;
 
 			// Find first occurrence greater than or equal to offset
@@ -182,7 +187,7 @@ if ( ! function_exists( '_mb_strpos' ) ) :
 				}
 			}
 
-			//* No key has been found.
+			// No key has been found.
 			if ( ! isset( $pos ) )
 				return false;
 

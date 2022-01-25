@@ -1,15 +1,15 @@
 <?php
 /**
- * @package The_SEO_Framework
- * @subpackage Bootstrap
+ * @package The_SEO_Framework/Bootstrap\Install
  */
+
 namespace The_SEO_Framework\Bootstrap;
 
-defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
+\defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 
 /**
  * The SEO Framework plugin
- * Copyright (C) 2015 - 2019 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
+ * Copyright (C) 2015 - 2020 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published
@@ -29,26 +29,8 @@ defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
  */
 
 //! @php7+ convert to IIFE
+// phpcs:ignore, TSF.Performance.Opcodes.ShouldHaveNamespaceEscape
 _deactivation_unset_options_autoload();
-_deactivation_unset_sitemap();
-
-/**
- * Flush rewrite rules on plugin deactivation.
- *
- * @since 2.6.6
- * @since 2.7.1: 1. Now no longer reinitializes global $wp_rewrite.
- *               2. Now flushes the rules on shutdown.
- * @since 2.8.0: Added namespace and renamed function.
- * @access private
- * @global \WP_Rewrite $wp_rewrite
- */
-function _deactivation_unset_sitemap() {
-
-	unset( $GLOBALS['wp_rewrite']->extra_rules_top['sitemap\.xml$'] );
-	unset( $GLOBALS['wp_rewrite']->extra_rules_top['sitemap\.xsl$'] );
-
-	\add_action( 'shutdown', 'flush_rewrite_rules' );
-}
 
 /**
  * Turns off autoloading for The SEO Framework main options.
@@ -71,7 +53,7 @@ function _deactivation_unset_options_autoload() {
 
 		$temp_options = $options;
 		//? Write a small difference, so the change will be forwarded to the database.
-		if ( is_array( $temp_options ) )
+		if ( \is_array( $temp_options ) )
 			$temp_options['update_buster'] = (int) time();
 
 		$_success = \update_option( $setting, $temp_options, 'no' );

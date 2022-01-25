@@ -23,7 +23,7 @@ exit; // Exit if accessed directly.
 		<p class="copy copy__block copy__block--placeholder copy__block--serif">i strategize. i create. i code.</p>
 		<p class="copy copy__block copy__block--placeholder copy__block--serif">&dash;sweet</p>
 	</div>
-
+  
 	
 
 	<div class="body__container--flex body__container--placeholder placeholder__body-container">

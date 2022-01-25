@@ -9,7 +9,7 @@
 
 /**
  * The SEO Framework plugin
- * Copyright (C) 2019 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
+ * Copyright (C) 2019 - 2020 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published
@@ -29,8 +29,6 @@
 /**
  * Holds tsfTT (tsf tooltip) values in an object to avoid polluting global namespace.
  *
- * This is a self-constructed function assigned as an object.
- *
  * @since 3.1.0
  *
  * @constructor
@@ -39,9 +37,23 @@
 window.tsfTT = function( $ ) {
 
 	/**
+	 * Optimized for minification.
+	 * @internal
+	 */
+	const toolTipName         = 'tsf-tooltip';
+	const toolTipSelector     = `.${toolTipName}`;
+	const toolTipItemName     = 'tsf-tooltip-item';
+	const toolTipItemSelector = `.${toolTipItemName}`;
+	const toolTipWrapName     = 'tsf-tooltip-wrap';
+	const toolTipWrapSelector = `.${toolTipWrapName}`;
+
+	/**
 	 * Initializes tooltips.
 	 *
 	 * @since 3.1.0
+	 * @since 4.0.0 1. Now adds default boundary to `wpwrap` instead of `wpcontent`.
+	 *              2. Added focus/blur support.
+	 * @since
 	 * @access private
 	 *
 	 * @function
@@ -52,102 +64,145 @@ window.tsfTT = function( $ ) {
 	 */
 	const _initToolTips = () => {
 
-		let touchBuffer = 0,
-			inTouchBuffer = false,
-			passiveSupported = false;
+		let passiveSupported      = false,
+			captureSupported      = false,
+			mouseMoveAnimationId  = void 0,
+			mousePos              = {},
+			activeTooltipElements = {},
+			lastAnimationEvent    = void 0;
 
 		/**
-		 * Sets passive support flag.
+		 * Sets passive & capture support flag.
 		 * @link https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 		 */
 		try {
-			let options = Object.defineProperty( {}, 'passive', {
-				get: () => { passiveSupported = true; }
-			} );
-			window.addEventListener( 'tsf-tt-test-passive', options, options )
-				.removeEventListener( 'tsf-tt-test-passive', options, options );
-		} catch( err ) {}
-
-		const setTouchBuffer = () => {
-			inTouchBuffer = true;
-			clearTimeout( touchBuffer );
-			touchBuffer = setTimeout( () => {
-				inTouchBuffer = false;
-			}, 250 );
+			( () => {
+				const options = {
+					get passive() {
+						passiveSupported = true;
+						return false;
+					},
+					get capture() {
+						captureSupported = true;
+						return false;
+					},
+				};
+				// These EventTarget methods will try to get 'passive' and/or 'capture' when it's supported.
+				window.addEventListener( 'tsf-tt-test-passive', null, options );
+				window.removeEventListener( 'tsf-tt-test-passive', null, options );
+			} )();
+		} catch ( err ) {
+			passiveSupported = false;
+			captureSupported = false;
 		}
 
 		const setEvents = ( target, unset ) => {
 
 			unset = unset || false;
 
-			let touchEvents = 'pointerdown.tsfTT touchstart.tsfTT click.tsfTT',
-				$target = $( target );
+			let events = {
+				mousemove:  mouseMove,
+				mouseleave: mouseLeave,
+				mouseout:   mouseLeave,
+				blur:       mouseLeave,
+			};
+			let touchEvents = [ 'pointerdown', 'touchstart', 'click' ];
 
 			if ( unset ) {
-				$target.off( 'mousemove.tsfTT mouseleave.tsfTT mouseout.tsfTT' );
-				$( document.body ).off( touchEvents );
-			} else {
-				$target.on( {
-					'mousemove.tsfTT'  : mouseMove,
-					'mouseleave.tsfTT' : mouseLeave,
-					'mouseout.tsfTT'   : mouseLeave,
+				for ( const [ event, callBack ] of Object.entries( events ) ) {
+					target.removeEventListener( event, callBack );
+				}
+				touchEvents.forEach( event => {
+					document.body.removeEventListener( event, touchRemove );
 				} );
-				$( document.body ).off( touchEvents ).on( touchEvents, touchRemove );
+			} else {
+				for ( const [ event, callBack ] of Object.entries( events ) ) {
+					target.addEventListener( event, callBack );
+				}
+				touchEvents.forEach( event => {
+					document.body.addEventListener( event, touchRemove );
+				} );
 			}
 
-			//= Always set this, as the events might be reintroduced later.
-			$target
-				.off( 'tsf-tooltip-update' )
-				.on( 'tsf-tooltip-update', updateDesc );
+			//= Always set this, as the events may be reintroduced via other code.
+			target.addEventListener( 'tsf-tooltip-update', updateDesc );
 		}
-		const unsetEvents = ( target ) => {
-			setEvents( target, true );
-		}
-		const updateDesc = ( event ) => {
-			if ( event.target.classList.contains( 'tsf-tooltip-item' ) ) {
+		const unsetEvents = target => setEvents( target, true );
+		const updateDesc = event => {
+			if ( event.target.classList.contains( toolTipItemName ) ) {
 				let tooltipText = event.target.querySelector( '.tsf-tooltip-text' );
 				if ( tooltipText instanceof Element ) {
 					tooltipText.innerHTML = event.target.dataset.desc;
-					$( event.target ).trigger( 'mousemove.tsfTT' ); // performance: .3ms
+					event.target.dispatchEvent( new Event( 'mousemove' ) ); // performance: <.3ms
 				}
 			}
 		}
-		const mouseEnter = ( event ) => {
-			let desc = event.target.dataset.desc || event.target.title || '';
 
-			// Don't create tooltip if bubbled.
-			if ( desc && 0 === event.target.getElementsByClassName( 'tsf-tooltip' ).length ) {
-				//= Exchanges data-desc with found desc to sustain easy access.
-				event.target.dataset.desc = desc;
-				//= Clear title to prevent default browser tooltip.
-				event.target.title = '';
-
-				doTooltip( event, event.target, desc );
-			}
+		const requestMouseMoveAnimation = () => {
+			mouseMoveAnimationId = requestAnimationFrame( doMouseMove );
 		}
-		let lastPageX = NaN;
-		const mouseMove = ( event ) => {
-			let $target = $( event.target ),
-				$tooltip = $target.find( '.tsf-tooltip' ),
-				$arrow = $tooltip.find( '.tsf-tooltip-arrow' ),
-				pagex = event.originalEvent && event.originalEvent.pageX || event.pageX, // iOS touch support
+		const cancelMouseMoveAnimation = () => {
+			lastAnimationEvent = void 0;
+			activeTooltipElements = {
+				tooltip: void 0,
+				arrow:   void 0,
+				wrap:    void 0,
+			};
+			mousePos = {
+				last: { x: void 0 },
+				curr: { x: void 0 },
+			};
+			cancelAnimationFrame( mouseMoveAnimationId );
+		}
+		const doMouseMove = () => {
+			let isMouseEvent = ! [ mousePos.curr.x ].includes( NaN );
+			if ( isMouseEvent ) {
+				if ( mousePos.curr.x === mousePos.last.x ) {
+					requestMouseMoveAnimation();
+					return;
+				}
+			}
+
+			mousePos.last.x = mousePos.curr.x;
+
+			const event = lastAnimationEvent;
+
+			let	tooltip = activeTooltipElements.tooltip || ( event && event.target.querySelector( toolTipSelector ) );
+
+			// Browser lagged, no tooltip exists (yet). Bail.
+			if ( ! tooltip ) {
+				requestMouseMoveAnimation();
+				return;
+			}
+
+			if ( ! activeTooltipElements.tooltip ) {
+				activeTooltipElements.tooltip = tooltip;
+			}
+			if ( ! activeTooltipElements.arrow ) {
+				activeTooltipElements.arrow = tooltip.querySelector( '.tsf-tooltip-arrow' );
+			}
+			if ( ! activeTooltipElements.wrap ) {
+				activeTooltipElements.wrap = event.target.closest( toolTipWrapSelector ) || event.target.parentNode;
+			}
+
+			let pagex         = mousePos.curr.x,
 				arrowBoundary = 7,
-				arrowWidth = 16;
+				arrowWidth    = 16;
 
-			// Keep record of pagex, so updateDesc() can utilize this.
-			pagex = isNaN( pagex ) ? lastPageX : pagex;
-			lastPageX = pagex;
+			if ( 'focus' === event.type ) {
+				// Grab the middle of the item on focus.
+				pagex = event.target.getBoundingClientRect().left + ( event.target.offsetWidth / 2 );
+			} else if ( isNaN( pagex ) ) {
+				// Get the last known tooltip position on manual tooltip alteration.
+				pagex = activeTooltipElements.tooltip.dataset.lastPagex || event.target.getBoundingClientRect().left;
+			}
+			// Keep separate record of pagex, so updateDesc() can utilize this via isNaN hereabove.
+			activeTooltipElements.tooltip.dataset.lastPagex = pagex;
 
-			let $hoverItemWrap = $target.closest( '.tsf-tooltip-wrap' );
-
-			if ( ! $hoverItemWrap.length )
-				$hoverItemWrap = $hoverItem.parent();
-
-			let mousex = pagex - $hoverItemWrap.offset().left - arrowWidth / 2,
-				$textWrap = $tooltip.find( '.tsf-tooltip-text-wrap' ),
-				textWrapWidth = $textWrap.outerWidth( true ),
-				adjust = $tooltip.data( 'adjust' ),
-				// adjustDir = $tooltip.data( 'adjustDir' ),
+			let mousex        = pagex - activeTooltipElements.wrap.getBoundingClientRect().left - ( arrowWidth / 2 ),
+				textWrap      = activeTooltipElements.tooltip.querySelector( '.tsf-tooltip-text-wrap' ),
+				textWrapWidth = textWrap.offsetWidth,
+				adjust        = activeTooltipElements.tooltip.dataset.adjust,
 				boundaryRight = textWrapWidth - arrowWidth - arrowBoundary;
 
 			//= mousex is skewed, adjust.
@@ -158,65 +213,113 @@ window.tsfTT = function( $ ) {
 				mousex = mousex - adjust;
 
 				//= Use textWidth for right boundary if adjustment exceeds.
-				if ( boundaryRight + adjust > $hoverItemWrap.outerWidth( true ) ) {
-					let $innerText = $textWrap.find( '.tsf-tooltip-text' ),
-						textWidth = $innerText.outerWidth( true );
+				if ( boundaryRight + adjust > activeTooltipElements.wrap.offsetWidth ) {
+					let innerText = textWrap.querySelector( '.tsf-tooltip-text' ),
+						textWidth = innerText.offsetWidth;
 					boundaryRight = textWidth - arrowWidth - arrowBoundary;
 				}
 			}
 
 			if ( mousex <= arrowBoundary ) {
-				//* Overflown left.
-				$arrow.css( 'left', arrowBoundary + "px" );
+				// Overflown left.
+				activeTooltipElements.arrow.style.left = arrowBoundary + "px";
 			} else if ( mousex >= boundaryRight ) {
-				//* Overflown right.
-				$arrow.css( 'left', boundaryRight + "px" );
+				// Overflown right.
+				activeTooltipElements.arrow.style.left = boundaryRight + "px";
 			} else {
 				//= Somewhere in the middle.
-				$arrow.css( 'left', mousex + "px" );
+				activeTooltipElements.arrow.style.left = mousex + "px";
+			}
+
+			if ( isMouseEvent ) {
+				requestMouseMoveAnimation();
+			} else {
+				cancelMouseMoveAnimation();
 			}
 		}
-		const mouseLeave = ( event ) => {
-			//* @see touchRemove
-			if ( inTouchBuffer )
-				return;
 
+		/**
+		 * Prevents default click action on a tooltip item.
+		 *
+		 * Doesn't test whether a tooltip is present, since that happens asynchronously--often (yet _not always_) after the click finishes.
+		 * If we set a datapoint where we tell the tooltip is still building, we might be able to read that out (e.g. instigatingTooltip).
+		 *
+		 * FIXME: When a tooltip is injected via another script (via tsfTT.doTooltip()) that has a toolTipWrapName,
+		 *        this might cause a click on the object to become unnatural.
+		 *
+		 * @function
+		 * @param {Event} event
+		 */
+		const preventTooltipHandleClick = event => {
+			if ( _isClickLocked( event.target ) ) return;
+			event.preventDefault();
+			// iOS 12 bug causes two clicks at once. Let's set this asynchronously.
+			setTimeout( () => _lockClick( event.target ) );
+		}
+
+		const mouseEnter = event => {
+			let desc = event.target.dataset.desc || event.target.title || '';
+
+			// Don't create tooltip if bubbled.
+			if ( desc && ! event.target.getElementsByClassName( toolTipName ).length ) {
+				//= Exchanges data-desc with found desc to sustain easy access.
+				event.target.dataset.desc = desc;
+				//= Clear title to prevent default browser tooltip.
+				event.target.removeAttribute( 'title' );
+
+				doTooltip( event, event.target, desc );
+			}
+		}
+		const mouseMove = event => {
+			mousePos.curr.x    = event.pageX || NaN;
+			lastAnimationEvent = event;
+		}
+		const mouseLeave = event => {
 			removeTooltip( event.target );
 			unsetEvents( event.target );
+
+			cancelMouseMoveAnimation();
 		}
-		/**
-		 * ^^^
-		 * These two methods conflict eachother in EdgeHTML.
-		 * Thusly, touch buffer.
-		 * vvv
-		 */
-		const touchRemove = ( event ) => {
+		const touchRemove = event => {
 
-			//* @see mouseLeave
-			setTouchBuffer();
-
-			let itemSelector = '.tsf-tooltip-item',
-				balloonSelector = '.tsf-tooltip';
-
-			let $target = $( event.target ),
-				$keepBalloon;
-
-			if ( $target.hasClass( 'tsf-tooltip-item' ) ) {
-				$keepBalloon = $target.find( balloonSelector );
+			if ( event.target.dataset.hasTooltip ) {
+				return;
 			}
-			if ( ! $keepBalloon ) {
-				let $children = $target.children( itemSelector );
-				if ( $children.length ) {
-					$keepBalloon = $children.find( balloonSelector );
+			if ( event.target instanceof HTMLInputElement && event.target.id ) {
+				let labels = document.querySelectorAll( `label[for="${event.target.id}"]` );
+				if ( labels.length && [...labels].some( label => label.dataset.hasTooltip ) )
+					return;
+			}
+
+			let balloonItemToKeep = void 0;
+
+			if ( event.target.classList.contains( toolTipItemName ) ) {
+				balloonItemToKeep = event.target;
+			}
+			if ( ! balloonItemToKeep ) {
+				let children = event.target.querySelectorAll( toolTipItemSelector );
+				for ( const element of children ) {
+					if ( element.querySelector( toolTipSelector ) ) {
+						balloonItemToKeep = element;
+						break;
+					}
 				}
 			}
 
-			if ( $keepBalloon && $keepBalloon.length ) {
-				//= Remove all but this.
-				$( balloonSelector ).not( $keepBalloon ).remove();
+			if ( balloonItemToKeep ) {
+				//= Remove all but current target.
+				for ( const balloon of document.querySelectorAll( toolTipSelector ) ) {
+					if ( balloon.closest( toolTipItemSelector ) !== balloonItemToKeep ) {
+						removeTooltip( balloon );
+						unsetEvents( balloon );
+					}
+				}
 			} else {
-				//= Remove all.
-				$( balloonSelector ).remove();
+				for ( const element of document.querySelectorAll( toolTipItemSelector ) ) {
+					removeTooltip( element );
+					unsetEvents( element );
+				}
+				cancelMouseMoveAnimation();
 			}
 		}
 
@@ -225,80 +328,110 @@ window.tsfTT = function( $ ) {
 		 * @function
 		 * @param {Event} event
 		 */
-		const loadToolTip = ( event ) => {
+		const loadToolTip = event => {
 
-			if ( inTouchBuffer )
-				return;
+			if ( event.target.dataset.hasTooltip ) return;
 
 			let isTouch = false;
 
 			switch ( event.type ) {
-				case 'mouseenter' :
+				case 'mouseenter':
 					//= Most likely, thus placed first.
 					break;
 
-				case 'pointerdown' :
-				case 'touchstart' :
+				case 'pointerdown':
+				case 'touchstart':
 					isTouch = true;
 					break;
 
-				default :
+				case 'focus':
+				default:
 					break;
 			}
 
-			//= Removes previous items and sets buffer.
-			isTouch && touchRemove( event );
+			if ( isTouch ) {
+				//= Removes possibly previously set items and resets buffer.
+				touchRemove( event );
+			} else {
+				_lockClick( event.target );
+			}
+			cancelMouseMoveAnimation();
 
 			mouseEnter( event );
-			//= Initiate placement directly for Windows Touch or when overflown.
+			// NOTE: Here we are asynchronous to element-insertion, the browser may not have inserted the tooltip yet.
+			//= Initiate arrow placement directly.
 			mouseMove( event );
+			requestMouseMoveAnimation();
 
-			// Set other events.
+			// Set other events, like removal when tapping elsewhere, or hitting "tab."
 			setEvents( event.target );
 		}
 
+		let instigatingTooltip = false;
 		/**
 		 * Handles earliest stages of the tooltip.
+		 *
+		 * Note to self: Don't debounce using timeouts!
+		 * Even at 144hz (7ms) it makes the tt flicker when traveling over the SEO Bar.
 		 *
 		 * @function
 		 * @param {Event} event
 		 */
-		const toolTipHandler = ( event ) => {
-			if ( event.target.classList.contains( 'tsf-tooltip-item' ) ) {
+		const toolTipHandler = event => {
+
+			if ( instigatingTooltip ) return;
+
+			instigatingTooltip = true;
+
+			if ( event.target.classList.contains( toolTipItemName ) ) {
 				loadToolTip( event );
 			}
 			event.stopPropagation();
+
+			instigatingTooltip = false;
 		}
 
+		let initTimeout = void 0;
+		const options = passiveSupported || captureSupported ? { capture: true, passive: true } : true;
 		/**
 		 * Initializes tooltips.
 		 * @function
 		 */
 		const init = () => {
-			let wraps = document.querySelectorAll( '.tsf-tooltip-wrap' ),
-				options = passiveSupported ? { capture: true, passive: true } : true;
+			clearTimeout( initTimeout );
+			initTimeout = setTimeout( () => {
+				let wraps   = document.querySelectorAll( toolTipWrapSelector ),
+					actions = 'mouseenter pointerdown touchstart focus'.split( ' ' );
 
-			for ( let i = 0; i < wraps.length; i++ ) {
-				'mouseenter pointerdown touchstart'.split( ' ' ).forEach( e => {
-					wraps[i].removeEventListener( e, toolTipHandler, options );
-					wraps[i].addEventListener( e, toolTipHandler, options );
-				} );
-			}
+				for ( let i = 0; i < wraps.length; i++ ) {
+					actions.forEach( e => {
+						// Redundant https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Multiple_identical_event_listeners
+						// wraps[i].removeEventListener( e, toolTipHandler, options );
+						wraps[i].addEventListener( e, toolTipHandler, options );
+					} );
+					// NOTE: If the tooltip-wrap is a label with a "for"-attribute, the input is forwarded to the <input> field.
+					// We mitigated this issue at loadToolTip().
+					wraps[i].addEventListener(
+						'click',
+						preventTooltipHandleClick,
+						captureSupported ? { capture: false } : false
+					);
+				}
+			}, 25 ); // Increase this for slow computers? Or allow the loop to be broken from the outside?
 		}
 		init();
-		$( window ).on( 'tsf-tooltip-reset', init );
+		window.addEventListener( 'tsf-tooltip-reset', init );
 
-		addBoundary( '#wpcontent' ); //! All pages, but Gutenberg destroys the boundaries..
-		addBoundary( '#editor' ); //! Gutenberg
-		// if ( tsfL10n && tsf.states && tsf.states.isGutenbergPage ) {
-		// 	addBoundary( '.edit-post-layout__metaboxes' ); //! TSF's postbox container... ideally.
-		// }
+		addBoundary( '#wpwrap' ); //! All pages, but Gutenberg destroys the boundaries.. @see tsfGBC
 	}
 
 	/**
 	 * Outputs tooltip.
 	 *
 	 * @since 3.1.0
+	 * @since 4.0.0 1. Tooltips are now prepended, instead of appended--so they no longer break the order of flow.
+	 *                 Careful, however, as some CSS queries may be subjected differently.
+	 *              2. Now calculates up/down overflow at the end, so it accounts for squashing and stretching.
 	 * @access public
 	 *
 	 * @function
@@ -310,97 +443,211 @@ window.tsfTT = function( $ ) {
 	 */
 	const doTooltip = ( event, element, desc ) => {
 
-		let $hoverItem = $( element );
-		if ( $hoverItem.find( '.tsf-tooltip' ).length ) removeTooltip( element );
-		if ( ! desc.length ) return;
-
-		let $tooltip = $(
-				'<div class="tsf-tooltip"><span class="tsf-tooltip-text-wrap"><span class="tsf-tooltip-text">'
-					+ desc +
-				'</span></span><div class="tsf-tooltip-arrow"></div></div>'
-			);
-		$hoverItem.append( $tooltip );
-
-		let $boundary = $hoverItem.closest( '.tsf-tooltip-boundary' );
-		$boundary = $boundary.length && $boundary || $( document.body );
-
-		//= arrow (8)
-		let tooltipHeight = $hoverItem.outerHeight() + 8,
-			tooltipTop = $tooltip.offset().top - tooltipHeight,
-			boundaryTop = $boundary.offset().top - ( $boundary.prop( 'scrolltop' ) || 0 );
-
-		if ( boundaryTop > tooltipTop ) {
-			$tooltip.addClass( 'tsf-tooltip-down' );
-			$tooltip.css( 'top', tooltipHeight + 'px' );
-		} else {
-			$tooltip.css( 'bottom', tooltipHeight + 'px' );
+		// Backward compatibility for jQuery vs ES.
+		if ( element instanceof $ ) {
+			element = element.get( 0 );
 		}
 
-		let $hoverItemWrap = $hoverItem.closest( '.tsf-tooltip-wrap' );
-		if ( ! $hoverItemWrap.length )
-			$hoverItemWrap = $hoverItem.parent();
+		element.dataset.hasTooltip = 1;
+		if ( element.querySelector( toolTipSelector ) ) removeTooltip( element );
 
-		let $textWrap = $tooltip.find( '.tsf-tooltip-text-wrap' ),
-			$innerText = $textWrap.find( '.tsf-tooltip-text' ),
-			hoverItemWrapWidth = $hoverItemWrap.width(),
-			textWrapWidth = $textWrap.outerWidth( true ),
-			textWidth = $innerText.outerWidth( true ),
-			borderLeft = $textWrap.offset().left,
-			borderRight = borderLeft + textWrapWidth,
-			boundaryLeft = $boundary.offset().left - ( $boundary.prop( 'scrollLeft' ) || 0 ),
-			boundaryRight = boundaryLeft + $boundary.width();
+		if ( ! desc.length ) return;
 
-		let direction = 'left',
-			horIndent = NaN;
+		let tooltip = document.createElement( 'div' );
+		tooltip.classList.add( toolTipName );
+		tooltip.insertAdjacentHTML(
+			'afterbegin',
+			`<span class="tsf-tooltip-text-wrap"><span class="tsf-tooltip-text">${desc}</span></span><div class="tsf-tooltip-arrow" style=will-change:left></div>`
+		);
 
-		if ( borderLeft < boundaryLeft ) {
+		element.prepend( tooltip );
+
+		let boundary      = element.closest( '.tsf-tooltip-boundary' ) || document.body,
+			boundaryRect  = boundary.getBoundingClientRect(),
+			boundaryTop   = boundaryRect.top - ( boundary.scrollTop || 0 ),
+			boundaryWidth = boundary.offsetWidth,
+			maxWidth      = 250, // Gutenberg is 262. The tooltip has 24px padding (12*2)...
+			appeal        = 12;
+
+		let hoverItemWrap      = element.closest( toolTipWrapSelector ) || element.parentElement,
+			hoverItemWrapRect  = hoverItemWrap.getBoundingClientRect(),
+			textWrap           = tooltip.querySelector( '.tsf-tooltip-text-wrap' ),
+			textWrapRect       = textWrap.getBoundingClientRect(),
+			hoverItemWrapWidth = hoverItemWrapRect.width;
+
+		if ( textWrapRect.width > maxWidth && hoverItemWrapWidth < maxWidth && hoverItemWrapWidth > 150 ) {
+			// The hoveritemwrap is of an acceptable size. Format it to that.
+			textWrap.style.flexBasis = hoverItemWrapWidth + 'px';
+		}
+
+		// Calculate the appeal with the spacing.
+		if ( textWrap.offsetWidth > ( boundaryWidth - ( appeal / 2 ) ) ) {
+			//= Overflown the boundary size. Squeeze the box. (thank you, Gutenberg.)
+
+			// Use the bounding box minus appeal. Don't double the appeal since that'll mess up the arrow.
+			// Maximum 250px.
+			textWrap.style.flexBasis = Math.min( maxWidth, boundaryWidth - appeal ) + 'px';
+
+			// Halve appeal from here. So each side gets a bit.
+			appeal /= 2;
+		} else if ( textWrapRect.width > maxWidth ) {
+			// Resize the text wrap if it exceeds 250px on auto-grow.
+			textWrap.style.flexBasis = maxWidth + 'px';
+		}
+
+		let boundaryLeft  = boundaryRect.left - ( boundary.scrollLeft || 0 ),
+			boundaryRight = boundaryLeft + boundaryWidth;
+
+		let textWrapWidth   = textWrap.offsetWidth,
+			textBorderLeft  = textWrapRect.left,
+			textBorderRight = textBorderLeft + textWrapWidth;
+
+		let horIndent = 0;
+
+		if ( textBorderLeft < boundaryLeft ) {
 			//= Overflown over left boundary (likely window)
-			//= Add indent relative to boundary. Add 12px for visual appeal.
-			horIndent = boundaryLeft - borderLeft + 12;
-		} else if ( borderRight > boundaryRight ) {
+			//= Add indent relative to boundary.
+			horIndent = boundaryLeft - textBorderLeft + appeal;
+		} else if ( textBorderRight > boundaryRight ) {
 			//= Overflown over right boundary (likely window)
-			//= Add indent relative to boundary minus text wrap width. Add 12px for visual appeal.
-			horIndent = boundaryRight - borderLeft - textWrapWidth - 12;
+			//= Add indent relative to boundary minus text wrap width.
+			horIndent = boundaryRight - textBorderLeft - textWrapWidth - appeal;
 		} else if ( hoverItemWrapWidth < 42 ) {
-			//= Small tooltip container. Add indent to make it visually appealing.
-			horIndent = -hoverItemWrapWidth * 2 + hoverItemWrapWidth / 2;
-			if ( -horIndent > textWrapWidth ) horIndent = -15; // failsafe; this will NEVER trigger.
-		} else if ( event && $( event.target ).find( $tooltip ).length < 1 ) {
-			//= Manually triggered event that doesn't overflow.
-			horIndent = 0;
-		} else if ( event && hoverItemWrapWidth > textWrapWidth ) {
-			//= Wrap is bigger than tooltip. Adjust accordingly.
-			let pagex = event.originalEvent && event.originalEvent.pageX || event.pageX, // iOS touch support,
-				hoverItemLeft = $hoverItemWrap.offset().left,
-				center = pagex - hoverItemLeft,
-				left = center - textWrapWidth / 2,
-				right = left + textWrapWidth;
+			//= Small tooltip container. Add indent relative to the item to make it visually appealing.
+			horIndent = ( -hoverItemWrapWidth / 2 ) - appeal;
+		} else if ( hoverItemWrapWidth > textWrapWidth ) {
+			//= Wrap is larger than tooltip. Find middle of pointer (if any) and adjust accordingly.
+			let pagex = event && event.pageX || NaN;
 
-			horIndent = left;
+			if ( event && 'focus' === event.type ) {
+				// No pointer-event found. Set indent to the middle instead.
+				horIndent = ( hoverItemWrapWidth / 2 ) - ( textWrapWidth / 2 );
+			} else if ( isNaN( pagex ) ) {
+				horIndent = -appeal;
+			} else {
+				// Set to middle of pointer.
+				horIndent = pagex - hoverItemWrapRect.left - ( textWrapWidth / 2 );
+			}
 
-			if ( left < 0 ) {
-				//= Don't overflow left.
-				horIndent = 0;
-			} else if ( right > hoverItemWrapWidth ) {
-				//= Don't overflow right.
-				//* Use textWidth instead of textWrapWidth as it gets squashed in flex.
-				horIndent = hoverItemWrapWidth - textWidth;
+			let appealLeft  = -appeal,
+				appealRight = hoverItemWrapWidth - textWrapWidth + appeal;
+
+			if ( horIndent < appealLeft ) {
+				//= Overflown left more than appeal, let's move it more over the hoverwrap.
+				horIndent = appealLeft;
+			}
+			if ( horIndent > appealRight ) {
+				//= Overflown right more than appeal, let's move it more over the hoverwrap.
+				horIndent = appealRight;
 			}
 		}
 
-		if ( ! isNaN( horIndent ) ) {
-			let basis = parseInt( $textWrap.css( 'flex-basis' ), 10 );
-			/**
-			 * If the overflow is greater than the tooltip flex basis,
-			 * the tooltip was grown. Shrink it back to basis and use that.
-			 */
-			if ( horIndent < -basis ) horIndent = -basis;
+		if ( ( horIndent + textBorderLeft ) < ( boundaryLeft + appeal ) ) {
+			// Overflows left boundary. Use half appeal to account for bordered tooltip items.
+			let _adjustLeft = ( horIndent + textBorderLeft ) - ( boundaryLeft + ( appeal / 2 ) );
+			horIndent = horIndent - _adjustLeft;
+		}
+		if ( ( horIndent + textBorderRight ) > ( boundaryRight + appeal ) ) {
+			// Overflows right boundary. Use half appeal to account for bordered tooltip items.
+			let _adjustRight = ( horIndent + textBorderRight ) - ( boundaryRight + ( appeal / 2 ) );
+			horIndent = horIndent - _adjustRight;
+		}
+		if ( ( horIndent + textBorderLeft ) < boundaryLeft ) {
+			// It failed again after alignment. Reset to 0.
+			horIndent = 0;
+		}
 
-			$tooltip.css( direction, horIndent + 'px' );
-			$tooltip.data( 'adjust', horIndent );
-			$tooltip.data( 'adjustDir', direction );
+		if ( ! event ) {
+			let basis = parseInt( textWrap.style.flexBasis, 10 );
+			/**
+			 * If the indent overflow is greater than the tooltip flex basis,
+			 * the tooltip was repainted and shrunk. It may shrink beyond the horIndent,
+			 * causing a misplaced box; so, we replace that with the basis.
+			 * This can happen when no pointer event is assigned, like via updateDesc().
+			 */
+			if ( horIndent < -basis ) {
+				horIndent = -basis;
+			}
+		}
+
+		tooltip.style.left     = horIndent + 'px';
+		tooltip.dataset.adjust = horIndent;
+
+		// Finally, see if the tooltip overflows top or bottom. We need to do this last as the tooltip may be squashed upward.
+		// arrow is 8 high, add that to the total height.
+		let tooltipHeight = element.offsetHeight + 8,
+			tooltipTop    = tooltip.getBoundingClientRect().top - tooltipHeight;
+
+		if ( boundaryTop > tooltipTop ) {
+			tooltip.classList.add( 'tsf-tooltip-down' );
+			tooltip.style.top = tooltipHeight + 'px';
+		} else {
+			tooltip.style.bottom = tooltipHeight + 'px';
 		}
 	}
+
+
+	/**
+	 * Prevents click on element.
+	 *
+	 * @since 4.1.0
+	 * @access private
+	 * @internal
+	 *
+	 * @param {Element} element
+	 * @return {undefined}
+	 */
+	const _lockClick = element => {
+		if ( ! ( element instanceof Element ) ) return;
+
+		element.dataset.preventedClick = 1;
+		// If the element is a label with a "for"-attribute, then we must forward this
+		if ( element instanceof HTMLLabelElement && element.htmlFor ) {
+			let input = document.getElementById( element.htmlFor );
+			if ( input ) input.dataset.preventedClick = 1;
+		}
+		if ( element instanceof HTMLInputElement && element.id ) {
+			document.querySelectorAll( `label[for="${element.id}"]` ).forEach(
+				la => { la.dataset.preventedClick = 1; }
+			);
+		}
+	}
+	/**
+	 * Releases click prevention on element.
+	 *
+	 * @since 4.1.0
+	 * @access private
+	 * @internal
+	 *
+	 * @param {Element} element
+	 * @return {undefined}
+	 */
+	const _releaseClick = element => {
+		if ( ! ( element instanceof Element ) ) return;
+
+		delete element.dataset.preventedClick;
+
+		if ( element instanceof HTMLLabelElement && element.htmlFor ) {
+			let input = document.getElementById( element.htmlFor );
+			if ( input ) delete input.dataset.preventedClick;
+		}
+		if ( element instanceof HTMLInputElement && element.id ) {
+			document.querySelectorAll( `label[for="${element.id}"]` ).forEach(
+				la => { delete la.dataset.preventedClick; }
+			);
+		}
+	}
+	/**
+	 * Tells whether an element should prevent a click.
+	 *
+	 * @since 4.1.0
+	 * @access private
+	 * @internal
+	 *
+	 * @param {Element} element
+	 * @return {boolean}
+	 */
+	const _isClickLocked = element => element instanceof Element && +element.dataset.preventedClick;
 
 	/**
 	 * Adds tooltip boundaries.
@@ -412,21 +659,28 @@ window.tsfTT = function( $ ) {
 	 * @param {!jQuery|Element|string} element The jQuery element, DOM Element or query selector.
 	 * @return {undefined}
 	 */
-	const addBoundary = ( element ) => {
-		$( element ).addClass( 'tsf-tooltip-boundary' );
-	}
+	const addBoundary = element => element instanceof Element && element.classList.add( 'tsf-tooltip-boundary' );
 
 	/**
 	 * Removes the description balloon and arrow from element.
 	 *
 	 * @since 3.1.0
+	 * @since 4.1.0 Now also clears the data of the tooltip.
 	 * @access public
 	 *
 	 * @function
-	 * @param {Element} element
+	 * @param {!jQuery|Element|string} element
 	 * @return {undefined}
 	 */
-	const removeTooltip = ( element ) => {
+	const removeTooltip = element => {
+		// Backward compatibility for jQuery vs ES.
+		if ( element instanceof $ ) {
+			element = element.get( 0 );
+		}
+		if ( element instanceof HTMLElement ) {
+			delete element.dataset.hasTooltip;
+			_releaseClick( element );
+		}
 		getTooltip( element ).remove();
 	}
 
@@ -437,12 +691,10 @@ window.tsfTT = function( $ ) {
 	 * @access public
 	 *
 	 * @function
-	 * @param {Element} element
+	 * @param {!jQuery|Element|string} element
 	 * @return {jQuery.element}
 	 */
-	const getTooltip = ( element ) => {
-		return $( element ).find( '.tsf-tooltip' ).first();
-	}
+	const getTooltip = element => $( element ).find( toolTipSelector ).first();
 
 	/**
 	 * Triggers tooltip reset.
@@ -452,10 +704,10 @@ window.tsfTT = function( $ ) {
 	 * @access public
 	 *
 	 * @function
-	 * @return {(undefined|null)}
+	 * @return {undefined}
 	 */
 	const triggerReset = () => {
-		$( window ).trigger( 'tsf-tooltip-reset' );
+		window.dispatchEvent( new CustomEvent( 'tsf-tooltip-reset' ) );
 	}
 
 	/**
@@ -465,15 +717,26 @@ window.tsfTT = function( $ ) {
 	 * @access public
 	 *
 	 * @function
-	 * @param {Element} item
-	 * @return {(undefined|null)}
+	 * @param {{HTMLElement|undefined}} element
+	 * @return {undefined}
 	 */
-	const triggerUpdate = ( item ) => {
-		$( item || '.tsf-tooltip-item' ).trigger( 'tsf-tooltip-update' );
+	const triggerUpdate = element => {
+
+		if ( ! element || ! ( element instanceof Element ) )
+			element = document.querySelectorAll( toolTipItemSelector );
+
+		if ( ! element ) return;
+
+		const updateEvent = new CustomEvent( 'tsf-tooltip-update' );
+
+		if ( element instanceof Element ) {
+			element.dispatchEvent( updateEvent );
+		} else if ( element instanceof Nodelist ) {
+			element.forEach( el => el.dispatchEvent( updateEvent ) );
+		}
 	}
 
-	//? IE11 Object.assign() alternative.
-	return $.extend( {
+	return Object.assign( {
 		/**
 		 * Initialises all aspects of the scripts.
 		 * You shouldn't call this.
@@ -484,8 +747,8 @@ window.tsfTT = function( $ ) {
 		 * @function
 		 * @return {undefined}
 		 */
-		load: function() {
-			$( document.body ).ready( _initToolTips );
+		load: () => {
+			document.body.addEventListener( 'tsf-ready', _initToolTips );
 		}
 	}, {
 		/**
@@ -495,13 +758,12 @@ window.tsfTT = function( $ ) {
 		 * @since 3.1.0
 		 * @access public
 		 */
- 		doTooltip,
- 		removeTooltip,
- 		getTooltip,
- 		addBoundary,
- 		triggerReset,
- 		triggerUpdate,
+		doTooltip,
+		removeTooltip,
+		getTooltip,
+		addBoundary,
+		triggerReset,
+		triggerUpdate,
 	} );
 }( jQuery );
-//= Run before jQuery.ready() === DOMContentLoaded
-jQuery( window.tsfTT.load );
+window.tsfTT.load();

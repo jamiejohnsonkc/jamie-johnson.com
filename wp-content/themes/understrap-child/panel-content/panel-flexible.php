@@ -44,7 +44,7 @@ if (!defined('ABSPATH')) {
 						</div>
 						<div class="flex-item__b-2-3">
 							<div class="flex-item__content--wrapper">
-								<div class="headline">Occupation</div>
+								<div class="headline">Overview</div>
 								<p class="blurb">Sometimes you want ideas and sometimes you just need it done. You're the client. I'm happy to assist.</p>
 								<p class="copy"><span>Directed</span> You tell me what to do. I do it. No muss. No fuss.</p>
 								<p class="copy"><span>Collaborative</span> Share your ideas. I'll share mine. You decide.</p>

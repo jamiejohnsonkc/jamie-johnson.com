@@ -5,11 +5,11 @@
 
 namespace The_SEO_Framework;
 
-defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
+\defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 
 /**
  * The SEO Framework plugin
- * Copyright (C) 2018 - 2019 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
+ * Copyright (C) 2018 - 2020 Sybre Waaijer, CyberWire (https://cyberwire.nl/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as published
@@ -26,10 +26,11 @@ defined( 'THE_SEO_FRAMEWORK_PRESENT' ) or die;
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\\_init_locale', 4 );
 /**
- * Plugin locale 'autodescription'
+ * Loads plugin locale 'autodescription'.
  * Files located in plugin folder `../autodescription/language/`
  *
  * @since 2.8.0
+ * @since 4.0.2 Now points to the correct plugin folder for fallback MO-file loading (which was never used).
  */
 function _init_locale() {
 	/**
@@ -38,44 +39,39 @@ function _init_locale() {
 	\load_plugin_textdomain(
 		'autodescription',
 		false,
-		THE_SEO_FRAMEWORK_DIR_PATH . 'language'
+		\dirname( THE_SEO_FRAMEWORK_PLUGIN_BASENAME ) . DIRECTORY_SEPARATOR . 'language'
 	);
 }
 
 \add_action( 'plugins_loaded', __NAMESPACE__ . '\\_init_tsf', 5 );
 /**
- * Load The_SEO_Framework_Load class
+ * Loads and memoizes `\The_SEO_Framework\Load` class.
  *
- * @action plugins_loaded
- * @priority 5 Use anything above 5, or any action later than plugins_loaded and
- * you can access the class and functions.
+ * Runs at action `plugins_loaded`, priority `5`. So, use anything above 5, or any
+ * action later than plugins_loaded and you can access the class and functions.
  *
  * @since 3.1.0
  * @access private
  * @see function the_seo_framework().
- * @staticvar object $tsf
  * @factory
  *
  * @return object|null The SEO Framework Facade class object. Null on failure.
  */
 function _init_tsf() {
 
-	//* Cache the class. Do not run constructors more than once.
+	// Memoize the class. Do not run constructors more than once.
 	static $tsf = null;
 
 	if ( $tsf )
 		return $tsf;
 
-	// @TODO use autoloader instead?
-	_load_trait( 'core/overload' );
-
 	/**
 	 * @package The_SEO_Framework
 	 */
-	if ( \The_SEO_Framework\_can_load() ) {
+	if ( _can_load() ) {
 		if ( \is_admin() ) {
 			//! TODO: admin-only loader?
-			$tsf         = new \The_SEO_Framework\Load();
+			$tsf         = new Load();
 			$tsf->loaded = true;
 
 			$tsf->_load_early_compat_files();
@@ -86,7 +82,7 @@ function _init_tsf() {
 			 */
 			\do_action( 'the_seo_framework_admin_loaded' );
 		} else {
-			$tsf         = new \The_SEO_Framework\Load();
+			$tsf         = new Load();
 			$tsf->loaded = true;
 
 			$tsf->_load_early_compat_files();
@@ -98,7 +94,7 @@ function _init_tsf() {
 		 */
 		\do_action( 'the_seo_framework_loaded' );
 	} else {
-		$tsf         = new \The_SEO_Framework\Silencer();
+		$tsf         = new Silencer();
 		$tsf->loaded = false;
 	}
 
@@ -122,7 +118,6 @@ spl_autoload_register( __NAMESPACE__ . '\\_autoload_classes', true, true );
  *                3. No longer loads interfaces automatically.
  * @uses THE_SEO_FRAMEWORK_DIR_PATH_CLASS
  * @access private
- * @staticvar bool $_timenow Whether to time this request. Used to prevent stacking timers during class extending.
  *
  * @NOTE 'The_SEO_Framework\' is a reserved namespace. Using it outside of this
  *       plugin's scope could result in an error.
@@ -135,6 +130,7 @@ function _autoload_classes( $class ) {
 	if ( 0 !== strpos( $class, 'The_SEO_Framework\\', 0 ) ) return;
 
 	static $_timenow = true;
+	// Lock $_timenow to prevent stacking timers during class extending. This is released when the class stack loaded.
 	if ( $_timenow ) {
 		$_bootstrap_timer = microtime( true );
 		$_timenow         = false;
@@ -143,18 +139,20 @@ function _autoload_classes( $class ) {
 	}
 
 	$_chunks       = explode( '\\', strtolower( $class ) );
-	$_chunck_count = count( $_chunks );
+	$_chunck_count = \count( $_chunks );
 
 	if ( $_chunck_count > 2 ) {
-		//? directory position = $_chunck_count - ( 2 = $offset (1) + $class name (1) )
+		//? directory position = $_chunck_count - ( 2 = (The_SEO_Framework)\ + (Bridges/Builders/Interpreters)\ )
 		$rel_dir = implode( DIRECTORY_SEPARATOR, array_splice( $_chunks, 1, $_chunck_count - 2 ) ) . DIRECTORY_SEPARATOR;
 	} else {
 		$rel_dir = '';
 	}
 
-	$class = str_replace( '_', '-', end( $_chunks ) );
+	// The last part of the chunks is the class name--which corresponds to the file.
+	$file = str_replace( '_', '-', end( $_chunks ) );
 
-	require THE_SEO_FRAMEWORK_DIR_PATH_CLASS . $rel_dir . $class . '.class.php';
+	// The extension is deemed to be ".class.php" always. We may wish to alter this for traits?
+	require THE_SEO_FRAMEWORK_DIR_PATH_CLASS . $rel_dir . $file . '.class.php';
 
 	if ( $_bootstrap_timer ) {
 		_bootstrap_timer( microtime( true ) - $_bootstrap_timer );

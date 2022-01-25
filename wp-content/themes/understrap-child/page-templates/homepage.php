@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="wrapper" id="full-width-page-wrapper">
 	<main class="site-main" id="main">
-	
+
 			<?php get_template_part( 'panel-content/panel', 'home_page__splash' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__placeholder' ); ?>
 			<?php get_template_part( 'panel-content/panel', 'home_page__claim' ); ?>
@@ -29,4 +29,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</main>
 		<div class="scroll-top" id="scroll-up" onclick="topFunction()"><a href="" title=""><img src="/wp-content/uploads/2018/12/chevup.svg" alt="chevron pointing up icon" class="style-svg" id="scroll-top"/></a></div>
 		</div>
-		<?php get_footer(); ?>									 
+
+
+
+
+
+		<?php get_footer(); ?>
